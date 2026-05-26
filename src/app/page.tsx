@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
@@ -38,9 +37,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-2xl font-bold font-headline tracking-tight uppercase hidden sm:inline-block">
-              ALKADI<span className="text-primary"> GAMING</span>
-            </span>
+            {/* Logo removed per request */}
           </div>
           
           <div className="relative w-full max-w-sm hidden md:flex items-center">

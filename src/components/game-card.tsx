@@ -4,7 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Info, Layout, ExternalLink } from 'lucide-react';
 
 interface GameCardProps {
   game: GameEntry;
@@ -32,30 +31,11 @@ export function GameCard({ game }: GameCardProps) {
             {game.title}
           </h3>
         </Link>
-        <p className="text-xs text-muted-foreground line-clamp-2 mb-4">
+        <p className="text-xs text-muted-foreground line-clamp-2">
           {game.description}
         </p>
       </CardContent>
-      <CardFooter className="p-4 pt-0 flex flex-col gap-3">
-        <div className="grid grid-cols-1 gap-2 w-full border-t border-white/5 pt-4">
-          <div className="flex flex-wrap gap-2">
-            <Button variant="secondary" size="sm" className="h-8 text-[10px] flex-1" asChild>
-              <a href={game.infoLinks.features} target="_blank" rel="noopener noreferrer">
-                <Layout className="w-3 h-3 mr-1" /> Features
-              </a>
-            </Button>
-            <Button variant="secondary" size="sm" className="h-8 text-[10px] flex-1" asChild>
-              <a href={game.infoLinks.storyline} target="_blank" rel="noopener noreferrer">
-                <BookOpen className="w-3 h-3 mr-1" /> Story
-              </a>
-            </Button>
-            <Button variant="secondary" size="sm" className="h-8 text-[10px] flex-1" asChild>
-              <a href={game.infoLinks.gameplay} target="_blank" rel="noopener noreferrer">
-                <Info className="w-3 h-3 mr-1" /> Gameplay
-              </a>
-            </Button>
-          </div>
-        </div>
+      <CardFooter className="p-4 pt-0">
         <Button variant="default" className="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all" asChild>
           <Link href={`/game/${game.id}`}>
             View Details
