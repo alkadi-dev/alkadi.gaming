@@ -49,6 +49,24 @@
       "imageHint": "car cockpit"
     },
     {
+      "id": "rdr2-thumb",
+      "description": "Red Dead Redemption 2 character artwork",
+      "imageUrl": "https://picsum.photos/seed/rdr2-arthur/600/400",
+      "imageHint": "cowboy outlaw"
+    },
+    {
+      "id": "rdr2-hero",
+      "description": "Red Dead Redemption 2 vast landscape",
+      "imageUrl": "https://picsum.photos/seed/rdr2-wild-west/1200/800",
+      "imageHint": "western landscape"
+    },
+    {
+      "id": "rdr2-gallery-1",
+      "description": "Red Dead Redemption 2 gang at campfire",
+      "imageUrl": "https://picsum.photos/seed/rdr2-campfire/1200/800",
+      "imageHint": "wild west"
+    },
+    {
       "id": "race-hero",
       "description": "High speed racing car",
       "imageUrl": "https://picsum.photos/seed/race1/1200/600",

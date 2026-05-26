@@ -1,4 +1,3 @@
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -65,5 +64,17 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/g4b/1200/800'
     ],
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+  },
+  {
+    id: '5',
+    title: 'Red Dead Redemption 2',
+    description: 'America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
+    category: 'Open World',
+    thumbnail: getImg('rdr2-thumb'),
+    images: [
+      getImg('rdr2-hero'),
+      getImg('rdr2-gallery-1')
+    ],
+    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4'
   }
 ];
