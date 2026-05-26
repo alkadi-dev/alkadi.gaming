@@ -15,7 +15,7 @@ export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Cyb
 export const MOCK_GAMES: GameEntry[] = [
   {
     id: '1',
-    title: 'The Witcher 3: Wild Hunt',
+    title: 'The Witcher 3',
     description: 'Become Geralt of Rivia, a professional monster hunter, and explore the war-torn Northern Kingdoms in search of the Child of Prophecy. A masterpiece of storytelling and open-world exploration.',
     category: 'RPG',
     thumbnail: 'https://picsum.photos/seed/witcher3/600/400',
