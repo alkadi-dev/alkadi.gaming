@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
 
 interface GameCardProps {
@@ -30,11 +30,6 @@ export function GameCard({ game }: GameCardProps) {
             {game.title}
           </h3>
         </CardContent>
-        <CardFooter className="p-4 pt-0">
-          <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
-            {game.description}
-          </p>
-        </CardFooter>
       </Card>
     </Link>
   );
