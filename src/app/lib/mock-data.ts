@@ -50,7 +50,7 @@ export const MOCK_GAMES: GameEntry[] = [
       getImg('forza-hero'),
       getImg('forza-gallery-1')
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    videoUrl: 'https://www.youtube.com/embed/pWw-UENvdTw'
   },
   {
     id: '3',
@@ -63,7 +63,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/g3b/1200/800',
       'https://picsum.photos/seed/g3c/1200/800'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    videoUrl: 'https://www.youtube.com/embed/pWw-UENvdTw'
   },
   {
     id: '4',
@@ -75,7 +75,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/g4a/1200/800',
       'https://picsum.photos/seed/g4b/1200/800'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    videoUrl: 'https://www.youtube.com/embed/pWw-UENvdTw'
   },
   {
     id: '6',
@@ -225,7 +225,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Sports',
     thumbnail: getImg('fifa26-thumb'),
     images: [getImg('fifa26-hero')],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    videoUrl: 'https://www.youtube.com/embed/pWw-UENvdTw'
   },
   {
     id: '22',
