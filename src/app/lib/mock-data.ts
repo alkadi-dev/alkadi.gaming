@@ -1,4 +1,3 @@
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -11,7 +10,7 @@ export interface GameEntry {
   videoUrl: string;
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Cyberpunk', 'Strategy'];
+export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -63,30 +62,6 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://picsum.photos/seed/g4a/1200/800',
       'https://picsum.photos/seed/g4b/1200/800'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: '5',
-    title: 'Neon Syndicate',
-    description: 'In a city where information is the only currency, you are a freelance decker. Infiltrate high-security networks, upgrade your cybernetics, and navigate the treacherous politics of the corporate underworld.',
-    category: 'Cyberpunk',
-    thumbnail: 'https://picsum.photos/seed/g5/600/400',
-    images: [
-      'https://picsum.photos/seed/g5a/1200/800',
-      'https://picsum.photos/seed/g5b/1200/800'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: '6',
-    title: 'Command & Conqueror',
-    description: 'Strategy meets real-time warfare. Manage resources across global theaters, develop advanced weaponry, and outsmart your opponents in massive tactical battles that decide the fate of nations.',
-    category: 'Strategy',
-    thumbnail: 'https://picsum.photos/seed/g6/600/400',
-    images: [
-      'https://picsum.photos/seed/g6a/1200/800',
-      'https://picsum.photos/seed/g6b/1200/800'
     ],
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
   }
