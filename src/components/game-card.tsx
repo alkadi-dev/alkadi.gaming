@@ -24,9 +24,9 @@ export function GameCard({ game }: GameCardProps) {
           {game.category}
         </Badge>
       </Link>
-      <CardContent className="p-4 flex-1">
-        <Link href={`/game/${game.id}`} className="group">
-          <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors mb-2">
+      <CardContent className="p-4 flex-1 flex items-center justify-center">
+        <Link href={`/game/${game.id}`} className="group w-full">
+          <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors text-center">
             {game.title}
           </h3>
         </Link>
