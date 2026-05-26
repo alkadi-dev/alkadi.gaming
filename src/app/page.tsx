@@ -53,7 +53,7 @@ export default function HomePage() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden sm:flex">Catalog</Button>
+            {/* Catalog button removed as requested */}
           </div>
         </div>
       </header>
