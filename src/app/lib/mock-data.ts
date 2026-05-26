@@ -10,7 +10,7 @@ export interface GameEntry {
   videoUrl: string;
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Sports'];
+export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Sports', 'Shooter'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -226,5 +226,86 @@ export const MOCK_GAMES: GameEntry[] = [
     thumbnail: getImg('fifa26-thumb'),
     images: [getImg('fifa26-hero')],
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+  },
+  {
+    id: '22',
+    title: 'Sniper Elite 4',
+    description: 'Sniper Elite 4 is a third-person tactical shooter that combines genre-defining ballistics, breathless emergent stealth, and gripping third-person action across the most diverse environments ever seen in a Sniper Elite game.',
+    category: 'Shooter',
+    thumbnail: getImg('se4-thumb'),
+    images: [getImg('se4-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/yVv8Wp9vB_U'
+  },
+  {
+    id: '23',
+    title: 'Watch Dogs 2',
+    description: 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, to execute the biggest hack in history; take down ctOS 2.0.',
+    category: 'Open World',
+    thumbnail: getImg('wd2-thumb'),
+    images: [getImg('wd2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/hh9x4NqW068'
+  },
+  {
+    id: '24',
+    title: 'Battlefield V',
+    description: 'Enter mankind\'s greatest conflict with Battlefield™ V as the series goes back to its roots in a never-before-seen portrayal of World War 2. Take on physical, all-out multiplayer with your squad in modes like the vast Grand Operations and the cooperative Combined Arms.',
+    category: 'Shooter',
+    thumbnail: getImg('bf5-thumb'),
+    images: [getImg('bf5-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/fb1MR85XFOc'
+  },
+  {
+    id: '25',
+    title: 'Battlefield 2042',
+    description: 'Battlefield™ 2042 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise. In a near-future world transformed by disorder, adapt and overcome dynamically-changing battlegrounds with the help of your squad and a cutting-edge arsenal.',
+    category: 'Shooter',
+    thumbnail: getImg('bf6-thumb'),
+    images: [getImg('bf6-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/ASzOzrB-n9E'
+  },
+  {
+    id: '26',
+    title: 'Call of Duty: Vanguard',
+    description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper\'s precision and blast through advancing forces in North Africa. The Call of Duty® franchise returns with Call of Duty®: Vanguard.',
+    category: 'Shooter',
+    thumbnail: getImg('cod-v-thumb'),
+    images: [getImg('cod-v-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/O7-S6Zp_62I'
+  },
+  {
+    id: '27',
+    title: 'Call of Duty: WWII',
+    description: 'Call of Duty® returns to its roots with Call of Duty®: WWII - a breathtaking experience that redefines World War II for a new gaming generation. Land in Normandy on D-Day and battle across Europe through iconic locations in history\'s most monumental war.',
+    category: 'Shooter',
+    thumbnail: getImg('cod-ww2-thumb'),
+    images: [getImg('cod-ww2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/D4Q_o6409M'
+  },
+  {
+    id: '28',
+    title: 'Call of Duty: Modern Warfare',
+    description: 'Prepare to go dark, Modern Warfare® is back! The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-pounding saga that will affect the global balance of power.',
+    category: 'Shooter',
+    thumbnail: getImg('cod-mw-thumb'),
+    images: [getImg('cod-mw-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI'
+  },
+  {
+    id: '29',
+    title: 'Call of Duty: Modern Warfare II',
+    description: 'Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141. From small-scale, high-stakes infiltration tactical ops to highly classified missions, players will deploy alongside friends in a truly immersive experience.',
+    category: 'Shooter',
+    thumbnail: getImg('cod-mw2-thumb'),
+    images: [getImg('cod-mw2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/r72GP1PIZa0'
+  },
+  {
+    id: '30',
+    title: 'Call of Duty: Modern Warfare III',
+    description: 'In the direct sequel to the record-breaking Call of Duty®: Modern Warfare® II, Captain Price and Task Force 141 face off against the ultimate threat. The ultranationalist war criminal Vladimir Makarov is extending his grasp across the world causing Task Force 141 to fight like never before.',
+    category: 'Shooter',
+    thumbnail: getImg('cod-mw3-thumb'),
+    images: [getImg('cod-mw3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/mG_mAnI6-aM'
   }
 ];

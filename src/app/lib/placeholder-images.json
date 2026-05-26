@@ -3,7 +3,7 @@
     {
       "id": "rpg-hero",
       "description": "Epic fantasy RPG landscape",
-      "imageUrl": "https://picsum.photos/seed/rpg-world-1/1200/600",
+      "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",
       "imageHint": "fantasy landscape"
     },
     {
@@ -21,55 +21,61 @@
     {
       "id": "witcher-gallery-1",
       "description": "The Witcher 3 combat screenshot",
-      "imageUrl": "https://picsum.photos/seed/witcher-sword-fight/1200/800",
-      "imageHint": "sword battle"
+      "imageUrl": "https://picsum.photos/seed/witcher-gallery-1/1200/800",
+      "imageHint": "witcher combat"
     },
     {
       "id": "witcher-gallery-2",
       "description": "The Witcher 3 exploration screenshot",
-      "imageUrl": "https://picsum.photos/seed/witcher-castle-view/1200/800",
+      "imageUrl": "https://picsum.photos/seed/witcher-gallery-2/1200/800",
       "imageHint": "ancient castle"
     },
     {
       "id": "forza-thumb",
       "description": "Forza Horizon 6 supercar thumbnail",
-      "imageUrl": "https://picsum.photos/seed/forza-6-supercar-front/600/400",
+      "imageUrl": "https://picsum.photos/seed/forza-horizon-6-car/600/400",
       "imageHint": "supercar racing"
     },
     {
       "id": "forza-hero",
       "description": "Forza Horizon 6 scenic race track",
-      "imageUrl": "https://picsum.photos/seed/forza-6-mountain-track/1200/800",
+      "imageUrl": "https://picsum.photos/seed/forza-horizon-6-track/1200/800",
       "imageHint": "sports car"
     },
     {
       "id": "forza-gallery-1",
       "description": "Forza Horizon 6 interior view",
-      "imageUrl": "https://picsum.photos/seed/forza-steering-wheel/1200/800",
+      "imageUrl": "https://picsum.photos/seed/forza-interior/1200/800",
       "imageHint": "car cockpit"
     },
     {
       "id": "rdr2-thumb",
       "description": "Red Dead Redemption 2 character artwork",
-      "imageUrl": "https://picsum.photos/seed/rdr2-arthur-art/600/400",
+      "imageUrl": "https://picsum.photos/seed/rdr2-arthur/600/400",
       "imageHint": "cowboy outlaw"
     },
     {
       "id": "rdr2-hero",
       "description": "Red Dead Redemption 2 vast landscape",
-      "imageUrl": "https://picsum.photos/seed/rdr2-landscape/1200/800",
+      "imageUrl": "https://picsum.photos/seed/rdr2-wild-west/1200/800",
       "imageHint": "western landscape"
     },
     {
-      "id": "spiderman-thumb",
+      "id": "rdr2-gallery-1",
+      "description": "Red Dead Redemption 2 gang at campfire",
+      "imageUrl": "https://picsum.photos/seed/rdr2-campfire/1200/800",
+      "imageHint": "wild west"
+    },
+    {
+      "id": "spiderman2-thumb",
       "description": "Spider-Man 2 web slinging thumbnail",
-      "imageUrl": "https://picsum.photos/seed/spiderman-thumb/600/400",
+      "imageUrl": "https://picsum.photos/seed/spiderman2-thumb/600/400",
       "imageHint": "superhero action"
     },
     {
-      "id": "spiderman-hero",
+      "id": "spiderman2-hero",
       "description": "Spider-Man 2 NYC skyline hero",
-      "imageUrl": "https://picsum.photos/seed/spiderman-hero/1200/800",
+      "imageUrl": "https://picsum.photos/seed/spiderman2-hero/1200/800",
       "imageHint": "city skyline"
     },
     {
@@ -97,28 +103,214 @@
       "imageHint": "rainy forest"
     },
     {
-      "id": "race-hero",
-      "description": "High speed racing car",
-      "imageUrl": "https://picsum.photos/seed/race-track-1/1200/600",
-      "imageHint": "racing car"
+      "id": "gow-thumb",
+      "description": "God of War Kratos thumbnail",
+      "imageUrl": "https://picsum.photos/seed/gow-thumb/600/400",
+      "imageHint": "kratos axe"
     },
     {
-      "id": "adventure-hero",
-      "description": "Explorer in ancient ruins",
-      "imageUrl": "https://picsum.photos/seed/jungle-ruins/1200/600",
-      "imageHint": "ancient ruins"
+      "id": "gow-hero",
+      "description": "God of War mountain journey",
+      "imageUrl": "https://picsum.photos/seed/gow-hero/1200/800",
+      "imageHint": "mountain pass"
     },
     {
-      "id": "openworld-hero",
-      "description": "Vibrant city skyline at sunset",
-      "imageUrl": "https://picsum.photos/seed/neon-city-sunset/1200/600",
-      "imageHint": "city sunset"
+      "id": "gowr-thumb",
+      "description": "God of War Ragnarok thumbnail",
+      "imageUrl": "https://picsum.photos/seed/gowr-thumb/600/400",
+      "imageHint": "snowy warrior"
     },
     {
-      "id": "cyberpunk-hero",
-      "description": "Neon neon cyberpunk street",
-      "imageUrl": "https://picsum.photos/seed/cyber-alley/1200/600",
-      "imageHint": "cyberpunk street"
+      "id": "gowr-hero",
+      "description": "God of War Ragnarok epic world",
+      "imageUrl": "https://picsum.photos/seed/gowr-hero/1200/800",
+      "imageHint": "icy realm"
+    },
+    {
+      "id": "gtav-thumb",
+      "description": "GTA 5 city view thumbnail",
+      "imageUrl": "https://picsum.photos/seed/gtav-thumb/600/400",
+      "imageHint": "city robbery"
+    },
+    {
+      "id": "gtav-hero",
+      "description": "GTA 5 Los Santos skyline",
+      "imageUrl": "https://picsum.photos/seed/gtav-hero/1200/800",
+      "imageHint": "beach city"
+    },
+    {
+      "id": "cp2077-thumb",
+      "description": "Cyberpunk 2077 neon thumbnail",
+      "imageUrl": "https://picsum.photos/seed/cp2077-thumb/600/400",
+      "imageHint": "neon cyborg"
+    },
+    {
+      "id": "cp2077-hero",
+      "description": "Cyberpunk 2077 Night City",
+      "imageUrl": "https://picsum.photos/seed/cp2077-hero/1200/800",
+      "imageHint": "cyberpunk city"
+    },
+    {
+      "id": "u4-thumb",
+      "description": "Uncharted 4 Nathan Drake",
+      "imageUrl": "https://picsum.photos/seed/u4-thumb/600/400",
+      "imageHint": "jungle explorer"
+    },
+    {
+      "id": "u4-hero",
+      "description": "Uncharted 4 adventure vista",
+      "imageUrl": "https://picsum.photos/seed/u4-hero/1200/800",
+      "imageHint": "lost ruins"
+    },
+    {
+      "id": "got-thumb",
+      "description": "Ghost of Tsushima samurai",
+      "imageUrl": "https://picsum.photos/seed/got-thumb/600/400",
+      "imageHint": "samurai warrior"
+    },
+    {
+      "id": "got-hero",
+      "description": "Ghost of Tsushima scenic Japan",
+      "imageUrl": "https://picsum.photos/seed/got-hero/1200/800",
+      "imageHint": "cherry blossoms"
+    },
+    {
+      "id": "crimson-thumb",
+      "description": "Crimson Desert mercenary",
+      "imageUrl": "https://picsum.photos/seed/crimson-thumb/600/400",
+      "imageHint": "medieval warrior"
+    },
+    {
+      "id": "crimson-hero",
+      "description": "Crimson Desert battlefield",
+      "imageUrl": "https://picsum.photos/seed/crimson-hero/1200/800",
+      "imageHint": "gritty fantasy"
+    },
+    {
+      "id": "spiderman-thumb",
+      "description": "Marvel Spider-Man thumb",
+      "imageUrl": "https://picsum.photos/seed/spiderman1-thumb/600/400",
+      "imageHint": "hero web"
+    },
+    {
+      "id": "spiderman-hero",
+      "description": "Marvel Spider-Man NYC",
+      "imageUrl": "https://picsum.photos/seed/spiderman1-hero/1200/800",
+      "imageHint": "city swing"
+    },
+    {
+      "id": "miles-thumb",
+      "description": "Miles Morales thumbnail",
+      "imageUrl": "https://picsum.photos/seed/miles-thumb/600/400",
+      "imageHint": "neon hero"
+    },
+    {
+      "id": "miles-hero",
+      "description": "Miles Morales NYC winter",
+      "imageUrl": "https://picsum.photos/seed/miles-hero/1200/800",
+      "imageHint": "snow city"
+    },
+    {
+      "id": "hitman-thumb",
+      "description": "Hitman Agent 47",
+      "imageUrl": "https://picsum.photos/seed/hitman-thumb/600/400",
+      "imageHint": "suit assassin"
+    },
+    {
+      "id": "hitman-hero",
+      "description": "Hitman world view",
+      "imageUrl": "https://picsum.photos/seed/hitman-hero/1200/800",
+      "imageHint": "luxury mansion"
+    },
+    {
+      "id": "hzd-thumb",
+      "description": "Horizon Zero Dawn Aloy",
+      "imageUrl": "https://picsum.photos/seed/hzd-thumb/600/400",
+      "imageHint": "bow hunter"
+    },
+    {
+      "id": "hzd-hero",
+      "description": "Horizon Zero Dawn machines",
+      "imageUrl": "https://picsum.photos/seed/hzd-hero/1200/800",
+      "imageHint": "robot dinosaur"
+    },
+    {
+      "id": "fifa23-thumb",
+      "description": "FIFA 23 pitch",
+      "imageUrl": "https://picsum.photos/seed/fifa23-thumb/600/400",
+      "imageHint": "football match"
+    },
+    {
+      "id": "fifa23-hero",
+      "description": "FIFA 23 stadium",
+      "imageUrl": "https://picsum.photos/seed/fifa23-hero/1200/800",
+      "imageHint": "stadium crowd"
+    },
+    {
+      "id": "fifa26-thumb",
+      "description": "FIFA 26 future pitch",
+      "imageUrl": "https://picsum.photos/seed/fifa26-thumb/600/400",
+      "imageHint": "soccer game"
+    },
+    {
+      "id": "fifa26-hero",
+      "description": "FIFA 26 future stadium",
+      "imageUrl": "https://picsum.photos/seed/fifa26-hero/1200/800",
+      "imageHint": "arena night"
+    },
+    {
+      "id": "se4-thumb",
+      "description": "Sniper Elite 4 sniper scope",
+      "imageUrl": "https://picsum.photos/seed/se4-thumb/600/400",
+      "imageHint": "sniper scope"
+    },
+    {
+      "id": "wd2-thumb",
+      "description": "Watch Dogs 2 hacking",
+      "imageUrl": "https://picsum.photos/seed/wd2-thumb/600/400",
+      "imageHint": "neon hacking"
+    },
+    {
+      "id": "bf5-thumb",
+      "description": "Battlefield V tank",
+      "imageUrl": "https://picsum.photos/seed/bf5-thumb/600/400",
+      "imageHint": "world war"
+    },
+    {
+      "id": "bf6-thumb",
+      "description": "Battlefield 6 futuristic warfare",
+      "imageUrl": "https://picsum.photos/seed/bf6-thumb/600/400",
+      "imageHint": "modern war"
+    },
+    {
+      "id": "cod-v-thumb",
+      "description": "Call of Duty Vanguard soldier",
+      "imageUrl": "https://picsum.photos/seed/cod-v-thumb/600/400",
+      "imageHint": "war soldier"
+    },
+    {
+      "id": "cod-ww2-thumb",
+      "description": "Call of Duty WWII beach storming",
+      "imageUrl": "https://picsum.photos/seed/cod-ww2-thumb/600/400",
+      "imageHint": "dday beach"
+    },
+    {
+      "id": "cod-mw-thumb",
+      "description": "Call of Duty Modern Warfare night vision",
+      "imageUrl": "https://picsum.photos/seed/cod-mw-thumb/600/400",
+      "imageHint": "night vision"
+    },
+    {
+      "id": "cod-mw2-thumb",
+      "description": "Call of Duty Modern Warfare 2 task force",
+      "imageUrl": "https://picsum.photos/seed/cod-mw2-thumb/600/400",
+      "imageHint": "special forces"
+    },
+    {
+      "id": "cod-mw3-thumb",
+      "description": "Call of Duty Modern Warfare 3 battlefield",
+      "imageUrl": "https://picsum.photos/seed/cod-mw3-thumb/600/400",
+      "imageHint": "urban war"
     }
   ]
 }
