@@ -70,7 +70,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp13980388.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/zGsXns95g4I?si=L580j9Mw1LFt06O4',
+      'https://www.youtube.com/embed/R5cq8FnyPFI?si=2AVA1TyCbroVAJhD',
+      'https://www.youtube.com/embed/mnIMU7BH57A?si=7_p6ID87TvhjRjHV'
+    ],
   },
   {
     id: 'ac-unity',
