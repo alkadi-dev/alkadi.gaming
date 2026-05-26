@@ -37,7 +37,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
     images: ['https://wallpapercave.com/wp/wp8510096.jpg', getImg('witcher-gallery-1'), getImg('witcher-gallery-2')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
+    shorts: [
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
   },
   {
     id: '2',
@@ -46,7 +50,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Race',
     thumbnail: getImg('forza5-thumb'),
     images: [getImg('forza5-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
+    shorts: [
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/NnK-rC5A_nU'
+    ],
   },
   {
     id: '6',
@@ -55,7 +63,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('spiderman2-thumb'),
     images: [getImg('spiderman2-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/qIQ3uZvzOig',
+    shorts: [
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k'
+    ],
   },
   {
     id: '10',
@@ -64,7 +76,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('gowr-thumb'),
     images: [getImg('gowr-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0',
+    shorts: [
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
   },
   {
     id: '12',
@@ -73,7 +89,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('cp2077-thumb'),
     images: [getImg('cp2077-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8',
+    shorts: [
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/u_F8X-v8f8Y'
+    ],
   },
   {
     id: '50',
@@ -82,7 +102,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('re4-thumb'),
     images: [getImg('re4-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/j5Xv2lM96vM',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0'
+    ],
   },
   {
     id: '55',
@@ -91,7 +115,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: getImg('eldenring-thumb'),
     images: [getImg('eldenring-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/E3Huy2cdih0',
+    shorts: [
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
   },
   {
     id: '36',
@@ -100,7 +128,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('detroit-thumb'),
     images: [getImg('detroit-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/8a-EObAhYrg',
+    shorts: [
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k'
+    ],
   },
   {
     id: '40',
@@ -109,7 +141,11 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('batman-thumb'),
     images: [getImg('batman-hero')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/dxa34RatmSc',
+    shorts: [
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+    ],
   },
   {
     id: 'mk1',
@@ -118,6 +154,10 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('mk1-thumb'),
     images: [getImg('mk1-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    videoUrl: 'https://www.youtube.com/embed/MYGf9X-iM38',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/NnK-rC5A_nU'
+    ],
   }
 ];
