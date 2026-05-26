@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
-import { Button } from '@/components/ui/button';
 
 interface GameCardProps {
   game: GameEntry;
@@ -35,13 +34,6 @@ export function GameCard({ game }: GameCardProps) {
           {game.description}
         </p>
       </CardContent>
-      <CardFooter className="p-4 pt-0">
-        <Button variant="default" className="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all" asChild>
-          <Link href={`/game/${game.id}`}>
-            View Details
-          </Link>
-        </Button>
-      </CardFooter>
     </Card>
   );
 }
