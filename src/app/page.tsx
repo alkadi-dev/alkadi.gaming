@@ -20,7 +20,14 @@ export default function HomePage() {
   const scrollToLibrary = () => {
     const element = document.getElementById('library');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -63,7 +70,11 @@ export default function HomePage() {
               Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-primary text-lg" onClick={scrollToLibrary}>
+              <Button 
+                size="lg" 
+                className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
+                onClick={scrollToLibrary}
+              >
                 Browse Now
               </Button>
             </div>
@@ -72,7 +83,7 @@ export default function HomePage() {
         </div>
 
         {/* Filters */}
-        <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-20">
+        <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-24">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <h2 className="text-2xl font-bold font-headline">Library</h2>
             <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
