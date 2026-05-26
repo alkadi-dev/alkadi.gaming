@@ -38,15 +38,6 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative w-12 h-8">
-              <Image
-                src="https://picsum.photos/seed/alkadi-logo/140/80"
-                alt="Alkadi Gaming Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
             <span className="text-2xl font-bold font-headline tracking-tight uppercase hidden sm:inline-block">
               ALKADI<span className="text-primary"> GAMING</span>
             </span>
