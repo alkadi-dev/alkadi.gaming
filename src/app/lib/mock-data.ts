@@ -10,7 +10,7 @@ export interface GameEntry {
   videoUrl: string;
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', 'Fighting'];
+export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -103,6 +103,15 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('batman-thumb'),
     images: [getImg('batman-hero')],
+    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+  },
+  {
+    id: 'mk1',
+    title: 'Mortal Kombat 1',
+    description: 'It\'s In Our Blood. Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!',
+    category: 'Action',
+    thumbnail: getImg('mk1-thumb'),
+    images: [getImg('mk1-thumb')],
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
   }
 ];
