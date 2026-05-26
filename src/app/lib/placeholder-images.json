@@ -1,0 +1,59 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "rpg-hero",
+      "description": "Epic fantasy RPG landscape",
+      "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",
+      "imageHint": "fantasy landscape"
+    },
+    {
+      "id": "witcher-hero",
+      "description": "The Witcher 3 Wild Hunt thematic image",
+      "imageUrl": "https://picsum.photos/seed/witcher3-geralt-hero/1200/800",
+      "imageHint": "geralt witcher"
+    },
+    {
+      "id": "witcher-thumb",
+      "description": "The Witcher 3 cover style thumbnail",
+      "imageUrl": "https://picsum.photos/seed/witcher3-white-bg/600/400",
+      "imageHint": "witcher geralt"
+    },
+    {
+      "id": "witcher-gallery-1",
+      "description": "The Witcher 3 combat screenshot",
+      "imageUrl": "https://picsum.photos/seed/witcher3-combat-action/1200/800",
+      "imageHint": "sword fight"
+    },
+    {
+      "id": "witcher-gallery-2",
+      "description": "The Witcher 3 exploration screenshot",
+      "imageUrl": "https://picsum.photos/seed/witcher3-world/1200/800",
+      "imageHint": "fantasy world"
+    },
+    {
+      "id": "race-hero",
+      "description": "High speed racing car",
+      "imageUrl": "https://picsum.photos/seed/race1/1200/600",
+      "imageHint": "racing car"
+    },
+    {
+      "id": "adventure-hero",
+      "description": "Explorer in ancient ruins",
+      "imageUrl": "https://picsum.photos/seed/adv1/1200/600",
+      "imageHint": "ancient ruins"
+    },
+    {
+      "id": "openworld-hero",
+      "description": "Vibrant city skyline at sunset",
+      "imageUrl": "https://picsum.photos/seed/ow1/1200/600",
+      "imageHint": "city sunset"
+    },
+    {
+      "id": "cyberpunk-hero",
+      "description": "Neon neon cyberpunk street",
+      "imageUrl": "https://picsum.photos/seed/cb1/1200/600",
+      "imageHint": "cyberpunk street"
+    }
+  ]
+}
