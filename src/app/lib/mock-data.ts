@@ -19,7 +19,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: '1',
     title: 'The Witcher 3',
-    description: 'Become Geralt of Rivia, a professional monster hunter, and explore the war-torn Northern Kingdoms in search of the Child of Prophecy. A masterpiece of storytelling and open-world exploration.',
+    description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
     category: 'RPG',
     thumbnail: getImg('witcher-thumb'),
     images: [
