@@ -6,7 +6,6 @@ import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
 import { Gamepad2, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -120,42 +119,6 @@ export default function HomePage() {
           </div>
         )}
       </main>
-
-      {/* Footer */}
-      <footer className="border-t bg-secondary/20 py-12 mt-20">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Gamepad2 className="w-6 h-6 text-primary" />
-              <span className="text-xl font-bold font-headline">GAMEVERSE</span>
-            </div>
-            <p className="text-muted-foreground max-w-sm mb-6">
-              The ultimate destination for game enthusiasts. Explore, discover, and immerse yourself in the world of digital entertainment.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-4">Explore</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary">Featured Games</Link></li>
-              <li><Link href="/" className="hover:text-primary">New Releases</Link></li>
-              <li><Link href="/" className="hover:text-primary">Categories</Link></li>
-              <li><Link href="/" className="hover:text-primary">Community</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-4">Connect</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary">Twitter</Link></li>
-              <li><Link href="/" className="hover:text-primary">Discord</Link></li>
-              <li><Link href="/" className="hover:text-primary">Instagram</Link></li>
-              <li><Link href="/" className="hover:text-primary">Support</Link></li>
-            </ul>
-          </div>
-        </div>
-        <div className="container mx-auto px-4 pt-12 text-center text-sm text-muted-foreground">
-          <p>© 2024 GameVerse Catalog. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
