@@ -58,6 +58,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.vgchartz.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
