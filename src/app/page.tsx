@@ -65,7 +65,7 @@ export default function HomePage() {
               <span className="text-primary text-xl md:text-3xl block font-normal">buy your game eazy, cheap and fast</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
+              Discover your next adventure—explore and buy the hottest games in one place. Curated collections, unique finds, and unbeatable prices—start your gaming journey today!
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
