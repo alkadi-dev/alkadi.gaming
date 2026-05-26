@@ -319,10 +319,22 @@
       "imageHint": "feudal japan"
     },
     {
+      "id": "ac-shadows-hero",
+      "description": "Assassin's Creed Shadows Japan hero",
+      "imageUrl": "https://picsum.photos/seed/acshadows-hero/1200/800",
+      "imageHint": "samurai village"
+    },
+    {
       "id": "ac-unity-thumb",
       "description": "Assassin's Creed Unity Paris thumbnail",
       "imageUrl": "https://picsum.photos/seed/acunity/600/400",
       "imageHint": "french revolution"
+    },
+    {
+      "id": "ac-unity-hero",
+      "description": "Assassin's Creed Unity Paris hero",
+      "imageUrl": "https://picsum.photos/seed/acunity-hero/1200/800",
+      "imageHint": "paris streets"
     },
     {
       "id": "ac-mirage-thumb",
@@ -331,16 +343,34 @@
       "imageHint": "desert city"
     },
     {
+      "id": "ac-mirage-hero",
+      "description": "Assassin's Creed Mirage Baghdad hero",
+      "imageUrl": "https://picsum.photos/seed/acmirage-hero/1200/800",
+      "imageHint": "golden dome"
+    },
+    {
       "id": "ac-odyssey-thumb",
       "description": "Assassin's Creed Odyssey Greece thumbnail",
       "imageUrl": "https://picsum.photos/seed/acodyssey/600/400",
       "imageHint": "ancient greece"
     },
     {
+      "id": "ac-odyssey-hero",
+      "description": "Assassin's Creed Odyssey Greece hero",
+      "imageUrl": "https://picsum.photos/seed/acodyssey-hero/1200/800",
+      "imageHint": "mediterranean sea"
+    },
+    {
       "id": "ac-syndicate-thumb",
       "description": "Assassin's Creed Syndicate London thumbnail",
       "imageUrl": "https://picsum.photos/seed/acsyndicate/600/400",
       "imageHint": "victorian london"
+    },
+    {
+      "id": "ac-syndicate-hero",
+      "description": "Assassin's Creed Syndicate London hero",
+      "imageUrl": "https://picsum.photos/seed/acsyndicate-hero/1200/800",
+      "imageHint": "london bridge"
     },
     {
       "id": "skyward-thumb",
@@ -449,6 +479,264 @@
       "description": "Echoes of the End hero landscape",
       "imageUrl": "https://picsum.photos/seed/echoes-hero/1200/800",
       "imageHint": "fantasy ruins"
+    },
+    {
+      "id": "forza5-thumb",
+      "description": "Forza Horizon 5 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/forza5/600/400",
+      "imageHint": "mexico racing"
+    },
+    {
+      "id": "forza5-hero",
+      "description": "Forza Horizon 5 hero",
+      "imageUrl": "https://picsum.photos/seed/forza5-hero/1200/800",
+      "imageHint": "desert race"
+    },
+    {
+      "id": "dl2-thumb",
+      "description": "Dying Light 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/dl2/600/400",
+      "imageHint": "parkour zombie"
+    },
+    {
+      "id": "dl2-hero",
+      "description": "Dying Light 2 hero",
+      "imageUrl": "https://picsum.photos/seed/dl2-hero/1200/800",
+      "imageHint": "rooftop sunset"
+    },
+    {
+      "id": "di2-thumb",
+      "description": "Dead Island 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/di2/600/400",
+      "imageHint": "hollywood zombie"
+    },
+    {
+      "id": "di2-hero",
+      "description": "Dead Island 2 hero",
+      "imageUrl": "https://picsum.photos/seed/di2-hero/1200/800",
+      "imageHint": "sunny beach"
+    },
+    {
+      "id": "daysgone-thumb",
+      "description": "Days Gone thumbnail",
+      "imageUrl": "https://picsum.photos/seed/daysgone/600/400",
+      "imageHint": "biker survival"
+    },
+    {
+      "id": "daysgone-hero",
+      "description": "Days Gone hero",
+      "imageUrl": "https://picsum.photos/seed/daysgone-hero/1200/800",
+      "imageHint": "forest highway"
+    },
+    {
+      "id": "stalker2-thumb",
+      "description": "STALKER 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/stalker2/600/400",
+      "imageHint": "chernobyl zone"
+    },
+    {
+      "id": "stalker2-hero",
+      "description": "STALKER 2 hero",
+      "imageUrl": "https://picsum.photos/seed/stalker2-hero/1200/800",
+      "imageHint": "anomaly field"
+    },
+    {
+      "id": "re2-thumb",
+      "description": "Resident Evil 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/re2/600/400",
+      "imageHint": "police station"
+    },
+    {
+      "id": "re2-hero",
+      "description": "Resident Evil 2 hero",
+      "imageUrl": "https://picsum.photos/seed/re2-hero/1200/800",
+      "imageHint": "dark corridor"
+    },
+    {
+      "id": "re4-thumb",
+      "description": "Resident Evil 4 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/re4/600/400",
+      "imageHint": "spanish village"
+    },
+    {
+      "id": "re4-hero",
+      "description": "Resident Evil 4 hero",
+      "imageUrl": "https://picsum.photos/seed/re4-hero/1200/800",
+      "imageHint": "castle entrance"
+    },
+    {
+      "id": "revillage-thumb",
+      "description": "Resident Evil Village thumbnail",
+      "imageUrl": "https://picsum.photos/seed/revillage/600/400",
+      "imageHint": "snowy village"
+    },
+    {
+      "id": "revillage-hero",
+      "description": "Resident Evil Village hero",
+      "imageUrl": "https://picsum.photos/seed/revillage-hero/1200/800",
+      "imageHint": "vampire castle"
+    },
+    {
+      "id": "rebio-thumb",
+      "description": "Resident Evil Biohazard thumbnail",
+      "imageUrl": "https://picsum.photos/seed/rebio/600/400",
+      "imageHint": "swamp house"
+    },
+    {
+      "id": "rebio-hero",
+      "description": "Resident Evil Biohazard hero",
+      "imageUrl": "https://picsum.photos/seed/rebio-hero/1200/800",
+      "imageHint": "creepy mansion"
+    },
+    {
+      "id": "plague-thumb",
+      "description": "A Plague Tale Requiem thumbnail",
+      "imageUrl": "https://picsum.photos/seed/plague/600/400",
+      "imageHint": "medieval rats"
+    },
+    {
+      "id": "plague-hero",
+      "description": "A Plague Tale Requiem hero",
+      "imageUrl": "https://picsum.photos/seed/plague-hero/1200/800",
+      "imageHint": "sunset island"
+    },
+    {
+      "id": "re3-thumb",
+      "description": "Resident Evil 3 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/re3/600/400",
+      "imageHint": "nemesis zombie"
+    },
+    {
+      "id": "eldenring-thumb",
+      "description": "Elden Ring landscape thumbnail",
+      "imageUrl": "https://picsum.photos/seed/elden/600/400",
+      "imageHint": "golden tree"
+    },
+    {
+      "id": "elden-shadow-thumb",
+      "description": "Elden Ring Shadow of the Erdtree thumbnail",
+      "imageUrl": "https://picsum.photos/seed/eldenshadow/600/400",
+      "imageHint": "dark fantasy"
+    },
+    {
+      "id": "mk1-thumb",
+      "description": "Mortal Kombat 1 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/mk1/600/400",
+      "imageHint": "martial arts"
+    },
+    {
+      "id": "jedi-survivor-thumb",
+      "description": "Star Wars Jedi Survivor thumbnail",
+      "imageUrl": "https://picsum.photos/seed/jedisurv/600/400",
+      "imageHint": "lightsaber duel"
+    },
+    {
+      "id": "nightmares3-thumb",
+      "description": "Little Nightmares 3 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ln3/600/400",
+      "imageHint": "creepy doll"
+    },
+    {
+      "id": "ninjag4-thumb",
+      "description": "Ninja Gaiden 4 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ng4/600/400",
+      "imageHint": "cyber ninja"
+    },
+    {
+      "id": "exp33-thumb",
+      "description": "Expedition 33 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/exp33/600/400",
+      "imageHint": "belle epoque"
+    },
+    {
+      "id": "avatar-pandora-thumb",
+      "description": "Avatar Frontiers of Pandora thumbnail",
+      "imageUrl": "https://picsum.photos/seed/avatar/600/400",
+      "imageHint": "blue alien"
+    },
+    {
+      "id": "reanimal-thumb",
+      "description": "Reanimal thumbnail",
+      "imageUrl": "https://picsum.photos/seed/reanimal/600/400",
+      "imageHint": "animal horror"
+    },
+    {
+      "id": "alanwake2-thumb",
+      "description": "Alan Wake 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/aw2/600/400",
+      "imageHint": "noir detective"
+    },
+    {
+      "id": "mgs5-thumb",
+      "description": "Metal Gear Solid 5 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/mgs5/600/400",
+      "imageHint": "tactical stealth"
+    },
+    {
+      "id": "hellblade2-thumb",
+      "description": "Senua Hellblade 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/hellb2/600/400",
+      "imageHint": "celtic warrior"
+    },
+    {
+      "id": "ds2-thumb",
+      "description": "Death Stranding 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ds2/600/400",
+      "imageHint": "sci-fi journey"
+    },
+    {
+      "id": "jc4-thumb",
+      "description": "Just Cause 4 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/jc4/600/400",
+      "imageHint": "explosion action"
+    },
+    {
+      "id": "mafia-old-thumb",
+      "description": "Mafia The Old Country thumbnail",
+      "imageUrl": "https://picsum.photos/seed/mafiaold/600/400",
+      "imageHint": "vintage gangster"
+    },
+    {
+      "id": "mafia3-thumb",
+      "description": "Mafia 3 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/mafia3/600/400",
+      "imageHint": "crime city"
+    },
+    {
+      "id": "maxpayne3-thumb",
+      "description": "Max Payne 3 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/max3/600/400",
+      "imageHint": "bullet time"
+    },
+    {
+      "id": "ferocious-thumb",
+      "description": "Ferocious thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ferocious/600/400",
+      "imageHint": "dinosaur jungle"
+    },
+    {
+      "id": "nfs-unbound-thumb",
+      "description": "Need for Speed Unbound thumbnail",
+      "imageUrl": "https://picsum.photos/seed/unbound/600/400",
+      "imageHint": "anime street"
+    },
+    {
+      "id": "nfs-heat-thumb",
+      "description": "Need for Speed Heat thumbnail",
+      "imageUrl": "https://picsum.photos/seed/nfsheat/600/400",
+      "imageHint": "neon race"
+    },
+    {
+      "id": "crew2-thumb",
+      "description": "The Crew 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/crew2/600/400",
+      "imageHint": "open world race"
+    },
+    {
+      "id": "silenthill2-thumb",
+      "description": "Silent Hill 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/sh2/600/400",
+      "imageHint": "foggy street"
     }
   ]
 }

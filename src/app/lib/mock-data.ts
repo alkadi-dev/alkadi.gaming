@@ -1,4 +1,3 @@
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -11,7 +10,7 @@ export interface GameEntry {
   videoUrl: string;
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Sports', 'Shooter'];
+export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Sports', 'Shooter', 'Fighting', 'Horror'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 const NEW_TRAILER_URL = 'https://www.youtube.com/embed/gmA6MrX81z4';
@@ -500,7 +499,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: '52',
-    title: 'Resident Evil 7: Biohazard',
+    title: 'Resident Evil Biohazard',
     description: 'Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
     category: 'Adventure',
     thumbnail: getImg('rebio-thumb'),
@@ -514,6 +513,213 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('plague-thumb'),
     images: [getImg('plague-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '54',
+    title: 'Resident Evil 3',
+    description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
+    category: 'Horror',
+    thumbnail: getImg('re3-thumb'),
+    images: [getImg('re3-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '55',
+    title: 'Elden Ring',
+    description: 'Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between. Explore a vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected.',
+    category: 'RPG',
+    thumbnail: getImg('eldenring-thumb'),
+    images: [getImg('eldenring-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '56',
+    title: 'Elden Ring: Shadow of the Erdtree',
+    description: 'In the Land of Shadow, Miquella awaits the return of his promised Lord. An expansion to the award-winning action RPG Elden Ring, offering a new story, new enemies, and new powers.',
+    category: 'RPG',
+    thumbnail: getImg('elden-shadow-thumb'),
+    images: [getImg('elden-shadow-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '57',
+    title: 'Mortal Kombat 1',
+    description: 'It\'s In Our Blood. Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!',
+    category: 'Fighting',
+    thumbnail: getImg('mk1-thumb'),
+    images: [getImg('mk1-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '58',
+    title: 'Star Wars Jedi: Survivor',
+    description: 'The story of Cal Kestis continues in Star Wars Jedi: Survivor, a third-person, galaxy-spanning, action-adventure game from Respawn Entertainment, developed in collaboration with Lucasfilm Games.',
+    category: 'Adventure',
+    thumbnail: getImg('jedi-survivor-thumb'),
+    images: [getImg('jedi-survivor-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '59',
+    title: 'The Little Nightmares 3',
+    description: 'In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere. Trapped within the Spiral, a cluster of disturbing places, the two friends will have to work together to survive.',
+    category: 'Horror',
+    thumbnail: getImg('nightmares3-thumb'),
+    images: [getImg('nightmares3-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '60',
+    title: 'Ninja Gaiden 4',
+    description: 'The legendary master ninja Ryu Hayabusa returns in an all-new high-speed action spectacle. Face off against a new threat to the world with unmatched precision and lethal combat techniques.',
+    category: 'Action',
+    thumbnail: getImg('ninjag4-thumb'),
+    images: [getImg('ninjag4-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '61',
+    title: 'Clair Obscur: Expedition 33',
+    description: 'A reactive turn-based RPG set in the Belle Époque. Join the Expedition 33 on their quest to stop the Paintress and her cycle of death.',
+    category: 'RPG',
+    thumbnail: getImg('exp33-thumb'),
+    images: [getImg('exp33-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '62',
+    title: 'Avatar: Frontiers of Pandora',
+    description: 'Avatar: Frontiers of Pandora™ is a first-person action-adventure game set in the open world of the Western Frontier of Pandora. Abducted by the human militaristic corporation known as the RDA, you, a Na’vi, were trained and molded to serve their purpose.',
+    category: 'Adventure',
+    thumbnail: getImg('avatar-pandora-thumb'),
+    images: [getImg('avatar-pandora-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '63',
+    title: 'Reanimal',
+    description: 'The original creators of Little Nightmares return with a dark, terrifying journey. Face your deepest fears as you navigate a world of twisted creatures and haunting environments.',
+    category: 'Horror',
+    thumbnail: getImg('reanimal-thumb'),
+    images: [getImg('reanimal-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '64',
+    title: 'Alan Wake 2',
+    description: 'A string of ritualistic murders threatens Bright Falls, an eerie community surrounded by the Pacific Northwest wilderness. Saga Anderson, an accomplished FBI agent, arrives to investigate. Meanwhile, Alan Wake, a trapped writer, writes a dark story to shape the reality around him.',
+    category: 'Horror',
+    thumbnail: getImg('alanwake2-thumb'),
+    images: [getImg('alanwake2-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '65',
+    title: 'Metal Gear Solid V: The Phantom Pain',
+    description: 'Ushering in a new era for the Metal Gear franchise with cutting-edge technology powered by the Fox Engine, Metal Gear Solid V: The Phantom Pain provides players a first-rate gaming experience as they are offered tactical freedom to carry out open-world missions.',
+    category: 'Action',
+    thumbnail: getImg('mgs5-thumb'),
+    images: [getImg('mgs5-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '66',
+    title: 'Senua\'s Saga: Hellblade II',
+    description: 'The sequel to the award-winning Hellblade: Senua\'s Sacrifice, Senua returns in a brutal journey of survival through the myth and tyranny of Viking Iceland. Intent on saving those who have fallen victim to the horrors of tyranny, Senua faces a battle of overcoming the darkness within and without.',
+    category: 'Adventure',
+    thumbnail: getImg('hellblade2-thumb'),
+    images: [getImg('hellblade2-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '67',
+    title: 'Death Stranding 2: On the Beach',
+    description: 'Sam Porter Bridges and his companions embark on a new journey to connect a fractured world. A masterpiece from Hideo Kojima, pushing the boundaries of storytelling and gameplay.',
+    category: 'Adventure',
+    thumbnail: getImg('ds2-thumb'),
+    images: [getImg('ds2-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '68',
+    title: 'Just Cause 4',
+    description: 'Rogue agent Rico Rodriguez journeys to Solis, a huge South American world home of conflict, tyranny and extreme weather conditions. Strap into your wingsuit, equip your fully customizable grappling hook, and get ready to bring the thunder!',
+    category: 'Action',
+    thumbnail: getImg('jc4-thumb'),
+    images: [getImg('jc4-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '69',
+    title: 'Mafia: The Old Country',
+    description: 'Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily. Fight to survive in this dangerous and unforgiving era.',
+    category: 'Open World',
+    thumbnail: getImg('mafia-old-thumb'),
+    images: [getImg('mafia-old-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '70',
+    title: 'Mafia III: Definitive Edition',
+    description: 'Part three of the Mafia crime saga – 1968, New Bordeaux, LA. After years of combat in Vietnam, Lincoln Clay knows this truth: family isn’t who you’re born with, it’s who you die for.',
+    category: 'Open World',
+    thumbnail: getImg('mafia3-thumb'),
+    images: [getImg('mafia3-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '71',
+    title: 'Max Payne 3',
+    description: 'For Max Payne, the tragedies that took his loved ones years ago are wounds that refuse to heal. No longer a cop, close to washed up and addicted to pain killers, Max takes a job in São Paulo, Brazil, protecting the family of wealthy real estate mogul Rodrigo Branco.',
+    category: 'Action',
+    thumbnail: getImg('maxpayne3-thumb'),
+    images: [getImg('maxpayne3-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '72',
+    title: 'Ferocious',
+    description: 'A prehistoric survival shooter. Discover a mysterious island where dinosaurs still roam. Fight to survive against primeval threats and uncovering the secrets of a lost world.',
+    category: 'Shooter',
+    thumbnail: getImg('ferocious-thumb'),
+    images: [getImg('ferocious-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '73',
+    title: 'Need for Speed Unbound',
+    description: 'The world is your canvas in Need for Speed Unbound. Prove you have what it takes to win The Grand, Lakeshore’s ultimate street racing challenge.',
+    category: 'Race',
+    thumbnail: getImg('nfs-unbound-thumb'),
+    images: [getImg('nfs-unbound-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '74',
+    title: 'Need for Speed Heat',
+    description: 'Hustle by day and risk it all by night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.',
+    category: 'Race',
+    thumbnail: getImg('nfs-heat-thumb'),
+    images: [getImg('nfs-heat-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '75',
+    title: 'The Crew 2',
+    description: 'Take on the American motorsports scene as you explore and dominate the land, air, and sea of the USA in one of the most exhilarating open worlds ever created.',
+    category: 'Race',
+    thumbnail: getImg('crew2-thumb'),
+    images: [getImg('crew2-thumb')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '76',
+    title: 'Silent Hill 2',
+    description: 'Having received a letter from his deceased wife, James returns to where they made so many memories, in the hope of seeing her one more time: Silent Hill. A remake of the legendary survival horror masterpiece.',
+    category: 'Horror',
+    thumbnail: getImg('silenthill2-thumb'),
+    images: [getImg('silenthill2-thumb')],
     videoUrl: NEW_TRAILER_URL
   }
 ];
