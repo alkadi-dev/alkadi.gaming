@@ -31,6 +31,24 @@
       "imageHint": "ancient castle"
     },
     {
+      "id": "forza-thumb",
+      "description": "Forza Horizon 6 supercar thumbnail",
+      "imageUrl": "https://picsum.photos/seed/forza-horizon-6-car/600/400",
+      "imageHint": "supercar racing"
+    },
+    {
+      "id": "forza-hero",
+      "description": "Forza Horizon 6 scenic race track",
+      "imageUrl": "https://picsum.photos/seed/forza-horizon-6-track/1200/800",
+      "imageHint": "sports car"
+    },
+    {
+      "id": "forza-gallery-1",
+      "description": "Forza Horizon 6 interior view",
+      "imageUrl": "https://picsum.photos/seed/forza-interior/1200/800",
+      "imageHint": "car cockpit"
+    },
+    {
       "id": "race-hero",
       "description": "High speed racing car",
       "imageUrl": "https://picsum.photos/seed/race1/1200/600",

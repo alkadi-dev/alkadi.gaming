@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -30,13 +31,13 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: '2',
-    title: 'Velocity Prime',
-    description: 'Experience the next generation of street racing. Custom built engines, neon-lit tracks, and physics-defying drifts. Compete in underground tournaments to become the city king.',
+    title: 'Forza Horizon 6',
+    description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     category: 'Race',
-    thumbnail: 'https://picsum.photos/seed/g2/600/400',
+    thumbnail: getImg('forza-thumb'),
     images: [
-      'https://picsum.photos/seed/g2a/1200/800',
-      'https://picsum.photos/seed/g2b/1200/800'
+      getImg('forza-hero'),
+      getImg('forza-gallery-1')
     ],
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
   },
