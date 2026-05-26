@@ -41,9 +41,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/p1_v-F7m6X0',
       'https://www.youtube.com/embed/2-nFvY0wL2c',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/A6NfIu3a8_4'
+      'https://www.youtube.com/embed/uI_O-Kx7K_k'
     ],
   },
   {
@@ -57,9 +55,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/rV9y9T-Xn7k',
       'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/PjE-0L5YIas',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+      'https://www.youtube.com/embed/u2v_5h9qYmI'
     ],
   },
   {
@@ -73,9 +69,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/Z0oD6Xp1k-0',
       'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k',
-      'https://www.youtube.com/embed/p1_v-F7m6X0'
+      'https://www.youtube.com/embed/A6NfIu3a8_4'
     ],
   },
   {
@@ -89,9 +83,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/I0T8xZ9X0F4',
       'https://www.youtube.com/embed/PjE-0L5YIas',
-      'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/2-nFvY0wL2c'
+      'https://www.youtube.com/embed/NnK-rC5A_nU'
     ],
   },
   {
@@ -105,9 +97,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/A6NfIu3a8_4',
       'https://www.youtube.com/embed/u_F8X-v8f8Y',
-      'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/N-0_W88T5c0'
+      'https://www.youtube.com/embed/p1_v-F7m6X0'
     ],
   },
   {
@@ -121,9 +111,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
       'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/2-nFvY0wL2c',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
     ],
   },
   {
@@ -137,9 +125,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/Z0oD6Xp1k-0',
       'https://www.youtube.com/embed/PjE-0L5YIas',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k',
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+      'https://www.youtube.com/embed/rV9y9T-Xn7k'
     ],
   },
   {
@@ -153,9 +139,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/A6NfIu3a8_4',
       'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/2-nFvY0wL2c'
+      'https://www.youtube.com/embed/NnK-rC5A_nU'
     ],
   },
   {
@@ -169,9 +153,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/I0T8xZ9X0F4',
       'https://www.youtube.com/embed/rV9y9T-Xn7k',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/PjE-0L5YIas'
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
     ],
   },
   {
@@ -185,9 +167,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
       'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
     ],
   },
   {
@@ -201,9 +181,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/uI_O-Kx7K_k',
       'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/PjE-0L5YIas',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+      'https://www.youtube.com/embed/A6NfIu3a8_4'
     ],
   },
   {
@@ -217,9 +195,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
       'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
     ],
   },
   {
@@ -233,9 +209,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/u_F8X-v8f8Y',
       'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/PjE-0L5YIas',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k'
+      'https://www.youtube.com/embed/PjE-0L5YIas'
     ],
   }
 ];
