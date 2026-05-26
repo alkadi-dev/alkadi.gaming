@@ -28,6 +28,19 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4'
   },
   {
+    id: '1',
+    title: 'The Witcher 3',
+    description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
+    category: 'RPG',
+    thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
+    images: [
+      'https://wallpapercave.com/wp/wp8510096.jpg',
+      getImg('witcher-gallery-1'),
+      getImg('witcher-gallery-2')
+    ],
+    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958'
+  },
+  {
     id: '2',
     title: 'Forza Horizon 6',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
@@ -63,19 +76,6 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/g4b/1200/800'
     ],
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: '1',
-    title: 'The Witcher 3',
-    description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
-    category: 'RPG',
-    thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
-    images: [
-      'https://wallpapercave.com/wp/wp8510096.jpg',
-      getImg('witcher-gallery-1'),
-      getImg('witcher-gallery-2')
-    ],
-    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958'
   },
   {
     id: '6',
@@ -307,5 +307,50 @@ export const MOCK_GAMES: GameEntry[] = [
     thumbnail: getImg('cod-mw3-thumb'),
     images: [getImg('cod-mw3-thumb')],
     videoUrl: 'https://www.youtube.com/embed/mG_mAnI6-aM'
+  },
+  {
+    id: '31',
+    title: 'Assassin\'s Creed Shadows',
+    description: 'Live the intertwined stories of Naoe, an adept shinobi Assassin from Iga Province, and Yasuke, the powerful African samurai of historical legend. Against the backdrop of the late Sengoku period, discover their common destiny as they usher in a new era for Japan.',
+    category: 'Action',
+    thumbnail: getImg('ac-shadows-thumb'),
+    images: [getImg('ac-shadows-hero')],
+    videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8'
+  },
+  {
+    id: '32',
+    title: 'Assassin\'s Creed Unity',
+    description: 'Assassin\'s Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing Arno\'s equipment to make the experience unique to you, both visually and mechanically.',
+    category: 'Action',
+    thumbnail: getImg('ac-unity-thumb'),
+    images: [getImg('ac-unity-hero')],
+    videoUrl: 'https://www.youtube.com/embed/kR7f88ASt54'
+  },
+  {
+    id: '33',
+    title: 'Assassin\'s Creed Mirage',
+    description: 'Experience the story of Basim, a cunning street thief seeking answers and justice as he navigates the bustling streets of ninth-century Baghdad. Become the most versatile Assassin in franchise history in this modern take on the series\' iconic parkour and stealth gameplay.',
+    category: 'Action',
+    thumbnail: getImg('ac-mirage-thumb'),
+    images: [getImg('ac-mirage-hero')],
+    videoUrl: 'https://www.youtube.com/embed/x55lAlFtXmw'
+  },
+  {
+    id: '34',
+    title: 'Assassin\'s Creed Odyssey',
+    description: 'Write your own epic odyssey and become a legendary Spartan hero. Forge your destiny in a world on the brink of tearing itself apart. Influence how history unfolds in an ever-changing world shaped by your choices.',
+    category: 'RPG',
+    thumbnail: getImg('ac-odyssey-thumb'),
+    images: [getImg('ac-odyssey-hero')],
+    videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA'
+  },
+  {
+    id: '35',
+    title: 'Assassin\'s Creed Syndicate',
+    description: 'London, 1868. The Industrial Revolution fattens the purses of the privileged while the working class struggles to survive — until two Assassins rise from the underworld to rally to their aid and lead a street war that will echo through history.',
+    category: 'Action',
+    thumbnail: getImg('ac-syndicate-thumb'),
+    images: [getImg('ac-syndicate-hero')],
+    videoUrl: 'https://www.youtube.com/embed/3kGHHMc57as'
   }
 ];

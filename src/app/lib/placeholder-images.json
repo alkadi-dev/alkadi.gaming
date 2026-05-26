@@ -259,6 +259,30 @@
       "imageHint": "arena night"
     },
     {
+      "id": "race-hero",
+      "description": "High speed racing car",
+      "imageUrl": "https://picsum.photos/seed/race1/1200/600",
+      "imageHint": "racing car"
+    },
+    {
+      "id": "adventure-hero",
+      "description": "Explorer in ancient ruins",
+      "imageUrl": "https://picsum.photos/seed/adv1/1200/600",
+      "imageHint": "ancient ruins"
+    },
+    {
+      "id": "openworld-hero",
+      "description": "Vibrant city skyline at sunset",
+      "imageUrl": "https://picsum.photos/seed/ow1/1200/600",
+      "imageHint": "city sunset"
+    },
+    {
+      "id": "cyberpunk-hero",
+      "description": "Neon neon cyberpunk street",
+      "imageUrl": "https://picsum.photos/seed/cb1/1200/600",
+      "imageHint": "cyberpunk street"
+    },
+    {
       "id": "se4-thumb",
       "description": "Sniper Elite 4 sniper scope",
       "imageUrl": "https://picsum.photos/seed/se4-thumb/600/400",
@@ -311,6 +335,66 @@
       "description": "Call of Duty Modern Warfare 3 battlefield",
       "imageUrl": "https://picsum.photos/seed/cod-mw3-thumb/600/400",
       "imageHint": "urban war"
+    },
+    {
+      "id": "ac-shadows-thumb",
+      "description": "Assassin's Creed Shadows Japan thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ac-shadows-thumb/600/400",
+      "imageHint": "feudal japan"
+    },
+    {
+      "id": "ac-shadows-hero",
+      "description": "Assassin's Creed Shadows vista",
+      "imageUrl": "https://picsum.photos/seed/ac-shadows-hero/1200/800",
+      "imageHint": "pagoda landscape"
+    },
+    {
+      "id": "ac-unity-thumb",
+      "description": "Assassin's Creed Unity Paris thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ac-unity-thumb/600/400",
+      "imageHint": "french revolution"
+    },
+    {
+      "id": "ac-unity-hero",
+      "description": "Assassin's Creed Unity Notre Dame",
+      "imageUrl": "https://picsum.photos/seed/ac-unity-hero/1200/800",
+      "imageHint": "gothic cathedral"
+    },
+    {
+      "id": "ac-mirage-thumb",
+      "description": "Assassin's Creed Mirage Baghdad thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ac-mirage-thumb/600/400",
+      "imageHint": "desert city"
+    },
+    {
+      "id": "ac-mirage-hero",
+      "description": "Assassin's Creed Mirage stealth",
+      "imageUrl": "https://picsum.photos/seed/ac-mirage-hero/1200/800",
+      "imageHint": "middle east"
+    },
+    {
+      "id": "ac-odyssey-thumb",
+      "description": "Assassin's Creed Odyssey Greece thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ac-odyssey-thumb/600/400",
+      "imageHint": "ancient greece"
+    },
+    {
+      "id": "ac-odyssey-hero",
+      "description": "Assassin's Creed Odyssey islands",
+      "imageUrl": "https://picsum.photos/seed/ac-odyssey-hero/1200/800",
+      "imageHint": "greek temple"
+    },
+    {
+      "id": "ac-syndicate-thumb",
+      "description": "Assassin's Creed Syndicate London thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ac-syndicate-thumb/600/400",
+      "imageHint": "victorian london"
+    },
+    {
+      "id": "ac-syndicate-hero",
+      "description": "Assassin's Creed Syndicate industrial era",
+      "imageUrl": "https://picsum.photos/seed/ac-syndicate-hero/1200/800",
+      "imageHint": "big ben"
     }
   ]
 }
