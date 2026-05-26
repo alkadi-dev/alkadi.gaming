@@ -8,6 +8,7 @@ export interface GameEntry {
   thumbnail: string;
   images: string[];
   videoUrl: string;
+  shorts?: string[];
 }
 
 export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
@@ -23,6 +24,11 @@ export const MOCK_GAMES: GameEntry[] = [
     thumbnail: getImg('rdr2-thumb'),
     images: [getImg('rdr2-hero'), getImg('rdr2-gallery-1')],
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
+    shorts: [
+      'https://www.youtube.com/embed/8-W75PzBvG4',
+      'https://www.youtube.com/embed/BvH_nN1A8XQ',
+      'https://www.youtube.com/embed/9G3Qy7B7QpY'
+    ],
   },
   {
     id: '1',

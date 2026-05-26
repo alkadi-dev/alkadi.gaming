@@ -151,6 +151,26 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
               />
             </div>
           </section>
+
+          {/* Shorts Section */}
+          {game.shorts && game.shorts.length > 0 && (
+            <section>
+              <h2 className="text-2xl font-bold font-headline mb-6">Shorts Video</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {game.shorts.map((url, index) => (
+                  <div key={index} className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-black border border-white/5 shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                    <iframe
+                      src={url}
+                      title={`${game.title} Short ${index + 1}`}
+                      className="absolute inset-0 w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
     </div>
