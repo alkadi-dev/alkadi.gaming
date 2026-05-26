@@ -31,9 +31,9 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [getImg('rdr2-hero'), getImg('rdr2-gallery-1')],
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
     shorts: [
-      'https://www.youtube.com/embed/8-W75PzBvG4',
-      'https://www.youtube.com/embed/BvH_nN1A8XQ',
-      'https://www.youtube.com/embed/9G3Qy7B7QpY'
+      'https://www.youtube.com/embed/0d-U2QL2Qvc',
+      'https://www.youtube.com/embed/XsaXfkpKPNM',
+      'https://www.youtube.com/embed/ax_HkEnW_ig'
     ],
   },
   {
