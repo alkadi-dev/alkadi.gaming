@@ -61,7 +61,8 @@ export default function HomePage() {
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
           <div className="max-w-4xl relative z-10">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
-              <span className="text-white uppercase lg:whitespace-nowrap">ALKADI GAMING, buy your game eazy, cheap and fast</span>
+              <span className="text-white uppercase block mb-2">ALKADI GAMING</span>
+              <span className="text-white/90 text-xl md:text-3xl block font-normal">buy your game eazy, cheap and fast</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
