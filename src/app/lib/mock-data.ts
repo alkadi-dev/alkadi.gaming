@@ -45,8 +45,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Witcher 3',
     description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
     category: 'RPG',
-    thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
-    images: ['https://wallpapercave.com/wp/wp8510096.jpg', getImg('witcher-gallery-1'), getImg('witcher-gallery-2')],
+    thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
+    images: [
+      'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
+      getImg('witcher-gallery-1'),
+      getImg('witcher-gallery-2')
+    ],
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
     shorts: [...NEW_SHORTS],
   },
