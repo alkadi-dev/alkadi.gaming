@@ -211,5 +211,285 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/A6NfIu3a8_4',
       'https://www.youtube.com/embed/PjE-0L5YIas'
     ],
+  },
+  {
+    id: 're3',
+    title: 'Resident Evil 3',
+    description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
+    category: 'Horror',
+    thumbnail: getImg('re3-thumb'),
+    images: [getImg('re3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/Wghn3tO7D74',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
+  },
+  {
+    id: 'jedi-survivor',
+    title: 'Star Wars Jedi: Survivor',
+    description: 'The story of Cal Kestis continues in Star Wars Jedi: Survivor, a third-person galaxy-spanning action-adventure game from Respawn Entertainment.',
+    category: 'Adventure',
+    thumbnail: getImg('jedi-survivor-thumb'),
+    images: [getImg('jedi-survivor-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/BM9v_K7lS1Y',
+    shorts: [
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/PjE-0L5YIas',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+    ],
+  },
+  {
+    id: 'nightmares3',
+    title: 'Little Nightmares 3',
+    description: 'Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere.',
+    category: 'Horror',
+    thumbnail: getImg('nightmares3-thumb'),
+    images: [getImg('nightmares3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/z8j7Gof-v0I',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'ninjag4',
+    title: 'Ninja Gaiden 4',
+    description: 'The legendary ninja Ryu Hayabusa returns in a high-octane action experience that redefines the genre with brutal combat and supernatural foes.',
+    category: 'Action',
+    thumbnail: getImg('ninjag4-thumb'),
+    images: [getImg('ninjag4-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/uI_O-Kx7K_k',
+    shorts: [
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+    ],
+  },
+  {
+    id: 'exp33',
+    title: 'Expedition 33',
+    description: 'A turn-based RPG with real-time mechanics. Lead a group of explorers in a world inspired by the Belle Époque as they attempt to break the cycle of death.',
+    category: 'Adventure',
+    thumbnail: getImg('exp33-thumb'),
+    images: [getImg('exp33-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/8a-EObAhYrg',
+    shorts: [
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/p1_v-F7m6X0'
+    ],
+  },
+  {
+    id: 'avatar-pandora',
+    title: 'Avatar: Frontiers of Pandora',
+    description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the never-before-seen Western Frontier of Pandora.',
+    category: 'Adventure',
+    thumbnail: getImg('avatar-pandora-thumb'),
+    images: [getImg('avatar-pandora-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/0G6VInO9o7s',
+    shorts: [
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/NnK-rC5A_nU'
+    ],
+  },
+  {
+    id: 'reanimal',
+    title: 'Reanimal',
+    description: 'The creators of Little Nightmares return with a new, dark cooperative adventure that explores the grotesque and the beautiful in a haunting world.',
+    category: 'Horror',
+    thumbnail: getImg('reanimal-thumb'),
+    images: [getImg('reanimal-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/PjE-0L5YIas',
+    shorts: [
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+    ],
+  },
+  {
+    id: 'alanwake2',
+    title: 'Alan Wake 2',
+    description: 'A string of ritualistic murders threatens Bright Falls, an idyllic small-town community in the Pacific Northwest. Saga Anderson, an accomplished FBI agent, arrives to investigate.',
+    category: 'Horror',
+    thumbnail: getImg('alanwake2-thumb'),
+    images: [getImg('alanwake2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'mgs5',
+    title: 'Metal Gear Solid 5',
+    description: 'Experience a new era for the franchise with cutting-edge technology powered by the Fox Engine, MGSV: The Phantom Pain provides players a first-rate gaming experience as they are offered tactical freedom.',
+    category: 'Action',
+    thumbnail: getImg('mgs5-thumb'),
+    images: [getImg('mgs5-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/A9JV0EvCkMI',
+    shorts: [
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/A6NfIu3a8_4'
+    ],
+  },
+  {
+    id: 'hellblade2',
+    title: 'Senua\'s Saga: Hellblade 2',
+    description: 'The sequel to the award-winning Hellblade: Senua’s Sacrifice, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland.',
+    category: 'Adventure',
+    thumbnail: getImg('hellblade2-thumb'),
+    images: [getImg('hellblade2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/2-nFvY0wL2c',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'ds2',
+    title: 'Death Stranding 2',
+    description: 'Sam Porter Bridges returns for a new journey to connect humanity in a world transformed by the Death Stranding. A masterpiece from Hideo Kojima.',
+    category: 'Adventure',
+    thumbnail: getImg('ds2-thumb'),
+    images: [getImg('ds2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/u_F8X-v8f8Y',
+    shorts: [
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
+  },
+  {
+    id: 'jc4',
+    title: 'Just Cause 4',
+    description: 'Rico Rodriguez visits Solis, a huge South American home of conflict, oppression and extreme weather conditions. Strap into your wingsuit, equip your fully customizable grappling hook, and get ready to bring the thunder!',
+    category: 'Action',
+    thumbnail: getImg('jc4-thumb'),
+    images: [getImg('jc4-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/LImn9O4KscA',
+    shorts: [
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
+  },
+  {
+    id: 'mafia-old',
+    title: 'Mafia: The Old Country',
+    description: 'Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily.',
+    category: 'Adventure',
+    thumbnail: getImg('mafia-old-thumb'),
+    images: [getImg('mafia-old-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/zM7i8-D8R1g',
+    shorts: [
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/NnK-rC5A_nU'
+    ],
+  },
+  {
+    id: 'mafia3',
+    title: 'Mafia 3: Definitive Edition',
+    description: 'After years of combat in Vietnam, Lincoln Clay knows this truth: family isn’t who you’re born with, it’s who you die for.',
+    category: 'Adventure',
+    thumbnail: getImg('mafia3-thumb'),
+    images: [getImg('mafia3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/4UdSpFXz8Q4',
+    shorts: [
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+    ],
+  },
+  {
+    id: 'maxpayne3',
+    title: 'Max Payne 3',
+    description: 'For Max Payne, the tragedies that took his loved ones years ago are wounds that refuse to heal. No longer a cop, close to washed up and addicted to pain killers, Max takes a job in São Paulo, Brazil.',
+    category: 'Adventure',
+    thumbnail: getImg('maxpayne3-thumb'),
+    images: [getImg('maxpayne3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/dxa34RatmSc',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'ferocious',
+    title: 'Ferocious',
+    description: 'FEROCIOUS is a first-person shooter that combines a mysterious story with brutal action in a breathtaking, prehistoric world.',
+    category: 'Shooter',
+    thumbnail: getImg('ferocious-thumb'),
+    images: [getImg('ferocious-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/uI_O-Kx7K_k',
+    shorts: [
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/A6NfIu3a8_4'
+    ],
+  },
+  {
+    id: 'nfs-unbound',
+    title: 'Need for Speed Unbound',
+    description: 'Race against time, outsmart the cops, and take on weekly qualifiers to reach The Grand, Lakeshore\'s ultimate street racing challenge.',
+    category: 'Race',
+    thumbnail: getImg('nfs-unbound-thumb'),
+    images: [getImg('nfs-unbound-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'nfs-heat',
+    title: 'Need for Speed Heat',
+    description: 'Hustle by day and risk it all by night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.',
+    category: 'Race',
+    thumbnail: getImg('nfs-heat-thumb'),
+    images: [getImg('nfs-heat-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
+    shorts: [
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
+  },
+  {
+    id: 'crew2',
+    title: 'The Crew 2',
+    description: 'Take on the American motorsports scene as you explore and dominate the land, air, and sea of the United States in one of the most exhilarating open worlds ever created.',
+    category: 'Race',
+    thumbnail: getImg('crew2-thumb'),
+    images: [getImg('crew2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'silenthill2',
+    title: 'Silent Hill 2',
+    description: 'Having received a letter from his deceased wife, James proceeds to where they shared so many memories, in the hope of seeing her one more time: Silent Hill.',
+    category: 'Horror',
+    thumbnail: getImg('silenthill2-thumb'),
+    images: [getImg('silenthill2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
   }
 ];
