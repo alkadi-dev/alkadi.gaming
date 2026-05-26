@@ -1,3 +1,163 @@
-export default function Home() {
-  return <></>;
+'use client';
+
+import { useState } from 'react';
+import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
+import { GameCard } from '@/components/game-card';
+import { Button } from '@/components/ui/button';
+import { Gamepad2, Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+
+export default function HomePage() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredGames = MOCK_GAMES.filter((game) => {
+    const matchesCategory = selectedCategory === 'All' || game.category === selectedCategory;
+    const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Gamepad2 className="w-8 h-8 text-primary" />
+            <span className="text-2xl font-bold font-headline tracking-tight">
+              GAME<span className="text-primary">VERSE</span>
+            </span>
+          </div>
+          
+          <div className="relative w-full max-w-sm hidden md:flex items-center">
+            <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
+            <Input
+              placeholder="Search games..."
+              className="pl-10 bg-secondary/50 border-none focus-visible:ring-primary"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" className="hidden sm:flex">Catalog</Button>
+            <Button className="bg-primary hover:bg-primary/90">Join Community</Button>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-1 container mx-auto px-4 py-8">
+        {/* Hero Section */}
+        <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
+          <div className="max-w-2xl relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+              Discover Your Next <span className="text-accent underline underline-offset-8 decoration-primary">Digital Adventure</span>
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-primary text-lg">Browse Now</Button>
+              <Button size="lg" variant="outline" className="text-lg">Learn More</Button>
+            </div>
+          </div>
+          <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent hidden lg:block" />
+        </div>
+
+        {/* Filters */}
+        <div className="flex flex-col gap-6 mb-8">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <h2 className="text-2xl font-bold font-headline">Library</h2>
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
+              {CATEGORIES.map((cat) => (
+                <Button
+                  key={cat}
+                  variant={selectedCategory === cat ? 'default' : 'secondary'}
+                  size="sm"
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`rounded-full px-6 transition-all ${
+                    selectedCategory === cat ? 'bg-primary' : 'hover:bg-primary/20'
+                  }`}
+                >
+                  {cat}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          <div className="md:hidden">
+            <Input
+              placeholder="Search games..."
+              className="bg-secondary/50 border-none"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+
+        {/* Gallery */}
+        {filteredGames.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredGames.map((game) => (
+              <GameCard key={game.id} game={game} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+            <h3 className="text-xl font-medium">No games found</h3>
+            <p className="text-muted-foreground">Try adjusting your filters or search terms.</p>
+            <Button
+              variant="link"
+              onClick={() => {
+                setSelectedCategory('All');
+                setSearchQuery('');
+              }}
+              className="text-primary mt-2"
+            >
+              Clear all filters
+            </Button>
+          </div>
+        )}
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t bg-secondary/20 py-12 mt-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <Gamepad2 className="w-6 h-6 text-primary" />
+              <span className="text-xl font-bold font-headline">GAMEVERSE</span>
+            </div>
+            <p className="text-muted-foreground max-w-sm mb-6">
+              The ultimate destination for game enthusiasts. Explore, discover, and immerse yourself in the world of digital entertainment.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4">Explore</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link href="/" className="hover:text-primary">Featured Games</Link></li>
+              <li><Link href="/" className="hover:text-primary">New Releases</Link></li>
+              <li><Link href="/" className="hover:text-primary">Categories</Link></li>
+              <li><Link href="/" className="hover:text-primary">Community</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4">Connect</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link href="/" className="hover:text-primary">Twitter</Link></li>
+              <li><Link href="/" className="hover:text-primary">Discord</Link></li>
+              <li><Link href="/" className="hover:text-primary">Instagram</Link></li>
+              <li><Link href="/" className="hover:text-primary">Support</Link></li>
+            </ul>
+          </div>
+        </div>
+        <div className="container mx-auto px-4 pt-12 text-center text-sm text-muted-foreground">
+          <p>© 2024 GameVerse Catalog. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
 }
+
+import Link from 'next/link';

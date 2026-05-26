@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "rpg-hero",
+      "description": "Epic fantasy RPG landscape",
+      "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",
+      "imageHint": "fantasy landscape"
+    },
+    {
+      "id": "race-hero",
+      "description": "High speed racing car",
+      "imageUrl": "https://picsum.photos/seed/race1/1200/600",
+      "imageHint": "racing car"
+    },
+    {
+      "id": "adventure-hero",
+      "description": "Explorer in ancient ruins",
+      "imageUrl": "https://picsum.photos/seed/adv1/1200/600",
+      "imageHint": "ancient ruins"
+    },
+    {
+      "id": "openworld-hero",
+      "description": "Vibrant city skyline at sunset",
+      "imageUrl": "https://picsum.photos/seed/ow1/1200/600",
+      "imageHint": "city sunset"
+    },
+    {
+      "id": "cyberpunk-hero",
+      "description": "Neon neon cyberpunk street",
+      "imageUrl": "https://picsum.photos/seed/cb1/1200/600",
+      "imageHint": "cyberpunk street"
+    }
+  ]
 }
