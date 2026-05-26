@@ -52,7 +52,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/9HxO2Yg2AEQ',
+      'https://www.youtube.com/embed/AT5PlpAKo0I',
+      'https://www.youtube.com/embed/40omY9j5-y8'
+    ],
   },
   {
     id: 'ac-shadows',
