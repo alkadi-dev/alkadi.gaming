@@ -59,7 +59,7 @@ export default function HomePage() {
       <main className="flex-1 container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
-          <div className="max-w-4xl relative z-10">
+          <div className="max-w-4xl relative z-10 mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
               <span className="text-white uppercase block mb-2">ALKADI GAMING</span>
               <span className="text-primary text-xl md:text-3xl block font-normal">buy your game eazy, cheap and fast</span>
@@ -67,7 +67,7 @@ export default function HomePage() {
             <p className="text-lg text-muted-foreground mb-8">
               Discover your next adventure—explore and buy the hottest games in one place. Curated collections, unique finds, and unbeatable prices—start your gaming journey today!
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
