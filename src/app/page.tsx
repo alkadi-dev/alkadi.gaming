@@ -59,9 +59,9 @@ export default function HomePage() {
       <main className="flex-1 container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
-          <div className="max-w-2xl relative z-10">
-            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
-              <span className="text-accent underline underline-offset-8 decoration-primary uppercase">ALKADI GAMING, buy your game eazy, cheap and fast</span>
+          <div className="max-w-4xl relative z-10">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
+              <span className="text-white uppercase lg:whitespace-nowrap">ALKADI GAMING, buy your game eazy, cheap and fast</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
