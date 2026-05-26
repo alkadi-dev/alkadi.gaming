@@ -57,7 +57,6 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary text-lg">Browse Now</Button>
-              <Button size="lg" variant="outline" className="text-lg">Learn More</Button>
             </div>
           </div>
           <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent hidden lg:block" />
