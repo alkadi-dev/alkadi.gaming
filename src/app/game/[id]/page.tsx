@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, Share2, Heart } from 'lucide-react';
+import { ArrowLeft, Sparkles } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -71,14 +71,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
           >
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Catalog
           </Button>
-          <div className="flex gap-2">
-            <Button variant="ghost" size="icon" className="bg-background/20 backdrop-blur-md border border-white/10 rounded-full">
-              <Share2 className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="icon" className="bg-background/20 backdrop-blur-md border border-white/10 rounded-full">
-              <Heart className="h-4 w-4" />
-            </Button>
-          </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 p-8 container mx-auto">
