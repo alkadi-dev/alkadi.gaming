@@ -76,5 +76,38 @@ export const MOCK_GAMES: GameEntry[] = [
       getImg('rdr2-gallery-1')
     ],
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4'
+  },
+  {
+    id: '6',
+    title: 'Spider-Man 2',
+    description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers.',
+    category: 'Open World',
+    thumbnail: getImg('spiderman-thumb'),
+    images: [
+      getImg('spiderman-hero')
+    ],
+    videoUrl: 'https://www.youtube.com/embed/qIQ3xNqkOY4'
+  },
+  {
+    id: '7',
+    title: 'The Last of Us Part I',
+    description: 'Experience the emotional storytelling and unforgettable characters in The Last of Us, winner of over 200 Game of the Year awards. In a ravaged civilization, where infected and hardened survivors run rampant, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone.',
+    category: 'Adventure',
+    thumbnail: getImg('tlou1-thumb'),
+    images: [
+      getImg('tlou1-hero')
+    ],
+    videoUrl: 'https://www.youtube.com/embed/W01L70IGBgE'
+  },
+  {
+    id: '8',
+    title: 'The Last of Us Part II',
+    description: 'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability, despite the constant threat of the infected and other, more desperate survivors.',
+    category: 'Adventure',
+    thumbnail: getImg('tlou2-thumb'),
+    images: [
+      getImg('tlou2-hero')
+    ],
+    videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E'
   }
 ];

@@ -49,6 +49,54 @@
       "imageHint": "car cockpit"
     },
     {
+      "id": "rdr2-thumb",
+      "description": "Red Dead Redemption 2 character artwork",
+      "imageUrl": "https://picsum.photos/seed/rdr2-arthur-art/600/400",
+      "imageHint": "cowboy outlaw"
+    },
+    {
+      "id": "rdr2-hero",
+      "description": "Red Dead Redemption 2 vast landscape",
+      "imageUrl": "https://picsum.photos/seed/rdr2-landscape/1200/800",
+      "imageHint": "western landscape"
+    },
+    {
+      "id": "spiderman-thumb",
+      "description": "Spider-Man 2 web slinging thumbnail",
+      "imageUrl": "https://picsum.photos/seed/spiderman-thumb/600/400",
+      "imageHint": "superhero action"
+    },
+    {
+      "id": "spiderman-hero",
+      "description": "Spider-Man 2 NYC skyline hero",
+      "imageUrl": "https://picsum.photos/seed/spiderman-hero/1200/800",
+      "imageHint": "city skyline"
+    },
+    {
+      "id": "tlou1-thumb",
+      "description": "The Last of Us Part I iconic duo thumbnail",
+      "imageUrl": "https://picsum.photos/seed/tlou1-thumb/600/400",
+      "imageHint": "post-apocalyptic survivor"
+    },
+    {
+      "id": "tlou1-hero",
+      "description": "The Last of Us Part I overgrown city hero",
+      "imageUrl": "https://picsum.photos/seed/tlou1-hero/1200/800",
+      "imageHint": "nature city"
+    },
+    {
+      "id": "tlou2-thumb",
+      "description": "The Last of Us Part II Ellie thumbnail",
+      "imageUrl": "https://picsum.photos/seed/tlou2-thumb/600/400",
+      "imageHint": "gritty survivor"
+    },
+    {
+      "id": "tlou2-hero",
+      "description": "The Last of Us Part II Seattle hero",
+      "imageUrl": "https://picsum.photos/seed/tlou2-hero/1200/800",
+      "imageHint": "rainy forest"
+    },
+    {
       "id": "race-hero",
       "description": "High speed racing car",
       "imageUrl": "https://picsum.photos/seed/race-track-1/1200/600",
