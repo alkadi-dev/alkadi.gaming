@@ -17,6 +17,13 @@ export default function HomePage() {
     return matchesCategory && matchesSearch;
   });
 
+  const scrollToLibrary = () => {
+    const element = document.getElementById('library');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
@@ -56,14 +63,16 @@ export default function HomePage() {
               Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-primary text-lg">Browse Now</Button>
+              <Button size="lg" className="bg-primary text-lg" onClick={scrollToLibrary}>
+                Browse Now
+              </Button>
             </div>
           </div>
           <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent hidden lg:block" />
         </div>
 
         {/* Filters */}
-        <div className="flex flex-col gap-6 mb-8">
+        <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-20">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <h2 className="text-2xl font-bold font-headline">Library</h2>
             <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
