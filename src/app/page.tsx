@@ -37,7 +37,9 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Logo removed per request */}
+            <span className="text-xl font-bold font-headline tracking-tighter text-primary uppercase">
+              Alkadi <span className="text-foreground">Gaming</span>
+            </span>
           </div>
           
           <div className="relative w-full max-w-sm hidden md:flex items-center">
