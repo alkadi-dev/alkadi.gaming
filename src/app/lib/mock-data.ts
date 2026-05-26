@@ -15,16 +15,16 @@ export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Cyb
 export const MOCK_GAMES: GameEntry[] = [
   {
     id: '1',
-    title: 'Elder Echoes',
-    description: 'An ancient world reclaimed by nature, where spirits roam the forests. You are the last Guardian of the Echo, tasked with restoring balance to a fractured realm. Explore deep dungeons and master elemental magic.',
+    title: 'The Witcher 3: Wild Hunt',
+    description: 'Become Geralt of Rivia, a professional monster hunter, and explore the war-torn Northern Kingdoms in search of the Child of Prophecy. A masterpiece of storytelling and open-world exploration.',
     category: 'RPG',
-    thumbnail: 'https://picsum.photos/seed/g1/600/400',
+    thumbnail: 'https://picsum.photos/seed/witcher3/600/400',
     images: [
-      'https://picsum.photos/seed/g1a/1200/800',
-      'https://picsum.photos/seed/g1b/1200/800',
-      'https://picsum.photos/seed/g1c/1200/800'
+      'https://picsum.photos/seed/witcher3a/1200/800',
+      'https://picsum.photos/seed/witcher3b/1200/800',
+      'https://picsum.photos/seed/witcher3c/1200/800'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958'
   },
   {
     id: '2',

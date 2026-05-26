@@ -7,6 +7,12 @@
       "imageHint": "fantasy landscape"
     },
     {
+      "id": "witcher-hero",
+      "description": "The Witcher 3 Wild Hunt thematic image",
+      "imageUrl": "https://picsum.photos/seed/witcher3/1200/600",
+      "imageHint": "monster hunter"
+    },
+    {
       "id": "race-hero",
       "description": "High speed racing car",
       "imageUrl": "https://picsum.photos/seed/race1/1200/600",
