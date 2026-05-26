@@ -4,55 +4,73 @@
     {
       "id": "rpg-hero",
       "description": "Epic fantasy RPG landscape",
-      "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",
+      "imageUrl": "https://picsum.photos/seed/rpg-world-1/1200/600",
       "imageHint": "fantasy landscape"
     },
     {
       "id": "witcher-hero",
       "description": "The Witcher 3 Wild Hunt thematic hero image",
-      "imageUrl": "https://picsum.photos/seed/witcher-wild-hunt/1200/800",
+      "imageUrl": "https://picsum.photos/seed/witcher-wild-hunt-landscape/1200/800",
       "imageHint": "medieval fantasy"
     },
     {
       "id": "witcher-thumb",
       "description": "The Witcher 3 iconic character thumbnail",
-      "imageUrl": "https://picsum.photos/seed/witcher-portrait/600/400",
+      "imageUrl": "https://picsum.photos/seed/geralt-face/600/400",
       "imageHint": "fantasy warrior"
     },
     {
       "id": "witcher-gallery-1",
       "description": "The Witcher 3 combat screenshot",
-      "imageUrl": "https://picsum.photos/seed/witcher-combat-1/1200/800",
+      "imageUrl": "https://picsum.photos/seed/witcher-sword-fight/1200/800",
       "imageHint": "sword battle"
     },
     {
       "id": "witcher-gallery-2",
       "description": "The Witcher 3 exploration screenshot",
-      "imageUrl": "https://picsum.photos/seed/witcher-world-1/1200/800",
+      "imageUrl": "https://picsum.photos/seed/witcher-castle-view/1200/800",
       "imageHint": "ancient castle"
+    },
+    {
+      "id": "forza-thumb",
+      "description": "Forza Horizon 6 supercar thumbnail",
+      "imageUrl": "https://picsum.photos/seed/forza-6-supercar-front/600/400",
+      "imageHint": "supercar racing"
+    },
+    {
+      "id": "forza-hero",
+      "description": "Forza Horizon 6 scenic race track",
+      "imageUrl": "https://picsum.photos/seed/forza-6-mountain-track/1200/800",
+      "imageHint": "sports car"
+    },
+    {
+      "id": "forza-gallery-1",
+      "description": "Forza Horizon 6 interior view",
+      "imageUrl": "https://picsum.photos/seed/forza-steering-wheel/1200/800",
+      "imageHint": "car cockpit"
     },
     {
       "id": "race-hero",
       "description": "High speed racing car",
-      "imageUrl": "https://picsum.photos/seed/race1/1200/600",
+      "imageUrl": "https://picsum.photos/seed/race-track-1/1200/600",
       "imageHint": "racing car"
     },
     {
       "id": "adventure-hero",
       "description": "Explorer in ancient ruins",
-      "imageUrl": "https://picsum.photos/seed/adv1/1200/600",
+      "imageUrl": "https://picsum.photos/seed/jungle-ruins/1200/600",
       "imageHint": "ancient ruins"
     },
     {
       "id": "openworld-hero",
       "description": "Vibrant city skyline at sunset",
-      "imageUrl": "https://picsum.photos/seed/ow1/1200/600",
+      "imageUrl": "https://picsum.photos/seed/neon-city-sunset/1200/600",
       "imageHint": "city sunset"
     },
     {
       "id": "cyberpunk-hero",
       "description": "Neon neon cyberpunk street",
-      "imageUrl": "https://picsum.photos/seed/cb1/1200/600",
+      "imageUrl": "https://picsum.photos/seed/cyber-alley/1200/600",
       "imageHint": "cyberpunk street"
     }
   ]
