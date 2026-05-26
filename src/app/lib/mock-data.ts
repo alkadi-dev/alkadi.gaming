@@ -1,4 +1,3 @@
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -352,6 +351,78 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('ac-syndicate-thumb'),
     images: [getImg('ac-syndicate-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '36',
+    title: 'Detroit: Become Human',
+    description: 'Detroit, 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings, but they are only machines serving humans.',
+    category: 'Adventure',
+    thumbnail: getImg('detroit-thumb'),
+    images: [getImg('detroit-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '37',
+    title: 'Far Cry 5',
+    description: 'Welcome to Hope County, Montana, land of the free and the brave but also home to a fanatical doomsday cult known as Eden’s Gate. Stand up to cult leader Joseph Seed, and his siblings, the Heralds, to kindle the fires of resistance and liberate the besieged community.',
+    category: 'Open World',
+    thumbnail: getImg('farcry5-thumb'),
+    images: [getImg('farcry5-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '38',
+    title: 'Far Cry 4',
+    description: 'Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are Ajay Ghale. Traveling to Kyrat to fulfill your mother’s dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.',
+    category: 'Open World',
+    thumbnail: getImg('farcry4-thumb'),
+    images: [getImg('farcry4-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '39',
+    title: 'Gotham Knights',
+    description: 'Batman is dead. A new expansive, criminal underworld has swept the streets of Gotham City. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect Gotham, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
+    category: 'Action',
+    thumbnail: getImg('gotham-thumb'),
+    images: [getImg('gotham-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '40',
+    title: 'Batman: Arkham Knight',
+    description: 'Batman: Arkham Knight brings the award-winning Arkham trilogy from Rocksteady Studios to its epic conclusion. Developed exclusively for New-Gen platforms, Batman: Arkham Knight introduces Rocksteady’s uniquely designed version of the Batmobile.',
+    category: 'Action',
+    thumbnail: getImg('batman-thumb'),
+    images: [getImg('batman-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '41',
+    title: 'Cronos: The New Dawn',
+    description: 'A third-person survival horror game that follows a gripping story where the past and the future collide. Explore a dark world, battle terrifying creatures, and uncover the mysteries of time.',
+    category: 'Adventure',
+    thumbnail: getImg('cronos-thumb'),
+    images: [getImg('cronos-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '42',
+    title: 'Ready or Not',
+    description: 'Ready or Not is an intense, tactical, first-person shooter that depicts a modern day world in which SWAT police units are called to defuse hostile and confronting situations.',
+    category: 'Shooter',
+    thumbnail: getImg('readyornot-thumb'),
+    images: [getImg('readyornot-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '43',
+    title: 'Echoes of the End',
+    description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter, as she embarks on a journey across a vast continent.',
+    category: 'Adventure',
+    thumbnail: getImg('echoes-thumb'),
+    images: [getImg('echoes-hero')],
     videoUrl: NEW_TRAILER_URL
   }
 ];
