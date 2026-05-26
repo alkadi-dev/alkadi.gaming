@@ -16,17 +16,16 @@ const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.ima
 
 export const MOCK_GAMES: GameEntry[] = [
   {
-    id: '1',
-    title: 'The Witcher 3',
-    description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
-    category: 'RPG',
-    thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
+    id: '5',
+    title: 'Red Dead Redemption 2',
+    description: 'America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
+    category: 'Open World',
+    thumbnail: getImg('rdr2-thumb'),
     images: [
-      'https://wallpapercave.com/wp/wp8510096.jpg',
-      getImg('witcher-gallery-1'),
-      getImg('witcher-gallery-2')
+      getImg('rdr2-hero'),
+      getImg('rdr2-gallery-1')
     ],
-    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958'
+    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4'
   },
   {
     id: '2',
@@ -66,16 +65,17 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
   },
   {
-    id: '5',
-    title: 'Red Dead Redemption 2',
-    description: 'America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
-    category: 'Open World',
-    thumbnail: getImg('rdr2-thumb'),
+    id: '1',
+    title: 'The Witcher 3',
+    description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
+    category: 'RPG',
+    thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
     images: [
-      getImg('rdr2-hero'),
-      getImg('rdr2-gallery-1')
+      'https://wallpapercave.com/wp/wp8510096.jpg',
+      getImg('witcher-gallery-1'),
+      getImg('witcher-gallery-2')
     ],
-    videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4'
+    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958'
   },
   {
     id: '6',
