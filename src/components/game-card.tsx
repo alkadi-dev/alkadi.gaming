@@ -30,9 +30,6 @@ export function GameCard({ game }: GameCardProps) {
             {game.title}
           </h3>
         </Link>
-        <p className="text-xs text-muted-foreground line-clamp-2">
-          {game.description}
-        </p>
       </CardContent>
     </Card>
   );
