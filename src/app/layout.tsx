@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'GameVerse Catalog',
+  title: 'Alkadi Gaming',
   description: 'Explore an immersive catalog of games with rich media.',
 };
 

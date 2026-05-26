@@ -24,8 +24,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Gamepad2 className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-bold font-headline tracking-tight">
-              GAME<span className="text-primary">VERSE</span>
+            <span className="text-2xl font-bold font-headline tracking-tight uppercase">
+              ALKADI<span className="text-primary"> GAMING</span>
             </span>
           </div>
           
