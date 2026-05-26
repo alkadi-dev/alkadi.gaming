@@ -9,14 +9,14 @@
     {
       "id": "witcher-hero",
       "description": "The Witcher 3 Wild Hunt thematic hero image",
-      "imageUrl": "https://picsum.photos/seed/witcher-wild-hunt-landscape/1200/800",
-      "imageHint": "medieval fantasy"
+      "imageUrl": "https://wallpapercave.com/wp/wp8510096.jpg",
+      "imageHint": "witcher wallpaper"
     },
     {
       "id": "witcher-thumb",
       "description": "The Witcher 3 iconic character thumbnail",
-      "imageUrl": "https://picsum.photos/seed/geralt-face/600/400",
-      "imageHint": "fantasy warrior"
+      "imageUrl": "https://wallpapercave.com/wp/wp8510096.jpg",
+      "imageHint": "witcher poster"
     },
     {
       "id": "witcher-gallery-1",
