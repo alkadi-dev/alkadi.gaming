@@ -171,31 +171,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         {/* Sidebar Info */}
         <div className="lg:col-span-1">
           <div className="sticky top-24 space-y-6">
-            <div className="bg-card rounded-2xl p-6 border border-white/5 space-y-6">
-              <h3 className="text-xl font-bold font-headline">Quick Info</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-muted-foreground">Genre</span>
-                  <span className="font-medium">{game.category}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-muted-foreground">Release Date</span>
-                  <span className="font-medium">2024</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-muted-foreground">Platform</span>
-                  <span className="font-medium">PC, Console</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Publisher</span>
-                  <span className="font-medium">Verse Games</span>
-                </div>
-              </div>
-              <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-lg">
-                View on Store
-              </Button>
-            </div>
-
             <div className="bg-accent/10 rounded-2xl p-6 border border-accent/20">
               <div className="flex items-center gap-2 mb-2 text-accent">
                 <Play className="h-5 w-5 fill-current" />
