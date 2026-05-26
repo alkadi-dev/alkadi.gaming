@@ -27,9 +27,9 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Red Dead Redemption 2',
     description: 'America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     category: 'Open World',
-    thumbnail: 'https://www.vgchartz.com/articles_media/images/red-dead-redemption-2-cover-art-1.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
     images: [
-      'https://www.vgchartz.com/articles_media/images/red-dead-redemption-2-cover-art-1.jpg',
+      'https://wallpapercave.com/wp/wp3770429.png',
       'https://images6.alphacoders.com/952/thumbbig-952687.webp',
       'https://wallpapers.com/images/hd/red-dead-redemption-2-desktop-dd0fimlsbzh0zihw.jpg'
     ],
