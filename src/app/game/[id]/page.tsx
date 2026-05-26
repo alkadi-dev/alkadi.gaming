@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles } from 'lucide-react';
+import { ArrowLeft, Sparkles, Layout, BookOpen, Info, ExternalLink } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -78,6 +78,24 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
           <h1 className="text-5xl md:text-7xl font-bold font-headline mb-4 tracking-tighter">
             {game.title}
           </h1>
+          
+          <div className="flex flex-wrap gap-4 mt-6">
+            <Button className="bg-white text-black hover:bg-white/90 font-bold" asChild>
+              <a href={game.infoLinks.features} target="_blank" rel="noopener noreferrer">
+                <Layout className="mr-2 h-4 w-4" /> Features Guide
+              </a>
+            </Button>
+            <Button variant="outline" className="bg-black/20 backdrop-blur-md border-white/20 text-white hover:bg-white/10" asChild>
+              <a href={game.infoLinks.storyline} target="_blank" rel="noopener noreferrer">
+                <BookOpen className="mr-2 h-4 w-4" /> Full Storyline
+              </a>
+            </Button>
+            <Button variant="outline" className="bg-black/20 backdrop-blur-md border-white/20 text-white hover:bg-white/10" asChild>
+              <a href={game.infoLinks.gameplay} target="_blank" rel="noopener noreferrer">
+                <Info className="mr-2 h-4 w-4" /> Gameplay Mechanics
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -117,6 +135,46 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
                 {game.description}
               </p>
             )}
+          </section>
+
+          {/* Quick Links Summary */}
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-secondary/20 p-6 rounded-xl border border-white/5 flex flex-col gap-4">
+              <div className="bg-primary/20 w-10 h-10 rounded-lg flex items-center justify-center">
+                <Layout className="text-primary w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-2">Features</h3>
+                <p className="text-sm text-muted-foreground mb-4">Discover the unique features and technical specs of {game.title}.</p>
+                <Button variant="link" className="p-0 h-auto text-primary" asChild>
+                  <a href={game.infoLinks.features} target="_blank" rel="noopener noreferrer">Read more <ExternalLink className="ml-1 w-3 h-3" /></a>
+                </Button>
+              </div>
+            </div>
+            <div className="bg-secondary/20 p-6 rounded-xl border border-white/5 flex flex-col gap-4">
+              <div className="bg-accent/20 w-10 h-10 rounded-lg flex items-center justify-center">
+                <BookOpen className="text-accent w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-2">Storyline</h3>
+                <p className="text-sm text-muted-foreground mb-4">Deep dive into the narrative and lore of the {game.title} universe.</p>
+                <Button variant="link" className="p-0 h-auto text-accent" asChild>
+                  <a href={game.infoLinks.storyline} target="_blank" rel="noopener noreferrer">Read more <ExternalLink className="ml-1 w-3 h-3" /></a>
+                </Button>
+              </div>
+            </div>
+            <div className="bg-secondary/20 p-6 rounded-xl border border-white/5 flex flex-col gap-4">
+              <div className="bg-muted w-10 h-10 rounded-lg flex items-center justify-center">
+                <Info className="text-foreground w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-2">Gameplay</h3>
+                <p className="text-sm text-muted-foreground mb-4">Master the mechanics and combat systems of {game.title}.</p>
+                <Button variant="link" className="p-0 h-auto text-foreground" asChild>
+                  <a href={game.infoLinks.gameplay} target="_blank" rel="noopener noreferrer">Read more <ExternalLink className="ml-1 w-3 h-3" /></a>
+                </Button>
+              </div>
+            </div>
           </section>
 
           {/* Media Carousel */}

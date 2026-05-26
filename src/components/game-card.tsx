@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Info, Layout } from 'lucide-react';
+import { BookOpen, Info, Layout, ExternalLink } from 'lucide-react';
 
 interface GameCardProps {
   game: GameEntry;
@@ -28,41 +28,39 @@ export function GameCard({ game }: GameCardProps) {
       </Link>
       <CardContent className="p-4 flex-1">
         <Link href={`/game/${game.id}`} className="group">
-          <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors">
+          <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors mb-2">
             {game.title}
           </h3>
         </Link>
+        <p className="text-xs text-muted-foreground line-clamp-2 mb-4">
+          {game.description}
+        </p>
       </CardContent>
-      <CardFooter className="p-4 pt-0 flex flex-col gap-2">
-        <div className="grid grid-cols-3 gap-1 w-full border-t border-white/5 pt-4">
-          <a
-            href={game.infoLinks.features}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center gap-1 text-[10px] text-muted-foreground hover:text-primary transition-colors text-center"
-          >
-            <Layout className="w-3.5 h-3.5" />
-            Features
-          </a>
-          <a
-            href={game.infoLinks.storyline}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center gap-1 text-[10px] text-muted-foreground hover:text-primary transition-colors text-center"
-          >
-            <BookOpen className="w-3.5 h-3.5" />
-            Storyline
-          </a>
-          <a
-            href={game.infoLinks.gameplay}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center gap-1 text-[10px] text-muted-foreground hover:text-primary transition-colors text-center"
-          >
-            <Info className="w-3.5 h-3.5" />
-            Gameplay
-          </a>
+      <CardFooter className="p-4 pt-0 flex flex-col gap-3">
+        <div className="grid grid-cols-1 gap-2 w-full border-t border-white/5 pt-4">
+          <div className="flex flex-wrap gap-2">
+            <Button variant="secondary" size="sm" className="h-8 text-[10px] flex-1" asChild>
+              <a href={game.infoLinks.features} target="_blank" rel="noopener noreferrer">
+                <Layout className="w-3 h-3 mr-1" /> Features
+              </a>
+            </Button>
+            <Button variant="secondary" size="sm" className="h-8 text-[10px] flex-1" asChild>
+              <a href={game.infoLinks.storyline} target="_blank" rel="noopener noreferrer">
+                <BookOpen className="w-3 h-3 mr-1" /> Story
+              </a>
+            </Button>
+            <Button variant="secondary" size="sm" className="h-8 text-[10px] flex-1" asChild>
+              <a href={game.infoLinks.gameplay} target="_blank" rel="noopener noreferrer">
+                <Info className="w-3 h-3 mr-1" /> Gameplay
+              </a>
+            </Button>
+          </div>
         </div>
+        <Button variant="default" className="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all" asChild>
+          <Link href={`/game/${game.id}`}>
+            View Details
+          </Link>
+        </Button>
       </CardFooter>
     </Card>
   );
