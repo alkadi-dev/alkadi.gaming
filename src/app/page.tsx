@@ -61,7 +61,7 @@ export default function HomePage() {
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
           <div className="max-w-2xl relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 leading-tight">
-              Discover Your Next <span className="text-accent underline underline-offset-8 decoration-primary">Digital Adventure</span>
+              Discover Your Next <span className="text-accent underline underline-offset-8 decoration-primary uppercase">ALL YOUR GAME, IN ONE PLACE</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Explore our curated selection of top-tier gaming experiences across all genres. From epic RPGs to high-octane racing.
