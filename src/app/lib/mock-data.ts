@@ -13,7 +13,6 @@ export interface GameEntry {
 export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Sports', 'Shooter', 'Fighting', 'Horror'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
-const NEW_TRAILER_URL = 'https://www.youtube.com/embed/gmA6MrX81z4';
 
 export const MOCK_GAMES: GameEntry[] = [
   {
@@ -26,7 +25,7 @@ export const MOCK_GAMES: GameEntry[] = [
       getImg('rdr2-hero'),
       getImg('rdr2-gallery-1')
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/eaW0tYpxn0k'
   },
   {
     id: '1',
@@ -39,7 +38,7 @@ export const MOCK_GAMES: GameEntry[] = [
       getImg('witcher-gallery-1'),
       getImg('witcher-gallery-2')
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/XHrskkq9534'
   },
   {
     id: '2',
@@ -51,7 +50,7 @@ export const MOCK_GAMES: GameEntry[] = [
       getImg('forza-hero'),
       getImg('forza-gallery-1')
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw'
   },
   {
     id: '3',
@@ -63,7 +62,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/g3a/1200/800',
       'https://picsum.photos/seed/g3b/1200/800'
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/vsk39Zf6-mY'
   },
   {
     id: '4',
@@ -75,7 +74,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/g4a/1200/800',
       'https://picsum.photos/seed/g4b/1200/800'
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/u4-3A_A8P48'
   },
   {
     id: '6',
@@ -86,7 +85,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       getImg('spiderman2-hero')
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/bgqGdIoa52s'
   },
   {
     id: '7',
@@ -97,7 +96,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       getImg('tlou1-hero')
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/W2Wnvvj33Wo'
   },
   {
     id: '8',
@@ -108,7 +107,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       getImg('tlou2-hero')
     ],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/vhII1qlcxZ4'
   },
   {
     id: '9',
@@ -117,7 +116,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('gow-thumb'),
     images: [getImg('gow-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/K0u_EFWL44Y'
   },
   {
     id: '10',
@@ -126,7 +125,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('gowr-thumb'),
     images: [getImg('gowr-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0'
   },
   {
     id: '11',
@@ -135,7 +134,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('gtav-thumb'),
     images: [getImg('gtav-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs'
   },
   {
     id: '12',
@@ -144,7 +143,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('cp2077-thumb'),
     images: [getImg('cp2077-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8'
   },
   {
     id: '13',
@@ -153,7 +152,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('u4-thumb'),
     images: [getImg('u4-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/vK6M9e1t_I0'
   },
   {
     id: '14',
@@ -162,7 +161,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('got-thumb'),
     images: [getImg('got-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/mS6SaX0C7O4'
   },
   {
     id: '15',
@@ -171,7 +170,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: getImg('crimson-thumb'),
     images: [getImg('crimson-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/tSAnfS_a6No'
   },
   {
     id: '16',
@@ -180,7 +179,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('spiderman-thumb'),
     images: [getImg('spiderman-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxko'
   },
   {
     id: '17',
@@ -189,7 +188,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('miles-thumb'),
     images: [getImg('miles-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/gHzuHo80U2M'
   },
   {
     id: '18',
@@ -198,7 +197,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('hitman-thumb'),
     images: [getImg('hitman-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/YIID_mXvXv8'
   },
   {
     id: '19',
@@ -207,7 +206,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('hzd-thumb'),
     images: [getImg('hzd-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/wzx96gYA8ek'
   },
   {
     id: '20',
@@ -216,7 +215,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Sports',
     thumbnail: getImg('fifa23-thumb'),
     images: [getImg('fifa23-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/0tICWJZW0wE'
   },
   {
     id: '21',
@@ -225,7 +224,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Sports',
     thumbnail: getImg('fifa26-thumb'),
     images: [getImg('fifa26-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/v9C2u6e45p8'
   },
   {
     id: '22',
@@ -234,7 +233,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('se4-thumb'),
     images: [getImg('se4-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/y9Z_y8mDREw'
   },
   {
     id: '23',
@@ -243,7 +242,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('wd2-thumb'),
     images: [getImg('wd2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/hh9x4NqW0Cc'
   },
   {
     id: '24',
@@ -252,7 +251,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('bf5-thumb'),
     images: [getImg('bf5-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/a7ZpQadiyqs'
   },
   {
     id: '25',
@@ -261,7 +260,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('bf6-thumb'),
     images: [getImg('bf6-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/ASzOzrB-n9E'
   },
   {
     id: '26',
@@ -270,7 +269,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('cod-v-thumb'),
     images: [getImg('cod-v-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/OQ1CcR467wU'
   },
   {
     id: '27',
@@ -279,7 +278,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('cod-ww2-thumb'),
     images: [getImg('cod-ww2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/D4Q_oJXfGZ4'
   },
   {
     id: '28',
@@ -288,7 +287,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('cod-mw-thumb'),
     images: [getImg('cod-mw-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI'
   },
   {
     id: '29',
@@ -297,7 +296,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('cod-mw2-thumb'),
     images: [getImg('cod-mw2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/r72GP1PIZa0'
   },
   {
     id: '30',
@@ -306,7 +305,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('cod-mw3-thumb'),
     images: [getImg('cod-mw3-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/m7S_eY6R_oU'
   },
   {
     id: '31',
@@ -315,7 +314,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('ac-shadows-thumb'),
     images: [getImg('ac-shadows-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/vovkzJzPFpg'
   },
   {
     id: '32',
@@ -324,7 +323,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('ac-unity-thumb'),
     images: [getImg('ac-unity-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/69id8TjQatE'
   },
   {
     id: '33',
@@ -333,7 +332,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('ac-mirage-thumb'),
     images: [getImg('ac-mirage-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/x55lAlFtXmw'
   },
   {
     id: '34',
@@ -342,7 +341,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: getImg('ac-odyssey-thumb'),
     images: [getImg('ac-odyssey-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA'
   },
   {
     id: '35',
@@ -351,7 +350,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('ac-syndicate-thumb'),
     images: [getImg('ac-syndicate-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/3SdfM6_Zisw'
   },
   {
     id: '36',
@@ -360,7 +359,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('detroit-thumb'),
     images: [getImg('detroit-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/8a-EobLUPmY'
   },
   {
     id: '37',
@@ -369,7 +368,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('farcry5-thumb'),
     images: [getImg('farcry5-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/Kdaoe4hbMso'
   },
   {
     id: '38',
@@ -378,7 +377,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('farcry4-thumb'),
     images: [getImg('farcry4-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/e9X5725O95A'
   },
   {
     id: '39',
@@ -387,7 +386,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('gotham-thumb'),
     images: [getImg('gotham-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/IhVf_3TeTQE'
   },
   {
     id: '40',
@@ -396,7 +395,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('batman-thumb'),
     images: [getImg('batman-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/dxa3zkxPdf8'
   },
   {
     id: '41',
@@ -405,7 +404,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('cronos-thumb'),
     images: [getImg('cronos-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/3RWhH_V2_5Q'
   },
   {
     id: '42',
@@ -414,7 +413,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('readyornot-thumb'),
     images: [getImg('readyornot-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/T6T_hV8Y6_M'
   },
   {
     id: '43',
@@ -423,7 +422,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('echoes-thumb'),
     images: [getImg('echoes-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/gL-oO0v2M7Q'
   },
   {
     id: '44',
@@ -432,7 +431,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Race',
     thumbnail: getImg('forza5-thumb'),
     images: [getImg('forza5-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/hO2_m7Uf8iY'
   },
   {
     id: '45',
@@ -441,7 +440,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('dl2-thumb'),
     images: [getImg('dl2-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/98oJYDRblLI'
   },
   {
     id: '46',
@@ -450,7 +449,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('di2-thumb'),
     images: [getImg('di2-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/VvG7vI4y2I8'
   },
   {
     id: '47',
@@ -459,7 +458,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('daysgone-thumb'),
     images: [getImg('daysgone-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/m9uR602I-sY'
   },
   {
     id: '48',
@@ -468,7 +467,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('stalker2-thumb'),
     images: [getImg('stalker2-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/SjS_X3C3Ats'
   },
   {
     id: '49',
@@ -477,7 +476,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('re2-thumb'),
     images: [getImg('re2-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/u3wS6CHXKce'
   },
   {
     id: '50',
@@ -486,7 +485,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('re4-thumb'),
     images: [getImg('re4-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/j5Xv2lM9w_A'
   },
   {
     id: '51',
@@ -495,7 +494,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('revillage-thumb'),
     images: [getImg('revillage-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/Bt92uSHeP0Q'
   },
   {
     id: '52',
@@ -504,7 +503,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('rebio-thumb'),
     images: [getImg('rebio-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/98_5I_L2z9Y'
   },
   {
     id: '53',
@@ -513,7 +512,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('plague-thumb'),
     images: [getImg('plague-hero')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/vYF_jR3C2-A'
   },
   {
     id: '54',
@@ -522,7 +521,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('re3-thumb'),
     images: [getImg('re3-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/Wghn3tOpxro'
   },
   {
     id: '55',
@@ -531,7 +530,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: getImg('eldenring-thumb'),
     images: [getImg('eldenring-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/E3Huy2cdih0'
   },
   {
     id: '56',
@@ -540,7 +539,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: getImg('elden-shadow-thumb'),
     images: [getImg('elden-shadow-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/hO2_m7Uf8iY'
   },
   {
     id: '57',
@@ -549,7 +548,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Fighting',
     thumbnail: getImg('mk1-thumb'),
     images: [getImg('mk1-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/MYG7-SAnfS0'
   },
   {
     id: '58',
@@ -558,7 +557,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('jedi-survivor-thumb'),
     images: [getImg('jedi-survivor-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/BM-mFpZ_9fA'
   },
   {
     id: '59',
@@ -567,7 +566,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('nightmares3-thumb'),
     images: [getImg('nightmares3-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/AAn_kZ_T3mQ'
   },
   {
     id: '60',
@@ -576,7 +575,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('ninjag4-thumb'),
     images: [getImg('ninjag4-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/y9Z_y8mDREw'
   },
   {
     id: '61',
@@ -585,7 +584,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: getImg('exp33-thumb'),
     images: [getImg('exp33-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/n4PqN9zEa9U'
   },
   {
     id: '62',
@@ -594,7 +593,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('avatar-pandora-thumb'),
     images: [getImg('avatar-pandora-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/RDzuB498vX0'
   },
   {
     id: '63',
@@ -603,7 +602,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('reanimal-thumb'),
     images: [getImg('reanimal-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/AAn_kZ_T3mQ'
   },
   {
     id: '64',
@@ -612,7 +611,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('alanwake2-thumb'),
     images: [getImg('alanwake2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/dlQ3Feat5S4'
   },
   {
     id: '65',
@@ -621,7 +620,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('mgs5-thumb'),
     images: [getImg('mgs5-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/A9JV0EvCkMI'
   },
   {
     id: '66',
@@ -630,7 +629,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('hellblade2-thumb'),
     images: [getImg('hellblade2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/v9C2u6e45p8'
   },
   {
     id: '67',
@@ -639,7 +638,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('ds2-thumb'),
     images: [getImg('ds2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/n4PqN9zEa9U'
   },
   {
     id: '68',
@@ -648,7 +647,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('jc4-thumb'),
     images: [getImg('jc4-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/m9uR602I-sY'
   },
   {
     id: '69',
@@ -657,7 +656,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('mafia-old-thumb'),
     images: [getImg('mafia-old-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/OQ1CcR467wU'
   },
   {
     id: '70',
@@ -666,7 +665,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Open World',
     thumbnail: getImg('mafia3-thumb'),
     images: [getImg('mafia3-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/hh9x4NqW0Cc'
   },
   {
     id: '71',
@@ -675,7 +674,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('maxpayne3-thumb'),
     images: [getImg('maxpayne3-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/a7ZpQadiyqs'
   },
   {
     id: '72',
@@ -684,7 +683,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Shooter',
     thumbnail: getImg('ferocious-thumb'),
     images: [getImg('ferocious-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/vsk39Zf6-mY'
   },
   {
     id: '73',
@@ -693,7 +692,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Race',
     thumbnail: getImg('nfs-unbound-thumb'),
     images: [getImg('nfs-unbound-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/v9C2u6e45p8'
   },
   {
     id: '74',
@@ -702,7 +701,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Race',
     thumbnail: getImg('nfs-heat-thumb'),
     images: [getImg('nfs-heat-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/u4-3A_A8P48'
   },
   {
     id: '75',
@@ -711,7 +710,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Race',
     thumbnail: getImg('crew2-thumb'),
     images: [getImg('crew2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/bgqGdIoa52s'
   },
   {
     id: '76',
@@ -720,6 +719,6 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Horror',
     thumbnail: getImg('silenthill2-thumb'),
     images: [getImg('silenthill2-thumb')],
-    videoUrl: NEW_TRAILER_URL
+    videoUrl: 'https://www.youtube.com/embed/pyC_qiW_49E'
   }
 ];
