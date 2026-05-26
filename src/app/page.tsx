@@ -6,6 +6,7 @@ import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
 import { Gamepad2, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -41,7 +42,6 @@ export default function HomePage() {
 
           <div className="flex items-center gap-4">
             <Button variant="ghost" className="hidden sm:flex">Catalog</Button>
-            <Button className="bg-primary hover:bg-primary/90">Join Community</Button>
           </div>
         </div>
       </header>
@@ -159,5 +159,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-import Link from 'next/link';
