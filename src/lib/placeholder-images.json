@@ -319,10 +319,22 @@
       "imageHint": "feudal japan"
     },
     {
+      "id": "ac-shadows-hero",
+      "description": "Assassin's Creed Shadows Japan hero",
+      "imageUrl": "https://picsum.photos/seed/acshadows-hero/1200/800",
+      "imageHint": "samurai village"
+    },
+    {
       "id": "ac-unity-thumb",
       "description": "Assassin's Creed Unity Paris thumbnail",
       "imageUrl": "https://picsum.photos/seed/acunity/600/400",
       "imageHint": "french revolution"
+    },
+    {
+      "id": "ac-unity-hero",
+      "description": "Assassin's Creed Unity Paris hero",
+      "imageUrl": "https://picsum.photos/seed/acunity-hero/1200/800",
+      "imageHint": "paris streets"
     },
     {
       "id": "ac-mirage-thumb",
@@ -331,16 +343,34 @@
       "imageHint": "desert city"
     },
     {
+      "id": "ac-mirage-hero",
+      "description": "Assassin's Creed Mirage Baghdad hero",
+      "imageUrl": "https://picsum.photos/seed/acmirage-hero/1200/800",
+      "imageHint": "golden dome"
+    },
+    {
       "id": "ac-odyssey-thumb",
       "description": "Assassin's Creed Odyssey Greece thumbnail",
       "imageUrl": "https://picsum.photos/seed/acodyssey/600/400",
       "imageHint": "ancient greece"
     },
     {
+      "id": "ac-odyssey-hero",
+      "description": "Assassin's Creed Odyssey Greece hero",
+      "imageUrl": "https://picsum.photos/seed/acodyssey-hero/1200/800",
+      "imageHint": "mediterranean sea"
+    },
+    {
       "id": "ac-syndicate-thumb",
       "description": "Assassin's Creed Syndicate London thumbnail",
       "imageUrl": "https://picsum.photos/seed/acsyndicate/600/400",
       "imageHint": "victorian london"
+    },
+    {
+      "id": "ac-syndicate-hero",
+      "description": "Assassin's Creed Syndicate London hero",
+      "imageUrl": "https://picsum.photos/seed/acsyndicate-hero/1200/800",
+      "imageHint": "london bridge"
     },
     {
       "id": "skyward-thumb",
@@ -353,6 +383,222 @@
       "description": "Horizon Zero Frontier wilderness",
       "imageUrl": "https://picsum.photos/seed/hzf/600/400",
       "imageHint": "robotic wildlife"
+    },
+    {
+      "id": "detroit-thumb",
+      "description": "Detroit Become Human android thumbnail",
+      "imageUrl": "https://picsum.photos/seed/detroit-bh/600/400",
+      "imageHint": "futuristic android"
+    },
+    {
+      "id": "detroit-hero",
+      "description": "Detroit Become Human city landscape",
+      "imageUrl": "https://picsum.photos/seed/detroit-city/1200/800",
+      "imageHint": "future city"
+    },
+    {
+      "id": "farcry5-thumb",
+      "description": "Far Cry 5 wilderness thumbnail",
+      "imageUrl": "https://picsum.photos/seed/fc5/600/400",
+      "imageHint": "montana landscape"
+    },
+    {
+      "id": "farcry5-hero",
+      "description": "Far Cry 5 scenic mountain",
+      "imageUrl": "https://picsum.photos/seed/fc5-hero/1200/800",
+      "imageHint": "mountain forest"
+    },
+    {
+      "id": "farcry4-thumb",
+      "description": "Far Cry 4 himalayan thumbnail",
+      "imageUrl": "https://picsum.photos/seed/fc4/600/400",
+      "imageHint": "snowy mountains"
+    },
+    {
+      "id": "farcry4-hero",
+      "description": "Far Cry 4 vista",
+      "imageUrl": "https://picsum.photos/seed/fc4-hero/1200/800",
+      "imageHint": "himalayan range"
+    },
+    {
+      "id": "gotham-thumb",
+      "description": "Gotham Knights city thumbnail",
+      "imageUrl": "https://picsum.photos/seed/gotham-k/600/400",
+      "imageHint": "dark city"
+    },
+    {
+      "id": "gotham-hero",
+      "description": "Gotham Knights hero vista",
+      "imageUrl": "https://picsum.photos/seed/gotham-hero/1200/800",
+      "imageHint": "night skyline"
+    },
+    {
+      "id": "batman-thumb",
+      "description": "Batman Arkham Knight thumbnail",
+      "imageUrl": "https://picsum.photos/seed/arkham-k/600/400",
+      "imageHint": "batman silhouette"
+    },
+    {
+      "id": "batman-hero",
+      "description": "Batman Arkham Knight hero image",
+      "imageUrl": "https://picsum.photos/seed/arkham-hero/1200/800",
+      "imageHint": "gothic city"
+    },
+    {
+      "id": "cronos-thumb",
+      "description": "Cronos The New Dawn thumbnail",
+      "imageUrl": "https://picsum.photos/seed/cronos/600/400",
+      "imageHint": "sci-fi portal"
+    },
+    {
+      "id": "cronos-hero",
+      "description": "Cronos The New Dawn hero landscape",
+      "imageUrl": "https://picsum.photos/seed/cronos-hero/1200/800",
+      "imageHint": "alien world"
+    },
+    {
+      "id": "readyornot-thumb",
+      "description": "Ready or Not tactical thumbnail",
+      "imageUrl": "https://picsum.photos/seed/ready-not/600/400",
+      "imageHint": "tactical gear"
+    },
+    {
+      "id": "readyornot-hero",
+      "description": "Ready or Not hero image",
+      "imageUrl": "https://picsum.photos/seed/ready-hero/1200/800",
+      "imageHint": "swat team"
+    },
+    {
+      "id": "echoes-thumb",
+      "description": "Echoes of the End thumbnail",
+      "imageUrl": "https://picsum.photos/seed/echoes/600/400",
+      "imageHint": "ancient ruins"
+    },
+    {
+      "id": "echoes-hero",
+      "description": "Echoes of the End hero landscape",
+      "imageUrl": "https://picsum.photos/seed/echoes-hero/1200/800",
+      "imageHint": "fantasy ruins"
+    },
+    {
+      "id": "forza5-thumb",
+      "description": "Forza Horizon 5 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/forza5/600/400",
+      "imageHint": "mexico racing"
+    },
+    {
+      "id": "forza5-hero",
+      "description": "Forza Horizon 5 hero",
+      "imageUrl": "https://picsum.photos/seed/forza5-hero/1200/800",
+      "imageHint": "desert race"
+    },
+    {
+      "id": "dl2-thumb",
+      "description": "Dying Light 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/dl2/600/400",
+      "imageHint": "parkour zombie"
+    },
+    {
+      "id": "dl2-hero",
+      "description": "Dying Light 2 hero",
+      "imageUrl": "https://picsum.photos/seed/dl2-hero/1200/800",
+      "imageHint": "rooftop sunset"
+    },
+    {
+      "id": "di2-thumb",
+      "description": "Dead Island 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/di2/600/400",
+      "imageHint": "hollywood zombie"
+    },
+    {
+      "id": "di2-hero",
+      "description": "Dead Island 2 hero",
+      "imageUrl": "https://picsum.photos/seed/di2-hero/1200/800",
+      "imageHint": "sunny beach"
+    },
+    {
+      "id": "daysgone-thumb",
+      "description": "Days Gone thumbnail",
+      "imageUrl": "https://picsum.photos/seed/daysgone/600/400",
+      "imageHint": "biker survival"
+    },
+    {
+      "id": "daysgone-hero",
+      "description": "Days Gone hero",
+      "imageUrl": "https://picsum.photos/seed/daysgone-hero/1200/800",
+      "imageHint": "forest highway"
+    },
+    {
+      "id": "stalker2-thumb",
+      "description": "STALKER 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/stalker2/600/400",
+      "imageHint": "chernobyl zone"
+    },
+    {
+      "id": "stalker2-hero",
+      "description": "STALKER 2 hero",
+      "imageUrl": "https://picsum.photos/seed/stalker2-hero/1200/800",
+      "imageHint": "anomaly field"
+    },
+    {
+      "id": "re2-thumb",
+      "description": "Resident Evil 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/re2/600/400",
+      "imageHint": "police station"
+    },
+    {
+      "id": "re2-hero",
+      "description": "Resident Evil 2 hero",
+      "imageUrl": "https://picsum.photos/seed/re2-hero/1200/800",
+      "imageHint": "dark corridor"
+    },
+    {
+      "id": "re4-thumb",
+      "description": "Resident Evil 4 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/re4/600/400",
+      "imageHint": "spanish village"
+    },
+    {
+      "id": "re4-hero",
+      "description": "Resident Evil 4 hero",
+      "imageUrl": "https://picsum.photos/seed/re4-hero/1200/800",
+      "imageHint": "castle entrance"
+    },
+    {
+      "id": "revillage-thumb",
+      "description": "Resident Evil Village thumbnail",
+      "imageUrl": "https://picsum.photos/seed/revillage/600/400",
+      "imageHint": "snowy village"
+    },
+    {
+      "id": "revillage-hero",
+      "description": "Resident Evil Village hero",
+      "imageUrl": "https://picsum.photos/seed/revillage-hero/1200/800",
+      "imageHint": "vampire castle"
+    },
+    {
+      "id": "rebio-thumb",
+      "description": "Resident Evil Biohazard thumbnail",
+      "imageUrl": "https://picsum.photos/seed/rebio/600/400",
+      "imageHint": "swamp house"
+    },
+    {
+      "id": "rebio-hero",
+      "description": "Resident Evil Biohazard hero",
+      "imageUrl": "https://picsum.photos/seed/rebio-hero/1200/800",
+      "imageHint": "creepy mansion"
+    },
+    {
+      "id": "plague-thumb",
+      "description": "A Plague Tale Requiem thumbnail",
+      "imageUrl": "https://picsum.photos/seed/plague/600/400",
+      "imageHint": "medieval rats"
+    },
+    {
+      "id": "plague-hero",
+      "description": "A Plague Tale Requiem hero",
+      "imageUrl": "https://picsum.photos/seed/plague-hero/1200/800",
+      "imageHint": "sunset island"
     }
   ]
 }

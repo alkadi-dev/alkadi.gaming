@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -423,6 +424,96 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Adventure',
     thumbnail: getImg('echoes-thumb'),
     images: [getImg('echoes-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '44',
+    title: 'Forza Horizon 5',
+    description: 'Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars.',
+    category: 'Race',
+    thumbnail: getImg('forza5-thumb'),
+    images: [getImg('forza5-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '45',
+    title: 'Dying Light 2: Stay Human',
+    description: 'Over twenty years ago in Harran, we fought the virus—and lost. Now, we’re losing again. The City, one of the last large human settlements, is torn by conflict. Civilization has fallen back into the Dark Ages.',
+    category: 'Open World',
+    thumbnail: getImg('dl2-thumb'),
+    images: [getImg('dl2-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '46',
+    title: 'Dead Island 2',
+    description: 'Dead Island 2 is a thrilling First-Person Action RPG, taking players across a brand-new playground – a hellish vision of LA. It’s stylish, vibrant and flooded with zombie infection.',
+    category: 'Action',
+    thumbnail: getImg('di2-thumb'),
+    images: [getImg('di2-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '47',
+    title: 'Days Gone',
+    description: 'Ride and fight into a deadly, post-pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live.',
+    category: 'Open World',
+    thumbnail: getImg('daysgone-thumb'),
+    images: [getImg('daysgone-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '48',
+    title: 'S.T.A.L.K.E.R. 2: Heart of Chornobyl',
+    description: 'Discover the vast Chornobyl Exclusion Zone full of dangerous enemies, deadly anomalies and powerful artifacts. Unveil your own epic story as you make your way to the Heart of Chornobyl.',
+    category: 'Shooter',
+    thumbnail: getImg('stalker2-thumb'),
+    images: [getImg('stalker2-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '49',
+    title: 'Resident Evil 2',
+    description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you.',
+    category: 'Adventure',
+    thumbnail: getImg('re2-thumb'),
+    images: [getImg('re2-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '50',
+    title: 'Resident Evil 4',
+    description: 'Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S. Kennedy, one of the survivors, has been dispatched to rescue the president\'s kidnapped daughter.',
+    category: 'Adventure',
+    thumbnail: getImg('re4-thumb'),
+    images: [getImg('re4-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '51',
+    title: 'Resident Evil Village',
+    description: 'Experience survival horror like never before in the eighth major installment in the storied Resident Evil franchise - Resident Evil Village. With all-new graphics, intense first-person action and masterful storytelling, the terror has never felt more real.',
+    category: 'Adventure',
+    thumbnail: getImg('revillage-thumb'),
+    images: [getImg('revillage-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '52',
+    title: 'Resident Evil 7: Biohazard',
+    description: 'Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
+    category: 'Adventure',
+    thumbnail: getImg('rebio-thumb'),
+    images: [getImg('rebio-hero')],
+    videoUrl: NEW_TRAILER_URL
+  },
+  {
+    id: '53',
+    title: 'A Plague Tale: Requiem',
+    description: 'Far across the sea, an island calls... Embark on a heartrending journey into a brutal, breathtaking world twisted by supernatural forces. After escaping their devastated homeland, Amicia and Hugo travel far south, to new regions and vibrant cities.',
+    category: 'Adventure',
+    thumbnail: getImg('plague-thumb'),
+    images: [getImg('plague-hero')],
     videoUrl: NEW_TRAILER_URL
   }
 ];
