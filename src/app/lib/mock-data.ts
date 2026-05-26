@@ -53,9 +53,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
     shorts: [
-      'https://www.youtube.com/embed/9HxO2Yg2AEQ',
-      'https://www.youtube.com/embed/AT5PlpAKo0I',
-      'https://www.youtube.com/embed/40omY9j5-y8'
+      'https://www.youtube.com/embed/9HxO2Yg2AEQ?si=qKvoPgUhwaSl2_il',
+      'https://www.youtube.com/embed/AT5PlpAKo0I?si=DSdU6m9qafDR3_qt',
+      'https://www.youtube.com/embed/40omY9j5-y8?si=caiQiSbDzD5v7ugo'
     ],
   },
   {
@@ -63,8 +63,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Shadows",
     description: 'Experience an epic historical action-adventure story set in feudal Japan. Become a lethal shinobi assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
     category: 'Open World',
-    thumbnail: getImg('ac-shadows-thumb'),
-    images: [getImg('ac-shadows-hero'), getImg('ac-shadows-thumb')],
+    thumbnail: 'https://preview.redd.it/assassins-creed-shadows-official-cover-art-v0-yscvb4s38m0d1.jpeg?width=640&crop=smart&auto=webp&s=7a66f93bda7cb6b92a798d8e648288a0c935a610',
+    images: [
+      'https://preview.redd.it/assassins-creed-shadows-official-cover-art-v0-yscvb4s38m0d1.jpeg?width=640&crop=smart&auto=webp&s=7a66f93bda7cb6b92a798d8e648288a0c935a610',
+      'https://preview.redd.it/two-new-screenshots-of-ac-shadows-world-v0-whm6mgnqhsee1.png?width=640&crop=smart&auto=webp&s=f0d47b92ba36516422cfee81603b63221662a440',
+      'https://wallpapercave.com/wp/wp13980388.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
     shorts: [...NEW_SHORTS],
   },
