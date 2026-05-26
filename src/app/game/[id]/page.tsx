@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, Share2, Heart, Play } from 'lucide-react';
+import { ArrowLeft, Sparkles, Share2, Heart } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -89,9 +89,9 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         </div>
       </div>
 
-      <main className="container mx-auto px-4 mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <main className="container mx-auto px-4 mt-8 max-w-5xl">
         {/* Main Content Area */}
-        <div className="lg:col-span-2 space-y-12">
+        <div className="space-y-12">
           {/* Description Section with AI Enhancement */}
           <section className="bg-secondary/30 rounded-2xl p-8 border border-white/5">
             <div className="flex items-center justify-between mb-6">
@@ -166,21 +166,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
               />
             </div>
           </section>
-        </div>
-
-        {/* Sidebar Info */}
-        <div className="lg:col-span-1">
-          <div className="sticky top-24 space-y-6">
-            <div className="bg-accent/10 rounded-2xl p-6 border border-accent/20">
-              <div className="flex items-center gap-2 mb-2 text-accent">
-                <Play className="h-5 w-5 fill-current" />
-                <span className="font-bold">Streaming Now</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Join our developers for a live walkthrough of the latest gameplay mechanics.
-              </p>
-            </div>
-          </div>
         </div>
       </main>
     </div>
