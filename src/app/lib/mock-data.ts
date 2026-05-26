@@ -45,6 +45,76 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
+    id: 'ac-shadows',
+    title: "Assassin's Creed Shadows",
+    description: 'Experience an epic historical action-adventure story set in feudal Japan. Become a lethal shinobi assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
+    category: 'Open World',
+    thumbnail: getImg('ac-shadows-thumb'),
+    images: [getImg('ac-shadows-hero')],
+    videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
+    shorts: [
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/A6NfIu3a8_4'
+    ],
+  },
+  {
+    id: 'ac-unity',
+    title: "Assassin's Creed Unity",
+    description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
+    category: 'Open World',
+    thumbnail: getImg('ac-unity-thumb'),
+    images: [getImg('ac-unity-hero')],
+    videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'ac-mirage',
+    title: "Assassin's Creed Mirage",
+    description: 'In Assassin’s Creed Mirage, you are Basim, a cunning street thief with nightmarish visions, seeking answers and justice. Join an ancient organization and come to understand a new creed – one that will change Basim’s fate in ways he never could have imagined.',
+    category: 'Action',
+    thumbnail: getImg('ac-mirage-thumb'),
+    images: [getImg('ac-mirage-hero')],
+    videoUrl: 'https://www.youtube.com/embed/k-BGWngy97I',
+    shorts: [
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
+  },
+  {
+    id: 'ac-odyssey',
+    title: "Assassin's Creed Odyssey",
+    description: 'Write your own epic odyssey and become a legendary Spartan hero. Forge your destiny in a world on the brink of tearing itself apart. Influence how history unfolds in an ever-changing world shaped by your choices.',
+    category: 'RPG',
+    thumbnail: getImg('ac-odyssey-thumb'),
+    images: [getImg('ac-odyssey-hero')],
+    videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA',
+    shorts: [
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
+  },
+  {
+    id: 'ac-syndicate',
+    title: "Assassin's Creed Syndicate",
+    description: 'London, 1868. In the heart of the Industrial Revolution, lead your underworld organization and grow your influence to fight those who exploit the less privileged in the name of progress.',
+    category: 'Open World',
+    thumbnail: getImg('ac-syndicate-thumb'),
+    images: [getImg('ac-syndicate-hero')],
+    videoUrl: 'https://www.youtube.com/embed/3kGHHMc5dqE',
+    shorts: [
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
     id: '2',
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
@@ -255,62 +325,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 'ninjag4',
-    title: 'Ninja Gaiden 4',
-    description: 'The legendary ninja Ryu Hayabusa returns in a high-octane action experience that redefines the genre with brutal combat and supernatural foes.',
-    category: 'Action',
-    thumbnail: getImg('ninjag4-thumb'),
-    images: [getImg('ninjag4-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/uI_O-Kx7K_k',
-    shorts: [
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
-    ],
-  },
-  {
-    id: 'exp33',
-    title: 'Expedition 33',
-    description: 'A turn-based RPG with real-time mechanics. Lead a group of explorers in a world inspired by the Belle Époque as they attempt to break the cycle of death.',
-    category: 'Adventure',
-    thumbnail: getImg('exp33-thumb'),
-    images: [getImg('exp33-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/8a-EObAhYrg',
-    shorts: [
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/p1_v-F7m6X0'
-    ],
-  },
-  {
-    id: 'avatar-pandora',
-    title: 'Avatar: Frontiers of Pandora',
-    description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the never-before-seen Western Frontier of Pandora.',
-    category: 'Adventure',
-    thumbnail: getImg('avatar-pandora-thumb'),
-    images: [getImg('avatar-pandora-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/0G6VInO9o7s',
-    shorts: [
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/NnK-rC5A_nU'
-    ],
-  },
-  {
-    id: 'reanimal',
-    title: 'Reanimal',
-    description: 'The creators of Little Nightmares return with a new, dark cooperative adventure that explores the grotesque and the beautiful in a haunting world.',
-    category: 'Horror',
-    thumbnail: getImg('reanimal-thumb'),
-    images: [getImg('reanimal-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/PjE-0L5YIas',
-    shorts: [
-      'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
-    ],
-  },
-  {
     id: 'alanwake2',
     title: 'Alan Wake 2',
     description: 'A string of ritualistic murders threatens Bright Falls, an idyllic small-town community in the Pacific Northwest. Saga Anderson, an accomplished FBI agent, arrives to investigate.',
@@ -318,160 +332,6 @@ export const MOCK_GAMES: GameEntry[] = [
     thumbnail: getImg('alanwake2-thumb'),
     images: [getImg('alanwake2-thumb')],
     videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
-    shorts: [
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4'
-    ],
-  },
-  {
-    id: 'mgs5',
-    title: 'Metal Gear Solid 5',
-    description: 'Experience a new era for the franchise with cutting-edge technology powered by the Fox Engine, MGSV: The Phantom Pain provides players a first-rate gaming experience as they are offered tactical freedom.',
-    category: 'Action',
-    thumbnail: getImg('mgs5-thumb'),
-    images: [getImg('mgs5-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/A9JV0EvCkMI',
-    shorts: [
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/A6NfIu3a8_4'
-    ],
-  },
-  {
-    id: 'hellblade2',
-    title: 'Senua\'s Saga: Hellblade 2',
-    description: 'The sequel to the award-winning Hellblade: Senua’s Sacrifice, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland.',
-    category: 'Adventure',
-    thumbnail: getImg('hellblade2-thumb'),
-    images: [getImg('hellblade2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/2-nFvY0wL2c',
-    shorts: [
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4'
-    ],
-  },
-  {
-    id: 'ds2',
-    title: 'Death Stranding 2',
-    description: 'Sam Porter Bridges returns for a new journey to connect humanity in a world transformed by the Death Stranding. A masterpiece from Hideo Kojima.',
-    category: 'Adventure',
-    thumbnail: getImg('ds2-thumb'),
-    images: [getImg('ds2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/u_F8X-v8f8Y',
-    shorts: [
-      'https://www.youtube.com/embed/u_F8X-v8f8Y',
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/PjE-0L5YIas'
-    ],
-  },
-  {
-    id: 'jc4',
-    title: 'Just Cause 4',
-    description: 'Rico Rodriguez visits Solis, a huge South American home of conflict, oppression and extreme weather conditions. Strap into your wingsuit, equip your fully customizable grappling hook, and get ready to bring the thunder!',
-    category: 'Action',
-    thumbnail: getImg('jc4-thumb'),
-    images: [getImg('jc4-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/LImn9O4KscA',
-    shorts: [
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/2-nFvY0wL2c'
-    ],
-  },
-  {
-    id: 'mafia-old',
-    title: 'Mafia: The Old Country',
-    description: 'Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily.',
-    category: 'Adventure',
-    thumbnail: getImg('mafia-old-thumb'),
-    images: [getImg('mafia-old-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/zM7i8-D8R1g',
-    shorts: [
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/NnK-rC5A_nU'
-    ],
-  },
-  {
-    id: 'mafia3',
-    title: 'Mafia 3: Definitive Edition',
-    description: 'After years of combat in Vietnam, Lincoln Clay knows this truth: family isn’t who you’re born with, it’s who you die for.',
-    category: 'Adventure',
-    thumbnail: getImg('mafia3-thumb'),
-    images: [getImg('mafia3-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/4UdSpFXz8Q4',
-    shorts: [
-      'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k',
-      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
-    ],
-  },
-  {
-    id: 'maxpayne3',
-    title: 'Max Payne 3',
-    description: 'For Max Payne, the tragedies that took his loved ones years ago are wounds that refuse to heal. No longer a cop, close to washed up and addicted to pain killers, Max takes a job in São Paulo, Brazil.',
-    category: 'Adventure',
-    thumbnail: getImg('maxpayne3-thumb'),
-    images: [getImg('maxpayne3-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/dxa34RatmSc',
-    shorts: [
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/NnK-rC5A_nU',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4'
-    ],
-  },
-  {
-    id: 'ferocious',
-    title: 'Ferocious',
-    description: 'FEROCIOUS is a first-person shooter that combines a mysterious story with brutal action in a breathtaking, prehistoric world.',
-    category: 'Shooter',
-    thumbnail: getImg('ferocious-thumb'),
-    images: [getImg('ferocious-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/uI_O-Kx7K_k',
-    shorts: [
-      'https://www.youtube.com/embed/uI_O-Kx7K_k',
-      'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/A6NfIu3a8_4'
-    ],
-  },
-  {
-    id: 'nfs-unbound',
-    title: 'Need for Speed Unbound',
-    description: 'Race against time, outsmart the cops, and take on weekly qualifiers to reach The Grand, Lakeshore\'s ultimate street racing challenge.',
-    category: 'Race',
-    thumbnail: getImg('nfs-unbound-thumb'),
-    images: [getImg('nfs-unbound-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E',
-    shorts: [
-      'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/N-0_W88T5c0',
-      'https://www.youtube.com/embed/I0T8xZ9X0F4'
-    ],
-  },
-  {
-    id: 'nfs-heat',
-    title: 'Need for Speed Heat',
-    description: 'Hustle by day and risk it all by night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.',
-    category: 'Race',
-    thumbnail: getImg('nfs-heat-thumb'),
-    images: [getImg('nfs-heat-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
-    shorts: [
-      'https://www.youtube.com/embed/u_F8X-v8f8Y',
-      'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/PjE-0L5YIas'
-    ],
-  },
-  {
-    id: 'crew2',
-    title: 'The Crew 2',
-    description: 'Take on the American motorsports scene as you explore and dominate the land, air, and sea of the United States in one of the most exhilarating open worlds ever created.',
-    category: 'Race',
-    thumbnail: getImg('crew2-thumb'),
-    images: [getImg('crew2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
       'https://www.youtube.com/embed/NnK-rC5A_nU',
@@ -488,6 +348,90 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
+  },
+  {
+    id: 'got',
+    title: 'Ghost of Tsushima',
+    description: 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet.',
+    category: 'Open World',
+    thumbnail: getImg('got-thumb'),
+    images: [getImg('got-hero')],
+    videoUrl: 'https://www.youtube.com/embed/mGvG6_JPrHc',
+    shorts: [
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
+  },
+  {
+    id: 'u4',
+    title: 'Uncharted 4: A Thief\'s End',
+    description: 'Several years after his last adventure, retired fortune hunter Nathan Drake is forced back into the world of thieves.',
+    category: 'Adventure',
+    thumbnail: getImg('u4-thumb'),
+    images: [getImg('u4-hero')],
+    videoUrl: 'https://www.youtube.com/embed/sB0xy74Zrj8',
+    shorts: [
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
+    ],
+  },
+  {
+    id: 'tlou1',
+    title: 'The Last of Us Part I',
+    description: 'In a ravaged civilization, where infected and hardened survivors run wild, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone.',
+    category: 'Action',
+    thumbnail: getImg('tlou1-thumb'),
+    images: [getImg('tlou1-hero')],
+    videoUrl: 'https://www.youtube.com/embed/W01L78Cec1M',
+    shorts: [
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'tlou2',
+    title: 'The Last of Us Part II',
+    description: 'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming.',
+    category: 'Action',
+    thumbnail: getImg('tlou2-thumb'),
+    images: [getImg('tlou2-hero')],
+    videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
+    ],
+  },
+  {
+    id: 'gtav',
+    title: 'Grand Theft Auto V',
+    description: 'When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld.',
+    category: 'Open World',
+    thumbnail: getImg('gtav-thumb'),
+    images: [getImg('gtav-hero')],
+    videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
+    shorts: [
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
+    ],
+  },
+  {
+    id: 'hzd',
+    title: 'Horizon Zero Dawn',
+    description: 'In an era where Machines roam the land and mankind is no longer the dominant species, a young hunter named Aloy embarks on a journey to discover her destiny.',
+    category: 'Open World',
+    thumbnail: getImg('hzd-thumb'),
+    images: [getImg('hzd-hero')],
+    videoUrl: 'https://www.youtube.com/embed/u4-GiBaWstc',
+    shorts: [
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
       'https://www.youtube.com/embed/N-0_W88T5c0',
       'https://www.youtube.com/embed/2-nFvY0wL2c'
     ],
