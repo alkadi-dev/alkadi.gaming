@@ -10,7 +10,7 @@ export interface GameEntry {
   videoUrl: string;
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World'];
+export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Sports'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -20,9 +20,9 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Witcher 3',
     description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
     category: 'RPG',
-    thumbnail: getImg('witcher-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp8510096.jpg',
     images: [
-      getImg('witcher-hero'),
+      'https://wallpapercave.com/wp/wp8510096.jpg',
       getImg('witcher-gallery-1'),
       getImg('witcher-gallery-2')
     ],
@@ -82,9 +82,9 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Spider-Man 2',
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York, quickly switching between Peter Parker and Miles Morales to experience different stories and epic new powers.',
     category: 'Open World',
-    thumbnail: getImg('spiderman-thumb'),
+    thumbnail: getImg('spiderman2-thumb'),
     images: [
-      getImg('spiderman-hero')
+      getImg('spiderman2-hero')
     ],
     videoUrl: 'https://www.youtube.com/embed/qIQ3xNqkOY4'
   },
@@ -109,5 +109,122 @@ export const MOCK_GAMES: GameEntry[] = [
       getImg('tlou2-hero')
     ],
     videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E'
+  },
+  {
+    id: '9',
+    title: 'God of War',
+    description: 'Living as a man outside the shadow of the gods, Kratos must adapt to unfamiliar lands, unexpected threats, and a second chance at being a father. Together with his son Atreus, the pair will venture into the brutal Norse wilds and fight to fulfill a deeply personal quest.',
+    category: 'Action',
+    thumbnail: getImg('gow-thumb'),
+    images: [getImg('gow-hero')],
+    videoUrl: 'https://www.youtube.com/embed/FyIwEFXOcaE'
+  },
+  {
+    id: '10',
+    title: 'God of War Ragnarök',
+    description: 'Fimbulwinter is well underway. Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world. Along the way, they will explore stunning, mythical landscapes, and face fearsome enemies in the form of Norse gods and monsters.',
+    category: 'Action',
+    thumbnail: getImg('gowr-thumb'),
+    images: [getImg('gowr-hero')],
+    videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0'
+  },
+  {
+    id: '11',
+    title: 'Grand Theft Auto V',
+    description: 'When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.',
+    category: 'Open World',
+    thumbnail: getImg('gtav-thumb'),
+    images: [getImg('gtav-hero')],
+    videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs'
+  },
+  {
+    id: '12',
+    title: 'Cyberpunk 2077',
+    description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Improved and featuring all-new free additional content, customize your character and playstyle as you take on jobs, build a reputation, and unlock upgrades.',
+    category: 'Open World',
+    thumbnail: getImg('cp2077-thumb'),
+    images: [getImg('cp2077-hero')],
+    videoUrl: 'https://www.youtube.com/embed/LembwK9J6B8'
+  },
+  {
+    id: '13',
+    title: 'Uncharted 4: A Thief\'s End',
+    description: 'Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he\'s willing to sacrifice to save the ones he loves.',
+    category: 'Adventure',
+    thumbnail: getImg('u4-thumb'),
+    images: [getImg('u4-hero')],
+    videoUrl: 'https://www.youtube.com/embed/y1Re0PqyG6g'
+  },
+  {
+    id: '14',
+    title: 'Ghost of Tsushima',
+    description: 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet led by the ruthless and cunning general, Khotun Khan.',
+    category: 'Open World',
+    thumbnail: getImg('got-thumb'),
+    images: [getImg('got-hero')],
+    videoUrl: 'https://www.youtube.com/embed/rTNfipBPrHw'
+  },
+  {
+    id: '15',
+    title: 'Crimson Desert',
+    description: 'Crimson Desert is an upcoming open world action-adventure game. A story of survival, Crimson Desert follows a group of struggling mercenaries and the many characters who cross their paths in the vast continent of Pywel. It is a world where heroes are made, but not without incredible hardship, pain and perseverance.',
+    category: 'RPG',
+    thumbnail: getImg('crimson-thumb'),
+    images: [getImg('crimson-hero')],
+    videoUrl: 'https://www.youtube.com/embed/7V9N_S0Imsw'
+  },
+  {
+    id: '16',
+    title: 'Marvel\'s Spider-Man',
+    description: 'Starring one of the world\'s most iconic Super Heroes, Marvel\'s Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for, while also introducing elements never-before-seen in a Spider-Man game.',
+    category: 'Open World',
+    thumbnail: getImg('spiderman-thumb'),
+    images: [getImg('spiderman-hero')],
+    videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxko'
+  },
+  {
+    id: '17',
+    title: 'Marvel\'s Spider-Man: Miles Morales',
+    description: 'In the latest adventure in the Marvel\'s Spider-Man universe, teenager Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. But when a fierce power struggle threatens to destroy his new home, the aspiring hero realizes that with great power, there must also come great responsibility.',
+    category: 'Open World',
+    thumbnail: getImg('miles-thumb'),
+    images: [getImg('miles-hero')],
+    videoUrl: 'https://www.youtube.com/embed/gHzuHo80U2M'
+  },
+  {
+    id: '18',
+    title: 'Hitman World of Assassination',
+    description: 'Enter the world of the ultimate assassin. HITMAN World of Assassination brings together the best of HITMAN, HITMAN 2 and HITMAN 3 including the main campaign, contracts mode, elusive targets and the roguelike inspired game mode HITMAN: Freelancer.',
+    category: 'Action',
+    thumbnail: getImg('hitman-thumb'),
+    images: [getImg('hitman-hero')],
+    videoUrl: 'https://www.youtube.com/embed/R_O-V6PjN-E'
+  },
+  {
+    id: '19',
+    title: 'Horizon Zero Dawn',
+    description: 'In an era where Machines roam the land and Mankind is no longer the dominant species, a young hunter named Aloy embarks on a journey to discover her destiny. Explore a vibrant and lush world inhabited by mysterious mechanized creatures.',
+    category: 'Open World',
+    thumbnail: getImg('hzd-thumb'),
+    images: [getImg('hzd-hero')],
+    videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4'
+  },
+  {
+    id: '20',
+    title: 'FIFA 23',
+    description: 'EA SPORTS™ FIFA 23 brings The World\'s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, both the men\'s and women\'s FIFA World Cup™ coming to the game as post-launch updates, the addition of women\'s club teams, cross-play features, and more.',
+    category: 'Sports',
+    thumbnail: getImg('fifa23-thumb'),
+    images: [getImg('fifa23-hero')],
+    videoUrl: 'https://www.youtube.com/embed/o3V-GvvzjE4'
+  },
+  {
+    id: '21',
+    title: 'FIFA 26',
+    description: 'The future of football simulation. FIFA 26 takes realism to new heights with next-generation physics, expanded leagues, and a revolutionary career mode that puts you at the heart of the global game.',
+    category: 'Sports',
+    thumbnail: getImg('fifa26-thumb'),
+    images: [getImg('fifa26-hero')],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
   }
 ];
