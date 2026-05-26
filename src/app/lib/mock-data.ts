@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -12,17 +13,19 @@ export interface GameEntry {
 
 export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Cyberpunk', 'Strategy'];
 
+const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
+
 export const MOCK_GAMES: GameEntry[] = [
   {
     id: '1',
     title: 'The Witcher 3',
     description: 'Become Geralt of Rivia, a professional monster hunter, and explore the war-torn Northern Kingdoms in search of the Child of Prophecy. A masterpiece of storytelling and open-world exploration.',
     category: 'RPG',
-    thumbnail: 'https://picsum.photos/seed/witcher3/600/400',
+    thumbnail: getImg('witcher-thumb'),
     images: [
-      'https://picsum.photos/seed/witcher3a/1200/800',
-      'https://picsum.photos/seed/witcher3b/1200/800',
-      'https://picsum.photos/seed/witcher3c/1200/800'
+      getImg('witcher-hero'),
+      getImg('witcher-gallery-1'),
+      getImg('witcher-gallery-2')
     ],
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958'
   },

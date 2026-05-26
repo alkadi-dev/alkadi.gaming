@@ -9,8 +9,26 @@
     {
       "id": "witcher-hero",
       "description": "The Witcher 3 Wild Hunt thematic image",
-      "imageUrl": "https://picsum.photos/seed/witcher3/1200/600",
+      "imageUrl": "https://picsum.photos/seed/witcher3-main/1200/800",
       "imageHint": "monster hunter"
+    },
+    {
+      "id": "witcher-thumb",
+      "description": "The Witcher 3 cover style thumbnail",
+      "imageUrl": "https://picsum.photos/seed/witcher3-official/600/400",
+      "imageHint": "monster hunter"
+    },
+    {
+      "id": "witcher-gallery-1",
+      "description": "The Witcher 3 combat screenshot",
+      "imageUrl": "https://picsum.photos/seed/witcher3-combat/1200/800",
+      "imageHint": "sword fight"
+    },
+    {
+      "id": "witcher-gallery-2",
+      "description": "The Witcher 3 exploration screenshot",
+      "imageUrl": "https://picsum.photos/seed/witcher3-explore/1200/800",
+      "imageHint": "fantasy world"
     },
     {
       "id": "race-hero",
