@@ -474,7 +474,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '49',
     title: 'Resident Evil 2',
     description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you.',
-    category: 'Adventure',
+    category: 'Horror',
     thumbnail: getImg('re2-thumb'),
     images: [getImg('re2-hero')],
     videoUrl: NEW_TRAILER_URL
@@ -483,7 +483,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '50',
     title: 'Resident Evil 4',
     description: 'Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S. Kennedy, one of the survivors, has been dispatched to rescue the president\'s kidnapped daughter.',
-    category: 'Adventure',
+    category: 'Horror',
     thumbnail: getImg('re4-thumb'),
     images: [getImg('re4-hero')],
     videoUrl: NEW_TRAILER_URL
@@ -492,7 +492,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '51',
     title: 'Resident Evil Village',
     description: 'Experience survival horror like never before in the eighth major installment in the storied Resident Evil franchise - Resident Evil Village. With all-new graphics, intense first-person action and masterful storytelling, the terror has never felt more real.',
-    category: 'Adventure',
+    category: 'Horror',
     thumbnail: getImg('revillage-thumb'),
     images: [getImg('revillage-hero')],
     videoUrl: NEW_TRAILER_URL
@@ -501,7 +501,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '52',
     title: 'Resident Evil Biohazard',
     description: 'Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
-    category: 'Adventure',
+    category: 'Horror',
     thumbnail: getImg('rebio-thumb'),
     images: [getImg('rebio-hero')],
     videoUrl: NEW_TRAILER_URL
@@ -510,7 +510,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '53',
     title: 'Resident Evil Requiem',
     description: 'Far across the sea, an island calls... Embark on a heartrending journey into a brutal, breathtaking world twisted by supernatural forces. After escaping their devastated homeland, Amicia and Hugo travel far south, to new regions and vibrant cities.',
-    category: 'Adventure',
+    category: 'Horror',
     thumbnail: getImg('plague-thumb'),
     images: [getImg('plague-hero')],
     videoUrl: NEW_TRAILER_URL
