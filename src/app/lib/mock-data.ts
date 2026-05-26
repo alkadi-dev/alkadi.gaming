@@ -40,7 +40,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
     shorts: [
       'https://www.youtube.com/embed/p1_v-F7m6X0',
-      'https://www.youtube.com/embed/2-nFvY0wL2c'
+      'https://www.youtube.com/embed/2-nFvY0wL2c',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/A6NfIu3a8_4'
     ],
   },
   {
@@ -53,7 +56,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
     shorts: [
       'https://www.youtube.com/embed/rV9y9T-Xn7k',
-      'https://www.youtube.com/embed/NnK-rC5A_nU'
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/PjE-0L5YIas',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
     ],
   },
   {
@@ -66,7 +72,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/qIQ3uZvzOig',
     shorts: [
       'https://www.youtube.com/embed/Z0oD6Xp1k-0',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k'
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/p1_v-F7m6X0'
     ],
   },
   {
@@ -79,7 +88,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0',
     shorts: [
       'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/PjE-0L5YIas'
+      'https://www.youtube.com/embed/PjE-0L5YIas',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
     ],
   },
   {
@@ -92,7 +104,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8',
     shorts: [
       'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/u_F8X-v8f8Y'
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/N-0_W88T5c0'
     ],
   },
   {
@@ -105,7 +120,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/j5Xv2lM96vM',
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/N-0_W88T5c0'
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
     ],
   },
   {
@@ -118,7 +136,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/E3Huy2cdih0',
     shorts: [
       'https://www.youtube.com/embed/Z0oD6Xp1k-0',
-      'https://www.youtube.com/embed/PjE-0L5YIas'
+      'https://www.youtube.com/embed/PjE-0L5YIas',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4'
     ],
   },
   {
@@ -131,7 +152,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/8a-EObAhYrg',
     shorts: [
       'https://www.youtube.com/embed/A6NfIu3a8_4',
-      'https://www.youtube.com/embed/uI_O-Kx7K_k'
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/2-nFvY0wL2c'
     ],
   },
   {
@@ -144,7 +168,10 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/dxa34RatmSc',
     shorts: [
       'https://www.youtube.com/embed/I0T8xZ9X0F4',
-      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+      'https://www.youtube.com/embed/rV9y9T-Xn7k',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/PjE-0L5YIas'
     ],
   },
   {
@@ -157,7 +184,58 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/MYGf9X-iM38',
     shorts: [
       'https://www.youtube.com/embed/u2v_5h9qYmI',
-      'https://www.youtube.com/embed/NnK-rC5A_nU'
+      'https://www.youtube.com/embed/NnK-rC5A_nU',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+    ],
+  },
+  {
+    id: 'fc5',
+    title: 'Far Cry 5',
+    description: 'Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden\'s Gate. Stand up to cult leader Joseph Seed and his siblings, the Heralds, to spark the fires of resistance and liberate the besieged community.',
+    category: 'Adventure',
+    thumbnail: getImg('farcry5-thumb'),
+    images: [getImg('farcry5-hero')],
+    videoUrl: 'https://www.youtube.com/embed/Kdaoe4hbMso',
+    shorts: [
+      'https://www.youtube.com/embed/uI_O-Kx7K_k',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0'
+    ],
+  },
+  {
+    id: 're2',
+    title: 'Resident Evil 2',
+    description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh-eating zombies roam the streets for survivors.',
+    category: 'Horror',
+    thumbnail: getImg('re2-thumb'),
+    images: [getImg('re2-hero')],
+    videoUrl: 'https://www.youtube.com/embed/u3wS6CHEtas',
+    shorts: [
+      'https://www.youtube.com/embed/u2v_5h9qYmI',
+      'https://www.youtube.com/embed/N-0_W88T5c0',
+      'https://www.youtube.com/embed/I0T8xZ9X0F4',
+      'https://www.youtube.com/embed/p1_v-F7m6X0',
+      'https://www.youtube.com/embed/rV9y9T-Xn7k'
+    ],
+  },
+  {
+    id: 'stalker2',
+    title: 'STALKER 2',
+    description: 'Heart of Chornobyl. Chornobyl Exclusion Zone has changed dramatically after the second second explosion in 2006. Dangerous mutants, deadly anomalies, and warring factions have made the Zone a very tough place to survive.',
+    category: 'Shooter',
+    thumbnail: getImg('stalker2-thumb'),
+    images: [getImg('stalker2-hero')],
+    videoUrl: 'https://www.youtube.com/embed/q_m_f-p944o',
+    shorts: [
+      'https://www.youtube.com/embed/u_F8X-v8f8Y',
+      'https://www.youtube.com/embed/A6NfIu3a8_4',
+      'https://www.youtube.com/embed/PjE-0L5YIas',
+      'https://www.youtube.com/embed/Z0oD6Xp1k-0',
+      'https://www.youtube.com/embed/uI_O-Kx7K_k'
     ],
   }
 ];
