@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Gamepad2, Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
 export default function HomePage() {
@@ -36,9 +37,17 @@ export default function HomePage() {
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Gamepad2 className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-bold font-headline tracking-tight uppercase">
+          <div className="flex items-center gap-3">
+            <div className="relative w-12 h-8">
+              <Image
+                src="https://preview.redd.it/vu4yon5f36yg1.png?width=140&height=78&auto=webp&s=59b64e26f9f88a37877f2f2aae3c6342a6fc812e"
+                alt="Alkadi Gaming Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span className="text-2xl font-bold font-headline tracking-tight uppercase hidden sm:inline-block">
               ALKADI<span className="text-primary"> GAMING</span>
             </span>
           </div>
