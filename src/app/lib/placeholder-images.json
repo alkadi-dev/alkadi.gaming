@@ -9,27 +9,27 @@
     },
     {
       "id": "witcher-hero",
-      "description": "The Witcher 3 Wild Hunt thematic image",
-      "imageUrl": "https://picsum.photos/seed/witcher3-geralt-hero/1200/800",
-      "imageHint": "geralt witcher"
+      "description": "The Witcher 3 Wild Hunt thematic hero image",
+      "imageUrl": "https://picsum.photos/seed/witcher-wild-hunt/1200/800",
+      "imageHint": "medieval fantasy"
     },
     {
       "id": "witcher-thumb",
-      "description": "The Witcher 3 cover style thumbnail",
-      "imageUrl": "https://picsum.photos/seed/witcher3-white-bg/600/400",
-      "imageHint": "witcher geralt"
+      "description": "The Witcher 3 iconic character thumbnail",
+      "imageUrl": "https://picsum.photos/seed/witcher-portrait/600/400",
+      "imageHint": "fantasy warrior"
     },
     {
       "id": "witcher-gallery-1",
       "description": "The Witcher 3 combat screenshot",
-      "imageUrl": "https://picsum.photos/seed/witcher3-combat-action/1200/800",
-      "imageHint": "sword fight"
+      "imageUrl": "https://picsum.photos/seed/witcher-combat-1/1200/800",
+      "imageHint": "sword battle"
     },
     {
       "id": "witcher-gallery-2",
       "description": "The Witcher 3 exploration screenshot",
-      "imageUrl": "https://picsum.photos/seed/witcher3-world/1200/800",
-      "imageHint": "fantasy world"
+      "imageUrl": "https://picsum.photos/seed/witcher-world-1/1200/800",
+      "imageHint": "ancient castle"
     },
     {
       "id": "race-hero",
