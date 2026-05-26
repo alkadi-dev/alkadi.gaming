@@ -509,7 +509,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: '53',
-    title: 'A Plague Tale: Requiem',
+    title: 'Resident Evil Requiem',
     description: 'Far across the sea, an island calls... Embark on a heartrending journey into a brutal, breathtaking world twisted by supernatural forces. After escaping their devastated homeland, Amicia and Hugo travel far south, to new regions and vibrant cities.',
     category: 'Adventure',
     thumbnail: getImg('plague-thumb'),
