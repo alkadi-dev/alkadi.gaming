@@ -63,9 +63,9 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Shadows",
     description: 'Experience an epic historical action-adventure story set in feudal Japan. Become a lethal shinobi assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
     category: 'Open World',
-    thumbnail: 'https://preview.redd.it/assassins-creed-shadows-official-cover-art-v0-yscvb4s38m0d1.jpeg?width=640&crop=smart&auto=webp&s=7a66f93bda7cb6b92a798d8e648288a0c935a610',
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg?t=1775589420',
     images: [
-      'https://preview.redd.it/assassins-creed-shadows-official-cover-art-v0-yscvb4s38m0d1.jpeg?width=640&crop=smart&auto=webp&s=7a66f93bda7cb6b92a798d8e648288a0c935a610',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg?t=1775589420',
       'https://preview.redd.it/two-new-screenshots-of-ac-shadows-world-v0-whm6mgnqhsee1.png?width=640&crop=smart&auto=webp&s=f0d47b92ba36516422cfee81603b63221662a440',
       'https://wallpapercave.com/wp/wp13980388.jpg'
     ],
