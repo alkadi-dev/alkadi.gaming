@@ -42,18 +42,16 @@ export default function HomePage() {
             </span>
           </div>
           
-          <div className="relative w-full max-w-sm hidden md:flex items-center">
-            <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
-            <Input
-              placeholder="Search games..."
-              className="pl-10 bg-secondary/50 border-none focus-visible:ring-primary"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-
           <div className="flex items-center gap-4">
-            {/* Catalog button removed as requested */}
+            <div className="relative w-full max-w-sm hidden md:flex items-center">
+              <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
+              <Input
+                placeholder="Search games..."
+                className="pl-10 bg-secondary/50 border-none focus-visible:ring-primary"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
         </div>
       </header>
