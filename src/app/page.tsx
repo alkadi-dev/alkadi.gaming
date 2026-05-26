@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <div className="relative w-12 h-8">
               <Image
-                src="https://preview.redd.it/vu4yon5f36yg1.png?width=140&height=78&auto=webp&s=59b64e26f9f88a37877f2f2aae3c6342a6fc812e"
+                src="https://picsum.photos/seed/alkadi-logo/140/80"
                 alt="Alkadi Gaming Logo"
                 fill
                 className="object-contain"
