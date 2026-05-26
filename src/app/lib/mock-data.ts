@@ -27,17 +27,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Red Dead Redemption 2',
     description: 'America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     category: 'Open World',
-    thumbnail: 'https://www.psu.com/wp/wp-content/uploads/2020/09/Red-Dead-Redemption-2-PS4-Wallpaper-16.jpg',
+    thumbnail: 'https://www.psu.com/wp/wp-content/uploads/2020/09/Red-Dead-Redemption-2-PS4-Wallpaper-44.jpg',
     images: [
-      'https://www.psu.com/wp/wp-content/uploads/2020/09/Red-Dead-Redemption-2-PS4-Wallpaper-16.jpg',
+      'https://www.psu.com/wp/wp-content/uploads/2020/09/Red-Dead-Redemption-2-PS4-Wallpaper-44.jpg',
       'https://images6.alphacoders.com/952/thumbbig-952687.webp',
       'https://wallpapers.com/images/hd/red-dead-redemption-2-desktop-dd0fimlsbzh0zihw.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
     shorts: [
-      'https://www.youtube.com/embed/0d-U2QL2Qvc',
-      'https://www.youtube.com/embed/XsaXfkpKPNM',
-      'https://www.youtube.com/embed/ax_HkEnW_ig'
+      'https://www.youtube.com/embed/0d-U2QL2Qvc?si=u_uaO45UmkJ4UHDq',
+      'https://www.youtube.com/embed/XsaXfkpKPNM?si=9qaxQN7xEEVKVfIn',
+      'https://www.youtube.com/embed/ax_HkEnW_ig?si=xXoL5iPzvwJ18AtK'
     ],
   },
   {
@@ -193,7 +193,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'fc5',
     title: 'Far Cry 5',
-    description: 'Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden\'s Gate. Stand up to cult leader Joseph Seed and his siblings, the Heralds, to spark the fires of resistance and liberate the besieged community.',
+    description: 'Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden\'s Gate. Stand up to cult leader Joseph Seed and his siblings, the Heralels, to spark the fires of resistance and liberate the besieged community.',
     category: 'Adventure',
     thumbnail: getImg('farcry5-thumb'),
     images: [getImg('farcry5-hero')],
