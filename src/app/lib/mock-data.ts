@@ -322,7 +322,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
     videoUrl: 'https://www.youtube.com/embed/u3wS6CHEtas',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/PfCEqgu6-PE',
+      'https://www.youtube.com/embed/YtBVJKS0tnc',
+      'https://www.youtube.com/embed/9I66d6Bt86A'
+    ],
   },
   {
     id: 'stalker2',
