@@ -107,9 +107,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/x55lAlFtXmw',
     shorts: [
-      'https://www.youtube.com/embed/rylZ_xlq5MA',
-      'https://www.youtube.com/embed/kJi7hP50VvA',
-      'https://www.youtube.com/embed/fG1VfOGixBg'
+      'https://www.youtube.com/embed/rylZ_xlq5MA?si=DxAmmAgKvNwbSs5Q',
+      'https://www.youtube.com/embed/kJi7hP50VvA?si=C6UH7NYxM7HWfrqG',
+      'https://www.youtube.com/embed/fG1VfOGixBg?si=9FGHe5kor155xYzH'
     ],
   },
   {
@@ -125,9 +125,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA',
     shorts: [
-      'https://www.youtube.com/embed/ikDXF2ngf9I',
-      'https://www.youtube.com/embed/AqJbLJs5dW4',
-      'https://www.youtube.com/embed/QtT_F0TRaj8'
+      'https://www.youtube.com/embed/ikDXF2ngf9I?si=fxNsLXuv7MMmH1Fp',
+      'https://www.youtube.com/embed/AqJbLJs5dW4?si=HvgdZYmYmJVmVFFa',
+      'https://www.youtube.com/embed/QtT_F0TRaj8?si=w164WS64IBBuLki4'
     ],
   },
   {
@@ -143,9 +143,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/3kGHHMc5dqE',
     shorts: [
-      'https://www.youtube.com/embed/ruoguclV31o',
-      'https://www.youtube.com/embed/MSE2U30VUi8',
-      'https://www.youtube.com/embed/IGtWAbFKVbs'
+      'https://www.youtube.com/embed/ruoguclV31o?si=WCUl0dPvDuitjTbj',
+      'https://www.youtube.com/embed/MSE2U30VUi8?si=L_5E5YdoIV3j8yXd',
+      'https://www.youtube.com/embed/IGtWAbFKVbs?si=AqATRV2OdI0dnUtq'
     ],
   },
   {
@@ -161,9 +161,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
     shorts: [
-      'https://www.youtube.com/embed/3pGgPrbdKaU',
-      'https://www.youtube.com/embed/SsZoqBH3aYw',
-      'https://www.youtube.com/embed/mwQpOPkGnCE'
+      'https://www.youtube.com/embed/3pGgPrbdKaU?si=pk6rmiOf9AWXUPds',
+      'https://www.youtube.com/embed/SsZoqBH3aYw?si=9dEKoN0Zx0sZEB0d',
+      'https://www.youtube.com/embed/mwQpOPkGnCE?si=VqS2IQW3yOdNPz8Y'
     ],
   },
   {
@@ -179,9 +179,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/nq1M_Wc4FIc',
     shorts: [
-      'https://www.youtube.com/embed/ayeQ3CTLlMU',
-      'https://www.youtube.com/embed/bhhyNlvVfr8',
-      'https://www.youtube.com/embed/y6vWl-8_0QI'
+      'https://www.youtube.com/embed/ayeQ3CTLlMU?si=MGm4_43xG5IFmYm2',
+      'https://www.youtube.com/embed/bhhyNlvVfr8?si=cra8Nomzn_6dANHO',
+      'https://www.youtube.com/embed/y6vWl-8_0QI?si=NeegL4e8DJ4NKOmr'
     ],
   },
   {
@@ -193,13 +193,13 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
       'https://wallpapercave.com/wp/wp11691015.jpg',
-      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/11/God-Of-War-Ragnarok-Jotenheim.jpg?q=50&fit=crop&w=825&dpr=1.5'
+      'https://i0.wp.com/waytoomany.games/wp-content/uploads/2022/11/God-of-War-Ragnarok_20221111004210.jpg?resize=860,484&ssl=1'
     ],
     videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0',
     shorts: [
-      'https://www.youtube.com/embed/crQ5pazN840',
-      'https://www.youtube.com/embed/D7Enav00Lp8',
-      'https://www.youtube.com/embed/Nhug66isXqU'
+      'https://www.youtube.com/embed/crQ5pazN840?si=1A7CkPYi10vgc541',
+      'https://www.youtube.com/embed/D7Enav00Lp8?si=3Hwvsl4HKV1YWcOX',
+      'https://www.youtube.com/embed/Nhug66isXqU?si=u5J8EE1GrzPJv3N1'
     ],
   },
   {
