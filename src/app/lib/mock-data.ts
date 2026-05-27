@@ -261,8 +261,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Detroit: Become Human',
     description: 'Detroit, 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings.',
     category: 'Adventure',
-    thumbnail: getImg('detroit-thumb'),
-    images: [getImg('detroit-hero'), getImg('detroit-thumb')],
+    thumbnail: 'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
+    images: [
+      'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
+      'https://i.pinimg.com/originals/c7/12/ab/c712ab2487a5b047b568afe3bdbe1874.jpg',
+      'https://i.pinimg.com/originals/95/67/48/95674854a4a3dfe6a8c205aa4c6ef764.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/8a-EObAhYrg',
     shorts: [...NEW_SHORTS],
   },

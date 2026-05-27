@@ -172,6 +172,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'mygamingtutorials.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
