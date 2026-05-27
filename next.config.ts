@@ -178,6 +178,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.thumbculture.co.uk',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
