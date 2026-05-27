@@ -387,8 +387,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Little Nightmares 3',
     description: 'Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere.',
     category: 'Horror',
-    thumbnail: getImg('nightmares3-thumb'),
-    images: [getImg('nightmares3-thumb')],
+    thumbnail: 'https://i.redd.it/8wnn4vuu4rjb1.jpg',
+    images: [
+      'https://i.redd.it/8wnn4vuu4rjb1.jpg',
+      'https://wallpapercave.com/wp/wp15851273.jpg',
+      'https://wallpapercave.com/wp/wp15851314.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/z8j7Gof-v0I',
     shorts: [...NEW_SHORTS],
   },
