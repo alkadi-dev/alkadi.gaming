@@ -160,7 +160,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/forza-horizon-5-4k-dac6pfcwb8wy8spw.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/3pGgPrbdKaU?si=pk6rmiOf9AWXUPds',
+      'https://www.youtube.com/embed/SsZoqBH3aYw?si=9dEKoN0Zx0sZEB0d',
+      'https://www.youtube.com/embed/mwQpOPkGnCE?si=VqS2IQW3yOdNPz8Y'
+    ],
   },
   {
     id: '6',
