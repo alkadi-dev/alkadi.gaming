@@ -88,7 +88,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/assassin-s-creed-unity-1920-x-1080-wallpaper-nmwpxl1khg7mzdzg.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/r_6otR28kMc?si=6ljyZuNu5wx-uhJM',
+      'https://www.youtube.com/embed/nQS1zvQLo_8?si=m-mPSsFskWsDXENe',
+      'https://www.youtube.com/embed/vrJAL-3J6xU?si=EPq_ybkRUwHGenkU'
+    ],
   },
   {
     id: 'ac-mirage',
