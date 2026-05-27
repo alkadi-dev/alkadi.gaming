@@ -297,8 +297,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Far Cry 5',
     description: 'Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden\'s Gate. Stand up to cult leader Joseph Seed and his siblings, the Heralels, to spark the fires of resistance and liberate the besieged community.',
     category: 'Adventure',
-    thumbnail: getImg('farcry5-thumb'),
-    images: [getImg('farcry5-hero'), getImg('farcry5-thumb')],
+    thumbnail: 'https://wallpapercave.com/wp/wp3279287.png',
+    images: [
+      'https://wallpapercave.com/wp/wp3279287.png',
+      'https://i.pinimg.com/originals/e2/f3/be/e2f3beba5b3848e2f831840c2e9a5db1.jpg',
+      'https://wallpapercave.com/wp/wp3279291.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/Kdaoe4hbMso',
     shorts: [...NEW_SHORTS],
   },
