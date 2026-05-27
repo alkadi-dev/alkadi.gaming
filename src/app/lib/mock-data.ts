@@ -340,7 +340,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://preview.redd.it/duabwooed0d51.jpg?width=640&crop=smart&auto=webp&s=13cb3ece5f7a2aa5d75c6258c5d7a056c1f9d7d4'
     ],
     videoUrl: 'https://www.youtube.com/embed/xf5leG0NNag',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/Jt_iqVwZgX4',
+      'https://www.youtube.com/embed/RBiGvd7IDK8',
+      'https://www.youtube.com/embed/KL4RQx39CSk'
+    ],
   },
   {
     id: 're3',
