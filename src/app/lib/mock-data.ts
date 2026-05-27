@@ -339,7 +339,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp8285372.jpg',
       'https://preview.redd.it/duabwooed0d51.jpg?width=640&crop=smart&auto=webp&s=13cb3ece5f7a2aa5d75c6258c5d7a056c1f9d7d4'
     ],
-    videoUrl: 'https://www.youtube.com/embed/q_m_f-p944o',
+    videoUrl: 'https://www.youtube.com/embed/xf5leG0NNag',
     shorts: [...NEW_SHORTS],
   },
   {
