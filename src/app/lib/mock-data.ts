@@ -105,7 +105,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.wallpapergap.com/cdn/24/343/assassin\'s-creed-mirage-full-hd-wallpaper-2000x1000.jpg',
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2023/08/28/144dbd58/359_reveal_webhero.jpg.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/k-BGWngy97I',
+    videoUrl: 'https://www.youtube.com/embed/x55lAlFtXmw',
     shorts: [
       'https://www.youtube.com/embed/rylZ_xlq5MA',
       'https://www.youtube.com/embed/kJi7hP50VvA',
