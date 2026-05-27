@@ -358,7 +358,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.wallpapersafari.com/81/40/uenEqr.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/BBky2uCGqtM',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/Etx1v5iPrwE?si=_SNihscMS4ivCXD5',
+      'https://www.youtube.com/embed/mNd9HPf1x5o?si=SXMU-QVzWGaVrC1J',
+      'https://www.youtube.com/embed/GfCz9GVOJUE?si=d5Vdd5CfKS63ZX1B'
+    ],
   },
   {
     id: 'jedi-survivor',
