@@ -89,9 +89,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
     shorts: [
-      'https://www.youtube.com/embed/r_6otR28kMc?si=6ljyZuNu5wx-uhJM',
-      'https://www.youtube.com/embed/nQS1zvQLo_8?si=m-mPSsFskWsDXENe',
-      'https://www.youtube.com/embed/vrJAL-3J6xU?si=EPq_ybkRUwHGenkU'
+      'https://www.youtube.com/embed/r_6otR28kMc',
+      'https://www.youtube.com/embed/nQS1zvQLo_8',
+      'https://www.youtube.com/embed/vrJAL-3J6xU'
     ],
   },
   {
@@ -106,7 +106,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2023/08/28/144dbd58/359_reveal_webhero.jpg.webp'
     ],
     videoUrl: 'https://www.youtube.com/embed/k-BGWngy97I',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/rylZ_xlq5MA',
+      'https://www.youtube.com/embed/kJi7hP50VvA',
+      'https://www.youtube.com/embed/fG1VfOGixBg'
+    ],
   },
   {
     id: 'ac-odyssey',
