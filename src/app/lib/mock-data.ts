@@ -47,7 +47,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
     images: [
-      'https://wallpapercat. Cat/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
+      'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-in-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg'
     ],
@@ -287,20 +287,10 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/dxa34RatmSc',
     shorts: [
-      'https://www.youtube.com/embed/Eu1g5W9z0ps',
-      'https://www.youtube.com/embed/p6FZ63ap0jo',
-      'https://www.youtube.com/embed/ooh5oJ5Exds'
+      'https://www.youtube.com/embed/Eu1g5W9z0ps?si=sUzkIvZUk0oRjPaL',
+      'https://www.youtube.com/embed/p6FZ63ap0jo?si=NlSFu6RN6SA5cCGr',
+      'https://www.youtube.com/embed/ooh5oJ5Exds?si=TlviG3x15lhvFUsf'
     ],
-  },
-  {
-    id: 'mk1',
-    title: 'Mortal Kombat 1',
-    description: 'It\'s In Our Blood. Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!',
-    category: 'Action',
-    thumbnail: getImg('mk1-thumb'),
-    images: [getImg('mk1-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/MYGf9X-iM38',
-    shorts: [...NEW_SHORTS],
   },
   {
     id: 'fc5',
