@@ -100,6 +100,18 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.wallpapergap.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'gameinformer.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

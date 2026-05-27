@@ -99,8 +99,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Mirage",
     description: 'In Assassin’s Creed Mirage, you are Basim, a cunning street thief with nightmarish visions, seeking answers and justice. Join an ancient organization and come to understand a new creed – one that will change Basim’s fate in ways he never could have imagined.',
     category: 'Action',
-    thumbnail: getImg('ac-mirage-thumb'),
-    images: [getImg('ac-mirage-hero'), getImg('ac-mirage-thumb')],
+    thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
+    images: [
+      'https://wallpapercave.com/wp/wp11468139.jpg',
+      'https://www.wallpapergap.com/cdn/24/343/assassin\'s-creed-mirage-full-hd-wallpaper-2000x1000.jpg',
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2023/08/28/144dbd58/359_reveal_webhero.jpg.webp'
+    ],
     videoUrl: 'https://www.youtube.com/embed/k-BGWngy97I',
     shorts: [...NEW_SHORTS],
   },
