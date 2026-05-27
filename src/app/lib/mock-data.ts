@@ -333,8 +333,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'STALKER 2',
     description: 'Heart of Chornobyl. Chornobyl Exclusion Zone has changed dramatically after the second second explosion in 2006. Dangerous mutants, deadly anomalies, and warring factions have made the Zone a very tough place to survive.',
     category: 'Shooter',
-    thumbnail: getImg('stalker2-thumb'),
-    images: [getImg('stalker2-hero'), getImg('stalker2-thumb')],
+    thumbnail: 'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
+    images: [
+      'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
+      'https://wallpapercave.com/wp/wp8285372.jpg',
+      'https://preview.redd.it/duabwooed0d51.jpg?width=640&crop=smart&auto=webp&s=13cb3ece5f7a2aa5d75c6258c5d7a056c1f9d7d4'
+    ],
     videoUrl: 'https://www.youtube.com/embed/q_m_f-p944o',
     shorts: [...NEW_SHORTS],
   },
