@@ -375,7 +375,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1b9287112543738d/650ec7b5a86f96062da23371/STAR_WARS_Jedi_Survivor%E2%84%A2_20230419143317.jpg/?width=1280&auto=webp&quality=80&disable=upscale',
       'https://wallpapercave.com/wp/wp12245898.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/BM9v_K7lS1Y',
+    videoUrl: 'https://www.youtube.com/embed/VRaobDJjiec',
     shorts: [...NEW_SHORTS],
   },
   {
