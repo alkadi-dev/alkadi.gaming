@@ -89,9 +89,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
     shorts: [
-      'https://www.youtube.com/embed/r_6otR28kMc',
-      'https://www.youtube.com/embed/nQS1zvQLo_8',
-      'https://www.youtube.com/embed/vrJAL-3J6xU'
+      'https://www.youtube.com/embed/r_6otR28kMc?si=6ljyZuNu5wx-uhJM',
+      'https://www.youtube.com/embed/nQS1zvQLo_8?si=m-mPSsFskWsDXENe',
+      'https://www.youtube.com/embed/vrJAL-3J6xU?si=EPq_ybkRUwHGenkU'
     ],
   },
   {
@@ -102,14 +102,14 @@ export const MOCK_GAMES: GameEntry[] = [
     thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
     images: [
       'https://wallpapercave.com/wp/wp11468139.jpg',
-      'https://www.wallpapergap.com/cdn/24/343/assassin\'s-creed-mirage-full-hd-wallpaper-2000x1000.jpg',
+      "https://www.wallpapergap.com/cdn/24/343/assassin's-creed-mirage-full-hd-wallpaper-2000x1000.jpg",
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2023/08/28/144dbd58/359_reveal_webhero.jpg.webp'
     ],
     videoUrl: 'https://www.youtube.com/embed/x55lAlFtXmw',
     shorts: [
-      'https://www.youtube.com/embed/rylZ_xlq5MA',
-      'https://www.youtube.com/embed/kJi7hP50VvA',
-      'https://www.youtube.com/embed/fG1VfOGixBg'
+      'https://www.youtube.com/embed/rylZ_xlq5MA?si=DxAmmAgKvNwbSs5Q',
+      'https://www.youtube.com/embed/kJi7hP50VvA?si=C6UH7NYxM7HWfrqG',
+      'https://www.youtube.com/embed/fG1VfOGixBg?si=9FGHe5kor155xYzH'
     ],
   },
   {
@@ -121,7 +121,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpaperaccess.com/full/1110212.jpg',
       'https://wallpapers.com/images/hd/4k-assassin-s-creed-odyssey-background-3840-x-2160-vzqb12fb66jcw0tw.jpg',
-      'https://www.psu.com/wp/wp-content/uploads/2020/09/Assassins-Creed-Odyssey-PS4-Wallpapers-21.jpg'
+      'https://wallpapercave.com/wp/wp4452951.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA',
     shorts: [...NEW_SHORTS],
