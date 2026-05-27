@@ -243,8 +243,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Elden Ring',
     description: 'Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
     category: 'RPG',
-    thumbnail: getImg('eldenring-thumb'),
-    images: [getImg('eldenring-thumb')],
+    thumbnail: 'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
+    images: [
+      'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
+      'https://wallpapers.com/images/hd/elden-ring-game-scenery-u6f65ngdqukwsshd.jpg',
+      'https://wallpapers.com/images/hd/elden-ring-background-c7pyny29pa8k3ptb.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/E3Huy2cdih0',
     shorts: [...NEW_SHORTS],
   },
