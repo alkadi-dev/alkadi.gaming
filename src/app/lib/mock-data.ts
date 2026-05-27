@@ -193,7 +193,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
       'https://wallpapercave.com/wp/wp11691015.jpg',
-      'https://www.pcgamesn.com/wp-content/sites/pcgamesn/2024/10/god-of-war-ragnarok-pc-impressions-exploration.jpg'
+      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/11/God-Of-War-Ragnarok-Jotenheim.jpg?q=50&fit=crop&w=825&dpr=1.5'
     ],
     videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0',
     shorts: [
