@@ -250,7 +250,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/elden-ring-background-c7pyny29pa8k3ptb.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/E3Huy2cdih0',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/K-T-kPvlZt0?si=-u2Q7-wO0pgW4dkB',
+      'https://www.youtube.com/embed/c9akEr9y7XA?si=nBmoOJFs5rZ852_Y',
+      'https://www.youtube.com/embed/fLmu19go2cs?si=66R3Y2gRei6Ny1h7'
+    ],
   },
   {
     id: '36',
