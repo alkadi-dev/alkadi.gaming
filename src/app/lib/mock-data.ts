@@ -279,8 +279,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Batman: Arkham Knight',
     description: 'Batman: Arkham Knight brings the award-winning Arkham trilogy from Rocksteady Studios to its epic conclusion.',
     category: 'Action',
-    thumbnail: getImg('batman-thumb'),
-    images: [getImg('batman-hero'), getImg('batman-thumb')],
+    thumbnail: 'https://wallpapercave.com/wp/wp1835411.jpg',
+    images: [
+      'https://wallpapercave.com/wp/wp1835411.jpg',
+      'https://i.pinimg.com/originals/86/e6/9a/86e69a057b732ddd9c21ce76959a0beb.jpg',
+      'https://wallpapercave.com/wp/wp1835407.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/dxa34RatmSc',
     shorts: [...NEW_SHORTS],
   },
