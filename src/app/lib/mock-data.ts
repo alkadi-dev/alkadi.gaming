@@ -341,9 +341,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/xf5leG0NNag',
     shorts: [
-      'https://www.youtube.com/embed/Jt_iqVwZgX4',
-      'https://www.youtube.com/embed/RBiGvd7IDK8',
-      'https://www.youtube.com/embed/KL4RQx39CSk'
+      'https://www.youtube.com/embed/Jt_iqVwZgX4?si=ggtfSjDh4Wy-oEpY',
+      'https://www.youtube.com/embed/RBiGvd7IDK8?si=63L60mm2xvUyyJ2o',
+      'https://www.youtube.com/embed/KL4RQx39CSk?si=ksylJg4AEav7G3Tk'
     ],
   },
   {
@@ -412,7 +412,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images8.alphacoders.com/137/thumb-1920-1376384.png'
     ],
     videoUrl: 'https://www.youtube.com/embed/dlQ3FeNu5Yw',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/RyXtIn0RV-M?si=TKYDcwcGO8_660ow',
+      'https://www.youtube.com/embed/Z_f9JlKHAPE?si=TSbOvNxyHvPBwKDN',
+      'https://www.youtube.com/embed/rVLEWq8bgQA?si=023phmDjtj0tJMZD'
+    ],
   },
   {
     id: 'silenthill2',
