@@ -207,8 +207,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     category: 'Open World',
-    thumbnail: getImg('cp2077-thumb'),
-    images: [getImg('cp2077-hero'), getImg('cp2077-thumb')],
+    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
+    images: [
+      'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
+      'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vYOrfFQh.jpg',
+      'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
+    ],
     videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8',
     shorts: [...NEW_SHORTS],
   },
