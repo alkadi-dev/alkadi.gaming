@@ -189,10 +189,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'God of War Ragnarök',
     description: 'Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world.',
     category: 'Action',
-    thumbnail: getImg('gowr-thumb'),
-    images: [getImg('gowr-hero'), getImg('gowr-thumb')],
+    thumbnail: 'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
+    images: [
+      'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
+      'https://wallpapercave.com/wp/wp11691015.jpg',
+      'https://www.pcgamesn.com/wp-content/sites/pcgamesn/2024/10/god-of-war-ragnarok-pc-impressions-exploration.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/hfJ4Km46A-0',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/0d-U2QL2Qvc?si=bHpYGwiXYsGjmox8',
+      'https://www.youtube.com/embed/XsaXfkpKPNM?si=jaFUTogTmJJA6Quj',
+      'https://www.youtube.com/embed/ax_HkEnW_ig?si=c10FMUWfn3HkiDuC'
+    ],
   },
   {
     id: '12',
