@@ -171,8 +171,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Spider-Man 2',
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York.',
     category: 'Open World',
-    thumbnail: getImg('spiderman2-thumb'),
-    images: [getImg('spiderman2-hero'), getImg('spiderman2-thumb')],
+    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
+    images: [
+      'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
+      'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
+      'https://wallpapercg.com/media/ts_orig/16684.webp'
+    ],
     videoUrl: 'https://www.youtube.com/embed/qIQ3uZvzOig',
     shorts: [...NEW_SHORTS],
   },
