@@ -376,7 +376,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp12245898.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/VRaobDJjiec',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/zd8XsE3rDmw?si=vzmrh69Kr8HQ_Tub',
+      'https://www.youtube.com/embed/IsnRUSBu3yo?si=eZrCqvUmYk4wm_72',
+      'https://www.youtube.com/embed/n0Xmhuj4fWY?si=4MC3Kro9jNqsKN6f'
+    ],
   },
   {
     id: 'nightmares3',
