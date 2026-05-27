@@ -405,8 +405,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Alan Wake 2',
     description: 'A string of ritualistic murders threatens Bright Falls, an idyllic small-town community in the Pacific Northwest. Saga Anderson, an accomplished FBI agent, arrives to investigate.',
     category: 'Horror',
-    thumbnail: getImg('alanwake2-thumb'),
-    images: [getImg('alanwake2-thumb')],
+    thumbnail: 'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
+    images: [
+      'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
+      'https://wallpaperaccess.com/full/10969140.jpg',
+      'https://images8.alphacoders.com/137/thumb-1920-1376384.png'
+    ],
     videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
     shorts: [...NEW_SHORTS],
   },
