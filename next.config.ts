@@ -112,6 +112,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'wallpaperaccess.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

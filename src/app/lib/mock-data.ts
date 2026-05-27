@@ -117,8 +117,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Odyssey",
     description: 'Write your own epic odyssey and become a legendary Spartan hero. Forge your destiny in a world on the brink of tearing itself apart. Influence how history unfolds in an ever-changing world shaped by your choices.',
     category: 'RPG',
-    thumbnail: getImg('ac-odyssey-thumb'),
-    images: [getImg('ac-odyssey-hero'), getImg('ac-odyssey-thumb')],
+    thumbnail: 'https://wallpaperaccess.com/full/1110212.jpg',
+    images: [
+      'https://wallpaperaccess.com/full/1110212.jpg',
+      'https://wallpapers.com/images/hd/4k-assassin-s-creed-odyssey-background-3840-x-2160-vzqb12fb66jcw0tw.jpg',
+      'https://www.psu.com/wp/wp-content/uploads/2020/09/Assassins-Creed-Odyssey-PS4-Wallpapers-21.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA',
     shorts: [...NEW_SHORTS],
   },
