@@ -351,8 +351,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 3',
     description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
     category: 'Horror',
-    thumbnail: getImg('re3-thumb'),
-    images: [getImg('re3-thumb')],
+    thumbnail: 'https://wallpapersafari.com/image/resident-evil-3-nemesis-2020-wallpapers.jpg',
+    images: [
+      'https://wallpapersafari.com/image/resident-evil-3-nemesis-2020-wallpapers.jpg',
+      'https://wallpapercave.com/wp/wp5995960.jpg',
+      'https://cdn.wallpapersafari.com/81/40/uenEqr.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/Wghn3tO7D74',
     shorts: [...NEW_SHORTS],
   },

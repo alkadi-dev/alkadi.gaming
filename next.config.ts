@@ -190,6 +190,18 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'wallpapersafari.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.wallpapersafari.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
