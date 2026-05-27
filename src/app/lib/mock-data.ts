@@ -177,7 +177,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
       'https://wallpapercg.com/media/ts_orig/16684.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/qIQ3uZvzOig',
+    videoUrl: 'https://www.youtube.com/embed/nq1M_Wc4FIc',
     shorts: [...NEW_SHORTS],
   },
   {
