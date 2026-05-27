@@ -373,7 +373,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapercave.com/wp/wp12005399.jpg',
       'https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1b9287112543738d/650ec7b5a86f96062da23371/STAR_WARS_Jedi_Survivor%E2%84%A2_20230419143317.jpg/?width=1280&auto=webp&quality=80&disable=upscale',
-      'https://www.psu.com/wp/wp-content/uploads/2023/02/StarWarsJedi-Survivor-PS5-Wallpapers-02.jpg'
+      'https://wallpapercave.com/wp/wp12245898.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/BM9v_K7lS1Y',
     shorts: [...NEW_SHORTS],
