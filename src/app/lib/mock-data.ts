@@ -305,9 +305,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/Kdaoe4hbMso',
     shorts: [
-      'https://www.youtube.com/embed/STg-lGNo5sk',
-      'https://www.youtube.com/embed/3A5ODFmve14',
-      'https://www.youtube.com/embed/f-0vWXmHG9c'
+      'https://www.youtube.com/embed/STg-lGNo5sk?si=i4D-_yUpb35V0Tca',
+      'https://www.youtube.com/embed/3A5ODFmve14?si=AcWRz0tXvksYJqI7',
+      'https://www.youtube.com/embed/f-0vWXmHG9c?si=hD4PRaH59HMsY1sv'
     ],
   },
   {
@@ -321,11 +321,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/u3wS6CHEtas',
+    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VSw',
     shorts: [
-      'https://www.youtube.com/embed/PfCEqgu6-PE',
-      'https://www.youtube.com/embed/YtBVJKS0tnc',
-      'https://www.youtube.com/embed/9I66d6Bt86A'
+      'https://www.youtube.com/embed/PfCEqgu6-PE?si=8H6uaNz9JcQjx-ut',
+      'https://www.youtube.com/embed/YtBVJKS0tnc?si=wKBTBFTA-OQWPV0i',
+      'https://www.youtube.com/embed/9I66d6Bt86A?si=f_6bAKOYs2NupeVj'
     ],
   },
   {
