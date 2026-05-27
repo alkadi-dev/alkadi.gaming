@@ -225,8 +225,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 4',
     description: 'Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S. Kennedy has been dispatched to rescue the president\'s kidnapped daughter.',
     category: 'Horror',
-    thumbnail: getImg('re4-thumb'),
-    images: [getImg('re4-hero'), getImg('re4-thumb')],
+    thumbnail: 'https://wallpaperaccess.com/full/8929582.jpg',
+    images: [
+      'https://wallpaperaccess.com/full/8929582.jpg',
+      'https://wallpapercave.com/wp/wp11812031.jpg',
+      'https://wallpaperaccess.com/full/9423775.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/j5Xv2lM96vM',
     shorts: [...NEW_SHORTS],
   },
