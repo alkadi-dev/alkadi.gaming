@@ -231,7 +231,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp11812031.jpg',
       'https://wallpaperaccess.com/full/9423775.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/j5Xv2lM96vM',
+    videoUrl: 'https://www.youtube.com/embed/E69tKrfEQag',
     shorts: [...NEW_SHORTS],
   },
   {
