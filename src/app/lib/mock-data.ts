@@ -142,7 +142,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/2377333.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/3kGHHMc5dqE',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/ruoguclV31o?si=WCUl0dPvDuitjTbj',
+      'https://www.youtube.com/embed/MSE2U30VUi8?si=L_5E5YdoIV3j8yXd',
+      'https://www.youtube.com/embed/IGtWAbFKVbs?si=AqATRV2OdI0dnUtq'
+    ],
   },
   {
     id: '2',
