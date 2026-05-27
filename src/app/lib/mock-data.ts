@@ -81,8 +81,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Unity",
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
     category: 'Open World',
-    thumbnail: getImg('ac-unity-thumb'),
-    images: [getImg('ac-unity-hero'), getImg('ac-unity-thumb')],
+    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    images: [
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      'https://pixelkin.org/wp-content/uploads/2014/11/assassinscreedunityheader.jpg',
+      'https://wallpapers.com/images/hd/assassin-s-creed-unity-1920-x-1080-wallpaper-nmwpxl1khg7mzdzg.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
     shorts: [...NEW_SHORTS],
   },
