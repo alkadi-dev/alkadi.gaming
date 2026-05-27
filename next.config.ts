@@ -226,6 +226,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.grimdarkmagazine.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

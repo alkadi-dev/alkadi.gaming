@@ -423,8 +423,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Silent Hill 2',
     description: 'Having received a letter from his deceased wife, James proceeds to where they shared so many memories, in the hope of seeing her one more time: Silent Hill.',
     category: 'Horror',
-    thumbnail: getImg('silenthill2-thumb'),
-    images: [getImg('silenthill2-thumb')],
+    thumbnail: 'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
+    images: [
+      'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
+      'https://wallpapercave.com/wp/wp13015730.jpg',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/silent-hill-2-remake-screenshots-3.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
+    ],
     videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
     shorts: [...NEW_SHORTS],
   },
