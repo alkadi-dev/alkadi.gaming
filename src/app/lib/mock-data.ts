@@ -411,7 +411,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/10969140.jpg',
       'https://images8.alphacoders.com/137/thumb-1920-1376384.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
+    videoUrl: 'https://www.youtube.com/embed/dlQ3FeNu5Yw',
     shorts: [...NEW_SHORTS],
   },
   {
