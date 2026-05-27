@@ -153,8 +153,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     category: 'Race',
-    thumbnail: getImg('forza5-thumb'),
-    images: [getImg('forza5-hero'), getImg('forza5-thumb')],
+    thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
+    images: [
+      'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
+      'https://wallpapercave.com/wp/wp12405375.jpg',
+      'https://wallpapers.com/images/hd/forza-horizon-5-4k-dac6pfcwb8wy8spw.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/FYH9n37B7Yw',
     shorts: [...NEW_SHORTS],
   },

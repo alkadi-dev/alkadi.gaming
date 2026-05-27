@@ -118,6 +118,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'traxion.gg',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
