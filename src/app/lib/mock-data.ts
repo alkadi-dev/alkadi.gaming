@@ -311,7 +311,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 're2',
+    id: '2',
     title: 'Resident Evil 2',
     description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh-eating zombies roam the streets for survivors.',
     category: 'Horror',
@@ -393,7 +393,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp15851273.jpg',
       'https://wallpapercave.com/wp/wp15851314.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/z8j7Gof-v0I',
+    videoUrl: 'https://www.youtube.com/embed/XFHOsobwFrA',
     shorts: [...NEW_SHORTS],
   },
   {
