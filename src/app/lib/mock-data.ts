@@ -214,7 +214,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
     ],
     videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/DWUp56Eqw-U?si=D0vuwhtV6rIWCNNp',
+      'https://www.youtube.com/embed/AQFfvd9k5Kw?si=reTyJg11daABpJlV',
+      'https://www.youtube.com/embed/jqquRqfAWHA?si=dB9kfW2G9T_tK0bZ'
+    ],
   },
   {
     id: '50',
