@@ -509,8 +509,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Grand Theft Auto V',
     description: 'When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld.',
     category: 'Open World',
-    thumbnail: getImg('gtav-thumb'),
-    images: [getImg('gtav-hero'), getImg('gtav-thumb')],
+    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    images: [
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      'https://wallpapercat.com/w/full/1/7/e/130549-1920x1080-desktop-1080p-grand-theft-auto-5-background-photo.jpg',
+      'https://www.igrandtheftauto.com/content/images/small/4346-gta5-dude-wheres-the-car.jpg?etag=54ecbae6'
+    ],
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
     shorts: [...NEW_SHORTS],
   },

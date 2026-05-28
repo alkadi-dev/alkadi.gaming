@@ -244,6 +244,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.igrandtheftauto.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
