@@ -23,7 +23,6 @@ export function CheckoutSheet() {
 
   const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
 
-  // Helper to calculate total size
   const calculateTotalSize = () => {
     let totalGb = 0;
     selectedGames.forEach(game => {
@@ -35,15 +34,20 @@ export function CheckoutSheet() {
     return totalGb.toFixed(1);
   };
 
-  const handleCopyList = () => {
-    if (selectedGames.length === 0) return;
-
+  const generateListContent = () => {
     const listText = selectedGames
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
     const totalSize = calculateTotalSize();
-    const finalContent = `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSize} GB`;
+    return `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSize} GB`;
+  };
+
+  const handleCopyList = () => {
+    if (selectedGames.length === 0) return;
+
+    const finalContent = generateListContent();
+    const totalSize = calculateTotalSize();
 
     navigator.clipboard.writeText(finalContent).then(() => {
       setCopied(true);
@@ -56,7 +60,21 @@ export function CheckoutSheet() {
   };
 
   const handleWhatsAppRedirect = () => {
-    window.open('https://wa.link/vhw7ol', '_blank');
+    if (selectedGames.length === 0) return;
+
+    const finalContent = generateListContent();
+    
+    // Auto-copy to clipboard first
+    navigator.clipboard.writeText(finalContent);
+    
+    // Then redirect to WhatsApp with pre-filled text
+    const encodedText = encodeURIComponent(finalContent);
+    window.open(`https://wa.link/vhw7ol?text=${encodedText}`, '_blank');
+    
+    toast({
+      title: "Opening WhatsApp",
+      description: "List copied to clipboard and pre-filled.",
+    });
   };
 
   return (
