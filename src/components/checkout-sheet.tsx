@@ -64,17 +64,21 @@ export function CheckoutSheet() {
 
     const finalContent = generateListContent();
     
-    // Auto-copy to clipboard as a fallback
-    navigator.clipboard.writeText(finalContent);
-    
-    // Redirect to WhatsApp with pre-filled text
-    const encodedText = encodeURIComponent(finalContent);
-    const whatsappUrl = `https://wa.link/vhw7ol?text=${encodedText}`;
-    window.open(whatsappUrl, '_blank');
-    
-    toast({
-      title: "Opening WhatsApp",
-      description: "Redirecting with your pre-filled list.",
+    // Copy to clipboard first to ensure it's available for pasting
+    navigator.clipboard.writeText(finalContent).then(() => {
+      toast({
+        title: "List Copied & Redirecting",
+        description: "The list is on your clipboard. You can paste it in WhatsApp!",
+      });
+
+      // Redirect to WhatsApp with pre-filled text attempt
+      const encodedText = encodeURIComponent(finalContent);
+      const whatsappUrl = `https://wa.link/vhw7ol?text=${encodedText}`;
+      window.open(whatsappUrl, '_blank');
+    }).catch(() => {
+      // Fallback if clipboard copy fails
+      const whatsappUrl = `https://wa.link/vhw7ol`;
+      window.open(whatsappUrl, '_blank');
     });
   };
 
