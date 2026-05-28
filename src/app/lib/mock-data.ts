@@ -321,7 +321,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VSw',
+    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VAw',
     shorts: [
       'https://www.youtube.com/embed/PfCEqgu6-PE?si=8H6uaNz9JcQjx-ut',
       'https://www.youtube.com/embed/YtBVJKS0tnc?si=wKBTBFTA-OQWPV0i',
@@ -534,6 +534,10 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/papel-de-parede-horizon-zero-dawn-kxu12nitxfat9f9j.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/yKLwbkbWQpc',
+      'https://www.youtube.com/embed/Qcf8NzbxX2k',
+      'https://www.youtube.com/embed/DgAFQ1leafY'
+    ],
   }
 ];
