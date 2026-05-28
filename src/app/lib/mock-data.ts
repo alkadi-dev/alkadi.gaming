@@ -444,7 +444,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp11003113.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/RcWk08PBe7k',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/nVhXp6FX7Y4?si=N6unwSA8sDuqt-G7',
+      'https://www.youtube.com/embed/vpUEm4-sGHw?si=sxi4X-VrtseSchw9',
+      'https://www.youtube.com/embed/rIy42KSFQ4c?si=h154yf9aFShEnbGC'
+    ],
   },
   {
     id: 'u4',
