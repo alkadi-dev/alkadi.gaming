@@ -10,16 +10,14 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, Copy, Check, MessageCircle } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 export function CheckoutSheet() {
   const { selectedIds, removeFromSelection, clearSelection } = useSelection();
   const { toast } = useToast();
-  const [copied, setCopied] = useState(false);
 
   const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
 
@@ -41,22 +39,6 @@ export function CheckoutSheet() {
     
     const totalSize = calculateTotalSize();
     return `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSize} GB`;
-  };
-
-  const handleCopyList = () => {
-    if (selectedGames.length === 0) return;
-
-    const finalContent = generateListContent();
-    const totalSize = calculateTotalSize();
-
-    navigator.clipboard.writeText(finalContent).then(() => {
-      setCopied(true);
-      toast({
-        title: "List Copied!",
-        description: `Selected ${selectedGames.length} games (${totalSize} GB).`,
-      });
-      setTimeout(() => setCopied(false), 2000);
-    });
   };
 
   const handleWhatsAppRedirect = () => {
@@ -155,18 +137,6 @@ export function CheckoutSheet() {
               </div>
               
               <div className="grid grid-cols-1 gap-2">
-                <Button 
-                  onClick={handleCopyList} 
-                  variant="secondary"
-                  className="w-full transition-all rounded-xl py-5 font-bold text-xs sm:text-sm"
-                >
-                  {copied ? (
-                    <><Check className="mr-2 h-4 w-4" /> Copied!</>
-                  ) : (
-                    <><Copy className="mr-2 h-4 w-4" /> Copy List</>
-                  )}
-                </Button>
-
                 <Button 
                   onClick={handleWhatsAppRedirect} 
                   className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-5 font-bold text-xs sm:text-sm"
