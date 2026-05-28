@@ -527,8 +527,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Horizon Zero Dawn',
     description: 'In an era where Machines roam the land and mankind is no longer the dominant species, a young hunter named Aloy embarks on a journey to discover her destiny.',
     category: 'Open World',
-    thumbnail: getImg('hzd-thumb'),
-    images: [getImg('hzd-hero'), getImg('hzd-thumb')],
+    thumbnail: 'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
+    images: [
+      'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
+      'https://i.pinimg.com/originals/2c/b9/97/2cb997a4e03c53f49fa6472ceadbbd51.jpg',
+      'https://wallpapers.com/images/hd/papel-de-parede-horizon-zero-dawn-kxu12nitxfat9f9j.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/u4-GiBaWstc',
     shorts: [...NEW_SHORTS],
   }
