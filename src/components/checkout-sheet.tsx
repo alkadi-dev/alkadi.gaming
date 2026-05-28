@@ -64,16 +64,17 @@ export function CheckoutSheet() {
 
     const finalContent = generateListContent();
     
-    // Auto-copy to clipboard first
+    // Auto-copy to clipboard as a fallback
     navigator.clipboard.writeText(finalContent);
     
-    // Then redirect to WhatsApp with pre-filled text
+    // Redirect to WhatsApp with pre-filled text
     const encodedText = encodeURIComponent(finalContent);
-    window.open(`https://wa.link/vhw7ol?text=${encodedText}`, '_blank');
+    const whatsappUrl = `https://wa.link/vhw7ol?text=${encodedText}`;
+    window.open(whatsappUrl, '_blank');
     
     toast({
       title: "Opening WhatsApp",
-      description: "List copied to clipboard and pre-filled.",
+      description: "Redirecting with your pre-filled list.",
     });
   };
 
@@ -108,11 +109,11 @@ export function CheckoutSheet() {
           </div>
         ) : (
           <div className="flex flex-col h-full overflow-hidden">
-            <ScrollArea className="flex-1 px-6">
-              <div className="space-y-4 py-4">
+            <ScrollArea className="flex-1 px-4 sm:px-6">
+              <div className="space-y-3 py-4">
                 {selectedGames.map((game) => (
-                  <div key={game.id} className="flex items-center gap-4 p-3 rounded-2xl bg-secondary/30 border border-white/5 group">
-                    <div className="relative h-14 w-20 rounded-lg overflow-hidden flex-shrink-0">
+                  <div key={game.id} className="flex items-center gap-3 p-2 rounded-xl bg-secondary/30 border border-white/5 group">
+                    <div className="relative h-12 w-16 rounded-lg overflow-hidden flex-shrink-0">
                       <Image
                         src={game.thumbnail}
                         alt={game.title}
@@ -121,31 +122,31 @@ export function CheckoutSheet() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-bold text-sm truncate">{game.title}</h4>
-                      <p className="text-[10px] text-muted-foreground">{game.category} • {game.size}</p>
+                      <h4 className="font-bold text-xs sm:text-sm truncate">{game.title}</h4>
+                      <p className="text-[9px] sm:text-[10px] text-muted-foreground">{game.category} • {game.size}</p>
                     </div>
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full h-10 w-10"
+                      className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full h-8 w-8"
                       onClick={() => removeFromSelection(game.id)}
                     >
-                      <Trash2 className="h-5 w-5" />
+                      <Trash2 className="h-4 w-4" />
                     </Button>
                   </div>
                 ))}
               </div>
             </ScrollArea>
 
-            <div className="p-6 bg-background/50 backdrop-blur-md border-t border-white/5 space-y-3">
-              <div className="bg-secondary/20 p-4 rounded-2xl border border-white/5 mb-4">
+            <div className="p-4 sm:p-6 bg-background/50 backdrop-blur-md border-t border-white/5 space-y-3">
+              <div className="bg-secondary/20 p-3 sm:p-4 rounded-xl border border-white/5 mb-2">
                 <div className="flex justify-between items-center mb-1">
-                  <span className="text-muted-foreground text-xs uppercase tracking-wider font-semibold">Games</span>
-                  <span className="font-bold">{selectedGames.length}</span>
+                  <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">Games</span>
+                  <span className="font-bold text-sm">{selectedGames.length}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground text-xs uppercase tracking-wider font-semibold">Storage</span>
-                  <span className="font-bold text-primary">{calculateTotalSize()} GB</span>
+                  <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">Total Storage</span>
+                  <span className="font-bold text-sm text-primary">{calculateTotalSize()} GB</span>
                 </div>
               </div>
               
@@ -153,7 +154,7 @@ export function CheckoutSheet() {
                 <Button 
                   onClick={handleCopyList} 
                   variant="secondary"
-                  className="w-full transition-all rounded-xl py-6 font-bold text-sm"
+                  className="w-full transition-all rounded-xl py-5 font-bold text-xs sm:text-sm"
                 >
                   {copied ? (
                     <><Check className="mr-2 h-4 w-4" /> Copied!</>
@@ -164,9 +165,9 @@ export function CheckoutSheet() {
 
                 <Button 
                   onClick={handleWhatsAppRedirect} 
-                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.02] transition-all rounded-xl py-6 font-bold text-sm"
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-5 font-bold text-xs sm:text-sm"
                 >
-                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
+                  <MessageCircle className="mr-2 h-4 w-4" /> Open in WhatsApp
                 </Button>
               </div>
               
@@ -174,7 +175,7 @@ export function CheckoutSheet() {
                 variant="ghost" 
                 size="sm"
                 onClick={clearSelection}
-                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl mt-1 text-xs"
+                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl text-[10px]"
               >
                 Clear Entire List
               </Button>
