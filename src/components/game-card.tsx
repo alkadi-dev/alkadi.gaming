@@ -9,11 +9,6 @@ import { HardDrive, PlusCircle, CheckCircle2 } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 
 interface GameCardProps {
   game: GameEntry;
@@ -72,29 +67,22 @@ export function GameCard({ game }: GameCardProps) {
 
         {/* Quick Add Button - Bottom Right inside Image */}
         <div className="absolute bottom-3 right-3">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                size="icon"
-                variant="ghost"
-                className={`h-9 w-9 rounded-full backdrop-blur-md border border-white/10 shadow-xl transition-all duration-300 ${
-                  isAdded 
-                    ? 'bg-green-600/80 text-white hover:bg-green-600' 
-                    : 'bg-black/40 text-white hover:bg-primary hover:scale-110'
-                }`}
-                onClick={handleAddToSelection}
-              >
-                {isAdded ? (
-                  <CheckCircle2 className="h-5 w-5" />
-                ) : (
-                  <PlusCircle className="h-5 w-5" />
-                )}
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="top" className="text-[10px] py-1 px-2 border-white/10 bg-black/80 backdrop-blur-md text-white">
-              <p>{isAdded ? 'Added to Selection' : 'Add to Library'}</p>
-            </TooltipContent>
-          </Tooltip>
+          <Button
+            size="icon"
+            variant="ghost"
+            className={`h-9 w-9 rounded-full backdrop-blur-md border border-white/10 shadow-xl transition-all duration-300 ${
+              isAdded 
+                ? 'bg-green-600/80 text-white hover:bg-green-600' 
+                : 'bg-black/40 text-white hover:bg-primary hover:scale-110'
+            }`}
+            onClick={handleAddToSelection}
+          >
+            {isAdded ? (
+              <CheckCircle2 className="h-5 w-5" />
+            ) : (
+              <PlusCircle className="h-5 w-5" />
+            )}
+          </Button>
         </div>
       </div>
       
