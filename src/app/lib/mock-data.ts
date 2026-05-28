@@ -437,8 +437,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ghost of Tsushima',
     description: 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet.',
     category: 'Open World',
-    thumbnail: getImg('got-thumb'),
-    images: [getImg('got-hero'), getImg('got-thumb')],
+    thumbnail: 'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
+    images: [
+      'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
+      'https://i.pinimg.com/originals/d5/29/a4/d529a491cb3269b8e100314a0af2d6a6.jpg',
+      'https://wallpapercave.com/wp/wp11003113.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/mGvG6_JPrHc',
     shorts: [...NEW_SHORTS],
   },
