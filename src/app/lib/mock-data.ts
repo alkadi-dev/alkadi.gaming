@@ -47,7 +47,7 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'RPG',
     thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
     images: [
-      'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
+      'https://wallpapercat. Cat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-in-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg'
     ],
@@ -479,7 +479,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp15026001.webp',
       'https://wallpapercave.com/wp/wp14445566.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/W01L78Cec1M',
+    videoUrl: 'https://www.youtube.com/embed/WxjeV10H1F0',
     shorts: [...NEW_SHORTS],
   },
   {
