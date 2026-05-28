@@ -58,11 +58,11 @@ export function CheckoutSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full">
-          <ShoppingCart className="h-5 w-5 mr-2" />
+        <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-3 text-xs">
+          <ShoppingCart className="h-3.5 w-3.5 mr-1.5" />
           Checkout
           {selectedIds.length > 0 && (
-            <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white shadow-lg border-2 border-background">
+            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-white shadow-lg border-2 border-background">
               {selectedIds.length}
             </span>
           )}
