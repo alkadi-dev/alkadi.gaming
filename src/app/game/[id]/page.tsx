@@ -47,7 +47,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
       title: "Game Added!",
       description: `${game?.title} has been added to your selection.`,
     });
-    // In a real app, this would update a cart or global state
   };
 
   if (!game) {
@@ -63,8 +62,36 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
 
   return (
     <div className="min-h-screen pb-20">
-      {/* Hero / Header Navigation */}
-      <div className="relative h-[65vh] w-full">
+      {/* Fixed Header Navigation */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-background/40 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+        <div className="container mx-auto px-4 h-20 flex justify-between items-center">
+          <Button
+            variant="ghost"
+            className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full transition-all"
+            onClick={() => router.push('/')}
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Catalog
+          </Button>
+
+          <Button
+            variant="default"
+            size="lg"
+            className={`rounded-full transition-all duration-300 font-bold shadow-2xl px-8 ${
+              isAdded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:scale-105 active:scale-95'
+            }`}
+            onClick={handleAddToSelection}
+          >
+            {isAdded ? (
+              <><CheckCircle2 className="mr-2 h-5 w-5" /> Added</>
+            ) : (
+              <><PlusCircle className="mr-2 h-5 w-5" /> Add to Selection</>
+            )}
+          </Button>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <div className="relative h-[70vh] w-full mt-0">
         <Image
           src={game.images[0] || game.thumbnail}
           alt={game.title}
@@ -75,31 +102,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
-        <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-center z-10">
-          <Button
-            variant="ghost"
-            className="bg-background/20 backdrop-blur-md hover:bg-background/40 text-white border border-white/10 rounded-full"
-            onClick={() => router.push('/')}
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Catalog
-          </Button>
-
-          <Button
-            variant="default"
-            size="lg"
-            className={`rounded-full transition-all duration-300 font-bold shadow-2xl ${
-              isAdded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:scale-105 active:scale-95'
-            }`}
-            onClick={handleAddToSelection}
-          >
-            {isAdded ? (
-              <><CheckCircle2 className="mr-2 h-5 w-5" /> Added to Selection</>
-            ) : (
-              <><PlusCircle className="mr-2 h-5 w-5" /> Add to Selection</>
-            )}
-          </Button>
-        </div>
-
         <div className="absolute bottom-0 left-0 right-0 p-8 container mx-auto">
           <div className="flex flex-wrap gap-3 mb-4">
             <Badge className="bg-primary text-white px-4 py-1 text-sm">{game.category}</Badge>
@@ -113,18 +115,18 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         </div>
       </div>
 
-      <main className="container mx-auto px-4 mt-8 max-w-5xl">
-        <div className="space-y-12">
+      <main className="container mx-auto px-4 mt-12 max-w-5xl">
+        <div className="space-y-16">
           {/* Description Section with AI Enhancement */}
-          <section className="bg-secondary/30 rounded-2xl p-8 border border-white/5">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold font-headline">The Story</h2>
+          <section className="bg-secondary/30 rounded-3xl p-8 md:p-12 border border-white/5 shadow-2xl">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold font-headline">The Story</h2>
               {isRefining ? (
                 <div className="flex items-center text-xs text-primary animate-pulse">
                   <Sparkles className="mr-1 h-3 w-3" /> Enhancing with AI...
                 </div>
               ) : (
-                <Badge variant="outline" className="text-xs border-primary/30 text-primary">
+                <Badge variant="outline" className="text-xs border-primary/30 text-primary px-3 py-1">
                   <Sparkles className="mr-1 h-3 w-3" /> AI Enhanced
                 </Badge>
               )}
@@ -138,7 +140,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
                 <Skeleton className="h-4 w-[85%]" />
               </div>
             ) : (
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed font-light">
                 {refinedDescription || game.description}
               </p>
             )}
@@ -146,34 +148,34 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
 
           {/* Media Carousel */}
           <section>
-            <h2 className="text-2xl font-bold font-headline mb-6">Gallery</h2>
+            <h2 className="text-3xl font-bold font-headline mb-8">Gallery</h2>
             <Carousel className="w-full">
               <CarouselContent>
                 {game.images.map((img, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
-                    <div className="relative aspect-video rounded-xl overflow-hidden border border-white/5">
+                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
                       <Image
                         src={img}
                         alt={`${game.title} Screenshot ${index + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex justify-end gap-2 mt-4">
-                <CarouselPrevious className="relative translate-y-0 left-0" />
-                <CarouselNext className="relative translate-y-0 right-0" />
+              <div className="flex justify-end gap-3 mt-6">
+                <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20" />
+                <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20" />
               </div>
             </Carousel>
           </section>
 
           {/* Video Section */}
           <section>
-            <h2 className="text-2xl font-bold font-headline mb-6">Cinematic Trailer</h2>
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/5">
+            <h2 className="text-3xl font-bold font-headline mb-8">Cinematic Trailer</h2>
+            <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/5 ring-1 ring-white/10">
               <iframe
                 src={game.videoUrl}
                 title={`${game.title} Trailer`}
@@ -187,10 +189,10 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
           {/* Shorts Section */}
           {game.shorts && game.shorts.length > 0 && (
             <section>
-              <h2 className="text-2xl font-bold font-headline mb-6">Shorts Video</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <h2 className="text-3xl font-bold font-headline mb-8">Moments</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {game.shorts.map((url, index) => (
-                  <div key={index} className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-black border border-white/5 shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                  <div key={index} className="relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 ring-1 ring-white/10">
                     <iframe
                       src={url}
                       title={`${game.title} Short ${index + 1}`}
