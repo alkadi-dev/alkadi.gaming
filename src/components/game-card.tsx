@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
+import { HardDrive } from 'lucide-react';
 
 interface GameCardProps {
   game: GameEntry;
@@ -20,13 +21,19 @@ export function GameCard({ game }: GameCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-        <Badge className="absolute top-3 left-3 bg-primary/90 text-white border-none backdrop-blur-sm">
-          {game.category}
-        </Badge>
+        <div className="absolute top-3 left-3 flex gap-2">
+          <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm">
+            {game.category}
+          </Badge>
+          <Badge variant="secondary" className="bg-background/80 text-foreground border-none backdrop-blur-sm flex items-center gap-1">
+            <HardDrive className="w-3 h-3" />
+            {game.size}
+          </Badge>
+        </div>
       </Link>
       <CardContent className="p-4 flex-1 flex items-center justify-center">
-        <Link href={`/game/${game.id}`} className="group w-full">
-          <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors text-center">
+        <Link href={`/game/${game.id}`} className="group w-full text-center">
+          <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors">
             {game.title}
           </h3>
         </Link>
