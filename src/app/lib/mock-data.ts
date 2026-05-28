@@ -379,7 +379,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/BBky2uCGqtM',
     shorts: [
-      'https://www.youtube.com/embed/Etx1v5iPrwE?si=_SNihscMS4ivCXD5',
+      'https://www.youtube.com/embed/BBky2uCGqtM?si=_SNihscMS4ivCXD5',
       'https://www.youtube.com/embed/mNd9HPf1x5o?si=SXMU-QVzWGaVrC1J',
       'https://www.youtube.com/embed/GfCz9GVOJUE?si=d5Vdd5CfKS63ZX1B'
     ],
@@ -627,8 +627,8 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'bf6',
-    title: 'Battlefield 2042',
-    description: 'Battlefield 2042 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise.',
+    title: 'Battlefield 6',
+    description: 'Battlefield 6 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise.',
     category: 'Shooter',
     thumbnail: getImg('bf6-thumb'),
     size: '100 GB',
