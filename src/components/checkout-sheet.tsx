@@ -8,10 +8,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-  SheetFooter,
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, Copy, Check, X } from 'lucide-react';
+import { ShoppingCart, Trash2, Copy, Check } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -24,6 +23,18 @@ export function CheckoutSheet() {
 
   const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
 
+  // Helper to calculate total size
+  const calculateTotalSize = () => {
+    let totalGb = 0;
+    selectedGames.forEach(game => {
+      const sizeValue = parseFloat(game.size.replace(/[^\d.]/g, ''));
+      if (!isNaN(sizeValue)) {
+        totalGb += sizeValue;
+      }
+    });
+    return totalGb.toFixed(1);
+  };
+
   const handleCopyList = () => {
     if (selectedGames.length === 0) return;
 
@@ -31,13 +42,14 @@ export function CheckoutSheet() {
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    const finalContent = `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal: ${selectedGames.length} games`;
+    const totalSize = calculateTotalSize();
+    const finalContent = `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSize} GB`;
 
     navigator.clipboard.writeText(finalContent).then(() => {
       setCopied(true);
       toast({
         title: "List Copied!",
-        description: "Your selection has been copied to your clipboard.",
+        description: `Selected ${selectedGames.length} games (${totalSize} GB).`,
       });
       setTimeout(() => setCopied(false), 2000);
     });
@@ -103,10 +115,16 @@ export function CheckoutSheet() {
               </div>
             </ScrollArea>
 
-            <div className="mt-auto pt-6 space-y-3">
-              <div className="flex justify-between items-center px-2 mb-4">
-                <span className="text-muted-foreground text-sm">Total Games</span>
-                <span className="font-bold text-xl">{selectedGames.length}</span>
+            <div className="mt-auto pt-6 pb-8 space-y-3">
+              <div className="bg-secondary/20 p-4 rounded-2xl border border-white/5 mb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-muted-foreground text-sm">Selected Games</span>
+                  <span className="font-bold">{selectedGames.length}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground text-sm">Total Storage</span>
+                  <span className="font-bold text-primary">{calculateTotalSize()} GB</span>
+                </div>
               </div>
               
               <Button 
