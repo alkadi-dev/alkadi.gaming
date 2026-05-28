@@ -10,7 +10,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, Copy, Check } from 'lucide-react';
+import { ShoppingCart, Trash2, Copy, Check, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -53,6 +53,10 @@ export function CheckoutSheet() {
       });
       setTimeout(() => setCopied(false), 2000);
     });
+  };
+
+  const handleWhatsAppRedirect = () => {
+    window.open('https://wa.link/vhw7ol', '_blank');
   };
 
   return (
@@ -127,21 +131,30 @@ export function CheckoutSheet() {
                 </div>
               </div>
               
-              <Button 
-                onClick={handleCopyList} 
-                className="w-full bg-primary hover:scale-[1.02] transition-transform rounded-xl py-6 font-bold"
-              >
-                {copied ? (
-                  <><Check className="mr-2 h-5 w-5" /> Copied!</>
-                ) : (
-                  <><Copy className="mr-2 h-5 w-5" /> Copy List to Clipboard</>
-                )}
-              </Button>
+              <div className="grid grid-cols-1 gap-3">
+                <Button 
+                  onClick={handleCopyList} 
+                  className="w-full bg-secondary hover:bg-secondary/80 text-foreground transition-all rounded-xl py-6 font-bold"
+                >
+                  {copied ? (
+                    <><Check className="mr-2 h-5 w-5" /> Copied!</>
+                  ) : (
+                    <><Copy className="mr-2 h-5 w-5" /> Copy List</>
+                  )}
+                </Button>
+
+                <Button 
+                  onClick={handleWhatsAppRedirect} 
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.02] transition-all rounded-xl py-6 font-bold"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp
+                </Button>
+              </div>
               
               <Button 
                 variant="ghost" 
                 onClick={clearSelection}
-                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl"
+                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl mt-2"
               >
                 Clear Entire List
               </Button>
