@@ -90,8 +90,8 @@ export function CheckoutSheet() {
           )}
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-full sm:max-w-md bg-background/95 backdrop-blur-xl border-l border-white/10">
-        <SheetHeader className="mb-6">
+      <SheetContent className="w-full sm:max-w-md bg-background/95 backdrop-blur-xl border-l border-white/10 flex flex-col p-0">
+        <SheetHeader className="p-6 pb-2">
           <SheetTitle className="text-2xl font-bold font-headline flex items-center gap-2">
             <ShoppingCart className="h-6 w-6 text-primary" />
             Your Selection
@@ -99,7 +99,7 @@ export function CheckoutSheet() {
         </SheetHeader>
 
         {selectedGames.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-[60vh] text-center">
+          <div className="flex flex-col items-center justify-center flex-1 text-center p-6">
             <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mb-4">
               <ShoppingCart className="h-10 w-10 text-muted-foreground opacity-20" />
             </div>
@@ -107,12 +107,12 @@ export function CheckoutSheet() {
             <p className="text-muted-foreground text-sm">Add some games to your selection to see them here.</p>
           </div>
         ) : (
-          <div className="flex flex-col h-full">
-            <ScrollArea className="flex-1 pr-4">
-              <div className="space-y-4">
+          <div className="flex flex-col h-full overflow-hidden">
+            <ScrollArea className="flex-1 px-6">
+              <div className="space-y-4 py-4">
                 {selectedGames.map((game) => (
-                  <div key={game.id} className="flex gap-4 p-3 rounded-2xl bg-secondary/30 border border-white/5 group">
-                    <div className="relative h-16 w-24 rounded-lg overflow-hidden flex-shrink-0">
+                  <div key={game.id} className="flex items-center gap-4 p-3 rounded-2xl bg-secondary/30 border border-white/5 group">
+                    <div className="relative h-14 w-20 rounded-lg overflow-hidden flex-shrink-0">
                       <Image
                         src={game.thumbnail}
                         alt={game.title}
@@ -122,57 +122,59 @@ export function CheckoutSheet() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="font-bold text-sm truncate">{game.title}</h4>
-                      <p className="text-xs text-muted-foreground">{game.category} • {game.size}</p>
+                      <p className="text-[10px] text-muted-foreground">{game.category} • {game.size}</p>
                     </div>
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full"
+                      className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full h-10 w-10"
                       onClick={() => removeFromSelection(game.id)}
                     >
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-5 w-5" />
                     </Button>
                   </div>
                 ))}
               </div>
             </ScrollArea>
 
-            <div className="mt-auto pt-6 pb-8 space-y-3">
+            <div className="p-6 bg-background/50 backdrop-blur-md border-t border-white/5 space-y-3">
               <div className="bg-secondary/20 p-4 rounded-2xl border border-white/5 mb-4">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-muted-foreground text-sm">Selected Games</span>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-muted-foreground text-xs uppercase tracking-wider font-semibold">Games</span>
                   <span className="font-bold">{selectedGames.length}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground text-sm">Total Storage</span>
+                  <span className="text-muted-foreground text-xs uppercase tracking-wider font-semibold">Storage</span>
                   <span className="font-bold text-primary">{calculateTotalSize()} GB</span>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 gap-3">
+              <div className="grid grid-cols-1 gap-2">
                 <Button 
                   onClick={handleCopyList} 
-                  className="w-full bg-secondary hover:bg-secondary/80 text-foreground transition-all rounded-xl py-6 font-bold"
+                  variant="secondary"
+                  className="w-full transition-all rounded-xl py-6 font-bold text-sm"
                 >
                   {copied ? (
-                    <><Check className="mr-2 h-5 w-5" /> Copied!</>
+                    <><Check className="mr-2 h-4 w-4" /> Copied!</>
                   ) : (
-                    <><Copy className="mr-2 h-5 w-5" /> Copy List</>
+                    <><Copy className="mr-2 h-4 w-4" /> Copy List</>
                   )}
                 </Button>
 
                 <Button 
                   onClick={handleWhatsAppRedirect} 
-                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.02] transition-all rounded-xl py-6 font-bold"
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.02] transition-all rounded-xl py-6 font-bold text-sm"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp
+                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
                 </Button>
               </div>
               
               <Button 
                 variant="ghost" 
+                size="sm"
                 onClick={clearSelection}
-                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl mt-2"
+                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl mt-1 text-xs"
               >
                 Clear Entire List
               </Button>
