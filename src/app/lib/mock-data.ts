@@ -455,8 +455,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Uncharted 4: A Thief\'s End',
     description: 'Several years after his last adventure, retired fortune hunter Nathan Drake is forced back into the world of thieves.',
     category: 'Adventure',
-    thumbnail: getImg('u4-thumb'),
-    images: [getImg('u4-hero'), getImg('u4-thumb')],
+    thumbnail: 'https://wallpapercave.com/wp/wp2272912.jpg',
+    images: [
+      'https://wallpapercave.com/wp/wp2272912.jpg',
+      'https://i.pinimg.com/originals/18/60/d1/1860d17c779f1d922d57d96be15246a6.jpg',
+      'https://wallpapercat.com/w/full/a/d/1/119162-3840x2160-desktop-4k-uncharted-background-photo.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/sB0xy74Zrj8',
     shorts: [...NEW_SHORTS],
   },
