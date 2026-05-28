@@ -1,0 +1,136 @@
+'use client';
+
+import { useSelection } from '@/components/selection-context';
+import { MOCK_GAMES } from '@/app/lib/mock-data';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
+import { ShoppingCart, Trash2, Copy, Check, X } from 'lucide-react';
+import Image from 'next/image';
+import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { ScrollArea } from '@/components/ui/scroll-area';
+
+export function CheckoutSheet() {
+  const { selectedIds, removeFromSelection, clearSelection } = useSelection();
+  const { toast } = useToast();
+  const [copied, setCopied] = useState(false);
+
+  const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
+
+  const handleCopyList = () => {
+    if (selectedGames.length === 0) return;
+
+    const listText = selectedGames
+      .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
+      .join('\n');
+    
+    const finalContent = `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal: ${selectedGames.length} games`;
+
+    navigator.clipboard.writeText(finalContent).then(() => {
+      setCopied(true);
+      toast({
+        title: "List Copied!",
+        description: "Your selection has been copied to your clipboard.",
+      });
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <Button variant="outline" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full">
+          <ShoppingCart className="h-5 w-5 mr-2" />
+          Checkout
+          {selectedIds.length > 0 && (
+            <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white shadow-lg border-2 border-background">
+              {selectedIds.length}
+            </span>
+          )}
+        </Button>
+      </SheetTrigger>
+      <SheetContent className="w-full sm:max-w-md bg-background/95 backdrop-blur-xl border-l border-white/10">
+        <SheetHeader className="mb-6">
+          <SheetTitle className="text-2xl font-bold font-headline flex items-center gap-2">
+            <ShoppingCart className="h-6 w-6 text-primary" />
+            Your Selection
+          </SheetTitle>
+        </SheetHeader>
+
+        {selectedGames.length === 0 ? (
+          <div className="flex flex-col items-center justify-center h-[60vh] text-center">
+            <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mb-4">
+              <ShoppingCart className="h-10 w-10 text-muted-foreground opacity-20" />
+            </div>
+            <h3 className="text-lg font-medium mb-2">Your list is empty</h3>
+            <p className="text-muted-foreground text-sm">Add some games to your selection to see them here.</p>
+          </div>
+        ) : (
+          <div className="flex flex-col h-full">
+            <ScrollArea className="flex-1 pr-4">
+              <div className="space-y-4">
+                {selectedGames.map((game) => (
+                  <div key={game.id} className="flex gap-4 p-3 rounded-2xl bg-secondary/30 border border-white/5 group">
+                    <div className="relative h-16 w-24 rounded-lg overflow-hidden flex-shrink-0">
+                      <Image
+                        src={game.thumbnail}
+                        alt={game.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-bold text-sm truncate">{game.title}</h4>
+                      <p className="text-xs text-muted-foreground">{game.category} • {game.size}</p>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full"
+                      onClick={() => removeFromSelection(game.id)}
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </ScrollArea>
+
+            <div className="mt-auto pt-6 space-y-3">
+              <div className="flex justify-between items-center px-2 mb-4">
+                <span className="text-muted-foreground text-sm">Total Games</span>
+                <span className="font-bold text-xl">{selectedGames.length}</span>
+              </div>
+              
+              <Button 
+                onClick={handleCopyList} 
+                className="w-full bg-primary hover:scale-[1.02] transition-transform rounded-xl py-6 font-bold"
+              >
+                {copied ? (
+                  <><Check className="mr-2 h-5 w-5" /> Copied!</>
+                ) : (
+                  <><Copy className="mr-2 h-5 w-5" /> Copy List to Clipboard</>
+                )}
+              </Button>
+              
+              <Button 
+                variant="ghost" 
+                onClick={clearSelection}
+                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl"
+              >
+                Clear Entire List
+              </Button>
+            </div>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}

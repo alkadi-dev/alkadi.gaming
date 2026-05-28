@@ -6,6 +6,7 @@ import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { CheckoutSheet } from '@/components/checkout-sheet';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -52,6 +53,7 @@ export default function HomePage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
+            <CheckoutSheet />
           </div>
         </div>
       </header>

@@ -11,15 +11,19 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
+import { useSelection } from '@/components/selection-context';
+import { CheckoutSheet } from '@/components/checkout-sheet';
 
 export default function GameDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const router = useRouter();
   const { toast } = useToast();
+  const { addToSelection, isInSelection } = useSelection();
   const game = MOCK_GAMES.find((g) => g.id === id);
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
-  const [isAdded, setIsAdded] = useState(false);
+
+  const isAdded = game ? isInSelection(game.id) : false;
 
   useEffect(() => {
     if (game && !refinedDescription) {
@@ -42,10 +46,18 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
   };
 
   const handleAddToSelection = () => {
-    setIsAdded(true);
+    if (!game) return;
+    if (isAdded) {
+      toast({
+        title: "Already Selected",
+        description: `${game.title} is already in your selection.`,
+      });
+      return;
+    }
+    addToSelection(game.id);
     toast({
       title: "Game Added!",
-      description: `${game?.title} has been added to your selection.`,
+      description: `${game.title} has been added to your selection.`,
     });
   };
 
@@ -70,23 +82,26 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full transition-all"
             onClick={() => router.push('/')}
           >
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Catalog
+            <ArrowLeft className="mr-2 h-4 w-4" /> <span className="hidden sm:inline">Back to Catalog</span>
           </Button>
 
-          <Button
-            variant="default"
-            size="lg"
-            className={`rounded-full transition-all duration-300 font-bold shadow-2xl px-8 ${
-              isAdded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:scale-105 active:scale-95'
-            }`}
-            onClick={handleAddToSelection}
-          >
-            {isAdded ? (
-              <><CheckCircle2 className="mr-2 h-5 w-5" /> Added</>
-            ) : (
-              <><PlusCircle className="mr-2 h-5 w-5" /> Add to Selection</>
-            )}
-          </Button>
+          <div className="flex items-center gap-3">
+            <CheckoutSheet />
+            <Button
+              variant="default"
+              size="lg"
+              className={`rounded-full transition-all duration-300 font-bold shadow-2xl px-8 ${
+                isAdded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:scale-105 active:scale-95'
+              }`}
+              onClick={handleAddToSelection}
+            >
+              {isAdded ? (
+                <><CheckCircle2 className="mr-2 h-5 w-5" /> Added</>
+              ) : (
+                <><PlusCircle className="mr-2 h-5 w-5" /> Add to Selection</>
+              )}
+            </Button>
+          </div>
         </div>
       </div>
 
