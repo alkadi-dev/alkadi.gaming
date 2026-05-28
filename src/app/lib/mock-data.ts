@@ -491,8 +491,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Last of Us Part II',
     description: 'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming.',
     category: 'Action',
-    thumbnail: getImg('tlou2-thumb'),
-    images: [getImg('tlou2-hero'), getImg('tlou2-thumb')],
+    thumbnail: 'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
+    images: [
+      'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
+      'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
+      'https://i.redd.it/ebmyt82afuc51.png'
+    ],
     videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E',
     shorts: [...NEW_SHORTS],
   },
