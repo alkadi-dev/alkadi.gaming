@@ -516,7 +516,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.igrandtheftauto.com/content/images/small/4346-gta5-dude-wheres-the-car.jpg?etag=54ecbae6'
     ],
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/oYlsmbxTVM4?si=bP3Meaz940YkrLBV',
+      'https://www.youtube.com/embed/sqr0nwlcqA8?si=FDV1EghxZPzAhbrp',
+      'https://www.youtube.com/embed/-uiN7H4SYE4?si=dYkQClA2xXyy4w_P'
+    ],
   },
   {
     id: 'hzd',
