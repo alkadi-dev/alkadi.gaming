@@ -11,7 +11,7 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
   return (
-    <Card className="overflow-hidden bg-card border-none transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/20 flex flex-col">
+    <Card className="overflow-hidden bg-card border-none transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/20 flex flex-col h-full">
       <Link href={`/game/${game.id}`} className="group block relative aspect-[16/9] overflow-hidden">
         <Image
           src={game.thumbnail}
@@ -21,22 +21,22 @@ export function GameCard({ game }: GameCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-        <div className="absolute top-3 left-3 flex gap-2">
+        <div className="absolute top-3 left-3">
           <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm">
             {game.category}
           </Badge>
-          <Badge variant="secondary" className="bg-background/80 text-foreground border-none backdrop-blur-sm flex items-center gap-1">
-            <HardDrive className="w-3 h-3" />
-            {game.size}
-          </Badge>
         </div>
       </Link>
-      <CardContent className="p-4 flex-1 flex items-center justify-center">
-        <Link href={`/game/${game.id}`} className="group w-full text-center">
+      <CardContent className="p-4 flex-1 flex flex-col justify-between">
+        <Link href={`/game/${game.id}`} className="group mb-4 block">
           <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors">
             {game.title}
           </h3>
         </Link>
+        <div className="flex items-center gap-1.5 text-muted-foreground text-xs mt-auto">
+          <HardDrive className="w-3.5 h-3.5" />
+          <span className="font-medium">{game.size}</span>
+        </div>
       </CardContent>
     </Card>
   );
