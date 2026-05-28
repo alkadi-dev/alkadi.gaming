@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive } from 'lucide-react';
+import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive, Trash2 } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -18,7 +18,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
   const { id } = use(params);
   const router = useRouter();
   const { toast } = useToast();
-  const { addToSelection, isInSelection } = useSelection();
+  const { addToSelection, removeFromSelection, isInSelection } = useSelection();
   const game = MOCK_GAMES.find((g) => g.id === id);
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
@@ -45,20 +45,21 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
     }
   };
 
-  const handleAddToSelection = () => {
+  const handleToggleSelection = () => {
     if (!game) return;
     if (isAdded) {
+      removeFromSelection(game.id);
       toast({
-        title: "Already Selected",
-        description: `${game.title} is already in your selection.`,
+        title: "Removed from Selection",
+        description: `${game.title} has been removed.`,
       });
-      return;
+    } else {
+      addToSelection(game.id);
+      toast({
+        title: "Game Added!",
+        description: `${game.title} has been added to your selection.`,
+      });
     }
-    addToSelection(game.id);
-    toast({
-      title: "Game Added!",
-      description: `${game.title} has been added to your selection.`,
-    });
   };
 
   if (!game) {
@@ -93,7 +94,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
               className={`rounded-full transition-all duration-300 font-bold shadow-2xl px-8 ${
                 isAdded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:scale-105 active:scale-95'
               }`}
-              onClick={handleAddToSelection}
+              onClick={handleToggleSelection}
             >
               {isAdded ? (
                 <><CheckCircle2 className="mr-2 h-5 w-5" /> Added</>

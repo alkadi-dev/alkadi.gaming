@@ -15,27 +15,27 @@ interface GameCardProps {
 }
 
 export function GameCard({ game }: GameCardProps) {
-  const { addToSelection, isInSelection } = useSelection();
+  const { addToSelection, removeFromSelection, isInSelection } = useSelection();
   const { toast } = useToast();
   const isAdded = isInSelection(game.id);
 
-  const handleAddToSelection = (e: React.MouseEvent) => {
+  const handleToggleSelection = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
     if (isAdded) {
+      removeFromSelection(game.id);
       toast({
-        title: "Already Selected",
-        description: `${game.title} is already in your selection.`,
+        title: "Removed from Selection",
+        description: `${game.title} has been removed.`,
       });
-      return;
+    } else {
+      addToSelection(game.id);
+      toast({
+        title: "Game Added!",
+        description: `${game.title} has been added to your selection.`,
+      });
     }
-
-    addToSelection(game.id);
-    toast({
-      title: "Game Added!",
-      description: `${game.title} has been added to your selection.`,
-    });
   };
 
   return (
@@ -65,7 +65,7 @@ export function GameCard({ game }: GameCardProps) {
           </div>
         </Link>
 
-        {/* Quick Add Button - Bottom Right inside Image */}
+        {/* Toggle Selection Button - Bottom Right inside Image */}
         <div className="absolute bottom-3 right-3">
           <Button
             size="icon"
@@ -75,7 +75,7 @@ export function GameCard({ game }: GameCardProps) {
                 ? 'bg-green-600/80 text-white hover:bg-green-600' 
                 : 'bg-black/40 text-white hover:bg-primary hover:scale-110'
             }`}
-            onClick={handleAddToSelection}
+            onClick={handleToggleSelection}
           >
             {isAdded ? (
               <CheckCircle2 className="h-5 w-5" />
