@@ -533,7 +533,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.pinimg.com/originals/2c/b9/97/2cb997a4e03c53f49fa6472ceadbbd51.jpg',
       'https://wallpapers.com/images/hd/papel-de-parede-horizon-zero-dawn-kxu12nitxfat9f9j.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/u4-GiBaWstc',
+    videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4',
     shorts: [...NEW_SHORTS],
   }
 ];
