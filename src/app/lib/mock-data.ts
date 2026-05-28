@@ -66,10 +66,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Shadows",
     description: 'Experience an epic historical action-adventure story set in feudal Japan. Become a lethal shinobi assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
     category: 'Open World',
-    thumbnail: 'https://images6.alphacoders.com/139/thumbbig-1394470.webp',
+    thumbnail: 'https://wallpapercave.com/wp/wp13980393.jpg',
     size: '70 GB',
     images: [
-      'https://images6.alphacoders.com/139/thumbbig-1394470.webp',
+      'https://wallpapercave.com/wp/wp13980393.jpg',
       'https://preview.redd.it/two-new-screenshots-of-ac-shadows-world-v0-whm6mgnqhsee1.png?width=640&crop=smart&auto=webp&s=f0d47b92ba36516422cfee81603b63221662a440',
       'https://wallpapercave.com/wp/wp13980388.jpg'
     ],
