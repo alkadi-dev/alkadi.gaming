@@ -11,7 +11,7 @@ export interface GameEntry {
   shorts?: string[];
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', 'Sports'];
+export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -544,7 +544,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fifa23',
     title: 'FIFA 23',
     description: 'Experience the pinnacle of international football with the FIFA World Cup Qatar 2022 and FIFA Women’s World Cup Australia and New Zealand 2023.',
-    category: 'Sports',
+    category: 'Action',
     thumbnail: getImg('fifa23-thumb'),
     images: [getImg('fifa23-hero'), getImg('fifa23-thumb')],
     videoUrl: 'https://www.youtube.com/embed/o3V-GvvzjE4',
@@ -554,7 +554,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fifa26',
     title: 'FIFA 26',
     description: 'The future of football simulation. Advanced HyperMotion technology and deep career mode improvements bring the beautiful game to life like never before.',
-    category: 'Sports',
+    category: 'Action',
     thumbnail: getImg('fifa26-thumb'),
     images: [getImg('fifa26-hero'), getImg('fifa26-thumb')],
     videoUrl: 'https://www.youtube.com/embed/o3V-GvvzjE4',
