@@ -473,8 +473,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Last of Us Part I',
     description: 'In a ravaged civilization, where infected and hardened survivors run wild, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone.',
     category: 'Action',
-    thumbnail: 'https://picsum.photos/seed/tlou1-hero/1200/800',
-    images: ['https://picsum.photos/seed/tlou1-hero/1200/800'],
+    thumbnail: 'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
+    images: [
+      'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
+      'https://wallpapercave.com/wp/wp15026001.webp',
+      'https://wallpapercave.com/wp/wp14445566.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/W01L78Cec1M',
     shorts: [...NEW_SHORTS],
   },
