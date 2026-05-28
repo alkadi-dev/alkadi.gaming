@@ -86,8 +86,8 @@ export function GameCard({ game }: GameCardProps) {
         </div>
       </div>
       
-      <CardContent className="p-4 flex-1 flex flex-col">
-        <Link href={`/game/${game.id}`} className="group block">
+      <CardContent className="p-4 flex-1 flex flex-col items-center text-center">
+        <Link href={`/game/${game.id}`} className="group block w-full">
           <h3 className="text-xl font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors">
             {game.title}
           </h3>
