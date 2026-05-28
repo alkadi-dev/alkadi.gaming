@@ -25,7 +25,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: '5',
     title: 'Red Dead Redemption 2',
-    description: 'America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
+    description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     category: 'Open World',
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
     images: [
@@ -462,7 +462,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercat.com/w/full/a/d/1/119162-3840x2160-desktop-4k-uncharted-background-photo.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/sB0xy74Zrj8',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/pUPJdWe-zVU?si=pOarvKzldXcuE8vA',
+      'https://www.youtube.com/embed/23l8h9a6Qi8?si=OqLI6NAmJYHD5hGq',
+      'https://www.youtube.com/embed/3El-xx1g-2c?si=pd2h5MpASHp-Oxxk'
+    ],
   },
   {
     id: 'tlou1',
