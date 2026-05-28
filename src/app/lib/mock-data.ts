@@ -443,7 +443,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.pinimg.com/originals/d5/29/a4/d529a491cb3269b8e100314a0af2d6a6.jpg',
       'https://wallpapercave.com/wp/wp11003113.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/mGvG6_JPrHc',
+    videoUrl: 'https://www.youtube.com/embed/RcWk08PBe7k',
     shorts: [...NEW_SHORTS],
   },
   {
