@@ -91,7 +91,7 @@ export function GameCard({ game }: GameCardProps) {
                 )}
               </Button>
             </TooltipTrigger>
-            <TooltipContent side="top">
+            <TooltipContent side="top" className="text-[10px] py-1 px-2 border-white/10 bg-black/80 backdrop-blur-md text-white">
               <p>{isAdded ? 'Added to Selection' : 'Add to Library'}</p>
             </TooltipContent>
           </Tooltip>
