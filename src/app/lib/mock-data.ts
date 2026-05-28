@@ -498,7 +498,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.redd.it/ebmyt82afuc51.png'
     ],
     videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/zIJRUH9KRNw?si=VGeUp4ObAMCaBGYg',
+      'https://www.youtube.com/embed/PImmK6WU8SI?si=4O3O94d3jPZy2Jd9',
+      'https://www.youtube.com/embed/UGWg6IIko2o?si=VvfvdN2DDu5Vfc65'
+    ],
   },
   {
     id: 'gtav',
