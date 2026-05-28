@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { SelectionProvider } from '@/components/selection-context';
 import { Toaster } from '@/components/ui/toaster';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 export const metadata: Metadata = {
   title: 'Alkadi Gaming',
@@ -22,8 +23,10 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased bg-background text-foreground min-h-screen">
         <SelectionProvider>
-          {children}
-          <Toaster />
+          <TooltipProvider>
+            {children}
+            <Toaster />
+          </TooltipProvider>
         </SelectionProvider>
       </body>
     </html>
