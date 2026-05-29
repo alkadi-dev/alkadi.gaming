@@ -632,11 +632,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Watch Dogs 2',
     description: 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area.',
     category: 'Action',
-    thumbnail: getImg('wd2-thumb'),
+    thumbnail: 'https://getwallpapers.com/wallpaper/full/5/8/8/1077825-watch-dogs-2-wallpapers-2560x1440-windows-7.jpg',
     size: '40 GB',
-    images: [getImg('wd2-thumb'), 'https://picsum.photos/seed/wd2-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/hh9x4NqW068',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://getwallpapers.com/wallpaper/full/5/8/8/1077825-watch-dogs-2-wallpapers-2560x1440-windows-7.jpg',
+      'https://wallpapercave.com/wp/wp1841031.jpg',
+      'https://wallpapercave.com/wp/wp1841052.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/hh9x4NqW0Dw',
+    shorts: [
+      'https://www.youtube.com/embed/CiHv5SNpjGs',
+      'https://www.youtube.com/embed/QVnjcGu9zTM',
+      'https://www.youtube.com/embed/qzn9vhq9RW8'
+    ],
   },
   {
     id: 'bf5',
