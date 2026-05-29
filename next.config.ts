@@ -262,6 +262,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.wccftech.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
