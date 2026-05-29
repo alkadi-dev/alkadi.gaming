@@ -689,11 +689,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Vanguard',
     description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper’s precision and blast through enemies in North Africa.',
     category: 'Shooter',
-    thumbnail: getImg('cod-v-thumb'),
+    thumbnail: 'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
     size: '95 GB',
-    images: [getImg('cod-v-thumb'), 'https://picsum.photos/seed/codv-1/1200/800'],
+    images: [
+      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
+      'https://wallpapercave.com/wp/wp9729352.jpg',
+      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/legacy/vanguard/vanguard-campaign-3.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/OQ1CwPhE8KQ',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/OgNLHBqcm_Q',
+      'https://www.youtube.com/embed/cC3yw3h3ErY',
+      'https://www.youtube.com/embed/erQun_LaSC4'
+    ],
   },
   {
     id: 'cod-ww2',
