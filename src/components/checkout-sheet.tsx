@@ -160,8 +160,8 @@ export function CheckoutSheet() {
                 <AlertDialogTrigger asChild>
                   <Button 
                     variant="ghost" 
-                    size="sm"
-                    className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl text-[10px]"
+                    size="default"
+                    className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl py-6 text-sm font-medium"
                   >
                     Clear Entire List
                   </Button>
