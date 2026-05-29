@@ -582,7 +582,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/8406398.jpg',
       'https://wallpaperaccess.com/full/8406387.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/o3V-GvvzjE4',
+    videoUrl: 'https://www.youtube.com/embed/cgDlmvU2sA4',
     shorts: [
       'https://www.youtube.com/embed/cgDlmvU2sA4',
       'https://www.youtube.com/embed/C2VNcQ6tZbs',
@@ -651,11 +651,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Battlefield V',
     description: 'Enter mankind’s greatest conflict with Battlefield V as the series goes back to its roots in a never-before-seen portrayal of World War 2.',
     category: 'Shooter',
-    thumbnail: getImg('bf5-thumb'),
+    thumbnail: 'https://wallpaperaccess.com/full/3495792.jpg',
     size: '50 GB',
-    images: [getImg('bf5-thumb'), 'https://picsum.photos/seed/bf5-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/fb1MR85XFOc',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://wallpaperaccess.com/full/3495792.jpg',
+      'https://preview.redd.it/modern-battlefields-should-not-shy-away-on-having-scenes-v0-ihzrwn5l1zde1.jpg?width=640&crop=smart&auto=webp&s=880fa16a80ae03451cf875fb06172f142533c549',
+      'https://wallpaperaccess.com/full/898836.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/LCZLabOywYU',
+    shorts: [
+      'https://www.youtube.com/embed/qp54yz1uUpQ',
+      'https://www.youtube.com/embed/vE3jlOf_XEg',
+      'https://www.youtube.com/embed/fNakL6vUB20'
+    ],
   },
   {
     id: 'bf6',
