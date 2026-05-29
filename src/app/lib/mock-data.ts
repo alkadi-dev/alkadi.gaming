@@ -727,11 +727,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare',
     description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
     category: 'Shooter',
-    thumbnail: getImg('cod-mw-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
     size: '175 GB',
-    images: [getImg('cod-mw-thumb'), 'https://picsum.photos/seed/codmw-1/1200/800'],
+    images: [
+      'https://wallpapercave.com/wp/wp4517150.jpg',
+      'https://wallpapers.com/images/hd/4k-call-of-duty-modern-warfare-background-3840-x-2160-zdjbr6dl7k5czeot.jpg',
+      'https://images4.alphacoders.com/101/thumbbig-1018646.webp'
+    ],
     videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/KurHR-5VmIw',
+      'https://www.youtube.com/embed/cUCbtpMkZQM',
+      'https://www.youtube.com/embed/WzlKc5HmXbU'
+    ],
   },
   {
     id: 'cod-mw2',
