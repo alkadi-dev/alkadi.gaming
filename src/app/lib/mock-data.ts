@@ -765,11 +765,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare III',
     description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
     category: 'Shooter',
-    thumbnail: getImg('cod-mw3-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
     size: '235 GB',
-    images: [getImg('cod-mw3-thumb'), 'https://picsum.photos/seed/codmw3-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/mHDEDDrGYvo',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://wallpapercave.com/wp/wp13127005.jpg',
+      'https://wallpapercave.com/wp/wp3993550.jpg',
+      'https://wallpapercave.com/wp/wp13132336.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8',
+    shorts: [
+      'https://www.youtube.com/embed/u-O4uRNBBuc',
+      'https://www.youtube.com/embed/GD4DphX5Sbo',
+      'https://www.youtube.com/embed/brbTGmcdWTk'
+    ],
   },
   {
     id: 'crimson',
