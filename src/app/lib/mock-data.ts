@@ -594,7 +594,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'FIFA 26',
     description: 'The future of football simulation. Advanced HyperMotion technology and deep career mode improvements bring the beautiful game to life like never before.',
     category: 'Action',
-    thumbnail: getImg('fifa26-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp15596323.jpg',
     size: '85 GB',
     images: [
       'https://wallpapercave.com/wp/wp15596323.jpg',
@@ -613,11 +613,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     category: 'Shooter',
-    thumbnail: getImg('se4-thumb'),
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
     size: '55 GB',
-    images: [getImg('se4-thumb'), 'https://picsum.photos/seed/se4-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/yP2TInFpmsM',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
+      'https://wallpaperaccess.com/full/2434001.jpg',
+      'https://getwallpapers.com/wallpaper/full/9/8/5/962879-new-sniper-elite-wallpapers-1920x1080.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
+    shorts: [
+      'https://www.youtube.com/embed/atYEA0FbDgc?si=rISGmJeM8wodveqh',
+      'https://www.youtube.com/embed/1myPuSGZCZw?si=i7eusCNbNE01gXtE',
+      'https://www.youtube.com/embed/X1tEMQHZao8?si=719f0wzWF721cwXm'
+    ],
   },
   {
     id: 'wd2',
