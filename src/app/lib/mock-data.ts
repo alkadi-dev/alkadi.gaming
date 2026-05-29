@@ -841,10 +841,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hitman World of Assassination',
     description: 'Enter the world of the ultimate assassin. HITMAN World of Assassination brings together the best of HITMAN, HITMAN 2 and HITMAN 3.',
     category: 'Action',
-    thumbnail: getImg('hitman-thumb'),
+    thumbnail: 'https://i.ytimg.com/vi_webp/Z9Q4wAvWBAg/maxresdefault.webp',
     size: '80 GB',
-    images: [getImg('hitman-hero'), getImg('hitman-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/R8aRCwbZU6U',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://i.ytimg.com/vi_webp/Z9Q4wAvWBAg/maxresdefault.webp',
+      'https://wallpapercat.com/w/full/c/0/5/1658-1920x1080-desktop-1080p-hitman-game-wallpaper-photo.jpg',
+      'https://wallpapers.com/images/hd/agent-47-atop-a-skyscraper-hitman-3-ivgh5xgmdm2xrv8f.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WB2BSbaRmgY',
+    shorts: [
+      'https://www.youtube.com/embed/AQrn7rMVTLg',
+      'https://www.youtube.com/embed/rH5k5UMh2fo',
+      'https://www.youtube.com/embed/hq9jAZ4jC64'
+    ],
   }
 ];
