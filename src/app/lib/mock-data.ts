@@ -803,11 +803,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Marvel's Spider-Man",
     description: "Starring one of the world's most iconic super heroes, Marvel's Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for.",
     category: 'Action',
-    thumbnail: getImg('spiderman-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp7593747.jpg',
     size: '70 GB',
-    images: [getImg('spiderman-hero'), getImg('spiderman-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxko',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://wallpapercave.com/wp/wp7593747.jpg',
+      'https://wallpapercave.com/wp/wp11084730.jpg',
+      'https://wallpapercave.com/wp/wp4585692.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxss',
+    shorts: [
+      'https://www.youtube.com/embed/fAnIUbnOekA',
+      'https://www.youtube.com/embed/JrSIqSKGXes',
+      'https://www.youtube.com/embed/40uN7Bg_RVc'
+    ],
   },
   {
     id: 'miles-morales',
