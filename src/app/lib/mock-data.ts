@@ -613,10 +613,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     category: 'Shooter',
-    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
     size: '55 GB',
     images: [
-      'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
       'https://wallpaperaccess.com/full/2434001.jpg',
       'https://getwallpapers.com/wallpaper/full/9/8/5/962879-new-sniper-elite-wallpapers-1920x1080.jpg'
     ],
@@ -746,11 +746,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare II',
     description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
     category: 'Shooter',
-    thumbnail: getImg('cod-mw2-thumb'),
+    thumbnail: 'https://b2203835.smushcdn.com/2203835/wp-content/uploads/2022/09/Call-of-Duty-Modern-Warfare-II-Cover-Art.jpg?lossy=1&strip=0&webp=1',
     size: '125 GB',
-    images: [getImg('cod-mw2-thumb'), 'https://picsum.photos/seed/codmw2-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/r72GP1PIZa0',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://b2203835.smushcdn.com/2203835/wp-content/uploads/2022/09/Call-of-Duty-Modern-Warfare-II-Cover-Art.jpg?lossy=1&strip=0&webp=1',
+      'https://wallpapercave.com/wp/wp11704100.jpg',
+      'https://wallpapercave.com/wp/wp11704136.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E',
+    shorts: [
+      'https://www.youtube.com/embed/ILUywkhzNg0',
+      'https://www.youtube.com/embed/vSyvcfxgNC0',
+      'https://www.youtube.com/embed/FJHC5NttChE'
+    ],
   },
   {
     id: 'cod-mw3',

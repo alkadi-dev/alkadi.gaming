@@ -286,6 +286,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'b2203835.smushcdn.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
