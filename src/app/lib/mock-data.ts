@@ -708,11 +708,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: WWII',
     description: 'Call of Duty: WWII creates the definitive World War II next-generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.',
     category: 'Shooter',
-    thumbnail: getImg('cod-ww2-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp2259852.png',
     size: '80 GB',
-    images: [getImg('cod-ww2-thumb'), 'https://picsum.photos/seed/codww2-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/D4Q_oJRn-zU',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://wallpapercave.com/wp/wp2259852.png',
+      'https://wallpapercave.com/wp/wp2203840.png',
+      'https://wallpapercave.com/wp/wp2259859.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/D4Q_XYVescc',
+    shorts: [
+      'https://www.youtube.com/embed/PXeUiqhQtY8',
+      'https://www.youtube.com/embed/57Hs_eUDt8g',
+      'https://www.youtube.com/embed/LtIw3GlH-xk'
+    ],
   },
   {
     id: 'cod-mw',
