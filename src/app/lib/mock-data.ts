@@ -613,10 +613,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     category: 'Shooter',
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
+    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
     size: '55 GB',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
+      'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
       'https://getwallpapers.com/wallpaper/full/9/8/5/962879-new-sniper-elite-wallpapers-1920x1080.jpg'
     ],
@@ -784,11 +784,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Crimson Desert',
     description: 'An open-world action-adventure game depicting a realistic world of mercenaries on the continent of Pywel.',
     category: 'RPG',
-    thumbnail: getImg('crimson-thumb'),
+    thumbnail: 'https://wallpaperaccess.com/full/26027678.jpg',
     size: '80 GB',
-    images: [getImg('crimson-hero'), getImg('crimson-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/tZ_G7Yp90T0',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://wallpaperaccess.com/full/26027678.jpg',
+      'https://wallpaperaccess.com/full/26027727.jpg',
+      'https://wallpaperaccess.com/full/26027691.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/YHhwdyWkwTQ',
+    shorts: [
+      'https://www.youtube.com/embed/914vI_3FON4',
+      'https://www.youtube.com/embed/Vb6oDZ6uGg8',
+      'https://www.youtube.com/embed/j-mCAqn0Rl0'
+    ],
   },
   {
     id: 'spiderman-1',
