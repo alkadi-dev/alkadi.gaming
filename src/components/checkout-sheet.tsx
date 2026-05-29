@@ -9,6 +9,17 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, Trash2, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
@@ -145,14 +156,34 @@ export function CheckoutSheet() {
                 </Button>
               </div>
               
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={clearSelection}
-                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl text-[10px]"
-              >
-                Clear Entire List
-              </Button>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="sm"
+                    className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl text-[10px]"
+                  >
+                    Clear Entire List
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent className="bg-background border-white/10 rounded-3xl">
+                  <AlertDialogHeader>
+                    <AlertDialogTitle className="text-xl font-bold font-headline">Clear entire list?</AlertDialogTitle>
+                    <AlertDialogDescription className="text-muted-foreground">
+                      This action will remove all games from your selection. Are you sure you want to proceed?
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel className="bg-white/5 border-white/10 rounded-xl hover:bg-white/10 transition-colors">No</AlertDialogCancel>
+                    <AlertDialogAction 
+                      onClick={clearSelection}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-xl transition-colors"
+                    >
+                      Yes
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </div>
         )}
