@@ -613,7 +613,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     category: 'Shooter',
-    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252',
     size: '55 GB',
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
@@ -670,11 +670,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Battlefield 6',
     description: 'Battlefield 6 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise.',
     category: 'Shooter',
-    thumbnail: getImg('bf6-thumb'),
+    thumbnail: 'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
     size: '100 GB',
-    images: [getImg('bf6-thumb'), 'https://picsum.photos/seed/bf2042-1/1200/800'],
-    videoUrl: 'https://www.youtube.com/embed/ASzOzrB-n9E',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
+      'https://images.hdqwalls.com/wallpapers/bthumb/the-battlefield-6-sr.jpg',
+      'https://images4.alphacoders.com/722/thumbbig-722618.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/pgNCgJG0vnY',
+    shorts: [
+      'https://www.youtube.com/embed/ZZYuIgDB32o',
+      'https://www.youtube.com/embed/Ri52mAxuISI',
+      'https://www.youtube.com/embed/15uqUoTnlq4'
+    ],
   },
   {
     id: 'cod-v',
