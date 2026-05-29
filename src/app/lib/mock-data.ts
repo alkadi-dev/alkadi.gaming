@@ -19,7 +19,7 @@ const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.ima
 const NEW_SHORTS = [
   'https://www.youtube.com/embed/0d-U2QL2Qvc?si=bHpYGwiXYsGjmox8',
   'https://www.youtube.com/embed/XsaXfkpKPNM?si=jaFUTogTmJJA6Quj',
-  'https://www.youtube.com/embed/ax_HkEnW_ig?si=c10FMUWfn3HkiDuC'
+  'https://www.youtube.com/embed/ax_HkEnW_ig?si=ax_HkEnW_ig'
 ];
 
 export const MOCK_GAMES: GameEntry[] = [
@@ -29,7 +29,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     category: 'Open World',
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
-    size: '119 GB',
+    size: '69 GB',
     images: [
       'https://wallpapercave.com/wp/wp3770429.png',
       'https://images6.alphacoders.com/952/thumbbig-952687.webp',
@@ -48,7 +48,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
     category: 'RPG',
     thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
-    size: '50 GB',
+    size: '32 GB',
     images: [
       'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-in-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
@@ -86,7 +86,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
     category: 'Open World',
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
-    size: '45 GB',
+    size: ' 32 GB',
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://pixelkin.org/wp-content/uploads/2014/11/assassinscreedunityheader.jpg',
@@ -105,7 +105,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'In Assassin’s Creed Mirage, you are Basim, a cunning street thief with nightmarish visions, seeking answers and justice. Join an ancient organization and come to understand a new creed – one that will change Basim’s fate in ways he never could have imagined.',
     category: 'Action',
     thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
-    size: '35 GB',
+    size: '18 GB',
     images: [
       'https://wallpapercave.com/wp/wp11468139.jpg',
       "https://www.wallpapergap.com/cdn/24/343/assassin's-creed-mirage-full-hd-wallpaper-2000x1000.jpg",
@@ -124,7 +124,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Write your own epic odyssey and become a legendary Spartan hero. Forge your destiny in a world on the brink of tearing itself apart. Influence how history unfolds in an ever-changing world shaped by your choices.',
     category: 'RPG',
     thumbnail: 'https://wallpaperaccess.com/full/1110212.jpg',
-    size: '110 GB',
+    size: '35 GB',
     images: [
       'https://wallpaperaccess.com/full/1110212.jpg',
       'https://wallpapers.com/images/hd/4k-assassin-s-creed-odyssey-background-3840-x-2160-vzqb12fb66jcw0tw.jpg',
@@ -162,7 +162,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     category: 'Race',
     thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
-    size: '101 GB',
+    size: '82 GB',
     images: [
       'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
       'https://wallpapercave.com/wp/wp12405375.jpg',
@@ -181,7 +181,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York.',
     category: 'Open World',
     thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
-    size: '86 GB',
+    size: '67 GB',
     images: [
       'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
       'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
@@ -200,7 +200,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world.',
     category: 'Action',
     thumbnail: 'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
-    size: '84 GB',
+    size: '67 GB',
     images: [
       'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/11/God-Of-War-Ragnarok-Jotenheim.jpg?q=50&fit=crop&w=825&dpr=1.5',
@@ -219,7 +219,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     category: 'Open World',
     thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTQ0OTEtOGYyZS01NDU0NGQ0NTllNDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
-    size: '70 GB',
+    size: '55 GB',
     images: [
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTQ0OTEtOGYyZS01NDU0NGQ0NTllNDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vYOrfFQh.jpg',
@@ -276,7 +276,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Detroit, 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings.',
     category: 'Adventure',
     thumbnail: 'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
-    size: '55 GB',
+    size: '32 GB',
     images: [
       'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
       'https://i.pinimg.com/originals/c7/12/ab/c712ab2487a5b047b568afe3bdbe1874.jpg',
@@ -565,7 +565,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4',
     shorts: [
-      'https://www.youtube.com/embed/yKLwbkbWQpc',
+      'https://www.youtube.com/embed/u4-FCsiF5x4',
       'https://www.youtube.com/embed/Qcf8NzbxX2k',
       'https://www.youtube.com/embed/DgAFQ1leafY'
     ],
@@ -596,9 +596,17 @@ export const MOCK_GAMES: GameEntry[] = [
     category: 'Action',
     thumbnail: getImg('fifa26-thumb'),
     size: '85 GB',
-    images: [getImg('fifa26-hero'), getImg('fifa26-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/o3V-GvvzjE4',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://wallpapercave.com/wp/wp15596323.jpg',
+      'https://wallpaperaccess.com/full/22537363.jpg',
+      'https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https://shacknews-www.s3.amazonaws.com/assets/article/2025/10/04/ea-sports-fc_feature.jpg&width=1032&sign=wEovsnYqz4UhLyPzNR94TNIe9giQ3uVrIvUAMW2poww'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/TSi0iJYSQ24',
+    shorts: [
+      'https://www.youtube.com/embed/0DhlHlUX3eA',
+      'https://www.youtube.com/embed/CFwV3YNSxV8',
+      'https://www.youtube.com/embed/3kJu2q4nmCM'
+    ],
   },
   {
     id: 'se4',
