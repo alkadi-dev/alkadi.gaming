@@ -597,6 +597,7 @@ export const MOCK_GAMES: GameEntry[] = [
     thumbnail: getImg('fifa26-thumb'),
     size: '85 GB',
     images: [
+      getImg('fifa26-thumb'),
       'https://wallpapercave.com/wp/wp15596323.jpg',
       'https://wallpaperaccess.com/full/22537363.jpg',
       'https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https://shacknews-www.s3.amazonaws.com/assets/article/2025/10/04/ea-sports-fc_feature.jpg&width=1032&sign=wEovsnYqz4UhLyPzNR94TNIe9giQ3uVrIvUAMW2poww'
