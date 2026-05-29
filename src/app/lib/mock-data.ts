@@ -575,11 +575,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'FIFA 23',
     description: 'Experience the pinnacle of international football with the FIFA World Cup Qatar 2022 and FIFA Women’s World Cup Australia and New Zealand 2023.',
     category: 'Action',
-    thumbnail: getImg('fifa23-thumb'),
+    thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Item+Webp',
     size: '60 GB',
-    images: [getImg('fifa23-hero'), getImg('fifa23-thumb')],
+    images: [
+      'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Item+Webp',
+      'https://wallpaperaccess.com/full/8406398.jpg',
+      'https://wallpaperaccess.com/full/8406387.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/o3V-GvvzjE4',
-    shorts: [...NEW_SHORTS],
+    shorts: [
+      'https://www.youtube.com/embed/cgDlmvU2sA4',
+      'https://www.youtube.com/embed/C2VNcQ6tZbs',
+      'https://www.youtube.com/embed/2fB09IQ4P-0'
+    ],
   },
   {
     id: 'fifa26',

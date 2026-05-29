@@ -250,6 +250,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'prod.assets.earlygamecdn.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
