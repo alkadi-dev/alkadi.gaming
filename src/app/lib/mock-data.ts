@@ -822,10 +822,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Spider-Man: Miles Morales",
     description: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     category: 'Action',
-    thumbnail: 'https://i.ytimg.com/vi_webp/JsNgEBb4ZD0/maxresdefault.webp',
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817190/header.jpg?t=1763569499',
     size: '50 GB',
     images: [
-      'https://i.ytimg.com/vi_webp/JsNgEBb4ZD0/maxresdefault.webp',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817190/header.jpg?t=1763569499',
       'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
       'https://m.media-amazon.com/images/M/MV5BMTU4NjYwNzAxN15BMl5BanBnXkFtZTgwMDkyODI4NjM@.jpg'
     ],
@@ -841,10 +841,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hitman World of Assassination',
     description: 'Enter the world of the ultimate assassin. HITMAN World of Assassination brings together the best of HITMAN, HITMAN 2 and HITMAN 3.',
     category: 'Action',
-    thumbnail: 'https://i.ytimg.com/vi_webp/Z9Q4wAvWBAg/maxresdefault.webp',
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
     size: '80 GB',
     images: [
-      'https://i.ytimg.com/vi_webp/Z9Q4wAvWBAg/maxresdefault.webp',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
       'https://wallpapercat.com/w/full/c/0/5/1658-1920x1080-desktop-1080p-hitman-game-wallpaper-photo.jpg',
       'https://wallpapers.com/images/hd/agent-47-atop-a-skyscraper-hitman-3-ivgh5xgmdm2xrv8f.jpg'
     ],
