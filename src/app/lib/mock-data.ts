@@ -819,14 +819,22 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'miles-morales',
-    title: "Marvel's Spider-Man: Miles Morales",
+    title: "Spider-Man: Miles Morales",
     description: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     category: 'Action',
-    thumbnail: getImg('miles-thumb'),
+    thumbnail: 'https://i.ytimg.com/vi_webp/JsNgEBb4ZD0/maxresdefault.webp',
     size: '50 GB',
-    images: [getImg('miles-hero'), getImg('miles-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/gHzuHo80U2M',
-    shorts: [...NEW_SHORTS],
+    images: [
+      'https://i.ytimg.com/vi_webp/JsNgEBb4ZD0/maxresdefault.webp',
+      'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
+      'https://m.media-amazon.com/images/M/MV5BMTU4NjYwNzAxN15BMl5BanBnXkFtZTgwMDkyODI4NjM@.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/3wHL2VIaFcs',
+    shorts: [
+      'https://www.youtube.com/embed/QHiC4lHrJLg',
+      'https://www.youtube.com/embed/SwNC7OhkfgI',
+      'https://www.youtube.com/embed/dPcCZWPk5sg'
+    ],
   },
   {
     id: 'hitman-woa',
