@@ -822,10 +822,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Spider-Man: Miles Morales",
     description: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     category: 'Action',
-    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817190/header.jpg?t=1763569499',
+    thumbnail: 'https://image.api.playstation.com/vulcan/img/rnd/202010/2812/4PQ6VgOIMgfldTP9kvvXmemC.jpg',
     size: '50 GB',
     images: [
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817190/header.jpg?t=1763569499',
+      'https://image.api.playstation.com/vulcan/img/rnd/202010/2812/4PQ6VgOIMgfldTP9kvvXmemC.jpg',
       'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
       'https://m.media-amazon.com/images/M/MV5BMTU4NjYwNzAxN15BMl5BanBnXkFtZTgwMDkyODI4NjM@.jpg'
     ],

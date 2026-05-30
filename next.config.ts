@@ -40,11 +40,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'images.hdqwalls.com',
+        hostname: '**.hdqwalls.com',
       },
       {
         protocol: 'https',
-        hostname: 'img.uhdpaper.com',
+        hostname: '**.uhdpaper.com',
       },
       {
         protocol: 'https',
@@ -52,7 +52,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.vgchartz.com',
+        hostname: '**.vgchartz.com',
       },
       {
         protocol: 'https',
@@ -60,11 +60,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'static0.thegamerimages.com',
+        hostname: '**.thegamerimages.com',
       },
       {
         protocol: 'https',
-        hostname: 'static0.gamerantimages.com',
+        hostname: '**.gamerantimages.com',
       },
       {
         protocol: 'https',
@@ -80,7 +80,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.wallpapergap.com',
+        hostname: '**.wallpapergap.com',
       },
       {
         protocol: 'https',
@@ -108,7 +108,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.pcgamesn.com',
+        hostname: '**.pcgamesn.com',
       },
       {
         protocol: 'https',
@@ -120,11 +120,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'cdn.displate.com',
+        hostname: '**.displate.com',
       },
       {
         protocol: 'https',
-        hostname: 'images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com',
+        hostname: '**.wixmp.com',
       },
       {
         protocol: 'https',
@@ -132,7 +132,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.thumbculture.co.uk',
+        hostname: '**.thumbculture.co.uk',
       },
       {
         protocol: 'https',
@@ -140,43 +140,43 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'eu-images.contentstack.com',
+        hostname: '**.contentstack.com',
       },
       {
         protocol: 'https',
-        hostname: 'www.grimdarkmagazine.com',
+        hostname: '**.grimdarkmagazine.com',
       },
       {
         protocol: 'https',
-        hostname: 'images.squarespace-cdn.com',
+        hostname: '**.squarespace-cdn.com',
       },
       {
         protocol: 'https',
-        hostname: 'www.igrandtheftauto.com',
+        hostname: '**.igrandtheftauto.com',
       },
       {
         protocol: 'https',
-        hostname: 'prod.assets.earlygamecdn.com',
+        hostname: '**.earlygamecdn.com',
       },
       {
         protocol: 'https',
-        hostname: 'd1lss44hh2trtw.cloudfront.net',
+        hostname: '**.cloudfront.net',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.wccftech.com',
+        hostname: '**.wccftech.com',
       },
       {
         protocol: 'https',
-        hostname: 'www.callofduty.com',
+        hostname: '**.callofduty.com',
       },
       {
         protocol: 'https',
-        hostname: 'b2203835.smushcdn.com',
+        hostname: '**.smushcdn.com',
       },
       {
         protocol: 'https',
-        hostname: 'i.ytimg.com',
+        hostname: '**.ytimg.com',
       },
       {
         protocol: 'https',
@@ -184,7 +184,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'm.media-amazon.com',
+        hostname: '**.media-amazon.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'image.api.playstation.com',
       },
     ],
   },
