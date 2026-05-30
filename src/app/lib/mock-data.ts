@@ -218,10 +218,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     category: 'Open World',
-    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTQ0OTEtOGYyZS01NDU0NGQ0NTllNDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
+    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTR0NDkxLThmMmUtNTQ1NDRkNDU5ZTQzLmpwZyJ9XVswLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
     size: '55 GB',
     images: [
-      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTQ0OTEtOGYyZS01NDU0NGQ0NTllNDMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
+      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTR0NDkxLThmMmUtNTQ1NDRkNDU5ZTQzLmpwZyJ9XVswLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vOrfFQh.jpg',
       'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
     ],
@@ -613,11 +613,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     category: 'Shooter',
-    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+    thumbnail: 'https://wallpaperaccess.com/full/2434001.jpg',
     size: '55 GB',
     images: [
-      'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
+      'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://getwallpapers.com/wallpaper/full/9/8/5/962879-new-sniper-elite-wallpapers-1920x1080.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
@@ -698,9 +698,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/OQ1CwPhE8KQ',
     shorts: [
-      'https://www.youtube.com/embed/OgNLHBqcm_Q',
-      'https://www.youtube.com/embed/cC3yw3h3ErY',
-      'https://www.youtube.com/embed/erQun_LaSC4'
+      'https://www.youtube.com/embed/OgNLHBqcm_Q?si=vUR_RZwN0FKYPhiM',
+      'https://www.youtube.com/embed/cC3yw3h3ErY?si=q18Hc1jn2uhRvZPW',
+      'https://www.youtube.com/embed/erQun_LaSC4?si=UslKf-WRk6wmxrWD'
     ],
   },
   {
@@ -715,11 +715,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp2203840.png',
       'https://wallpapercave.com/wp/wp2259859.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/D4Q_XYVescc',
+    videoUrl: 'https://www.youtube.com/embed/D4Q_XYVescc?si=fu2UAMAHfVTECBcY',
     shorts: [
-      'https://www.youtube.com/embed/PXeUiqhQtY8',
-      'https://www.youtube.com/embed/57Hs_eUDt8g',
-      'https://www.youtube.com/embed/LtIw3GlH-xk'
+      'https://www.youtube.com/embed/PXeUiqhQtY8?si=vo1_HsltbNZUu1mg',
+      'https://www.youtube.com/embed/57Hs_eUDt8g?si=PwyDdoaUhK8eJmN-',
+      'https://www.youtube.com/embed/LtIw3GlH-xk?si=WCs_MQDEHSoKHkzK'
     ],
   },
   {
@@ -736,9 +736,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI',
     shorts: [
-      'https://www.youtube.com/embed/KurHR-5VmIw',
-      'https://www.youtube.com/embed/cUCbtpMkZQM',
-      'https://www.youtube.com/embed/WzlKc5HmXbU'
+      'https://www.youtube.com/embed/KurHR-5VmIw?si=bB3SJvHpnO1vgE7a',
+      'https://www.youtube.com/embed/cUCbtpMkZQM?si=b4E38CeFQzjvlqQL',
+      'https://www.youtube.com/embed/WzlKc5HmXbU?si=KxJ3XeffOL0EMr9I'
     ],
   },
   {
@@ -753,11 +753,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp11704100.jpg',
       'https://wallpapercave.com/wp/wp11704136.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E',
+    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E?si=OYPDMavvE_Lz-Ttw',
     shorts: [
-      'https://www.youtube.com/embed/ILUywkhzNg0',
-      'https://www.youtube.com/embed/vSyvcfxgNC0',
-      'https://www.youtube.com/embed/FJHC5NttChE'
+      'https://www.youtube.com/embed/ILUywkhzNg0?si=5XJWGly6XMRjZBtF',
+      'https://www.youtube.com/embed/vSyvcfxgNC0?si=B4L2VLUMk95oiZDo',
+      'https://www.youtube.com/embed/FJHC5NttChE?si=y0jr1Kkky_3KKlcu'
     ],
   },
   {
@@ -772,11 +772,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp3993550.jpg',
       'https://wallpapercave.com/wp/wp13132336.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8',
+    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8?si=HMyCHgQmznLQvxcR',
     shorts: [
-      'https://www.youtube.com/embed/u-O4uRNBBuc',
-      'https://www.youtube.com/embed/GD4DphX5Sbo',
-      'https://www.youtube.com/embed/brbTGmcdWTk'
+      'https://www.youtube.com/embed/u-O4uRNBBuc?si=k9A8HZoHbVbUNuTr',
+      'https://www.youtube.com/embed/GD4DphX5Sbo?si=dnf_pnh6B0mn9IOh',
+      'https://www.youtube.com/embed/brbTGmcdWTk?si=n-YDcFY-FmwbkzUJ'
     ],
   },
   {
@@ -791,11 +791,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/26027727.jpg',
       'https://wallpaperaccess.com/full/26027691.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/YHhwdyWkwTQ',
+    videoUrl: 'https://www.youtube.com/embed/YHhwdyWkwTQ?si=vVvSCMKfPQrx94da',
     shorts: [
-      'https://www.youtube.com/embed/914vI_3FON4',
-      'https://www.youtube.com/embed/Vb6oDZ6uGg8',
-      'https://www.youtube.com/embed/j-mCAqn0Rl0'
+      'https://www.youtube.com/embed/914vI_3FON4?si=UhEkGF06ya9kC92M',
+      'https://www.youtube.com/embed/Vb6oDZ6uGg8?si=zSAkYHUcAV65GMku',
+      'https://www.youtube.com/embed/j-mCAqn0Rl0?si=OQ7JrtCOHcmpp8dO'
     ],
   },
   {
@@ -810,11 +810,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp11084730.jpg',
       'https://wallpapercave.com/wp/wp4585692.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxss',
+    videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxss?si=xL7CjWH7fdAJY5zc',
     shorts: [
-      'https://www.youtube.com/embed/fAnIUbnOekA',
-      'https://www.youtube.com/embed/JrSIqSKGXes',
-      'https://www.youtube.com/embed/40uN7Bg_RVc'
+      'https://www.youtube.com/embed/fAnIUbnOekA?si=NNKuLiQJ-zuU2SvG',
+      'https://www.youtube.com/embed/JrSIqSKGXes?si=SMcz-i49ByOLuXLo',
+      'https://www.youtube.com/embed/40uN7Bg_RVc?si=zhXxigjHLzbq3nVw'
     ],
   },
   {
@@ -829,11 +829,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
       'https://m.media-amazon.com/images/M/MV5BMTU4NjYwNzAxN15BMl5BanBnXkFtZTgwMDkyODI4NjM@.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/3wHL2VIaFcs',
+    videoUrl: 'https://www.youtube.com/embed/3wHL2VIaFcs?si=9w26fcN_y_1GD1Yj',
     shorts: [
-      'https://www.youtube.com/embed/QHiC4lHrJLg',
-      'https://www.youtube.com/embed/SwNC7OhkfgI',
-      'https://www.youtube.com/embed/dPcCZWPk5sg'
+      'https://www.youtube.com/embed/QHiC4lHrJLg?si=cBfGcwGUb-5jjrxV',
+      'https://www.youtube.com/embed/SwNC7OhkfgI?si=rKPg0GpSI2h_z66U',
+      'https://www.youtube.com/embed/dPcCZWPk5sg?si=r1r4cHYgUsrO4ouM'
     ],
   },
   {
@@ -848,11 +848,99 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercat.com/w/full/c/0/5/1658-1920x1080-desktop-1080p-hitman-game-wallpaper-photo.jpg',
       'https://wallpapers.com/images/hd/agent-47-atop-a-skyscraper-hitman-3-ivgh5xgmdm2xrv8f.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/WB2BSbaRmgY',
+    videoUrl: 'https://www.youtube.com/embed/WB2BSbaRmgY?si=4ul8utH91Rlj1EQx',
     shorts: [
-      'https://www.youtube.com/embed/AQrn7rMVTLg',
-      'https://www.youtube.com/embed/rH5k5UMh2fo',
-      'https://www.youtube.com/embed/hq9jAZ4jC64'
+      'https://www.youtube.com/embed/AQrn7rMVTLg?si=-P_jfJW4armDDmqx',
+      'https://www.youtube.com/embed/rH5k5UMh2fo?si=V78BvYg-zuGc6ZKm',
+      'https://www.youtube.com/embed/hq9jAZ4jC64?si=TvlVXRPPdlulEcME'
     ],
+  },
+  {
+    id: 'gow-2018',
+    title: 'God of War',
+    description: 'His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.',
+    category: 'Action',
+    thumbnail: getImg('gow-thumb'),
+    size: '45 GB',
+    images: [getImg('gow-hero'), getImg('gow-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/K0u_k117ek0',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'fc4',
+    title: 'Far Cry 4',
+    description: 'Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are Ajay Ghale. Traveling to Kyrat to fulfill your mother’s dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.',
+    category: 'Adventure',
+    thumbnail: getImg('farcry4-thumb'),
+    size: '31 GB',
+    images: [getImg('farcry4-hero'), getImg('farcry4-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/69p0LNo2tqY',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'gotham-k',
+    title: 'Gotham Knights',
+    description: 'Batman is dead. A new expansive, criminal underworld has swept the streets of Gotham City. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect Gotham, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
+    category: 'Action',
+    thumbnail: getImg('gotham-thumb'),
+    size: '45 GB',
+    images: [getImg('gotham-hero'), getImg('gotham-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/IhVf_3Te_GM',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'ready-not',
+    title: 'Ready or Not',
+    description: 'Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations.',
+    category: 'Shooter',
+    thumbnail: getImg('readyornot-thumb'),
+    size: '50 GB',
+    images: [getImg('readyornot-hero'), getImg('readyornot-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/qL_qG8VTMmE',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'echoes',
+    title: 'Echoes of the End',
+    description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
+    category: 'Adventure',
+    thumbnail: getImg('echoes-thumb'),
+    size: '40 GB',
+    images: [getImg('echoes-hero'), getImg('echoes-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'cronos',
+    title: 'Cronos: The New Dawn',
+    description: 'A third-person survival horror game from Bloober Team. Explore a world where time travel and twisted creatures await in a story of survival and uncovering the secrets of a dying civilization.',
+    category: 'Horror',
+    thumbnail: getImg('cronos-thumb'),
+    size: '50 GB',
+    images: [getImg('cronos-hero'), getImg('cronos-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'dl2',
+    title: 'Dying Light 2 Stay Human',
+    description: 'The virus won and civilization has fallen back into the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive and reshape the world.',
+    category: 'Open World',
+    thumbnail: getImg('dl2-thumb'),
+    size: '60 GB',
+    images: [getImg('dl2-hero'), getImg('dl2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/98o68P6f_7Y',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'di2',
+    title: 'Dead Island 2',
+    description: 'A deadly virus is spreading across Los Angeles, turning its inhabitants into ravenous zombies. The city is in quarantine and the military has retreated. Bitten, infected, but more than just immune, you learn to harness the zombie within.',
+    category: 'Action',
+    thumbnail: getImg('di2-thumb'),
+    size: '54 GB',
+    images: [getImg('di2-hero'), getImg('di2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
   }
 ];
