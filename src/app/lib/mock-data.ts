@@ -227,7 +227,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8',
     shorts: [
-      'https://www.youtube.com/embed/DWUp56Eqw-U?si=D0vuwhtV6rIWCNNp',
+      'https://www.youtube.com/embed/DWUp56Eqw5U?si=D0vuwhtV6rIWCNNp',
       'https://www.youtube.com/embed/AQFfvd9k5Kw?si=reTyJg11daABpJlV',
       'https://www.youtube.com/embed/jqquRqfAWHA?si=dB9kfW2G9T_tK0bZ'
     ],
@@ -883,11 +883,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Far Cry 4',
     description: 'Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are Ajay Ghale. Traveling to Kyrat to fulfill your mother’s dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.',
     category: 'Adventure',
-    thumbnail: getImg('farcry4-thumb'),
+    thumbnail: 'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
     size: '31 GB',
-    images: [getImg('farcry4-hero'), getImg('farcry4-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/69p0LNo2tqY',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
+      'https://wallpapercave.com/wp/wp1837519.jpg',
+      'https://wallpapers.com/images/featured/far-cry-4-background-u5ljpycnwwbjv4yn.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/7JFOLJv4s6Y?si=XOimZ7qm3sTkB4t_',
+    shorts: [
+      'https://www.youtube.com/embed/1GsMq3zZzQ4?si=YQkUNp-YGWAkaxrH',
+      'https://www.youtube.com/embed/_MDXlbQ2bW0?si=cxN8h0_l1yDCT4Km',
+      'https://www.youtube.com/embed/th3fMJfm9Ak?si=9wqu5RHfdcNoZemh'
+    ]
   },
   {
     id: 'gotham-k',
