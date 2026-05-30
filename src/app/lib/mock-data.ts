@@ -368,7 +368,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 're3',
     title: 'Resident Evil 3',
-    description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
+    description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Archer performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
     category: 'Horror',
     thumbnail: 'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
     size: '25 GB',
@@ -873,9 +873,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/K0u_kAWLJOA?si=OwjtTI9L3B_s5nsJ',
     shorts: [
-      'https://www.youtube.com/embed/CJ_GCPaKywg?si=eGbhkfw_8JheuL3f',
-      'https://www.youtube.com/embed/gOE2BVRCUkM?si=HZt7L56aMkqU3iqH',
-      'https://www.youtube.com/embed/vgAHqzf2hbM?si=T4_t5bTCQmWGZg35'
+      'https://www.youtube.com/embed/sc9OZR3sS30?si=5uwPypU7xeDo2yvk',
+      'https://www.youtube.com/embed/YPWqU9Pmte8?si=R2sRn-2l42gMvW5z',
+      'https://www.youtube.com/embed/jOSGQVJ0iFw?si=IQQe3pgan8AGaeqP'
     ]
   },
   {
