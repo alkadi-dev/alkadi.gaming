@@ -453,8 +453,12 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp13015730.jpg',
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/silent-hill-2-remake-screenshots-3.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
     ],
-    videoUrl: 'https://youtu.be/pyC_qiW_4ZY?si=w2xc_IRiTKSHXhd7',
-    shorts: [...NEW_SHORTS],
+    videoUrl: 'https://www.youtube.com/embed/pyC_qiW_4ZY?si=3Hfo1HanbLku42iz',
+    shorts: [
+      'https://www.youtube.com/embed/w33j0RqVJu8?si=j7a7kDrLFE_K1FAf',
+      'https://www.youtube.com/embed/ilUET2suOK0?si=jBXok38l8NgyoVsh',
+      'https://www.youtube.com/embed/YQqInnJOpOI?si=vOSkoYvCE8jfZzvP'
+    ],
   },
   {
     id: 'got',
