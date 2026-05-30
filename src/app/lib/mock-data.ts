@@ -218,10 +218,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     category: 'Open World',
-    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTR0NDkxLThmMmUtNTQ1NDRkNDU5ZTQzLmpwZyJ9XVswLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
+    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
     size: '55 GB',
     images: [
-      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36407bf0-7675-4fc7-953d-91ab3af07156/debwpo6-883d3fab-7062-4491-8f2e-54544d459e43.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zNjQwN2JmMC03Njc1LTRmYzctOTUzZC05MWFiM2FmMDcxNTYvZGVid3BvNi04ODNkM2ZhYi03MDYyLTR0NDkxLThmMmUtNTQ1NDRkNDU5ZTQzLmpwZyJ9XVswLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.XKAjdSGGNfkWO8z4X11qVeUUkinK4nKdKPNqPYZWO7c',
+      'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vOrfFQh.jpg',
       'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
     ],
@@ -453,7 +453,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp13015730.jpg',
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/silent-hill-2-remake-screenshots-3.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dlQ3Fe69I2w',
+    videoUrl: 'https://youtu.be/pyC_qiW_4ZY?si=w2xc_IRiTKSHXhd7',
     shorts: [...NEW_SHORTS],
   },
   {
@@ -613,11 +613,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     category: 'Shooter',
-    thumbnail: 'https://wallpaperaccess.com/full/2434001.jpg',
+    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
     size: '55 GB',
     images: [
-      'https://wallpaperaccess.com/full/2434001.jpg',
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+      'https://wallpaperaccess.com/full/2434001.jpg',
       'https://getwallpapers.com/wallpaper/full/9/8/5/962879-new-sniper-elite-wallpapers-1920x1080.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
@@ -860,11 +860,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'God of War',
     description: 'His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.',
     category: 'Action',
-    thumbnail: getImg('gow-thumb'),
+    thumbnail: 'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
     size: '45 GB',
-    images: [getImg('gow-hero'), getImg('gow-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/K0u_k117ek0',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
+      'https://images.alphacoders.com/129/thumbbig-1295494.webp',
+      'https://wallpapercave.com/wp/wp3282821.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/K0u_kAWLJOA?si=OwjtTI9L3B_s5nsJ',
+    shorts: [
+      'https://www.youtube.com/embed/CJ_GCPaKywg?si=eGbhkfw_8JheuL3f',
+      'https://www.youtube.com/embed/gOE2BVRCUkM?si=HZt7L56aMkqU3iqH',
+      'https://www.youtube.com/embed/vgAHqzf2hbM?si=T4_t5bTCQmWGZg35'
+    ]
   },
   {
     id: 'fc4',
@@ -923,7 +931,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'dl2',
-    title: 'Dying Light 2 Stay Human',
+    title: 'Dying Light 2 ',
     description: 'The virus won and civilization has fallen back into the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive and reshape the world.',
     category: 'Open World',
     thumbnail: getImg('dl2-thumb'),
