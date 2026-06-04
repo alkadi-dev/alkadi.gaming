@@ -567,7 +567,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.pinimg.com/originals/2c/b9/97/2cb997a4e03c53f49fa6472ceadbbd51.jpg',
       'https://wallpapers.com/images/hd/papel-de-parede-horizon-zero-dawn-kxu12nitxfat9f9j.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5style.css?si=u4-FCsiF5x4',
+    videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4',
     shorts: [
       'https://www.youtube.com/embed/u4-FCsiF5x4',
       'https://www.youtube.com/embed/Qcf8NzbxX2k',
@@ -909,11 +909,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://assetsio.gnwcdn.com/Gotham_Knights_Street_Art_7.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
       'https://wallpapercat.com/w/full/f/6/0/1273477-1920x1080-desktop-full-hd-gotham-knights-game-wallpaper-image.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/wIXJAqs9dG4',
+    videoUrl: 'https://www.youtube.com/embed/wIXJAqs9dG4?si=Sgw8xlJQRlONuhNu',
     shorts: [
-      'https://www.youtube.com/embed/v8JDJ7rzYrA',
-      'https://www.youtube.com/embed/HPdTV5HgLDI',
-      'https://www.youtube.com/embed/nH16zrzoyCI'
+      'https://www.youtube.com/embed/v8JDJ7rzYrA?si=5l82y9bfpefZ_9l-',
+      'https://www.youtube.com/embed/HPdTV5HgLDI?si=3ngjSLBh4saKlWvz',
+      'https://www.youtube.com/embed/nH16zrzoyCI?si=7fjPAGzdgpn0cdlD'
     ]
   },
   {
@@ -921,11 +921,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ready or Not',
     description: 'Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations.',
     category: 'Shooter',
-    thumbnail: getImg('readyornot-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp4571906.png',
     size: '50 GB',
-    images: [getImg('readyornot-hero'), getImg('readyornot-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/qL_qG8VTMmE',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp4571906.png',
+      'https://i.redd.it/vu3g9pw3vtwg1.jpeg',
+      'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A',
+    shorts: [
+      'https://www.youtube.com/embed/2XMOl6PKPn0',
+      'https://www.youtube.com/embed/UI-pPusKCNo',
+      'https://www.youtube.com/embed/jYOfPoXMdQI'
+    ]
   },
   {
     id: 'echoes',
