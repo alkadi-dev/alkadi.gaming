@@ -1149,10 +1149,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Avatar: Frontiers of Pandora',
     description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the open world of the Western Frontier of Pandora.',
     categories: ['Open World', 'Adventure'],
-    thumbnail: 'https://www.creativeuncut.com/gallery-47/art/afop-cover-art.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp9594441.png ',
     size: '90 GB',
     images: [
-      'https://www.creativeuncut.com/gallery-47/art/afop-cover-art.jpg',
+      'https://wallpapercave.com/wp/wp9594441.png',
       'https://wallpapercave.com/wp/wp9594463.jpg',
       'https://preview.redd.it/photo-mode-thread-for-frontiers-of-pandora-v0-r1dnz6yrlb5c1.jpg?width=640&crop=smart&auto=webp&s=f637b3ecc55655499d9dd1cd0379d3b2d268ae93'
     ],

@@ -21,10 +21,11 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export function CheckoutSheet() {
   const { selectedIds, removeFromSelection, clearSelection } = useSelection();
@@ -32,7 +33,7 @@ export function CheckoutSheet() {
 
   const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
 
-  const calculateTotalSize = () => {
+  const calculateTotalSizeNum = () => {
     let totalGb = 0;
     selectedGames.forEach(game => {
       const sizeValue = parseFloat(game.size.replace(/[^\d.]/g, ''));
@@ -40,16 +41,17 @@ export function CheckoutSheet() {
         totalGb += sizeValue;
       }
     });
-    return totalGb.toFixed(1);
+    return totalGb;
   };
+
+  const totalSizeNum = calculateTotalSizeNum();
 
   const generateListContent = () => {
     const listText = selectedGames
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    const totalSize = calculateTotalSize();
-    return `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSize} GB`;
+    return `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSizeNum.toFixed(1)} GB`;
   };
 
   const handleWhatsAppRedirect = () => {
@@ -57,23 +59,29 @@ export function CheckoutSheet() {
 
     const finalContent = generateListContent();
     
-    // Copy to clipboard first to ensure it's available for pasting
     navigator.clipboard.writeText(finalContent).then(() => {
       toast({
         title: "List Copied & Redirecting",
         description: "The list is on your clipboard. You can paste it in WhatsApp!",
       });
 
-      // Redirect to WhatsApp with pre-filled text attempt
       const encodedText = encodeURIComponent(finalContent);
       const whatsappUrl = `https://wa.link/vhw7ol?text=${encodedText}`;
       window.open(whatsappUrl, '_blank');
     }).catch(() => {
-      // Fallback if clipboard copy fails
       const whatsappUrl = `https://wa.link/vhw7ol`;
       window.open(whatsappUrl, '_blank');
     });
   };
+
+  const getWarning = () => {
+    if (totalSizeNum > 900) return "You have surpassed 1 TB.";
+    if (totalSizeNum > 450) return "You are now using the 1 TB drive.";
+    if (totalSizeNum > 280) return "You have exceeded 280 GB and are using the 500 GB drive.";
+    return null;
+  };
+
+  const warning = getWarning();
 
   return (
     <Sheet>
@@ -138,21 +146,34 @@ export function CheckoutSheet() {
             </ScrollArea>
 
             <div className="p-4 sm:p-6 bg-background/50 backdrop-blur-md border-t border-white/5 space-y-3">
-              <div className="bg-secondary/20 p-3 sm:p-4 rounded-xl border border-white/5 mb-2">
+              <div className="bg-secondary/20 p-3 sm:p-4 rounded-xl border border-white/5 mb-4">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">Games</span>
                   <span className="font-bold text-sm">{selectedGames.length}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">Total Storage</span>
-                  <span className="font-bold text-sm text-primary">{calculateTotalSize()} GB</span>
+                  <span className="font-bold text-sm text-primary">{totalSizeNum.toFixed(1)} GB</span>
                 </div>
               </div>
+
+              {warning && (
+                <Alert className={`mb-4 py-3 px-4 rounded-xl border-none ${
+                  totalSizeNum > 900 ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
+                }`}>
+                  <div className="flex items-center gap-2">
+                    {totalSizeNum > 900 ? <AlertTriangle className="h-4 w-4" /> : <Info className="h-4 w-4" />}
+                    <AlertDescription className="text-[11px] font-bold uppercase leading-tight tracking-tight">
+                      {warning}
+                    </AlertDescription>
+                  </div>
+                </Alert>
+              )}
               
               <div className="grid grid-cols-1 gap-2">
                 <Button 
                   onClick={handleWhatsAppRedirect} 
-                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-5 font-bold text-xs sm:text-sm"
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-xs sm:text-sm"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" /> Open in WhatsApp
                 </Button>
@@ -163,7 +184,7 @@ export function CheckoutSheet() {
                   <Button 
                     variant="ghost" 
                     size="default"
-                    className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl py-6 text-sm font-medium"
+                    className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl py-4 text-xs font-medium"
                   >
                     Clear Entire List
                   </Button>
