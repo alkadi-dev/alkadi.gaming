@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -627,7 +628,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
     shorts: [
       'https://www.youtube.com/embed/atYEA0FbDgc?si=rISGmJeM8wodveqh',
-      'https://www.youtube.com/embed/1myPuSGZCZw?si=i7eusCNbNE01gXtE',
+      'https://www.youtube.com/embed/1myPuSGZCZw?si=1myPuSGZCZw',
       'https://www.youtube.com/embed/X1tEMQHZao8?si=719f0wzWF721cwXm'
     ],
   },
@@ -1010,5 +1011,269 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/zxzBMbStY-M?si=stzdNfhPJflfrqKv',
       'https://www.youtube.com/embed/pJoir07MlBY?si=Lfuo0JmM3CpICTDk'
     ]
+  },
+  {
+    id: 'daysgone',
+    title: 'Days Gone',
+    description: 'Ride and fight into a deadly, post-pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live.',
+    categories: ['Open World', 'Horror'],
+    thumbnail: getImg('daysgone-thumb'),
+    size: '60 GB',
+    images: [getImg('daysgone-hero'), getImg('daysgone-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/fkGCLIQ51zQ',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'revillage',
+    title: 'Resident Evil Village',
+    description: 'Experience survival horror like never before in the eighth major installment in the storied Resident Evil franchise - Resident Evil Village.',
+    categories: ['Horror', 'Action'],
+    thumbnail: getImg('revillage-thumb'),
+    size: '30 GB',
+    images: [getImg('revillage-hero'), getImg('revillage-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'rebio',
+    title: 'Resident Evil Biohazard',
+    description: 'Set in modern day rural America and taking place after the dramatic events of Resident Evil 6, players experience the terror directly from the first person perspective.',
+    categories: ['Horror', 'Adventure'],
+    thumbnail: getImg('rebio-thumb'),
+    size: '24 GB',
+    images: [getImg('rebio-hero'), getImg('rebio-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'plague',
+    title: 'A Plague Tale: Requiem',
+    description: 'Embark on a heartrending journey into a brutal, breathtaking world, and discover the cost of saving those you love in a desperate struggle for survival.',
+    categories: ['Adventure', 'Horror'],
+    thumbnail: getImg('plague-thumb'),
+    size: '50 GB',
+    images: [getImg('plague-hero'), getImg('plague-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'elden-shadow',
+    title: 'Elden Ring: Shadow of the Erdtree',
+    description: 'The Shadow of the Erdtree expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
+    categories: ['RPG', 'Open World'],
+    thumbnail: getImg('elden-shadow-thumb'),
+    size: '15 GB',
+    images: [getImg('elden-shadow-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'ninja-gaiden-4',
+    title: 'Ninja Gaiden 4',
+    description: 'The legendary ninja returns in a high-octane action experience. Master the art of the blade in this long-awaited sequel.',
+    categories: ['Action', 'Adventure'],
+    thumbnail: getImg('ninjag4-thumb'),
+    size: '40 GB',
+    images: [getImg('ninjag4-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'exp33',
+    title: 'Clair Obscur: Expedition 33',
+    description: 'In this reactive turn-based RPG, take part in a desperate quest to destroy the Paintress so she can never paint death again.',
+    categories: ['RPG', 'Adventure'],
+    thumbnail: getImg('exp33-thumb'),
+    size: '45 GB',
+    images: [getImg('exp33-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'avatar-pandora',
+    title: 'Avatar: Frontiers of Pandora',
+    description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the open world of the Western Frontier of Pandora.',
+    categories: ['Open World', 'Adventure'],
+    thumbnail: getImg('avatar-pandora-thumb'),
+    size: '90 GB',
+    images: [getImg('avatar-pandora-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'reanimal',
+    title: 'REANIMAL',
+    description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
+    categories: ['Horror', 'Adventure'],
+    thumbnail: getImg('reanimal-thumb'),
+    size: '20 GB',
+    images: [getImg('reanimal-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'mgs5',
+    title: 'Metal Gear Solid 5',
+    description: 'The Phantom Pain. A new era for the Metal Gear franchise with cutting-edge technology and a massive open world.',
+    categories: ['Action', 'Open World'],
+    thumbnail: getImg('mgs5-thumb'),
+    size: '30 GB',
+    images: [getImg('mgs5-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'hellblade2',
+    title: 'Senua\'s Saga: Hellblade 2',
+    description: 'The sequel to the award-winning Hellblade: Senua\'s Sacrifice. Senua returns in a brutal journey of survival through the myth and tyranny of Viking Iceland.',
+    categories: ['Adventure', 'Action'],
+    thumbnail: getImg('hellblade2-thumb'),
+    size: '70 GB',
+    images: [getImg('hellblade2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'ds2',
+    title: 'Death Stranding 2',
+    description: 'Hideo Kojima returns with the sequel to Death Stranding. Embark on a new mission to connect the world beyond the UCA.',
+    categories: ['Open World', 'Adventure'],
+    thumbnail: getImg('ds2-thumb'),
+    size: '80 GB',
+    images: [getImg('ds2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'jc4',
+    title: 'Just Cause 4',
+    description: 'Rogue agent Rico Rodriguez journeys to Solis, a huge South American world home of conflict, tyranny and extreme weather conditions.',
+    categories: ['Open World', 'Action'],
+    thumbnail: getImg('jc4-thumb'),
+    size: '42 GB',
+    images: [getImg('jc4-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'mafia-old',
+    title: 'Mafia: The Old Country',
+    description: 'Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily.',
+    categories: ['Open World', 'Action'],
+    thumbnail: getImg('mafia-old-thumb'),
+    size: '50 GB',
+    images: [getImg('mafia-old-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'mafia3',
+    title: 'Mafia 3: Definitive Edition',
+    description: 'Part three of the Mafia crime saga – 1968, New Bordeaux, LA. Lincoln Clay knows this: family isn’t who you’re born with, it’s who you die for.',
+    categories: ['Open World', 'Action'],
+    thumbnail: getImg('mafia3-thumb'),
+    size: '50 GB',
+    images: [getImg('mafia3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'maxpayne3',
+    title: 'Max Payne 3',
+    description: 'Max Payne 3 is a seamless, highly detailed, cinematic experience from Rockstar Games.',
+    categories: ['Action', 'Shooter'],
+    thumbnail: getImg('maxpayne3-thumb'),
+    size: '30 GB',
+    images: [getImg('maxpayne3-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'ferocious',
+    title: 'Ferocious',
+    description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
+    categories: ['Shooter', 'Horror'],
+    thumbnail: getImg('ferocious-thumb'),
+    size: '40 GB',
+    images: [getImg('ferocious-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'nfs-unbound',
+    title: 'Need for Speed Unbound',
+    description: 'The world is your canvas in Need for Speed Unbound. Prove you have what it takes to win The Grand, Lakeshore’s ultimate street racing challenge.',
+    categories: ['Race', 'Open World'],
+    thumbnail: getImg('nfs-unbound-thumb'),
+    size: '35 GB',
+    images: [getImg('nfs-unbound-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'nfs-heat',
+    title: 'Need for Speed Heat',
+    description: 'Hustle by day and risk it all by night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.',
+    categories: ['Race', 'Open World'],
+    thumbnail: getImg('nfs-heat-thumb'),
+    size: '30 GB',
+    images: [getImg('nfs-heat-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'thecrew2',
+    title: 'The Crew 2',
+    description: 'Take on the American motorsports scene as you explore and dominate the land, air, and sea of the USA in one of the most exhilarating open worlds ever created.',
+    categories: ['Race', 'Open World'],
+    thumbnail: getImg('crew2-thumb'),
+    size: '40 GB',
+    images: [getImg('crew2-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'forza6',
+    title: 'Forza Horizon 6',
+    description: 'The next evolution of the ultimate open-world driving festival. Speed across breathtaking landscapes in hundreds of the world\'s greatest cars.',
+    categories: ['Race', 'Open World'],
+    thumbnail: getImg('forza-thumb'),
+    size: '100 GB',
+    images: [getImg('forza-hero')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'wukong',
+    title: 'Black Myth: Wukong',
+    description: 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. The story is based on Journey to the West, one of the Four Great Classical Novels of Chinese literature.',
+    categories: ['RPG', 'Action'],
+    thumbnail: getImg('wukong-thumb'),
+    size: '120 GB',
+    images: [getImg('wukong-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/O2nNGeCDQLU',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'stray',
+    title: 'Stray',
+    description: 'Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
+    categories: ['Adventure', 'Action'],
+    thumbnail: getImg('stray-thumb'),
+    size: '10 GB',
+    images: [getImg('stray-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/u84hRUQlaio',
+    shorts: [...NEW_SHORTS]
+  },
+  {
+    id: 'hfw',
+    title: 'Horizon Forbidden West',
+    description: 'Join Aloy as she braves the Forbidden West – a majestic but dangerous frontier that conceals mysterious new threats.',
+    categories: ['Open World', 'RPG'],
+    thumbnail: getImg('hfw-thumb'),
+    size: '90 GB',
+    images: [getImg('hfw-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/Lq594XmpPBg',
+    shorts: [...NEW_SHORTS]
   }
 ];

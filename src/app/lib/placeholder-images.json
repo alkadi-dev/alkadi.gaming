@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -737,6 +738,24 @@
       "description": "Silent Hill 2 thumbnail",
       "imageUrl": "https://picsum.photos/seed/sh2/600/400",
       "imageHint": "foggy street"
+    },
+    {
+      "id": "wukong-thumb",
+      "description": "Black Myth Wukong thumbnail",
+      "imageUrl": "https://picsum.photos/seed/wukong/600/400",
+      "imageHint": "monkey king"
+    },
+    {
+      "id": "stray-thumb",
+      "description": "Stray thumbnail",
+      "imageUrl": "https://picsum.photos/seed/stray/600/400",
+      "imageHint": "cat robot"
+    },
+    {
+      "id": "hfw-thumb",
+      "description": "Horizon Forbidden West thumbnail",
+      "imageUrl": "https://picsum.photos/seed/hfw/600/400",
+      "imageHint": "tribal hunter"
     }
   ]
 }
