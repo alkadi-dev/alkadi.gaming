@@ -121,7 +121,9 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         
         <div className="absolute bottom-0 left-0 right-0 p-6 container mx-auto">
           <div className="flex flex-wrap gap-2 mb-3">
-            <Badge className="bg-primary text-white px-3 py-0.5 text-[10px] uppercase tracking-wider">{game.category}</Badge>
+            {game.categories.map((cat, i) => (
+              <Badge key={i} className="bg-primary text-white px-3 py-0.5 text-[10px] uppercase tracking-wider">{cat}</Badge>
+            ))}
             <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-3 py-0.5 text-[10px] flex items-center gap-1">
               <HardDrive className="h-3 w-3" /> {game.size}
             </Badge>

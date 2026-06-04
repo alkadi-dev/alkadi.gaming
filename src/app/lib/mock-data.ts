@@ -4,7 +4,7 @@ export interface GameEntry {
   id: string;
   title: string;
   description: string;
-  category: string;
+  categories: string[];
   thumbnail: string;
   images: string[];
   videoUrl: string;
@@ -27,7 +27,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '5',
     title: 'Red Dead Redemption 2',
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
-    category: 'Open World',
+    categories: ['Open World', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
     size: '69 GB',
     images: [
@@ -46,7 +46,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '1',
     title: 'The Witcher 3',
     description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
-    category: 'RPG',
+    categories: ['RPG', 'Adventure'],
     thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
     size: '32 GB',
     images: [
@@ -65,7 +65,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-shadows',
     title: "Assassin's Creed Shadows",
     description: 'Experience an epic historical action-adventure story set in feudal Japan. Become a lethal shinobi assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
-    category: 'Open World',
+    categories: ['Open World', 'RPG'],
     thumbnail: 'https://wallpapercave.com/wp/wp13980393.jpg',
     size: '70 GB',
     images: [
@@ -84,7 +84,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-unity',
     title: "Assassin's Creed Unity",
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
-    category: 'Open World',
+    categories: ['Open World', 'Action'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: ' 32 GB',
     images: [
@@ -103,7 +103,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-mirage',
     title: "Assassin's Creed Mirage",
     description: 'In Assassin’s Creed Mirage, you are Basim, a cunning street thief with nightmarish visions, seeking answers and justice. Join an ancient organization and come to understand a new creed – one that will change Basim’s fate in ways he never could have imagined.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
     size: '18 GB',
     images: [
@@ -122,7 +122,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-odyssey',
     title: "Assassin's Creed Odyssey",
     description: 'Write your own epic odyssey and become a legendary Spartan hero. Forge your destiny in a world on the brink of tearing itself apart. Influence how history unfolds in an ever-changing world shaped by your choices.',
-    category: 'RPG',
+    categories: ['RPG', 'Action'],
     thumbnail: 'https://wallpaperaccess.com/full/1110212.jpg',
     size: '35 GB',
     images: [
@@ -141,7 +141,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-syndicate',
     title: "Assassin's Creed Syndicate",
     description: 'London, 1868. In the heart of the Industrial Revolution, lead your underworld organization and grow your influence to fight those who exploit the less privileged in the name of progress.',
-    category: 'Open World',
+    categories: ['Open World', 'Adventure'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: '40 GB',
     images: [
@@ -160,7 +160,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '2',
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
-    category: 'Race',
+    categories: ['Race', 'Open World'],
     thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
     size: '82 GB',
     images: [
@@ -179,7 +179,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '6',
     title: 'Spider-Man 2',
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York.',
-    category: 'Open World',
+    categories: ['Open World', 'Action'],
     thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
     size: '67 GB',
     images: [
@@ -198,7 +198,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '10',
     title: 'God of War Ragnarök',
     description: 'Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
     size: '67 GB',
     images: [
@@ -217,7 +217,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '12',
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
-    category: 'Open World',
+    categories: ['Open World', 'RPG'],
     thumbnail: 'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
     size: '55 GB',
     images: [
@@ -236,7 +236,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '50',
     title: 'Resident Evil 4',
     description: 'Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S. Kennedy has been dispatched to rescue the president\'s kidnapped daughter.',
-    category: 'Horror',
+    categories: ['Horror', 'Action'],
     thumbnail: 'https://wallpaperaccess.com/full/8929582.jpg',
     size: '58 GB',
     images: [
@@ -255,7 +255,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '55',
     title: 'Elden Ring',
     description: 'Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
-    category: 'RPG',
+    categories: ['RPG', 'Open World'],
     thumbnail: 'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
     size: '60 GB',
     images: [
@@ -274,7 +274,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '36',
     title: 'Detroit: Become Human',
     description: 'Detroit, 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings.',
-    category: 'Adventure',
+    categories: ['Adventure', 'Open World'],
     thumbnail: 'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
     size: '32 GB',
     images: [
@@ -293,7 +293,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: '40',
     title: 'Batman: Arkham Knight',
     description: 'Batman: Arkham Knight brings the award-winning Arkham trilogy from Rocksteady Studios to its epic conclusion.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp1835411.jpg',
     size: '45 GB',
     images: [
@@ -312,7 +312,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fc5',
     title: 'Far Cry 5',
     description: 'Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden\'s Gate. Stand up to cult leader Joseph Seed and his siblings, the Heralels, to spark the fires of resistance and liberate the besieged community.',
-    category: 'Adventure',
+    categories: ['Adventure', 'Open World'],
     thumbnail: 'https://wallpapers.com/images/featured/far-cry-5-background-b36npu7jc7uygn0x.jpg',
     size: '40 GB',
     images: [
@@ -331,7 +331,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 're2',
     title: 'Resident Evil 2',
     description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh-eating zombies roam the streets for survivors.',
-    category: 'Horror',
+    categories: ['Horror', 'Action'],
     thumbnail: 'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
     size: '26 GB',
     images: [
@@ -350,7 +350,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'stalker2',
     title: 'STALKER 2',
     description: 'Heart of Chornobyl. Chornobyl Exclusion Zone has changed dramatically after the second second explosion in 2006. Dangerous mutants, deadly anomalies, and warring factions have made the Zone a very tough place to survive.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Horror'],
     thumbnail: 'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
     size: '150 GB',
     images: [
@@ -369,7 +369,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 're3',
     title: 'Resident Evil 3',
     description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
-    category: 'Horror',
+    categories: ['Horror', 'Action'],
     thumbnail: 'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
     size: '25 GB',
     images: [
@@ -388,7 +388,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'jedi-survivor',
     title: 'Star Wars Jedi: Survivor',
     description: 'The story of Cal Kestis continues in Star Wars Jedi: Survivor, a third-person galaxy-spanning action-adventure game from Respawn Entertainment.',
-    category: 'Adventure',
+    categories: ['Adventure', 'RPG'],
     thumbnail: 'https://wallpapercave.com/wp/wp12005399.jpg',
     size: '155 GB',
     images: [
@@ -407,7 +407,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'nightmares3',
     title: 'Little Nightmares 3',
     description: 'Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere.',
-    category: 'Horror',
+    categories: ['Horror', 'Adventure'],
     thumbnail: 'https://i.redd.it/8wnn4vuu4rjb1.jpg',
     size: '30 GB',
     images: [
@@ -426,7 +426,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'alanwake2',
     title: 'Alan Wake 2',
     description: 'A string of ritualistic murders threatens Bright Falls, an idyllic small-town community in the Pacific Northwest. Saga Anderson, an accomplished FBI agent, arrives to investigate.',
-    category: 'Horror',
+    categories: ['Horror', 'Adventure'],
     thumbnail: 'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
     size: '90 GB',
     images: [
@@ -445,7 +445,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'silenthill2',
     title: 'Silent Hill 2',
     description: 'Having received a letter from his deceased wife, James proceeds to where they shared so many memories, in the hope of seeing her one more time: Silent Hill.',
-    category: 'Horror',
+    categories: ['Horror', 'Adventure'],
     thumbnail: 'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
     size: '50 GB',
     images: [
@@ -464,7 +464,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'got',
     title: 'Ghost of Tsushima',
     description: 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet.',
-    category: 'Open World',
+    categories: ['Open World', 'Action'],
     thumbnail: 'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
     size: '60 GB',
     images: [
@@ -483,7 +483,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'u4',
     title: 'Uncharted 4: A Thief\'s End',
     description: 'Several years after his last adventure, retired fortune hunter Nathan Drake is forced back into the world of thieves.',
-    category: 'Adventure',
+    categories: ['Adventure', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp2272912.jpg',
     size: '63 GB',
     images: [
@@ -502,7 +502,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'tlou1',
     title: 'The Last of Us Part I',
     description: 'In a ravaged civilization, where infected and hardened survivors run wild, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone.',
-    category: 'Action',
+    categories: ['Action', 'Horror'],
     thumbnail: 'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
     size: '79 GB',
     images: [
@@ -521,7 +521,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'tlou2',
     title: 'The Last of Us Part II',
     description: 'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming.',
-    category: 'Action',
+    categories: ['Action', 'Horror'],
     thumbnail: 'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
     size: '95 GB',
     images: [
@@ -540,7 +540,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'gtav',
     title: 'Grand Theft Auto V',
     description: 'When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld.',
-    category: 'Open World',
+    categories: ['Open World', 'Action'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: '110 GB',
     images: [
@@ -559,7 +559,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'hzd',
     title: 'Horizon Zero Dawn',
     description: 'In an era where Machines roam the land and mankind is no longer the dominant species, a young hunter named Aloy embarks on a journey to discover her destiny.',
-    category: 'Open World',
+    categories: ['Open World', 'RPG'],
     thumbnail: 'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
     size: '72 GB',
     images: [
@@ -578,7 +578,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fifa23',
     title: 'FIFA 23',
     description: 'Experience the pinnacle of international football with the FIFA World Cup Qatar 2022 and FIFA Women’s World Cup Australia and New Zealand 2023.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Item+Webp',
     size: '60 GB',
     images: [
@@ -597,7 +597,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fifa26',
     title: 'FIFA 26',
     description: 'The future of football simulation. Advanced HyperMotion technology and deep career mode improvements bring the beautiful game to life like never before.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp15596323.jpg',
     size: '85 GB',
     images: [
@@ -616,7 +616,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'se4',
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
     size: '55 GB',
     images: [
@@ -635,7 +635,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'wd2',
     title: 'Watch Dogs 2',
     description: 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area.',
-    category: 'Action',
+    categories: ['Action', 'Open World'],
     thumbnail: 'https://getwallpapers.com/wallpaper/full/5/8/8/1077825-watch-dogs-2-wallpapers-2560x1440-windows-7.jpg',
     size: '40 GB',
     images: [
@@ -654,7 +654,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'bf5',
     title: 'Battlefield V',
     description: 'Enter mankind’s greatest conflict with Battlefield V as the series goes back to its roots in a never-before-seen portrayal of World War 2.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpaperaccess.com/full/3495792.jpg',
     size: '50 GB',
     images: [
@@ -673,7 +673,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'bf6',
     title: 'Battlefield 6',
     description: 'Battlefield 6 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
     size: '100 GB',
     images: [
@@ -692,7 +692,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'cod-v',
     title: 'Call of Duty: Vanguard',
     description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper’s precision and blast through enemies in North Africa.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
     size: '95 GB',
     images: [
@@ -711,7 +711,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'cod-ww2',
     title: 'Call of Duty: WWII',
     description: 'Call of Duty: WWII creates the definitive World War II next-generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp2259852.png',
     size: '80 GB',
     images: [
@@ -730,7 +730,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'cod-mw',
     title: 'Call of Duty: Modern Warfare',
     description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
     size: '175 GB',
     images: [
@@ -749,7 +749,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'cod-mw2',
     title: 'Call of Duty: Modern Warfare II',
     description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://b2203835.smushcdn.com/2203835/wp-content/uploads/2022/09/Call-of-Duty-Modern-Warfare-II-Cover-Art.jpg?lossy=1&strip=0&webp=1',
     size: '125 GB',
     images: [
@@ -768,7 +768,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'cod-mw3',
     title: 'Call of Duty: Modern Warfare III',
     description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
     size: '235 GB',
     images: [
@@ -787,7 +787,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'crimson',
     title: 'Crimson Desert',
     description: 'An open-world action-adventure game depicting a realistic world of mercenaries on the continent of Pywel.',
-    category: 'RPG',
+    categories: ['RPG', 'Adventure'],
     thumbnail: 'https://wallpaperaccess.com/full/26027678.jpg',
     size: '80 GB',
     images: [
@@ -806,7 +806,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'spiderman-1',
     title: "Marvel's Spider-Man",
     description: "Starring one of the world's most iconic super heroes, Marvel's Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for.",
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp7593747.jpg',
     size: '70 GB',
     images: [
@@ -825,7 +825,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'miles-morales',
     title: "Spider-Man: Miles Morales",
     description: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://image.api.playstation.com/vulcan/img/rnd/202010/2812/4PQ6VgOIMgfldTP9kvvXmemC.jpg',
     size: '50 GB',
     images: [
@@ -844,7 +844,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'hitman-woa',
     title: 'Hitman World of Assassination',
     description: 'Enter the world of the ultimate assassin. HITMAN World of Assassination brings together the best of HITMAN, HITMAN 2 and HITMAN 3.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
     size: '80 GB',
     images: [
@@ -863,7 +863,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'gow-2018',
     title: 'God of War',
     description: 'His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.',
-    category: 'Action',
+    categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
     size: '45 GB',
     images: [
@@ -882,7 +882,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fc4',
     title: 'Far Cry 4',
     description: 'Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are Ajay Ghale. Traveling to Kyrat to fulfill your mother’s dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.',
-    category: 'Adventure',
+    categories: ['Adventure', 'Action'],
     thumbnail: 'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
     size: '31 GB',
     images: [
@@ -901,7 +901,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'gotham-k',
     title: 'Gotham Knights',
     description: 'Batman is dead. A new expansive, criminal underworld has swept the streets of Gotham City. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect Gotham, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
-    category: 'Action',
+    categories: ['Action', 'Open World'],
     thumbnail: 'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
     size: '45 GB',
     images: [
@@ -920,7 +920,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ready-not',
     title: 'Ready or Not',
     description: 'Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations.',
-    category: 'Shooter',
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp4571906.png',
     size: '50 GB',
     images: [
@@ -939,7 +939,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'echoes',
     title: 'Echoes of the End',
     description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
-    category: 'Adventure',
+    categories: ['Adventure', 'RPG'],
     thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
     size: '40 GB',
     images: [
@@ -958,7 +958,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'cronos',
     title: 'Cronos: The New Dawn',
     description: 'A third-person survival horror game from Bloober Team. Explore a world where time travel and twisted creatures await in a story of survival and uncovering the secrets of a dying civilization.',
-    category: 'Horror',
+    categories: ['Horror', 'Shooter'],
     thumbnail: 'https://wallpapercave.com/wp/wp15668537.jpg',
     size: '50 GB',
     images: [
@@ -977,7 +977,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'dl2',
     title: 'Dying Light 2',
     description: 'The virus won and civilization has fallen back into the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive and reshape the world.',
-    category: 'Open World',
+    categories: ['Open World', 'Horror'],
     thumbnail: 'https://wallpapers.com/images/hd/dying-light-2-cover-jkekl8ltwon8uhq9.jpg',
     size: '60 GB',
     images: [
@@ -996,7 +996,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'di2',
     title: 'Dead Island 2',
     description: 'A deadly virus is spreading across Los Angeles, turning its inhabitants into ravenous zombies. The city is in quarantine and the military has retreated. Bitten, infected, but more than just immune, you learn to harness the zombie within.',
-    category: 'Action',
+    categories: ['Action', 'Horror'],
     thumbnail: 'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
     size: '54 GB',
     images: [

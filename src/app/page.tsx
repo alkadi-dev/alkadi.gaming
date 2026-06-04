@@ -13,7 +13,7 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredGames = MOCK_GAMES.filter((game) => {
-    const matchesCategory = selectedCategory === 'All' || game.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || game.categories.includes(selectedCategory);
     const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });

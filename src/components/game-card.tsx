@@ -51,11 +51,13 @@ export function GameCard({ game }: GameCardProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
           
-          {/* Category Badge - Top Left */}
-          <div className="absolute top-3 left-3">
-            <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm text-[10px] px-2 py-0">
-              {game.category}
-            </Badge>
+          {/* Category Badges - Top Left */}
+          <div className="absolute top-3 left-3 flex flex-col gap-1">
+            {game.categories.map((cat, i) => (
+              <Badge key={i} className="bg-primary/90 text-white border-none backdrop-blur-sm text-[8px] px-1.5 py-0 w-fit uppercase font-bold">
+                {cat}
+              </Badge>
+            ))}
           </div>
 
           {/* Size Label - Bottom Left inside Image */}
