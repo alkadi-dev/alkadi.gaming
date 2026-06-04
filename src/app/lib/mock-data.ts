@@ -928,11 +928,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.redd.it/vu3g9pw3vtwg1.jpeg',
       'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A',
+    videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A?si=S1NP1QRzN-f2v3VA',
     shorts: [
-      'https://www.youtube.com/embed/2XMOl6PKPn0',
-      'https://www.youtube.com/embed/UI-pPusKCNo',
-      'https://www.youtube.com/embed/jYOfPoXMdQI'
+      'https://www.youtube.com/embed/2XMOl6PKPn0?si=swWhe9NCa9C5Ra0l',
+      'https://www.youtube.com/embed/UI-pPusKCNo?si=WfYDT65m1CU_OxxG',
+      'https://www.youtube.com/embed/jYOfPoXMdQI?si=UpNkLvLQI6nokuHh'
     ]
   },
   {
@@ -940,11 +940,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Echoes of the End',
     description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
     category: 'Adventure',
-    thumbnail: getImg('echoes-thumb'),
+    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
     size: '40 GB',
-    images: [getImg('echoes-hero'), getImg('echoes-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
+      'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-5.png',
+      'https://cdn.wccftech.com/wp-content/uploads/2025/08/2-728x410.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/HfJ9ub9PdfA',
+    shorts: [
+      'https://www.youtube.com/embed/HPxTKTbtDkg',
+      'https://www.youtube.com/embed/RBpNHK0uk9k',
+      'https://www.youtube.com/embed/uGM2NVwr3SM'
+    ]
   },
   {
     id: 'cronos',
