@@ -190,6 +190,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'image.api.playstation.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'assetsio.gnwcdn.com',
+      },
     ],
   },
 };

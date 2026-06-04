@@ -368,7 +368,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 're3',
     title: 'Resident Evil 3',
-    description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Archer performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
+    description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
     category: 'Horror',
     thumbnail: 'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
     size: '25 GB',
@@ -567,7 +567,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i.pinimg.com/originals/2c/b9/97/2cb997a4e03c53f49fa6472ceadbbd51.jpg',
       'https://wallpapers.com/images/hd/papel-de-parede-horizon-zero-dawn-kxu12nitxfat9f9j.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4',
+    videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5style.css?si=u4-FCsiF5x4',
     shorts: [
       'https://www.youtube.com/embed/u4-FCsiF5x4',
       'https://www.youtube.com/embed/Qcf8NzbxX2k',
@@ -902,11 +902,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Gotham Knights',
     description: 'Batman is dead. A new expansive, criminal underworld has swept the streets of Gotham City. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect Gotham, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
     category: 'Action',
-    thumbnail: getImg('gotham-thumb'),
+    thumbnail: 'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
     size: '45 GB',
-    images: [getImg('gotham-hero'), getImg('gotham-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/IhVf_3Te_GM',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
+      'https://assetsio.gnwcdn.com/Gotham_Knights_Street_Art_7.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
+      'https://wallpapercat.com/w/full/f/6/0/1273477-1920x1080-desktop-full-hd-gotham-knights-game-wallpaper-image.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/wIXJAqs9dG4',
+    shorts: [
+      'https://www.youtube.com/embed/v8JDJ7rzYrA',
+      'https://www.youtube.com/embed/HPdTV5HgLDI',
+      'https://www.youtube.com/embed/nH16zrzoyCI'
+    ]
   },
   {
     id: 'ready-not',
