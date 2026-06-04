@@ -1111,11 +1111,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ninja Gaiden 4',
     description: 'The legendary ninja returns in a high-octane action experience. Master the art of the blade in this long-awaited sequel.',
     categories: ['Action', 'Adventure'],
-    thumbnail: getImg('ninjag4-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp15032759.webp',
     size: '40 GB',
-    images: [getImg('ninjag4-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp15032759.webp',
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2025/08/25/d2f361cd/371-reveal-hero.jpg.webp',
+      'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/mopzOQ8N8E4',
+    shorts: [
+      'https://www.youtube.com/embed/Gz28Levws5A',
+      'https://www.youtube.com/embed/qgi1naTDSfs',
+      'https://www.youtube.com/embed/RRnGCyOMF7s'
+    ]
   },
   {
     id: 'exp33',
