@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive } from 'lucide-react';
+import { Search, HardDrive, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
 import { Label } from '@/components/ui/label';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -112,22 +113,56 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Size Filter Slider */}
-            <div className="w-full lg:w-72 space-y-3 bg-secondary/20 p-4 rounded-2xl border border-white/5">
-              <div className="flex justify-between items-center mb-1">
-                <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                  <HardDrive className="h-3 w-3" /> Max Storage
-                </Label>
-                <span className="text-xs font-bold text-primary">1 - {maxSize} GB</span>
-              </div>
-              <Slider
-                value={[maxSize]}
-                min={1}
-                max={250}
-                step={1}
-                onValueChange={(val) => setMaxSize(val[0])}
-                className="py-1"
-              />
+            {/* Size Filter Popover */}
+            <div className="flex items-center gap-2">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button 
+                    variant="secondary" 
+                    size="sm" 
+                    className={`rounded-full h-10 px-4 gap-2 transition-all border border-white/5 ${
+                      maxSize < 250 ? 'bg-primary text-white' : 'bg-secondary/50'
+                    }`}
+                  >
+                    <Filter className="h-4 w-4" />
+                    <span className="text-xs font-bold uppercase tracking-tight">Size Filter</span>
+                    {maxSize < 250 && <span className="ml-1 text-[10px]">({maxSize}GB)</span>}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="end">
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center mb-1">
+                      <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
+                        <HardDrive className="h-3 w-3 text-primary" /> Max Storage
+                      </Label>
+                      <span className="text-xs font-bold text-primary">1 - {maxSize} GB</span>
+                    </div>
+                    <Slider
+                      value={[maxSize]}
+                      min={1}
+                      max={250}
+                      step={1}
+                      onValueChange={(val) => setMaxSize(val[0])}
+                      className="py-1"
+                    />
+                    <div className="pt-2 border-t border-white/5">
+                      <p className="text-[10px] text-muted-foreground leading-tight">
+                        Filtering games from 1GB up to <span className="text-foreground font-bold">{maxSize}GB</span>.
+                      </p>
+                    </div>
+                    {maxSize < 250 && (
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="w-full text-[10px] h-6 text-primary hover:text-primary/80 p-0"
+                        onClick={() => setMaxSize(250)}
+                      >
+                        Reset to Max
+                      </Button>
+                    )}
+                  </div>
+                </PopoverContent>
+              </Popover>
             </div>
           </div>
 
