@@ -4,18 +4,26 @@ import { useState } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
+import { Search, HardDrive } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
+import { Slider } from '@/components/ui/slider';
+import { Label } from '@/components/ui/label';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [maxSize, setMaxSize] = useState(250);
 
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = selectedCategory === 'All' || game.categories.includes(selectedCategory);
     const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    
+    // Parse numeric size from strings like "69 GB"
+    const gameSize = parseFloat(game.size.replace(/[^\d.]/g, '')) || 0;
+    const matchesSize = gameSize <= maxSize;
+    
+    return matchesCategory && matchesSearch && matchesSize;
   });
 
   const scrollToLibrary = () => {
@@ -83,23 +91,43 @@ export default function HomePage() {
         </div>
 
         {/* Filters */}
-        <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-24">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <h2 className="text-2xl font-bold font-headline">Library</h2>
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
-              {CATEGORIES.map((cat) => (
-                <Button
-                  key={cat}
-                  variant={selectedCategory === cat ? 'default' : 'secondary'}
-                  size="sm"
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`rounded-full px-6 transition-all ${
-                    selectedCategory === cat ? 'bg-primary' : 'hover:bg-primary/20'
-                  }`}
-                >
-                  {cat}
-                </Button>
-              ))}
+        <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="space-y-4 flex-1">
+              <h2 className="text-2xl font-bold font-headline">Library</h2>
+              <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
+                {CATEGORIES.map((cat) => (
+                  <Button
+                    key={cat}
+                    variant={selectedCategory === cat ? 'default' : 'secondary'}
+                    size="sm"
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`rounded-full px-6 transition-all h-8 text-xs ${
+                      selectedCategory === cat ? 'bg-primary' : 'hover:bg-primary/20'
+                    }`}
+                  >
+                    {cat}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* Size Filter Slider */}
+            <div className="w-full lg:w-72 space-y-3 bg-secondary/20 p-4 rounded-2xl border border-white/5">
+              <div className="flex justify-between items-center mb-1">
+                <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
+                  <HardDrive className="h-3 w-3" /> Max Storage
+                </Label>
+                <span className="text-xs font-bold text-primary">1 - {maxSize} GB</span>
+              </div>
+              <Slider
+                value={[maxSize]}
+                min={1}
+                max={250}
+                step={1}
+                onValueChange={(val) => setMaxSize(val[0])}
+                className="py-1"
+              />
             </div>
           </div>
 
@@ -121,19 +149,22 @@ export default function HomePage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-20">
-            <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-xl font-medium">No games found</h3>
-            <p className="text-muted-foreground">Try adjusting your filters or search terms.</p>
+          <div className="text-center py-20 bg-secondary/10 rounded-3xl border border-dashed border-white/10">
+            <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-20" />
+            <h3 className="text-xl font-medium">No games match your filters</h3>
+            <p className="text-muted-foreground text-sm max-w-xs mx-auto mt-2">
+              Try adjusting your category, search terms, or storage size range.
+            </p>
             <Button
               variant="link"
               onClick={() => {
                 setSelectedCategory('All');
                 setSearchQuery('');
+                setMaxSize(250);
               }}
-              className="text-primary mt-2"
+              className="text-primary mt-4 font-bold"
             >
-              Clear all filters
+              Reset all filters
             </Button>
           </div>
         )}
