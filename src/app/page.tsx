@@ -152,9 +152,9 @@ export default function HomePage() {
                     </div>
                     {maxSize < 250 && (
                       <Button 
-                        variant="ghost" 
+                        variant="default" 
                         size="default"
-                        className="w-full text-sm h-10 text-white hover:text-white/90 bg-white/5 hover:bg-white/10 rounded-xl mt-2 p-0"
+                        className="w-full text-sm h-10 text-white rounded-xl mt-2 font-bold"
                         onClick={() => setMaxSize(250)}
                       >
                         Reset to Max
