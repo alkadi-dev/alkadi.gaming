@@ -218,6 +218,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.cnet.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.creativeuncut.com',
+      },
     ],
   },
 };
