@@ -1047,7 +1047,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'plague',
-    title: 'A Plague Tale: Requiem',
+    title: 'Resident Evil Requiem',
     description: 'Embark on a heartrending journey into a brutal, breathtaking world, and discover the cost of saving those you love in a desperate struggle for survival.',
     categories: ['Adventure', 'Horror'],
     thumbnail: getImg('plague-thumb'),
@@ -1058,8 +1058,8 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'elden-shadow',
-    title: 'Elden Ring: Shadow of the Erdtree',
-    description: 'The Shadow of the Erdtree expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
+    title: 'Elden Ring: nightreigen',
+    description: 'The nightreigen expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
     categories: ['RPG', 'Open World'],
     thumbnail: getImg('elden-shadow-thumb'),
     size: '15 GB',
