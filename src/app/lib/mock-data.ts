@@ -1092,11 +1092,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Elden Ring: nightreigen',
     description: 'The nightreigen expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
     categories: ['RPG', 'Open World'],
-    thumbnail: getImg('elden-shadow-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp15107995.webp',
     size: '15 GB',
-    images: [getImg('elden-shadow-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp15107995.webp',
+      'https://wallpapercave.com/wp/wp15108020.webp',
+      'https://static0.srcdn.com/wordpress/wp-content/uploads/sharedimages/2024/12/elden-ring-nightreign-press-image-1.jpg?q=49&fit=crop&w=480&h=270&dpr=2'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Djtsw5k_DNc',
+    shorts: [
+      'https://www.youtube.com/embed/RSfEUhuACd8',
+      'https://www.youtube.com/embed/UXKbRmqfvJM',
+      'https://www.youtube.com/embed/H_G9Ng_snjM'
+    ]
   },
   {
     id: 'ninja-gaiden-4',

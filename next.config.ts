@@ -210,6 +210,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '**.futurecdn.net',
       },
+      {
+        protocol: 'https',
+        hostname: '**.srcdn.com',
+      },
     ],
   },
 };
