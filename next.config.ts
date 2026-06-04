@@ -214,6 +214,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '**.srcdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.cnet.com',
+      },
     ],
   },
 };

@@ -85,10 +85,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Unity",
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
     categories: ['Open World', 'Action'],
-    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: ' 32 GB',
     images: [
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://pixelkin.org/wp-content/uploads/2014/11/assassinscreedunityheader.jpg',
       'https://wallpapers.com/images/hd/assassin-s-creed-unity-1920-x-1080-wallpaper-nmwpxl1khg7mzdzg.jpg'
     ],
@@ -1130,11 +1130,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Clair Obscur: Expedition 33',
     description: 'In this reactive turn-based RPG, take part in a desperate quest to destroy the Paintress so she can never paint death again.',
     categories: ['RPG', 'Adventure'],
-    thumbnail: getImg('exp33-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp15037173.webp',
     size: '45 GB',
-    images: [getImg('exp33-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp15037173.webp',
+      'https://www.cnet.com/a/img/resize/8211721e6d525ddab1e8fe795f3979a6bcb2df2d/hub/2025/04/23/8db58633-12fa-4609-a2d5-02e05d462fc7/clair-obscur-expedition-33-20250412073013.jpg?auto=webp&width=1200',
+      'https://wallpapercave.com/wp/wp15315917.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/2VaLOc1FpSo',
+    shorts: [
+      'https://www.youtube.com/embed/9g6wftT6Igk',
+      'https://www.youtube.com/embed/-jdI5ZVdB_w',
+      'https://www.youtube.com/embed/BTGV8SEbKDs'
+    ]
   },
   {
     id: 'avatar-pandora',
