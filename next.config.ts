@@ -222,6 +222,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.creativeuncut.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'reanimal.thqnordic.com',
+      },
     ],
   },
 };

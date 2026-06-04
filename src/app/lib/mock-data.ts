@@ -1156,11 +1156,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp9594463.jpg',
       'https://preview.redd.it/photo-mode-thread-for-frontiers-of-pandora-v0-r1dnz6yrlb5c1.jpg?width=640&crop=smart&auto=webp&s=f637b3ecc55655499d9dd1cd0379d3b2d268ae93'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Axmg1E4HrVE?si=es-_1Tt5Vup37mMb',
+    videoUrl: 'https://www.youtube.com/embed/Axmg1E4HrVE',
     shorts: [
-      'https://www.youtube.com/embed/fyNpPKtvYOg?si=cP9k6dFXCRxE1iU5',
-      'https://www.youtube.com/embed/kLzXTaLr7KU?si=lezuocy7eH2rFCL7',
-      'https://www.youtube.com/embed/zfuV-nXS1jo?si=6GLrgWbiEzVv5fK5'
+      'https://www.youtube.com/embed/fyNpPKtvYOg',
+      'https://www.youtube.com/embed/kLzXTaLr7KU',
+      'https://www.youtube.com/embed/zfuV-nXS1jo'
     ]
   },
   {
@@ -1168,11 +1168,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'REANIMAL',
     description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
     categories: ['Horror', 'Adventure'],
-    thumbnail: getImg('reanimal-thumb'),
+    thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '20 GB',
-    images: [getImg('reanimal-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
+      'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg',
+      'https://images5.alphacoders.com/140/thumb-1920-1405859.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/mUymvhAXOnM',
+    shorts: [
+      'https://www.youtube.com/embed/viaO-0WTrMo',
+      'https://www.youtube.com/embed/IisfQZqd82k',
+      'https://www.youtube.com/embed/ou9THu2g3I4'
+    ]
   },
   {
     id: 'mgs5',
