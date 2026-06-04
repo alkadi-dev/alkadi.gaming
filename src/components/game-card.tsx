@@ -15,7 +15,7 @@ interface GameCardProps {
 }
 
 export function GameCard({ game }: GameCardProps) {
-  const { addToSelection, removeFromSelection, isInSelection } = useSelection();
+  const { addToSelection, removeFromSelection, isInSelection, isOverLimit } = useSelection();
   const { toast } = useToast();
   const isAdded = isInSelection(game.id);
 
@@ -30,6 +30,14 @@ export function GameCard({ game }: GameCardProps) {
         description: `${game.title} has been removed.`,
       });
     } else {
+      if (isOverLimit) {
+        toast({
+          variant: "destructive",
+          title: "Storage Limit Exceeded",
+          description: "You have reached the 1800 GB limit. Remove games before adding more.",
+        });
+        return;
+      }
       addToSelection(game.id);
       toast({
         title: "Game Added!",
@@ -72,10 +80,13 @@ export function GameCard({ game }: GameCardProps) {
           <Button
             size="icon"
             variant="ghost"
+            disabled={!isAdded && isOverLimit}
             className={`h-7 w-7 rounded-full backdrop-blur-md border border-white/10 shadow-xl transition-all duration-300 ${
               isAdded 
                 ? 'bg-green-600/80 text-white hover:bg-green-600' 
-                : 'bg-black/40 text-white hover:bg-primary hover:scale-110'
+                : isOverLimit 
+                  ? 'bg-black/20 text-white/40 cursor-not-allowed'
+                  : 'bg-black/40 text-white hover:bg-primary hover:scale-110'
             }`}
             onClick={handleToggleSelection}
           >

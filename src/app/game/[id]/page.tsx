@@ -18,7 +18,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
   const { id } = use(params);
   const router = useRouter();
   const { toast } = useToast();
-  const { addToSelection, removeFromSelection, isInSelection } = useSelection();
+  const { addToSelection, removeFromSelection, isInSelection, isOverLimit } = useSelection();
   const game = MOCK_GAMES.find((g) => g.id === id);
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
@@ -54,6 +54,14 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         description: `${game.title} has been removed.`,
       });
     } else {
+      if (isOverLimit) {
+        toast({
+          variant: "destructive",
+          title: "Storage Limit Exceeded",
+          description: "You have reached the 1800 GB limit. Remove games before adding more.",
+        });
+        return;
+      }
       addToSelection(game.id);
       toast({
         title: "Game Added!",
@@ -92,8 +100,13 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             <Button
               variant="default"
               size="sm"
+              disabled={!isAdded && isOverLimit}
               className={`rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-4 text-xs ${
-                isAdded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:scale-105 active:scale-95'
+                isAdded 
+                  ? 'bg-green-600 hover:bg-green-700' 
+                  : isOverLimit
+                    ? 'bg-primary/20 cursor-not-allowed opacity-50'
+                    : 'bg-primary hover:scale-105 active:scale-95'
               }`}
               onClick={handleToggleSelection}
             >

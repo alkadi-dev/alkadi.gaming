@@ -10,6 +10,7 @@ interface SelectionContextType {
   isInSelection: (id: string) => boolean;
   clearSelection: () => void;
   totalSizeNum: number;
+  isOverLimit: boolean;
   isCheckoutOpen: boolean;
   setCheckoutOpen: (open: boolean) => void;
 }
@@ -46,7 +47,11 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     }, 0);
   }, [selectedIds]);
 
+  const isOverLimit = totalSizeNum > 1800;
+
   const addToSelection = (id: string) => {
+    // If we are already over the limit, prevent adding more
+    if (isOverLimit) return;
     setSelectedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
   };
 
@@ -67,6 +72,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         isInSelection, 
         clearSelection,
         totalSizeNum,
+        isOverLimit,
         isCheckoutOpen,
         setCheckoutOpen
       }}
