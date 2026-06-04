@@ -997,10 +997,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Dead Island 2',
     description: 'A deadly virus is spreading across Los Angeles, turning its inhabitants into ravenous zombies. The city is in quarantine and the military has retreated. Bitten, infected, but more than just immune, you learn to harness the zombie within.',
     category: 'Action',
-    thumbnail: getImg('di2-thumb'),
+    thumbnail: 'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
     size: '54 GB',
-    images: [getImg('di2-hero'), getImg('di2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
+      'https://wallpapers.com/images/hd/dead-island2-first-person-combat-rv2aer2l260gmwc5.jpg',
+      'https://wallpapers.com/images/hd/dead-island2-zombie-horde-beside-school-bus-8twgvbuv4p05m9bo.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/AWFaj4IQ4ro?si=4EOxgjkpmNFWEMxt',
+    shorts: [
+      'https://www.youtube.com/embed/o_0cXvtUyKM?si=BiPI__ep-fs6rtQx',
+      'https://www.youtube.com/embed/zxzBMbStY-M?si=stzdNfhPJflfrqKv',
+      'https://www.youtube.com/embed/pJoir07MlBY?si=Lfuo0JmM3CpICTDk'
+    ]
   }
 ];
