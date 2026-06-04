@@ -1,4 +1,3 @@
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -1017,11 +1016,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Days Gone',
     description: 'Ride and fight into a deadly, post-pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live.',
     categories: ['Open World', 'Horror'],
-    thumbnail: getImg('daysgone-thumb'),
+    thumbnail: 'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
     size: '60 GB',
-    images: [getImg('daysgone-hero'), getImg('daysgone-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/fkGCLIQ51zQ',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
+      'https://kotaku.com/igdb/image/upload/t_720p/r5mn9rt7aqvf5nrn8dqq.jpg',
+      'https://live.staticflickr.com/65535/54429643931_5a0c9da4f7_o.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/p9XlSvnRk3E',
+    shorts: [
+      'https://www.youtube.com/embed/99NfMJFaG1Y',
+      'https://www.youtube.com/embed/nwI-e9N5xNs',
+      'https://www.youtube.com/embed/V1iewhGUd-Y'
+    ]
   },
   {
     id: 'revillage',

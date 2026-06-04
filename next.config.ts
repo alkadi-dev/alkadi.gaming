@@ -198,6 +198,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.bauerhosting.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'kotaku.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'live.staticflickr.com',
+      },
     ],
   },
 };
