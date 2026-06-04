@@ -1054,11 +1054,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Biohazard',
     description: 'Set in modern day rural America and taking place after the dramatic events of Resident Evil 6, players experience the terror directly from the first person perspective.',
     categories: ['Horror', 'Adventure'],
-    thumbnail: getImg('rebio-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp2073985.jpg',
     size: '24 GB',
-    images: [getImg('rebio-hero'), getImg('rebio-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp2073985.jpg',
+      'https://wallpapercave.com/wp/wp2074012.jpg',
+      'https://wallpapercave.com/wp/wp2074034.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/RgYqQsbKn6w',
+    shorts: [
+      'https://www.youtube.com/embed/P1xhDMdOYVQ',
+      'https://www.youtube.com/embed/imQ5vKmQQTs',
+      'https://www.youtube.com/embed/k1njT46lOi8'
+    ]
   },
   {
     id: 'plague',
