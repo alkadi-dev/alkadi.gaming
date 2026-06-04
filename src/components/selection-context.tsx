@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
+import { MOCK_GAMES } from '@/app/lib/mock-data';
 
 interface SelectionContextType {
   selectedIds: string[];
@@ -8,12 +9,16 @@ interface SelectionContextType {
   removeFromSelection: (id: string) => void;
   isInSelection: (id: string) => boolean;
   clearSelection: () => void;
+  totalSizeNum: number;
+  isCheckoutOpen: boolean;
+  setCheckoutOpen: (open: boolean) => void;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
 
 export function SelectionProvider({ children }: { children: React.ReactNode }) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [isCheckoutOpen, setCheckoutOpen] = useState(false);
 
   // Load selection from localStorage on mount
   useEffect(() => {
@@ -32,6 +37,15 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('alkadi_selection', JSON.stringify(selectedIds));
   }, [selectedIds]);
 
+  const totalSizeNum = useMemo(() => {
+    return selectedIds.reduce((acc, id) => {
+      const game = MOCK_GAMES.find((g) => g.id === id);
+      if (!game) return acc;
+      const sizeValue = parseFloat(game.size.replace(/[^\d.]/g, ''));
+      return acc + (isNaN(sizeValue) ? 0 : sizeValue);
+    }, 0);
+  }, [selectedIds]);
+
   const addToSelection = (id: string) => {
     setSelectedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
   };
@@ -46,7 +60,16 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <SelectionContext.Provider
-      value={{ selectedIds, addToSelection, removeFromSelection, isInSelection, clearSelection }}
+      value={{ 
+        selectedIds, 
+        addToSelection, 
+        removeFromSelection, 
+        isInSelection, 
+        clearSelection,
+        totalSizeNum,
+        isCheckoutOpen,
+        setCheckoutOpen
+      }}
     >
       {children}
     </SelectionContext.Provider>

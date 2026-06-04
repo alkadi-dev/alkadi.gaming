@@ -3,6 +3,7 @@ import './globals.css';
 import { SelectionProvider } from '@/components/selection-context';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { StorageLimitAlert } from '@/components/storage-limit-alert';
 
 export const metadata: Metadata = {
   title: 'Alkadi Gaming',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <SelectionProvider>
           <TooltipProvider>
             {children}
+            <StorageLimitAlert />
             <Toaster />
           </TooltipProvider>
         </SelectionProvider>

@@ -28,23 +28,10 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export function CheckoutSheet() {
-  const { selectedIds, removeFromSelection, clearSelection } = useSelection();
+  const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen } = useSelection();
   const { toast } = useToast();
 
   const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
-
-  const calculateTotalSizeNum = () => {
-    let totalGb = 0;
-    selectedGames.forEach(game => {
-      const sizeValue = parseFloat(game.size.replace(/[^\d.]/g, ''));
-      if (!isNaN(sizeValue)) {
-        totalGb += sizeValue;
-      }
-    });
-    return totalGb;
-  };
-
-  const totalSizeNum = calculateTotalSizeNum();
 
   const generateListContent = () => {
     const listText = selectedGames
@@ -84,7 +71,7 @@ export function CheckoutSheet() {
   const warning = getWarning();
 
   return (
-    <Sheet>
+    <Sheet open={isCheckoutOpen} onOpenChange={setCheckoutOpen}>
       <SheetTrigger asChild>
         <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-3 text-xs">
           <ShoppingCart className="h-3.5 w-3.5 mr-1.5" />
