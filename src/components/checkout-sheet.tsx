@@ -21,7 +21,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -62,6 +62,7 @@ export function CheckoutSheet() {
   };
 
   const getWarning = () => {
+    if (totalSizeNum > 1800) return "Maximum storage limit reached (1800 GB).";
     if (totalSizeNum > 900) return "You have surpassed 1 TB.";
     if (totalSizeNum > 450) return "You are now using the 1 TB drive.";
     if (totalSizeNum > 280) return "You have exceeded 280 GB and are using the 500 GB drive.";
@@ -146,10 +147,10 @@ export function CheckoutSheet() {
 
               {warning && (
                 <Alert className={`mb-4 py-3 px-4 rounded-xl border-none ${
-                  totalSizeNum > 900 ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
+                  totalSizeNum > 1800 || totalSizeNum > 900 ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
                 }`}>
                   <div className="flex items-center gap-2">
-                    {totalSizeNum > 900 ? <AlertTriangle className="h-4 w-4" /> : <Info className="h-4 w-4" />}
+                    {totalSizeNum > 1800 ? <Ban className="h-4 w-4" /> : totalSizeNum > 900 ? <AlertTriangle className="h-4 w-4" /> : <Info className="h-4 w-4" />}
                     <AlertDescription className="text-[11px] font-bold uppercase leading-tight tracking-tight">
                       {warning}
                     </AlertDescription>
@@ -160,7 +161,8 @@ export function CheckoutSheet() {
               <div className="grid grid-cols-1 gap-2">
                 <Button 
                   onClick={handleWhatsAppRedirect} 
-                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-xs sm:text-sm"
+                  disabled={totalSizeNum > 1800}
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-xs sm:text-sm disabled:opacity-50"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" /> Open in WhatsApp
                 </Button>
