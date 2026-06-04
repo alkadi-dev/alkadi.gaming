@@ -1035,11 +1035,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Village',
     description: 'Experience survival horror like never before in the eighth major installment in the storied Resident Evil franchise - Resident Evil Village.',
     categories: ['Horror', 'Action'],
-    thumbnail: getImg('revillage-thumb'),
+    thumbnail: 'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/04/13/cd58b898/rev.jpg.webp',
     size: '30 GB',
-    images: [getImg('revillage-hero'), getImg('revillage-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/04/13/cd58b898/rev.jpg.webp',
+      'https://wallpapercat.com/w/full/4/b/2/2941-1920x1080-desktop-1080p-resident-evil-village-wallpaper.jpg',
+      'https://wallpapers.com/images/hd/resident-evil-village-3840-x-2160-wallpaper-zn0xrqmkj1la6h54.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/arEdruKxrQ8',
+    shorts: [
+      'https://www.youtube.com/embed/zLE4Y6CoSnU',
+      'https://www.youtube.com/embed/0y8dTBI_ULQ',
+      'https://www.youtube.com/embed/b-ScWGl0lEM'
+    ]
   },
   {
     id: 'rebio',
