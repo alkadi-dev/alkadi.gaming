@@ -902,68 +902,52 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Gotham Knights',
     description: 'Batman is dead. A new expansive, criminal underworld has swept the streets of Gotham City. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect Gotham, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
     category: 'Action',
-    thumbnail: 'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
+    thumbnail: getImg('gotham-thumb'),
     size: '45 GB',
-    images: [
-      'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
-      'https://assetsio.gnwcdn.com/Gotham_Knights_Street_Art_7.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
-      'https://wallpapercat.com/w/full/f/6/0/1273477-1920x1080-desktop-full-hd-gotham-knights-game-wallpaper-image.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/wIXJAqs9dG4?si=Sgw8xlJQRlONuhNu',
-    shorts: [
-      'https://www.youtube.com/embed/v8JDJ7rzYrA?si=5l82y9bfpefZ_9l-',
-      'https://www.youtube.com/embed/HPdTV5HgLDI?si=3ngjSLBh4saKlWvz',
-      'https://www.youtube.com/embed/nH16zrzoyCI?si=7fjPAGzdgpn0cdlD'
-    ]
+    images: [getImg('gotham-hero'), getImg('gotham-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/IhVf_3Te_GM',
+    shorts: [...NEW_SHORTS]
   },
   {
     id: 'ready-not',
     title: 'Ready or Not',
     description: 'Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations.',
     category: 'Shooter',
-    thumbnail: 'https://wallpapercave.com/wp/wp4571906.png',
+    thumbnail: getImg('readyornot-thumb'),
     size: '50 GB',
-    images: [
-      'https://wallpapercave.com/wp/wp4571906.png',
-      'https://i.redd.it/vu3g9pw3vtwg1.jpeg',
-      'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A?si=S1NP1QRzN-f2v3VA',
-    shorts: [
-      'https://www.youtube.com/embed/2XMOl6PKPn0?si=swWhe9NCa9C5Ra0l',
-      'https://www.youtube.com/embed/UI-pPusKCNo?si=WfYDT65m1CU_OxxG',
-      'https://www.youtube.com/embed/jYOfPoXMdQI?si=UpNkLvLQI6nokuHh'
-    ]
+    images: [getImg('readyornot-hero'), getImg('readyornot-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/qL_qG8VTMmE',
+    shorts: [...NEW_SHORTS]
   },
   {
     id: 'echoes',
     title: 'Echoes of the End',
     description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
     category: 'Adventure',
-    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
+    thumbnail: getImg('echoes-thumb'),
     size: '40 GB',
-    images: [
-      'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
-      'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-5.png',
-      'https://cdn.wccftech.com/wp-content/uploads/2025/08/2-728x410.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/HfJ9ub9PdfA',
-    shorts: [
-      'https://www.youtube.com/embed/HPxTKTbtDkg',
-      'https://www.youtube.com/embed/RBpNHK0uk9k',
-      'https://www.youtube.com/embed/uGM2NVwr3SM'
-    ]
+    images: [getImg('echoes-hero'), getImg('echoes-thumb')],
+    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
+    shorts: [...NEW_SHORTS]
   },
   {
     id: 'cronos',
     title: 'Cronos: The New Dawn',
     description: 'A third-person survival horror game from Bloober Team. Explore a world where time travel and twisted creatures await in a story of survival and uncovering the secrets of a dying civilization.',
     category: 'Horror',
-    thumbnail: getImg('cronos-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp15668537.jpg',
     size: '50 GB',
-    images: [getImg('cronos-hero'), getImg('cronos-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp15668537.jpg',
+      'https://i0.wp.com/twistedvoxel.com/wp-content/uploads/2025/09/cronos-the-new-dawn-4-scaled.jpg?resize=1170,658&ssl=1',
+      'https://images.bauerhosting.com/empire/2025/09/cronosthenewdawn.jpg?auto=format&w=1440&q=80'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/5SAdHxpzb5U',
+    shorts: [
+      'https://www.youtube.com/embed/UmgnABPqaoU',
+      'https://www.youtube.com/embed/2xeeTNiQXZo',
+      'https://www.youtube.com/embed/LJQ4fSKSjQU'
+    ]
   },
   {
     id: 'dl2',

@@ -194,6 +194,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'assetsio.gnwcdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.bauerhosting.com',
+      },
     ],
   },
 };
