@@ -63,6 +63,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'wallpaperset.com' },
       { protocol: 'https', hostname: '4kwallpapers.com' },
       { protocol: 'https', hostname: 'traxion.gg' },
+      { protocol: 'https', hostname: 'www.greenmangaming.com' },
+      { protocol: 'https', hostname: '**.thesourcemediaassets.com' },
     ],
   },
 };

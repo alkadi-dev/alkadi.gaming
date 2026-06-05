@@ -53,7 +53,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpapercat.com/w/full/b/0/1/14420-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
+    videoUrl: 'https://www.youtube.com/embed/XHrskkHr958',
     shorts: [
       'https://www.youtube.com/embed/9HxO2Yg2AEQ?si=qKvoPgUhwaSl2_il',
       'https://www.youtube.com/embed/AT5PlpAKo0I?si=DSdU6m9qafDR3_qt',
@@ -1560,7 +1560,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Pragmata',
     description: 'Set in a dystopian near-future on Earth’s Moon, Pragmata will take you on an unforgettable adventure, powered by the next generation of gaming hardware.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp6860163.jpg',
+    thumbnail: 'https://wallpaperaccess.com/full/26417427.jpg',
     size: '80 GB',
     releaseYear: '2026',
     images: [
@@ -1610,14 +1610,20 @@ export const MOCK_GAMES: GameEntry[] = [
     title: '007 First Light',
     description: 'Featuring a completely original Bond story, players will step into the shoes of the world\'s favorite secret agent to earn their 00 status in the very first James Bond origin story.',
     categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp7858341.jpg',
+    thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/05/BlogButton007FirstLight.jpg',
     size: '60 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp7858341.jpg',
-      'https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/James-Bond-Project-007.jpg'
+      'https://www.greenmangaming.com/blog/wp-content/uploads/2026/05/BlogButton007FirstLight.jpg',
+      'https://xboxwire.thesourcemediaassets.com/sites/2/2025/09/007FirstLight_Screenshots_04-e93a25ab1fe51886e9c6-1900x1080.jpg',
+      'https://xboxwire.thesourcemediaassets.com/sites/2/2025/09/007FirstLight_Screenshots_02-a8a7c447efbf97ccdb4c-1900x1080.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/N6B_8v8R_qM',
+    videoUrl: 'https://www.youtube.com/embed/J4qY9DYE184',
+    shorts: [
+      'https://www.youtube.com/embed/tZ2x3YzQrx0',
+      'https://www.youtube.com/embed/0qgy1yPQ_j8',
+      'https://www.youtube.com/embed/1xubd--HCN8'
+    ],
     isRecommended: false,
   },
   {
