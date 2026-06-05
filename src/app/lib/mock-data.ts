@@ -89,7 +89,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: ' 32 GB',
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
-      'https://pixelkin.org/wp-content/uploads/2014/11/assassinscreedunityheader.jpg',
+      'https://wallpapercave.com/wp/wp14210080.jpg',
       'https://wallpapers.com/images/hd/assassin-s-creed-unity-1920-x-1080-wallpaper-nmwpxl1khg7mzdzg.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
@@ -1225,11 +1225,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Death Stranding 2',
     description: 'Hideo Kojima returns with the sequel to Death Stranding. Embark on a new mission to connect the world beyond the UCA.',
     categories: ['Open World', 'Adventure'],
-    thumbnail: getImg('ds2-thumb'),
+    thumbnail: 'https://wallpaperaccess.com/full/26350707.jpg',
     size: '80 GB',
-    images: [getImg('ds2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpaperaccess.com/full/26350707.jpg',
+      'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots004.jpg',
+      'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots009.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU',
+    shorts: [
+      'https://www.youtube.com/embed/ipQJxQmpJ3c',
+      'https://www.youtube.com/embed/-S-WLzzeKsE',
+      'https://www.youtube.com/embed/0izfj7ME6kI'
+    ]
   },
   {
     id: 'jc4',

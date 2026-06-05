@@ -12,10 +12,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'placehold.co',
-      },
-      {
-        protocol: 'https',
         hostname: 'picsum.photos',
       },
       {
@@ -53,10 +49,6 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: '**.gamerantimages.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'pixelkin.org',
       },
       {
         protocol: 'https',
@@ -209,6 +201,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'reanimal.thqnordic.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.kojimaproductions.jp',
       },
     ],
   },
