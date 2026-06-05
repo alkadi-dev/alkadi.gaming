@@ -16,10 +16,6 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
         hostname: 'picsum.photos',
       },
       {
@@ -29,10 +25,6 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: '**.redd.it',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.psu.com',
       },
       {
         protocol: 'https',
@@ -49,10 +41,6 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'wallpapers.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.vgchartz.com',
       },
       {
         protocol: 'https',
@@ -105,10 +93,6 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'wallpapercg.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.pcgamesn.com',
       },
       {
         protocol: 'https',
