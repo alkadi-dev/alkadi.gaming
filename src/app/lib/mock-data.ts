@@ -1358,11 +1358,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Need for Speed Heat',
     description: 'Hustle by day and risk it all by night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.',
     categories: ['Race', 'Open World'],
-    thumbnail: getImg('nfs-heat-thumb'),
+    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
     size: '30 GB',
-    images: [getImg('nfs-heat-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
+      'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
+      'https://images.steamusercontent.com/ugc/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI',
+    shorts: [
+      'https://www.youtube.com/embed/8jiTNodDe-Y',
+      'https://www.youtube.com/embed/XuZaw6kVBkE',
+      'https://www.youtube.com/embed/xhvQrJ3QNnM'
+    ]
   },
   {
     id: 'thecrew2',
