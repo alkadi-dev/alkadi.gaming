@@ -35,6 +35,16 @@ export default function HomePage() {
     if (sortOrder === 'year-asc') {
       return parseInt(a.releaseYear) - parseInt(b.releaseYear);
     }
+    if (sortOrder === 'size-asc') {
+      const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
+      const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
+      return sizeA - sizeB;
+    }
+    if (sortOrder === 'size-desc') {
+      const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
+      const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
+      return sizeB - sizeA;
+    }
     // Default alphabetical
     return a.title.localeCompare(b.title);
   });
@@ -166,8 +176,10 @@ export default function HomePage() {
                         </SelectTrigger>
                         <SelectContent className="bg-background border-white/10 rounded-xl">
                           <SelectItem value="title-asc">Alphabetical (A-Z)</SelectItem>
-                          <SelectItem value="year-desc">Newest to Oldest</SelectItem>
-                          <SelectItem value="year-asc">Oldest to Newest</SelectItem>
+                          <SelectItem value="year-desc">Year: Newest to Oldest</SelectItem>
+                          <SelectItem value="year-asc">Year: Oldest to Newest</SelectItem>
+                          <SelectItem value="size-asc">Size: Smallest to Largest</SelectItem>
+                          <SelectItem value="size-desc">Size: Largest to Smallest</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
