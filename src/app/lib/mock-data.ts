@@ -1377,11 +1377,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Crew 2',
     description: 'Take on the American motorsports scene as you explore and dominate the land, air, and sea of the USA in one of the most exhilarating open worlds ever created.',
     categories: ['Race', 'Open World'],
-    thumbnail: getImg('crew2-thumb'),
+    thumbnail: 'https://wallpaperaccess.com/full/2286453.jpg',
     size: '40 GB',
-    images: [getImg('crew2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpaperaccess.com/full/2286453.jpg',
+      'https://wallpaperaccess.com/full/2286467.jpg',
+      'https://wallpaperaccess.com/full/2286468.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/MXN1nmL-DQU',
+    shorts: [
+      'https://www.youtube.com/embed/q9g8QHWJDt0',
+      'https://www.youtube.com/embed/-t6JhCq9_Ok',
+      'https://www.youtube.com/embed/PpByB8-geYA'
+    ]
   },
   {
     id: 'forza6',
