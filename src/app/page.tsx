@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -17,6 +17,7 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [maxSize, setMaxSize] = useState(250);
   const [sortOrder, setSortOrder] = useState('title-asc');
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = selectedCategory === 'All' || game.categories.includes(selectedCategory);
@@ -128,7 +129,7 @@ export default function HomePage() {
 
             {/* Combined Filter Popover */}
             <div className="flex items-center gap-2">
-              <Popover>
+              <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
                 <PopoverTrigger asChild>
                   <Button 
                     variant="secondary" 
@@ -153,7 +154,13 @@ export default function HomePage() {
                       <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
                         <ArrowUpDown className="h-3 w-3 text-primary" /> Sort By
                       </Label>
-                      <Select value={sortOrder} onValueChange={setSortOrder}>
+                      <Select 
+                        value={sortOrder} 
+                        onValueChange={(val) => {
+                          setSortOrder(val);
+                          setIsFilterOpen(false); // Close automatically on selection
+                        }}
+                      >
                         <SelectTrigger className="bg-secondary/30 border-white/5 rounded-xl h-10">
                           <SelectValue placeholder="Sort order" />
                         </SelectTrigger>
@@ -184,9 +191,12 @@ export default function HomePage() {
                     </div>
 
                     <div className="pt-4 border-t border-white/5 flex flex-col gap-2">
-                      <p className="text-[10px] text-muted-foreground leading-tight">
-                        Showing games up to <span className="text-foreground font-bold">{maxSize}GB</span>.
-                      </p>
+                      <Button
+                        className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl h-10 font-bold uppercase tracking-tight text-xs"
+                        onClick={() => setIsFilterOpen(false)}
+                      >
+                        <Check className="w-3.5 h-3.5 mr-2" /> View Results
+                      </Button>
                       {(maxSize < 250 || sortOrder !== 'title-asc') && (
                         <Button 
                           variant="ghost" 
@@ -195,6 +205,7 @@ export default function HomePage() {
                           onClick={() => {
                             setMaxSize(250);
                             setSortOrder('title-asc');
+                            setIsFilterOpen(false); // Close automatically on reset
                           }}
                         >
                           Reset Filters
