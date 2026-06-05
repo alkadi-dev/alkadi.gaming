@@ -1455,8 +1455,16 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'RPG'],
     thumbnail: getImg('hfw-thumb'),
     size: '90 GB',
-    images: [getImg('hfw-thumb')],
+    images: [
+      'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
+      'https://www.gameinformer.com/sites/default/files/2021/12/22/381f64d4/hfw_daunt_vista.jpg',
+      'https://wallpapercat.com/w/full/b/1/6/100982-2000x1500-desktop-hd-horizon-forbidden-west-wallpaper-photo.jpg'
+    ],
     videoUrl: 'https://www.youtube.com/embed/Lq594XmpPBg',
-    shorts: [...NEW_SHORTS]
+    shorts: [
+      'https://www.youtube.com/embed/igl_5sssWjQ',
+      'https://www.youtube.com/embed/8_8yzlwUAnE',
+      'https://www.youtube.com/embed/czAejSrYfGE'
+    ]
   }
 ];
