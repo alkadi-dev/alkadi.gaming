@@ -1263,11 +1263,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Mafia: The Old Country',
     description: 'Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily.',
     categories: ['Open World', 'Action'],
-    thumbnail: getImg('mafia-old-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp15335747.webp',
     size: '50 GB',
-    images: [getImg('mafia-old-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp15335747.webp',
+      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
+      'https://cdn.mos.cms.futurecdn.net/AqiwEtGjDAvknt7azDHxB.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE',
+    shorts: [
+      'https://www.youtube.com/embed/P0qHvKYHSAI',
+      'https://www.youtube.com/embed/j1s43xL1yZE',
+      'https://www.youtube.com/embed/yagGfBmDEFM'
+    ]
   },
   {
     id: 'mafia3',
