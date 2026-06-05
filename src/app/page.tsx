@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, Star } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -131,10 +131,13 @@ export default function HomePage() {
                     variant={selectedCategory === cat ? 'default' : 'secondary'}
                     size="sm"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`rounded-full px-6 transition-all h-8 text-xs ${
+                    className={`rounded-full px-6 transition-all h-8 text-xs flex items-center gap-1.5 ${
                       selectedCategory === cat ? 'bg-primary' : 'hover:bg-primary/20'
                     }`}
                   >
+                    {cat === 'Recommended' && (
+                      <Star className={`h-3 w-3 ${selectedCategory === cat ? 'fill-current' : 'fill-primary'}`} />
+                    )}
                     {cat}
                   </Button>
                 ))}
