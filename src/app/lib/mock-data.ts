@@ -1349,7 +1349,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7qBHz',
+      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7BHz',
       'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
       'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
     ]
@@ -1555,5 +1555,79 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/czAejSrYfGE'
     ],
     isRecommended: true,
+  },
+  {
+    id: 'pragmata',
+    title: 'Pragmata',
+    description: 'Set in a dystopian near-future on Earth’s Moon, Pragmata will take you on an unforgettable adventure, powered by the next generation of gaming hardware.',
+    categories: ['Action'],
+    thumbnail: 'https://wallpapercave.com/wp/wp6860163.jpg',
+    size: '80 GB',
+    releaseYear: '2026',
+    images: [
+      'https://wallpapercave.com/wp/wp6860163.jpg',
+      'https://images.purexbox.com/832777085732c/capcom-delays-pragmata-again-reveals-first-gameplay-trailer.900x.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/fW6itWv8-tA',
+    isRecommended: false,
+  },
+  {
+    id: 'splitfiction',
+    title: 'Split Fiction',
+    description: 'A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
+    categories: ['Adventure'],
+    thumbnail: 'https://picsum.photos/seed/splitfiction/800/450',
+    size: '45 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/splitfiction/800/450'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    isRecommended: false,
+  },
+  {
+    id: 'ittakestwo',
+    title: 'It Takes Two',
+    description: 'Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
+    categories: ['Adventure'],
+    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202012/0815/8sh6pL9N0IBy8D98Ym4K0618.jpg',
+    size: '45 GB',
+    releaseYear: '2021',
+    images: [
+      'https://image.api.playstation.com/vulcan/ap/rnd/202012/0815/8sh6pL9N0IBy8D98Ym4K0618.jpg',
+      'https://wallpaperaccess.com/full/5549842.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ohClXfsh940',
+    isRecommended: false,
+  },
+  {
+    id: '007firstlight',
+    title: '007 First Light',
+    description: 'Featuring a completely original Bond story, players will step into the shoes of the world\'s favorite secret agent to earn their 00 status in the very first James Bond origin story.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp7858341.jpg',
+    size: '60 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp7858341.jpg',
+      'https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/James-Bond-Project-007.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/N6B_8v8R_qM',
+    isRecommended: false,
+  },
+  {
+    id: 'hellisus',
+    title: 'Hell is Us',
+    description: 'A third-person action-adventure game that combines intense melee combat with the thrill of exploration in a semi-open world ravaged by a mysterious civil war.',
+    categories: ['Action'],
+    thumbnail: 'https://wallpapercave.com/wp/wp10912345.jpg',
+    size: '55 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp10912345.jpg',
+      'https://preview.redd.it/hell-is-us-new-screenshots-v0-x8p7u8p7u8p7u8p7.jpg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/jZ_y9GkU6B8',
+    isRecommended: false,
   }
 ];
