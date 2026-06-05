@@ -9,6 +9,7 @@ export interface GameEntry {
   images: string[];
   videoUrl: string;
   size: string;
+  releaseYear: string;
   shorts?: string[];
 }
 
@@ -24,6 +25,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
     size: '69 GB',
+    releaseYear: '2018',
     images: [
       'https://wallpapercave.com/wp/wp3770429.png',
       'https://images6.alphacoders.com/952/thumbbig-952687.webp',
@@ -43,6 +45,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Adventure'],
     thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
     size: '32 GB',
+    releaseYear: '2015',
     images: [
       'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
@@ -62,6 +65,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'RPG'],
     thumbnail: 'https://wallpapercave.com/wp/wp13980393.jpg',
     size: '70 GB',
+    releaseYear: '2024',
     images: [
       'https://wallpapercave.com/wp/wp13980393.jpg',
       'https://preview.redd.it/two-new-screenshots-of-ac-shadows-world-v0-whm6mgnqhsee1.png?width=640&crop=smart&auto=webp&s=f0d47b92ba36516422cfee81603b63221662a440',
@@ -81,6 +85,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: ' 32 GB',
+    releaseYear: '2014',
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpapercave.com/wp/wp14210080.jpg',
@@ -100,6 +105,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
     size: '18 GB',
+    releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp11468139.jpg',
       "https://www.wallpapergap.com/cdn/24/343/assassin's-creed-mirage-full-hd-wallpaper-2000x1000.jpg",
@@ -119,6 +125,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Action'],
     thumbnail: 'https://wallpaperaccess.com/full/1110212.jpg',
     size: '35 GB',
+    releaseYear: '2018',
     images: [
       'https://wallpaperaccess.com/full/1110212.jpg',
       'https://wallpapers.com/images/hd/4k-assassin-s-creed-odyssey-background-3840-x-2160-vzqb12fb66jcw0tw.jpg',
@@ -138,6 +145,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Adventure'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: '40 GB',
+    releaseYear: '2015',
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpaperaccess.com/full/1994779.jpg',
@@ -157,6 +165,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Race', 'Open World'],
     thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
     size: '82 GB',
+    releaseYear: '2021',
     images: [
       'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
       'https://wallpapercave.com/wp/wp12405375.jpg',
@@ -176,6 +185,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
     size: '67 GB',
+    releaseYear: '2023',
     images: [
       'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
       'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
@@ -195,6 +205,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
     size: '67 GB',
+    releaseYear: '2022',
     images: [
       'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/11/God-Of-War-Ragnarok-Jotenheim.jpg?q=50&fit=crop&w=825&dpr=1.5',
@@ -214,6 +225,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'RPG'],
     thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg',
     size: '55 GB',
+    releaseYear: '2020',
     images: [
       'https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vOrfFQh.jpg',
@@ -233,6 +245,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Action'],
     thumbnail: 'https://wallpaperaccess.com/full/8929582.jpg',
     size: '58 GB',
+    releaseYear: '2023',
     images: [
       'https://wallpaperaccess.com/full/8929582.jpg',
       'https://wallpapercave.com/wp/wp11812031.jpg',
@@ -252,6 +265,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Open World'],
     thumbnail: 'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
     size: '60 GB',
+    releaseYear: '2022',
     images: [
       'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
       'https://wallpapers.com/images/hd/elden-ring-game-scenery-u6f65ngdqukwsshd.jpg',
@@ -271,6 +285,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Open World'],
     thumbnail: 'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
     size: '32 GB',
+    releaseYear: '2018',
     images: [
       'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
       'https://i.pinimg.com/originals/c7/12/ab/c712ab2487a5b047b568afe3bdbe1874.jpg',
@@ -290,6 +305,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp1835411.jpg',
     size: '45 GB',
+    releaseYear: '2015',
     images: [
       'https://wallpapercave.com/wp/wp1835411.jpg',
       'https://i.pinimg.com/originals/86/e6/9a/86e69a057b732ddd9c21ce76959a0beb.jpg',
@@ -309,6 +325,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Open World'],
     thumbnail: 'https://wallpapers.com/images/featured/far-cry-5-background-b36npu7jc7uygn0x.jpg',
     size: '40 GB',
+    releaseYear: '2018',
     images: [
       'https://wallpapers.com/images/featured/far-cry-5-background-b36npu7jc7uygn0x.jpg',
       'https://i.pinimg.com/originals/e2/f3/be/e2f3beba5b3848e2f831840c2e9a5db1.jpg',
@@ -328,6 +345,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Action'],
     thumbnail: 'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
     size: '26 GB',
+    releaseYear: '2019',
     images: [
       'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
       'https://wallpapercave.com/wp/wp3815695.jpg',
@@ -347,6 +365,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Horror'],
     thumbnail: 'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
     size: '150 GB',
+    releaseYear: '2024',
     images: [
       'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
       'https://wallpapercave.com/wp/wp8285372.jpg',
@@ -366,6 +385,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Action'],
     thumbnail: 'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
     size: '25 GB',
+    releaseYear: '2020',
     images: [
       'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
       'https://wallpapercave.com/wp/wp5995960.jpg',
@@ -385,6 +405,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'RPG'],
     thumbnail: 'https://wallpapercave.com/wp/wp12005399.jpg',
     size: '155 GB',
+    releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp12005399.jpg',
       'https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1b9287112543738d/650ec7b5a86f96062da23371/STAR_WARS_Jedi_Survivor%E2%84%A2_20230419143317.jpg/?width=1280&auto=webp&quality=80&disable=upscale',
@@ -404,6 +425,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Adventure'],
     thumbnail: 'https://i.redd.it/8wnn4vuu4rjb1.jpg',
     size: '30 GB',
+    releaseYear: '2024',
     images: [
       'https://i.redd.it/8wnn4vuu4rjb1.jpg',
       'https://wallpapercave.com/wp/wp15851273.jpg',
@@ -423,6 +445,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Adventure'],
     thumbnail: 'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
     size: '90 GB',
+    releaseYear: '2023',
     images: [
       'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
       'https://wallpaperaccess.com/full/10969140.jpg',
@@ -442,6 +465,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Adventure'],
     thumbnail: 'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
     size: '50 GB',
+    releaseYear: '2024',
     images: [
       'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
       'https://wallpapercave.com/wp/wp13015730.jpg',
@@ -461,6 +485,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
     size: '60 GB',
+    releaseYear: '2020',
     images: [
       'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
       'https://i.pinimg.com/originals/d5/29/a4/d529a491cb3269b8e100314a0af2d6a6.jpg',
@@ -480,6 +505,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp2272912.jpg',
     size: '63 GB',
+    releaseYear: '2016',
     images: [
       'https://wallpapercave.com/wp/wp2272912.jpg',
       'https://i.pinimg.com/originals/18/60/d1/1860d17c779f1d922d57d96be15246a6.jpg',
@@ -499,6 +525,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Horror'],
     thumbnail: 'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
     size: '79 GB',
+    releaseYear: '2022',
     images: [
       'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
       'https://wallpapercave.com/wp/wp15026001.webp',
@@ -518,6 +545,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Horror'],
     thumbnail: 'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
     size: '95 GB',
+    releaseYear: '2020',
     images: [
       'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
       'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
@@ -537,6 +565,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: '110 GB',
+    releaseYear: '2013',
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpapercat.com/w/full/1/7/e/130549-1920x1080-desktop-1080p-grand-theft-auto-5-background-photo.jpg',
@@ -556,6 +585,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'RPG'],
     thumbnail: 'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
     size: '72 GB',
+    releaseYear: '2017',
     images: [
       'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
       'https://i.pinimg.com/originals/2c/b9/97/2cb997a4e03c53f49fa6472ceadbbd51.jpg',
@@ -575,6 +605,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
     size: '60 GB',
+    releaseYear: '2022',
     images: [
       'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
       'https://wallpaperaccess.com/full/8406398.jpg',
@@ -594,6 +625,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp15596323.jpg',
     size: '85 GB',
+    releaseYear: '2025',
     images: [
       'https://wallpapercave.com/wp/wp15596323.jpg',
       'https://wallpaperaccess.com/full/22537363.jpg',
@@ -613,6 +645,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
     size: '55 GB',
+    releaseYear: '2017',
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
@@ -632,6 +665,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Open World'],
     thumbnail: 'https://wallpaperset.com/w/full/b/b/e/457681.jpg',
     size: '40 GB',
+    releaseYear: '2016',
     images: [
       'https://wallpaperset.com/w/full/b/b/e/457681.jpg',
       'https://wallpapercave.com/wp/wp1841052.jpg',
@@ -651,6 +685,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpaperaccess.com/full/3495792.jpg',
     size: '50 GB',
+    releaseYear: '2018',
     images: [
       'https://wallpaperaccess.com/full/3495792.jpg',
       'https://preview.redd.it/modern-battlefields-should-not-shy-away-on-having-scenes-v0-ihzrwn5l1zde1.jpg?width=640&crop=smart&auto=webp&s=880fa16a80ae03451cf875fb06172f142533c549',
@@ -670,6 +705,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
     size: '100 GB',
+    releaseYear: '2021',
     images: [
       'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
       'https://wallpapercave.com/wp/wp12015400.jpg',
@@ -689,6 +725,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
     size: '95 GB',
+    releaseYear: '2021',
     images: [
       'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
       'https://wallpapercave.com/wp/wp9729352.jpg',
@@ -708,6 +745,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp2259852.png',
     size: '80 GB',
+    releaseYear: '2017',
     images: [
       'https://wallpapercave.com/wp/wp2259852.png',
       'https://wallpapercave.com/wp/wp2203840.png',
@@ -727,6 +765,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
     size: '175 GB',
+    releaseYear: '2019',
     images: [
       'https://wallpapercave.com/wp/wp4517150.jpg',
       'https://wallpapers.com/images/hd/4k-call-of-duty-modern-warfare-background-3840-x-2160-zdjbr6dl7k5czeot.jpg',
@@ -746,6 +785,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp11704100.jpg',
     size: '125 GB',
+    releaseYear: '2022',
     images: [
       'https://wallpapercave.com/wp/wp11704100.jpg',
       'https://wallpapercave.com/wp/wp11704100.jpg',
@@ -765,6 +805,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
     size: '235 GB',
+    releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp13127005.jpg',
       'https://wallpapercave.com/wp/wp3993550.jpg',
@@ -784,6 +825,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Adventure'],
     thumbnail: 'https://wallpaperaccess.com/full/26027678.jpg',
     size: '80 GB',
+    releaseYear: '2024',
     images: [
       'https://wallpaperaccess.com/full/26027678.jpg',
       'https://wallpaperaccess.com/full/26027727.jpg',
@@ -803,6 +845,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://i.pinimg.com/originals/db/76/43/db7643fd1a4174f7c64d19f6f7e0cec5.jpg',
     size: '70 GB',
+    releaseYear: '2018',
     images: [
       'https://i.pinimg.com/originals/db/76/43/db7643fd1a4174f7c64d19f6f7e0cec5.jpg',
       'https://wallpapercave.com/wp/wp11084730.jpg',
@@ -822,6 +865,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://i.pinimg.com/originals/fd/44/27/fd44275f93f7fad47b801f77cb315901.jpg',
     size: '50 GB',
+    releaseYear: '2020',
     images: [
       'https://i.pinimg.com/originals/fd/44/27/fd44275f93f7fad47b801f77cb315901.jpg',
       'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
@@ -841,6 +885,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
     size: '80 GB',
+    releaseYear: '2023',
     images: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
       'https://wallpapercat.com/w/full/c/0/5/1658-1920x1080-desktop-1080p-hitman-game-wallpaper-photo.jpg',
@@ -860,6 +905,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
     size: '45 GB',
+    releaseYear: '2018',
     images: [
       'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
       'https://images.alphacoders.com/129/thumbbig-1295494.webp',
@@ -879,6 +925,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Action'],
     thumbnail: 'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
     size: '31 GB',
+    releaseYear: '2014',
     images: [
       'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
       'https://wallpapercave.com/wp/wp1837519.jpg',
@@ -898,6 +945,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Open World'],
     thumbnail: 'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
     size: '45 GB',
+    releaseYear: '2022',
     images: [
       'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
       'https://assetsio.gnwcdn.com/Gotham_Knights_Street_Art_7.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
@@ -917,6 +965,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp4571906.png',
     size: '50 GB',
+    releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp4571906.png',
       'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2',
@@ -936,6 +985,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'RPG'],
     thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
     size: '40 GB',
+    releaseYear: '2025',
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
       'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-5.png',
@@ -955,6 +1005,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Shooter'],
     thumbnail: 'https://wallpapercave.com/wp/wp15668537.jpg',
     size: '50 GB',
+    releaseYear: '2025',
     images: [
       'https://wallpapercave.com/wp/wp15668537.jpg',
       'https://i0.wp.com/twistedvoxel.com/wp-content/uploads/2025/09/cronos-the-new-dawn-4-scaled.jpg?resize=1170,658&ssl=1',
@@ -974,6 +1025,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Horror'],
     thumbnail: 'https://wallpapers.com/images/hd/dying-light-2-cover-jkekl8ltwon8uhq9.jpg',
     size: '60 GB',
+    releaseYear: '2022',
     images: [
       'https://wallpapers.com/images/hd/dying-light-2-cover-jkekl8ltwon8uhq9.jpg',
       'https://wallpapers.com/images/hd/dying-light-2-hanging-aiden-sxo2g6at09s4qr2m.jpg',
@@ -993,6 +1045,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Horror'],
     thumbnail: 'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
     size: '54 GB',
+    releaseYear: '2023',
     images: [
       'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
       'https://wallpapers.com/images/hd/dead-island2-first-person-combat-rv2aer2l260gmwc5.jpg',
@@ -1012,6 +1065,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Horror'],
     thumbnail: 'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
     size: '60 GB',
+    releaseYear: '2019',
     images: [
       'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
       'https://kotaku.com/igdb/image/upload/t_720p/r5mn9rt7aqvf5nrn8dqq.jpg',
@@ -1031,6 +1085,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Action'],
     thumbnail: 'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/04/13/cd58b898/rev.jpg.webp',
     size: '30 GB',
+    releaseYear: '2021',
     images: [
       'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/04/13/cd58b898/rev.jpg.webp',
       'https://wallpapercat.com/w/full/4/b/2/2941-1920x1080-desktop-1080p-resident-evil-village-wallpaper.jpg',
@@ -1050,6 +1105,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp2073985.jpg',
     size: '24 GB',
+    releaseYear: '2017',
     images: [
       'https://wallpapercave.com/wp/wp2073985.jpg',
       'https://wallpapercave.com/wp/wp2074012.jpg',
@@ -1069,6 +1125,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Horror'],
     thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
     size: '50 GB',
+    releaseYear: '2024',
     images: [
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
       'https://cdn.mos.cms.futurecdn.net/7Zb4CNrHJcf3P6PcovYDy8.jpg',
@@ -1088,6 +1145,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Open World'],
     thumbnail: 'https://wallpapercave.com/wp/wp15107995.webp',
     size: '15 GB',
+    releaseYear: '2024',
     images: [
       'https://wallpapercave.com/wp/wp15107995.webp',
       'https://wallpapercave.com/wp/wp15108020.webp',
@@ -1107,6 +1165,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp15032759.webp',
     size: '40 GB',
+    releaseYear: '2025',
     images: [
       'https://wallpapercave.com/wp/wp15032759.webp',
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2025/08/25/d2f361cd/371-reveal-hero.jpg.webp',
@@ -1126,6 +1185,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp15037173.webp',
     size: '45 GB',
+    releaseYear: '2025',
     images: [
       'https://wallpapercave.com/wp/wp15037173.webp',
       'https://www.cnet.com/a/img/resize/8211721e6d525ddab1e8fe795f3979a6bcb2df2d/hub/2025/04/23/8db58633-12fa-4609-a2d5-02e05d462fc7/clair-obscur-expedition-33-20250412073013.jpg?auto=webp&width=1200',
@@ -1145,6 +1205,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp9594441.png',
     size: '90 GB',
+    releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp9594441.png',
       'https://wallpapercave.com/wp/wp9594463.jpg',
@@ -1164,6 +1225,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Adventure'],
     thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '20 GB',
+    releaseYear: '2025',
     images: [
       'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
       'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg',
@@ -1183,6 +1245,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Open World'],
     thumbnail: 'https://wallpapers.com/images/hd/metal-gear-solid-5-t9wtrqr1jz4tv5gw.jpg',
     size: '30 GB',
+    releaseYear: '2015',
     images: [
       'https://wallpapers.com/images/hd/metal-gear-solid-5-t9wtrqr1jz4tv5gw.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/07/Beyond-Ultra-MGS-V-e1618172330544.jpeg?q=50&fit=crop&w=825&dpr=1.5',
@@ -1202,9 +1265,10 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp13923945.jpg',
     size: '70 GB',
+    releaseYear: '2024',
     images: [
       'https://wallpapercave.com/wp/wp13923945.jpg',
-      'https://cdn.mos.cms.futurecdn.net/VmnpgP94cg/ originals/qJWI4bkD9ZM.jpg',
+      'https://cdn.mos.cms.futurecdn.net/VmnpgP94cg/originals/qJWI4bkD9ZM.jpg',
       'https://m.media-amazon.com/images/M/MV5BZWYwNjVlOGEtZmI4Mi00ZGI5LWFlZjAtYzkyOGRlMzQyODMzXkEyXkFqcGc@.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
@@ -1221,6 +1285,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Adventure'],
     thumbnail: 'https://wallpaperaccess.com/full/26350707.jpg',
     size: '80 GB',
+    releaseYear: '2025',
     images: [
       'https://wallpaperaccess.com/full/26350707.jpg',
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots004.jpg',
@@ -1240,6 +1305,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://i.pinimg.com/originals/01/29/db/0129db8b6597b7b2f4a12cc4808b0e45.jpg',
     size: '42 GB',
+    releaseYear: '2018',
     images: [
       'https://i.pinimg.com/originals/01/29/db/0129db8b6597b7b2f4a12cc4808b0e45.jpg',
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-175qarmqymgwwv87.jpg',
@@ -1259,6 +1325,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp15335747.webp',
     size: '50 GB',
+    releaseYear: '2025',
     images: [
       'https://wallpapercave.com/wp/wp15335747.webp',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
@@ -1278,6 +1345,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'Action'],
     thumbnail: 'https://wallpapercave.com/wp/wp2867624.jpg',
     size: '50 GB',
+    releaseYear: '2016',
     images: [
       'https://wallpapercave.com/wp/wp2867624.jpg',
       'https://wallpaperaccess.com/full/4137127.jpg',
@@ -1297,6 +1365,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Shooter'],
     thumbnail: 'https://wallpaperaccess.com/full/2615697.jpg',
     size: '30 GB',
+    releaseYear: '2012',
     images: [
       'https://wallpaperaccess.com/full/2615697.jpg',
       'https://www.gamemaps.com/img/game_images/max_payne_3__524_2.jpg?1706667633',
@@ -1316,6 +1385,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
     size: '40 GB',
+    releaseYear: '2025',
     images: [
       'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
       'https://preview.redd.it/17230397967368203576/12D9C4A49A58607E4D4E4EBEC216DD0DE5CAC6AC/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
@@ -1335,6 +1405,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Race', 'Open World'],
     thumbnail: 'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2023/01/need-for-speed-unbound.jpg?resize=1170,720&ssl=1',
     size: '35 GB',
+    releaseYear: '2022',
     images: [
       'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2023/01/need-for-speed-unbound.jpg?resize=1170,720&ssl=1',
       'https://gameinformer.com/sites/default/files/styles/no_compression/public/2022/12/12/50550f56/nfs2.jpg.webp',
@@ -1354,6 +1425,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Race', 'Open World'],
     thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
     size: '30 GB',
+    releaseYear: '2019',
     images: [
       'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
       'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
@@ -1373,6 +1445,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Race', 'Open World'],
     thumbnail: 'https://wallpaperaccess.com/full/2286453.jpg',
     size: '40 GB',
+    releaseYear: '2018',
     images: [
       'https://wallpaperaccess.com/full/2286453.jpg',
       'https://wallpaperaccess.com/full/2286467.jpg',
@@ -1392,6 +1465,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Race', 'Open World'],
     thumbnail: 'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
     size: '100 GB',
+    releaseYear: '2026',
     images: [
       'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
       'https://images.purexbox.com/e311b45450f8a/xbox-showcases-five-unique-biomes-with-breathtaking-landscapes-in-forza-horizon-6.900x.jpg',
@@ -1411,6 +1485,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Action'],
     thumbnail: 'https://travelchinawith.me/wp-content/uploads/Black-Myth-Wukong-image-2-1-1024x576-1.webp',
     size: '120 GB',
+    releaseYear: '2024',
     images: [
       'https://travelchinawith.me/wp-content/uploads/Black-Myth-Wukong-image-2-1-1024x576-1.webp',
       'https://preview.redd.it/photos-from-a-landscape-photographer-v0-u38zg9b5ajkd1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
@@ -1430,6 +1505,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Action'],
     thumbnail: 'https://wallpapers.com/images/featured/stray-taob394fcubgvuwk.jpg',
     size: '10 GB',
+    releaseYear: '2022',
     images: [
       'https://wallpapers.com/images/featured/stray-taob394fcubgvuwk.jpg',
       'https://wallpaperaccess.com/full/8407617.jpg',
@@ -1449,6 +1525,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'RPG'],
     thumbnail: 'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
     size: '90 GB',
+    releaseYear: '2022',
     images: [
       'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
       'https://www.gameinformer.com/sites/default/files/2021/12/22/381f64d4/hfw_daunt_vista.jpg',

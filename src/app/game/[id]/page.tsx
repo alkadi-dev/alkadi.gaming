@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff } from 'lucide-react';
+import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -145,6 +145,9 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
         
         <div className="absolute bottom-0 left-0 right-0 p-6 container mx-auto">
           <div className="flex flex-wrap gap-2 mb-3">
+            <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
+              <Calendar className="h-3.5 w-3.5" /> {game.releaseYear}
+            </Badge>
             {game.categories.map((cat, i) => (
               <Badge key={i} className="bg-primary text-white px-4 py-1.5 text-sm uppercase tracking-wider font-bold shadow-2xl">
                 {cat}
