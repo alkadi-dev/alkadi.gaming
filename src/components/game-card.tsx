@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, PlusCircle, CheckCircle2, ImageOff, Calendar, Star } from 'lucide-react';
+import { HardDrive, PlusCircle, CheckCircle2, ImageOff, Calendar } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -68,7 +68,6 @@ export function GameCard({ game }: GameCardProps) {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
           
-          {/* Category Badge - Top Left */}
           <div className="absolute top-3 left-3">
             {game.categories && game.categories.length > 0 && (
               <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm text-xs px-3 py-1 w-fit uppercase font-bold tracking-tight shadow-xl">
@@ -77,16 +76,14 @@ export function GameCard({ game }: GameCardProps) {
             )}
           </div>
 
-          {/* Recommended Badge - Top Right */}
           {game.isRecommended && (
             <div className="absolute top-3 right-3 pointer-events-none">
-              <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center gap-1.5 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-                <Star className="w-3 h-3 fill-current" /> Recommended
+              <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
+                Recommended
               </div>
             </div>
           )}
 
-          {/* Info Labels - Bottom Left inside Image */}
           <div className="absolute bottom-2 left-2 flex items-center gap-1.5 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg">
             <div className="flex items-center gap-1">
               <HardDrive className="w-2.5 h-2.5" />
@@ -100,7 +97,6 @@ export function GameCard({ game }: GameCardProps) {
           </div>
         </Link>
 
-        {/* Toggle Selection Button - Bottom Right inside Image */}
         <div className="absolute bottom-2 right-2">
           <Button
             size="icon"

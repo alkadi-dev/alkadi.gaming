@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, Star } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -27,7 +27,6 @@ export default function HomePage() {
       
     const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
     
-    // Parse numeric size from strings like "69 GB"
     const gameSize = parseFloat(game.size.replace(/[^\d.]/g, '')) || 0;
     const matchesSize = gameSize <= maxSize;
     
@@ -49,7 +48,6 @@ export default function HomePage() {
       const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
       return sizeB - sizeA;
     }
-    // Default alphabetical
     return a.title.localeCompare(b.title);
   });
 
@@ -71,7 +69,6 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -96,7 +93,6 @@ export default function HomePage() {
       </header>
 
       <main className="flex-1 container mx-auto px-4 py-8">
-        {/* Hero Section */}
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
           <div className="max-w-4xl relative z-10 mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
@@ -119,7 +115,6 @@ export default function HomePage() {
           <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent hidden lg:block" />
         </div>
 
-        {/* Filters */}
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4 flex-1">
@@ -131,20 +126,16 @@ export default function HomePage() {
                     variant={selectedCategory === cat ? 'default' : 'secondary'}
                     size="sm"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`rounded-full px-6 transition-all h-8 text-xs flex items-center gap-1.5 ${
+                    className={`rounded-full px-6 transition-all h-8 text-xs flex items-center justify-center ${
                       selectedCategory === cat ? 'bg-primary' : 'hover:bg-primary/20'
                     }`}
                   >
-                    {cat === 'Recommended' && (
-                      <Star className={`h-3 w-3 ${selectedCategory === cat ? 'fill-current' : 'fill-primary'}`} />
-                    )}
                     {cat}
                   </Button>
                 ))}
               </div>
             </div>
 
-            {/* Combined Filter Popover */}
             <div className="flex items-center gap-2">
               <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
                 <PopoverTrigger asChild>
@@ -166,7 +157,6 @@ export default function HomePage() {
                 </PopoverTrigger>
                 <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="end">
                   <div className="space-y-6">
-                    {/* Sort Order */}
                     <div className="space-y-3">
                       <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
                         <ArrowUpDown className="h-3 w-3 text-primary" /> Sort By
@@ -175,7 +165,7 @@ export default function HomePage() {
                         value={sortOrder} 
                         onValueChange={(val) => {
                           setSortOrder(val);
-                          setIsFilterOpen(false); // Close automatically on selection
+                          setIsFilterOpen(false);
                         }}
                       >
                         <SelectTrigger className="bg-secondary/30 border-white/5 rounded-xl h-10">
@@ -191,7 +181,6 @@ export default function HomePage() {
                       </Select>
                     </div>
 
-                    {/* Size Filter */}
                     <div className="space-y-4">
                       <div className="flex justify-between items-center mb-1">
                         <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
@@ -224,7 +213,7 @@ export default function HomePage() {
                           onClick={() => {
                             setMaxSize(250);
                             setSortOrder('title-asc');
-                            setIsFilterOpen(false); // Close automatically on reset
+                            setIsFilterOpen(false);
                           }}
                         >
                           Reset Filters
@@ -247,7 +236,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Gallery */}
         {filteredGames.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredGames.map((game) => (
