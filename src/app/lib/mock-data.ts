@@ -1149,10 +1149,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Avatar: Frontiers of Pandora',
     description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the open world of the Western Frontier of Pandora.',
     categories: ['Open World', 'Adventure'],
-    thumbnail: 'https://wallpapercave.com/wp/wp9594441.png ',
+    thumbnail: 'https://www.creativeuncut.com/gallery-47/art/afop-cover-art.jpg',
     size: '90 GB',
     images: [
-      'https://wallpapercave.com/wp/wp9594441.png',
+      'https://www.creativeuncut.com/gallery-47/art/afop-cover-art.jpg',
       'https://wallpapercave.com/wp/wp9594463.jpg',
       'https://preview.redd.it/photo-mode-thread-for-frontiers-of-pandora-v0-r1dnz6yrlb5c1.jpg?width=640&crop=smart&auto=webp&s=f637b3ecc55655499d9dd1cd0379d3b2d268ae93'
     ],
@@ -1187,11 +1187,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Metal Gear Solid 5',
     description: 'The Phantom Pain. A new era for the Metal Gear franchise with cutting-edge technology and a massive open world.',
     categories: ['Action', 'Open World'],
-    thumbnail: getImg('mgs5-thumb'),
+    thumbnail: 'https://wallpapers.com/images/hd/metal-gear-solid-5-t9wtrqr1jz4tv5gw.jpg',
     size: '30 GB',
-    images: [getImg('mgs5-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapers.com/images/hd/metal-gear-solid-5-t9wtrqr1jz4tv5gw.jpg',
+      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/07/Beyond-Ultra-MGS-V-e1618172330544.jpeg?q=50&fit=crop&w=825&dpr=1.5',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/287700/ss_fbfa8f676661d34b1da0495e15df5a08c7e1f04a.1920x1080.jpg?t=1727849445'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/C19ap2M7DDE',
+    shorts: [
+      'https://www.youtube.com/embed/ms5ENyRH3Bs',
+      'https://www.youtube.com/embed/ZAW0hs2ZDFg',
+      'https://www.youtube.com/embed/EJmpkJvjvIo'
+    ]
   },
   {
     id: 'hellblade2',
