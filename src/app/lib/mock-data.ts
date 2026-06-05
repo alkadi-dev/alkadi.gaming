@@ -521,7 +521,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
       'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
-      'https://preview.redd.it/ebmyt82afuc51.png?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2'
+      'https://preview.redd.it/ebmyt82afuc51.png?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2'
     ],
     videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E',
     shorts: [
@@ -919,7 +919,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '50 GB',
     images: [
       'https://wallpapercave.com/wp/wp4571906.png',
-      'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2',
+      'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2',
       'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A?si=S1NP1QRzN-f2v3VA',
@@ -1143,10 +1143,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Avatar: Frontiers of Pandora',
     description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the open world of the Western Frontier of Pandora.',
     categories: ['Open World', 'Adventure'],
-    thumbnail: 'https://www.creativeuncut.com/gallery-47/art/afop-cover-art.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp9594441.png',
     size: '90 GB',
     images: [
-      'https://www.creativeuncut.com/gallery-47/art/afop-cover-art.jpg',
+      'https://wallpapercave.com/wp/wp9594441.png',
       'https://wallpapercave.com/wp/wp9594463.jpg',
       'https://preview.redd.it/photo-mode-thread-for-frontiers-of-pandora-v0-r1dnz6yrlb5c1.jpg?width=640&crop=smart&auto=webp&s=f637b3ecc55655499d9dd1cd0379d3b2d268ae93'
     ],
@@ -1356,8 +1356,8 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '30 GB',
     images: [
       'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
-      'https://preview.redd.it/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
-      'https://preview.redd.it/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
+      'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
+      'https://images.steamusercontent.com/ugc/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
     ],
     videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI?si=1klHqX5ZzsCZ2MXM',
     shorts: [
@@ -1447,11 +1447,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Horizon Forbidden West',
     description: 'Join Aloy as she braves the Forbidden West – a majestic but dangerous frontier that conceals mysterious new threats.',
     categories: ['Open World', 'RPG'],
-    thumbnail: getImg('hfw-thumb'),
+    thumbnail: 'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
     size: '90 GB',
     images: [
       'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
-      'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/12/22/381f64d4/hfw.jpg.webp',
+      'https://www.gameinformer.com/sites/default/files/2021/12/22/381f64d4/hfw_daunt_vista.jpg',
       'https://wallpapercat.com/w/full/b/1/6/100982-2000x1500-desktop-hd-horizon-forbidden-west-wallpaper-photo.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/Lq594XmpPBg',
