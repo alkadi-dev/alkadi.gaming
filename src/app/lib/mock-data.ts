@@ -155,10 +155,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     categories: ['Race', 'Open World'],
-    thumbnail: 'https://picsum.photos/seed/forza5/600/400',
+    thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
     size: '82 GB',
     images: [
-      'https://picsum.photos/seed/forza5/600/400',
+      'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
       'https://wallpapercave.com/wp/wp12405375.jpg',
       'https://wallpapers.com/images/hd/forza-horizon-5-4k-dac6pfcwb8wy8spw.jpg'
     ],
@@ -174,10 +174,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Spider-Man 2',
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York.',
     categories: ['Open World', 'Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp12745300.jpg',
+    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
     size: '67 GB',
     images: [
-      'https://wallpapercave.com/wp/wp12745300.jpg',
+      'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
       'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
       'https://wallpapers.com/images/hd/spider-man-2-miles-morales-and-peter-parker-v4198305c754v2b7.jpg'
     ],
@@ -212,10 +212,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     categories: ['Open World', 'RPG'],
-    thumbnail: 'https://wallpapercave.com/wp/wp12015400.jpg',
+    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg',
     size: '55 GB',
     images: [
-      'https://wallpapercave.com/wp/wp12015400.jpg',
+      'https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vOrfFQh.jpg',
       'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
     ],
@@ -451,7 +451,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/w33j0RqVJu8?si=j7a7kDrLFE_K1FAf',
       'https://www.youtube.com/embed/ilUET2suOK0?si=jBXok38l8NgyoVsh',
-      'https://www.youtube.com/embed/YQqInnJOpOI?si=vOSkoYvCE8jzvP'
+      'https://www.youtube.com/embed/YQqInnJIpOI?si=vOSkoYvCE8jzvP'
     ],
   },
   {
@@ -630,10 +630,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Watch Dogs 2',
     description: 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area.',
     categories: ['Action', 'Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp1841031.jpg',
+    thumbnail: 'https://wallpaperset.com/w/full/b/b/e/457681.jpg',
     size: '40 GB',
     images: [
-      'https://wallpapercave.com/wp/wp1841031.jpg',
+      'https://wallpaperset.com/w/full/b/b/e/457681.jpg',
       'https://wallpapercave.com/wp/wp1841052.jpg',
       'https://wallpapercave.com/wp/wp1841031.jpg'
     ],
@@ -801,10 +801,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Marvel's Spider-Man",
     description: "Starring one of the world's most iconic super heroes, Marvel's Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for.",
     categories: ['Action', 'Adventure'],
-    thumbnail: 'https://wallpapercave.com/wp/wp7593747.jpg',
+    thumbnail: 'https://cdn.mobygames.com/1aefe4ec-ac15-11ed-8ce3-02420a000131.webp',
     size: '70 GB',
     images: [
-      'https://wallpapercave.com/wp/wp7593747.jpg',
+      'https://cdn.mobygames.com/1aefe4ec-ac15-11ed-8ce3-02420a000131.webp',
       'https://wallpapercave.com/wp/wp11084730.jpg',
       'https://wallpapercave.com/wp/wp4585692.jpg'
     ],
@@ -820,10 +820,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Spider-Man: Miles Morales",
     description: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     categories: ['Action', 'Adventure'],
-    thumbnail: 'https://image.api.playstation.com/vulcan/img/rnd/202010/2812/4PQ6VgOIMgfldTP9kvvXmemC.jpg',
+    thumbnail: 'https://i.pinimg.com/originals/fd/44/27/fd44275f93f7fad47b801f77cb315901.jpg',
     size: '50 GB',
     images: [
-      'https://image.api.playstation.com/vulcan/img/rnd/202010/2812/4PQ6VgOIMgfldTP9kvvXmemC.jpg',
+      'https://i.pinimg.com/originals/fd/44/27/fd44275f93f7fad47b801f77cb315901.jpg',
       'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
       'https://m.media-amazon.com/images/M/MV5BMTU4NjYwNzAxN15BMl5BanBnXkFtZTgwMDkyODI4NjM@.jpg'
     ],

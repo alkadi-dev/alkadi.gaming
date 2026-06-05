@@ -59,6 +59,10 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.purexbox.com' },
       { protocol: 'https', hostname: 'mygamingtutorials.com' },
       { protocol: 'https', hostname: 'wolfsgamingblog.com' },
+      { protocol: 'https', hostname: '**.mobygames.com' },
+      { protocol: 'https', hostname: 'wallpaperset.com' },
+      { protocol: 'https', hostname: '4kwallpapers.com' },
+      { protocol: 'https', hostname: 'traxion.gg' },
     ],
   },
 };
