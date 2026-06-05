@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, PlusCircle, CheckCircle2 } from 'lucide-react';
+import { HardDrive, PlusCircle, CheckCircle2, ImageOff } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -46,17 +46,26 @@ export function GameCard({ game }: GameCardProps) {
     }
   };
 
+  const hasThumbnail = game.thumbnail && game.thumbnail.trim() !== '';
+
   return (
     <Card className="overflow-hidden bg-card border-none transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/20 flex flex-col h-full group/card">
       <div className="relative aspect-[16/9] overflow-hidden">
         <Link href={`/game/${game.id}`} className="group block relative w-full h-full">
-          <Image
-            src={game.thumbnail}
-            alt={game.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          {hasThumbnail ? (
+            <Image
+              src={game.thumbnail}
+              alt={game.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          ) : (
+            <div className="w-full h-full bg-secondary/50 flex flex-col items-center justify-center gap-2">
+              <ImageOff className="w-8 h-8 text-muted-foreground/20" />
+              <span className="text-[10px] text-muted-foreground/40 font-bold uppercase">No Image</span>
+            </div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
           
           {/* Category Badge - Only show the first one outside the card */}

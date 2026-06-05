@@ -16,12 +16,6 @@ export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Act
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
-const NEW_SHORTS = [
-  'https://www.youtube.com/embed/0d-U2QL2Qvc?si=bHpYGwiXYsGjmox8',
-  'https://www.youtube.com/embed/XsaXfkpKPNM?si=jaFUTogTmJJA6Quj',
-  'https://www.youtube.com/embed/ax_HkEnW_ig?si=ax_HkEnW_ig'
-];
-
 export const MOCK_GAMES: GameEntry[] = [
   {
     id: '5',
@@ -52,7 +46,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
-      'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg'
+      'https://wallpapercat.com/w/full/b/0/1/14420-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
     shorts: [
@@ -180,12 +174,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Spider-Man 2',
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York.',
     categories: ['Open World', 'Action'],
-    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
+    thumbnail: 'https://wallpapercave.com/wp/wp12745300.jpg',
     size: '67 GB',
     images: [
-      'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
+      'https://wallpapercave.com/wp/wp12745300.jpg',
       'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
-      'https://wallpapercg.com/media/ts_orig/16684.webp'
+      'https://wallpapers.com/images/hd/spider-man-2-miles-morales-and-peter-parker-v4198305c754v2b7.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/nq1M_Wc4FIc',
     shorts: [
@@ -218,10 +212,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     categories: ['Open World', 'RPG'],
-    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp12015400.jpg',
     size: '55 GB',
     images: [
-      'https://4kwallpapers.com/images/walls/thumbs/20154.jpg',
+      'https://wallpapercave.com/wp/wp12015400.jpg',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vOrfFQh.jpg',
       'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
     ],
@@ -332,10 +326,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 2',
     description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh-eating zombies roam the streets for survivors.',
     categories: ['Horror', 'Action'],
-    thumbnail: 'https://picsum.photos/seed/re2/600/400',
+    thumbnail: 'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
     size: '26 GB',
     images: [
-      'https://picsum.photos/seed/re2/600/400',
+      'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
@@ -351,10 +345,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'STALKER 2',
     description: 'Heart of Chornobyl. Chornobyl Exclusion Zone has changed dramatically after the second second explosion in 2006. Dangerous mutants, deadly anomalies, and warring factions have made the Zone a very tough place to survive.',
     categories: ['Shooter', 'Horror'],
-    thumbnail: 'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
+    thumbnail: 'https://preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
     size: '150 GB',
     images: [
-      'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
+      'https://preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
       'https://wallpapercave.com/wp/wp8285372.jpg',
       'https://preview.redd.it/duabwooed0d51.jpg?width=640&crop=smart&auto=webp&s=13cb3ece5f7a2aa5d75c6258c5d7a056c1f9d7d4'
     ],
@@ -408,10 +402,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Little Nightmares 3',
     description: 'Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere.',
     categories: ['Horror', 'Adventure'],
-    thumbnail: 'https://i.redd.it/8wnn4vuu4rjb1.jpg',
+    thumbnail: 'https://preview.redd.it/8wnn4vuu4rjb1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
     size: '30 GB',
     images: [
-      'https://i.redd.it/8wnn4vuu4rjb1.jpg',
+      'https://preview.redd.it/8wnn4vuu4rjb1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
       'https://wallpapercave.com/wp/wp15851273.jpg',
       'https://wallpapercave.com/wp/wp15851314.jpg'
     ],
@@ -527,7 +521,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
       'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
-      'https://i.redd.it/ebmyt82afuc51.png'
+      'https://preview.redd.it/ebmyt82afuc51.png?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2'
     ],
     videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E',
     shorts: [
@@ -622,7 +616,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
-      'https://getwallpapers.com/wallpaper/full/9/8/5/962879-new-sniper-elite-wallpapers-1920x1080.jpg'
+      'https://wallpapercat.com/w/full/b/0/1/14420-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
     shorts: [
@@ -636,12 +630,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Watch Dogs 2',
     description: 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area.',
     categories: ['Action', 'Open World'],
-    thumbnail: 'https://getwallpapers.com/wallpaper/full/5/8/8/1077825-watch-dogs-2-wallpapers-2560x1440-windows-7.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp1841031.jpg',
     size: '40 GB',
     images: [
-      'https://getwallpapers.com/wallpaper/full/5/8/8/1077825-watch-dogs-2-wallpapers-2560x1440-windows-7.jpg',
       'https://wallpapercave.com/wp/wp1841031.jpg',
-      'https://wallpapercave.com/wp/wp1841052.jpg'
+      'https://wallpapercave.com/wp/wp1841052.jpg',
+      'https://wallpapercave.com/wp/wp1841031.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/hh9x4NqW0Dw',
     shorts: [
@@ -678,7 +672,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '100 GB',
     images: [
       'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
-      'https://images.hdqwalls.com/wallpapers/bthumb/the-battlefield-6-sr.jpg',
+      'https://wallpapercave.com/wp/wp12015400.jpg',
       'https://images4.alphacoders.com/722/thumbbig-722618.webp'
     ],
     videoUrl: 'https://www.youtube.com/embed/pgNCgJG0vnY',
@@ -750,10 +744,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare II',
     description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
     categories: ['Shooter', 'Action'],
-    thumbnail: 'https://b2203835.smushcdn.com/2203835/wp-content/uploads/2022/09/Call-of-Duty-Modern-Warfare-II-Cover-Art.jpg?lossy=1&strip=0&webp=1',
+    thumbnail: 'https://wallpapercave.com/wp/wp11704100.jpg',
     size: '125 GB',
     images: [
-      'https://b2203835.smushcdn.com/2203835/wp-content/uploads/2022/09/Call-of-Duty-Modern-Warfare-II-Cover-Art.jpg?lossy=1&strip=0&webp=1',
+      'https://wallpapercave.com/wp/wp11704100.jpg',
       'https://wallpapercave.com/wp/wp11704100.jpg',
       'https://wallpapercave.com/wp/wp11704136.jpg'
     ],
@@ -925,7 +919,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '50 GB',
     images: [
       'https://wallpapercave.com/wp/wp4571906.png',
-      'https://i.redd.it/vu3g9pw3vtwg1.jpeg',
+      'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2',
       'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A?si=S1NP1QRzN-f2v3VA',
@@ -1324,8 +1318,8 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '40 GB',
     images: [
       'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
-      'https://images.steamusercontent.com/ugc/17230397967368203576/12D9C4A49A58607E4D4E4EBEC216DD0DE5CAC6AC/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
-      'https://clan.fastly.steamstatic.com/images/40662195/186e55a9c5bc24135731dcc957d7e5840774d08a.png'
+      'https://preview.redd.it/17230397967368203576/12D9C4A49A58607E4D4E4EBEC216DD0DE5CAC6AC/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+      'https://shared.akamai.steamstatic.com/images/40662195/186e55a9c5bc24135731dcc957d7e5840774d08a.png'
     ],
     videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
     shorts: [
@@ -1362,8 +1356,8 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '30 GB',
     images: [
       'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
-      'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
-      'https://images.steamusercontent.com/ugc/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
+      'https://preview.redd.it/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
+      'https://preview.redd.it/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
     ],
     videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI?si=1klHqX5ZzsCZ2MXM',
     shorts: [
@@ -1457,14 +1451,14 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '90 GB',
     images: [
       'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
-      'https://www.gameinformer.com/sites/default/files/2021/12/22/381f64d4/hfw_daunt_vista.jpg',
+      'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/12/22/381f64d4/hfw.jpg.webp',
       'https://wallpapercat.com/w/full/b/1/6/100982-2000x1500-desktop-hd-horizon-forbidden-west-wallpaper-photo.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/Lq594XmpPBg',
     shorts: [
-      'https://www.youtube.com/embed/igl_5sssWjQ',
-      'https://www.youtube.com/embed/8_8yzlwUAnE',
-      'https://www.youtube.com/embed/czAejSrYfGE'
+      'https://www.youtube.com/embed/igl_5sssWjQ?si=5wFVRBHjUvqCzfXj',
+      'https://www.youtube.com/embed/8_8yzlwUAnE?si=4dCr0mAcKiUCkjCm',
+      'https://www.youtube.com/embed/czAejSrYfGE?si=GmSF73-Q-rcVgBAT'
     ]
   }
 ];

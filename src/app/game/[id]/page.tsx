@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive } from 'lucide-react';
+import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -81,6 +81,10 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
     );
   }
 
+  const heroImage = (game.images && game.images[0] && game.images[0].trim() !== '') 
+    ? game.images[0] 
+    : (game.thumbnail && game.thumbnail.trim() !== '') ? game.thumbnail : null;
+
   return (
     <div className="min-h-screen pb-20">
       {/* Fixed Header Navigation - Mobile Optimized */}
@@ -122,19 +126,25 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
 
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full mt-0">
-        <Image
-          src={game.images[0] || game.thumbnail}
-          alt={game.title}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            alt={game.title}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-secondary flex flex-col items-center justify-center gap-4">
+            <ImageOff className="w-16 h-16 text-muted-foreground/20" />
+            <span className="text-sm text-muted-foreground/40 font-bold uppercase tracking-widest">Image Unavailable</span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
         <div className="absolute bottom-0 left-0 right-0 p-6 container mx-auto">
           <div className="flex flex-wrap gap-2 mb-3">
-            {/* Show both categories here with increased font size */}
             {game.categories.map((cat, i) => (
               <Badge key={i} className="bg-primary text-white px-4 py-1.5 text-sm uppercase tracking-wider font-bold shadow-2xl">
                 {cat}
@@ -181,30 +191,32 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
           </section>
 
           {/* Media Carousel */}
-          <section>
-            <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Gallery</h2>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {game.images.map((img, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2">
-                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
-                      <Image
-                        src={img}
-                        alt={`${game.title} Screenshot ${index + 1}`}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-end gap-2 mt-4">
-                <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-                <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-              </div>
-            </Carousel>
-          </section>
+          {game.images && game.images.filter(img => img && img.trim() !== '').length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Gallery</h2>
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {game.images.filter(img => img && img.trim() !== '').map((img, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2">
+                      <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                        <Image
+                          src={img}
+                          alt={`${game.title} Screenshot ${index + 1}`}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="flex justify-end gap-2 mt-4">
+                  <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
+                  <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
+                </div>
+              </Carousel>
+            </section>
+          )}
 
           {/* Video Section */}
           <section>
