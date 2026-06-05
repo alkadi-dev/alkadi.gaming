@@ -402,10 +402,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Little Nightmares 3',
     description: 'Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere.',
     categories: ['Horror', 'Adventure'],
-    thumbnail: 'https://preview.redd.it/8wnn4vuu4rjb1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
+    thumbnail: 'https://i.redd.it/8wnn4vuu4rjb1.jpg',
     size: '30 GB',
     images: [
-      'https://preview.redd.it/8wnn4vuu4rjb1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
+      'https://i.redd.it/8wnn4vuu4rjb1.jpg',
       'https://wallpapercave.com/wp/wp15851273.jpg',
       'https://wallpapercave.com/wp/wp15851314.jpg'
     ],
@@ -451,7 +451,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/w33j0RqVJu8?si=j7a7kDrLFE_K1FAf',
       'https://www.youtube.com/embed/ilUET2suOK0?si=jBXok38l8NgyoVsh',
-      'https://www.youtube.com/embed/YQqInnJOpOI?si=vOSkoYvCE8jfZzvP'
+      'https://www.youtube.com/embed/YQqInnJOpOI?si=vOSkoYvCE8jzvP'
     ],
   },
   {
@@ -1340,11 +1340,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://gameinformer.com/sites/default/files/styles/no_compression/public/2022/12/12/50550f56/nfs2.jpg.webp',
       'https://images8.alphacoders.com/130/thumbbig-1307240.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E?si=sc-AbhfG6D2r_qmH',
+    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E',
     shorts: [
-      'https://www.youtube.com/embed/7hcSVFYfcOA?si=Yj3xha9BZL5AkrJt',
-      'https://www.youtube.com/embed/nu0dG_kC8ao?si=lOcJNeIQbkwWQDZW',
-      'https://www.youtube.com/embed/_3dgFAGaEc8?si=C5yS9K7NLCirgO8D'
+      'https://www.youtube.com/embed/7hcSVFYfcOA',
+      'https://www.youtube.com/embed/nu0dG_kC8ao',
+      'https://www.youtube.com/embed/_3dgFAGaEc8'
     ]
   },
   {
@@ -1359,11 +1359,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
       'https://images.steamusercontent.com/ugc/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
     ],
-    videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI?si=1klHqX5ZzsCZ2MXM',
+    videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI',
     shorts: [
-      'https://www.youtube.com/embed/8jiTNodDe-Y?si=TWBHQwKa6HOtG9Uj',
-      'https://www.youtube.com/embed/XuZaw6kVBkE?si=vZXLs-SX5UthSmNJ',
-      'https://www.youtube.com/embed/xhvQrJ3QNnM?si=aYiPZ5749c8kaBqe'
+      'https://www.youtube.com/embed/8jiTNodDe-Y',
+      'https://www.youtube.com/embed/XuZaw6kVBkE',
+      'https://www.youtube.com/embed/xhvQrJ3QNnM'
     ]
   },
   {
@@ -1378,11 +1378,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/2286467.jpg',
       'https://wallpaperaccess.com/full/2286468.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/MXN1nmL-DQU?si=9RrP7tgryKLGujrb',
+    videoUrl: 'https://www.youtube.com/embed/MXN1nmL-DQU',
     shorts: [
-      'https://www.youtube.com/embed/q9g8QHWJDt0?si=kEwpuVzNG1yP6iU1',
-      'https://www.youtube.com/embed/-t6JhCq9_Ok?si=2O8LQdHqJRxNoJVx',
-      'https://www.youtube.com/embed/PpByB8-geYA?si=znlJvjvvxFz59mbE'
+      'https://www.youtube.com/embed/q9g8QHWJDt0',
+      'https://www.youtube.com/embed/-t6JhCq9_Ok',
+      'https://www.youtube.com/embed/PpByB8-geYA'
     ]
   },
   {
@@ -1397,11 +1397,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.purexbox.com/e311b45450f8a/xbox-showcases-five-unique-biomes-with-breathtaking-landscapes-in-forza-horizon-6.900x.jpg',
       'https://cdn.mos.cms.futurecdn.net/5D5DKFRi3iqCDQnmR6ExiT.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/oYhaW-Vr4wg?si=TZ8wZaUvGNCZ55Zj',
+    videoUrl: 'https://www.youtube.com/embed/oYhaW-Vr4wg',
     shorts: [
-      'https://www.youtube.com/embed/PWlQLZYMYvs?si=1htriHXaAwepdC7g',
-      'https://www.youtube.com/embed/Ddv_9D1ohbo?si=CKOj715KziVzrl5l',
-      'https://www.youtube.com/embed/JDcx4qw62RM?si=xPP8iQxUYNoYdkw3'
+      'https://www.youtube.com/embed/PWlQLZYMYvs',
+      'https://www.youtube.com/embed/Ddv_9D1ohbo',
+      'https://www.youtube.com/embed/JDcx4qw62RM'
     ]
   },
   {
@@ -1416,11 +1416,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://preview.redd.it/photos-from-a-landscape-photographer-v0-u38zg9b5ajkd1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
       'https://static0.srcdn.com/wordpress/wp-content/uploads/2024/08/scene-black-wind-mountain-black-wind-cave-bodhi-peak-black-myth-wukong.jpg?q=70&fit=crop&w=825&dpr=1'
     ],
-    videoUrl: 'https://www.youtube.com/embed/pnSsgRJmsCc?si=nXsd45BxpWffRqDc',
+    videoUrl: 'https://www.youtube.com/embed/pnSsgRJmsCc',
     shorts: [
-      'https://www.youtube.com/embed/t05rY-_ES4Y?si=Wrw_6a17ekxTOCq6',
-      'https://www.youtube.com/embed/-zm3jM9cgFE?si=5lHksoNXKLf_XELh',
-      'https://www.youtube.com/embed/VWgRywdvGY0?si=XaN5IPOW1ZaG_jOP'
+      'https://www.youtube.com/embed/t05rY-_ES4Y',
+      'https://www.youtube.com/embed/-zm3jM9cgFE',
+      'https://www.youtube.com/embed/VWgRywdvGY0'
     ]
   },
   {
@@ -1435,11 +1435,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/8407617.jpg',
       'https://i.pinimg.com/originals/34/80/14/34801477320c4283e5723969a10f346b.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/u84hRUQlaio?si=VVRFUwpJePoi9YpA',
+    videoUrl: 'https://www.youtube.com/embed/u84hRUQlaio',
     shorts: [
-      'https://www.youtube.com/embed/r9hvgj-LOQs?si=j4KICrFcTj7gJDvv',
-      'https://www.youtube.com/embed/xIONkU7qQt4?si=NDZQRDHrjl-N0wo-',
-      'https://www.youtube.com/embed/K8ZyUXZODGs?si=77psy1Jrj_B6QlPD'
+      'https://www.youtube.com/embed/r9hvgj-LOQs',
+      'https://www.youtube.com/embed/xIONkU7qQt4',
+      'https://www.youtube.com/embed/K8ZyUXZODGs'
     ]
   },
   {
@@ -1456,9 +1456,9 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/Lq594XmpPBg',
     shorts: [
-      'https://www.youtube.com/embed/igl_5sssWjQ?si=5wFVRBHjUvqCzfXj',
-      'https://www.youtube.com/embed/8_8yzlwUAnE?si=4dCr0mAcKiUCkjCm',
-      'https://www.youtube.com/embed/czAejSrYfGE?si=GmSF73-Q-rcVgBAT'
+      'https://www.youtube.com/embed/igl_5sssWjQ',
+      'https://www.youtube.com/embed/8_8yzlwUAnE',
+      'https://www.youtube.com/embed/czAejSrYfGE'
     ]
   }
 ];
