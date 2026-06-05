@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.bauerhosting.com' },
       { protocol: 'https', hostname: 'kotaku.com' },
       { protocol: 'https', hostname: 'staticflickr.com' },
-      { protocol: 'https', hostname: 'futurecdn.net' },
+      { protocol: 'https', hostname: '**.futurecdn.net' },
       { protocol: 'https', hostname: '**.cnet.com' },
       { protocol: 'https', hostname: '**.creativeuncut.com' },
       { protocol: 'https', hostname: '**.thqnordic.com' },
@@ -58,6 +58,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'gameinformer.com' },
       { protocol: 'https', hostname: '**.smushcdn.com' },
       { protocol: 'https', hostname: 'twistedvoxel.com' },
+      { protocol: 'https', hostname: 'wolfsgamingblog.com' },
+      { protocol: 'https', hostname: '**.purexbox.com' },
     ],
   },
 };

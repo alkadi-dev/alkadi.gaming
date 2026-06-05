@@ -1398,9 +1398,17 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Race', 'Open World'],
     thumbnail: getImg('forza-thumb'),
     size: '100 GB',
-    images: [getImg('forza-hero')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
+      'https://images.purexbox.com/e311b45450f8a/xbox-showcases-five-unique-biomes-with-breathtaking-landscapes-in-forza-horizon-6.900x.jpg',
+      'https://cdn.mos.cms.futurecdn.net/5D5DKFRi3iqCDQnmR6ExiT.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/oYhaW-Vr4wg',
+    shorts: [
+      'https://www.youtube.com/embed/PWlQLZYMYvs',
+      'https://www.youtube.com/embed/Ddv_9D1ohbo',
+      'https://www.youtube.com/embed/JDcx4qw62RM'
+    ]
   },
   {
     id: 'wukong',
