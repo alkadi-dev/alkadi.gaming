@@ -551,7 +551,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
     shorts: [
       'https://www.youtube.com/embed/oYlsmbxTVM4?si=bP3Meaz940YkrLBV',
-      'https://www.youtube.com/embed/sqr0nwlcqA8?si=bP3Meaz940YkrLBV',
+      'https://www.youtube.com/embed/sqr0nwlcq8?si=bP3Meaz940YkrLBV',
       'https://www.youtube.com/embed/-uiN7H4SYE4?si=dYkQClA2xXyy4w_P'
     ],
   },
@@ -579,10 +579,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'FIFA 23',
     description: 'Experience the pinnacle of international football with the FIFA World Cup Qatar 2022 and FIFA Women’s World Cup Australia and New Zealand 2023.',
     categories: ['Action', 'Adventure'],
-    thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Item+Webp',
+    thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
     size: '60 GB',
     images: [
-      'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Item+Webp',
+      'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
       'https://wallpaperaccess.com/full/8406398.jpg',
       'https://wallpaperaccess.com/full/8406387.jpg'
     ],
@@ -951,7 +951,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/HPxTKTbtDkg?si=EeL4kT7Ap6yaoBvE',
       'https://www.youtube.com/embed/RBpNHK0uk9k?si=9OC9TLJq2JkLvL9F',
-      'https://www.youtube.com/embed/uGM2NVwr3SM?si=xgwH65Oj12bEczhZ'
+      'https://www.youtube.com/embed/xgwH65Oj12bEczhZ'
     ]
   },
   {
@@ -1089,8 +1089,8 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'elden-shadow',
-    title: 'Elden Ring: nightreigen',
-    description: 'The nightreigen expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
+    title: 'Elden Ring: Shadow of the Erdtree',
+    description: 'The Shadow of the Erdtree expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
     categories: ['RPG', 'Open World'],
     thumbnail: 'https://wallpapercave.com/wp/wp15107995.webp',
     size: '15 GB',
@@ -1175,11 +1175,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg',
       'https://images5.alphacoders.com/140/thumb-1920-1405859.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/mUymvhAXOnM',
+    videoUrl: 'https://www.youtube.com/embed/mUymvhAXOnM?si=qoUBAlHgKoD6Ig0X',
     shorts: [
-      'https://www.youtube.com/embed/viaO-0WTrMo',
-      'https://www.youtube.com/embed/IisfQZqd82k',
-      'https://www.youtube.com/embed/ou9THu2g3I4'
+      'https://www.youtube.com/embed/viaO-0WTrMo?si=w6dRw_5APpoYUmbn',
+      'https://www.youtube.com/embed/IisfQZqd82k?si=5rDsOA_ZZveVmutZ',
+      'https://www.youtube.com/embed/ou9THu2g3I4?si=ugCFaClFoWLTZAyv'
     ]
   },
   {
@@ -1194,11 +1194,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/07/Beyond-Ultra-MGS-V-e1618172330544.jpeg?q=50&fit=crop&w=825&dpr=1.5',
       'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/287700/ss_fbfa8f676661d34b1da0495e15df5a08c7e1f04a.1920x1080.jpg?t=1727849445'
     ],
-    videoUrl: 'https://www.youtube.com/embed/C19ap2M7DDE',
+    videoUrl: 'https://www.youtube.com/embed/C19ap2M7DDE?si=htegbowQsxoZLg3P',
     shorts: [
-      'https://www.youtube.com/embed/ms5ENyRH3Bs',
-      'https://www.youtube.com/embed/ZAW0hs2ZDFg',
-      'https://www.youtube.com/embed/EJmpkJvjvIo'
+      'https://www.youtube.com/embed/ms5ENyRH3Bs?si=h8OWxuJdO5C-Cmz8',
+      'https://www.youtube.com/embed/ZAW0hs2ZDFg?si=4tXA9hvkaosuM6xd',
+      'https://www.youtube.com/embed/EJmpkJvjvIo?si=ooIApSW4RyOL2fgk'
     ]
   },
   {
@@ -1213,11 +1213,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.mos.cms.futurecdn.net/VmnpgP94cgqLVNjcPAZ3oV.jpg',
       'https://m.media-amazon.com/images/M/MV5BZWYwNjVlOGEtZmI4Mi00ZGI5LWFlZjAtYzkyOGRlMzQyODMzXkEyXkFqcGc@.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
+    videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM?si=nouHgy0Y89qnNHNe',
     shorts: [
-      'https://www.youtube.com/embed/Mxd53_lcrLc',
-      'https://www.youtube.com/embed/-XTdoeSE-rY',
-      'https://www.youtube.com/embed/E4HGKFOg-ow'
+      'https://www.youtube.com/embed/Mxd53_lcrLc?si=I7phXdxZlbD_eUuM',
+      'https://www.youtube.com/embed/-XTdoeSE-rY?si=MjoZ7vgZkt70yuUX',
+      'https://www.youtube.com/embed/E4HGKFOg-ow?si=6uCuQwpeO-hIepLt'
     ]
   },
   {
@@ -1232,11 +1232,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots004.jpg',
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots009.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU',
+    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU?si=2yD0jSNF_RbYK7aB',
     shorts: [
-      'https://www.youtube.com/embed/ipQJxQmpJ3c',
-      'https://www.youtube.com/embed/-S-WLzzeKsE',
-      'https://www.youtube.com/embed/0izfj7ME6kI'
+      'https://www.youtube.com/embed/ipQJxQmpJ3c?si=vxqxN18UfwTP3XAy',
+      'https://www.youtube.com/embed/-S-WLzzeKsE?si=efisEQbJhcKYuPXz',
+      'https://www.youtube.com/embed/0izfj7ME6kI?si=U2NlDzNfWhxjfCkg'
     ]
   },
   {
@@ -1251,11 +1251,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-175qarmqymgwwv87.jpg',
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-gtcblqohn6cuf53o.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g',
+    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g?si=QOstP2uRrkpPituu',
     shorts: [
-      'https://www.youtube.com/embed/m04VNzvx81E',
-      'https://www.youtube.com/embed/wtkF615eT_4',
-      'https://www.youtube.com/embed/9S9_yijfFf0'
+      'https://www.youtube.com/embed/m04VNzvx81E?si=ySaBiv-rOcPLATxL',
+      'https://www.youtube.com/embed/wtkF615eT_4?si=S4vanph4Blorc2PY',
+      'https://www.youtube.com/embed/9S9_yijfFf0?si=Bj_mTzzh9XEMiHYd'
     ]
   },
   {
@@ -1270,11 +1270,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
       'https://cdn.mos.cms.futurecdn.net/AqiwEtGjDAvknt7azDHxB.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE',
+    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI',
-      'https://www.youtube.com/embed/j1s43xL1yZE',
-      'https://www.youtube.com/embed/yagGfBmDEFM'
+      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7qBHz',
+      'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
+      'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
     ]
   },
   {
@@ -1289,11 +1289,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/4137127.jpg',
       'https://wallpaperaccess.com/full/4137122.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU',
+    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU?si=MNddvsauq2o_39QF',
     shorts: [
-      'https://www.youtube.com/embed/yfkcGNooF1Y',
-      'https://www.youtube.com/embed/t-iqQIIQjys',
-      'https://www.youtube.com/embed/q008MWSzvt8'
+      'https://www.youtube.com/embed/yfkcGNooF1Y?si=dlB0yvy0z8zwqDvw',
+      'https://www.youtube.com/embed/t-iqQIIQjys?si=hKJ5Il6B_nwkAKK1',
+      'https://www.youtube.com/embed/q008MWSzvt8?si=gwim_-ShquyF7sZc'
     ]
   },
   {
@@ -1308,11 +1308,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.gamemaps.com/img/game_images/max_payne_3__524_2.jpg?1706667633',
       'https://wallpapercave.com/wp/wp2127256.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0',
+    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0?si=epU2-bWFCQumFzBb',
     shorts: [
-      'https://www.youtube.com/embed/orY5gdLaSAQ',
-      'https://www.youtube.com/embed/3NMyUTWR3oo',
-      'https://www.youtube.com/embed/XH8DK43TR0w'
+      'https://www.youtube.com/embed/orY5gdLaSAQ?si=LNjnWBhLXs4xOucc',
+      'https://www.youtube.com/embed/3NMyUTWR3oo?si=u5-s2h38omYwwdBx',
+      'https://www.youtube.com/embed/XH8DK43TR0w?si=IK130r3VrsOlroXp'
     ]
   },
   {
@@ -1320,11 +1320,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ferocious',
     description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
     categories: ['Shooter', 'Horror'],
-    thumbnail: getImg('ferocious-thumb'),
+    thumbnail: 'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
     size: '40 GB',
-    images: [getImg('ferocious-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
+      'https://images.steamusercontent.com/ugc/17230397967368203576/12D9C4A49A58607E4D4E4EBEC216DD0DE5CAC6AC/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+      'https://clan.fastly.steamstatic.com/images/40662195/186e55a9c5bc24135731dcc957d7e5840774d08a.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
+    shorts: [
+      'https://www.youtube.com/embed/vp9KNgG0e14?si=K1GYqDf2e4PDMdzE',
+      'https://www.youtube.com/embed/UPMOdKvqH3o?si=0BHbotN_vnYtPe34',
+      'https://www.youtube.com/embed/1go8AUUYTq0?si=rYD_kCR00YEh-MMC'
+    ]
   },
   {
     id: 'nfs-unbound',
