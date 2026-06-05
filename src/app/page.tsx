@@ -4,17 +4,19 @@ import { useState } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
 import { Label } from '@/components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [maxSize, setMaxSize] = useState(250);
+  const [sortOrder, setSortOrder] = useState('title-asc');
 
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = selectedCategory === 'All' || game.categories.includes(selectedCategory);
@@ -25,7 +27,16 @@ export default function HomePage() {
     const matchesSize = gameSize <= maxSize;
     
     return matchesCategory && matchesSearch && matchesSize;
-  }).sort((a, b) => a.title.localeCompare(b.title));
+  }).sort((a, b) => {
+    if (sortOrder === 'year-desc') {
+      return parseInt(b.releaseYear) - parseInt(a.releaseYear);
+    }
+    if (sortOrder === 'year-asc') {
+      return parseInt(a.releaseYear) - parseInt(b.releaseYear);
+    }
+    // Default alphabetical
+    return a.title.localeCompare(b.title);
+  });
 
   const scrollToLibrary = () => {
     const element = document.getElementById('library');
@@ -40,6 +51,8 @@ export default function HomePage() {
       });
     }
   };
+
+  const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -113,7 +126,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Size Filter Popover */}
+            {/* Combined Filter Popover */}
             <div className="flex items-center gap-2">
               <Popover>
                 <PopoverTrigger asChild>
@@ -121,45 +134,73 @@ export default function HomePage() {
                     variant="secondary" 
                     size="sm" 
                     className={`rounded-full h-10 px-4 gap-2 transition-all border border-white/5 ${
-                      maxSize < 250 ? 'bg-primary text-white' : 'bg-secondary/50'
+                      activeFiltersCount > 0 ? 'bg-primary text-white' : 'bg-secondary/50'
                     }`}
                   >
                     <Filter className="h-4 w-4" />
-                    <span className="text-xs font-bold uppercase tracking-tight">Size Filter</span>
-                    {maxSize < 250 && <span className="ml-1 text-[10px]">({maxSize}GB)</span>}
+                    <span className="text-xs font-bold uppercase tracking-tight">Filters & Sort</span>
+                    {activeFiltersCount > 0 && (
+                      <span className="ml-1 bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
+                        {activeFiltersCount}
+                      </span>
+                    )}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="end">
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center mb-1">
+                  <div className="space-y-6">
+                    {/* Sort Order */}
+                    <div className="space-y-3">
                       <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                        <HardDrive className="h-3 w-3 text-primary" /> Max Storage
+                        <ArrowUpDown className="h-3 w-3 text-primary" /> Sort By
                       </Label>
-                      <span className="text-xs font-bold text-primary">1 - {maxSize} GB</span>
+                      <Select value={sortOrder} onValueChange={setSortOrder}>
+                        <SelectTrigger className="bg-secondary/30 border-white/5 rounded-xl h-10">
+                          <SelectValue placeholder="Sort order" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-background border-white/10 rounded-xl">
+                          <SelectItem value="title-asc">Alphabetical (A-Z)</SelectItem>
+                          <SelectItem value="year-desc">Newest to Oldest</SelectItem>
+                          <SelectItem value="year-asc">Oldest to Newest</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
-                    <Slider
-                      value={[maxSize]}
-                      min={1}
-                      max={250}
-                      step={1}
-                      onValueChange={(val) => setMaxSize(val[0])}
-                      className="py-1"
-                    />
-                    <div className="pt-2 border-t border-white/5">
+
+                    {/* Size Filter */}
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center mb-1">
+                        <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
+                          <HardDrive className="h-3 w-3 text-primary" /> Max Storage
+                        </Label>
+                        <span className="text-xs font-bold text-primary">1 - {maxSize} GB</span>
+                      </div>
+                      <Slider
+                        value={[maxSize]}
+                        min={1}
+                        max={250}
+                        step={1}
+                        onValueChange={(val) => setMaxSize(val[0])}
+                        className="py-1"
+                      />
+                    </div>
+
+                    <div className="pt-4 border-t border-white/5 flex flex-col gap-2">
                       <p className="text-[10px] text-muted-foreground leading-tight">
-                        Filtering games from 1GB up to <span className="text-foreground font-bold">{maxSize}GB</span>.
+                        Showing games up to <span className="text-foreground font-bold">{maxSize}GB</span>.
                       </p>
+                      {(maxSize < 250 || sortOrder !== 'title-asc') && (
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
+                          onClick={() => {
+                            setMaxSize(250);
+                            setSortOrder('title-asc');
+                          }}
+                        >
+                          Reset Filters
+                        </Button>
+                      )}
                     </div>
-                    {maxSize < 250 && (
-                      <Button 
-                        variant="default" 
-                        size="default"
-                        className="w-full text-sm h-10 text-white rounded-xl mt-2 font-bold"
-                        onClick={() => setMaxSize(250)}
-                      >
-                        Reset to Max
-                      </Button>
-                    )}
                   </div>
                 </PopoverContent>
               </Popover>
@@ -196,6 +237,7 @@ export default function HomePage() {
                 setSelectedCategory('All');
                 setSearchQuery('');
                 setMaxSize(250);
+                setSortOrder('title-asc');
               }}
               className="text-primary mt-4 font-bold"
             >
