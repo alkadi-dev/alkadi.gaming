@@ -161,10 +161,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     categories: ['Race', 'Open World'],
-    thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
+    thumbnail: 'https://picsum.photos/seed/forza5/600/400',
     size: '82 GB',
     images: [
-      'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover-1000x600.jpg',
+      'https://picsum.photos/seed/forza5/600/400',
       'https://wallpapercave.com/wp/wp12405375.jpg',
       'https://wallpapers.com/images/hd/forza-horizon-5-4k-dac6pfcwb8wy8spw.jpg'
     ],
@@ -332,10 +332,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 2',
     description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh-eating zombies roam the streets for survivors.',
     categories: ['Horror', 'Action'],
-    thumbnail: 'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
+    thumbnail: 'https://picsum.photos/seed/re2/600/400',
     size: '26 GB',
     images: [
-      'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
+      'https://picsum.photos/seed/re2/600/400',
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
@@ -546,7 +546,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpapercat.com/w/full/1/7/e/130549-1920x1080-desktop-1080p-grand-theft-auto-5-background-photo.jpg',
-      'https://www.igrandtheftauto.com/content/images/small/4346-gta5-dude-wheres-the-car.jpg?etag=54ecbae6'
+      'https://picsum.photos/seed/gta5-car/800/450'
     ],
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
     shorts: [
@@ -1021,7 +1021,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
       'https://kotaku.com/igdb/image/upload/t_720p/r5mn9rt7aqvf5nrn8dqq.jpg',
-      'https://live.staticflickr.com/65535/54429643931_5a0c9da4f7_o.png'
+      'https://picsum.photos/seed/daysgone-forest/800/450'
     ],
     videoUrl: 'https://www.youtube.com/embed/p9XlSvnRk3E',
     shorts: [
@@ -1396,7 +1396,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 6',
     description: 'The next evolution of the ultimate open-world driving festival. Speed across breathtaking landscapes in hundreds of the world\'s greatest cars.',
     categories: ['Race', 'Open World'],
-    thumbnail: getImg('forza-thumb'),
+    thumbnail: 'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
     size: '100 GB',
     images: [
       'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
@@ -1415,11 +1415,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Black Myth: Wukong',
     description: 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. The story is based on Journey to the West, one of the Four Great Classical Novels of Chinese literature.',
     categories: ['RPG', 'Action'],
-    thumbnail: getImg('wukong-thumb'),
+    thumbnail: 'https://travelchinawith.me/wp-content/uploads/Black-Myth-Wukong-image-2-1-1024x576-1.webp',
     size: '120 GB',
-    images: [getImg('wukong-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/O2nNGeCDQLU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://travelchinawith.me/wp-content/uploads/Black-Myth-Wukong-image-2-1-1024x576-1.webp',
+      'https://preview.redd.it/photos-from-a-landscape-photographer-v0-u38zg9b5ajkd1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
+      'https://static0.srcdn.com/wordpress/wp-content/uploads/2024/08/scene-black-wind-mountain-black-wind-cave-bodhi-peak-black-myth-wukong.jpg?q=70&fit=crop&w=825&dpr=1'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/pnSsgRJmsCc',
+    shorts: [
+      'https://www.youtube.com/embed/t05rY-_ES4Y',
+      'https://www.youtube.com/embed/-zm3jM9cgFE',
+      'https://www.youtube.com/embed/VWgRywdvGY0'
+    ]
   },
   {
     id: 'stray',
