@@ -113,9 +113,6 @@ export function GameCard({ game }: GameCardProps) {
           <h3 className="text-lg font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors">
             {game.title}
           </h3>
-          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1 opacity-70">
-            {game.releaseYear}
-          </p>
         </Link>
       </CardContent>
     </Card>
