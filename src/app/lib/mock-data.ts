@@ -521,7 +521,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
       'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
-      'https://preview.redd.it/ebmyt82afuc51.png?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2'
+      'https://preview.redd.it/ebmyt82afuc51.png?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2'
     ],
     videoUrl: 'https://www.youtube.com/embed/vhII1qlcZ4E',
     shorts: [
@@ -801,10 +801,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Marvel's Spider-Man",
     description: "Starring one of the world's most iconic super heroes, Marvel's Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for.",
     categories: ['Action', 'Adventure'],
-    thumbnail: 'https://cdn.mobygames.com/1aefe4ec-ac15-11ed-8ce3-02420a000131.webp',
+    thumbnail: 'https://i.pinimg.com/originals/db/76/43/db7643fd1a4174f7c64d19f6f7e0cec5.jpg',
     size: '70 GB',
     images: [
-      'https://cdn.mobygames.com/1aefe4ec-ac15-11ed-8ce3-02420a000131.webp',
+      'https://i.pinimg.com/originals/db/76/43/db7643fd1a4174f7c64d19f6f7e0cec5.jpg',
       'https://wallpapercave.com/wp/wp11084730.jpg',
       'https://wallpapercave.com/wp/wp4585692.jpg'
     ],
@@ -919,7 +919,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '50 GB',
     images: [
       'https://wallpapercave.com/wp/wp4571906.png',
-      'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2e1f2b3c2',
+      'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2',
       'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A?si=S1NP1QRzN-f2v3VA',
@@ -1204,7 +1204,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '70 GB',
     images: [
       'https://wallpapercave.com/wp/wp13923945.jpg',
-      'https://cdn.mos.cms.futurecdn.net/VmnpgP94cgqLVNjcPAZ3oV.jpg',
+      'https://cdn.mos.cms.futurecdn.net/VmnpgP94cg/ originals/qJWI4bkD9ZM.jpg',
       'https://m.media-amazon.com/images/M/MV5BZWYwNjVlOGEtZmI4Mi00ZGI5LWFlZjAtYzkyOGRlMzQyODMzXkEyXkFqcGc@.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
