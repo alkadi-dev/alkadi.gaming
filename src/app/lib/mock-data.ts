@@ -11,9 +11,10 @@ export interface GameEntry {
   size: string;
   releaseYear: string;
   shorts?: string[];
+  isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
+export const CATEGORIES = ['All', 'Recommended', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -37,6 +38,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/XsaXfkSignupPNM?si=9qaxQN7xEEVKVfIn',
       'https://www.youtube.com/embed/ax_HkEnW_ig?si=xXoL5iPzvwJ18AtK'
     ],
+    isRecommended: true,
   },
   {
     id: '1',
@@ -77,6 +79,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/R5cq8FnyPFI?si=2AVA1TyCbroVAJhD',
       'https://www.youtube.com/embed/mnIMU7BH57A?si=7_p6ID87TvhjRjHV'
     ],
+    isRecommended: true,
   },
   {
     id: 'ac-unity',
@@ -84,7 +87,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
     categories: ['Open World'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
-    size: ' 32 GB',
+    size: '32 GB',
     releaseYear: '2014',
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
@@ -197,6 +200,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/bhhyNlvVfr8?si=cra8Nomzn_6dANHO',
       'https://www.youtube.com/embed/y6vWl-8_0QI?si=NeegL4e8DJ4NKOmr'
     ],
+    isRecommended: true,
   },
   {
     id: '10',
@@ -217,6 +221,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/D7Enav00Lp8?si=3Hwvsl4HKV1YWcOX',
       'https://www.youtube.com/embed/Nhug66isXqU?si=u5J8EE1GrzPJv3N1'
     ],
+    isRecommended: true,
   },
   {
     id: '12',
@@ -317,6 +322,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/p6FZ63ap0jo?si=NlSFu6RN6SA5cCGr',
       'https://www.youtube.com/embed/ooh5oJ5Exds?si=TlviG3x15lhvFUsf'
     ],
+    isRecommended: true,
   },
   {
     id: 'fc5',
@@ -497,6 +503,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/vpUEm4-sGHw?si=sxi4X-VrtseSchw9',
       'https://www.youtube.com/embed/rIy42KSFQ4c?si=h154yf9aFShEnbGC'
     ],
+    isRecommended: true,
   },
   {
     id: 'u4',
@@ -517,6 +524,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/23l8h9a6Qi8?si=OqLI6NAmJYHD5hGq',
       'https://www.youtube.com/embed/3El-xx1g-2c?si=pd2h5MpASHp-Oxxk'
     ],
+    isRecommended: true,
   },
   {
     id: 'tlou1',
@@ -537,6 +545,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/gM1C42wzGAM?si=_7WoT5yyP0iBE-U0',
       'https://www.youtube.com/embed/mB-4rrrXw-s?si=XZDnIVwbWUMpPqKK'
     ],
+    isRecommended: true,
   },
   {
     id: 'tlou2',
@@ -557,6 +566,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/PImmK6WU8SI?si=4O3O94d3jPZy2Jd9',
       'https://www.youtube.com/embed/UGWg6IIko2o?si=VvfvdN2DDu5Vfc65'
     ],
+    isRecommended: true,
   },
   {
     id: 'gtav',
@@ -577,6 +587,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/sqr0nwlcq8?si=bP3Meaz940YkrLBV',
       'https://www.youtube.com/embed/-uiN7H4SYE4?si=dYkQClA2xXyy4w_P'
     ],
+    isRecommended: true,
   },
   {
     id: 'hzd',
@@ -597,6 +608,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/Qcf8NzbxX2k',
       'https://www.youtube.com/embed/DgAFQ1leafY'
     ],
+    isRecommended: true,
   },
   {
     id: 'fifa23',
@@ -777,6 +789,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/cUCbtpMkZQM?si=b4E38CeFQzjvlqQL',
       'https://www.youtube.com/embed/WzlKc5HmXbU?si=KxJ3XeffOL0EMr9I'
     ],
+    isRecommended: true,
   },
   {
     id: 'cod-mw2',
@@ -797,6 +810,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/vSyvcfxgNC0?si=B4L2VLUMk95oiZDo',
       'https://www.youtube.com/embed/FJHC5NttChE?si=y0jr1Kkky_3KKlcu'
     ],
+    isRecommended: true,
   },
   {
     id: 'cod-mw3',
@@ -837,6 +851,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/Vb6oDZ6uGg8?si=zSAkYHUcAV65GMku',
       'https://www.youtube.com/embed/j-mCAqn0Rl0?si=OQ7JrtCOHcmpp8dO'
     ],
+    isRecommended: true,
   },
   {
     id: 'spiderman-1',
@@ -1136,7 +1151,8 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/k8aXqeQs9bE',
       'https://www.youtube.com/embed/JsAW9PqQje4',
       'https://www.youtube.com/embed/Lr25tudS-ec'
-    ]
+    ],
+    isRecommended: true,
   },
   {
     id: 'elden-shadow',
@@ -1433,7 +1449,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI',
     shorts: [
-      'https://www.youtube.com/embed/8jiTNodDe-Y',
+      'https://www.youtube.com/embed/8jiTN_0cXvt?si=BiPI__ep-fs6rtQx',
       'https://www.youtube.com/embed/XuZaw6kVBkE',
       'https://www.youtube.com/embed/xhvQrJ3QNnM'
     ]
@@ -1476,7 +1492,8 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/PWlQLZYMYvs',
       'https://www.youtube.com/embed/Ddv_9D1ohbo',
       'https://www.youtube.com/embed/JDcx4qw62RM'
-    ]
+    ],
+    isRecommended: true,
   },
   {
     id: 'wukong',
@@ -1536,6 +1553,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/igl_5sssWjQ',
       'https://www.youtube.com/embed/8_8yzlwUAnE',
       'https://www.youtube.com/embed/czAejSrYfGE'
-    ]
+    ],
+    isRecommended: true,
   }
 ];

@@ -20,7 +20,11 @@ export default function HomePage() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const filteredGames = MOCK_GAMES.filter((game) => {
-    const matchesCategory = selectedCategory === 'All' || game.categories.includes(selectedCategory);
+    const matchesCategory = 
+      selectedCategory === 'All' ? true :
+      selectedCategory === 'Recommended' ? game.isRecommended :
+      game.categories.includes(selectedCategory);
+      
     const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
     
     // Parse numeric size from strings like "69 GB"

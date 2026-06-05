@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, PlusCircle, CheckCircle2, ImageOff, Calendar } from 'lucide-react';
+import { HardDrive, PlusCircle, CheckCircle2, ImageOff, Calendar, Star } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -68,7 +68,7 @@ export function GameCard({ game }: GameCardProps) {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
           
-          {/* Category Badge - Only show the first one outside the card */}
+          {/* Category Badge - Top Left */}
           <div className="absolute top-3 left-3">
             {game.categories && game.categories.length > 0 && (
               <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm text-xs px-3 py-1 w-fit uppercase font-bold tracking-tight shadow-xl">
@@ -76,6 +76,15 @@ export function GameCard({ game }: GameCardProps) {
               </Badge>
             )}
           </div>
+
+          {/* Recommended Badge - Top Right */}
+          {game.isRecommended && (
+            <div className="absolute top-3 right-3">
+              <Badge className="bg-amber-500 text-white border-none backdrop-blur-md text-[9px] px-2 py-0.5 w-fit uppercase font-black tracking-widest shadow-2xl flex items-center gap-1 border border-white/20 animate-pulse">
+                <Star className="w-2.5 h-2.5 fill-current" /> Recommended
+              </Badge>
+            </div>
+          )}
 
           {/* Info Labels - Bottom Left inside Image */}
           <div className="absolute bottom-2 left-2 flex items-center gap-1.5 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg">
