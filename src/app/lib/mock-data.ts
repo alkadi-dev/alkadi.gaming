@@ -1007,7 +1007,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/AWFaj4IQ4ro?si=4EOxgjkpmNFWEMxt',
     shorts: [
       'https://www.youtube.com/embed/o_0cXvtUyKM?si=BiPI__ep-fs6rtQx',
-      'https://www.youtube.com/embed/zxzBMbStY-M?si=stzdNfhPJflfrqKv',
+      'https://www.youtube.com/embed/zxzBMbStY-M?si=stzdFfhPJflfrqKv',
       'https://www.youtube.com/embed/pJoir07MlBY?si=Lfuo0JmM3CpICTDk'
     ]
   },
@@ -1244,11 +1244,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Just Cause 4',
     description: 'Rogue agent Rico Rodriguez journeys to Solis, a huge South American world home of conflict, tyranny and extreme weather conditions.',
     categories: ['Open World', 'Action'],
-    thumbnail: getImg('jc4-thumb'),
+    thumbnail: 'https://i.pinimg.com/originals/01/29/db/0129db8b6597b7b2f4a12cc4808b0e45.jpg',
     size: '42 GB',
-    images: [getImg('jc4-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://i.pinimg.com/originals/01/29/db/0129db8b6597b7b2f4a12cc4808b0e45.jpg',
+      'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-175qarmqymgwwv87.jpg',
+      'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-gtcblqohn6cuf53o.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g',
+    shorts: [
+      'https://www.youtube.com/embed/m04VNzvx81E',
+      'https://www.youtube.com/embed/wtkF615eT_4',
+      'https://www.youtube.com/embed/9S9_yijfFf0'
+    ]
   },
   {
     id: 'mafia-old',
