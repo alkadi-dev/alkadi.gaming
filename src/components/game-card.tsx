@@ -80,7 +80,7 @@ export function GameCard({ game }: GameCardProps) {
           {/* Recommended Badge - Top Right */}
           {game.isRecommended && (
             <div className="absolute top-3 right-3">
-              <Badge className="bg-amber-500 text-white border-none backdrop-blur-md text-[9px] px-2 py-0.5 w-fit uppercase font-black tracking-widest shadow-2xl flex items-center gap-1 border border-white/20 animate-pulse">
+              <Badge className="bg-transparent text-amber-500 border-none text-[9px] px-0 py-0 w-fit uppercase font-black tracking-widest flex items-center gap-1 shadow-none">
                 <Star className="w-2.5 h-2.5 fill-current" /> Recommended
               </Badge>
             </div>
