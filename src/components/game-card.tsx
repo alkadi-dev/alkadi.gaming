@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, PlusCircle, CheckCircle2, ImageOff } from 'lucide-react';
+import { HardDrive, PlusCircle, CheckCircle2, ImageOff, Calendar } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -77,10 +77,17 @@ export function GameCard({ game }: GameCardProps) {
             )}
           </div>
 
-          {/* Size Label - Bottom Left inside Image */}
-          <div className="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg">
-            <HardDrive className="w-2.5 h-2.5" />
-            <span>{game.size}</span>
+          {/* Info Labels - Bottom Left inside Image */}
+          <div className="absolute bottom-2 left-2 flex items-center gap-1.5 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg">
+            <div className="flex items-center gap-1">
+              <HardDrive className="w-2.5 h-2.5" />
+              <span>{game.size}</span>
+            </div>
+            <span className="opacity-40">|</span>
+            <div className="flex items-center gap-1">
+              <Calendar className="w-2.5 h-2.5" />
+              <span>{game.releaseYear}</span>
+            </div>
           </div>
         </Link>
 
