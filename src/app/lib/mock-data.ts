@@ -1564,10 +1564,16 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '80 GB',
     releaseYear: '2026',
     images: [
-      'https://wallpapercave.com/wp/wp6860163.jpg',
-      'https://images.purexbox.com/832777085732c/capcom-delays-pragmata-again-reveals-first-gameplay-trailer.900x.jpg'
+      'https://wallpaperaccess.com/full/26417427.jpg',
+      'https://static0.polygonimages.com/wordpress/wp-content/uploads/2025/06/PRAGMATA_SS_11.jpeg?q=49&fit=crop&w=480&dpr=2',
+      'https://cdn.mos.cms.futurecdn.net/7WUhFQLYGEaWmZb6MHY3pR.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/fW6itWv8-tA',
+    videoUrl: 'https://www.youtube.com/embed/oncaa_fMsyw',
+    shorts: [
+      'https://www.youtube.com/embed/kDlwJKA0gjI',
+      'https://www.youtube.com/embed/tX4DkAmmm2U',
+      'https://www.youtube.com/embed/pCSQgug8nUU'
+    ],
     isRecommended: false,
   },
   {
