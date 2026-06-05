@@ -1232,11 +1232,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots004.jpg',
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots009.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU',
+    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU?si=2yD0jSNF_RbYK7aB',
     shorts: [
-      'https://www.youtube.com/embed/ipQJxQmpJ3c',
-      'https://www.youtube.com/embed/-S-WLzzeKsE',
-      'https://www.youtube.com/embed/0izfj7ME6kI'
+      'https://www.youtube.com/embed/ipQJxQmpJ3c?si=vxqxN18UfwTP3XAy',
+      'https://www.youtube.com/embed/-S-WLzzeKsE?si=efisEQbJhcKYuPXz',
+      'https://www.youtube.com/embed/0izfj7ME6kI?si=U2NlDzNfWhxjfCkg'
     ]
   },
   {
@@ -1251,11 +1251,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-175qarmqymgwwv87.jpg',
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-gtcblqohn6cuf53o.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g',
+    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g?si=QOstP2uRrkpPituu',
     shorts: [
-      'https://www.youtube.com/embed/m04VNzvx81E',
-      'https://www.youtube.com/embed/wtkF615eT_4',
-      'https://www.youtube.com/embed/9S9_yijfFf0'
+      'https://www.youtube.com/embed/m04VNzvx81E?si=ySaBiv-rOcPLATxL',
+      'https://www.youtube.com/embed/wtkF615eT_4?si=S4vanph4Blorc2PY',
+      'https://www.youtube.com/embed/9S9_yijfFf0?si=Bj_mTzzh9XEMiHYd'
     ]
   },
   {
@@ -1270,11 +1270,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
       'https://cdn.mos.cms.futurecdn.net/AqiwEtGjDAvknt7azDHxB.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE',
+    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI',
-      'https://www.youtube.com/embed/j1s43xL1yZE',
-      'https://www.youtube.com/embed/yagGfBmDEFM'
+      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7qBHz',
+      'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
+      'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
     ]
   },
   {
@@ -1289,11 +1289,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/4137127.jpg',
       'https://wallpaperaccess.com/full/4137122.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU',
+    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU?si=MNddvsauq2o_39QF',
     shorts: [
-      'https://www.youtube.com/embed/yfkcGNooF1Y',
-      'https://www.youtube.com/embed/t-iqQIIQjys',
-      'https://www.youtube.com/embed/q008MWSzvt8'
+      'https://www.youtube.com/embed/yfkcGNooF1Y?si=dlB0yvy0z8zwqDvw',
+      'https://www.youtube.com/embed/t-iqQIIQjys?si=hKJ5Il6B_nwkAKK1',
+      'https://www.youtube.com/embed/q008MWSzvt8?si=gwim_-ShquyF7sZc'
     ]
   },
   {
@@ -1308,11 +1308,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.gamemaps.com/img/game_images/max_payne_3__524_2.jpg?1706667633',
       'https://wallpapercave.com/wp/wp2127256.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0',
+    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0?si=epU2-bWFCQumFzBb',
     shorts: [
-      'https://www.youtube.com/embed/orY5gdLaSAQ',
-      'https://www.youtube.com/embed/3NMyUTWR3oo',
-      'https://www.youtube.com/embed/XH8DK43TR0w'
+      'https://www.youtube.com/embed/orY5gdLaSAQ?si=LNjnWBhLXs4xOucc',
+      'https://www.youtube.com/embed/3NMyUTWR3oo?si=u5-s2h38omYwwdBx',
+      'https://www.youtube.com/embed/XH8DK43TR0w?si=IK130r3VrsOlroXp'
     ]
   },
   {
@@ -1327,11 +1327,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.steamusercontent.com/ugc/17230397967368203576/12D9C4A49A58607E4D4E4EBEC216DD0DE5CAC6AC/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
       'https://clan.fastly.steamstatic.com/images/40662195/186e55a9c5bc24135731dcc957d7e5840774d08a.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI',
+    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
     shorts: [
-      'https://www.youtube.com/embed/vp9KNgG0e14',
-      'https://www.youtube.com/embed/UPMOdKvqH3o',
-      'https://www.youtube.com/embed/1go8AUUYTq0'
+      'https://www.youtube.com/embed/vp9KNgG0e14?si=K1GYqDf2e4PDMdzE',
+      'https://www.youtube.com/embed/UPMOdKvqH3o?si=0BHbotN_vnYtPe34',
+      'https://www.youtube.com/embed/1go8AUUYTq0?si=rYD_kCR00YEh-MMC'
     ]
   },
   {
@@ -1346,11 +1346,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://gameinformer.com/sites/default/files/styles/no_compression/public/2022/12/12/50550f56/nfs2.jpg.webp',
       'https://images8.alphacoders.com/130/thumbbig-1307240.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E',
+    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E?si=sc-AbhfG6D2r_qmH',
     shorts: [
-      'https://www.youtube.com/embed/7hcSVFYfcOA',
-      'https://www.youtube.com/embed/nu0dG_kC8ao',
-      'https://www.youtube.com/embed/_3dgFAGaEc8'
+      'https://www.youtube.com/embed/7hcSVFYfcOA?si=Yj3xha9BZL5AkrJt',
+      'https://www.youtube.com/embed/nu0dG_kC8ao?si=lOcJNeIQbkwWQDZW',
+      'https://www.youtube.com/embed/_3dgFAGaEc8?si=C5yS9K7NLCirgO8D'
     ]
   },
   {
@@ -1365,11 +1365,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
       'https://images.steamusercontent.com/ugc/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
     ],
-    videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI',
+    videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI?si=1klHqX5ZzsCZ2MXM',
     shorts: [
-      'https://www.youtube.com/embed/8jiTNodDe-Y',
-      'https://www.youtube.com/embed/XuZaw6kVBkE',
-      'https://www.youtube.com/embed/xhvQrJ3QNnM'
+      'https://www.youtube.com/embed/8jiTNodDe-Y?si=TWBHQwKa6HOtG9Uj',
+      'https://www.youtube.com/embed/XuZaw6kVBkE?si=vZXLs-SX5UthSmNJ',
+      'https://www.youtube.com/embed/xhvQrJ3QNnM?si=aYiPZ5749c8kaBqe'
     ]
   },
   {
@@ -1384,11 +1384,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/2286467.jpg',
       'https://wallpaperaccess.com/full/2286468.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/MXN1nmL-DQU',
+    videoUrl: 'https://www.youtube.com/embed/MXN1nmL-DQU?si=9RrP7tgryKLGujrb',
     shorts: [
-      'https://www.youtube.com/embed/q9g8QHWJDt0',
-      'https://www.youtube.com/embed/-t6JhCq9_Ok',
-      'https://www.youtube.com/embed/PpByB8-geYA'
+      'https://www.youtube.com/embed/q9g8QHWJDt0?si=kEwpuVzNG1yP6iU1',
+      'https://www.youtube.com/embed/-t6JhCq9_Ok?si=2O8LQdHqJRxNoJVx',
+      'https://www.youtube.com/embed/PpByB8-geYA?si=znlJvjvvxFz59mbE'
     ]
   },
   {
@@ -1403,11 +1403,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.purexbox.com/e311b45450f8a/xbox-showcases-five-unique-biomes-with-breathtaking-landscapes-in-forza-horizon-6.900x.jpg',
       'https://cdn.mos.cms.futurecdn.net/5D5DKFRi3iqCDQnmR6ExiT.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/oYhaW-Vr4wg',
+    videoUrl: 'https://www.youtube.com/embed/oYhaW-Vr4wg?si=TZ8wZaUvGNCZ55Zj',
     shorts: [
-      'https://www.youtube.com/embed/PWlQLZYMYvs',
-      'https://www.youtube.com/embed/Ddv_9D1ohbo',
-      'https://www.youtube.com/embed/JDcx4qw62RM'
+      'https://www.youtube.com/embed/PWlQLZYMYvs?si=1htriHXaAwepdC7g',
+      'https://www.youtube.com/embed/Ddv_9D1ohbo?si=CKOj715KziVzrl5l',
+      'https://www.youtube.com/embed/JDcx4qw62RM?si=xPP8iQxUYNoYdkw3'
     ]
   },
   {
@@ -1422,11 +1422,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://preview.redd.it/photos-from-a-landscape-photographer-v0-u38zg9b5ajkd1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
       'https://static0.srcdn.com/wordpress/wp-content/uploads/2024/08/scene-black-wind-mountain-black-wind-cave-bodhi-peak-black-myth-wukong.jpg?q=70&fit=crop&w=825&dpr=1'
     ],
-    videoUrl: 'https://www.youtube.com/embed/pnSsgRJmsCc',
+    videoUrl: 'https://www.youtube.com/embed/pnSsgRJmsCc?si=nXsd45BxpWffRqDc',
     shorts: [
-      'https://www.youtube.com/embed/t05rY-_ES4Y',
-      'https://www.youtube.com/embed/-zm3jM9cgFE',
-      'https://www.youtube.com/embed/VWgRywdvGY0'
+      'https://www.youtube.com/embed/t05rY-_ES4Y?si=Wrw_6a17ekxTOCq6',
+      'https://www.youtube.com/embed/-zm3jM9cgFE?si=5lHksoNXKLf_XELh',
+      'https://www.youtube.com/embed/VWgRywdvGY0?si=XaN5IPOW1ZaG_jOP'
     ]
   },
   {
@@ -1434,11 +1434,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Stray',
     description: 'Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
     categories: ['Adventure', 'Action'],
-    thumbnail: getImg('stray-thumb'),
+    thumbnail: 'https://wallpapers.com/images/featured/stray-taob394fcubgvuwk.jpg',
     size: '10 GB',
-    images: [getImg('stray-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/u84hRUQlaio',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapers.com/images/featured/stray-taob394fcubgvuwk.jpg',
+      'https://wallpaperaccess.com/full/8407617.jpg',
+      'https://i.pinimg.com/originals/34/80/14/34801477320c4283e5723969a10f346b.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/u84hRUQlaio?si=VVRFUwpJePoi9YpA',
+    shorts: [
+      'https://www.youtube.com/embed/r9hvgj-LOQs?si=j4KICrFcTj7gJDvv',
+      'https://www.youtube.com/embed/xIONkU7qQt4?si=NDZQRDHrjl-N0wo-',
+      'https://www.youtube.com/embed/K8ZyUXZODGs?si=77psy1Jrj_B6QlPD'
+    ]
   },
   {
     id: 'hfw',
