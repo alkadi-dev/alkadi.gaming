@@ -65,7 +65,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Open World', 'RPG'],
     thumbnail: 'https://wallpapercave.com/wp/wp13980393.jpg',
     size: '70 GB',
-    releaseYear: '2024',
+    releaseYear: '2025',
     images: [
       'https://wallpapercave.com/wp/wp13980393.jpg',
       'https://preview.redd.it/two-new-screenshots-of-ac-shadows-world-v0-whm6mgnqhsee1.png?width=640&crop=smart&auto=webp&s=f0d47b92ba36516422cfee81603b63221662a440',
@@ -545,7 +545,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action', 'Horror'],
     thumbnail: 'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
     size: '95 GB',
-    releaseYear: '2020',
+    releaseYear: '2024',
     images: [
       'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
       'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
@@ -705,7 +705,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Shooter', 'Action'],
     thumbnail: 'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
     size: '100 GB',
-    releaseYear: '2021',
+    releaseYear: '2025',
     images: [
       'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
       'https://wallpapercave.com/wp/wp12015400.jpg',
@@ -825,7 +825,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['RPG', 'Adventure'],
     thumbnail: 'https://wallpaperaccess.com/full/26027678.jpg',
     size: '80 GB',
-    releaseYear: '2024',
+    releaseYear: '2026',
     images: [
       'https://wallpaperaccess.com/full/26027678.jpg',
       'https://wallpaperaccess.com/full/26027727.jpg',
@@ -1125,7 +1125,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure', 'Horror'],
     thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
     size: '50 GB',
-    releaseYear: '2024',
+    releaseYear: '2026',
     images: [
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
       'https://cdn.mos.cms.futurecdn.net/7Zb4CNrHJcf3P6PcovYDy8.jpg',
@@ -1225,7 +1225,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Horror', 'Adventure'],
     thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '20 GB',
-    releaseYear: '2025',
+    releaseYear: '2026',
     images: [
       'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
       'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg',

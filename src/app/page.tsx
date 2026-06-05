@@ -25,7 +25,7 @@ export default function HomePage() {
     const matchesSize = gameSize <= maxSize;
     
     return matchesCategory && matchesSearch && matchesSize;
-  });
+  }).sort((a, b) => a.title.localeCompare(b.title));
 
   const scrollToLibrary = () => {
     const element = document.getElementById('library');
