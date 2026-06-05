@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -614,7 +614,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fifa23',
     title: 'FIFA 23',
     description: 'Experience the pinnacle of international football with the FIFA World Cup Qatar 2022 and FIFA Women’s World Cup Australia and New Zealand 2023.',
-    categories: ['Action'],
+    categories: ['2 players'],
     thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
     size: '60 GB',
     releaseYear: '2022',
@@ -634,7 +634,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'fifa26',
     title: 'FIFA 26',
     description: 'The future of football simulation. Advanced HyperMotion technology and deep career mode improvements bring the beautiful game to life like never before.',
-    categories: ['Action'],
+    categories: ['2 players'],
     thumbnail: 'https://wallpapercave.com/wp/wp15596323.jpg',
     size: '85 GB',
     releaseYear: '2025',
@@ -1122,7 +1122,6 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '24 GB',
     releaseYear: '2017',
     images: [
-      'https://wallpapercave.com/wp/wp2073985.jpg',
       'https://wallpapercave.com/wp/wp2074012.jpg',
       'https://wallpapercave.com/wp/wp2074034.jpg'
     ],
@@ -1575,7 +1574,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'splitfiction',
     title: 'Split Fiction',
     description: 'A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
-    categories: ['Adventure'],
+    categories: ['2 players'],
     thumbnail: 'https://picsum.photos/seed/splitfiction/800/450',
     size: '45 GB',
     releaseYear: '2025',
@@ -1589,7 +1588,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ittakestwo',
     title: 'It Takes Two',
     description: 'Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
-    categories: ['Adventure'],
+    categories: ['2 players'],
     thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202012/0815/8sh6pL9N0IBy8D98Ym4K0618.jpg',
     size: '45 GB',
     releaseYear: '2021',
