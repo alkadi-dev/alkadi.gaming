@@ -1206,11 +1206,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Senua\'s Saga: Hellblade 2',
     description: 'The sequel to the award-winning Hellblade: Senua\'s Sacrifice. Senua returns in a brutal journey of survival through the myth and tyranny of Viking Iceland.',
     categories: ['Adventure', 'Action'],
-    thumbnail: getImg('hellblade2-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp13923945.jpg',
     size: '70 GB',
-    images: [getImg('hellblade2-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp13923945.jpg',
+      'https://cdn.mos.cms.futurecdn.net/VmnpgP94cgqLVNjcPAZ3oV.jpg',
+      'https://m.media-amazon.com/images/M/MV5BZWYwNjVlOGEtZmI4Mi00ZGI5LWFlZjAtYzkyOGRlMzQyODMzXkEyXkFqcGc@.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
+    shorts: [
+      'https://www.youtube.com/embed/Mxd53_lcrLc',
+      'https://www.youtube.com/embed/-XTdoeSE-rY',
+      'https://www.youtube.com/embed/E4HGKFOg-ow'
+    ]
   },
   {
     id: 'ds2',
