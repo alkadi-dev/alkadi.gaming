@@ -51,7 +51,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '32 GB',
     images: [
       'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
-      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-in-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/XHrskkHf958',
@@ -1194,11 +1194,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/07/Beyond-Ultra-MGS-V-e1618172330544.jpeg?q=50&fit=crop&w=825&dpr=1.5',
       'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/287700/ss_fbfa8f676661d34b1da0495e15df5a08c7e1f04a.1920x1080.jpg?t=1727849445'
     ],
-    videoUrl: 'https://www.youtube.com/embed/C19ap2M7DDE?si=htegbowQsxoZLg3P',
+    videoUrl: 'https://www.youtube.com/embed/C19ap2M7DDE',
     shorts: [
-      'https://www.youtube.com/embed/ms5ENyRH3Bs?si=h8OWxuJdO5C-Cmz8',
-      'https://www.youtube.com/embed/ZAW0hs2ZDFg?si=4tXA9hvkaosuM6xd',
-      'https://www.youtube.com/embed/EJmpkJvjvIo?si=ooIApSW4RyOL2fgk'
+      'https://www.youtube.com/embed/ms5ENyRH3Bs',
+      'https://www.youtube.com/embed/ZAW0hs2ZDFg',
+      'https://www.youtube.com/embed/EJmpkJvjvIo'
     ]
   },
   {
@@ -1213,11 +1213,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.mos.cms.futurecdn.net/VmnpgP94cgqLVNjcPAZ3oV.jpg',
       'https://m.media-amazon.com/images/M/MV5BZWYwNjVlOGEtZmI4Mi00ZGI5LWFlZjAtYzkyOGRlMzQyODMzXkEyXkFqcGc@.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM?si=nouHgy0Y89qnNHNe',
+    videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
     shorts: [
-      'https://www.youtube.com/embed/Mxd53_lcrLc?si=I7phXdxZlbD_eUuM',
-      'https://www.youtube.com/embed/-XTdoeSE-rY?si=MjoZ7vgZkt70yuUX',
-      'https://www.youtube.com/embed/E4HGKFOg-ow?si=6uCuQwpeO-hIepLt'
+      'https://www.youtube.com/embed/Mxd53_lcrLc',
+      'https://www.youtube.com/embed/-XTdoeSE-rY',
+      'https://www.youtube.com/embed/E4HGKFOg-ow'
     ]
   },
   {
@@ -1232,11 +1232,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots004.jpg',
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots009.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU?si=2yD0jSNF_RbYK7aB',
+    videoUrl: 'https://www.youtube.com/embed/F79oEkMXElU',
     shorts: [
-      'https://www.youtube.com/embed/ipQJxQmpJ3c?si=vxqxN18UfwTP3XAy',
-      'https://www.youtube.com/embed/-S-WLzzeKsE?si=efisEQbJhcKYuPXz',
-      'https://www.youtube.com/embed/0izfj7ME6kI?si=U2NlDzNfWhxjfCkg'
+      'https://www.youtube.com/embed/ipQJxQmpJ3c',
+      'https://www.youtube.com/embed/-S-WLzzeKsE',
+      'https://www.youtube.com/embed/0izfj7ME6kI'
     ]
   },
   {
@@ -1251,11 +1251,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-175qarmqymgwwv87.jpg',
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-gtcblqohn6cuf53o.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g?si=QOstP2uRrkpPituu',
+    videoUrl: 'https://www.youtube.com/embed/Lfek7Kcq16g',
     shorts: [
-      'https://www.youtube.com/embed/m04VNzvx81E?si=ySaBiv-rOcPLATxL',
-      'https://www.youtube.com/embed/wtkF615eT_4?si=S4vanph4Blorc2PY',
-      'https://www.youtube.com/embed/9S9_yijfFf0?si=Bj_mTzzh9XEMiHYd'
+      'https://www.youtube.com/embed/m04VNzvx81E',
+      'https://www.youtube.com/embed/wtkF615eT_4',
+      'https://www.youtube.com/embed/9S9_yijfFf0'
     ]
   },
   {
@@ -1270,11 +1270,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
       'https://cdn.mos.cms.futurecdn.net/AqiwEtGjDAvknt7azDHxB.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
+    videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7qBHz',
-      'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
-      'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
+      'https://www.youtube.com/embed/P0qHvKYHSAI',
+      'https://www.youtube.com/embed/j1s43xL1yZE',
+      'https://www.youtube.com/embed/yagGfBmDEFM'
     ]
   },
   {
@@ -1289,11 +1289,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpaperaccess.com/full/4137127.jpg',
       'https://wallpaperaccess.com/full/4137122.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU?si=MNddvsauq2o_39QF',
+    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU',
     shorts: [
-      'https://www.youtube.com/embed/yfkcGNooF1Y?si=dlB0yvy0z8zwqDvw',
-      'https://www.youtube.com/embed/t-iqQIIQjys?si=hKJ5Il6B_nwkAKK1',
-      'https://www.youtube.com/embed/q008MWSzvt8?si=gwim_-ShquyF7sZc'
+      'https://www.youtube.com/embed/yfkcGNooF1Y',
+      'https://www.youtube.com/embed/t-iqQIIQjys',
+      'https://www.youtube.com/embed/q008MWSzvt8'
     ]
   },
   {
@@ -1308,18 +1308,18 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.gamemaps.com/img/game_images/max_payne_3__524_2.jpg?1706667633',
       'https://wallpapercave.com/wp/wp2127256.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0?si=epU2-bWFCQumFzBb',
+    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0',
     shorts: [
-      'https://www.youtube.com/embed/orY5gdLaSAQ?si=LNjnWBhLXs4xOucc',
-      'https://www.youtube.com/embed/3NMyUTWR3oo?si=u5-s2h38omYwwdBx',
-      'https://www.youtube.com/embed/XH8DK43TR0w?si=IK130r3VrsOlroXp'
+      'https://www.youtube.com/embed/orY5gdLaSAQ',
+      'https://www.youtube.com/embed/3NMyUTWR3oo',
+      'https://www.youtube.com/embed/XH8DK43TR0w'
     ]
   },
   {
     id: 'ferocious',
     title: 'Ferocious',
     description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
-    categories: ['Shooter', 'Horror'],
+    categories: ['Shooter', 'Action'],
     thumbnail: 'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
     size: '40 GB',
     images: [
@@ -1327,11 +1327,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.steamusercontent.com/ugc/17230397967368203576/12D9C4A49A58607E4D4E4EBEC216DD0DE5CAC6AC/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
       'https://clan.fastly.steamstatic.com/images/40662195/186e55a9c5bc24135731dcc957d7e5840774d08a.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
+    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI',
     shorts: [
-      'https://www.youtube.com/embed/vp9KNgG0e14?si=K1GYqDf2e4PDMdzE',
-      'https://www.youtube.com/embed/UPMOdKvqH3o?si=0BHbotN_vnYtPe34',
-      'https://www.youtube.com/embed/1go8AUUYTq0?si=rYD_kCR00YEh-MMC'
+      'https://www.youtube.com/embed/vp9KNgG0e14',
+      'https://www.youtube.com/embed/UPMOdKvqH3o',
+      'https://www.youtube.com/embed/1go8AUUYTq0'
     ]
   },
   {
@@ -1339,11 +1339,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Need for Speed Unbound',
     description: 'The world is your canvas in Need for Speed Unbound. Prove you have what it takes to win The Grand, Lakeshore’s ultimate street racing challenge.',
     categories: ['Race', 'Open World'],
-    thumbnail: getImg('nfs-unbound-thumb'),
+    thumbnail: 'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2023/01/need-for-speed-unbound.jpg?resize=1170,720&ssl=1',
     size: '35 GB',
-    images: [getImg('nfs-unbound-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2023/01/need-for-speed-unbound.jpg?resize=1170,720&ssl=1',
+      'https://gameinformer.com/sites/default/files/styles/no_compression/public/2022/12/12/50550f56/nfs2.jpg.webp',
+      'https://images8.alphacoders.com/130/thumbbig-1307240.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/H2Y8XCe7F9E',
+    shorts: [
+      'https://www.youtube.com/embed/7hcSVFYfcOA',
+      'https://www.youtube.com/embed/nu0dG_kC8ao',
+      'https://www.youtube.com/embed/_3dgFAGaEc8'
+    ]
   },
   {
     id: 'nfs-heat',
