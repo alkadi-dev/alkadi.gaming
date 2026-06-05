@@ -86,12 +86,12 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Unity",
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
     categories: ['Open World'],
-    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: '32 GB',
     releaseYear: '2014',
     images: [
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
-      'https://wallpapercave.com/wp/wp14210080.jpg',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      'https://wallpapercave.com/wp/wp1869825.jpg',
       'https://wallpapers.com/images/hd/assassin-s-creed-unity-1920-x-1080-wallpaper-nmwpxl1khg7mzdzg.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/xzCEdSKMkdU',
@@ -158,7 +158,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/ruoguclV31o?si=WCUl0dPvDuitjTbj',
       'https://www.youtube.com/embed/MSE2U30VUi8?si=L_5E5YdoIV3j8yXd',
-      'https://www.youtube.com/embed/IGtWAbFKVbs?si=AqATRV2OdI0dnUtq'
+      'https://www.youtube.com/embed/AqATRV2OdI0dnUtq'
     ],
   },
   {
