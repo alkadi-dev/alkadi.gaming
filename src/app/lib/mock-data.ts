@@ -1282,11 +1282,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Mafia 3: Definitive Edition',
     description: 'Part three of the Mafia crime saga – 1968, New Bordeaux, LA. Lincoln Clay knows this: family isn’t who you’re born with, it’s who you die for.',
     categories: ['Open World', 'Action'],
-    thumbnail: getImg('mafia3-thumb'),
+    thumbnail: 'https://wallpapercave.com/wp/wp2867624.jpg',
     size: '50 GB',
-    images: [getImg('mafia3-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpapercave.com/wp/wp2867624.jpg',
+      'https://wallpaperaccess.com/full/4137127.jpg',
+      'https://wallpaperaccess.com/full/4137122.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/L_XuVJ-I6EU',
+    shorts: [
+      'https://www.youtube.com/embed/yfkcGNooF1Y',
+      'https://www.youtube.com/embed/t-iqQIIQjys',
+      'https://www.youtube.com/embed/q008MWSzvt8'
+    ]
   },
   {
     id: 'maxpayne3',
