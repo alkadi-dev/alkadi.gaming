@@ -1301,11 +1301,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Max Payne 3',
     description: 'Max Payne 3 is a seamless, highly detailed, cinematic experience from Rockstar Games.',
     categories: ['Action', 'Shooter'],
-    thumbnail: getImg('maxpayne3-thumb'),
+    thumbnail: 'https://wallpaperaccess.com/full/2615697.jpg',
     size: '30 GB',
-    images: [getImg('maxpayne3-thumb')],
-    videoUrl: 'https://www.youtube.com/embed/S_7BvL_pYpU',
-    shorts: [...NEW_SHORTS]
+    images: [
+      'https://wallpaperaccess.com/full/2615697.jpg',
+      'https://www.gamemaps.com/img/game_images/max_payne_3__524_2.jpg?1706667633',
+      'https://wallpapercave.com/wp/wp2127256.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/JTPRPr15sW0',
+    shorts: [
+      'https://www.youtube.com/embed/orY5gdLaSAQ',
+      'https://www.youtube.com/embed/3NMyUTWR3oo',
+      'https://www.youtube.com/embed/XH8DK43TR0w'
+    ]
   },
   {
     id: 'ferocious',
