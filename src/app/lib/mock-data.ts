@@ -85,7 +85,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-unity',
     title: "Assassin's Creed Unity",
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
-    categories: ['Open World'],
+    categories: ['Open World', '2 players'],
     thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
     size: '32 GB',
     releaseYear: '2014',
@@ -1599,10 +1599,16 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '45 GB',
     releaseYear: '2021',
     images: [
-      'https://image.api.playstation.com/vulcan/ap/rnd/202012/0815/8sh6pL9N0IBy8D98Ym4K0618.jpg',
-      'https://wallpaperaccess.com/full/5549842.jpg'
+      'https://images4.alphacoders.com/114/thumbbig-1148443.webp',
+      'https://wallpapercat.com/w/full/6/b/0/83914-1920x1080-desktop-1080p-it-takes-two-background-image.jpg',
+      'https://wallpapercave.com/wp/wp14614921.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/ohClXfsh940',
+    videoUrl: 'https://www.youtube.com/embed/ohClxMmNLQQ',
+    shorts: [
+      'https://www.youtube.com/embed/TzsXzbb1wDc',
+      'https://www.youtube.com/embed/M4LgSvHF3rY',
+      'https://www.youtube.com/embed/YhasfdmlNGQ'
+    ],
     isRecommended: false,
   },
   {
