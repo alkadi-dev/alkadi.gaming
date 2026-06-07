@@ -1644,14 +1644,20 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hell is Us',
     description: 'A third-person action-adventure game that combines intense melee combat with the thrill of exploration in a semi-open world ravaged by a mysterious civil war.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp10912345.jpg',
+    thumbnail: 'https://media.nacongaming.com/media/catalog/product/h/e/hellisus_image_landscape.webp?width=1000&store=nacon_us&image-type=landscape_image',
     size: '55 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp10912345.jpg',
-      'https://preview.redd.it/hell-is-us-new-screenshots-v0-x8p7u8p7u8p7u8p7.jpg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2'
+      'https://media.nacongaming.com/media/catalog/product/h/e/hellisus_image_landscape.webp?width=1000&store=nacon_us&image-type=landscape_image',
+      'https://wallpapercave.com/wp/wp13290378.jpg',
+      'https://gamingbolt.com/wp-content/uploads/2024/09/hell-is-us-1024x576.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/jZ_y9GkU6B8',
+    videoUrl: 'https://www.youtube.com/embed/it9wGffvYGM',
+    shorts: [
+      'https://www.youtube.com/embed/Fxm9Ln04LeM',
+      'https://www.youtube.com/embed/ac2QN9fRFlg',
+      'https://www.youtube.com/embed/sAeq4pUpp98'
+    ],
     isRecommended: false,
   }
 ];
