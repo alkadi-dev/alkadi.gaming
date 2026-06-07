@@ -45,7 +45,22 @@ const refineGameDescriptionFlow = ai.defineFlow(
     outputSchema: RefineGameDescriptionOutputSchema,
   },
   async (input) => {
-    const { output } = await refineGameDescriptionPrompt(input);
-    return output!;
+    try {
+      const { output } = await refineGameDescriptionPrompt(input);
+      if (!output) throw new Error('AI returned no output');
+      return output;
+    } catch (error: any) {
+      // Handle quota exhaustion or other AI errors gracefully by returning the original description
+      console.error('Genkit Refinement Error:', error?.message || error);
+      
+      // If the error is a quota exhaustion (429), we provide a clear log for the developer
+      if (error?.message?.includes('429') || error?.message?.includes('RESOURCE_EXHAUSTED')) {
+        console.warn('AI Quota exceeded. Falling back to original description.');
+      }
+
+      return {
+        refinedDescription: input.originalDescription
+      };
+    }
   }
 );
