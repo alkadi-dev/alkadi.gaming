@@ -1404,7 +1404,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
       'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
-      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
+      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
     videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
     shorts: [
@@ -1581,13 +1581,20 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Split Fiction',
     description: 'A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
     categories: ['2 players'],
-    thumbnail: 'https://picsum.photos/seed/splitfiction/800/450',
+    thumbnail: 'https://www.cnet.com/a/img/resize/cb70d224dabc89921354474adff3df19c569560f/hub/2025/02/14/50a4dfee-ece0-485a-8e15-873c5cdce776/splitfiction-keyart-rgb-1920x1080.jpg?auto=webp&fit=crop&height=675&width=1200',
     size: '45 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/splitfiction/800/450'
+      'https://www.cnet.com/a/img/resize/cb70d224dabc89921354474adff3df19c569560f/hub/2025/02/14/50a4dfee-ece0-485a-8e15-873c5cdce776/splitfiction-keyart-rgb-1920x1080.jpg?auto=webp&fit=crop&height=675&width=1200',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/03/split-fiction-how-long-to-beat-sandfish-side-story-desert.jpg?q=49&fit=crop&w=825&dpr=2',
+      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/03/ss_15a4fc0f9c14f8a0389a35e15a358617fcfcc32d.jpg?q=49&fit=crop&w=825&dpr=2'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/fcwngWPXQtg',
+    shorts: [
+      'https://www.youtube.com/embed/10F-cgiuU4k',
+      'https://www.youtube.com/embed/9xneruomkVU',
+      'https://www.youtube.com/embed/Ku6MstLYA3E'
+    ],
     isRecommended: false,
   },
   {
