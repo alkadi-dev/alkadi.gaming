@@ -18,23 +18,46 @@ export default function HomePage() {
   const [maxSize, setMaxSize] = useState(250);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
-  // Scroll Restoration Logic
+  // Load state and scroll from sessionStorage on mount
   useEffect(() => {
-    const savedPosition = sessionStorage.getItem('home-scroll-position');
-    if (savedPosition) {
-      // Use a small timeout to ensure the grid has rendered
+    const savedCategory = sessionStorage.getItem('home-category');
+    const savedSearch = sessionStorage.getItem('home-search');
+    const savedMaxSize = sessionStorage.getItem('home-max-size');
+    const savedSort = sessionStorage.getItem('home-sort');
+    const savedScroll = sessionStorage.getItem('home-scroll-position');
+
+    if (savedCategory) setSelectedCategory(savedCategory);
+    if (savedSearch) setSearchQuery(savedSearch);
+    if (savedMaxSize) setMaxSize(parseInt(savedMaxSize, 10));
+    if (savedSort) setSortOrder(savedSort);
+
+    // Give the browser a moment to render the grid with restored filters before scrolling
+    if (savedScroll) {
       const timer = setTimeout(() => {
         window.scrollTo({
-          top: parseInt(savedPosition, 10),
+          top: parseInt(savedScroll, 10),
           behavior: 'instant'
         });
-      }, 50);
+        setIsInitialLoad(false);
+      }, 100);
       return () => clearTimeout(timer);
+    } else {
+      setIsInitialLoad(false);
     }
   }, []);
 
-  // Save Scroll Position Logic
+  // Persist category, search, and filters whenever they change
+  useEffect(() => {
+    if (isInitialLoad) return;
+    sessionStorage.setItem('home-category', selectedCategory);
+    sessionStorage.setItem('home-search', searchQuery);
+    sessionStorage.setItem('home-max-size', maxSize.toString());
+    sessionStorage.setItem('home-sort', sortOrder);
+  }, [selectedCategory, searchQuery, maxSize, sortOrder, isInitialLoad]);
+
+  // Persist scroll position
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
