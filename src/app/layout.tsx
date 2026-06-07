@@ -4,6 +4,7 @@ import { SelectionProvider } from '@/components/selection-context';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { StorageLimitAlert } from '@/components/storage-limit-alert';
+import { BackToTop } from '@/components/back-to-top';
 
 export const metadata: Metadata = {
   title: 'Alkadi Gaming',
@@ -27,6 +28,7 @@ export default function RootLayout({
           <TooltipProvider>
             {children}
             <StorageLimitAlert />
+            <BackToTop />
             <Toaster />
           </TooltipProvider>
         </SelectionProvider>
