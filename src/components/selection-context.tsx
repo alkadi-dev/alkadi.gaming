@@ -38,6 +38,21 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('alkadi_selection', JSON.stringify(selectedIds));
   }, [selectedIds]);
 
+  // CRITICAL FIX: Global Safety Reset for UI Freezes
+  // This watches the checkout sheet state and forces interaction recovery if Radix fails to clean up.
+  useEffect(() => {
+    if (!isCheckoutOpen) {
+      const timer = setTimeout(() => {
+        // Only force recovery if the body is actually stuck (pointer-events: none)
+        if (document.body.style.pointerEvents === 'none') {
+          document.body.style.pointerEvents = 'auto';
+          document.body.style.overflow = 'auto';
+        }
+      }, 500); // Give plenty of time for exit animations
+      return () => clearTimeout(timer);
+    }
+  }, [isCheckoutOpen]);
+
   const totalSizeNum = useMemo(() => {
     return selectedIds.reduce((acc, id) => {
       const game = MOCK_GAMES.find((g) => g.id === id);

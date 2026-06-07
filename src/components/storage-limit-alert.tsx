@@ -15,7 +15,7 @@ import {
 import { AlertTriangle, HardDrive, Ban } from 'lucide-react';
 
 export function StorageLimitAlert() {
-  const { totalSizeNum, setCheckoutOpen } = useSelection();
+  const { totalSizeNum, setCheckoutOpen, isCheckoutOpen } = useSelection();
   const [activeLimit, setActiveLimit] = useState<{
     threshold: number;
     title: string;
@@ -27,6 +27,9 @@ export function StorageLimitAlert() {
   const lastThresholdRef = useRef<number>(0);
 
   useEffect(() => {
+    // If the checkout sheet is already open, don't show another alert
+    if (isCheckoutOpen) return;
+
     const currentThreshold = 
       totalSizeNum > 1800 ? 1800 : 
       totalSizeNum > 900 ? 900 : 
@@ -68,23 +71,36 @@ export function StorageLimitAlert() {
 
     // Always keep lastThresholdRef synced with current selection state
     lastThresholdRef.current = currentThreshold;
-  }, [totalSizeNum]);
+  }, [totalSizeNum, isCheckoutOpen]);
 
   const handleReview = () => {
     // Close the alert first
     setActiveLimit(null);
     
-    // Delay opening the checkout sheet slightly to avoid Radix UI overlay/scroll-lock collisions
-    // which can lead to a "frozen" UI state where pointer events are stuck.
+    // Explicitly unlock the body after a short delay to prevent Radix UI stack conflicts
+    // that lead to UI freezes (pointer-events: none being stuck).
     setTimeout(() => {
+      document.body.style.pointerEvents = 'auto';
+      document.body.style.overflow = 'auto';
       setCheckoutOpen(true);
-    }, 100);
+    }, 300);
+  };
+
+  const handleOpenChange = (open: boolean) => {
+    if (!open) {
+      setActiveLimit(null);
+      // Safety cleanup: ensure interaction is restored even if cancelled
+      setTimeout(() => {
+        if (!isCheckoutOpen) {
+          document.body.style.pointerEvents = 'auto';
+          document.body.style.overflow = 'auto';
+        }
+      }, 300);
+    }
   };
 
   return (
-    <AlertDialog open={!!activeLimit} onOpenChange={(open) => {
-      if (!open) setActiveLimit(null);
-    }}>
+    <AlertDialog open={!!activeLimit} onOpenChange={handleOpenChange}>
       <AlertDialogContent className="bg-background/95 backdrop-blur-xl border-white/10 rounded-3xl max-w-sm sm:max-w-md">
         <AlertDialogHeader>
           <div className="flex items-center gap-3 mb-2">
