@@ -38,25 +38,32 @@ export function CheckoutSheet() {
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    return `My Alkadi Gaming Selection:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Size: ~${totalSizeNum.toFixed(1)} GB`;
+    return `Hello Alkadi Gaming! 🎮\n\nI've selected the following games from your catalog:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Storage: ~${totalSizeNum.toFixed(1)} GB\n\nPlease let me know the availability and how to proceed! Thank you.`;
   };
 
   const handleWhatsAppRedirect = () => {
     if (selectedGames.length === 0) return;
 
     const finalContent = generateListContent();
+    const encodedText = encodeURIComponent(finalContent);
     
+    // Attempt to copy to clipboard as a reliable fallback
     navigator.clipboard.writeText(finalContent).then(() => {
-      toast({
-        title: "List Copied & Redirecting",
-        description: "The list is on your clipboard. You can paste it in WhatsApp!",
-      });
-
-      const encodedText = encodeURIComponent(finalContent);
-      const whatsappUrl = `https://wa.link/vhw7ol?text=${encodedText}`;
+      // Use the official WhatsApp API to pre-fill the message automatically
+      // We use api.whatsapp.com/send as it's the most reliable for pre-filling 'text'
+      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
+      
+      // Open WhatsApp in a new tab
       window.open(whatsappUrl, '_blank');
-    }).catch(() => {
-      const whatsappUrl = `https://wa.link/vhw7ol`;
+
+      toast({
+        title: "Order List Ready!",
+        description: "Your selection is pre-filled in WhatsApp. If it didn't appear, you can just paste the text from your clipboard!",
+      });
+    }).catch((err) => {
+      console.error("Clipboard sync failed:", err);
+      // Fallback redirect even if clipboard fails
+      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
       window.open(whatsappUrl, '_blank');
     });
   };
