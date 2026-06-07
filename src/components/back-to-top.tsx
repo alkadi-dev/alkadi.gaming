@@ -40,28 +40,11 @@ export function BackToTop() {
   };
 
   const scrollToGoDown = () => {
-    const libraryElement = document.getElementById('library');
-    const mainElement = document.querySelector('main');
-    
-    // Target the library section if it exists (home page), otherwise the main content
-    const targetElement = libraryElement || mainElement;
-
-    if (targetElement) {
-      const headerOffset = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    } else {
-      // Fallback: scroll down 80% of the viewport height if no target found
-      window.scrollTo({
-        top: window.innerHeight * 0.8,
-        behavior: 'smooth'
-      });
-    }
+    // Scroll to the absolute bottom of the page
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
   };
 
   return (
