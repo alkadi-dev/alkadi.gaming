@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect, useCallback } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
@@ -18,55 +18,60 @@ export default function HomePage() {
   const [maxSize, setMaxSize] = useState(250);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [isRestored, setIsRestored] = useState(false);
 
-  // Restore state and scroll on mount
-  useEffect(() => {
+  // Restore state as early as possible to prevent layout shifts
+  useLayoutEffect(() => {
     const restoredCategory = sessionStorage.getItem('home-category');
     const restoredSearch = sessionStorage.getItem('home-search');
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
     const restoredSort = sessionStorage.getItem('home-sort');
-    const restoredScroll = sessionStorage.getItem('home-scroll-position');
 
     if (restoredCategory) setSelectedCategory(restoredCategory);
     if (restoredSearch) setSearchQuery(restoredSearch);
     if (restoredMaxSize) setMaxSize(parseInt(restoredMaxSize, 10));
     if (restoredSort) setSortOrder(restoredSort);
 
-    // After state is set, we restore the scroll position once the DOM is likely ready.
-    const timer = setTimeout(() => {
-      if (restoredScroll) {
+    // After state is set, we signal that state is ready
+    setIsRestored(true);
+  }, []);
+
+  // Restore scroll position after the component has rendered with the restored state
+  useEffect(() => {
+    if (!isRestored) return;
+
+    const restoredScroll = sessionStorage.getItem('home-scroll-position');
+    if (restoredScroll) {
+      // Use a slightly longer delay to ensure the grid items are fully mounted and sized
+      const timer = setTimeout(() => {
         window.scrollTo({
           top: parseInt(restoredScroll, 10),
           behavior: 'instant'
         });
-      }
-      setIsInitialLoad(false);
-    }, 150); // Small delay to allow filtered games grid to render and stabilize
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [isRestored]);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Save state on change
+  // Save state on change - only after initial restoration is complete to avoid overwriting with defaults
   useEffect(() => {
-    if (isInitialLoad) return;
+    if (!isRestored) return;
     sessionStorage.setItem('home-category', selectedCategory);
     sessionStorage.setItem('home-search', searchQuery);
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
-  }, [selectedCategory, searchQuery, maxSize, sortOrder, isInitialLoad]);
+  }, [selectedCategory, searchQuery, maxSize, sortOrder, isRestored]);
 
   // Save scroll position
   useEffect(() => {
     const handleScroll = () => {
-      // Only save if we're not in the middle of an initial restoration
-      if (!isInitialLoad) {
+      if (isRestored) {
         sessionStorage.setItem('home-scroll-position', window.scrollY.toString());
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isInitialLoad]);
+  }, [isRestored]);
 
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = 
@@ -142,6 +147,7 @@ export default function HomePage() {
       </header>
 
       <main className="flex-1 container mx-auto px-4 py-8">
+        {/* Hero Section */}
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
           <div className="max-w-4xl relative z-10 mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
@@ -164,10 +170,13 @@ export default function HomePage() {
           <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent hidden lg:block" />
         </div>
 
+        {/* Library Controls */}
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4 flex-1">
-              <h2 className="text-2xl font-bold font-headline">Library</h2>
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold font-headline">Library</h2>
+              </div>
               <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
                 {CATEGORIES.map((cat) => (
                   <Button
@@ -285,6 +294,7 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Games Grid */}
         {filteredGames.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredGames.map((game) => (
