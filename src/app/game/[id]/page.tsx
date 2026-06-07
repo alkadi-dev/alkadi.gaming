@@ -71,9 +71,9 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
   };
 
   const handleBackToCatalog = () => {
-    // Attempt to go back to maintain scroll position natively if possible
-    // Otherwise fallback to push
-    if (window.history.length > 1) {
+    // router.back() is the best way to preserve scroll position if the browser handles it natively,
+    // otherwise our state and scroll restoration logic in src/app/page.tsx will handle it correctly.
+    if (typeof window !== 'undefined' && window.history.length > 1) {
       router.back();
     } else {
       router.push('/');
@@ -245,7 +245,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             </div>
           </section>
 
-          {/* Shorts Section */}
+          {/* Moments Section */}
           {game.shorts && game.shorts.length > 0 && (
             <section>
               <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Moments</h2>

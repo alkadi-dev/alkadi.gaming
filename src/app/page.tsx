@@ -20,35 +20,34 @@ export default function HomePage() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
-  // Load state and scroll from sessionStorage on mount
+  // Restore state and scroll on mount
   useEffect(() => {
-    const savedCategory = sessionStorage.getItem('home-category');
-    const savedSearch = sessionStorage.getItem('home-search');
-    const savedMaxSize = sessionStorage.getItem('home-max-size');
-    const savedSort = sessionStorage.getItem('home-sort');
-    const savedScroll = sessionStorage.getItem('home-scroll-position');
+    const restoredCategory = sessionStorage.getItem('home-category');
+    const restoredSearch = sessionStorage.getItem('home-search');
+    const restoredMaxSize = sessionStorage.getItem('home-max-size');
+    const restoredSort = sessionStorage.getItem('home-sort');
+    const restoredScroll = sessionStorage.getItem('home-scroll-position');
 
-    if (savedCategory) setSelectedCategory(savedCategory);
-    if (savedSearch) setSearchQuery(savedSearch);
-    if (savedMaxSize) setMaxSize(parseInt(savedMaxSize, 10));
-    if (savedSort) setSortOrder(savedSort);
+    if (restoredCategory) setSelectedCategory(restoredCategory);
+    if (restoredSearch) setSearchQuery(restoredSearch);
+    if (restoredMaxSize) setMaxSize(parseInt(restoredMaxSize, 10));
+    if (restoredSort) setSortOrder(restoredSort);
 
-    // Give the browser a moment to render the grid with restored filters before scrolling
-    if (savedScroll) {
-      const timer = setTimeout(() => {
+    // After state is set, we restore the scroll position once the DOM is likely ready.
+    const timer = setTimeout(() => {
+      if (restoredScroll) {
         window.scrollTo({
-          top: parseInt(savedScroll, 10),
+          top: parseInt(restoredScroll, 10),
           behavior: 'instant'
         });
-        setIsInitialLoad(false);
-      }, 100);
-      return () => clearTimeout(timer);
-    } else {
+      }
       setIsInitialLoad(false);
-    }
+    }, 150); // Small delay to allow filtered games grid to render and stabilize
+
+    return () => clearTimeout(timer);
   }, []);
 
-  // Persist category, search, and filters whenever they change
+  // Save state on change
   useEffect(() => {
     if (isInitialLoad) return;
     sessionStorage.setItem('home-category', selectedCategory);
@@ -57,21 +56,17 @@ export default function HomePage() {
     sessionStorage.setItem('home-sort', sortOrder);
   }, [selectedCategory, searchQuery, maxSize, sortOrder, isInitialLoad]);
 
-  // Persist scroll position
+  // Save scroll position
   useEffect(() => {
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          sessionStorage.setItem('home-scroll-position', window.scrollY.toString());
-          ticking = false;
-        });
-        ticking = true;
+      // Only save if we're not in the middle of an initial restoration
+      if (!isInitialLoad) {
+        sessionStorage.setItem('home-scroll-position', window.scrollY.toString());
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isInitialLoad]);
 
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = 
@@ -132,7 +127,7 @@ export default function HomePage() {
           </div>
           
           <div className="flex items-center gap-4">
-            <div className="relative w-full max-w-sm hidden md:flex items-center">
+            <div className="relative w-full max-sm hidden md:flex items-center">
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
