@@ -18,8 +18,8 @@ export function BackToTop() {
       const currentScroll = window.scrollY;
       const scrollPercentage = currentScroll / scrollHeight;
 
-      // 40% (0.4) threshold for the toggle effect
-      const pastThreshold = scrollPercentage > 0.4;
+      // 50% (0.5) threshold for the toggle effect as requested
+      const pastThreshold = scrollPercentage > 0.5;
       
       setShowTop(pastThreshold);
       setShowDown(!pastThreshold);
@@ -49,7 +49,7 @@ export function BackToTop() {
 
   return (
     <>
-      {/* Back to Top Button: Appears after 40% scroll */}
+      {/* Back to Top Button: Appears after 50% scroll */}
       <Button
         variant="default"
         size="icon"
@@ -63,7 +63,7 @@ export function BackToTop() {
         <ArrowUp className="h-6 w-6" />
       </Button>
 
-      {/* Go Down Button: Visible before 40% scroll */}
+      {/* Go Down Button: Visible before 50% scroll */}
       <Button
         variant="secondary"
         size="icon"
