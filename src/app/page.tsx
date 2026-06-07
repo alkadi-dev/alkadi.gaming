@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
@@ -18,6 +18,37 @@ export default function HomePage() {
   const [maxSize, setMaxSize] = useState(250);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  // Scroll Restoration Logic
+  useEffect(() => {
+    const savedPosition = sessionStorage.getItem('home-scroll-position');
+    if (savedPosition) {
+      // Use a small timeout to ensure the grid has rendered
+      const timer = setTimeout(() => {
+        window.scrollTo({
+          top: parseInt(savedPosition, 10),
+          behavior: 'instant'
+        });
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // Save Scroll Position Logic
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          sessionStorage.setItem('home-scroll-position', window.scrollY.toString());
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = 

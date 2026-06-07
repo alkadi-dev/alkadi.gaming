@@ -70,6 +70,16 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
     }
   };
 
+  const handleBackToCatalog = () => {
+    // Attempt to go back to maintain scroll position natively if possible
+    // Otherwise fallback to push
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/');
+    }
+  };
+
   if (!game) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -94,7 +104,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             variant="ghost"
             size="sm"
             className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-3 text-xs"
-            onClick={() => router.push('/')}
+            onClick={handleBackToCatalog}
           >
             <ArrowLeft className="mr-1.5 h-3.5 w-3.5" /> <span className="hidden sm:inline">Catalog</span>
           </Button>
