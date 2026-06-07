@@ -71,12 +71,20 @@ export function StorageLimitAlert() {
   }, [totalSizeNum]);
 
   const handleReview = () => {
+    // Close the alert first
     setActiveLimit(null);
-    setCheckoutOpen(true);
+    
+    // Delay opening the checkout sheet slightly to avoid Radix UI overlay/scroll-lock collisions
+    // which can lead to a "frozen" UI state where pointer events are stuck.
+    setTimeout(() => {
+      setCheckoutOpen(true);
+    }, 100);
   };
 
   return (
-    <AlertDialog open={!!activeLimit} onOpenChange={(open) => !open && setActiveLimit(null)}>
+    <AlertDialog open={!!activeLimit} onOpenChange={(open) => {
+      if (!open) setActiveLimit(null);
+    }}>
       <AlertDialogContent className="bg-background/95 backdrop-blur-xl border-white/10 rounded-3xl max-w-sm sm:max-w-md">
         <AlertDialogHeader>
           <div className="flex items-center gap-3 mb-2">

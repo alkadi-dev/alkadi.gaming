@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -8,24 +8,33 @@ import { cn } from '@/lib/utils';
 export function BackToTop() {
   const [showTop, setShowTop] = useState(false);
   const [showDown, setShowDown] = useState(true);
+  const ticking = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate scroll progress percentage
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollHeight <= 0) return;
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (scrollHeight <= 0) {
+            ticking.current = false;
+            return;
+          }
 
-      const currentScroll = window.scrollY;
-      const scrollPercentage = currentScroll / scrollHeight;
+          const currentScroll = window.scrollY;
+          const scrollPercentage = currentScroll / scrollHeight;
 
-      // 50% (0.5) threshold for the toggle effect as requested
-      const pastThreshold = scrollPercentage > 0.5;
-      
-      setShowTop(pastThreshold);
-      setShowDown(!pastThreshold);
+          // 50% (0.5) threshold for the toggle effect
+          const pastThreshold = scrollPercentage > 0.5;
+          
+          setShowTop(pastThreshold);
+          setShowDown(!pastThreshold);
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     // Initial check in case the page is already scrolled on mount
     handleScroll();
 
