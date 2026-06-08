@@ -133,17 +133,17 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-sm">
+      <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-md border-none">
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div 
-              className="cursor-pointer group select-none flex flex-col leading-none" 
+              className="cursor-pointer group select-none flex items-center gap-2" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <span className="text-2xl md:text-4xl font-black font-headline tracking-tighter text-white group-hover:text-primary transition-colors duration-300 uppercase">
+              <span className="text-2xl md:text-3xl font-black font-headline tracking-tighter text-white group-hover:text-primary transition-all duration-300 uppercase">
                 ALKADI
               </span>
-              <span className="text-xl md:text-3xl font-black font-headline tracking-tighter text-primary group-hover:text-white transition-colors duration-300 uppercase">
+              <span className="text-2xl md:text-3xl font-black font-headline tracking-tighter text-primary group-hover:text-white transition-all duration-300 uppercase">
                 GAMING
               </span>
             </div>
@@ -359,7 +359,7 @@ export default function HomePage() {
       </main>
 
       {/* Social Footer Section */}
-      <footer id="contact" className="border-t bg-secondary/10 pt-16 pb-12 mt-20">
+      <footer id="contact" className="border-t border-white/5 bg-secondary/10 pt-16 pb-12 mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-8">
             <div className="text-center">
