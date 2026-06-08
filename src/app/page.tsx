@@ -135,16 +135,16 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-sm">
+        <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Image 
                 src={logoImage}
                 alt="Alkadi Gaming Logo"
-                width={150}
-                height={40}
-                className="h-8 w-auto object-contain"
+                width={250}
+                height={80}
+                className="h-14 w-auto object-contain transition-transform hover:scale-105"
                 data-ai-hint="gaming logo"
               />
             </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
-                className="pl-10 bg-secondary/50 border-none focus-visible:ring-primary"
+                className="pl-10 bg-secondary/30 border-none focus-visible:ring-primary"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
