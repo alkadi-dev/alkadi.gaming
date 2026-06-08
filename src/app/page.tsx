@@ -177,8 +177,11 @@ export default function HomePage() {
           <div className="max-w-4xl relative z-10 mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
               <span className="text-white uppercase block mb-2 tracking-tighter">ALKADI GAMING</span>
-              <span className="text-primary text-xl md:text-3xl block font-normal">buy your game eazy, cheap and fast</span>
+              <span className="text-primary text-xl md:text-3xl block font-normal">Buy Your Game Easy, Cheap, and Fun</span>
             </h1>
+            <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+              Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
+            </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
                 size="lg" 
