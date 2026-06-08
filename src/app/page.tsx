@@ -1,7 +1,10 @@
+
 'use client';
 
 import { useState, useEffect, useLayoutEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
 import { Search, HardDrive, Filter, ArrowUpDown, Check, Facebook, Instagram, MessageCircle, Phone } from 'lucide-react';
@@ -128,14 +131,23 @@ export default function HomePage() {
 
   const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0);
 
+  const logoImage = PlaceHolderImages.find(img => img.id === 'app-logo')?.imageUrl || '';
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-xl font-bold font-headline tracking-tighter text-primary uppercase cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              Alkadi <span className="text-foreground">Gaming</span>
-            </span>
+            <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <Image 
+                src={logoImage}
+                alt="Alkadi Gaming Logo"
+                width={150}
+                height={40}
+                className="h-8 w-auto object-contain"
+                data-ai-hint="gaming logo"
+              />
+            </div>
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">

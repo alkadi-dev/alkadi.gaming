@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "app-logo",
+      "description": "Alkadi Gaming Logo",
+      "imageUrl": "https://picsum.photos/seed/alkadi-gaming-logo/200/50",
+      "imageHint": "gaming logo"
+    },
+    {
       "id": "rpg-hero",
       "description": "Epic fantasy RPG landscape",
       "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",

@@ -2,6 +2,12 @@
 {
   "placeholderImages": [
     {
+      "id": "app-logo",
+      "description": "Alkadi Gaming Logo",
+      "imageUrl": "https://picsum.photos/seed/alkadi-gaming-logo/200/50",
+      "imageHint": "gaming logo"
+    },
+    {
       "id": "rpg-hero",
       "description": "Epic fantasy RPG landscape",
       "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",
@@ -600,162 +606,6 @@
       "description": "A Plague Tale Requiem hero",
       "imageUrl": "https://picsum.photos/seed/plague-hero/1200/800",
       "imageHint": "sunset island"
-    },
-    {
-      "id": "re3-thumb",
-      "description": "Resident Evil 3 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/re3/600/400",
-      "imageHint": "nemesis zombie"
-    },
-    {
-      "id": "eldenring-thumb",
-      "description": "Elden Ring landscape thumbnail",
-      "imageUrl": "https://picsum.photos/seed/elden/600/400",
-      "imageHint": "golden tree"
-    },
-    {
-      "id": "elden-shadow-thumb",
-      "description": "Elden Ring Shadow of the Erdtree thumbnail",
-      "imageUrl": "https://picsum.photos/seed/eldenshadow/600/400",
-      "imageHint": "dark fantasy"
-    },
-    {
-      "id": "mk1-thumb",
-      "description": "Mortal Kombat 1 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/mk1/600/400",
-      "imageHint": "martial arts"
-    },
-    {
-      "id": "jedi-survivor-thumb",
-      "description": "Star Wars Jedi Survivor thumbnail",
-      "imageUrl": "https://picsum.photos/seed/jedisurv/600/400",
-      "imageHint": "lightsaber duel"
-    },
-    {
-      "id": "nightmares3-thumb",
-      "description": "Little Nightmares 3 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/ln3/600/400",
-      "imageHint": "creepy doll"
-    },
-    {
-      "id": "ninjag4-thumb",
-      "description": "Ninja Gaiden 4 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/ng4/600/400",
-      "imageHint": "cyber ninja"
-    },
-    {
-      "id": "exp33-thumb",
-      "description": "Expedition 33 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/exp33/600/400",
-      "imageHint": "belle epoque"
-    },
-    {
-      "id": "avatar-pandora-thumb",
-      "description": "Avatar Frontiers of Pandora thumbnail",
-      "imageUrl": "https://picsum.photos/seed/avatar/600/400",
-      "imageHint": "blue alien"
-    },
-    {
-      "id": "reanimal-thumb",
-      "description": "Reanimal thumbnail",
-      "imageUrl": "https://picsum.photos/seed/reanimal/600/400",
-      "imageHint": "animal horror"
-    },
-    {
-      "id": "alanwake2-thumb",
-      "description": "Alan Wake 2 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/aw2/600/400",
-      "imageHint": "noir detective"
-    },
-    {
-      "id": "mgs5-thumb",
-      "description": "Metal Gear Solid 5 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/mgs5/600/400",
-      "imageHint": "tactical stealth"
-    },
-    {
-      "id": "hellblade2-thumb",
-      "description": "Senua Hellblade 2 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/hellb2/600/400",
-      "imageHint": "celtic warrior"
-    },
-    {
-      "id": "ds2-thumb",
-      "description": "Death Stranding 2 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/ds2/600/400",
-      "imageHint": "sci-fi journey"
-    },
-    {
-      "id": "jc4-thumb",
-      "description": "Just Cause 4 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/jc4/600/400",
-      "imageHint": "explosion action"
-    },
-    {
-      "id": "mafia-old-thumb",
-      "description": "Mafia The Old Country thumbnail",
-      "imageUrl": "https://picsum.photos/seed/mafiaold/600/400",
-      "imageHint": "vintage gangster"
-    },
-    {
-      "id": "mafia3-thumb",
-      "description": "Mafia 3 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/mafia3/600/400",
-      "imageHint": "crime city"
-    },
-    {
-      "id": "maxpayne3-thumb",
-      "description": "Max Payne 3 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/max3/600/400",
-      "imageHint": "bullet time"
-    },
-    {
-      "id": "ferocious-thumb",
-      "description": "Ferocious thumbnail",
-      "imageUrl": "https://picsum.photos/seed/ferocious/600/400",
-      "imageHint": "dinosaur jungle"
-    },
-    {
-      "id": "nfs-unbound-thumb",
-      "description": "Need for Speed Unbound thumbnail",
-      "imageUrl": "https://picsum.photos/seed/unbound/600/400",
-      "imageHint": "anime street"
-    },
-    {
-      "id": "nfs-heat-thumb",
-      "description": "Need for Speed Heat thumbnail",
-      "imageUrl": "https://picsum.photos/seed/nfsheat/600/400",
-      "imageHint": "neon race"
-    },
-    {
-      "id": "crew2-thumb",
-      "description": "The Crew 2 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/crew2/600/400",
-      "imageHint": "open world race"
-    },
-    {
-      "id": "silenthill2-thumb",
-      "description": "Silent Hill 2 thumbnail",
-      "imageUrl": "https://picsum.photos/seed/sh2/600/400",
-      "imageHint": "foggy street"
-    },
-    {
-      "id": "wukong-thumb",
-      "description": "Black Myth Wukong thumbnail",
-      "imageUrl": "https://picsum.photos/seed/wukong/600/400",
-      "imageHint": "monkey king"
-    },
-    {
-      "id": "stray-thumb",
-      "description": "Stray thumbnail",
-      "imageUrl": "https://picsum.photos/seed/stray/600/400",
-      "imageHint": "cat robot"
-    },
-    {
-      "id": "hfw-thumb",
-      "description": "Horizon Forbidden West thumbnail",
-      "imageUrl": "https://picsum.photos/seed/hfw/600/400",
-      "imageHint": "tribal hunter"
     }
   ]
 }
