@@ -131,22 +131,21 @@ export default function HomePage() {
 
   const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0);
 
-  const logoImage = PlaceHolderImages.find(img => img.id === 'app-logo')?.imageUrl || '';
-
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-sm">
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <Image 
-                src={logoImage}
-                alt="Alkadi Gaming Logo"
-                width={250}
-                height={80}
-                className="h-14 w-auto object-contain transition-transform hover:scale-105"
-                data-ai-hint="gaming logo"
-              />
+            <div 
+              className="cursor-pointer group select-none flex flex-col leading-none" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              <span className="text-2xl md:text-4xl font-black font-headline tracking-tighter text-white group-hover:text-primary transition-colors duration-300 uppercase">
+                ALKADI
+              </span>
+              <span className="text-xl md:text-3xl font-black font-headline tracking-tighter text-primary group-hover:text-white transition-colors duration-300 uppercase">
+                GAMING
+              </span>
             </div>
           </div>
           
@@ -178,7 +177,7 @@ export default function HomePage() {
         <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
           <div className="max-w-4xl relative z-10 mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
-              <span className="text-white uppercase block mb-2">ALKADI GAMING</span>
+              <span className="text-white uppercase block mb-2 tracking-tighter">ALKADI GAMING</span>
               <span className="text-primary text-xl md:text-3xl block font-normal">buy your game eazy, cheap and fast</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
