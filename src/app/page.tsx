@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect, useLayoutEffect, useCallback } from 'react';
@@ -134,16 +133,16 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-md border-none">
-        <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div 
               className="cursor-pointer select-none flex items-center gap-1.5" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <span className="text-lg md:text-xl font-black font-headline tracking-tighter text-white uppercase">
+              <span className="text-lg font-black font-headline tracking-tighter text-white uppercase">
                 ALKADI
               </span>
-              <span className="text-lg md:text-xl font-black font-headline tracking-tighter text-primary uppercase">
+              <span className="text-lg font-black font-headline tracking-tighter text-primary uppercase">
                 GAMING
               </span>
             </div>
@@ -162,7 +161,7 @@ export default function HomePage() {
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
-                className="pl-10 bg-secondary/30 border-none focus-visible:ring-primary"
+                className="pl-10 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
