@@ -49,7 +49,7 @@ export default function HomePage() {
           behavior: 'instant'
         });
       }, 50);
-      return () => clearTimeout(timer);
+      return () => setTimeout(timer);
     }
   }, [isRestored]);
 
@@ -179,6 +179,14 @@ export default function HomePage() {
                 onClick={scrollToLibrary}
               >
                 Browse Now
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-lg transition-all duration-300 hover:bg-primary hover:text-white border-white/20"
+                onClick={scrollToContact}
+              >
+                Contact Us
               </Button>
             </div>
           </div>
