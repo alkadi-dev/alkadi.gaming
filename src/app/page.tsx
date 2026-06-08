@@ -4,7 +4,7 @@ import { useState, useEffect, useLayoutEffect, useCallback } from 'react';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, Facebook, Instagram, MessageCircle, Phone } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -119,6 +119,13 @@ export default function HomePage() {
     }
   };
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0);
 
   return (
@@ -126,12 +133,20 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-xl font-bold font-headline tracking-tighter text-primary uppercase">
+            <span className="text-xl font-bold font-headline tracking-tighter text-primary uppercase cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Alkadi <span className="text-foreground">Gaming</span>
             </span>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-xs uppercase font-bold tracking-widest hidden sm:flex"
+              onClick={scrollToContact}
+            >
+              Contact
+            </Button>
             <div className="relative w-full max-sm hidden md:flex items-center">
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
@@ -323,6 +338,53 @@ export default function HomePage() {
           </div>
         )}
       </main>
+
+      {/* Social Footer Section */}
+      <footer id="contact" className="border-t bg-secondary/10 py-16 mt-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center gap-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold font-headline uppercase tracking-tighter text-primary mb-2">Connect With Us</h3>
+              <p className="text-muted-foreground text-sm max-w-xs mx-auto">
+                Follow us on social media for the latest updates, exclusive deals, and gaming community news.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="mr-2 h-5 w-5 text-[#1877F2]" /> Facebook
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="mr-2 h-5 w-5 text-[#E4405F]" /> Instagram
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" className="mr-2 h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+                  </svg>
+                  TikTok
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+                <a href="https://wa.me/yournumber" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5 text-[#25D366]" /> WhatsApp
+                </a>
+              </Button>
+            </div>
+            
+            <div className="w-full h-px bg-white/5 max-w-md" />
+            
+            <div className="text-center text-muted-foreground">
+              <p className="text-xs uppercase tracking-widest font-bold">© 2024 Alkadi Gaming</p>
+              <p className="text-[10px] mt-1 opacity-50 italic">Buy your game easy, cheap and fast</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

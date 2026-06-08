@@ -579,8 +579,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpapercat.com/w/full/1/7/e/130549-1920x1080-desktop-1080p-grand-theft-auto-5-background-photo.jpg',
-      'https://picsum.photos/seed/gta5-car/800/450'
-    ],
+      'https://wallpaperaccess.com/full/11181407.jpg'    ],
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
     shorts: [
       'https://www.youtube.com/embed/oYlsmbxTVM4?si=bP3Meaz940YkrLBV',
@@ -719,9 +718,9 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '100 GB',
     releaseYear: '2025',
     images: [
-      'https://drive.google.com/file/d/11Tc-z0vBjM1DbJnzKI9XAfsM-gpJMdv8/view?usp=drive_link',
-      'https://drive.google.com/file/d/17t_bx1ZIIHYiD8RJAItdaQHzrh6HZ7sj/view?usp=drive_link',
-      'https://drive.google.com/file/d/1EpgwvC3eU4Pa1sr1C1xzmB9vhqxeK8Vh/view?usp=drive_link'
+      'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
+      'https://static0.polygonimages.com/wordpress/wp-content/uploads/2025/10/bf6.jpg?q=49&fit=crop&w=360&h=240&dpr=2',
+      'https://images.hdqwalls.com/wallpapers/bthumb/the-battlefield-6-sr.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/pgNCgJG0vnY',
     shorts: [
@@ -801,7 +800,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2022',
     images: [
       'https://wallpapercave.com/wp/wp11704100.jpg',
-      'https://wallpapercave.com/wp/wp11704100.jpg',
+      'https://wallpapercave.com/wp/wp11743749.jpg',
       'https://wallpapercave.com/wp/wp11704136.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E?si=OYPDMavvE_Lz-Ttw',
@@ -983,7 +982,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp4571906.png',
-      'https://preview.redd.it/vu3g9pw3vtwg1.jpeg?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2',
+      'https://wallpapercave.com/wp/wp4571903.jpg',
       'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/hdJI3_8zG7A?si=S1NP1QRzN-f2v3VA',
@@ -1084,7 +1083,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
       'https://kotaku.com/igdb/image/upload/t_720p/r5mn9rt7aqvf5nrn8dqq.jpg',
-      'https://picsum.photos/seed/daysgone-forest/800/450'
+      'https://wallpapercave.com/wp/wp2392978.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/p9XlSvnRk3E',
     shorts: [
@@ -1344,7 +1343,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapercave.com/wp/wp15335747.webp',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
-      'https://cdn.mos.cms.futurecdn.net/AqiwEtGjDAvknt7azDHxB.jpg'
+      'https://i0.wp.com/selphie1999gaming.com/wp-content/uploads/2025/08/Mafia-The-Old-Country-Photographs-Cover.png?fit=1105,560&ssl=1'
     ],
     videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
