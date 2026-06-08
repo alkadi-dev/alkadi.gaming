@@ -142,7 +142,7 @@ export default function HomePage() {
             <Button 
               variant="ghost" 
               size="sm" 
-              className="text-xs uppercase font-bold tracking-widest hidden sm:flex hover:text-primary hover:bg-primary/5 transition-colors"
+              className="text-xs uppercase font-bold tracking-widest hidden sm:flex hover:bg-primary hover:text-white transition-all duration-300"
               onClick={scrollToContact}
             >
               Contact
