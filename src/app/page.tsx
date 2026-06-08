@@ -183,7 +183,7 @@ export default function HomePage() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="text-lg transition-all duration-300 hover:bg-primary hover:text-white border-white/20"
+                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:bg-primary hover:text-white border-white/20 shadow-lg hover:shadow-primary/20"
                 onClick={scrollToContact}
               >
                 Contact Us
