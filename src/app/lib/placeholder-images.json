@@ -8,6 +8,24 @@
       "imageHint": "gaming logo"
     },
     {
+      "id": "legobatman-thumb",
+      "description": "LEGO Batman Legacy thumbnail",
+      "imageUrl": "https://picsum.photos/seed/legobatman-thumb/600/400",
+      "imageHint": "lego batman"
+    },
+    {
+      "id": "legobatman-hero",
+      "description": "LEGO Batman Legacy hero image",
+      "imageUrl": "https://picsum.photos/seed/legobatman-hero/1200/800",
+      "imageHint": "gotham city"
+    },
+    {
+      "id": "legobatman-gallery-1",
+      "description": "LEGO Batman gameplay screenshot",
+      "imageUrl": "https://picsum.photos/seed/legobatman-g1/1200/800",
+      "imageHint": "lego hero"
+    },
+    {
       "id": "rpg-hero",
       "description": "Epic fantasy RPG landscape",
       "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",

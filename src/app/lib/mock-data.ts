@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -19,6 +20,26 @@ export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Ad
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
 export const MOCK_GAMES: GameEntry[] = [
+  {
+    id: 'lego-batman-legacy',
+    title: 'LEGO Batman: Legacy of the Dark Knight',
+    description: 'The Caped Crusader returns in a massive new LEGO adventure. Explore Gotham City like never before, building and battling through iconic locations. Play as a huge cast of heroes and villains in this definitive LEGO Batman experience.',
+    categories: ['Adventure', '2 players', 'Action'],
+    thumbnail: 'https://picsum.photos/seed/legobatman-thumb/600/400',
+    size: '20 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/legobatman-hero/1200/800',
+      'https://picsum.photos/seed/legobatman-g1/1200/800',
+      'https://picsum.photos/seed/legobatman-g2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
+    shorts: [
+      'https://www.youtube.com/embed/zGsXns95g4I',
+      'https://www.youtube.com/embed/R5cq8FnyPFI'
+    ],
+    isRecommended: true,
+  },
   {
     id: '5',
     title: 'Red Dead Redemption 2',
@@ -178,7 +199,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/3pGgPrbdKaU?si=pk6rmiOf9AWXUPds',
       'https://www.youtube.com/embed/SsZoqBH3aYw?si=9dEKoN0Zx0sZEB0d',
-      'https://www.youtube.com/embed/mwQpOPkGnCE?si=VqS2IQW3yOdNPz8Y'
+      'https://www.youtube.com/embed/mwQpOPpGnCE?si=VqS2IQW3yOdNPz8Y'
     ],
   },
   {
@@ -1003,7 +1024,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
       'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-5.png',
-      'https://cdn.wccftech.com/wp-content/uploads/2025/08/2-728x410.jpg'
+      'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/HfJ9ub9PdfA?si=1dnpi2nUfddrRSsR',
     shorts: [
