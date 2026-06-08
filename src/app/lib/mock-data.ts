@@ -25,18 +25,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'LEGO Batman: Legacy of the Dark Knight',
     description: 'The Caped Crusader returns in a massive new LEGO adventure. Explore Gotham City like never before, building and battling through iconic locations. Play as a huge cast of heroes and villains in this definitive LEGO Batman experience.',
     categories: ['Adventure', '2 players', 'Action'],
-    thumbnail: 'https://picsum.photos/seed/legobatman-thumb/600/400',
+    thumbnail: 'https://img.youtube.com/vi/DfJaUpW_P00/maxresdefault.jpg',
     size: '20 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/legobatman-hero/1200/800',
-      'https://picsum.photos/seed/legobatman-g1/1200/800',
-      'https://picsum.photos/seed/legobatman-g2/1200/800'
+      'https://img.youtube.com/vi/DfJaUpW_P00/maxresdefault.jpg',
+      'https://images.alphacoders.com/140/thumb-1920-1400002.png',
+      'https://wallpapercave.com/wp/wp16013669.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
+    videoUrl: 'https://www.youtube.com/embed/DfJaUpW_P00',
     shorts: [
-      'https://www.youtube.com/embed/zGsXns95g4I',
-      'https://www.youtube.com/embed/R5cq8FnyPFI'
+      'https://www.youtube.com/embed/SC8ZnHfHpjM',
+      'https://www.youtube.com/embed/rvtVI8IP0M4',
+      'https://www.youtube.com/embed/S27ZWt8C-04'
     ],
     isRecommended: true,
   },
