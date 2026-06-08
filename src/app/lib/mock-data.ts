@@ -719,9 +719,9 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '100 GB',
     releaseYear: '2025',
     images: [
-      'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
-      'https://wallpapercave.com/wp/wp12015400.jpg',
-      'https://images4.alphacoders.com/722/thumbbig-722618.webp'
+      'https://drive.google.com/file/d/11Tc-z0vBjM1DbJnzKI9XAfsM-gpJMdv8/view?usp=drive_link',
+      'https://drive.google.com/file/d/17t_bx1ZIIHYiD8RJAItdaQHzrh6HZ7sj/view?usp=drive_link',
+      'https://drive.google.com/file/d/1EpgwvC3eU4Pa1sr1C1xzmB9vhqxeK8Vh/view?usp=drive_link'
     ],
     videoUrl: 'https://www.youtube.com/embed/pgNCgJG0vnY',
     shorts: [
@@ -1270,7 +1270,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/ms5ENyRH3Bs',
       'https://www.youtube.com/embed/ZAW0hs2ZDFg',
-      'https://www.youtube.com/embed/EJmpkJvjvIo'
+      'https://www.youtube.com/embed/EJmpkJviarIo'
     ]
   },
   {
