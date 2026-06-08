@@ -92,7 +92,7 @@ export default function HomePage() {
       return parseInt(b.releaseYear) - parseInt(a.releaseYear);
     }
     if (sortOrder === 'year-asc') {
-      return parseInt(a.releaseYear) - parseInt(b.releaseYear);
+      return parseInt(a.releaseYear) - parseInt(a.releaseYear);
     }
     if (sortOrder === 'size-asc') {
       const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
@@ -149,14 +149,6 @@ export default function HomePage() {
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              className="text-xs uppercase font-bold tracking-widest hidden sm:flex hover:bg-primary hover:text-white transition-all duration-300"
-              onClick={scrollToContact}
-            >
-              Contact
-            </Button>
             <div className="relative w-full max-sm hidden md:flex items-center">
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
