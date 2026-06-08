@@ -137,13 +137,13 @@ export default function HomePage() {
         <div className="container mx-auto px-4 h-24 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div 
-              className="cursor-pointer group select-none flex items-center gap-2" 
+              className="cursor-pointer select-none flex items-center gap-1.5" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <span className="text-2xl md:text-3xl font-black font-headline tracking-tighter text-white group-hover:text-primary transition-all duration-300 uppercase">
+              <span className="text-lg md:text-xl font-black font-headline tracking-tighter text-white uppercase">
                 ALKADI
               </span>
-              <span className="text-2xl md:text-3xl font-black font-headline tracking-tighter text-primary group-hover:text-white transition-all duration-300 uppercase">
+              <span className="text-lg md:text-xl font-black font-headline tracking-tighter text-primary uppercase">
                 GAMING
               </span>
             </div>
@@ -180,9 +180,6 @@ export default function HomePage() {
               <span className="text-white uppercase block mb-2 tracking-tighter">ALKADI GAMING</span>
               <span className="text-primary text-xl md:text-3xl block font-normal">buy your game eazy, cheap and fast</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
-              Discover your next adventure—explore and buy the hottest games in one place. Curated collections, unique finds, and unbeatable prices—start your gaming journey today!
-            </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
                 size="lg" 
