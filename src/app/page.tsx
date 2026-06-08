@@ -387,7 +387,7 @@ export default function HomePage() {
             <div className="w-full h-px bg-white/5 max-w-md" />
             
             <div className="text-center text-muted-foreground">
-              <p className="text-[10px] mt-1 opacity-50 italic">Buy your game easy, cheap and fast</p>
+              {/* Catchphrase and Copyright removed as requested */}
             </div>
           </div>
         </div>
