@@ -132,7 +132,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-md border-none">
+      <header className="sticky top-0 z-50 w-full bg-background/40 backdrop-blur-xl border-none">
         <div className="container mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div 
@@ -177,7 +177,7 @@ export default function HomePage() {
           <div className="max-w-4xl relative z-10 mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
               <span className="text-white uppercase block mb-2 tracking-tighter">ALKADI GAMING</span>
-              <span className="text-primary text-xl md:text-3xl block font-normal">Buy Your Game Easy, Cheap, and Fun</span>
+              <span className="text-primary text-xl md:text-3xl block font-normal">Buy Your Game Easy, Cheap, and Fast</span>
             </h1>
             <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
               Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
