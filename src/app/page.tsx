@@ -92,7 +92,7 @@ export default function HomePage() {
       return parseInt(b.releaseYear) - parseInt(a.releaseYear);
     }
     if (sortOrder === 'year-asc') {
-      return parseInt(a.releaseYear) - parseInt(a.releaseYear);
+      return parseInt(a.releaseYear) - parseInt(b.releaseYear);
     }
     if (sortOrder === 'size-asc') {
       const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;

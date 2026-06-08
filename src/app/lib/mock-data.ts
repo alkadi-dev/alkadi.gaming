@@ -660,7 +660,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
-      'https://wallpapercat.com/w/full/b/0/1/14420-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg'
+      'https://picsum.photos/seed/sniper4-gallery/1200/800'
     ],
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
     shorts: [
@@ -868,7 +868,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/q4GdJVvdxss?si=xL7CjWH7fdAJY5zc',
     shorts: [
       'https://www.youtube.com/embed/fAnIUbnOekA?si=NNKuLiQJ-zuU2SvG',
-      'https://www.youtube.com/embed/JrSIqSKGXes?si=SMcz-i49ByOLuXLo',
+      'https://www.youtube.com/embed/JrSIqSKGXes?si=JrSIqSKGXes',
       'https://www.youtube.com/embed/40uN7Bg_RVc?si=zhXxigjHLzbq3nVw'
     ],
   },
@@ -1569,7 +1569,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/oncaa_fMsyw',
     shorts: [
-      'https://www.youtube.com/embed/kDlwJKA0gjI',
+      'https://www.youtube.com/embed/oncaa_fMsyw',
       'https://www.youtube.com/embed/tX4DkAmmm2U',
       'https://www.youtube.com/embed/pCSQgug8nUU'
     ],
