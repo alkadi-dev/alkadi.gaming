@@ -348,7 +348,7 @@ export default function HomePage() {
       </main>
 
       {/* Social Footer Section */}
-      <footer id="contact" className="border-t bg-secondary/10 py-16 mt-20">
+      <footer id="contact" className="border-t bg-secondary/10 pt-16 pb-12 mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-8">
             <div className="text-center">
@@ -385,10 +385,6 @@ export default function HomePage() {
             </div>
             
             <div className="w-full h-px bg-white/5 max-w-md" />
-            
-            <div className="text-center text-muted-foreground">
-              {/* Catchphrase and Copyright removed as requested */}
-            </div>
           </div>
         </div>
       </footer>
