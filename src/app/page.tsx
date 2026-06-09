@@ -6,7 +6,7 @@ import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, Facebook, Instagram, MessageCircle, Phone } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, Facebook, Instagram, MessageCircle, Phone, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -153,10 +153,20 @@ export default function HomePage() {
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
-                className="pl-10 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
+                className="pl-10 pr-10 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
+              {searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute right-1 h-7 w-7 hover:bg-transparent text-muted-foreground hover:text-white"
+                  onClick={() => setSearchQuery('')}
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
             </div>
             <CheckoutSheet />
           </div>
@@ -309,13 +319,24 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden relative flex items-center">
+            <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
             <Input
               placeholder="Search games..."
-              className="bg-secondary/50 border-none"
+              className="pl-10 pr-10 bg-secondary/50 border-none h-10"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+            {searchQuery && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-1 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-white"
+                onClick={() => setSearchQuery('')}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            )}
           </div>
         </div>
 
