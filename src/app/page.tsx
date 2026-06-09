@@ -147,10 +147,20 @@ export default function HomePage() {
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
-                className="pl-9 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
+                className="pl-9 pr-9 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
+              {searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute right-1 h-7 w-7 hover:bg-transparent text-muted-foreground hover:text-foreground"
+                  onClick={() => setSearchQuery('')}
+                >
+                  <X className="h-3 w-3" />
+                </Button>
+              )}
             </div>
             <CheckoutSheet />
           </div>
@@ -307,10 +317,20 @@ export default function HomePage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <Input
               placeholder="Search games..."
-              className="pl-10 bg-secondary/50 border-none h-10 rounded-xl text-sm"
+              className="pl-10 pr-10 bg-secondary/50 border-none h-10 rounded-xl text-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+            {searchQuery && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-foreground"
+                onClick={() => setSearchQuery('')}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            )}
           </div>
         </div>
 
