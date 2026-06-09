@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useLayoutEffect, useRef } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, useMemo } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
@@ -91,6 +91,21 @@ export default function HomePage() {
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Calculate category counts
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    CATEGORIES.forEach(cat => {
+      if (cat === 'All') {
+        counts[cat] = MOCK_GAMES.length;
+      } else if (cat === 'Recommended') {
+        counts[cat] = MOCK_GAMES.filter(g => g.isRecommended).length;
+      } else {
+        counts[cat] = MOCK_GAMES.filter(g => g.categories.includes(cat)).length;
+      }
+    });
+    return counts;
   }, []);
 
   const suggestions = searchQuery.trim().length > 0 
@@ -265,11 +280,17 @@ export default function HomePage() {
                     size="sm"
                     onClick={() => setSelectedCategory(cat)}
                     className={cn(
-                      "rounded-full px-6 transition-all h-8 text-xs font-bold uppercase tracking-tight",
+                      "rounded-full px-4 transition-all h-8 text-[10px] sm:text-xs font-bold uppercase tracking-tight whitespace-nowrap",
                       selectedCategory === cat ? "bg-primary" : "hover:bg-primary/20"
                     )}
                   >
                     {cat}
+                    <span className={cn(
+                      "ml-1.5 px-1.5 py-0.5 rounded-full text-[9px]",
+                      selectedCategory === cat ? "bg-white/20" : "bg-primary/10 text-primary"
+                    )}>
+                      {categoryCounts[cat] || 0}
+                    </span>
                   </Button>
                 ))}
               </div>
