@@ -31,12 +31,11 @@ export default function HomePage() {
   // Restore state as early as possible
   useLayoutEffect(() => {
     const restoredCategory = sessionStorage.getItem('home-category');
-    const restoredSearch = sessionStorage.getItem('home-search');
+    // We explicitly do NOT restore the search query to ensure it's cleared when returning
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
     const restoredSort = sessionStorage.getItem('home-sort');
 
     if (restoredCategory) setSelectedCategory(restoredCategory);
-    if (restoredSearch) setSearchQuery(restoredSearch);
     if (restoredMaxSize) setMaxSize(parseInt(restoredMaxSize, 10));
     if (restoredSort) setSortOrder(restoredSort);
 
@@ -63,10 +62,10 @@ export default function HomePage() {
   useEffect(() => {
     if (!isRestored) return;
     sessionStorage.setItem('home-category', selectedCategory);
-    sessionStorage.setItem('home-search', searchQuery);
+    // We do NOT save the search query to session storage so it doesn't persist across navigations
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
-  }, [selectedCategory, searchQuery, maxSize, sortOrder, isRestored]);
+  }, [selectedCategory, maxSize, sortOrder, isRestored]);
 
   // Save scroll position
   useEffect(() => {
