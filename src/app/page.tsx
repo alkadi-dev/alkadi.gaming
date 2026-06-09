@@ -14,6 +14,7 @@ import { Slider } from '@/components/ui/slider';
 import { Label } from '@/components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { cn } from '@/lib/utils';
 
 export default function HomePage() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function HomePage() {
   const desktopSearchRef = useRef<HTMLDivElement>(null);
   const mobileSearchRef = useRef<HTMLDivElement>(null);
 
-  // Restore state as early as possible to prevent layout shifts
+  // Restore state as early as possible
   useLayoutEffect(() => {
     const restoredCategory = sessionStorage.getItem('home-category');
     const restoredSearch = sessionStorage.getItem('home-search');
@@ -40,28 +41,26 @@ export default function HomePage() {
     if (restoredMaxSize) setMaxSize(parseInt(restoredMaxSize, 10));
     if (restoredSort) setSortOrder(restoredSort);
 
-    // After state is set, we signal that state is ready
     setIsRestored(true);
   }, []);
 
-  // Restore scroll position after the component has rendered with the restored state
+  // Restore scroll position
   useEffect(() => {
     if (!isRestored) return;
 
     const restoredScroll = sessionStorage.getItem('home-scroll-position');
     if (restoredScroll) {
-      // Use a slightly longer delay to ensure the grid items are fully mounted and sized
       const timer = setTimeout(() => {
         window.scrollTo({
           top: parseInt(restoredScroll, 10),
           behavior: 'instant'
         });
       }, 50);
-      return () => setTimeout(timer);
+      return () => clearTimeout(timer);
     }
   }, [isRestored]);
 
-  // Save state on change - only after initial restoration is complete to avoid overwriting with defaults
+  // Save state on change
   useEffect(() => {
     if (!isRestored) return;
     sessionStorage.setItem('home-category', selectedCategory);
@@ -96,7 +95,7 @@ export default function HomePage() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const suggestions = searchQuery.length > 0 
+  const suggestions = searchQuery.trim().length > 0 
     ? MOCK_GAMES.filter(game => 
         game.title.toLowerCase().includes(searchQuery.toLowerCase())
       ).slice(0, 5)
@@ -140,22 +139,16 @@ export default function HomePage() {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0);
+  const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
   const handleSuggestionClick = (gameId: string) => {
     setShowSuggestions(false);
@@ -165,7 +158,7 @@ export default function HomePage() {
   const SearchSuggestions = ({ suggestions, visible }: { suggestions: typeof MOCK_GAMES, visible: boolean }) => {
     if (!visible || suggestions.length === 0) return null;
     return (
-      <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-[60]">
+      <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-[70]">
         <div className="p-2">
           {suggestions.map((game) => (
             <button
@@ -194,28 +187,28 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full bg-background/40 backdrop-blur-xl border-none">
+      <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
         <div className="container mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div 
               className="cursor-pointer select-none flex items-center gap-1.5" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <span className="text-lg font-black font-headline tracking-tighter text-white uppercase">
+              <span className="text-base font-black font-headline tracking-tighter text-white uppercase">
                 ALKADI
               </span>
-              <span className="text-lg font-black font-headline tracking-tighter text-primary uppercase">
+              <span className="text-base font-black font-headline tracking-tighter text-primary uppercase">
                 GAMING
               </span>
             </div>
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">
-            <div className="relative w-full max-sm hidden md:flex items-center" ref={desktopSearchRef}>
+            <div className="relative w-full max-w-[200px] sm:max-w-xs hidden md:flex items-center" ref={desktopSearchRef}>
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
-                className="pl-10 pr-10 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
+                className="pl-9 pr-8 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
@@ -233,7 +226,7 @@ export default function HomePage() {
                     setShowSuggestions(false);
                   }}
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-3.5 w-3.5" />
                 </Button>
               )}
               <SearchSuggestions suggestions={suggestions} visible={showSuggestions} />
@@ -272,16 +265,13 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
-          <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent hidden lg:block" />
         </div>
 
         {/* Library Controls */}
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4 flex-1">
-              <div className="flex items-center justify-between">
-                <h2 className="text-2xl font-bold font-headline">Library</h2>
-              </div>
+              <h2 className="text-2xl font-bold font-headline">Library</h2>
               <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
                 {CATEGORIES.map((cat) => (
                   <Button
@@ -289,9 +279,10 @@ export default function HomePage() {
                     variant={selectedCategory === cat ? 'default' : 'secondary'}
                     size="sm"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`rounded-full px-6 transition-all h-8 text-xs flex items-center justify-center ${
-                      selectedCategory === cat ? 'bg-primary' : 'hover:bg-primary/20'
-                    }`}
+                    className={cn(
+                      "rounded-full px-6 transition-all h-8 text-xs font-bold uppercase tracking-tight",
+                      selectedCategory === cat ? "bg-primary" : "hover:bg-primary/20"
+                    )}
                   >
                     {cat}
                   </Button>
@@ -305,9 +296,10 @@ export default function HomePage() {
                   <Button 
                     variant="secondary" 
                     size="sm" 
-                    className={`rounded-full h-10 px-4 gap-2 transition-all border border-white/5 ${
-                      activeFiltersCount > 0 ? 'bg-primary text-white' : 'bg-secondary/50'
-                    }`}
+                    className={cn(
+                      "rounded-full h-10 px-4 gap-2 transition-all border border-white/5",
+                      activeFiltersCount > 0 ? "bg-primary text-white" : "bg-secondary/50"
+                    )}
                   >
                     <Filter className="h-4 w-4" />
                     <span className="text-xs font-bold uppercase tracking-tight">Filters & Sort</span>
@@ -349,7 +341,7 @@ export default function HomePage() {
                         <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
                           <HardDrive className="h-3 w-3 text-primary" /> Max Storage
                         </Label>
-                        <span className="text-xs font-bold text-primary">1 - {maxSize} GB</span>
+                        <span className="text-xs font-bold text-primary">{maxSize} GB</span>
                       </div>
                       <Slider
                         value={[maxSize]}
@@ -368,7 +360,7 @@ export default function HomePage() {
                       >
                         <Check className="w-3.5 h-3.5 mr-2" /> View Results
                       </Button>
-                      {(maxSize < 250 || sortOrder !== 'title-asc') && (
+                      {(maxSize < 250 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
                         <Button 
                           variant="ghost" 
                           size="sm"
@@ -376,6 +368,7 @@ export default function HomePage() {
                           onClick={() => {
                             setMaxSize(250);
                             setSortOrder('title-asc');
+                            setSelectedCategory('All');
                             setIsFilterOpen(false);
                           }}
                         >
@@ -393,7 +386,7 @@ export default function HomePage() {
             <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
             <Input
               placeholder="Search games..."
-              className="pl-10 pr-10 bg-secondary/50 border-none h-10"
+              className="pl-10 pr-10 bg-secondary/50 border-none h-10 rounded-xl text-sm"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -430,7 +423,7 @@ export default function HomePage() {
             <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-20" />
             <h3 className="text-xl font-medium">No games match your filters</h3>
             <p className="text-muted-foreground text-sm max-w-xs mx-auto mt-2">
-              Try adjusting your category, search terms, or storage size range.
+              Try adjusting your filters or search terms.
             </p>
             <Button
               variant="link"
@@ -448,14 +441,14 @@ export default function HomePage() {
         )}
       </main>
 
-      {/* Social Footer Section */}
+      {/* Social Footer */}
       <footer id="contact" className="border-t border-white/5 bg-secondary/10 pt-16 pb-12 mt-20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-8">
-            <div className="text-center">
+          <div className="flex flex-col items-center gap-8 text-center">
+            <div>
               <h3 className="text-2xl font-bold font-headline uppercase tracking-tighter text-primary mb-2">Connect With Us</h3>
-              <p className="text-muted-foreground text-sm max-w-xs mx-auto">
-                Follow us on social media for the latest updates, exclusive deals, and gaming community news.
+              <p className="text-muted-foreground text-sm max-w-sm mx-auto">
+                Join our community on social media for exclusive deals and updates.
               </p>
             </div>
             
@@ -471,21 +464,11 @@ export default function HomePage() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
-                <a href="https://www.tiktok.com/@alkadi.leb?_r=1&_t=ZS-972AbzBlrUb" target="_blank" rel="noopener noreferrer">
-                  <svg viewBox="0 0 24 24" className="mr-2 h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
-                  </svg>
-                  TikTok
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
                 <a href="https://wa.link/udsgnn" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5 text-[#25D366]" /> WhatsApp
                 </a>
               </Button>
             </div>
-            
-            <div className="w-full h-px bg-white/5 max-w-md" />
           </div>
         </div>
       </footer>
