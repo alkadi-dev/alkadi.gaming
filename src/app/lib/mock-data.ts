@@ -26,9 +26,9 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '20 GB',
     releaseYear: '2025',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
       'https://images.alphacoders.com/140/thumb-1920-1400002.png',
-      'https://wallpapercave.com/wp/wp16013669.jpg'
+      'https://wallpapercave.com/wp/wp16013669.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479'
     ],
     videoUrl: 'https://www.youtube.com/embed/DfJaUpW_P00',
     shorts: [
@@ -221,6 +221,30 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/-uiN7H4SYE4',
       'https://www.youtube.com/embed/zLE4Y6CoSnU'
     ],
+    isRecommended: true,
+  },
+  {
+    id: 'u4',
+    title: 'Uncharted 4: A Thief\'s End',
+    description: 'Years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves.',
+    categories: ['Adventure'],
+    thumbnail: 'https://picsum.photos/seed/uncharted4/600/400',
+    size: '48 GB',
+    releaseYear: '2016',
+    images: ['https://picsum.photos/seed/uncharted4-hero/1200/800'],
+    videoUrl: 'https://www.youtube.com/embed/y1Re0PqyG6g',
+    isRecommended: false,
+  },
+  {
+    id: 'got',
+    title: 'Ghost of Tsushima',
+    description: 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East.',
+    categories: ['Open World', 'Action'],
+    thumbnail: 'https://picsum.photos/seed/tsushima/600/400',
+    size: '50 GB',
+    releaseYear: '2020',
+    images: ['https://picsum.photos/seed/tsushima-hero/1200/800'],
+    videoUrl: 'https://www.youtube.com/embed/mDo7S68L3_U',
     isRecommended: true,
   }
 ];

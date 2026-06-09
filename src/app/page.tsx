@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
@@ -84,8 +83,8 @@ export default function HomePage() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        desktopSearchRef.current && !desktopSearchRef.current.contains(event.target as Node) &&
-        mobileSearchRef.current && !mobileSearchRef.current.contains(event.target as Node)
+        (desktopSearchRef.current && !desktopSearchRef.current.contains(event.target as Node)) &&
+        (mobileSearchRef.current && !mobileSearchRef.current.contains(event.target as Node))
       ) {
         setShowSuggestions(false);
       }
