@@ -24,12 +24,12 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'lego-batman-legacy',
     title: 'LEGO Batman: Legacy of the Dark Knight',
     description: 'The Caped Crusader returns in a massive new LEGO adventure. Explore Gotham City like never before, building and battling through iconic locations. Play as a huge cast of heroes and villains in this definitive LEGO Batman experience.',
-    categories: ['Adventure', '2 players', 'Action'],
-    thumbnail: 'https://img.youtube.com/vi/DfJaUpW_P00/maxresdefault.jpg',
+    categories: ['Adventure'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
     size: '20 GB',
     releaseYear: '2025',
     images: [
-      'https://img.youtube.com/vi/DfJaUpW_P00/maxresdefault.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
       'https://images.alphacoders.com/140/thumb-1920-1400002.png',
       'https://wallpapercave.com/wp/wp16013669.jpg'
     ],
@@ -57,7 +57,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
     shorts: [
       'https://www.youtube.com/embed/0d-U2QL2Qvc?si=u_uaO45UmkJ4UHDq',
-      'https://www.youtube.com/embed/XsaXfkSignupPNM?si=9qaxQN7xEEVKVfIn',
+      'https://www.youtube.com/embed/1LcJ2gQD1O8',
       'https://www.youtube.com/embed/ax_HkEnW_ig?si=xXoL5iPzvwJ18AtK'
     ],
     isRecommended: true,
@@ -1143,6 +1143,7 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '24 GB',
     releaseYear: '2017',
     images: [
+      'https://wallpapercave.com/wp/wp2073985.jpg',
       'https://wallpapercave.com/wp/wp2074012.jpg',
       'https://wallpapercave.com/wp/wp2074034.jpg'
     ],
@@ -1313,6 +1314,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/-XTdoeSE-rY',
       'https://www.youtube.com/embed/E4HGKFOg-ow'
     ]
+    ,isRecommended: true,
   },
   {
     id: 'ds2',
@@ -1595,7 +1597,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/tX4DkAmmm2U',
       'https://www.youtube.com/embed/pCSQgug8nUU'
     ],
-    isRecommended: false,
+    isRecommended: true,
   },
   {
     id: 'splitfiction',
