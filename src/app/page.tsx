@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect, useLayoutEffect, useRef, useMemo } from 'react';
@@ -164,7 +163,7 @@ export default function HomePage() {
     setShowSuggestions(false);
   };
 
-  // Reusable Search Input Component for Desktop/Mobile synchronization
+  // Reusable Search Input Component
   const SearchInput = ({ containerRef }: { containerRef: React.RefObject<HTMLDivElement | null> }) => (
     <div className="relative w-full" ref={containerRef}>
       <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -215,9 +214,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
           <div 
-            className="cursor-pointer select-none flex items-center gap-1.5" 
+            className="cursor-pointer select-none flex items-center gap-1.5 shrink-0" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <span className="text-xl font-black font-headline tracking-tighter text-white uppercase">
@@ -227,8 +226,13 @@ export default function HomePage() {
               GAMING
             </span>
           </div>
+
+          {/* Search bar in header for desktop */}
+          <div className="hidden lg:block max-w-md w-full flex-1">
+            <SearchInput containerRef={searchRefDesktop} />
+          </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 shrink-0">
             <CheckoutSheet />
           </div>
         </div>
@@ -269,11 +273,6 @@ export default function HomePage() {
         <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-24">
           <h2 className="text-2xl font-bold font-headline">Library</h2>
           
-          {/* Desktop Search Bar - Above navigation on large screens */}
-          <div className="hidden lg:block max-w-md">
-            <SearchInput containerRef={searchRefDesktop} />
-          </div>
-
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             {/* Categories (Navigation) */}
             <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 lg:pb-0 flex-1">
