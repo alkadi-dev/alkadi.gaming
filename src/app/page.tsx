@@ -30,7 +30,6 @@ export default function HomePage() {
   // Restore state as early as possible
   useLayoutEffect(() => {
     const restoredCategory = sessionStorage.getItem('home-category');
-    // We explicitly do NOT restore the search query to ensure it's cleared when returning
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
     const restoredSort = sessionStorage.getItem('home-sort');
 
@@ -61,7 +60,6 @@ export default function HomePage() {
   useEffect(() => {
     if (!isRestored) return;
     sessionStorage.setItem('home-category', selectedCategory);
-    // We do NOT save the search query to session storage so it doesn't persist across navigations
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
   }, [selectedCategory, maxSize, sortOrder, isRestored]);
@@ -164,68 +162,20 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 h-14 flex items-center justify-between gap-4">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div 
-            className="cursor-pointer select-none flex items-center gap-1.5 flex-shrink-0" 
+            className="cursor-pointer select-none flex items-center gap-1.5" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="text-base font-black font-headline tracking-tighter text-white uppercase hidden xs:inline">
+            <span className="text-xl font-black font-headline tracking-tighter text-white uppercase">
               ALKADI
             </span>
-            <span className="text-base font-black font-headline tracking-tighter text-primary uppercase hidden xs:inline">
+            <span className="text-xl font-black font-headline tracking-tighter text-primary uppercase">
               GAMING
             </span>
-            <span className="text-lg font-black font-headline tracking-tighter text-primary xs:hidden">AG</span>
           </div>
           
-          <div className="flex-1 max-w-md relative" ref={searchRef}>
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input
-              placeholder="Search games..."
-              className="pl-9 pr-9 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs w-full"
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setShowSuggestions(true);
-              }}
-              onFocus={() => setShowSuggestions(true)}
-            />
-            {searchQuery && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 hover:bg-transparent text-muted-foreground hover:text-foreground"
-                onClick={() => setSearchQuery('')}
-              >
-                <X className="h-3 w-3" />
-              </Button>
-            )}
-            
-            {/* Live Suggestions Dropdown */}
-            {showSuggestions && suggestions.length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-[60]">
-                <div className="p-2 space-y-1">
-                  {suggestions.map((game) => (
-                    <button
-                      key={game.id}
-                      className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors text-left group"
-                      onClick={() => handleSuggestionClick(game.id)}
-                    >
-                      <div className="relative h-8 w-12 rounded overflow-hidden flex-shrink-0">
-                        <Image src={game.thumbnail} alt={game.title} fill className="object-cover" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs font-bold truncate group-hover:text-primary transition-colors">{game.title}</p>
-                        <p className="text-[10px] text-muted-foreground">{game.releaseYear} • {game.size}</p>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          <div className="flex-shrink-0">
+          <div className="flex items-center gap-4">
             <CheckoutSheet />
           </div>
         </div>
@@ -265,8 +215,57 @@ export default function HomePage() {
         {/* Library Controls */}
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div className="space-y-4 flex-1">
+            <div className="space-y-6 flex-1">
               <h2 className="text-2xl font-bold font-headline">Library</h2>
+              
+              {/* Search Bar - Restored to original location */}
+              <div className="max-w-md relative" ref={searchRef}>
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Input
+                  placeholder="Search games..."
+                  className="pl-9 pr-9 bg-secondary/30 border-none focus-visible:ring-primary h-10 text-xs w-full rounded-xl"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowSuggestions(true);
+                  }}
+                  onFocus={() => setShowSuggestions(true)}
+                />
+                {searchQuery && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-foreground"
+                    onClick={() => setSearchQuery('')}
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                )}
+                
+                {/* Live Suggestions Dropdown */}
+                {showSuggestions && suggestions.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-[60]">
+                    <div className="p-2 space-y-1">
+                      {suggestions.map((game) => (
+                        <button
+                          key={game.id}
+                          className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors text-left group"
+                          onClick={() => handleSuggestionClick(game.id)}
+                        >
+                          <div className="relative h-8 w-12 rounded overflow-hidden flex-shrink-0">
+                            <Image src={game.thumbnail} alt={game.title} fill className="object-cover" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs font-bold truncate group-hover:text-primary transition-colors">{game.title}</p>
+                            <p className="text-[10px] text-muted-foreground">{game.releaseYear} • {game.size}</p>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
                 {CATEGORIES.map((cat) => (
                   <Button
