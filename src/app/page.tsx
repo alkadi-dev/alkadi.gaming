@@ -25,8 +25,7 @@ export default function HomePage() {
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
-  const searchRefDesktop = useRef<HTMLDivElement>(null);
-  const searchRefMobile = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   // Restore state as early as possible
   useLayoutEffect(() => {
@@ -63,6 +62,7 @@ export default function HomePage() {
     sessionStorage.setItem('home-category', selectedCategory);
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
+    // Note: searchQuery is intentionally cleared on navigation based on previous requests
   }, [selectedCategory, maxSize, sortOrder, isRestored]);
 
   // Save scroll position
@@ -79,10 +79,7 @@ export default function HomePage() {
   // Handle outside clicks to close suggestions
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const isOutsideDesktop = !searchRefDesktop.current?.contains(event.target as Node);
-      const isOutsideMobile = !searchRefMobile.current?.contains(event.target as Node);
-      
-      if (isOutsideDesktop && isOutsideMobile) {
+      if (!searchRef.current?.contains(event.target as Node)) {
         setShowSuggestions(false);
       }
     };
@@ -163,54 +160,6 @@ export default function HomePage() {
     setShowSuggestions(false);
   };
 
-  // Reusable Search Input Component
-  const SearchInput = ({ containerRef }: { containerRef: React.RefObject<HTMLDivElement | null> }) => (
-    <div className="relative w-full" ref={containerRef}>
-      <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-      <Input
-        placeholder="Search games..."
-        className="pl-9 pr-9 bg-secondary/30 border-none focus-visible:ring-primary h-10 text-xs w-full rounded-xl"
-        value={searchQuery}
-        onChange={(e) => {
-          setSearchQuery(e.target.value);
-          setShowSuggestions(true);
-        }}
-        onFocus={() => setShowSuggestions(true)}
-      />
-      {searchQuery && (
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-foreground"
-          onClick={() => setSearchQuery('')}
-        >
-          <X className="h-4 w-4" />
-        </Button>
-      )}
-      {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-[60]">
-          <div className="p-2 space-y-1">
-            {suggestions.map((game) => (
-              <button
-                key={game.id}
-                className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors text-left group"
-                onClick={() => handleSuggestionClick(game.id)}
-              >
-                <div className="relative h-8 w-12 rounded overflow-hidden flex-shrink-0">
-                  <Image src={game.thumbnail} alt={game.title} fill className="object-cover" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs font-bold truncate group-hover:text-primary transition-colors">{game.title}</p>
-                  <p className="text-[10px] text-muted-foreground">{game.releaseYear} • {game.size}</p>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
@@ -225,11 +174,6 @@ export default function HomePage() {
             <span className="text-xl font-black font-headline tracking-tighter text-primary uppercase">
               GAMING
             </span>
-          </div>
-
-          {/* Search bar in header for desktop */}
-          <div className="hidden lg:block max-w-md w-full flex-1">
-            <SearchInput containerRef={searchRefDesktop} />
           </div>
           
           <div className="flex items-center gap-4 shrink-0">
@@ -273,51 +217,93 @@ export default function HomePage() {
         <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-24">
           <h2 className="text-2xl font-bold font-headline">Library</h2>
           
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            {/* Categories (Navigation) */}
-            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 lg:pb-0 flex-1">
-              {CATEGORIES.map((cat) => (
+          <div className="flex flex-col gap-6">
+            {/* Search Bar - Positioned at the top of Library controls */}
+            <div className="relative w-full max-w-md" ref={searchRef}>
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                placeholder="Search games..."
+                className="pl-9 pr-9 bg-secondary/30 border-none focus-visible:ring-primary h-12 text-sm w-full rounded-xl"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setShowSuggestions(true);
+                }}
+                onFocus={() => setShowSuggestions(true)}
+              />
+              {searchQuery && (
                 <Button
-                  key={cat}
-                  variant={selectedCategory === cat ? 'default' : 'secondary'}
-                  size="sm"
-                  onClick={() => setSelectedCategory(cat)}
-                  className={cn(
-                    "rounded-full px-4 transition-all h-8 text-[10px] sm:text-xs font-bold uppercase tracking-tight whitespace-nowrap",
-                    selectedCategory === cat ? "bg-primary" : "hover:bg-primary/20"
-                  )}
+                  variant="ghost"
+                  size="icon"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-foreground"
+                  onClick={() => setSearchQuery('')}
                 >
-                  {cat}
-                  <span className={cn(
-                    "ml-1.5 px-1.5 py-0.5 rounded-full text-[9px]",
-                    selectedCategory === cat ? "bg-white/20" : "bg-primary/10 text-primary"
-                  )}>
-                    {categoryCounts[cat] || 0}
-                  </span>
+                  <X className="h-4 w-4" />
                 </Button>
-              ))}
+              )}
+              {showSuggestions && suggestions.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-[60]">
+                  <div className="p-2 space-y-1">
+                    {suggestions.map((game) => (
+                      <button
+                        key={game.id}
+                        className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors text-left group"
+                        onClick={() => handleSuggestionClick(game.id)}
+                      >
+                        <div className="relative h-10 w-16 rounded overflow-hidden flex-shrink-0">
+                          <Image src={game.thumbnail} alt={game.title} fill className="object-cover" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs font-bold truncate group-hover:text-primary transition-colors">{game.title}</p>
+                          <p className="text-[10px] text-muted-foreground">{game.releaseYear} • {game.size}</p>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Mobile Search Bar (Next to filters) + Filters Button */}
-            <div className="flex items-center gap-2 w-full lg:w-auto">
-              <div className="lg:hidden flex-1">
-                <SearchInput containerRef={searchRefMobile} />
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+              {/* Categories Navigation */}
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 lg:pb-0 flex-1">
+                {CATEGORIES.map((cat) => (
+                  <Button
+                    key={cat}
+                    variant={selectedCategory === cat ? 'default' : 'secondary'}
+                    size="sm"
+                    onClick={() => setSelectedCategory(cat)}
+                    className={cn(
+                      "rounded-full px-4 transition-all h-10 text-xs font-bold uppercase tracking-tight whitespace-nowrap",
+                      selectedCategory === cat ? "bg-primary" : "hover:bg-primary/20"
+                    )}
+                  >
+                    {cat}
+                    <span className={cn(
+                      "ml-1.5 px-2 py-0.5 rounded-full text-[10px]",
+                      selectedCategory === cat ? "bg-white/20" : "bg-primary/10 text-primary"
+                    )}>
+                      {categoryCounts[cat] || 0}
+                    </span>
+                  </Button>
+                ))}
               </div>
 
+              {/* Filters Button */}
               <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
                 <PopoverTrigger asChild>
                   <Button 
                     variant="secondary" 
                     size="sm" 
                     className={cn(
-                      "rounded-full h-10 px-4 gap-2 transition-all border border-white/5 flex-shrink-0",
+                      "rounded-full h-10 px-6 gap-2 transition-all border border-white/5",
                       activeFiltersCount > 0 ? "bg-primary text-white" : "bg-secondary/50"
                     )}
                   >
                     <Filter className="h-4 w-4" />
-                    <span className="text-xs font-bold uppercase tracking-tight hidden sm:inline">Filters & Sort</span>
+                    <span className="text-xs font-bold uppercase tracking-tight">Filters & Sort</span>
                     {activeFiltersCount > 0 && (
-                      <span className="ml-1 bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
+                      <span className="ml-1 bg-white/20 rounded-full h-5 w-5 flex items-center justify-center text-[10px]">
                         {activeFiltersCount}
                       </span>
                     )}
