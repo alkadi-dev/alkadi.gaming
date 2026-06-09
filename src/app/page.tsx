@@ -62,7 +62,6 @@ export default function HomePage() {
     sessionStorage.setItem('home-category', selectedCategory);
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
-    // Note: searchQuery is intentionally cleared on navigation based on previous requests
   }, [selectedCategory, maxSize, sortOrder, isRestored]);
 
   // Save scroll position
@@ -217,10 +216,11 @@ export default function HomePage() {
         <div id="library" className="flex flex-col gap-6 mb-8 scroll-mt-24">
           <h2 className="text-2xl font-bold font-headline">Library</h2>
           
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="flex flex-col gap-4">
+            {/* Filter Section - Using natural spacing and alignment */}
+            <div className="flex flex-wrap items-center gap-3">
               {/* Categories Navigation */}
-              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 lg:pb-0 flex-1">
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 md:pb-0">
                 {CATEGORIES.map((cat) => (
                   <Button
                     key={cat}
@@ -243,14 +243,14 @@ export default function HomePage() {
                 ))}
               </div>
 
-              {/* Filters Button */}
+              {/* Filters Button - Natural size, not stretched */}
               <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
                 <PopoverTrigger asChild>
                   <Button 
                     variant="secondary" 
                     size="sm" 
                     className={cn(
-                      "rounded-full h-10 px-6 gap-2 transition-all border border-white/5",
+                      "rounded-full h-10 px-6 gap-2 transition-all border border-white/5 shrink-0",
                       activeFiltersCount > 0 ? "bg-primary text-white" : "bg-secondary/50"
                     )}
                   >
@@ -263,7 +263,7 @@ export default function HomePage() {
                     )}
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="end">
+                <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="start">
                   <div className="space-y-6">
                     <div className="space-y-3">
                       <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
@@ -334,7 +334,7 @@ export default function HomePage() {
               </Popover>
             </div>
 
-            {/* Search Bar - Now positioned below filters */}
+            {/* Search Bar - Positioned below the filters as requested */}
             <div className="relative w-full max-w-md" ref={searchRef}>
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
