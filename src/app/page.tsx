@@ -424,18 +424,18 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-sm mx-auto sm:max-w-none">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
                 <a href="https://www.facebook.com/share/1MBEKXoXME/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
                   <Facebook className="mr-2 h-5 w-5 text-[#1877F2]" /> Facebook
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
                 <a href="https://www.instagram.com/alkadi.leb?igsh=NGdtOTZuM2ZtbmVn&utm_source=qr" target="_blank" rel="noopener noreferrer">
                   <Instagram className="mr-2 h-5 w-5 text-[#E4405F]" /> Instagram
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
                 <a href="https://www.tiktok.com/@alkadi.leb" target="_blank" rel="noopener noreferrer">
                   <svg 
                     className="mr-2 h-5 w-5 fill-current" 
@@ -447,7 +447,7 @@ export default function HomePage() {
                   TikTok
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full bg-white/5 border-white/10 hover:bg-white/10 group transition-all" asChild>
                 <a href="https://wa.link/udsgnn" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5 text-[#25D366]" /> WhatsApp
                 </a>
