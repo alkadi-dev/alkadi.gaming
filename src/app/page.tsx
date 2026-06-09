@@ -23,6 +23,10 @@ export default function HomePage() {
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  
+  const desktopSearchRef = useRef<HTMLDivElement>(null);
+  const mobileSearchRef = useRef<HTMLDivElement>(null);
 
   // Restore state as early as possible
   useLayoutEffect(() => {
@@ -75,6 +79,24 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isRestored]);
 
+  // Handle outside clicks to close suggestions
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        desktopSearchRef.current && !desktopSearchRef.current.contains(event.target as Node) &&
+        mobileSearchRef.current && !mobileSearchRef.current.contains(event.target as Node)
+      ) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const suggestions = searchQuery.trim().length > 0 
+    ? MOCK_GAMES.filter(game => game.title.toLowerCase().includes(searchQuery.toLowerCase())).slice(0, 5)
+    : [];
+
   const filteredGames = MOCK_GAMES.filter((game) => {
     const matchesCategory = 
       selectedCategory === 'All' ? true :
@@ -124,6 +146,11 @@ export default function HomePage() {
 
   const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
+  const handleSuggestionClick = (gameId: string) => {
+    router.push(`/game/${gameId}`);
+    setShowSuggestions(false);
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
@@ -143,13 +170,17 @@ export default function HomePage() {
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">
-            <div className="relative w-full max-w-[200px] sm:max-w-xs hidden md:flex items-center">
+            <div className="relative w-full max-w-[200px] sm:max-w-xs hidden md:flex items-center" ref={desktopSearchRef}>
               <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
               <Input
                 placeholder="Search games..."
                 className="pl-9 pr-9 bg-secondary/30 border-none focus-visible:ring-primary h-9 text-xs"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setShowSuggestions(true);
+                }}
+                onFocus={() => setShowSuggestions(true)}
               />
               {searchQuery && (
                 <Button
@@ -160,6 +191,29 @@ export default function HomePage() {
                 >
                   <X className="h-3 w-3" />
                 </Button>
+              )}
+              
+              {/* Desktop Suggestions Dropdown */}
+              {showSuggestions && suggestions.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                  <div className="p-2 space-y-1">
+                    {suggestions.map((game) => (
+                      <button
+                        key={game.id}
+                        className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors text-left group"
+                        onClick={() => handleSuggestionClick(game.id)}
+                      >
+                        <div className="relative h-8 w-12 rounded overflow-hidden flex-shrink-0">
+                          <Image src={game.thumbnail} alt={game.title} fill className="object-cover" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs font-bold truncate group-hover:text-primary transition-colors">{game.title}</p>
+                          <p className="text-[10px] text-muted-foreground">{game.releaseYear} • {game.size}</p>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
             <CheckoutSheet />
@@ -313,13 +367,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="md:hidden relative">
+          <div className="md:hidden relative" ref={mobileSearchRef}>
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <Input
               placeholder="Search games..."
               className="pl-10 pr-10 bg-secondary/50 border-none h-10 rounded-xl text-sm"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setShowSuggestions(true);
+              }}
+              onFocus={() => setShowSuggestions(true)}
             />
             {searchQuery && (
               <Button
@@ -330,6 +388,29 @@ export default function HomePage() {
               >
                 <X className="h-4 w-4" />
               </Button>
+            )}
+            
+            {/* Mobile Suggestions Dropdown */}
+            {showSuggestions && suggestions.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 z-[60] bg-background border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="p-2 space-y-1">
+                  {suggestions.map((game) => (
+                    <button
+                      key={game.id}
+                      className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors text-left"
+                      onClick={() => handleSuggestionClick(game.id)}
+                    >
+                      <div className="relative h-10 w-16 rounded overflow-hidden flex-shrink-0">
+                        <Image src={game.thumbnail} alt={game.title} fill className="object-cover" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-bold truncate">{game.title}</p>
+                        <p className="text-xs text-muted-foreground">{game.releaseYear} • {game.size}</p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
             )}
           </div>
         </div>
