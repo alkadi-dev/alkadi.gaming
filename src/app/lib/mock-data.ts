@@ -18,27 +18,6 @@ export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Ad
 
 export const MOCK_GAMES: GameEntry[] = [
   {
-    id: 'lego-batman-legacy',
-    title: 'LEGO Batman: Legacy of the Dark Knight',
-    description: 'The Caped Crusader returns in a massive new LEGO adventure. Explore Gotham City like never before, building and battling through iconic locations. Play as a huge cast of heroes and villains in this definitive LEGO Batman experience.',
-    categories: ['Adventure'],
-    thumbnail: 'https://img.youtube.com/vi/DfJaUpW_P00/maxresdefault.jpg',
-    size: '20 GB',
-    releaseYear: '2025',
-    images: [
-      'https://img.youtube.com/vi/DfJaUpW_P00/maxresdefault.jpg',
-      'https://images.alphacoders.com/140/thumb-1920-1400002.png',
-      'https://wallpapercave.com/wp/wp16013669.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/DfJaUpW_P00',
-    shorts: [
-      'https://www.youtube.com/embed/SC8ZnHfHpjM',
-      'https://www.youtube.com/embed/rvtVI8IP0M4',
-      'https://www.youtube.com/embed/S27ZWt8C-04'
-    ],
-    isRecommended: true,
-  },
-  {
     id: '5',
     title: 'Red Dead Redemption 2',
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
