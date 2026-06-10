@@ -47,25 +47,26 @@ export function CheckoutSheet() {
     const finalContent = generateListContent();
     const encodedText = encodeURIComponent(finalContent);
     
-    // Attempt to copy to clipboard as a reliable fallback
-    navigator.clipboard.writeText(finalContent).then(() => {
-      // Use the official WhatsApp API to pre-fill the message automatically
-      // We use api.whatsapp.com/send as it's the most reliable for pre-filling 'text'
-      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
-      
-      // Open WhatsApp in a new tab
+    // api.whatsapp.com/send is the most robust endpoint for cross-platform pre-filled messages
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
+    
+    // 1. Attempt to copy to clipboard as a reliable fallback/convenience
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(finalContent)
+        .catch((err) => console.warn("Clipboard sync failed:", err))
+        .finally(() => {
+          // 2. Open WhatsApp in a new tab - standard for mobile app trigger and desktop web
+          window.open(whatsappUrl, '_blank');
+          
+          toast({
+            title: "Order List Ready!",
+            description: "Your selection is pre-filled in WhatsApp. You can also paste the text from your clipboard if needed!",
+          });
+        });
+    } else {
+      // Direct fallback if clipboard API is unavailable
       window.open(whatsappUrl, '_blank');
-
-      toast({
-        title: "Order List Ready!",
-        description: "Your selection is pre-filled in WhatsApp. If it didn't appear, you can just paste the text from your clipboard!",
-      });
-    }).catch((err) => {
-      console.error("Clipboard sync failed:", err);
-      // Fallback redirect even if clipboard fails
-      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
-      window.open(whatsappUrl, '_blank');
-    });
+    }
   };
 
   const getWarning = () => {

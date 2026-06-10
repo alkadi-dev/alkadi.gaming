@@ -37,6 +37,7 @@ export default function HomePage() {
     if (restoredMaxSize) setMaxSize(parseInt(restoredMaxSize, 10));
     if (restoredSort) setSortOrder(restoredSort);
 
+    // Note: searchQuery is intentionally NOT restored to reset search on return as requested
     setIsRestored(true);
   }, []);
 
