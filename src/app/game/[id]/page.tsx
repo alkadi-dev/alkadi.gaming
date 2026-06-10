@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useState, useEffect } from 'react';
+import { use, useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
@@ -13,6 +13,41 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 import { useSelection } from '@/components/selection-context';
 import { CheckoutSheet } from '@/components/checkout-sheet';
+import { cn } from '@/lib/utils';
+
+function RevealSection({ children, className }: { children: React.ReactNode, className?: string }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, []);
+
+  return (
+    <div 
+      ref={ref} 
+      className={cn(
+        "transition-all duration-1000 ease-out transform",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function GameDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -71,8 +106,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
   };
 
   const handleBackToCatalog = () => {
-    // router.back() is the best way to preserve scroll position if the browser handles it natively,
-    // otherwise our state and scroll restoration logic in src/app/page.tsx will handle it correctly.
     if (typeof window !== 'undefined' && window.history.length > 1) {
       router.back();
     } else {
@@ -176,93 +209,101 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
       <main className="container mx-auto px-4 mt-8 max-w-5xl">
         <div className="space-y-10">
           {/* Description Section with AI Enhancement */}
-          <section className="bg-secondary/20 rounded-3xl p-6 md:p-10 border border-white/5 shadow-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold font-headline uppercase tracking-tight">The Story</h2>
+          <RevealSection>
+            <section className="bg-secondary/20 rounded-3xl p-6 md:p-10 border border-white/5 shadow-2xl">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold font-headline uppercase tracking-tight">The Story</h2>
+                {isRefining ? (
+                  <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
+                    <Sparkles className="mr-1 h-3 w-3" /> Refining...
+                  </div>
+                ) : (
+                  <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
+                    <Sparkles className="mr-1 h-3 w-3" /> AI Enhanced
+                  </Badge>
+                )}
+              </div>
+
               {isRefining ? (
-                <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
-                  <Sparkles className="mr-1 h-3 w-3" /> Refining...
+                <div className="space-y-3">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-[90%]" />
+                  <Skeleton className="h-4 w-[95%]" />
                 </div>
               ) : (
-                <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
-                  <Sparkles className="mr-1 h-3 w-3" /> AI Enhanced
-                </Badge>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
+                  {refinedDescription || game.description}
+                </p>
               )}
-            </div>
-
-            {isRefining ? (
-              <div className="space-y-3">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-[90%]" />
-                <Skeleton className="h-4 w-[95%]" />
-              </div>
-            ) : (
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
-                {refinedDescription || game.description}
-              </p>
-            )}
-          </section>
+            </section>
+          </RevealSection>
 
           {/* Media Carousel */}
           {game.images && game.images.filter(img => img && img.trim() !== '').length > 0 && (
-            <section>
-              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Gallery</h2>
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {game.images.filter(img => img && img.trim() !== '').map((img, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2">
-                      <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
-                        <Image
-                          src={img}
-                          alt={`${game.title} Screenshot ${index + 1}`}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <div className="flex justify-end gap-2 mt-4">
-                  <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-                  <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-                </div>
-              </Carousel>
-            </section>
+            <RevealSection>
+              <section>
+                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Gallery</h2>
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {game.images.filter(img => img && img.trim() !== '').map((img, index) => (
+                      <CarouselItem key={index} className="md:basis-1/2">
+                        <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                          <Image
+                            src={img}
+                            alt={`${game.title} Screenshot ${index + 1}`}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="flex justify-end gap-2 mt-4">
+                    <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
+                    <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
+                  </div>
+                </Carousel>
+              </section>
+            </RevealSection>
           )}
 
           {/* Video Section */}
-          <section>
-            <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Trailer</h2>
-            <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/5 ring-1 ring-white/10">
-              <iframe
-                src={game.videoUrl}
-                title={`${game.title} Trailer`}
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </section>
+          <RevealSection>
+            <section>
+              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Trailer</h2>
+              <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/5 ring-1 ring-white/10">
+                <iframe
+                  src={game.videoUrl}
+                  title={`${game.title} Trailer`}
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+          </RevealSection>
 
           {/* Moments Section */}
           {game.shorts && game.shorts.length > 0 && (
-            <section>
-              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Moments</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                {game.shorts.map((url, index) => (
-                  <div key={index} className="relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] ring-1 ring-white/10">
-                    <iframe
-                      src={url}
-                      title={`${game.title} Short ${index + 1}`}
-                      className="absolute inset-0 w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                ))}
-              </div>
-            </section>
+            <RevealSection>
+              <section>
+                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Moments</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                  {game.shorts.map((url, index) => (
+                    <div key={index} className="relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] ring-1 ring-white/10">
+                      <iframe
+                        src={url}
+                        title={`${game.title} Short ${index + 1}`}
+                        className="absolute inset-0 w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </RevealSection>
           )}
         </div>
       </main>
