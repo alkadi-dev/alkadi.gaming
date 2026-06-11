@@ -21,6 +21,7 @@ export function GameCard({ game }: GameCardProps) {
   const { toast } = useToast();
   const isAdded = isInSelection(game.id);
   const [isVisible, setIsVisible] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -75,7 +76,7 @@ export function GameCard({ game }: GameCardProps) {
     }
   };
 
-  const hasThumbnail = game.thumbnail && game.thumbnail.trim() !== '';
+  const hasThumbnail = game.thumbnail && game.thumbnail.trim() !== '' && !imageError;
 
   return (
     <div 
@@ -95,6 +96,7 @@ export function GameCard({ game }: GameCardProps) {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                onError={() => setImageError(true)}
               />
             ) : (
               <div className="w-full h-full bg-secondary/50 flex flex-col items-center justify-center gap-2">
