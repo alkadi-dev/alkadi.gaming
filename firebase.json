@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "main-site",
+    "site": "alkadigaming",
     "public": "public",
     "ignore": [
       "firebase.json",
