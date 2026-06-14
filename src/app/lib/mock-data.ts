@@ -1224,7 +1224,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://wallpapercave.com/wp/wp15037173.webp',
       'https://www.cnet.com/a/img/resize/8211721e6d525ddab1e8fe795f3979a6bcb2df2d/hub/2025/04/23/8db58633-12fa-4609-a2d5-02e05d462fc7/clair-obscur-expedition-33-20250412073013.jpg?auto=webp&width=1200',
-      'https://wallpapercave.com/wp/wp15315917.jpg'
+      'https://wallpapercave.com/wp/wp15335917.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/2VaLOc1FpSo',
     shorts: [
@@ -1675,7 +1675,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/it9wGffvYGM',
     shorts: [
-      'https://www.youtube.com/embed/Fxm9Ln04LeM',
+      'https://www.youtube.com/embed/it9wGffvYGM',
       'https://www.youtube.com/embed/ac2QN9fRFlg',
       'https://www.youtube.com/embed/sAeq4pUpp98'
     ],
@@ -1690,15 +1690,15 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '12 GB',
     releaseYear: '2013',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203160/header.jpg',
-      'https://wallpapercave.com/wp/wp1811195.jpg',
-      'https://wallpapers.com/images/hd/tomb-raider-lara-croft-pointing-bow-f7tupg5qfveof3q8.jpg'
+      'https://wallpapercave.com/wp/wp4078513.jpg',
+      'https://wallpapers.com/images/hd/2560-x-1440-tomb-raider-dark-forest-gfljtsx5xucmiiyf.jpg',
+      'https://wallpapers.com/images/hd/lara-croft-arrow-shot-tomb-raider-a85ffx20r7o0k547.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/n4irZ7S0pXw',
+    videoUrl: 'https://www.youtube.com/embed/zF9m91y8Na0',
     shorts: [
-      'https://www.youtube.com/embed/T6_iW8GAn_s',
+      'https://www.youtube.com/embed/2-E5wNpNE68',
       'https://www.youtube.com/embed/w7mUvjQO6z8',
-      'https://www.youtube.com/embed/z3p6yYm2Fsw'
+      'https://www.youtube.com/embed/58q2nGe0EyY'
     ]
   },
   {
