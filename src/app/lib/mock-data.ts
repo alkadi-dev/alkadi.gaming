@@ -1,4 +1,3 @@
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export interface GameEntry {
@@ -1681,5 +1680,46 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/sAeq4pUpp98'
     ],
     isRecommended: false,
+  },
+  {
+    id: 'tomb-raider-2013',
+    title: 'Tomb Raider',
+    description: 'Explore the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance, Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold.',
+    categories: ['Action', 'Adventure'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203160/header.jpg',
+    size: '12 GB',
+    releaseYear: '2013',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203160/header.jpg',
+      'https://wallpapercave.com/wp/wp1811195.jpg',
+      'https://wallpapers.com/images/hd/tomb-raider-lara-croft-pointing-bow-f7tupg5qfveof3q8.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/n4irZ7S0pXw',
+    shorts: [
+      'https://www.youtube.com/embed/T6_iW8GAn_s',
+      'https://www.youtube.com/embed/w7mUvjQO6z8',
+      'https://www.youtube.com/embed/z3p6yYm2Fsw'
+    ]
+  },
+  {
+    id: 'rise-tomb-raider',
+    title: 'Rise of the Tomb Raider',
+    description: 'Lara Croft becomes more than a survivor as she embarks on her first Tomb Raiding expedition to the most treacherous and remote regions of Siberia. In this high-octane action-adventure, Lara must use her wits and survival skills, form new alliances, and ultimately embrace her destiny as the Tomb Raider.',
+    categories: ['Action', 'Adventure'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg',
+    size: '25 GB',
+    releaseYear: '2015',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg',
+      'https://wallpapercave.com/wp/wp1811210.jpg',
+      'https://images.alphacoders.com/646/646765.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/LbeZ0a6D_0I',
+    shorts: [
+      'https://www.youtube.com/embed/v9qH6Y9Nn9s',
+      'https://www.youtube.com/embed/zS9Y9N9oW6U',
+      'https://www.youtube.com/embed/x-6VpA7U6p0'
+    ],
+    isRecommended: true
   }
 ];
