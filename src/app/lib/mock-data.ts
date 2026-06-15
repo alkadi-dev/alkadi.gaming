@@ -1686,7 +1686,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Tomb Raider',
     description: 'Explore the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance, Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold.',
     categories: ['Action', 'Adventure'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203160/header.jpg',
+    thumbnail:   'https://wallpapercave.com/wp/wp4078513.jpg',
     size: '12 GB',
     releaseYear: '2013',
     images: [
@@ -1697,7 +1697,6 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/zF9m91y8Na0',
     shorts: [
       'https://www.youtube.com/embed/2-E5wNpNE68',
-      'https://www.youtube.com/embed/w7mUvjQO6z8',
       'https://www.youtube.com/embed/58q2nGe0EyY'
     ]
   },
@@ -1706,19 +1705,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Rise of the Tomb Raider',
     description: 'Lara Croft becomes more than a survivor as she embarks on her first Tomb Raiding expedition to the most treacherous and remote regions of Siberia. In this high-octane action-adventure, Lara must use her wits and survival skills, form new alliances, and ultimately embrace her destiny as the Tomb Raider.',
     categories: ['Action', 'Adventure'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg',
+    thumbnail: 'https://wallpapers.com/images/hd/1080p-rise-of-the-tomb-raider-background-kmbjzwv5xqzx6pus.jpg',
     size: '25 GB',
     releaseYear: '2015',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg',
-      'https://wallpapercave.com/wp/wp1811210.jpg',
-      'https://images.alphacoders.com/646/646765.jpg'
+      'https://wallpapers.com/images/hd/1080p-rise-of-the-tomb-raider-background-kmbjzwv5xqzx6pus.jpg',
+      'https://wallpapers.com/images/hd/rise-of-the-tomb-raider-arctic-landscape-j0mpal8hrt7ah59i.jpg',
+      'https://preview.redd.it/some-rise-of-the-tomb-raider-screenshots-that-i-took-v0-4zyhtc4l527b1.png?width=640&crop=smart&auto=webp&s=2e6709605aabef5c2e48625ff129392718762565'
     ],
-    videoUrl: 'https://www.youtube.com/embed/LbeZ0a6D_0I',
+    videoUrl: 'https://www.youtube.com/embed/1_FIyNcQSgA',
     shorts: [
-      'https://www.youtube.com/embed/v9qH6Y9Nn9s',
-      'https://www.youtube.com/embed/zS9Y9N9oW6U',
-      'https://www.youtube.com/embed/x-6VpA7U6p0'
+      'https://www.youtube.com/embed/JK1xVB2jqvM',
+      'https://www.youtube.com/embed/VfLzk9KRmNE',
+      'https://www.youtube.com/embed/DGe3LrFH4G4'
     ],
     isRecommended: true
   }
