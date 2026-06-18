@@ -26,7 +26,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
     size: '29 GB',
-    releaseYear: '2025',
+    releaseYear: '2026',
     images: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
       'https://images.alphacoders.com/140/thumb-1920-1400002.png',
@@ -1030,7 +1030,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/HPxTKTbtDkg?si=EeL4kT7Ap6yaoBvE',
       'https://www.youtube.com/embed/RBpNHK0uk9k?si=9OC9TLJq2JkLvL9F',
-      'https://www.youtube.com/embed/mE7zJma0m4g?si=D7DjzaxQVPEmTwA4'
+    
     ]
   },
   {
@@ -1520,11 +1520,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Black Myth: Wukong',
     description: 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. The story is based on Journey to the West, one of the Four Great Classical Novels of Chinese literature.',
     categories: ['RPG'],
-    thumbnail: 'https://travelchinawith.me/wp-content/uploads/Black-Myth-Wukong-image-2-1-1024x576-1.webp',
+    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs/17948.jpeg',
     size: '95 GB',
     releaseYear: '2024',
     images: [
-      'https://travelchinawith.me/wp-content/uploads/Black-Myth-Wukong-image-2-1-1024x576-1.webp',
+      'https://4kwallpapers.com/images/walls/thumbs/17948.jpeg',
       'https://preview.redd.it/photos-from-a-landscape-photographer-v0-u38zg9b5ajkd1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
       'https://static0.srcdn.com/wordpress/wp-content/uploads/2024/08/scene-black-wind-mountain-black-wind-cave-bodhi-peak-black-myth-wukong.jpg?q=70&fit=crop&w=825&dpr=1'
     ],

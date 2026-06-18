@@ -19,7 +19,7 @@ export default function HomePage() {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(250);
+  const [maxSize, setMaxSize] = useState(140);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
@@ -34,7 +34,10 @@ export default function HomePage() {
     const restoredSort = sessionStorage.getItem('home-sort');
 
     if (restoredCategory) setSelectedCategory(restoredCategory);
-    if (restoredMaxSize) setMaxSize(parseInt(restoredMaxSize, 10));
+    if (restoredMaxSize) {
+      const parsed = parseInt(restoredMaxSize, 10);
+      setMaxSize(parsed > 140 ? 140 : parsed);
+    }
     if (restoredSort) setSortOrder(restoredSort);
 
     // Note: searchQuery is intentionally NOT restored to reset search on return as requested
@@ -153,7 +156,7 @@ export default function HomePage() {
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const activeFiltersCount = (maxSize < 250 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
+  const activeFiltersCount = (maxSize < 140 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
   const handleSuggestionClick = (gameId: string) => {
     router.push(`/game/${gameId}`);
@@ -300,7 +303,7 @@ export default function HomePage() {
                       <Slider
                         value={[maxSize]}
                         min={1}
-                        max={250}
+                        max={140}
                         step={1}
                         onValueChange={(val) => setMaxSize(val[0])}
                         className="py-1"
@@ -314,13 +317,13 @@ export default function HomePage() {
                       >
                         <Check className="w-3.5 h-3.5 mr-2" /> View Results
                       </Button>
-                      {(maxSize < 250 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
+                      {(maxSize < 140 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
                         <Button 
                           variant="ghost" 
                           size="sm"
                           className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
                           onClick={() => {
-                            setMaxSize(250);
+                            setMaxSize(140);
                             setSortOrder('title-asc');
                             setSelectedCategory('All');
                             setIsFilterOpen(false);
@@ -403,7 +406,7 @@ export default function HomePage() {
               onClick={() => {
                 setSelectedCategory('All');
                 setSearchQuery('');
-                setMaxSize(250);
+                setMaxSize(140);
                 setSortOrder('title-asc');
               }}
               className="text-primary mt-4 font-bold"
