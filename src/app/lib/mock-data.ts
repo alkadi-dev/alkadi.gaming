@@ -56,7 +56,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/gmA6MrX81z4',
     shorts: [
       'https://www.youtube.com/embed/0d-U2QL2Qvc?si=u_uaO45UmkJ4UHDq',
-      'https://www.youtube.com/embed/XsaXfkSignupPNM?si=9qaxQN7xEEVKVfIn',
+      'https://www.youtube.com/embed/dJK-d6KXjsI',
       'https://www.youtube.com/embed/ax_HkEnW_ig?si=xXoL5iPzvwJ18AtK'
     ],
     isRecommended: true,
@@ -420,7 +420,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/BBky2uCGqtM',
     shorts: [
-      'https://www.youtube.com/embed/BBky2uCGqtM?si=_SNihscMS4ivCXD5',
+      'https://www.youtube.com/embed/n7JPFgNqHdo',
       'https://www.youtube.com/embed/mNd9HPf1x5o?si=SXMU-QVzWGaVrC1J',
       'https://www.youtube.com/embed/GfCz9GVOJUE?si=d5Vdd5CfKS63ZX1B'
     ],
@@ -502,7 +502,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/w33j0RqVJu8?si=j7a7kDrLFE_K1FAf',
       'https://www.youtube.com/embed/ilUET2suOK0?si=jBXok38l8NgyoVsh',
-      'https://www.youtube.com/embed/YQqInnJIpOI?si=vOSkoYvCE8jzvP'
+
     ],
   },
   {
@@ -1030,7 +1030,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/HPxTKTbtDkg?si=EeL4kT7Ap6yaoBvE',
       'https://www.youtube.com/embed/RBpNHK0uk9k?si=9OC9TLJq2JkLvL9F',
-      'https://www.youtube.com/embed/mE7zJma0m4g'
+      'https://www.youtube.com/embed/mE7zJma0m4g?si=D7DjzaxQVPEmTwA4'
     ]
   },
   {
@@ -1469,7 +1469,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/9ewiJJe_nYI',
     shorts: [
-      'https://www.youtube.com/embed/8jiTN_0cXvt?si=BiPI__ep-fs6rtQx',
+      'https://www.youtube.com/embed/8jiTNodDe-Y',
       'https://www.youtube.com/embed/XuZaw6kVBkE',
       'https://www.youtube.com/embed/xhvQrJ3QNnM'
     ]
@@ -1591,7 +1591,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/oncaa_fMsyw',
     shorts: [
-      'https://www.youtube.com/embed/oncaa_fMsyw',
+      'https://www.youtube.com/embed/kDlwJKA0gjI',
       'https://www.youtube.com/embed/tX4DkAmmm2U',
       'https://www.youtube.com/embed/pCSQgug8nUU'
     ],
@@ -1719,6 +1719,6 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/VfLzk9KRmNE',
       'https://www.youtube.com/embed/DGe3LrFH4G4'
     ],
-    isRecommended: true
+    isRecommended: false
   }
 ];
