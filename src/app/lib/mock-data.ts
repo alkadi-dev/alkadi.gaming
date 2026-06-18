@@ -179,7 +179,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/ruoguclV31o?si=WCUl0dPvDuitjTbj',
       'https://www.youtube.com/embed/MSE2U30VUi8?si=L_5E5YdoIV3j8yXd',
-      'https://www.youtube.com/embed/AqATRV2OdI0dnUtq'
+      'https://www.youtube.com/embed/InzsqRY6MIk'
     ],
   },
   {
@@ -199,7 +199,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/3pGgPrbdKaU?si=pk6rmiOf9AWXUPds',
       'https://www.youtube.com/embed/SsZoqBH3aYw?si=9dEKoN0Zx0sZEB0d',
-      'https://www.youtube.com/embed/mwQpOPpGnCE?si=VqS2IQW3yOdNPz8Y'
+      'https://www.youtube.com/embed/FtN9_eeZd0M'
     ],
   },
   {
@@ -240,7 +240,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/crQ5pazN840?si=1A7CkPYi10vgc541',
       'https://www.youtube.com/embed/D7Enav00Lp8?si=3Hwvsl4HKV1YWcOX',
-      'https://www.youtube.com/embed/Nhug66isXqU?si=u5J8EE1GrzPJv3N1'
+      'https://www.youtube.com/embed/_Y_Y1cFj4rk'
     ],
     isRecommended: true,
   },
@@ -259,7 +259,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/8X2kIfS6fb8',
     shorts: [
-      'https://www.youtube.com/embed/DWUp56Eqw5U?si=D0vuwhtV6rIWCNNp',
+      'https://www.youtube.com/embed/9OzhWHMmRmc',
       'https://www.youtube.com/embed/AQFfvd9k5Kw?si=reTyJg11daABpJlV',
       'https://www.youtube.com/embed/jqquRqfAWHA?si=dB9kfW2G9T_tK0bZ'
     ],
@@ -604,7 +604,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
     shorts: [
       'https://www.youtube.com/embed/oYlsmbxTVM4?si=bP3Meaz940YkrLBV',
-      'https://www.youtube.com/embed/sqr0nwlcq8?si=bP3Meaz940YkrLBV',
+      'https://www.youtube.com/embed/GpeNQnbDMtc',
       'https://www.youtube.com/embed/-uiN7H4SYE4?si=dYkQClA2xXyy4w_P'
     ],
     isRecommended: true,
@@ -624,7 +624,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/u4-FCsiF5x4',
     shorts: [
-      'https://www.youtube.com/embed/u4-FCsiF5x4',
+      'https://www.youtube.com/embed/VAa_09DzPVI',
       'https://www.youtube.com/embed/Qcf8NzbxX2k',
       'https://www.youtube.com/embed/DgAFQ1leafY'
     ],
@@ -766,7 +766,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/OQ1CwPhE8KQ',
     shorts: [
       'https://www.youtube.com/embed/OgNLHBqcm_Q?si=vUR_RZwN0FKYPhiM',
-      'https://www.youtube.com/embed/cC3yw3h3ErY?si=q18Hc1jn2uhRvZPW',
+      'https://www.youtube.com/embed/cC3yw3h3ErY?si=q18Hc1jn2SbRvZPW',
       'https://www.youtube.com/embed/erQun_LaSC4?si=UslKf-WRk6wmxrWD'
     ],
   },
@@ -1030,7 +1030,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/HPxTKTbtDkg?si=EeL4kT7Ap6yaoBvE',
       'https://www.youtube.com/embed/RBpNHK0uk9k?si=9OC9TLJq2JkLvL9F',
-      'https://www.youtube.com/embed/xgwH65Oj12bEczhZ'
+      'https://www.youtube.com/embed/mE7zJma0m4g'
     ]
   },
   {
@@ -1290,7 +1290,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/ms5ENyRH3Bs',
       'https://www.youtube.com/embed/ZAW0hs2ZDFg',
-      'https://www.youtube.com/embed/EJmpkJviarIo'
+      'https://www.youtube.com/embed/uCaPqbjvESs'
     ]
   },
   {
@@ -1572,7 +1572,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/igl_5sssWjQ',
       'https://www.youtube.com/embed/8_8yzlwUAnE',
-      'https://www.youtube.com/embed/czAejSrYfGE'
+      'https://www.youtube.com/embed/i4YTiAZL0FM'
     ],
     isRecommended: true,
   },
@@ -1685,9 +1685,9 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'tomb-raider-2013',
     title: 'Tomb Raider',
     description: 'Explore the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance, Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold.',
-    categories: ['Action', 'Adventure'],
+    categories: [ 'Adventure'],
     thumbnail:   'https://wallpapercave.com/wp/wp4078513.jpg',
-    size: '12 GB',
+    size: '10 GB',
     releaseYear: '2013',
     images: [
       'https://wallpapercave.com/wp/wp4078513.jpg',
@@ -1704,9 +1704,9 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'rise-tomb-raider',
     title: 'Rise of the Tomb Raider',
     description: 'Lara Croft becomes more than a survivor as she embarks on her first Tomb Raiding expedition to the most treacherous and remote regions of Siberia. In this high-octane action-adventure, Lara must use her wits and survival skills, form new alliances, and ultimately embrace her destiny as the Tomb Raider.',
-    categories: ['Action', 'Adventure'],
+    categories: [ 'Adventure'],
     thumbnail: 'https://wallpapers.com/images/hd/1080p-rise-of-the-tomb-raider-background-kmbjzwv5xqzx6pus.jpg',
-    size: '25 GB',
+    size: '13 GB',
     releaseYear: '2015',
     images: [
       'https://wallpapers.com/images/hd/1080p-rise-of-the-tomb-raider-background-kmbjzwv5xqzx6pus.jpg',
