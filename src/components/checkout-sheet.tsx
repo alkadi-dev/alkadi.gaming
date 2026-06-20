@@ -71,8 +71,9 @@ export function CheckoutSheet() {
 
   const getWarning = () => {
     if (totalSizeNum > 1800) return "Maximum storage limit reached (1800 GB).";
+    if (totalSizeNum > 1400) return "Approaching limit. Review your selection?";
     if (totalSizeNum > 900) return "You have surpassed 1 TB.";
-    if (totalSizeNum > 450) return "You are now using the 1 TB drive.";
+    if (totalSizeNum > 460) return "You are now using the 1 TB drive.";
     if (totalSizeNum > 280) return "You have exceeded 280 GB and are using the 500 GB drive.";
     return null;
   };
@@ -155,10 +156,10 @@ export function CheckoutSheet() {
 
               {warning && (
                 <Alert className={`mb-4 py-3 px-4 rounded-xl border-none ${
-                  totalSizeNum > 1800 || totalSizeNum > 900 ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
+                  totalSizeNum > 1800 || totalSizeNum > 1400 || totalSizeNum > 900 ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
                 }`}>
                   <div className="flex items-center gap-2">
-                    {totalSizeNum > 1800 ? <Ban className="h-4 w-4" /> : totalSizeNum > 900 ? <AlertTriangle className="h-4 w-4" /> : <Info className="h-4 w-4" />}
+                    {totalSizeNum > 1800 ? <Ban className="h-4 w-4" /> : totalSizeNum > 1400 || totalSizeNum > 900 ? <AlertTriangle className="h-4 w-4" /> : <Info className="h-4 w-4" />}
                     <AlertDescription className="text-[11px] font-bold uppercase leading-tight tracking-tight">
                       {warning}
                     </AlertDescription>

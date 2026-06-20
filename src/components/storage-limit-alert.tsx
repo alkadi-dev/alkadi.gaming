@@ -12,7 +12,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { AlertTriangle, HardDrive, Ban } from 'lucide-react';
+import { AlertTriangle, HardDrive, Ban, Info } from 'lucide-react';
 
 export function StorageLimitAlert() {
   const { totalSizeNum, setCheckoutOpen, isCheckoutOpen } = useSelection();
@@ -32,8 +32,9 @@ export function StorageLimitAlert() {
 
     const currentThreshold = 
       totalSizeNum > 1800 ? 1800 : 
+      totalSizeNum > 1400 ? 1400 :
       totalSizeNum > 900 ? 900 : 
-      totalSizeNum > 450 ? 450 : 
+      totalSizeNum > 460 ? 460 : 
       totalSizeNum > 280 ? 280 : 0;
 
     // Trigger only if we cross a threshold upwards
@@ -45,6 +46,13 @@ export function StorageLimitAlert() {
           message: "You have reached the maximum storage limit of 1800 GB. Please review your selection and delete some games to continue.",
           icon: <Ban className="h-6 w-6 text-destructive" />
         });
+      } else if (currentThreshold === 1400) {
+        setActiveLimit({
+          threshold: 1400,
+          title: "Approaching Limit!",
+          message: "You have reached 1400 GB. Would you like to review your selection and remove some games, or continue adding more?",
+          icon: <AlertTriangle className="h-6 w-6 text-primary" />
+        });
       } else if (currentThreshold === 900) {
         setActiveLimit({
           threshold: 900,
@@ -52,9 +60,9 @@ export function StorageLimitAlert() {
           message: "You have surpassed 1 TB. Would you like to review your selection and delete some games, or keep going?",
           icon: <AlertTriangle className="h-6 w-6 text-primary" />
         });
-      } else if (currentThreshold === 450) {
+      } else if (currentThreshold === 460) {
         setActiveLimit({
-          threshold: 450,
+          threshold: 460,
           title: "1 TB Drive Required",
           message: "You are now using the 1 TB drive. Would you like to review your selection and delete some games, or keep going?",
           icon: <HardDrive className="h-6 w-6 text-primary" />
@@ -120,7 +128,7 @@ export function StorageLimitAlert() {
           <AlertDialogAction 
             onClick={handleReview}
             className={`w-full sm:w-auto rounded-xl text-xs font-bold uppercase tracking-wider text-white ${
-              activeLimit?.threshold === 1800 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
+              activeLimit?.threshold === 1800 || activeLimit?.threshold === 1400 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
             }`}
           >
             Review & Delete
