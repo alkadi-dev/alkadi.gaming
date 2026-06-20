@@ -13,10 +13,12 @@ import { Slider } from '@/components/ui/slider';
 import { Label } from '@/components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useSelection } from '@/components/selection-context';
 import { cn } from '@/lib/utils';
 
 export default function HomePage() {
   const router = useRouter();
+  const { totalSizeNum, currentCapacity } = useSelection();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [maxSize, setMaxSize] = useState(140);
@@ -40,7 +42,6 @@ export default function HomePage() {
     }
     if (restoredSort) setSortOrder(restoredSort);
 
-    // Note: searchQuery is intentionally NOT restored to reset search on return as requested
     setIsRestored(true);
   }, []);
 
@@ -182,8 +183,32 @@ export default function HomePage() {
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">
+            {/* Live Storage Tracker */}
+            <div className="hidden sm:flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+              <HardDrive className="h-3.5 w-3.5 text-primary" />
+              <div className="text-[10px] font-bold tracking-tight">
+                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
+                  {totalSizeNum.toFixed(0)}
+                </span>
+                <span className="text-muted-foreground mx-1">/</span>
+                <span className="text-muted-foreground">{currentCapacity} GB</span>
+              </div>
+            </div>
             <CheckoutSheet />
           </div>
+        </div>
+        {/* Mobile Storage Tracker - Visible only on mobile */}
+        <div className="sm:hidden flex items-center justify-center py-1.5 border-t border-white/5 bg-background/40">
+           <div className="flex items-center gap-2 px-3 py-0.5 rounded-full">
+              <HardDrive className="h-3 w-3 text-primary" />
+              <div className="text-[9px] font-bold tracking-tight">
+                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
+                  {totalSizeNum.toFixed(0)}
+                </span>
+                <span className="text-muted-foreground mx-1">/</span>
+                <span className="text-muted-foreground">{currentCapacity} GB</span>
+              </div>
+            </div>
         </div>
       </header>
 
@@ -360,7 +385,6 @@ export default function HomePage() {
                   </Button>
                 )}
                 
-                {/* Suggestions Dropdown - Compact Design */}
                 {showSuggestions && suggestions.length > 0 && (
                   <div className="absolute top-full left-0 right-0 mt-2 z-[60] bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
                     <div className="p-1 space-y-0.5">
@@ -446,7 +470,7 @@ export default function HomePage() {
                     viewBox="0 0 24 24" 
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.59-1.01-.01 2.62-.02 5.24-.04 7.86-.02 2.03-.54 4.07-1.81 5.66-1.49 1.86-3.89 2.81-6.22 2.44-2.11-.33-4.07-1.63-5.07-3.41-1.22-2.19-1.14-5.11.33-7.14 1.25-1.74 3.48-2.61 5.59-2.22v4.13c-.93-.15-1.91.07-2.66.68-.73.59-1.1 1.55-.99 2.48.06.9.59 1.73 1.39 2.15.82.44 1.84.45 2.66-.01.81-.46 1.29-1.37 1.34-2.31.02-3.66.01-7.32.01-10.98.01-1.98.01-3.96.01-5.94Z"/>
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.59-1.01-.01 2.62-.02 5.24-.04 7.86-.02 2.03-.54 4.07-1.81 5.66-1.49 1.86-3.89 2.81-6.22 2.44-2.11-.33-4.07-1.63-5.07-3.41-1.22-2.19-1.14-5.11.33-7.14 1.25-1.74 3.48-2.61 5.59-2.22v4.13c-.93-.15-1.91.07-2.66.68-.73.59-1.55-.99 2.48.06.9.59 1.73 1.39 2.15.82.44 1.84.45 2.66-.01.81-.46 1.29-1.37 1.34-2.31.02-3.66.01-7.32.01-10.98.01-1.98.01-3.96.01-5.94Z"/>
                   </svg>
                   TikTok
                 </a>

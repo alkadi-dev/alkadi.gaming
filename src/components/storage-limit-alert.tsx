@@ -12,7 +12,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { AlertTriangle, HardDrive, Ban, Info } from 'lucide-react';
+import { AlertTriangle, HardDrive, Ban } from 'lucide-react';
 
 export function StorageLimitAlert() {
   const { totalSizeNum, setCheckoutOpen, isCheckoutOpen } = useSelection();
@@ -27,13 +27,13 @@ export function StorageLimitAlert() {
   const lastThresholdRef = useRef<number>(0);
 
   useEffect(() => {
-    // If the checkout sheet is already open, don't show another alert
     if (isCheckoutOpen) return;
 
     const currentThreshold = 
       totalSizeNum > 1800 ? 1800 : 
       totalSizeNum > 1400 ? 1400 :
       totalSizeNum > 900 ? 900 : 
+      totalSizeNum > 760 ? 760 : 
       totalSizeNum > 460 ? 460 : 
       totalSizeNum > 280 ? 280 : 0;
 
@@ -43,50 +43,52 @@ export function StorageLimitAlert() {
         setActiveLimit({
           threshold: 1800,
           title: "Maximum Storage Reached!",
-          message: "You have reached the maximum storage limit of 1800 GB. Please review your selection and delete some games to continue.",
+          message: "You have reached the maximum storage limit of 1800 GB. Please review your selection and remove some games to continue.",
           icon: <Ban className="h-6 w-6 text-destructive" />
         });
       } else if (currentThreshold === 1400) {
         setActiveLimit({
           threshold: 1400,
-          title: "Approaching Limit!",
-          message: "You have reached 1400 GB. Would you like to review your selection and remove some games, or continue adding more?",
+          title: "Approaching Final Limit",
+          message: "You have reached 1400 GB. Would you like to review your selection and remove some games, or continue adding more until 1800 GB?",
           icon: <AlertTriangle className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 900) {
         setActiveLimit({
           threshold: 900,
-          title: "Surpassed 1 TB!",
-          message: "You have surpassed 1 TB. Would you like to review your selection and delete some games, or keep going?",
-          icon: <AlertTriangle className="h-6 w-6 text-primary" />
+          title: "Surpassed 900 GB!",
+          message: "You have surpassed 900 GB. Switching to 2 TB drive capacity (Limit: 1400 GB). Keep going?",
+          icon: <HardDrive className="h-6 w-6 text-primary" />
+        });
+      } else if (currentThreshold === 760) {
+        setActiveLimit({
+          threshold: 760,
+          title: "Exceeded 760 GB",
+          message: "You are now using a high capacity drive configuration. New limit set to 900 GB. Continue?",
+          icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 460) {
         setActiveLimit({
           threshold: 460,
           title: "1 TB Drive Required",
-          message: "You are now using the 1 TB drive. Would you like to review your selection and delete some games, or keep going?",
+          message: "You have exceeded 460 GB. You are now using the 1 TB drive (Limit: 760 GB). Keep going?",
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 280) {
         setActiveLimit({
           threshold: 280,
           title: "500 GB Drive Reached",
-          message: "You have exceeded 280 GB and are using the 500 GB drive. Would you like to review your selection and delete some games, or keep going?",
+          message: "You have exceeded 280 GB and are using the 500 GB drive (Limit: 460 GB). Keep going?",
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       }
     }
 
-    // Always keep lastThresholdRef synced with current selection state
     lastThresholdRef.current = currentThreshold;
   }, [totalSizeNum, isCheckoutOpen]);
 
   const handleReview = () => {
-    // Close the alert first
     setActiveLimit(null);
-    
-    // Explicitly unlock the body after a short delay to prevent Radix UI stack conflicts
-    // that lead to UI freezes (pointer-events: none being stuck).
     setTimeout(() => {
       document.body.style.pointerEvents = 'auto';
       document.body.style.overflow = 'auto';
@@ -97,7 +99,6 @@ export function StorageLimitAlert() {
   const handleOpenChange = (open: boolean) => {
     if (!open) {
       setActiveLimit(null);
-      // Safety cleanup: ensure interaction is restored even if cancelled
       setTimeout(() => {
         if (!isCheckoutOpen) {
           document.body.style.pointerEvents = 'auto';
@@ -128,7 +129,7 @@ export function StorageLimitAlert() {
           <AlertDialogAction 
             onClick={handleReview}
             className={`w-full sm:w-auto rounded-xl text-xs font-bold uppercase tracking-wider text-white ${
-              activeLimit?.threshold === 1800 || activeLimit?.threshold === 1400 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
+              activeLimit?.threshold >= 1400 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
             }`}
           >
             Review & Delete

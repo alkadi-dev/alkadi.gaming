@@ -53,7 +53,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
   const { id } = use(params);
   const router = useRouter();
   const { toast } = useToast();
-  const { addToSelection, removeFromSelection, isInSelection, isOverLimit } = useSelection();
+  const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity } = useSelection();
   const game = MOCK_GAMES.find((g) => g.id === id);
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
@@ -143,6 +143,17 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
           </Button>
 
           <div className="flex items-center gap-2">
+             {/* Live Storage Tracker */}
+             <div className="hidden sm:flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+              <HardDrive className="h-3.5 w-3.5 text-primary" />
+              <div className="text-[10px] font-bold tracking-tight">
+                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
+                  {totalSizeNum.toFixed(0)}
+                </span>
+                <span className="text-muted-foreground mx-1">/</span>
+                <span className="text-muted-foreground">{currentCapacity} GB</span>
+              </div>
+            </div>
             <CheckoutSheet />
             <Button
               variant="default"
@@ -165,10 +176,23 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             </Button>
           </div>
         </div>
+        {/* Mobile Storage Tracker */}
+        <div className="sm:hidden flex items-center justify-center py-1 bg-background/40 border-t border-white/5">
+            <div className="flex items-center gap-2 px-3 py-0.5 rounded-full">
+              <HardDrive className="h-3 w-3 text-primary" />
+              <div className="text-[9px] font-bold tracking-tight">
+                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
+                  {totalSizeNum.toFixed(0)}
+                </span>
+                <span className="text-muted-foreground mx-1">/</span>
+                <span className="text-muted-foreground">{currentCapacity} GB</span>
+              </div>
+            </div>
+        </div>
       </div>
 
       {/* Hero Section */}
-      <div className="relative h-[60vh] w-full mt-0">
+      <div className="relative h-[60vh] w-full mt-0 pt-16 sm:pt-0">
         {heroImage ? (
           <Image
             src={heroImage}
@@ -208,7 +232,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
 
       <main className="container mx-auto px-4 mt-8 max-w-5xl">
         <div className="space-y-10">
-          {/* Description Section with AI Enhancement */}
           <RevealSection>
             <section className="bg-secondary/20 rounded-3xl p-6 md:p-10 border border-white/5 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
@@ -238,7 +261,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             </section>
           </RevealSection>
 
-          {/* Media Carousel */}
           {game.images && game.images.filter(img => img && img.trim() !== '').length > 0 && (
             <RevealSection>
               <section>
@@ -268,7 +290,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             </RevealSection>
           )}
 
-          {/* Video Section */}
           <RevealSection>
             <section>
               <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Trailer</h2>
@@ -284,7 +305,6 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
             </section>
           </RevealSection>
 
-          {/* Moments Section */}
           {game.shorts && game.shorts.length > 0 && (
             <RevealSection>
               <section>

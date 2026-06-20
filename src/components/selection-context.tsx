@@ -11,6 +11,7 @@ interface SelectionContextType {
   clearSelection: () => void;
   totalSizeNum: number;
   isOverLimit: boolean;
+  currentCapacity: number;
   isCheckoutOpen: boolean;
   setCheckoutOpen: (open: boolean) => void;
 }
@@ -38,17 +39,15 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('alkadi_selection', JSON.stringify(selectedIds));
   }, [selectedIds]);
 
-  // CRITICAL FIX: Global Safety Reset for UI Freezes
-  // This watches the checkout sheet state and forces interaction recovery if Radix fails to clean up.
+  // Global Safety Reset for UI Freezes
   useEffect(() => {
     if (!isCheckoutOpen) {
       const timer = setTimeout(() => {
-        // Only force recovery if the body is actually stuck (pointer-events: none)
         if (document.body.style.pointerEvents === 'none') {
           document.body.style.pointerEvents = 'auto';
           document.body.style.overflow = 'auto';
         }
-      }, 500); // Give plenty of time for exit animations
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [isCheckoutOpen]);
@@ -62,10 +61,19 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     }, 0);
   }, [selectedIds]);
 
+  // Calculate current capacity milestone
+  const currentCapacity = useMemo(() => {
+    if (totalSizeNum > 1400) return 1800;
+    if (totalSizeNum > 900) return 1400;
+    if (totalSizeNum > 760) return 900;
+    if (totalSizeNum > 460) return 760;
+    if (totalSizeNum > 280) return 460;
+    return 280;
+  }, [totalSizeNum]);
+
   const isOverLimit = totalSizeNum > 1800;
 
   const addToSelection = (id: string) => {
-    // If we are already over the limit, prevent adding more
     if (isOverLimit) return;
     setSelectedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
   };
@@ -88,6 +96,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         clearSelection,
         totalSizeNum,
         isOverLimit,
+        currentCapacity,
         isCheckoutOpen,
         setCheckoutOpen
       }}
