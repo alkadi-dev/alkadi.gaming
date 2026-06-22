@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     template: '%s | Alkadi Gaming'
   },
   description: 'Explore Alkadi Gaming for the best deals on video games in Lebanon. Immersive catalog with rich media, trailers, and easy digital selection.',
-  keywords: ['video games Lebanon', 'buy digital games', 'cheap games Lebanon', 'gaming catalog', 'Alkadi Gaming', 'PlayStation games Lebanon', 'PC games Lebanon', 'Xbox games Lebanon', 'gaming store Lebanon'],
+  keywords: ['video games Lebanon', 'buy digital games', 'cheap games Lebanon', 'gaming catalog', 'Alkadi Gaming', 'pc games', 'PC games Lebanon', ' games Lebanon', 'gaming store Lebanon'],
   authors: [{ name: 'Alkadi Gaming' }],
-  metadataBase: new URL('https://alkadigaming.com'), // Replace with actual domain when ready
+  metadataBase: new URL('https://alkadigaming.store'), // Replace with actual domain when ready
   alternates: {
     canonical: '/',
   },
@@ -45,6 +45,7 @@ export const metadata: Metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180' },
     ],
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -58,6 +59,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+        
+        {/* Favicon fallback tags for standard file names in public/ directory */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         
         {/* JSON-LD Structured Data for SEO */}
         <script
