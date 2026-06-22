@@ -136,21 +136,21 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
           <Button
             variant="ghost"
             size="sm"
-            className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-3 text-xs"
+            className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs"
             onClick={handleBackToCatalog}
           >
-            <ArrowLeft className="mr-1.5 h-3.5 w-3.5" /> <span className="hidden sm:inline">Catalog</span>
+            <ArrowLeft className="mr-1 sm:mr-1.5 h-3.5 w-3.5" /> <span className="hidden sm:inline">Catalog</span>
           </Button>
 
-          <div className="flex items-center gap-2">
-             {/* Live Storage Tracker */}
-             <div className="hidden sm:flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-              <HardDrive className="h-3.5 w-3.5 text-primary" />
-              <div className="text-[10px] font-bold tracking-tight">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+             {/* Live Storage Tracker / Hard Drive selection */}
+             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
+              <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
+              <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
                 <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
                   {totalSizeNum.toFixed(0)}
                 </span>
-                <span className="text-muted-foreground mx-1">/</span>
+                <span className="text-muted-foreground mx-0.5">/</span>
                 <span className="text-muted-foreground">{currentCapacity} GB</span>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
               variant="default"
               size="sm"
               disabled={!isAdded && isOverLimit}
-              className={`rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-4 text-xs ${
+              className={`rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-3 sm:px-4 text-[10px] sm:text-xs ${
                 isAdded 
                   ? 'bg-green-600 hover:bg-green-700' 
                   : isOverLimit
@@ -169,25 +169,12 @@ export default function GameDetailPage({ params }: { params: Promise<{ id: strin
               onClick={handleToggleSelection}
             >
               {isAdded ? (
-                <><CheckCircle2 className="mr-1.5 h-3.5 w-3.5" /> Added</>
+                <><CheckCircle2 className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Added</>
               ) : (
-                <><PlusCircle className="mr-1.5 h-3.5 w-3.5" /> Add</>
+                <><PlusCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Add</>
               )}
             </Button>
           </div>
-        </div>
-        {/* Mobile Storage Tracker */}
-        <div className="sm:hidden flex items-center justify-center py-1 bg-background/40 border-t border-white/5">
-            <div className="flex items-center gap-2 px-3 py-0.5 rounded-full">
-              <HardDrive className="h-3 w-3 text-primary" />
-              <div className="text-[9px] font-bold tracking-tight">
-                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
-                  {totalSizeNum.toFixed(0)}
-                </span>
-                <span className="text-muted-foreground mx-1">/</span>
-                <span className="text-muted-foreground">{currentCapacity} GB</span>
-              </div>
-            </div>
         </div>
       </div>
 

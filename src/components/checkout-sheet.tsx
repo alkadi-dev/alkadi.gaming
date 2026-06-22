@@ -66,8 +66,7 @@ export function CheckoutSheet() {
   const getWarning = () => {
     if (totalSizeNum > 1800) return "Maximum storage limit reached (1800 GB).";
     if (totalSizeNum > 1400) return "Approaching final limit. Review selection?";
-    if (totalSizeNum > 900) return "Exceeded 900 GB. Switching to 2 TB capacity.";
-    if (totalSizeNum > 760) return "Exceeded 760 GB milestone.";
+    if (totalSizeNum > 960) return "Exceeded 960 GB. Switching to 2 TB capacity.";
     if (totalSizeNum > 460) return "Using the 1 TB drive capacity.";
     if (totalSizeNum > 280) return "Using the 500 GB drive capacity.";
     return null;
@@ -78,9 +77,9 @@ export function CheckoutSheet() {
   return (
     <Sheet open={isCheckoutOpen} onOpenChange={setCheckoutOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-3 text-xs">
-          <ShoppingCart className="h-3.5 w-3.5 mr-1.5" />
-          Checkout
+        <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs">
+          <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />
+          <span className="hidden sm:inline">Checkout</span>
           {selectedIds.length > 0 && (
             <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-white shadow-lg border-2 border-background">
               {selectedIds.length}

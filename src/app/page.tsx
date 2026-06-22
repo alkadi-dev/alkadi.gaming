@@ -167,48 +167,35 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="container mx-auto px-4 h-14 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 flex-shrink-0">
             <div 
-              className="cursor-pointer select-none flex items-center gap-1.5" 
+              className="cursor-pointer select-none flex items-center gap-1" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <span className="text-base font-black font-headline tracking-tighter text-white uppercase">
+              <span className="text-sm sm:text-base font-black font-headline tracking-tighter text-white uppercase">
                 ALKADI
               </span>
-              <span className="text-base font-black font-headline tracking-tighter text-primary uppercase">
+              <span className="text-sm sm:text-base font-black font-headline tracking-tighter text-primary uppercase">
                 GAMING
               </span>
             </div>
           </div>
           
-          <div className="flex items-center gap-2 sm:gap-4">
-            {/* Live Storage Tracker */}
-            <div className="hidden sm:flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-              <HardDrive className="h-3.5 w-3.5 text-primary" />
-              <div className="text-[10px] font-bold tracking-tight">
+          <div className="flex items-center gap-2 flex-grow justify-end">
+            {/* Live Storage Tracker / Hard Drive selection */}
+            <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
+              <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
+              <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
                 <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
                   {totalSizeNum.toFixed(0)}
                 </span>
-                <span className="text-muted-foreground mx-1">/</span>
+                <span className="text-muted-foreground mx-0.5">/</span>
                 <span className="text-muted-foreground">{currentCapacity} GB</span>
               </div>
             </div>
             <CheckoutSheet />
           </div>
-        </div>
-        {/* Mobile Storage Tracker - Visible only on mobile */}
-        <div className="sm:hidden flex items-center justify-center py-1.5 border-t border-white/5 bg-background/40">
-           <div className="flex items-center gap-2 px-3 py-0.5 rounded-full">
-              <HardDrive className="h-3 w-3 text-primary" />
-              <div className="text-[9px] font-bold tracking-tight">
-                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
-                  {totalSizeNum.toFixed(0)}
-                </span>
-                <span className="text-muted-foreground mx-1">/</span>
-                <span className="text-muted-foreground">{currentCapacity} GB</span>
-              </div>
-            </div>
         </div>
       </header>
 

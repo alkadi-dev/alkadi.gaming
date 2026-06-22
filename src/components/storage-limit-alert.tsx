@@ -32,8 +32,7 @@ export function StorageLimitAlert() {
     const currentThreshold = 
       totalSizeNum > 1800 ? 1800 : 
       totalSizeNum > 1400 ? 1400 :
-      totalSizeNum > 900 ? 900 : 
-      totalSizeNum > 760 ? 760 : 
+      totalSizeNum > 960 ? 960 : 
       totalSizeNum > 460 ? 460 : 
       totalSizeNum > 280 ? 280 : 0;
 
@@ -53,25 +52,18 @@ export function StorageLimitAlert() {
           message: "You have reached 1400 GB. Would you like to review your selection and remove some games, or continue adding more until 1800 GB?",
           icon: <AlertTriangle className="h-6 w-6 text-primary" />
         });
-      } else if (currentThreshold === 900) {
+      } else if (currentThreshold === 960) {
         setActiveLimit({
-          threshold: 900,
-          title: "Surpassed 900 GB!",
-          message: "You have surpassed 900 GB. Switching to 2 TB drive capacity (Limit: 1400 GB). Keep going?",
-          icon: <HardDrive className="h-6 w-6 text-primary" />
-        });
-      } else if (currentThreshold === 760) {
-        setActiveLimit({
-          threshold: 760,
-          title: "Exceeded 760 GB",
-          message: "You are now using a high capacity drive configuration. New limit set to 900 GB. Continue?",
+          threshold: 960,
+          title: "Surpassed 960 GB!",
+          message: "You have surpassed 960 GB. Switching to 2 TB drive capacity (Limit: 1400 GB). Keep going?",
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 460) {
         setActiveLimit({
           threshold: 460,
           title: "1 TB Drive Required",
-          message: "You have exceeded 460 GB. You are now using the 1 TB drive (Limit: 760 GB). Keep going?",
+          message: "You have exceeded 460 GB. You are now using the 1 TB drive (Limit: 960 GB). Keep going?",
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 280) {

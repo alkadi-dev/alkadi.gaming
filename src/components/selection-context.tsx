@@ -64,9 +64,8 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   // Calculate current capacity milestone
   const currentCapacity = useMemo(() => {
     if (totalSizeNum > 1400) return 1800;
-    if (totalSizeNum > 900) return 1400;
-    if (totalSizeNum > 760) return 900;
-    if (totalSizeNum > 460) return 760;
+    if (totalSizeNum > 960) return 1400;
+    if (totalSizeNum > 460) return 960;
     if (totalSizeNum > 280) return 460;
     return 280;
   }, [totalSizeNum]);
