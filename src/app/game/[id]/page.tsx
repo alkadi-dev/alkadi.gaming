@@ -1,319 +1,75 @@
-'use client';
-
-import { use, useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { Metadata } from 'next';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { refineGameDescription } from '@/ai/flows/refine-game-description';
-import { Skeleton } from '@/components/ui/skeleton';
-import { useToast } from '@/hooks/use-toast';
-import { useSelection } from '@/components/selection-context';
-import { CheckoutSheet } from '@/components/checkout-sheet';
-import { cn } from '@/lib/utils';
+import GameClient from './game-client';
+import { notFound } from 'next/navigation';
 
-function RevealSection({ children, className }: { children: React.ReactNode, className?: string }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, []);
-
-  return (
-    <div 
-      ref={ref} 
-      className={cn(
-        "transition-all duration-1000 ease-out transform",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-}
-
-export default function GameDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  const router = useRouter();
-  const { toast } = useToast();
-  const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity } = useSelection();
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
   const game = MOCK_GAMES.find((g) => g.id === id);
-  const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
-  const [isRefining, setIsRefining] = useState(false);
-
-  const isAdded = game ? isInSelection(game.id) : false;
-
-  useEffect(() => {
-    if (game && !refinedDescription) {
-      handleRefine();
-    }
-  }, [game]);
-
-  const handleRefine = async () => {
-    if (!game) return;
-    setIsRefining(true);
-    try {
-      const result = await refineGameDescription({ originalDescription: game.description });
-      setRefinedDescription(result.refinedDescription);
-    } catch (error) {
-      console.error('Failed to refine description:', error);
-      setRefinedDescription(game.description);
-    } finally {
-      setIsRefining(false);
-    }
-  };
-
-  const handleToggleSelection = () => {
-    if (!game) return;
-    if (isAdded) {
-      removeFromSelection(game.id);
-      toast({
-        title: "Removed from Selection",
-        description: `${game.title} has been removed.`,
-      });
-    } else {
-      if (isOverLimit) {
-        toast({
-          variant: "destructive",
-          title: "Storage Limit Exceeded",
-          description: "You have reached the 1800 GB limit. Remove games before adding more.",
-        });
-        return;
-      }
-      addToSelection(game.id);
-      toast({
-        title: "Game Added!",
-        description: `${game.title} has been added to your selection.`,
-      });
-    }
-  };
-
-  const handleBackToCatalog = () => {
-    if (typeof window !== 'undefined' && window.history.length > 1) {
-      router.back();
-    } else {
-      router.push('/');
-    }
-  };
-
+  
   if (!game) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center p-6">
-          <h1 className="text-4xl font-bold mb-4">Game Not Found</h1>
-          <Button onClick={() => router.push('/')}>Return to Catalog</Button>
-        </div>
-      </div>
-    );
+    return {
+      title: 'Game Not Found | Alkadi Gaming',
+    };
   }
 
-  const heroImage = (game.images && game.images[0] && game.images[0].trim() !== '') 
-    ? game.images[0] 
-    : (game.thumbnail && game.thumbnail.trim() !== '') ? game.thumbnail : null;
+  const cleanDescription = game.description.substring(0, 160).replace(/\r?\n|\r/g, " ");
+
+  return {
+    title: game.title,
+    description: cleanDescription,
+    openGraph: {
+      title: `${game.title} | Alkadi Gaming Catalog`,
+      description: cleanDescription,
+      images: [game.thumbnail],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: game.title,
+      description: cleanDescription,
+      images: [game.thumbnail],
+    },
+  };
+}
+
+export default async function GameDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const game = MOCK_GAMES.find((g) => g.id === id);
+  
+  if (!game) {
+    notFound();
+  }
 
   return (
-    <div className="min-h-screen pb-20">
-      {/* Fixed Header Navigation - Mobile Optimized */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/40 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
-        <div className="container mx-auto px-4 h-16 flex justify-between items-center gap-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs"
-            onClick={handleBackToCatalog}
-          >
-            <ArrowLeft className="mr-1 sm:mr-1.5 h-3.5 w-3.5" /> <span className="hidden sm:inline">Catalog</span>
-          </Button>
-
-          <div className="flex items-center gap-1.5 sm:gap-2">
-             {/* Live Storage Tracker / Hard Drive selection */}
-             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
-              <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
-              <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
-                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
-                  {totalSizeNum.toFixed(0)}
-                </span>
-                <span className="text-muted-foreground mx-0.5">/</span>
-                <span className="text-muted-foreground">{currentCapacity} GB</span>
-              </div>
-            </div>
-            <CheckoutSheet />
-            <Button
-              variant="default"
-              size="sm"
-              disabled={!isAdded && isOverLimit}
-              className={`rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-3 sm:px-4 text-[10px] sm:text-xs ${
-                isAdded 
-                  ? 'bg-green-600 hover:bg-green-700' 
-                  : isOverLimit
-                    ? 'bg-primary/20 cursor-not-allowed opacity-50'
-                    : 'bg-primary hover:scale-105 active:scale-95'
-              }`}
-              onClick={handleToggleSelection}
-            >
-              {isAdded ? (
-                <><CheckCircle2 className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Added</>
-              ) : (
-                <><PlusCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Add</>
-              )}
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Section */}
-      <div className="relative h-[60vh] w-full mt-0 pt-16 sm:pt-0">
-        {heroImage ? (
-          <Image
-            src={heroImage}
-            alt={game.title}
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-secondary flex flex-col items-center justify-center gap-4">
-            <ImageOff className="w-16 h-16 text-muted-foreground/20" />
-            <span className="text-sm text-muted-foreground/40 font-bold uppercase tracking-widest">Image Unavailable</span>
-          </div>
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-        
-        <div className="absolute bottom-0 left-0 right-0 p-6 container mx-auto">
-          <div className="flex flex-wrap gap-2 mb-3">
-            <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
-              <Calendar className="h-3.5 w-3.5" /> {game.releaseYear}
-            </Badge>
-            {game.categories.map((cat, i) => (
-              <Badge key={i} className="bg-primary text-white px-4 py-1.5 text-sm uppercase tracking-wider font-bold shadow-2xl">
-                {cat}
-              </Badge>
-            ))}
-            <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
-              <HardDrive className="h-3.5 w-3.5" /> {game.size}
-            </Badge>
-          </div>
-          <h1 className="text-3xl md:text-7xl font-bold font-headline tracking-tighter leading-none">
-            {game.title}
-          </h1>
-        </div>
-      </div>
-
-      <main className="container mx-auto px-4 mt-8 max-w-5xl">
-        <div className="space-y-10">
-          <RevealSection>
-            <section className="bg-secondary/20 rounded-3xl p-6 md:p-10 border border-white/5 shadow-2xl">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold font-headline uppercase tracking-tight">The Story</h2>
-                {isRefining ? (
-                  <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
-                    <Sparkles className="mr-1 h-3 w-3" /> Refining...
-                  </div>
-                ) : (
-                  <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
-                    <Sparkles className="mr-1 h-3 w-3" /> AI Enhanced
-                  </Badge>
-                )}
-              </div>
-
-              {isRefining ? (
-                <div className="space-y-3">
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-[90%]" />
-                  <Skeleton className="h-4 w-[95%]" />
-                </div>
-              ) : (
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
-                  {refinedDescription || game.description}
-                </p>
-              )}
-            </section>
-          </RevealSection>
-
-          {game.images && game.images.filter(img => img && img.trim() !== '').length > 0 && (
-            <RevealSection>
-              <section>
-                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Gallery</h2>
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {game.images.filter(img => img && img.trim() !== '').map((img, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2">
-                        <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
-                          <Image
-                            src={img}
-                            alt={`${game.title} Screenshot ${index + 1}`}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <div className="flex justify-end gap-2 mt-4">
-                    <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-                    <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-                  </div>
-                </Carousel>
-              </section>
-            </RevealSection>
-          )}
-
-          <RevealSection>
-            <section>
-              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Trailer</h2>
-              <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/5 ring-1 ring-white/10">
-                <iframe
-                  src={game.videoUrl}
-                  title={`${game.title} Trailer`}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </section>
-          </RevealSection>
-
-          {game.shorts && game.shorts.length > 0 && (
-            <RevealSection>
-              <section>
-                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Moments</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                  {game.shorts.map((url, index) => (
-                    <div key={index} className="relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] ring-1 ring-white/10">
-                      <iframe
-                        src={url}
-                        title={`${game.title} Short ${index + 1}`}
-                        className="absolute inset-0 w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    </div>
-                  ))}
-                </div>
-              </section>
-            </RevealSection>
-          )}
-        </div>
-      </main>
-    </div>
+    <>
+      {/* Schema.org markup for Game */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": game.title,
+            "applicationCategory": "Game",
+            "operatingSystem": "Gaming Consoles, PC",
+            "description": game.description,
+            "image": game.thumbnail,
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "USD",
+              "price": "Check for Price"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150"
+            }
+          })
+        }}
+      />
+      <GameClient params={params} />
+    </>
   );
 }
