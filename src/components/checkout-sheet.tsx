@@ -74,8 +74,21 @@ export function CheckoutSheet() {
 
   const warning = getWarning();
 
+  // Prevent closing if the limit is exceeded
+  const handleOnOpenChange = (open: boolean) => {
+    if (!open && totalSizeNum > 1800) {
+      toast({
+        variant: "destructive",
+        title: "Action Required",
+        description: "Please remove some games to stay below the 1800 GB limit before closing.",
+      });
+      return;
+    }
+    setCheckoutOpen(open);
+  };
+
   return (
-    <Sheet open={isCheckoutOpen} onOpenChange={setCheckoutOpen}>
+    <Sheet open={isCheckoutOpen} onOpenChange={handleOnOpenChange}>
       <SheetTrigger asChild>
         <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs">
           <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />

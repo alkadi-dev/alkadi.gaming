@@ -24,7 +24,6 @@ export function StorageLimitAlert() {
   } | null>(null);
   
   // Track the highest threshold already alerted to prevent spamming
-  // Initialize with -1 to differentiate from the first calculation
   const lastThresholdRef = useRef<number>(-1);
 
   useEffect(() => {
@@ -37,7 +36,6 @@ export function StorageLimitAlert() {
       totalSizeNum > 280 ? 280 : 0;
 
     // First time initializing: just set the current threshold without alerting
-    // This prevents the alert from firing immediately on page load
     if (lastThresholdRef.current === -1) {
       lastThresholdRef.current = currentThreshold;
       return;
@@ -49,7 +47,7 @@ export function StorageLimitAlert() {
         setActiveLimit({
           threshold: 1800,
           title: "Maximum Storage Reached!",
-          message: "You have reached the absolute maximum storage limit of 1800 GB. Please review your selection and remove some games to continue.",
+          message: "You have reached the absolute maximum storage limit of 1800 GB. You must remove some games to continue.",
           icon: <Ban className="h-6 w-6 text-destructive" />
         });
       } else if (currentThreshold === 1400) {
@@ -96,6 +94,10 @@ export function StorageLimitAlert() {
   };
 
   const handleOpenChange = (open: boolean) => {
+    // If it's the 1800 limit, do not allow closing it through clicking outside or ESC
+    if (!open && activeLimit?.threshold === 1800) {
+      return;
+    }
     if (!open) {
       setActiveLimit(null);
     }
@@ -116,9 +118,11 @@ export function StorageLimitAlert() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex flex-col sm:flex-row gap-2 mt-4">
-          <AlertDialogCancel className="w-full sm:w-auto bg-white/5 border-white/10 rounded-xl hover:bg-white/10 text-xs font-bold uppercase tracking-wider h-11">
-            Keep Going
-          </AlertDialogCancel>
+          {activeLimit?.threshold !== 1800 && (
+            <AlertDialogCancel className="w-full sm:w-auto bg-white/5 border-white/10 rounded-xl hover:bg-white/10 text-xs font-bold uppercase tracking-wider h-11">
+              Keep Going
+            </AlertDialogCancel>
+          )}
           <AlertDialogAction 
             onClick={handleReview}
             className={`w-full sm:w-auto rounded-xl text-xs font-bold uppercase tracking-wider text-white h-11 ${
