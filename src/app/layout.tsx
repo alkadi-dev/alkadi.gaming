@@ -10,12 +10,16 @@ export const metadata: Metadata = {
   title: 'Alkadi Gaming',
   description: 'Explore an immersive catalog of games with rich media.',
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180' },
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        url: '/icon.png',
+      },
     ],
   },
 };
