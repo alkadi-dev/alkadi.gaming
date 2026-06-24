@@ -5,9 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, CheckCircle2, ImageOff, Calendar } from 'lucide-react';
+import { HardDrive, CheckCircle2, ImageOff, Calendar, Plus, Check } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
+import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 
 interface GameCardProps {
@@ -15,7 +17,8 @@ interface GameCardProps {
 }
 
 export function GameCard({ game }: GameCardProps) {
-  const { isInSelection } = useSelection();
+  const { isInSelection, addToSelection, removeFromSelection, isOverLimit } = useSelection();
+  const { toast } = useToast();
   const isAdded = isInSelection(game.id);
   const [isVisible, setIsVisible] = useState(false);
   const [imageError, setImageError] = useState(false);
@@ -45,6 +48,33 @@ export function GameCard({ game }: GameCardProps) {
       }
     };
   }, []);
+
+  const handleToggleSelection = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (isAdded) {
+      removeFromSelection(game.id);
+      toast({
+        title: "Removed from Selection",
+        description: `${game.title} has been removed.`,
+      });
+    } else {
+      if (isOverLimit) {
+        toast({
+          variant: "destructive",
+          title: "Storage Limit Exceeded",
+          description: "You have reached the maximum storage limit.",
+        });
+        return;
+      }
+      addToSelection(game.id);
+      toast({
+        title: "Game Added!",
+        description: `${game.title} has been added to your selection.`,
+      });
+    }
+  };
 
   const hasThumbnail = game.thumbnail && game.thumbnail.trim() !== '' && !imageError;
 
@@ -94,7 +124,7 @@ export function GameCard({ game }: GameCardProps) {
 
             {!isAdded && game.isRecommended && (
               <div className="absolute top-3 right-3 pointer-events-none">
-                <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
+                <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg px-2">
                   Recommended
                 </div>
               </div>
@@ -112,6 +142,24 @@ export function GameCard({ game }: GameCardProps) {
               </div>
             </div>
           </Link>
+
+          {/* Quick Add Button */}
+          <Button
+            size="icon"
+            className={cn(
+              "absolute bottom-2 right-2 z-20 rounded-full w-10 h-10 shadow-2xl transition-all duration-300 transform border-2 border-white/10",
+              isAdded 
+                ? "bg-green-600 hover:bg-green-700 scale-110" 
+                : "bg-primary hover:bg-primary/90 hover:scale-110 active:scale-95"
+            )}
+            onClick={handleToggleSelection}
+          >
+            {isAdded ? (
+              <Check className="w-5 h-5 text-white" />
+            ) : (
+              <Plus className="w-5 h-5 text-white" />
+            )}
+          </Button>
         </div>
         
         <CardContent className="p-3 flex-1 flex flex-col items-center text-center">
