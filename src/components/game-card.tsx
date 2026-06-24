@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, CheckCircle2, ImageOff, Calendar, Plus, Check } from 'lucide-react';
+import { HardDrive, ImageOff, Calendar, Plus, Check } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
@@ -108,19 +108,11 @@ export function GameCard({ game }: GameCardProps) {
             
             <div className="absolute top-3 left-3">
               {game.categories && game.categories.length > 0 && (
-                <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm text-xs px-3 py-1 w-fit uppercase font-bold tracking-tight shadow-xl">
+                <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm text-[10px] px-2.5 py-0.5 w-fit uppercase font-bold tracking-tight shadow-xl">
                   {game.categories[0]}
                 </Badge>
               )}
             </div>
-
-            {isAdded && (
-              <div className="absolute top-3 right-3 pointer-events-none">
-                <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-green-600 backdrop-blur-md rounded-full border border-white/10 shadow-lg gap-1.5">
-                  <CheckCircle2 className="w-3 h-3" /> Selected
-                </div>
-              </div>
-            )}
 
             {!isAdded && game.isRecommended && (
               <div className="absolute top-3 right-3 pointer-events-none">
@@ -147,18 +139,27 @@ export function GameCard({ game }: GameCardProps) {
           <Button
             size="icon"
             className={cn(
-              "absolute bottom-2 right-2 z-20 rounded-full w-10 h-10 shadow-2xl transition-all duration-300 transform border-2 border-white/10",
+              "absolute bottom-2 right-2 z-20 rounded-full w-8 h-8 shadow-2xl transition-all duration-500 transform border border-white/10",
               isAdded 
-                ? "bg-green-600 hover:bg-green-700 scale-110" 
-                : "bg-primary hover:bg-primary/90 hover:scale-110 active:scale-95"
+                ? "bg-green-500 hover:bg-green-600 scale-110 text-white" 
+                : "bg-white/20 backdrop-blur-md text-white hover:bg-primary hover:scale-110 active:scale-95"
             )}
             onClick={handleToggleSelection}
           >
-            {isAdded ? (
-              <Check className="w-5 h-5 text-white" />
-            ) : (
-              <Plus className="w-5 h-5 text-white" />
-            )}
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Plus 
+                className={cn(
+                  "absolute h-4 w-4 transition-all duration-500",
+                  isAdded ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"
+                )} 
+              />
+              <Check 
+                className={cn(
+                  "absolute h-4 w-4 transition-all duration-500",
+                  isAdded ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-0"
+                )} 
+              />
+            </div>
           </Button>
         </div>
         
