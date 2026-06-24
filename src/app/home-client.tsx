@@ -23,7 +23,7 @@ const FacebookIcon = () => (
 );
 
 const InstagramIcon = () => (
-  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.388-.667.666-1.078 1.335-1.384 2.122-.297.765-.499 1.636-.559 2.912-.06 1.281-.074 1.688-.074 4.948s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.387 2.126.666.666 1.335 1.079 2.122 1.385.765.296 1.636.499 2.912.558 1.281.06 1.687.074 4.948.074s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.387.666-.666 1.079-1.335 1.385-2.122.296-.765.499-1.636.558-2.912.06-1.281.074-1.687.074-4.948s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.387-2.126C21.319 1.347 20.651.935 19.864.63c-.765-.297-1.636-.499-2.912-.559C15.669.015 15.262 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.493.559.217.96.477 1.38.896.419.42.679.819.896 1.379.244.422.438 1.056.493 2.227.056 1.265.071 1.647.071 4.85s-.015 3.585-.071 4.85c-.055 1.17-.249 1.805-.493 2.227-.217.559-.477.96-.896 1.38-.42.419-.819.679-1.379.896-.422.244-1.056.438-2.227.493-1.265.056-1.647.071-4.85.071s-3.585-.015-4.85-.071c-1.17-.055-1.805-.249-2.227-.493-.559-.217-.96-.477-1.38-.896-.419-.42-.679-.819-.896-1.379-.244-.422-.438-1.056-.493-2.227C2.175 15.585 2.16 15.203 2.16 12s.016-3.585.071-4.85c.055-1.17.249-1.805.493-2.227.217-.559.477-.96.896-1.38.42-.419.819-.679 1.379-.896.422-.244 1.056-.438 2.227-.493 1.265-.055 1.647-.071 4.85-.071zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16.02a4.02 4.02 0 110-8.04 4.02 4.02 0 010 8.04zm7.846-10.405a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.388-.667.666-1.078 1.335-1.384 2.122-.297.765-.499 1.636-.559 2.912-.06 1.281-.074 1.688-.074 4.948s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.387 2.126.666.666 1.335 1.079 2.122 1.385.765.296 1.636.499 2.912.558 1.281.06 1.687.074 4.948.074s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.387.666-.666 1.079-1.335 1.385-2.122.296-.765.499-1.636.558-2.912.06 1.281.074-1.687.074-4.948s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.387-2.126C21.319 1.347 20.651.935 19.864.63c-.765-.297-1.636-.499-2.912-.559C15.669.015 15.262 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.493.559.217.96.477 1.38.896.419.42.679.819.896 1.379.244.422.438 1.056.493 2.227.056 1.265.071 1.647.071 4.85s-.015 3.585-.071 4.85c-.055 1.17-.249 1.805-.493 2.227-.217.559-.477.96-.896 1.38-.42.419-.819.679-1.379.896-.422.244-1.056.438-2.227.493-1.265.056-1.647.071-4.85.071s-3.585-.015-4.85-.071c-1.17-.055-1.805-.249-2.227-.493-.559-.217-.96-.477-1.38-.896-.419-.42-.679-.819-.896-1.379-.244-.422-.438-1.056-.493-2.227C2.175 15.585 2.16 15.203 2.16 12s.016-3.585.071-4.85c.055-1.17.249-1.805.493-2.227.217-.559.477-.96.896-1.38.42-.419.819-.679 1.379-.896.422-.244 1.056-.438 2.227-.493 1.265-.055 1.647-.071 4.85-.071zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16.02a4.02 4.02 0 110-8.04 4.02 4.02 0 010 8.04zm7.846-10.405a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
 );
 
 const TikTokIcon = () => (
@@ -236,7 +236,7 @@ export default function HomeClient() {
       </header>
 
       {/* Hero Section - Edge to Edge */}
-      <section className="relative w-full overflow-hidden h-[500px] lg:h-[calc(100vh-56px)] flex items-center justify-center group mb-12">
+      <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center group mb-12">
         {heroBackground ? (
           <Image
             src={heroBackground}
@@ -252,11 +252,11 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
         <div className="max-w-5xl relative z-10 mx-auto text-center px-6">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold font-headline mb-6 leading-tight">
-            <span className="text-white uppercase block mb-4 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-            <span className="text-primary text-2xl md:text-4xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
+          <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
+            <span className="text-white uppercase block mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
+            <span className="text-primary text-3xl md:text-5xl lg:text-6xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
           </h1>
-          <p className="text-white/80 text-base md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-medium drop-shadow">
+          <p className="text-white/90 text-lg md:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-md">
             Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
