@@ -14,6 +14,7 @@ import { Label } from '@/components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useSelection } from '@/components/selection-context';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
 // --- Brand Icons ---
@@ -56,13 +57,14 @@ export default function HomeClient() {
   const { totalSizeNum, currentCapacity } = useSelection();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(140);
+  const [maxSize, setMaxSize] = useState(150);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
+  const heroBackground = PlaceHolderImages.find(img => img.id === 'hero-main')?.imageUrl || '';
 
   // Restore state as early as possible
   useLayoutEffect(() => {
@@ -73,7 +75,7 @@ export default function HomeClient() {
     if (restoredCategory) setSelectedCategory(restoredCategory);
     if (restoredMaxSize) {
       const parsed = parseInt(restoredMaxSize, 10);
-      setMaxSize(parsed > 140 ? 140 : parsed);
+      setMaxSize(parsed > 150 ? 150 : parsed);
     }
     if (restoredSort) setSortOrder(restoredSort);
 
@@ -192,7 +194,7 @@ export default function HomeClient() {
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const activeFiltersCount = (maxSize < 140 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
+  const activeFiltersCount = (maxSize < 150 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
   const handleSuggestionClick = (gameId: string) => {
     router.push(`/game/${gameId}`);
@@ -234,19 +236,33 @@ export default function HomeClient() {
       </header>
 
       <main className="flex-1 container mx-auto px-4 py-8">
-        <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/5 p-8 md:p-12">
-          <div className="max-w-4xl relative z-10 mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-4 leading-tight">
-              <span className="text-white uppercase block mb-2 tracking-tighter">ALKADI GAMING</span>
-              <span className="text-primary text-xl md:text-3xl block font-normal">Buy Your Game Easy, Cheap, and Fast</span>
+        <div className="relative rounded-3xl overflow-hidden mb-12 border border-white/5 h-[400px] lg:h-[calc(100vh-120px)] flex items-center justify-center group">
+          {heroBackground ? (
+            <Image
+              src={heroBackground}
+              alt="Alkadi Gaming Hero Background"
+              fill
+              priority
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              sizes="100vw"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          
+          <div className="max-w-4xl relative z-10 mx-auto text-center px-6">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold font-headline mb-4 leading-tight">
+              <span className="text-white uppercase block mb-2 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
+              <span className="text-primary text-xl md:text-3xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
             </h1>
-            <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed font-medium drop-shadow">
               Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
+                className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14"
                 onClick={scrollToLibrary}
               >
                 Browse Now
@@ -254,7 +270,7 @@ export default function HomeClient() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:bg-primary hover:text-white border-white/20 shadow-lg hover:shadow-primary/20"
+                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border-white/20 shadow-2xl px-8 h-14"
                 onClick={scrollToContact}
               >
                 Contact Us
@@ -347,7 +363,7 @@ export default function HomeClient() {
                       <Slider
                         value={[maxSize]}
                         min={1}
-                        max={140}
+                        max={150}
                         step={1}
                         onValueChange={(val) => setMaxSize(val[0])}
                         className="py-1"
@@ -361,13 +377,13 @@ export default function HomeClient() {
                       >
                         <Check className="w-3.5 h-3.5 mr-2" /> View Results
                       </Button>
-                      {(maxSize < 140 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
+                      {(maxSize < 150 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
                         <Button 
                           variant="ghost" 
                           size="sm"
                           className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
                           onClick={() => {
-                            setMaxSize(140);
+                            setMaxSize(150);
                             setSortOrder('title-asc');
                             setSelectedCategory('All');
                             setIsFilterOpen(false);
@@ -448,7 +464,7 @@ export default function HomeClient() {
               onClick={() => {
                 setSelectedCategory('All');
                 setSearchQuery('');
-                setMaxSize(140);
+                setMaxSize(150);
                 setSortOrder('title-asc');
               }}
               className="text-primary mt-4 font-bold"

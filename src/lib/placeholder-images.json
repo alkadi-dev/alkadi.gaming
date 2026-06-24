@@ -7,6 +7,12 @@
       "imageHint": "gaming logo"
     },
     {
+      "id": "hero-main",
+      "description": "Main Hero Background",
+      "imageUrl": "https://6a3b66710a4149112241450e.imgix.net/TphmpDs7loQSH7sqVqVs2.jpeg",
+      "imageHint": "gaming background"
+    },
+    {
       "id": "rpg-hero",
       "description": "Epic fantasy RPG landscape",
       "imageUrl": "https://picsum.photos/seed/rpg1/1200/600",
@@ -591,7 +597,7 @@
     {
       "id": "rebio-hero",
       "description": "Resident Evil Biohazard hero",
-      "imageUrl": "https://picsum.photos/seed/rebio-hero/1200/800",
+      "imageUrl": "https://pics_re4-hero/1200/800",
       "imageHint": "creepy mansion"
     },
     {
