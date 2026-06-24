@@ -21,7 +21,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Copy } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -38,7 +38,23 @@ export function CheckoutSheet() {
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    return `Hello Alkadi Gaming! 🎮\n\nI've selected the following games from your catalog:\n\n${listText}\n\nTotal Games: ${selectedGames.length}\nTotal Storage: ~${totalSizeNum.toFixed(1)} GB\n\nPlease let me know the availability and how to proceed! Thank you.`;
+    return `ALKADI GAMING SELECTION\n\n${listText}\n\nTotal Storage: ~${totalSizeNum.toFixed(1)} GB`;
+  };
+
+  const handleCopySummary = () => {
+    if (selectedGames.length === 0) return;
+    const content = generateListContent();
+    
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(content)
+        .then(() => {
+          toast({
+            title: "Summary Copied!",
+            description: "Selection list has been copied to your clipboard.",
+          });
+        })
+        .catch((err) => console.error("Clipboard failed:", err));
+    }
   };
 
   const handleWhatsAppRedirect = () => {
@@ -48,19 +64,11 @@ export function CheckoutSheet() {
     const encodedText = encodeURIComponent(finalContent);
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
     
-    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(finalContent)
-        .catch((err) => console.warn("Clipboard sync failed:", err))
-        .finally(() => {
-          window.open(whatsappUrl, '_blank');
-          toast({
-            title: "Order List Ready!",
-            description: "Your selection is pre-filled in WhatsApp. You can also paste the text from your clipboard if needed!",
-          });
-        });
-    } else {
-      window.open(whatsappUrl, '_blank');
-    }
+    window.open(whatsappUrl, '_blank');
+    toast({
+      title: "WhatsApp Ready!",
+      description: "Your selection has been prepared for WhatsApp.",
+    });
   };
 
   const getWarning = () => {
@@ -74,7 +82,6 @@ export function CheckoutSheet() {
 
   const warning = getWarning();
 
-  // Prevent closing if the limit is exceeded
   const handleOnOpenChange = (open: boolean) => {
     if (!open && totalSizeNum > 1800) {
       toast({
@@ -174,13 +181,20 @@ export function CheckoutSheet() {
                 </Alert>
               )}
               
-              <div className="grid grid-cols-1 gap-2">
+              <div className="grid grid-cols-2 gap-2">
+                <Button 
+                  onClick={handleCopySummary}
+                  variant="outline"
+                  className="bg-white/5 border-white/10 hover:bg-white/10 text-white rounded-xl py-6 font-bold text-xs"
+                >
+                  <Copy className="mr-2 h-4 w-4" /> Copy Summary
+                </Button>
                 <Button 
                   onClick={handleWhatsAppRedirect} 
                   disabled={totalSizeNum > 1800}
-                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-xs sm:text-sm disabled:opacity-50"
+                  className="bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-xs disabled:opacity-50"
                 >
-                  <MessageCircle className="mr-2 h-4 w-4" /> Open in WhatsApp
+                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
                 </Button>
               </div>
               

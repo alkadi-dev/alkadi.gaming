@@ -235,50 +235,51 @@ export default function HomeClient() {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-8">
-        <div className="relative rounded-3xl overflow-hidden mb-12 border border-white/5 h-[400px] lg:h-[calc(100vh-120px)] flex items-center justify-center group">
-          {heroBackground ? (
-            <Image
-              src={heroBackground}
-              alt="Alkadi Gaming Hero Background"
-              fill
-              priority
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              sizes="100vw"
-            />
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-          
-          <div className="max-w-4xl relative z-10 mx-auto text-center px-6">
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold font-headline mb-4 leading-tight">
-              <span className="text-white uppercase block mb-2 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-              <span className="text-primary text-xl md:text-3xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
-            </h1>
-            <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed font-medium drop-shadow">
-              Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14"
-                onClick={scrollToLibrary}
-              >
-                Browse Now
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="text-lg transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border-white/20 shadow-2xl px-8 h-14"
-                onClick={scrollToContact}
-              >
-                Contact Us
-              </Button>
-            </div>
+      {/* Hero Section - Edge to Edge */}
+      <section className="relative w-full overflow-hidden h-[500px] lg:h-[calc(100vh-56px)] flex items-center justify-center group mb-12">
+        {heroBackground ? (
+          <Image
+            src={heroBackground}
+            alt="Alkadi Gaming Hero Background"
+            fill
+            priority
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            sizes="100vw"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        
+        <div className="max-w-4xl relative z-10 mx-auto text-center px-6">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold font-headline mb-4 leading-tight">
+            <span className="text-white uppercase block mb-2 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
+            <span className="text-primary text-xl md:text-3xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
+          </h1>
+          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed font-medium drop-shadow">
+            Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14"
+              onClick={scrollToLibrary}
+            >
+              Browse Now
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="text-lg transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border-white/20 shadow-2xl px-8 h-14"
+              onClick={scrollToContact}
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
+      </section>
 
+      <main className="flex-1 container mx-auto px-4 py-8">
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col space-y-6">
             <div className="space-y-4">
