@@ -21,7 +21,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Copy } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -39,22 +39,6 @@ export function CheckoutSheet() {
       .join('\n');
     
     return `ALKADI GAMING SELECTION\n\n${listText}\n\nTotal Storage: ~${totalSizeNum.toFixed(1)} GB`;
-  };
-
-  const handleCopySummary = () => {
-    if (selectedGames.length === 0) return;
-    const content = generateListContent();
-    
-    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(content)
-        .then(() => {
-          toast({
-            title: "Summary Copied!",
-            description: "Selection list has been copied to your clipboard.",
-          });
-        })
-        .catch((err) => console.error("Clipboard failed:", err));
-    }
   };
 
   const handleWhatsAppRedirect = () => {
@@ -181,20 +165,13 @@ export function CheckoutSheet() {
                 </Alert>
               )}
               
-              <div className="grid grid-cols-2 gap-2">
-                <Button 
-                  onClick={handleCopySummary}
-                  variant="outline"
-                  className="bg-white/5 border-white/10 hover:bg-white/10 text-white rounded-xl py-6 font-bold text-xs"
-                >
-                  <Copy className="mr-2 h-4 w-4" /> Copy Summary
-                </Button>
+              <div className="flex flex-col gap-2">
                 <Button 
                   onClick={handleWhatsAppRedirect} 
                   disabled={totalSizeNum > 1800}
-                  className="bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-xs disabled:opacity-50"
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-sm disabled:opacity-50"
                 >
-                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
+                  <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp
                 </Button>
               </div>
               
