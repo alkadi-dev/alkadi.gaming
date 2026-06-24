@@ -42,7 +42,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: '5',
-    title: 'Red Dead Redemption 2',
+    title: 'Red Dead Redemption 22',
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     categories: ['Open World'],
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
