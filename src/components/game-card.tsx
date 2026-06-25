@@ -141,8 +141,8 @@ export function GameCard({ game }: GameCardProps) {
             className={cn(
               "absolute bottom-2 right-2 z-20 rounded-full w-8 h-8 shadow-2xl transition-all duration-500 transform border border-white/10",
               isAdded 
-                ? "bg-green-500 hover:bg-green-600 scale-110 text-white" 
-                : "bg-white/20 backdrop-blur-md text-white hover:bg-primary hover:scale-110 active:scale-95"
+                ? "bg-primary hover:bg-primary/90 scale-110 text-white" 
+                : "bg-white/20 backdrop-blur-md text-white hover:bg-white/40 hover:scale-110 active:scale-95"
             )}
             onClick={handleToggleSelection}
           >

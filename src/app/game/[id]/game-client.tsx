@@ -159,10 +159,10 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
               disabled={!isAdded && isOverLimit}
               className={`rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-3 sm:px-4 text-[10px] sm:text-xs ${
                 isAdded 
-                  ? 'bg-green-600 hover:bg-green-700' 
+                  ? 'bg-primary hover:bg-primary/90' 
                   : isOverLimit
                     ? 'bg-primary/20 cursor-not-allowed opacity-50'
-                    : 'bg-primary hover:scale-105 active:scale-95'
+                    : 'bg-white/10 hover:bg-white/20 border border-white/10'
               }`}
               onClick={handleToggleSelection}
             >
