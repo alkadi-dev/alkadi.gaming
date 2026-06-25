@@ -66,7 +66,6 @@ export default function HomeClient() {
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const heroVideoUrl = "https://6a3b66710a4149112241450e.imgix.net/controller%20video.mov";
-  const heroPoster = "https://6a3b66710a4149112241450e.imgix.net/ChatGPT%20Image%20Jun%2024,%202026,%2006_57_47%20PM.png";
 
   useEffect(() => {
     setMounted(true);
@@ -236,20 +235,19 @@ export default function HomeClient() {
                 <span className="text-muted-foreground">{currentCapacity} GB</span>
               </div>
             </div>
-            <CheckoutSheet />
+            {mounted && <CheckoutSheet />}
           </div>
         </div>
       </header>
 
       {/* Hero Section - Edge to Edge Video */}
-      <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12">
+      <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
         <video
           autoPlay
           loop
           muted
           playsInline
-          poster={heroPoster}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-80"
         >
           <source src={heroVideoUrl} />
         </video>
