@@ -250,12 +250,12 @@ export default function HomeClient() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
-        <div className="max-w-5xl relative z-10 mx-auto text-center px-6">
-          <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
+        <div className="max-w-5xl relative z-10 mx-auto text-center px-8 sm:px-12 py-12">
+          <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
             <span className="text-white uppercase block mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-            <span className="text-primary text-3xl md:text-5xl lg:text-6xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
+            <span className="text-primary text-2xl md:text-5xl lg:text-6xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
           </h1>
-          <p className="text-white/90 text-lg md:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-md">
+          <p className="text-white/90 text-base md:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-md">
             Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
