@@ -64,7 +64,8 @@ export default function HomeClient() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
-  const heroBackground = PlaceHolderImages.find(img => img.id === 'hero-main')?.imageUrl || '';
+  const heroVideoUrl = "https://6a3b66710a4149112241450e.imgix.net/Timeline%201.mov";
+  const heroPoster = "https://6a3b66710a4149112241450e.imgix.net/ChatGPT%20Image%20Jun%2024,%202026,%2006_57_47%20PM.png";
 
   // Restore state as early as possible
   useLayoutEffect(() => {
@@ -235,20 +236,19 @@ export default function HomeClient() {
         </div>
       </header>
 
-      {/* Hero Section - Edge to Edge */}
+      {/* Hero Section - Edge to Edge Video */}
       <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center group mb-12">
-        {heroBackground ? (
-          <Image
-            src={heroBackground}
-            alt="Alkadi Gaming Hero Background"
-            fill
-            priority
-            className="object-cover transition-transform duration-1000 group-hover:scale-105"
-            sizes="100vw"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
-        )}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroPoster}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+        >
+          <source src={heroVideoUrl} type="video/quicktime" />
+          <source src={heroVideoUrl} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
         <div className="max-w-5xl relative z-10 mx-auto text-center px-6">
@@ -260,21 +260,18 @@ export default function HomeClient() {
             Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14"
+            <button 
+              className="bg-primary text-white text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14 rounded-md"
               onClick={scrollToLibrary}
             >
               Browse Now
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border-white/20 shadow-2xl px-8 h-14"
+            </button>
+            <button 
+              className="text-white text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border border-white/20 shadow-2xl px-8 h-14 rounded-md"
               onClick={scrollToContact}
             >
               Contact Us
-            </Button>
+            </button>
           </div>
         </div>
       </section>
