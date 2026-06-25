@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useSelection } from '@/components/selection-context';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import {
@@ -21,7 +22,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -30,6 +31,11 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 export function CheckoutSheet() {
   const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen } = useSelection();
   const { toast } = useToast();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const selectedGames = MOCK_GAMES.filter((game) => selectedIds.includes(game.id));
 
@@ -77,6 +83,15 @@ export function CheckoutSheet() {
     }
     setCheckoutOpen(open);
   };
+
+  if (!mounted) {
+    return (
+      <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs opacity-50">
+        <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />
+        <span className="hidden sm:inline">Checkout</span>
+      </Button>
+    );
+  }
 
   return (
     <Sheet open={isCheckoutOpen} onOpenChange={handleOnOpenChange}>

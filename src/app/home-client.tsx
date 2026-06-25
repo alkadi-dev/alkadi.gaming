@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useLayoutEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
@@ -62,13 +62,18 @@ export default function HomeClient() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const heroVideoUrl = "https://6a3b66710a4149112241450e.imgix.net/controller%20video.mov";
   const heroPoster = "https://6a3b66710a4149112241450e.imgix.net/ChatGPT%20Image%20Jun%2024,%202026,%2006_57_47%20PM.png";
 
-  // Restore state as early as possible
-  useLayoutEffect(() => {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Restore state as early as possible on client
+  useEffect(() => {
     const restoredCategory = sessionStorage.getItem('home-category');
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
     const restoredSort = sessionStorage.getItem('home-sort');
@@ -305,94 +310,101 @@ export default function HomeClient() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
-                <PopoverTrigger asChild>
-                  <Button 
-                    variant="secondary" 
-                    size="sm" 
-                    className={cn(
-                      "rounded-xl h-10 px-4 gap-2 transition-all border border-white/5",
-                      activeFiltersCount > 0 ? "bg-primary text-white" : "bg-secondary/50"
-                    )}
-                  >
-                    <Filter className="h-4 w-4" />
-                    <span className="text-xs font-bold uppercase tracking-tight">Filters</span>
-                    {activeFiltersCount > 0 && (
-                      <span className="ml-1 bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
-                        {activeFiltersCount}
-                      </span>
-                    )}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="start">
-                  <div className="space-y-6">
-                    <div className="space-y-3">
-                      <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                        <ArrowUpDown className="h-3 w-3 text-primary" /> Sort By
-                      </Label>
-                      <Select 
-                        value={sortOrder} 
-                        onValueChange={(val) => {
-                          setSortOrder(val);
-                          setIsFilterOpen(false);
-                        }}
-                      >
-                        <SelectTrigger className="bg-secondary/30 border-white/5 rounded-xl h-10">
-                          <SelectValue placeholder="Sort order" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-background border-white/10 rounded-xl">
-                          <SelectItem value="title-asc">Alphabetical (A-Z)</SelectItem>
-                          <SelectItem value="year-desc">Year: Newest to Oldest</SelectItem>
-                          <SelectItem value="year-asc">Year: Oldest to Newest</SelectItem>
-                          <SelectItem value="size-asc">Size: Smallest to Largest</SelectItem>
-                          <SelectItem value="size-desc">Size: Largest to Smallest</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center mb-1">
+              {mounted ? (
+                <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
+                  <PopoverTrigger asChild>
+                    <Button 
+                      variant="secondary" 
+                      size="sm" 
+                      className={cn(
+                        "rounded-xl h-10 px-4 gap-2 transition-all border border-white/5",
+                        activeFiltersCount > 0 ? "bg-primary text-white" : "bg-secondary/50"
+                      )}
+                    >
+                      <Filter className="h-4 w-4" />
+                      <span className="text-xs font-bold uppercase tracking-tight">Filters</span>
+                      {activeFiltersCount > 0 && (
+                        <span className="ml-1 bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
+                          {activeFiltersCount}
+                        </span>
+                      )}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-80 p-6 bg-background/95 backdrop-blur-xl border-white/10 rounded-2xl shadow-2xl" side="bottom" align="start">
+                    <div className="space-y-6">
+                      <div className="space-y-3">
                         <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                          <HardDrive className="h-3 w-3 text-primary" /> Max Storage
+                          <ArrowUpDown className="h-3 w-3 text-primary" /> Sort By
                         </Label>
-                        <span className="text-xs font-bold text-primary">{maxSize} GB</span>
-                      </div>
-                      <Slider
-                        value={[maxSize]}
-                        min={1}
-                        max={150}
-                        step={1}
-                        onValueChange={(val) => setMaxSize(val[0])}
-                        className="py-1"
-                      />
-                    </div>
-
-                    <div className="pt-4 border-t border-white/5 flex flex-col gap-2">
-                      <Button
-                        className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl h-10 font-bold uppercase tracking-tight text-xs"
-                        onClick={() => setIsFilterOpen(false)}
-                      >
-                        <Check className="w-3.5 h-3.5 mr-2" /> View Results
-                      </Button>
-                      {(maxSize < 150 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
-                          onClick={() => {
-                            setMaxSize(150);
-                            setSortOrder('title-asc');
-                            setSelectedCategory('All');
+                        <Select 
+                          value={sortOrder} 
+                          onValueChange={(val) => {
+                            setSortOrder(val);
                             setIsFilterOpen(false);
                           }}
                         >
-                          Reset Filters
+                          <SelectTrigger className="bg-secondary/30 border-white/5 rounded-xl h-10">
+                            <SelectValue placeholder="Sort order" />
+                          </SelectTrigger>
+                          <SelectContent className="bg-background border-white/10 rounded-xl">
+                            <SelectItem value="title-asc">Alphabetical (A-Z)</SelectItem>
+                            <SelectItem value="year-desc">Year: Newest to Oldest</SelectItem>
+                            <SelectItem value="year-asc">Year: Oldest to Newest</SelectItem>
+                            <SelectItem value="size-asc">Size: Smallest to Largest</SelectItem>
+                            <SelectItem value="size-desc">Size: Largest to Smallest</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div className="space-y-4">
+                        <div className="flex justify-between items-center mb-1">
+                          <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
+                            <HardDrive className="h-3 w-3 text-primary" /> Max Storage
+                          </Label>
+                          <span className="text-xs font-bold text-primary">{maxSize} GB</span>
+                        </div>
+                        <Slider
+                          value={[maxSize]}
+                          min={1}
+                          max={150}
+                          step={1}
+                          onValueChange={(val) => setMaxSize(val[0])}
+                          className="py-1"
+                        />
+                      </div>
+
+                      <div className="pt-4 border-t border-white/5 flex flex-col gap-2">
+                        <Button
+                          className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl h-10 font-bold uppercase tracking-tight text-xs"
+                          onClick={() => setIsFilterOpen(false)}
+                        >
+                          <Check className="w-3.5 h-3.5 mr-2" /> View Results
                         </Button>
-                      )}
+                        {(maxSize < 150 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
+                          <Button 
+                            variant="ghost" 
+                            size="sm"
+                            className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
+                            onClick={() => {
+                              setMaxSize(150);
+                              setSortOrder('title-asc');
+                              setSelectedCategory('All');
+                              setIsFilterOpen(false);
+                            }}
+                          >
+                            Reset Filters
+                          </Button>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </PopoverContent>
-              </Popover>
+                  </PopoverContent>
+                </Popover>
+              ) : (
+                <Button variant="secondary" size="sm" className="rounded-xl h-10 px-4 gap-2 bg-secondary/50 border border-white/5 opacity-50">
+                  <Filter className="h-4 w-4" />
+                  <span className="text-xs font-bold uppercase tracking-tight">Filters</span>
+                </Button>
+              )}
 
               <div className="relative flex-1" ref={searchContainerRef}>
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
