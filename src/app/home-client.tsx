@@ -64,7 +64,7 @@ export default function HomeClient() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
-  const heroVideoUrl = "https://6a3b66710a4149112241450e.imgix.net/Timeline%201.mov";
+  const heroVideoUrl = "https://6a3b66710a4149112241450e.imgix.net/kling_20260625_VIDEO__Please_ad_5782_0.mp4";
   const heroPoster = "https://6a3b66710a4149112241450e.imgix.net/ChatGPT%20Image%20Jun%2024,%202026,%2006_57_47%20PM.png";
 
   // Restore state as early as possible
@@ -246,7 +246,6 @@ export default function HomeClient() {
           poster={heroPoster}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
         >
-          <source src={heroVideoUrl} type="video/quicktime" />
           <source src={heroVideoUrl} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
