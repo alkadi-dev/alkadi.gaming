@@ -1675,7 +1675,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/it9wGffvYGM',
     shorts: [
-      'https://www.youtube.com/embed/it9wGffvYGM',
       'https://www.youtube.com/embed/ac2QN9fRFlg',
       'https://www.youtube.com/embed/sAeq4pUpp98'
     ],

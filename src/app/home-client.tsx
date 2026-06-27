@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, X } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -63,13 +63,27 @@ export default function HomeClient() {
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const heroVideoUrl = "https://6a3b66710a4149112241450e.imgix.net/controller%20video.mov";
 
   useEffect(() => {
     setMounted(true);
+    // Safety fallback: if video doesn't fire ready event in 4s, reveal page anyway
+    const timer = setTimeout(() => {
+      setIsVideoReady(true);
+    }, 4000);
+    return () => clearTimeout(timer);
   }, []);
+
+  // Check if video is already ready (e.g. from cache)
+  useEffect(() => {
+    if (videoRef.current && videoRef.current.readyState >= 3) {
+      setIsVideoReady(true);
+    }
+  }, [mounted]);
 
   // Restore state as early as possible on client
   useEffect(() => {
@@ -208,6 +222,27 @@ export default function HomeClient() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Visual Splash Screen until Video is Ready */}
+      {mounted && !isVideoReady && (
+        <div className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center transition-opacity duration-700">
+          <div className="flex flex-col items-center gap-6 animate-in fade-in zoom-in-95 duration-1000">
+             <div className="flex items-center gap-2 mb-4">
+              <span className="text-3xl sm:text-4xl font-black font-headline tracking-tighter text-white uppercase">
+                ALKADI
+              </span>
+              <span className="text-3xl sm:text-4xl font-black font-headline tracking-tighter text-primary uppercase">
+                GAMING
+              </span>
+            </div>
+            <div className="relative w-48 h-1 bg-white/5 rounded-full overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-primary animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_infinite]" />
+            </div>
+            <p className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/40 mt-2">Initializing Experience</p>
+          </div>
+        </div>
+      )}
+
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
         <div className="container mx-auto px-4 h-14 flex items-center justify-between gap-2">
           <div className="flex items-center gap-1.5 flex-shrink-0">
@@ -243,22 +278,31 @@ export default function HomeClient() {
       {/* Hero Section - Edge to Edge Video */}
       <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-80"
+          preload="auto"
+          onCanPlayThrough={() => setIsVideoReady(true)}
+          className={cn(
+            "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+            isVideoReady ? "opacity-80" : "opacity-0"
+          )}
         >
           <source src={heroVideoUrl} />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
-        <div className="max-w-5xl relative z-10 mx-auto text-center px-8 sm:px-12 py-12">
-          <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
+        <div className={cn(
+          "max-w-5xl relative z-10 mx-auto text-center px-10 sm:px-16 py-12 transition-all duration-1000 transform",
+          isVideoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        )}>
+          <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
             <span className="text-white uppercase block mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-            <span className="text-primary text-2xl md:text-5xl lg:text-6xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
+            <span className="text-primary text-3xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
           </h1>
-          <p className="text-white/90 text-base md:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-md">
+          <p className="text-white/90 text-lg md:text-2xl lg:text-4xl max-w-4xl mx-auto mb-14 leading-relaxed font-medium drop-shadow-md">
             Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
@@ -278,7 +322,10 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main className={cn(
+        "flex-1 container mx-auto px-4 py-8 transition-opacity duration-1000",
+        isVideoReady ? "opacity-100" : "opacity-0"
+      )}>
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col space-y-6">
             <div className="space-y-4">
@@ -482,7 +529,10 @@ export default function HomeClient() {
         )}
       </main>
 
-      <footer id="contact" className="border-t border-white/5 bg-secondary/10 pt-16 pb-12 mt-20">
+      <footer id="contact" className={cn(
+        "border-t border-white/5 bg-secondary/10 pt-16 pb-12 mt-20 transition-opacity duration-1000",
+        isVideoReady ? "opacity-100" : "opacity-0"
+      )}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-8 text-center">
             <div>
