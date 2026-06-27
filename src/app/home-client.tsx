@@ -14,7 +14,6 @@ import { Label } from '@/components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useSelection } from '@/components/selection-context';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
 // --- Brand Icons ---
@@ -71,21 +70,18 @@ export default function HomeClient() {
 
   useEffect(() => {
     setMounted(true);
-    // Safety fallback: if video doesn't fire ready event in 4s, reveal page anyway
     const timer = setTimeout(() => {
       setIsVideoReady(true);
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Check if video is already ready (e.g. from cache)
   useEffect(() => {
     if (videoRef.current && videoRef.current.readyState >= 3) {
       setIsVideoReady(true);
     }
   }, [mounted]);
 
-  // Restore state as early as possible on client
   useEffect(() => {
     const restoredCategory = sessionStorage.getItem('home-category');
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
@@ -101,7 +97,6 @@ export default function HomeClient() {
     setIsRestored(true);
   }, []);
 
-  // Restore scroll position
   useEffect(() => {
     if (!isRestored) return;
 
@@ -117,7 +112,6 @@ export default function HomeClient() {
     }
   }, [isRestored]);
 
-  // Save state on change
   useEffect(() => {
     if (!isRestored) return;
     sessionStorage.setItem('home-category', selectedCategory);
@@ -125,7 +119,6 @@ export default function HomeClient() {
     sessionStorage.setItem('home-sort', sortOrder);
   }, [selectedCategory, maxSize, sortOrder, isRestored]);
 
-  // Save scroll position
   useEffect(() => {
     const handleScroll = () => {
       if (isRestored) {
@@ -136,7 +129,6 @@ export default function HomeClient() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isRestored]);
 
-  // Handle outside clicks to close suggestions
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
@@ -147,7 +139,6 @@ export default function HomeClient() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Calculate category counts
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     CATEGORIES.forEach(cat => {
@@ -295,14 +286,14 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
         <div className={cn(
-          "max-w-5xl relative z-10 mx-auto text-center px-10 sm:px-16 py-12 transition-all duration-1000 transform",
+          "w-full max-w-5xl relative z-10 mx-auto text-center px-6 sm:px-16 py-12 transition-all duration-1000 transform",
           isVideoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
-            <span className="text-white uppercase block mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-            <span className="text-primary text-3xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
+          <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
+            <span className="text-white uppercase block mb-4 md:mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
+            <span className="text-primary text-2xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
           </h1>
-          <p className="text-white/90 text-lg md:text-2xl lg:text-4xl max-w-4xl mx-auto mb-14 leading-relaxed font-medium drop-shadow-md">
+          <p className="text-white/90 text-base md:text-2xl lg:text-4xl max-w-4xl mx-auto mb-10 md:mb-14 leading-relaxed font-medium drop-shadow-md">
             Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
