@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Gamepad2, ShieldCheck, Users } from 'lucide-react';
+import { useLanguage } from '@/components/language-context';
 import { cn } from '@/lib/utils';
 
 interface StatCounterProps {
@@ -34,7 +35,7 @@ function StatCounter({ end, label, suffix = '', icon, duration = 2000 }: StatCou
 
     return () => {
       if (counterRef.current) {
-        observer.unobserve(entry.target);
+        observer.unobserve(counterRef.current);
       }
     };
   }, []);
@@ -87,24 +88,26 @@ function StatCounter({ end, label, suffix = '', icon, duration = 2000 }: StatCou
 }
 
 export function StatsSection() {
+  const { t } = useLanguage();
+  
   return (
     <section className="container mx-auto px-4 py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         <StatCounter 
           end={80} 
-          label="Game Collection" 
+          label={t('stats.collection')} 
           suffix="+" 
           icon={<Gamepad2 className="w-8 h-8 md:w-10 md:h-10" />} 
         />
         <StatCounter 
           end={100} 
-          label="Working Games" 
+          label={t('stats.working')} 
           suffix="%" 
           icon={<ShieldCheck className="w-8 h-8 md:w-10 md:h-10" />} 
         />
         <StatCounter 
           end={60} 
-          label="Happy Customers" 
+          label={t('stats.customers')} 
           suffix="+" 
           icon={<Users className="w-8 h-8 md:w-10 md:h-10" />} 
         />

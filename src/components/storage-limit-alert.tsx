@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { useSelection } from '@/components/selection-context';
+import { useLanguage } from '@/components/language-context';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,6 +17,7 @@ import { AlertTriangle, HardDrive, Ban } from 'lucide-react';
 
 export function StorageLimitAlert() {
   const { totalSizeNum, setCheckoutOpen, isCheckoutOpen } = useSelection();
+  const { t } = useLanguage();
   const [activeLimit, setActiveLimit] = useState<{
     threshold: number;
     title: string;
@@ -46,36 +48,36 @@ export function StorageLimitAlert() {
       if (currentThreshold === 1800) {
         setActiveLimit({
           threshold: 1800,
-          title: "Maximum Storage Reached!",
-          message: "You have reached the absolute maximum storage limit of 1800 GB. You must remove some games to continue.",
+          title: t('alert.maxStorage'),
+          message: t('alert.maxStorageDesc'),
           icon: <Ban className="h-6 w-6 text-destructive" />
         });
       } else if (currentThreshold === 1400) {
         setActiveLimit({
           threshold: 1400,
-          title: "Approaching Final Limit",
-          message: "You have exceeded 1400 GB. Would you like to stop and remove some games, or confirm that you wish to continue towards the 1800 GB limit?",
+          title: t('alert.approaching'),
+          message: t('alert.approachingDesc'),
           icon: <AlertTriangle className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 960) {
         setActiveLimit({
           threshold: 960,
-          title: "Surpassed 960 GB!",
-          message: "You have surpassed 960 GB. Your capacity is now transitioning to the 1.5 TB drive (Limit: 1400 GB). Keep going?",
+          title: t('alert.surpassed960'),
+          message: t('alert.surpassed960Desc'),
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 460) {
         setActiveLimit({
           threshold: 460,
-          title: "1 TB Drive Required",
-          message: "You have exceeded 460 GB. You are now using the 1 TB drive capacity (Limit: 960 GB). Continue adding?",
+          title: t('alert.1tbRequired'),
+          message: t('alert.1tbRequiredDesc'),
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 280) {
         setActiveLimit({
           threshold: 280,
-          title: "500 GB Drive Reached",
-          message: "You have exceeded the 280 GB threshold and are now using the 500 GB drive (Limit: 460 GB). Keep going?",
+          title: t('alert.500gbReached'),
+          message: t('alert.500gbReachedDesc'),
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       }
@@ -83,7 +85,7 @@ export function StorageLimitAlert() {
 
     // Always keep track of the threshold to handle deletions resetting the alert trigger
     lastThresholdRef.current = currentThreshold;
-  }, [totalSizeNum, isCheckoutOpen]);
+  }, [totalSizeNum, isCheckoutOpen, t]);
 
   const handleReview = () => {
     setActiveLimit(null);
@@ -120,7 +122,7 @@ export function StorageLimitAlert() {
         <AlertDialogFooter className="flex flex-col sm:flex-row gap-2 mt-4">
           {activeLimit?.threshold !== 1800 && (
             <AlertDialogCancel className="w-full sm:w-auto bg-white/5 border-white/10 rounded-xl hover:bg-white/10 text-xs font-bold uppercase tracking-wider h-11">
-              Keep Going
+              {t('alert.keepGoing')}
             </AlertDialogCancel>
           )}
           <AlertDialogAction 
@@ -129,7 +131,7 @@ export function StorageLimitAlert() {
               activeLimit?.threshold >= 1400 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
             }`}
           >
-            Review & Delete
+            {t('alert.reviewDelete')}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Loader2 } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -15,6 +15,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useSelection } from '@/components/selection-context';
 import { StatsSection } from '@/components/stats-section';
+import { useLanguage } from '@/components/language-context';
 import { cn } from '@/lib/utils';
 
 // --- Brand Icons ---
@@ -52,9 +53,26 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
   );
 }
 
+function LanguageSwitcher() {
+  const { language, setLanguage } = useLanguage();
+
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs flex items-center gap-1.5"
+      onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+    >
+      <Languages className="h-3.5 w-3.5" />
+      <span className="font-bold">{language === 'en' ? 'AR' : 'EN'}</span>
+    </Button>
+  );
+}
+
 export default function HomeClient() {
   const router = useRouter();
   const { totalSizeNum, currentCapacity } = useSelection();
+  const { t, isRTL } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [maxSize, setMaxSize] = useState(150);
@@ -252,6 +270,7 @@ export default function HomeClient() {
           </div>
           
           <div className="flex items-center gap-2 flex-grow justify-end">
+            <LanguageSwitcher />
             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
               <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
               <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
@@ -291,23 +310,23 @@ export default function HomeClient() {
         )}>
           <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
             <span className="text-white uppercase block mb-4 md:mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-            <span className="text-primary text-2xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">Buy Your Game Easy, Cheap, and Fast</span>
+            <span className="text-primary text-2xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">{t('hero.subtitle')}</span>
           </h1>
           <p className="text-white/90 text-base md:text-2xl lg:text-4xl max-w-4xl mx-auto mb-10 md:mb-14 leading-relaxed font-medium drop-shadow-md">
-            Discover a new world of games on our site, where excitement and detail come together in a unique experience. Explore now and enjoy a wide range of unbeatable prices!
+            {t('hero.description')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <button 
               className="bg-primary text-white text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14 rounded-md"
               onClick={scrollToLibrary}
             >
-              Browse Now
+              {t('hero.browse')}
             </button>
             <button 
               className="text-white text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border border-white/20 shadow-2xl px-8 h-14 rounded-md"
               onClick={scrollToContact}
             >
-              Contact Us
+              {t('hero.contact')}
             </button>
           </div>
         </div>
@@ -328,7 +347,7 @@ export default function HomeClient() {
         <div id="library" className="flex flex-col gap-8 mb-8 scroll-mt-24">
           <div className="flex flex-col space-y-6">
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold font-headline">Library</h2>
+              <h2 className="text-2xl font-bold font-headline">{t('library.title')}</h2>
               <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
                 {CATEGORIES.map((cat) => (
                   <Button
@@ -344,7 +363,8 @@ export default function HomeClient() {
                     {cat}
                     <span className={cn(
                       "ml-1.5 px-1.5 py-0.5 rounded-full text-[9px]",
-                      selectedCategory === cat ? "bg-white/20" : "bg-primary/10 text-primary"
+                      selectedCategory === cat ? "bg-white/20" : "bg-primary/10 text-primary",
+                      isRTL && "ml-0 mr-1.5"
                     )}>
                       {categoryCounts[cat] || 0}
                     </span>
@@ -366,7 +386,7 @@ export default function HomeClient() {
                       )}
                     >
                       <Filter className="h-4 w-4" />
-                      <span className="text-xs font-bold uppercase tracking-tight">Filters</span>
+                      <span className="text-xs font-bold uppercase tracking-tight">{t('filters.label')}</span>
                       {activeFiltersCount > 0 && (
                         <span className="ml-1 bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
                           {activeFiltersCount}
@@ -378,7 +398,7 @@ export default function HomeClient() {
                     <div className="space-y-6">
                       <div className="space-y-3">
                         <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                          <ArrowUpDown className="h-3 w-3 text-primary" /> Sort By
+                          <ArrowUpDown className="h-3 w-3 text-primary" /> {t('filters.sortBy')}
                         </Label>
                         <Select 
                           value={sortOrder} 
@@ -391,11 +411,11 @@ export default function HomeClient() {
                             <SelectValue placeholder="Sort order" />
                           </SelectTrigger>
                           <SelectContent className="bg-background border-white/10 rounded-xl">
-                            <SelectItem value="title-asc">Alphabetical (A-Z)</SelectItem>
-                            <SelectItem value="year-desc">Year: Newest to Oldest</SelectItem>
-                            <SelectItem value="year-asc">Year: Oldest to Newest</SelectItem>
-                            <SelectItem value="size-asc">Size: Smallest to Largest</SelectItem>
-                            <SelectItem value="size-desc">Size: Largest to Smallest</SelectItem>
+                            <SelectItem value="title-asc">{t('filters.alphabetical')}</SelectItem>
+                            <SelectItem value="year-desc">{t('filters.newest')}</SelectItem>
+                            <SelectItem value="year-asc">{t('filters.oldest')}</SelectItem>
+                            <SelectItem value="size-asc">{t('filters.smallest')}</SelectItem>
+                            <SelectItem value="size-desc">{t('filters.largest')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -403,7 +423,7 @@ export default function HomeClient() {
                       <div className="space-y-4">
                         <div className="flex justify-between items-center mb-1">
                           <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                            <HardDrive className="h-3 w-3 text-primary" /> Max Storage
+                            <HardDrive className="h-3 w-3 text-primary" /> {t('filters.maxStorage')}
                           </Label>
                           <span className="text-xs font-bold text-primary">{maxSize} GB</span>
                         </div>
@@ -422,7 +442,7 @@ export default function HomeClient() {
                           className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl h-10 font-bold uppercase tracking-tight text-xs"
                           onClick={() => setIsFilterOpen(false)}
                         >
-                          <Check className="w-3.5 h-3.5 mr-2" /> View Results
+                          <Check className="w-3.5 h-3.5 mr-2" /> {t('filters.viewResults')}
                         </Button>
                         {(maxSize < 150 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
                           <Button 
@@ -436,7 +456,7 @@ export default function HomeClient() {
                               setIsFilterOpen(false);
                             }}
                           >
-                            Reset Filters
+                            {t('filters.reset')}
                           </Button>
                         )}
                       </div>
@@ -446,15 +466,15 @@ export default function HomeClient() {
               ) : (
                 <Button variant="secondary" size="sm" className="rounded-xl h-10 px-4 gap-2 bg-secondary/50 border border-white/5 opacity-50">
                   <Filter className="h-4 w-4" />
-                  <span className="text-xs font-bold uppercase tracking-tight">Filters</span>
+                  <span className="text-xs font-bold uppercase tracking-tight">{t('filters.label')}</span>
                 </Button>
               )}
 
               <div className="relative flex-1" ref={searchContainerRef}>
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Search className={cn("absolute top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground", isRTL ? "right-3" : "left-3")} />
                 <Input
-                  placeholder="Search games..."
-                  className="pl-10 pr-10 bg-secondary/50 border-none h-10 rounded-xl text-sm"
+                  placeholder={t('search.placeholder')}
+                  className={cn("bg-secondary/50 border-none h-10 rounded-xl text-sm", isRTL ? "pr-10 pl-10" : "pl-10 pr-10")}
                   value={searchQuery}
                   onChange={(e) => {
                     setSearchQuery(e.target.value);
@@ -466,7 +486,7 @@ export default function HomeClient() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-foreground"
+                    className={cn("absolute top-1/2 -translate-y-1/2 h-8 w-8 hover:bg-transparent text-muted-foreground hover:text-foreground", isRTL ? "left-2" : "right-2")}
                     onClick={() => setSearchQuery('')}
                   >
                     <X className="h-4 w-4" />
@@ -508,9 +528,9 @@ export default function HomeClient() {
         ) : (
           <div className="text-center py-20 bg-secondary/10 rounded-3xl border border-dashed border-white/10">
             <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-20" />
-            <h3 className="text-xl font-medium">No games match your filters</h3>
+            <h3 className="text-xl font-medium">{t('search.noResults')}</h3>
             <p className="text-muted-foreground text-sm max-w-xs mx-auto mt-2">
-              Try adjusting your filters or search terms.
+              {t('search.tryAdjusting')}
             </p>
             <Button
               variant="link"
@@ -522,7 +542,7 @@ export default function HomeClient() {
               }}
               className="text-primary mt-4 font-bold"
             >
-              Reset all filters
+              {t('filters.reset')}
             </Button>
           </div>
         )}
@@ -535,9 +555,9 @@ export default function HomeClient() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-8 text-center">
             <div>
-              <h3 className="text-2xl font-bold font-headline uppercase tracking-tighter text-primary mb-2">Connect With Us</h3>
+              <h3 className="text-2xl font-bold font-headline uppercase tracking-tighter text-primary mb-2">{t('footer.connect')}</h3>
               <p className="text-muted-foreground text-sm max-w-sm mx-auto">
-                Join our community on social media for exclusive deals and updates.
+                {t('footer.join')}
               </p>
             </div>
             

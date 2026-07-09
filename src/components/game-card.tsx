@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { GameEntry } from '@/app/lib/mock-data';
 import { HardDrive, ImageOff, Calendar, Plus, Check } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
+import { useLanguage } from '@/components/language-context';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 
@@ -18,6 +19,7 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
   const { isInSelection, addToSelection, removeFromSelection, isOverLimit } = useSelection();
+  const { t } = useLanguage();
   const { toast } = useToast();
   const isAdded = isInSelection(game.id);
   const [isVisible, setIsVisible] = useState(false);
@@ -56,21 +58,21 @@ export function GameCard({ game }: GameCardProps) {
     if (isAdded) {
       removeFromSelection(game.id);
       toast({
-        title: "Removed from Selection",
+        title: t('toast.removed'),
         description: `${game.title} has been removed.`,
       });
     } else {
       if (isOverLimit) {
         toast({
           variant: "destructive",
-          title: "Storage Limit Exceeded",
-          description: "You have reached the maximum storage limit.",
+          title: t('toast.storageLimit'),
+          description: t('toast.storageLimitDesc'),
         });
         return;
       }
       addToSelection(game.id);
       toast({
-        title: "Game Added!",
+        title: t('toast.added'),
         description: `${game.title} has been added to your selection.`,
       });
     }

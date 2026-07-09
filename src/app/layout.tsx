@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { SelectionProvider } from '@/components/selection-context';
+import { LanguageProvider } from '@/components/language-context';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { StorageLimitAlert } from '@/components/storage-limit-alert';
@@ -57,7 +58,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet" />
         
         {/* Manual fallback tags for guaranteed browser detection */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -85,14 +86,16 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background text-foreground min-h-screen">
-        <SelectionProvider>
-          <TooltipProvider>
-            {children}
-            <StorageLimitAlert />
-            <BackToTop />
-            <Toaster />
-          </TooltipProvider>
-        </SelectionProvider>
+        <LanguageProvider>
+          <SelectionProvider>
+            <TooltipProvider>
+              {children}
+              <StorageLimitAlert />
+              <BackToTop />
+              <Toaster />
+            </TooltipProvider>
+          </SelectionProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -6,12 +6,13 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar, Languages } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 import { useSelection } from '@/components/selection-context';
+import { useLanguage } from '@/components/language-context';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { cn } from '@/lib/utils';
 
@@ -31,7 +32,7 @@ function RevealSection({ children, className }: { children: React.ReactNode, cla
     );
     if (ref.current) observer.observe(ref.current);
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (ref.current) observer.unobserve(entry.target);
     };
   }, []);
 
@@ -49,11 +50,28 @@ function RevealSection({ children, className }: { children: React.ReactNode, cla
   );
 }
 
+function LanguageSwitcher() {
+  const { language, setLanguage } = useLanguage();
+
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs flex items-center gap-1.5"
+      onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+    >
+      <Languages className="h-3.5 w-3.5" />
+      <span className="font-bold">{language === 'en' ? 'AR' : 'EN'}</span>
+    </Button>
+  );
+}
+
 export default function GameClient({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const router = useRouter();
   const { toast } = useToast();
   const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity } = useSelection();
+  const { t, isRTL } = useLanguage();
   const game = MOCK_GAMES.find((g) => g.id === id);
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
@@ -85,21 +103,21 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
     if (isAdded) {
       removeFromSelection(game.id);
       toast({
-        title: "Removed from Selection",
+        title: t('toast.removed'),
         description: `${game.title} has been removed.`,
       });
     } else {
       if (isOverLimit) {
         toast({
           variant: "destructive",
-          title: "Storage Limit Exceeded",
-          description: "You have reached the 1800 GB limit. Remove games before adding more.",
+          title: t('toast.storageLimit'),
+          description: t('toast.storageLimitDesc'),
         });
         return;
       }
       addToSelection(game.id);
       toast({
-        title: "Game Added!",
+        title: t('toast.added'),
         description: `${game.title} has been added to your selection.`,
       });
     }
@@ -117,8 +135,8 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center p-6">
-          <h1 className="text-4xl font-bold mb-4">Game Not Found</h1>
-          <Button onClick={() => router.push('/')}>Return to Catalog</Button>
+          <h1 className="text-4xl font-bold mb-4">{t('game.notfound')}</h1>
+          <Button onClick={() => router.push('/')}>{t('game.return')}</Button>
         </div>
       </div>
     );
@@ -138,10 +156,15 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
             className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs"
             onClick={handleBackToCatalog}
           >
-            <ArrowLeft className="mr-1 sm:mr-1.5 h-3.5 w-3.5" /> <span className="hidden sm:inline">Catalog</span>
+            {isRTL ? (
+              <><span className="hidden sm:inline">{t('nav.catalog')}</span> <ArrowRight className="ml-1 sm:ml-1.5 h-3.5 w-3.5" /></>
+            ) : (
+              <><ArrowLeft className="mr-1 sm:mr-1.5 h-3.5 w-3.5" /> <span className="hidden sm:inline">{t('nav.catalog')}</span></>
+            )}
           </Button>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
+            <LanguageSwitcher />
              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
               <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
               <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
@@ -167,9 +190,9 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
               onClick={handleToggleSelection}
             >
               {isAdded ? (
-                <><CheckCircle2 className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Added</>
+                <><CheckCircle2 className={cn("h-3 w-3 sm:h-3.5 sm:w-3.5", isRTL ? "ml-1 sm:ml-1.5" : "mr-1 sm:mr-1.5")} /> {t('game.added')}</>
               ) : (
-                <><PlusCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Add</>
+                <><PlusCircle className={cn("h-3 w-3 sm:h-3.5 sm:w-3.5", isRTL ? "ml-1 sm:ml-1.5" : "mr-1 sm:mr-1.5")} /> {t('game.add')}</>
               )}
             </Button>
           </div>
@@ -219,14 +242,14 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           <RevealSection>
             <section className="bg-secondary/20 rounded-3xl p-6 md:p-10 border border-white/5 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold font-headline uppercase tracking-tight">The Story</h2>
+                <h2 className="text-xl font-bold font-headline uppercase tracking-tight">{t('game.story')}</h2>
                 {isRefining ? (
                   <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
-                    <Sparkles className="mr-1 h-3 w-3" /> Refining...
+                    <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.refining')}
                   </div>
                 ) : (
                   <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
-                    <Sparkles className="mr-1 h-3 w-3" /> AI Enhanced
+                    <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.aiEnhanced')}
                   </Badge>
                 )}
               </div>
@@ -248,7 +271,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           {game.images && game.images.filter(img => img && img.trim() !== '').length > 0 && (
             <RevealSection>
               <section>
-                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Gallery</h2>
+                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">{t('game.gallery')}</h2>
                 <Carousel className="w-full">
                   <CarouselContent>
                     {game.images.filter(img => img && img.trim() !== '').map((img, index) => (
@@ -276,7 +299,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
 
           <RevealSection>
             <section>
-              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Trailer</h2>
+              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">{t('game.trailer')}</h2>
               <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/5 ring-1 ring-white/10">
                 <iframe
                   src={game.videoUrl}
@@ -292,7 +315,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           {game.shorts && game.shorts.length > 0 && (
             <RevealSection>
               <section>
-                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">Moments</h2>
+                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">{t('game.moments')}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                   {game.shorts.map((url, index) => (
                     <div key={index} className="relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] ring-1 ring-white/10">

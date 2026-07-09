@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useSelection } from '@/components/selection-context';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
+import { useLanguage } from '@/components/language-context';
 import {
   Sheet,
   SheetContent,
@@ -27,9 +28,11 @@ import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { cn } from '@/lib/utils';
 
 export function CheckoutSheet() {
   const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen } = useSelection();
+  const { t, isRTL } = useLanguage();
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
 
@@ -62,11 +65,11 @@ export function CheckoutSheet() {
   };
 
   const getWarning = () => {
-    if (totalSizeNum > 1800) return "Maximum storage limit reached (1800 GB).";
-    if (totalSizeNum > 1400) return "Approaching final limit. Review selection?";
-    if (totalSizeNum > 960) return "Exceeded 960 GB. Switching to 2 TB capacity.";
-    if (totalSizeNum > 460) return "Using the 1 TB drive capacity.";
-    if (totalSizeNum > 280) return "Using the 500 GB drive capacity.";
+    if (totalSizeNum > 1800) return t('alert.maxStorage');
+    if (totalSizeNum > 1400) return t('alert.approaching');
+    if (totalSizeNum > 960) return t('alert.surpassed960');
+    if (totalSizeNum > 460) return t('alert.1tbRequired');
+    if (totalSizeNum > 280) return t('alert.500gbReached');
     return null;
   };
 
@@ -76,8 +79,8 @@ export function CheckoutSheet() {
     if (!open && totalSizeNum > 1800) {
       toast({
         variant: "destructive",
-        title: "Action Required",
-        description: "Please remove some games to stay below the 1800 GB limit before closing.",
+        title: t('alert.actionRequired'),
+        description: t('alert.removeGames'),
       });
       return;
     }
@@ -88,7 +91,7 @@ export function CheckoutSheet() {
     return (
       <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs opacity-50">
         <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />
-        <span className="hidden sm:inline">Checkout</span>
+        <span className="hidden sm:inline">{t('nav.checkout')}</span>
       </Button>
     );
   }
@@ -97,20 +100,20 @@ export function CheckoutSheet() {
     <Sheet open={isCheckoutOpen} onOpenChange={handleOnOpenChange}>
       <SheetTrigger asChild>
         <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs">
-          <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />
-          <span className="hidden sm:inline">Checkout</span>
+          <ShoppingCart className={cn("h-3.5 w-3.5", isRTL ? "sm:ml-1.5" : "sm:mr-1.5")} />
+          <span className="hidden sm:inline">{t('nav.checkout')}</span>
           {selectedIds.length > 0 && (
-            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-white shadow-lg border-2 border-background">
+            <span className={cn("absolute -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-white shadow-lg border-2 border-background", isRTL ? "-left-1" : "-right-1")}>
               {selectedIds.length}
             </span>
           )}
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-full sm:max-w-md bg-background/95 backdrop-blur-xl border-l border-white/10 flex flex-col p-0">
+      <SheetContent side={isRTL ? "left" : "right"} className="w-full sm:max-w-md bg-background/95 backdrop-blur-xl border-white/10 flex flex-col p-0">
         <SheetHeader className="p-6 pb-2">
           <SheetTitle className="text-2xl font-bold font-headline flex items-center gap-2">
             <ShoppingCart className="h-6 w-6 text-primary" />
-            Your Selection
+            {t('checkout.title')}
           </SheetTitle>
         </SheetHeader>
 
@@ -119,8 +122,8 @@ export function CheckoutSheet() {
             <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mb-4">
               <ShoppingCart className="h-10 w-10 text-muted-foreground opacity-20" />
             </div>
-            <h3 className="text-lg font-medium mb-2">Your list is empty</h3>
-            <p className="text-muted-foreground text-sm">Add some games to your selection to see them here.</p>
+            <h3 className="text-lg font-medium mb-2">{t('checkout.empty')}</h3>
+            <p className="text-muted-foreground text-sm">{t('checkout.emptyDesc')}</p>
           </div>
         ) : (
           <div className="flex flex-col h-full overflow-hidden">
@@ -158,11 +161,11 @@ export function CheckoutSheet() {
             <div className="p-4 sm:p-6 bg-background/50 backdrop-blur-md border-t border-white/5 space-y-3">
               <div className="bg-secondary/20 p-3 sm:p-4 rounded-xl border border-white/5 mb-4">
                 <div className="flex justify-between items-center mb-1">
-                  <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">Games</span>
+                  <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">{t('checkout.games')}</span>
                   <span className="font-bold text-sm">{selectedGames.length}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">Total Storage</span>
+                  <span className="text-muted-foreground text-[10px] uppercase tracking-wider font-bold">{t('checkout.totalStorage')}</span>
                   <span className="font-bold text-sm text-primary">{totalSizeNum.toFixed(1)} GB</span>
                 </div>
               </div>
@@ -186,7 +189,7 @@ export function CheckoutSheet() {
                   disabled={totalSizeNum > 1800}
                   className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-sm disabled:opacity-50"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp
+                  <MessageCircle className="mr-2 h-5 w-5" /> {t('checkout.whatsapp')}
                 </Button>
               </div>
               
@@ -197,23 +200,23 @@ export function CheckoutSheet() {
                     size="default"
                     className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-xl py-4 text-xs font-medium"
                   >
-                    Clear Entire List
+                    {t('checkout.clear')}
                   </Button>
                 </AlertDialogTrigger>
                 <AlertDialogContent className="bg-background border-white/10 rounded-3xl">
                   <AlertDialogHeader>
-                    <AlertDialogTitle className="text-xl font-bold font-headline">Clear entire list?</AlertDialogTitle>
+                    <AlertDialogTitle className="text-xl font-bold font-headline">{t('checkout.clearConfirm')}</AlertDialogTitle>
                     <AlertDialogDescription className="text-muted-foreground">
-                      This action will remove all games from your selection. Are you sure you want to proceed?
+                      {t('checkout.clearDesc')}
                     </AlertDialogDescription>
                   </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel className="bg-white/5 border-white/10 rounded-xl hover:bg-white/10 transition-colors">No</AlertDialogCancel>
+                  <AlertDialogFooter className="flex gap-2">
+                    <AlertDialogCancel className="flex-1 bg-white/5 border-white/10 rounded-xl hover:bg-white/10 transition-colors m-0">{t('checkout.no')}</AlertDialogCancel>
                     <AlertDialogAction 
                       onClick={clearSelection}
-                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-xl transition-colors"
+                      className="flex-1 bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-xl transition-colors m-0"
                     >
-                      Yes
+                      {t('checkout.yes')}
                     </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
