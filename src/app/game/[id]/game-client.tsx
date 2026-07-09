@@ -71,32 +71,45 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   const router = useRouter();
   const { toast } = useToast();
   const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity } = useSelection();
-  const { t, isRTL } = useLanguage();
+  const { t, isRTL, language } = useLanguage();
   const game = MOCK_GAMES.find((g) => g.id === id);
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
 
   const isAdded = game ? isInSelection(game.id) : false;
 
-  useEffect(() => {
-    if (game && !refinedDescription) {
-      handleRefine();
-    }
-  }, [game]);
-
   const handleRefine = async () => {
     if (!game) return;
+
+    // Restore original description for English mode as requested
+    if (language === 'en') {
+      setRefinedDescription(game.description);
+      setIsRefining(false);
+      return;
+    }
+
+    // Translate to Arabic for Arabic mode
     setIsRefining(true);
     try {
-      const result = await refineGameDescription({ originalDescription: game.description });
+      const result = await refineGameDescription({ 
+        originalDescription: game.description,
+        targetLanguage: 'ar'
+      });
       setRefinedDescription(result.refinedDescription);
     } catch (error) {
-      console.error('Failed to refine description:', error);
+      console.error('Failed to translate description:', error);
       setRefinedDescription(game.description);
     } finally {
       setIsRefining(false);
     }
   };
+
+  useEffect(() => {
+    if (game) {
+      setRefinedDescription(null); // Show skeleton during transition
+      handleRefine();
+    }
+  }, [game, language]);
 
   const handleToggleSelection = () => {
     if (!game) return;
@@ -248,14 +261,14 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                   <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
                     <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.refining')}
                   </div>
-                ) : (
+                ) : language === 'ar' ? (
                   <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
                     <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.aiEnhanced')}
                   </Badge>
-                )}
+                ) : null}
               </div>
 
-              {isRefining ? (
+              {isRefining || !refinedDescription ? (
                 <div className="space-y-3">
                   <Skeleton className="h-4 w-full" />
                   <Skeleton className="h-4 w-[90%]" />
@@ -263,7 +276,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                 </div>
               ) : (
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
-                  {refinedDescription || game.description}
+                  {refinedDescription}
                 </p>
               )}
             </section>

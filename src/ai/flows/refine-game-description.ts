@@ -1,8 +1,8 @@
 'use server';
 /**
- * @fileOverview A Genkit flow for refining game descriptions using AI.
+ * @fileOverview A Genkit flow for refining and translating game descriptions using AI.
  *
- * - refineGameDescription - A function that handles the game description refinement process.
+ * - refineGameDescription - A function that handles the game description refinement and translation process.
  * - RefineGameDescriptionInput - The input type for the refineGameDescription function.
  * - RefineGameDescriptionOutput - The return type for the refineGameDescription function.
  */
@@ -11,12 +11,13 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const RefineGameDescriptionInputSchema = z.object({
-  originalDescription: z.string().describe('The original game description fetched from Jotform.'),
+  originalDescription: z.string().describe('The original game description.'),
+  targetLanguage: z.string().describe('The target language for the output (e.g., "en", "ar").'),
 });
 export type RefineGameDescriptionInput = z.infer<typeof RefineGameDescriptionInputSchema>;
 
 const RefineGameDescriptionOutputSchema = z.object({
-  refinedDescription: z.string().describe('The AI-refined game description, improved for clarity, engagement, and marketing appeal.'),
+  refinedDescription: z.string().describe('The AI-refined or translated game description.'),
 });
 export type RefineGameDescriptionOutput = z.infer<typeof RefineGameDescriptionOutputSchema>;
 
@@ -28,9 +29,15 @@ const refineGameDescriptionPrompt = ai.definePrompt({
   name: 'refineGameDescriptionPrompt',
   input: { schema: RefineGameDescriptionInputSchema },
   output: { schema: RefineGameDescriptionOutputSchema },
-  prompt: `You are a professional marketing copywriter specializing in video game descriptions. Your task is to take an original game description and refine it to be more engaging, clear, and marketable.
+  prompt: `You are a professional marketing copywriter specializing in video game descriptions. 
 
-Ensure the refined description retains all essential information and the core essence of the original. Focus on highlighting unique features, player experience, and overall appeal.
+Target Language: {{{targetLanguage}}}
+
+Your task is to take the original game description provided below and produce a version that is engaging, clear, and marketable in the Target Language.
+
+If the Target Language is "ar" (Arabic), translate and localize the description into high-quality Arabic. The tone should be exciting and professional for a gaming audience. Keep game-specific names or technical terms in English if that is common practice, but ensure the prose is fluent Arabic.
+
+If the Target Language is "en" (English), refine the original text for better flow and impact.
 
 Original Description:
 {{{originalDescription}}}
@@ -50,10 +57,8 @@ const refineGameDescriptionFlow = ai.defineFlow(
       if (!output) throw new Error('AI returned no output');
       return output;
     } catch (error: any) {
-      // Handle quota exhaustion or other AI errors gracefully by returning the original description
       console.error('Genkit Refinement Error:', error?.message || error);
       
-      // If the error is a quota exhaustion (429), we provide a clear log for the developer
       if (error?.message?.includes('429') || error?.message?.includes('RESOURCE_EXHAUSTED')) {
         console.warn('AI Quota exceeded. Falling back to original description.');
       }
