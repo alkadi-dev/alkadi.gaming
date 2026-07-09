@@ -14,6 +14,7 @@ import { Label } from '@/components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useSelection } from '@/components/selection-context';
+import { StatsSection } from '@/components/stats-section';
 import { cn } from '@/lib/utils';
 
 // --- Brand Icons ---
@@ -274,7 +275,6 @@ export default function HomeClient() {
           loop
           muted
           playsInline
-          preload="auto"
           onCanPlayThrough={() => setIsVideoReady(true)}
           className={cn(
             "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
@@ -312,6 +312,14 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
+
+      {/* Statistics Section */}
+      <div className={cn(
+        "transition-opacity duration-1000",
+        isVideoReady ? "opacity-100" : "opacity-0"
+      )}>
+        <StatsSection />
+      </div>
 
       <main className={cn(
         "flex-1 container mx-auto px-4 py-8 transition-opacity duration-1000",
