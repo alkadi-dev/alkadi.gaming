@@ -90,7 +90,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
 
     // For Arabic, we use AI translation
     setIsRefining(true);
-    setRefinedDescription(null); // Clear previous to show skeletons
+    setRefinedDescription(null); // Show skeletons while loading
     
     try {
       const result = await refineGameDescription({ 
@@ -98,11 +98,9 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
         targetLanguage: 'ar'
       });
       
-      // If AI fails and returns original text (which is English), we still set it
-      // but the badge will reflect the attempt.
       setRefinedDescription(result.refinedDescription);
     } catch (error) {
-      console.error('Failed to translate description:', error);
+      console.error('Client Translation Failed:', error);
       setRefinedDescription(game.description);
     } finally {
       setIsRefining(false);

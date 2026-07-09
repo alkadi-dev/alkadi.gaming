@@ -31,25 +31,25 @@ const refineGameDescriptionPrompt = ai.definePrompt({
   output: { schema: RefineGameDescriptionOutputSchema },
   prompt: `You are a professional video game localization expert and marketing copywriter.
 
-Target Language: {{{targetLanguage}}}
+Your task is to provide the game description in the requested Target Language.
 
-Your absolute priority is to provide a version of the game description in the Target Language.
+TARGET LANGUAGE: {{{targetLanguage}}}
 
-IF TARGET LANGUAGE IS "ar":
-- You MUST translate the entire description into high-quality, professional Arabic.
-- Use a tone that is exciting, immersive, and appealing to a gaming audience.
-- Localize terms so they sound natural in Arabic.
-- Keep the game Title in English if mentioned, but all prose MUST be Arabic.
+INSTRUCTIONS FOR ARABIC ("ar"):
+- You MUST translate the entire text below into high-quality, professional, and immersive Arabic.
+- Use a tone that is exciting, modern, and appealing to a gaming audience.
+- Localize gaming terms so they sound natural in Arabic.
+- Keep the Game Title in English if it appears, but ALL other prose MUST be in Arabic.
 - DO NOT return English text.
 
-IF TARGET LANGUAGE IS "en":
-- Refine the original text for better flow, impact, and marketing appeal.
-- Ensure the tone is consistent with modern AAA game descriptions.
+INSTRUCTIONS FOR ENGLISH ("en"):
+- Refine the text for better marketing impact.
+- Ensure the tone is consistent with AAA game descriptions.
 
-Original Description:
+ORIGINAL DESCRIPTION:
 {{{originalDescription}}}
 
-Refined Description (in {{{targetLanguage}}}):`,
+OUTPUT (ONLY the refined/translated description):`,
 });
 
 const refineGameDescriptionFlow = ai.defineFlow(
@@ -66,10 +66,8 @@ const refineGameDescriptionFlow = ai.defineFlow(
       }
       return output;
     } catch (error: any) {
-      console.error('Genkit Refinement Error:', error?.message || error);
-      
-      // Fallback logic: If it was supposed to be Arabic but failed, 
-      // we return original but log the failure clearly.
+      console.error('Genkit Translation Error:', error?.message || error);
+      // Fallback: If translation fails, return original text
       return {
         refinedDescription: input.originalDescription
       };
