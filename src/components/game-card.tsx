@@ -86,15 +86,15 @@ export function GameCard({ game }: GameCardProps) {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
     >
-      <Card className="overflow-hidden bg-card border-none transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/20 flex flex-col h-full group/card">
+      <Card className="overflow-hidden bg-card border-none flex flex-col h-full shadow-lg">
         <div className="relative aspect-[16/9] overflow-hidden">
-          <Link href={`/game/${game.id}`} className="group block relative w-full h-full">
+          <Link href={`/game/${game.id}`} className="block relative w-full h-full">
             {hasThumbnail ? (
               <Image
                 src={game.thumbnail}
                 alt={game.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 onError={() => setImageError(true)}
               />
@@ -104,7 +104,7 @@ export function GameCard({ game }: GameCardProps) {
                 <span className="text-[10px] text-muted-foreground/40 font-bold uppercase">No Image</span>
               </div>
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 transition-opacity" />
             
             <div className="absolute top-3 left-3">
               {game.categories && game.categories.length > 0 && (
@@ -164,8 +164,8 @@ export function GameCard({ game }: GameCardProps) {
         </div>
         
         <CardContent className="p-3 flex-1 flex flex-col items-center text-center">
-          <Link href={`/game/${game.id}`} className="group block w-full">
-            <h3 className="text-lg font-bold font-headline text-foreground line-clamp-1 group-hover:text-accent transition-colors">
+          <Link href={`/game/${game.id}`} className="block w-full">
+            <h3 className="text-lg font-bold font-headline text-foreground line-clamp-1">
               {game.title}
             </h3>
           </Link>

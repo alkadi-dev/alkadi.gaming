@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Gamepad2, Trophy, Users } from 'lucide-react';
+import { Gamepad2, ShieldCheck, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface StatCounterProps {
@@ -34,7 +34,7 @@ function StatCounter({ end, label, suffix = '', icon, duration = 2000 }: StatCou
 
     return () => {
       if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+        observer.unobserve(entry.target);
       }
     };
   }, []);
@@ -71,15 +71,15 @@ function StatCounter({ end, label, suffix = '', icon, duration = 2000 }: StatCou
   return (
     <div 
       ref={counterRef}
-      className="flex flex-col items-center justify-center p-8 rounded-3xl bg-secondary/20 border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:bg-secondary/30 hover:border-primary/20 group"
+      className="flex flex-col items-center justify-center p-8 rounded-3xl bg-secondary/20 border border-white/5 shadow-2xl"
     >
-      <div className="mb-6 p-4 rounded-2xl bg-primary/10 text-primary transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary/20">
+      <div className="mb-6 p-4 rounded-2xl bg-primary/10 text-primary">
         {icon}
       </div>
       <div className="text-5xl md:text-6xl font-black font-headline tracking-tighter mb-2 text-white tabular-nums">
         {count}{suffix}
       </div>
-      <div className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground group-hover:text-primary transition-colors text-center">
+      <div className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground text-center">
         {label}
       </div>
     </div>
@@ -91,16 +91,16 @@ export function StatsSection() {
     <section className="container mx-auto px-4 py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         <StatCounter 
-          end={100} 
+          end={80} 
           label="Game Collection" 
           suffix="+" 
           icon={<Gamepad2 className="w-8 h-8 md:w-10 md:h-10" />} 
         />
         <StatCounter 
           end={100} 
-          label="Success Rate" 
+          label="Working Games" 
           suffix="%" 
-          icon={<Trophy className="w-8 h-8 md:w-10 md:h-10" />} 
+          icon={<ShieldCheck className="w-8 h-8 md:w-10 md:h-10" />} 
         />
         <StatCounter 
           end={60} 
