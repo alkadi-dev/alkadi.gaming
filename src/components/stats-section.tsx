@@ -35,7 +35,7 @@ function StatCounter({ end, label, suffix = '', icon, duration = 2000 }: StatCou
 
     return () => {
       if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+        observer.unobserve(entry.target);
       }
     };
   }, []);
@@ -72,7 +72,7 @@ function StatCounter({ end, label, suffix = '', icon, duration = 2000 }: StatCou
   return (
     <div 
       ref={counterRef}
-      className="flex flex-col items-center justify-center p-8 rounded-3xl bg-secondary/20 border border-white/5 shadow-2xl"
+      className="flex flex-col items-center justify-center p-8 rounded-3xl bg-secondary/20 border border-white/5 shadow-2xl transition-none"
     >
       <div className="mb-6 p-4 rounded-2xl bg-primary/10 text-primary">
         {icon}
