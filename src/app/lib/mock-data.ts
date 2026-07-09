@@ -188,11 +188,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     categories: ['Race'],
     thumbnail: 'https://6a3b66710a4149112241450e.imgix.net/Forza-Horizon-5-game-cover.jpg',
-<<<<<<< HEAD
     size: '83 GB',
-=======
-    size: '82 GB',
->>>>>>> 516e8daba181722952f3e5ae70f4fb0f4c956cb4
     releaseYear: '2021',
     images: [
       'https://6a3b66710a4149112241450e.imgix.net/Forza-Horizon-5-game-cover.jpg',
