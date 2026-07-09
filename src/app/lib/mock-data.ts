@@ -97,8 +97,8 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
     shorts: [
       'https://www.youtube.com/embed/zGsXns95g4I?si=L580j9Mw1LFt06O4',
-      'https://www.youtube.com/embed/R5cq8FnyPFI?si=2AVA1TyCbroVAJhD',
-      'https://www.youtube.com/embed/mnIMU7BH57A?si=7_p6ID87TvhjRjHV'
+      'https://youtu.be/72_XY5DmcfY?si=NkjOv2wH6bXzrgiJ',
+      'https://youtu.be/ea376amceaU?si=mA_GUXf0fnt_0Cz6'
     ],
     isRecommended: true,
   },
