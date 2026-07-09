@@ -88,7 +88,7 @@ export function GameCard({ game }: GameCardProps) {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
     >
-      <Card className="group overflow-hidden bg-card border-none flex flex-col h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:ring-1 hover:ring-white/10">
+      <Card className="group overflow-hidden bg-card border-none flex flex-col h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/30 hover:ring-1 hover:ring-white/10">
         <div className="relative aspect-[16/9] overflow-hidden">
           <Link href={`/game/${game.id}`} className="block relative w-full h-full">
             {hasThumbnail ? (
