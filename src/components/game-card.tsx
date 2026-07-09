@@ -88,7 +88,7 @@ export function GameCard({ game }: GameCardProps) {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
     >
-      <Card className="overflow-hidden bg-card border-none flex flex-col h-full shadow-lg">
+      <Card className="group overflow-hidden bg-card border-none flex flex-col h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:ring-1 hover:ring-white/10">
         <div className="relative aspect-[16/9] overflow-hidden">
           <Link href={`/game/${game.id}`} className="block relative w-full h-full">
             {hasThumbnail ? (
@@ -96,7 +96,7 @@ export function GameCard({ game }: GameCardProps) {
                 src={game.thumbnail}
                 alt={game.title}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 onError={() => setImageError(true)}
               />
@@ -168,7 +168,7 @@ export function GameCard({ game }: GameCardProps) {
         
         <CardContent className="p-3 flex-1 flex flex-col items-center text-center">
           <Link href={`/game/${game.id}`} className="block w-full">
-            <h3 className="text-lg font-bold font-headline text-foreground line-clamp-1" dir="ltr">
+            <h3 className="text-lg font-bold font-headline text-foreground group-hover:text-primary transition-colors line-clamp-1" dir="ltr">
               {game.title}
             </h3>
           </Link>
