@@ -140,9 +140,9 @@ export function CheckoutSheet() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-bold text-xs sm:text-sm truncate">{game.title}</h4>
+                      <h4 className="font-bold text-xs sm:text-sm truncate" dir="ltr">{game.title}</h4>
                       <p className="text-[9px] sm:text-[10px] text-muted-foreground">
-                        {game.categories.join(' / ')} • {game.size}
+                        {game.categories.map(c => t(`cat.${c}`)).join(' / ')} • {game.size}
                       </p>
                     </div>
                     <Button

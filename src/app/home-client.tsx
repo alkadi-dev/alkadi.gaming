@@ -254,7 +254,7 @@ export default function HomeClient() {
       )}
 
       <header className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 h-14 flex items-center justify-between gap-2">
+        <div className="container mx-auto px-4 h-14 flex items-center justify-between gap-2" dir="ltr">
           <div className="flex items-center gap-1.5 flex-shrink-0">
             <div 
               className="cursor-pointer select-none flex items-center gap-1" 
@@ -308,7 +308,7 @@ export default function HomeClient() {
           "w-full max-w-5xl relative z-10 mx-auto text-center px-6 sm:px-16 py-12 transition-all duration-1000 transform",
           isVideoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
-          <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight">
+          <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight" dir="ltr">
             <span className="text-white uppercase block mb-4 md:mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
             <span className="text-primary text-2xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">{t('hero.subtitle')}</span>
           </h1>
@@ -360,11 +360,11 @@ export default function HomeClient() {
                       selectedCategory === cat ? "bg-primary" : "hover:bg-primary/20"
                     )}
                   >
-                    {cat}
+                    {t(`cat.${cat}`)}
                     <span className={cn(
-                      "ml-1.5 px-1.5 py-0.5 rounded-full text-[9px]",
+                      "px-1.5 py-0.5 rounded-full text-[9px]",
                       selectedCategory === cat ? "bg-white/20" : "bg-primary/10 text-primary",
-                      isRTL && "ml-0 mr-1.5"
+                      isRTL ? "mr-1.5" : "ml-1.5"
                     )}>
                       {categoryCounts[cat] || 0}
                     </span>
@@ -388,7 +388,7 @@ export default function HomeClient() {
                       <Filter className="h-4 w-4" />
                       <span className="text-xs font-bold uppercase tracking-tight">{t('filters.label')}</span>
                       {activeFiltersCount > 0 && (
-                        <span className="ml-1 bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]">
+                        <span className={cn("bg-white/20 rounded-full h-4 w-4 flex items-center justify-center text-[10px]", isRTL ? "mr-1" : "ml-1")}>
                           {activeFiltersCount}
                         </span>
                       )}
@@ -442,7 +442,7 @@ export default function HomeClient() {
                           className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl h-10 font-bold uppercase tracking-tight text-xs"
                           onClick={() => setIsFilterOpen(false)}
                         >
-                          <Check className="w-3.5 h-3.5 mr-2" /> {t('filters.viewResults')}
+                          <Check className={cn("w-3.5 h-3.5", isRTL ? "ml-2" : "mr-2")} /> {t('filters.viewResults')}
                         </Button>
                         {(maxSize < 150 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
                           <Button 
@@ -561,7 +561,7 @@ export default function HomeClient() {
               </p>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4 w-full max-w-2xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 w-full max-w-2xl mx-auto" dir="ltr">
               <SocialLink 
                 href="https://www.facebook.com/share/1MBEKXoXME/?mibextid=wwXIfr" 
                 label="Facebook" 

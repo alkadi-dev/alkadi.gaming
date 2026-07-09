@@ -76,7 +76,18 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReached': '500 GB Drive Reached',
     'alert.500gbReachedDesc': 'You have exceeded the 280 GB threshold and are now using the 500 GB drive (Limit: 460 GB). Keep going?',
     'alert.keepGoing': 'Keep Going',
-    'alert.reviewDelete': 'Review & Delete'
+    'alert.reviewDelete': 'Review & Delete',
+    // Categories
+    'cat.All': 'All',
+    'cat.Recommended': 'Recommended',
+    'cat.2 players': '2 Players',
+    'cat.RPG': 'RPG',
+    'cat.Race': 'Race',
+    'cat.Adventure': 'Adventure',
+    'cat.Open World': 'Open World',
+    'cat.Action': 'Action',
+    'cat.Shooter': 'Shooter',
+    'cat.Horror': 'Horror'
   },
   ar: {
     'nav.catalog': 'الكتالوج',
@@ -136,13 +147,24 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.approaching': 'الاقتراب من الحد النهائي',
     'alert.approachingDesc': 'لقد تجاوزت 1400 جيجابايت. هل ترغب في التوقف وإزالة بعض الألعاب، أم تؤكد رغبتك في الاستمرار نحو حد 1800 جيجابايت؟',
     'alert.surpassed960': 'تجاوزت 960 جيجابايت!',
-    'alert.surpassed960Desc': 'لقed تجاوزت 960 جيجابايت. تنتقل سعتك الآن إلى قرص 1.5 تيرابايت (الحد: 1400 جيجابايت). هل تستمر؟',
+    'alert.surpassed960Desc': 'لقد تجاوزت 960 جيجابايت. تنتقل سعتك الآن إلى قرص 1.5 تيرابايت (الحد: 1400 جيجابايت). هل تستمر؟',
     'alert.1tbRequired': 'مطلوب قرص 1 تيرابايت',
     'alert.1tbRequiredDesc': 'لقد تجاوزت 460 جيجابايت. أنت تستخدم الآن سعة قرص 1 تيرابايت (الحد: 960 جيجابايت). هل تستمر في الإضافة؟',
     'alert.500gbReached': 'تم الوصول إلى قرص 500 جيجابايت',
     'alert.500gbReachedDesc': 'لقد تجاوزت عتبة 280 جيجابايت وتستخدم الآن قرص 500 جيجابايت (الحد: 460 جيجابايت). هل تستمر؟',
     'alert.keepGoing': 'استمر',
-    'alert.reviewDelete': 'مراجعة وحذف'
+    'alert.reviewDelete': 'مراجعة وحذف',
+    // Categories
+    'cat.All': 'الكل',
+    'cat.Recommended': 'موصى به',
+    'cat.2 players': 'لاعبان',
+    'cat.RPG': 'RPG',
+    'cat.Race': 'سباق',
+    'cat.Adventure': 'مغامرة',
+    'cat.Open World': 'عالم مفتوح',
+    'cat.Action': 'أكشن',
+    'cat.Shooter': 'إطلاق نار',
+    'cat.Horror': 'رعب'
   }
 };
 

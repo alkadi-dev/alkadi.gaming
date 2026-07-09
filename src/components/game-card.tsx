@@ -19,7 +19,7 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
   const { isInSelection, addToSelection, removeFromSelection, isOverLimit } = useSelection();
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
   const { toast } = useToast();
   const isAdded = isInSelection(game.id);
   const [isVisible, setIsVisible] = useState(false);
@@ -108,23 +108,23 @@ export function GameCard({ game }: GameCardProps) {
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60 transition-opacity" />
             
-            <div className="absolute top-3 left-3">
+            <div className={cn("absolute top-3", isRTL ? "right-3" : "left-3")}>
               {game.categories && game.categories.length > 0 && (
                 <Badge className="bg-primary/90 text-white border-none backdrop-blur-sm text-[10px] px-2.5 py-0.5 w-fit uppercase font-bold tracking-tight shadow-xl">
-                  {game.categories[0]}
+                  {t(`cat.${game.categories[0]}`)}
                 </Badge>
               )}
             </div>
 
             {!isAdded && game.isRecommended && (
-              <div className="absolute top-3 right-3 pointer-events-none">
-                <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg px-2">
-                  Recommended
+              <div className={cn("absolute top-3 pointer-events-none", isRTL ? "left-3" : "right-3")}>
+                <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
+                  {t('cat.Recommended')}
                 </div>
               </div>
             )}
 
-            <div className="absolute bottom-2 left-2 flex items-center gap-1.5 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg">
+            <div className={cn("absolute bottom-2 flex items-center gap-1.5 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg", isRTL ? "right-2" : "left-2")} dir="ltr">
               <div className="flex items-center gap-1">
                 <HardDrive className="w-2.5 h-2.5" />
                 <span>{game.size}</span>
@@ -141,7 +141,8 @@ export function GameCard({ game }: GameCardProps) {
           <Button
             size="icon"
             className={cn(
-              "absolute bottom-2 right-2 z-20 rounded-full w-8 h-8 shadow-2xl transition-all duration-500 transform border border-white/10",
+              "absolute bottom-2 z-20 rounded-full w-8 h-8 shadow-2xl transition-all duration-500 transform border border-white/10",
+              isRTL ? "left-2" : "right-2",
               isAdded 
                 ? "bg-primary hover:bg-primary/90 scale-110 text-white" 
                 : "bg-white/20 backdrop-blur-md text-white hover:bg-white/40 hover:scale-110 active:scale-95"
@@ -167,7 +168,7 @@ export function GameCard({ game }: GameCardProps) {
         
         <CardContent className="p-3 flex-1 flex flex-col items-center text-center">
           <Link href={`/game/${game.id}`} className="block w-full">
-            <h3 className="text-lg font-bold font-headline text-foreground line-clamp-1">
+            <h3 className="text-lg font-bold font-headline text-foreground line-clamp-1" dir="ltr">
               {game.title}
             </h3>
           </Link>

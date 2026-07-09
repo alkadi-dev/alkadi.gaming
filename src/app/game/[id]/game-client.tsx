@@ -149,7 +149,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   return (
     <div className="min-h-screen pb-20">
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/40 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
-        <div className="container mx-auto px-4 h-16 flex justify-between items-center gap-2">
+        <div className="container mx-auto px-4 h-16 flex justify-between items-center gap-2" dir="ltr">
           <Button
             variant="ghost"
             size="sm"
@@ -180,13 +180,14 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
               variant="default"
               size="sm"
               disabled={!isAdded && isOverLimit}
-              className={`rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-3 sm:px-4 text-[10px] sm:text-xs ${
+              className={cn(
+                "rounded-full transition-all duration-300 font-bold shadow-2xl h-8 px-3 sm:px-4 text-[10px] sm:text-xs",
                 isAdded 
                   ? 'bg-primary hover:bg-primary/90' 
                   : isOverLimit
                     ? 'bg-primary/20 cursor-not-allowed opacity-50'
                     : 'bg-white/10 hover:bg-white/20 border border-white/10'
-              }`}
+              )}
               onClick={handleToggleSelection}
             >
               {isAdded ? (
@@ -224,14 +225,14 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
             </Badge>
             {game.categories.map((cat, i) => (
               <Badge key={i} className="bg-primary text-white px-4 py-1.5 text-sm uppercase tracking-wider font-bold shadow-2xl">
-                {cat}
+                {t(`cat.${cat}`)}
               </Badge>
             ))}
             <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
               <HardDrive className="h-3.5 w-3.5" /> {game.size}
             </Badge>
           </div>
-          <h1 className="text-3xl md:text-7xl font-bold font-headline tracking-tighter leading-none">
+          <h1 className="text-3xl md:text-7xl font-bold font-headline tracking-tighter leading-none" dir="ltr">
             {game.title}
           </h1>
         </div>
@@ -288,7 +289,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <div className="flex justify-end gap-2 mt-4">
+                  <div className={cn("flex gap-2 mt-4", isRTL ? "justify-start" : "justify-end")}>
                     <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
                     <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
                   </div>
