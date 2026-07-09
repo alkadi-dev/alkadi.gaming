@@ -29,20 +29,27 @@ const refineGameDescriptionPrompt = ai.definePrompt({
   name: 'refineGameDescriptionPrompt',
   input: { schema: RefineGameDescriptionInputSchema },
   output: { schema: RefineGameDescriptionOutputSchema },
-  prompt: `You are a professional marketing copywriter specializing in video game descriptions. 
+  prompt: `You are a professional video game localization expert and marketing copywriter.
 
 Target Language: {{{targetLanguage}}}
 
-Your task is to take the original game description provided below and produce a version that is engaging, clear, and marketable in the Target Language.
+Your absolute priority is to provide a version of the game description in the Target Language.
 
-If the Target Language is "ar" (Arabic), translate and localize the description into high-quality Arabic. The tone should be exciting and professional for a gaming audience. Keep game-specific names or technical terms in English if that is common practice, but ensure the prose is fluent Arabic.
+IF TARGET LANGUAGE IS "ar":
+- You MUST translate the entire description into high-quality, professional Arabic.
+- Use a tone that is exciting, immersive, and appealing to a gaming audience.
+- Localize terms so they sound natural in Arabic.
+- Keep the game Title in English if mentioned, but all prose MUST be Arabic.
+- DO NOT return English text.
 
-If the Target Language is "en" (English), refine the original text for better flow and impact.
+IF TARGET LANGUAGE IS "en":
+- Refine the original text for better flow, impact, and marketing appeal.
+- Ensure the tone is consistent with modern AAA game descriptions.
 
 Original Description:
 {{{originalDescription}}}
 
-Refined Description:`,
+Refined Description (in {{{targetLanguage}}}):`,
 });
 
 const refineGameDescriptionFlow = ai.defineFlow(
@@ -54,15 +61,15 @@ const refineGameDescriptionFlow = ai.defineFlow(
   async (input) => {
     try {
       const { output } = await refineGameDescriptionPrompt(input);
-      if (!output) throw new Error('AI returned no output');
+      if (!output || !output.refinedDescription) {
+        throw new Error('AI returned empty or invalid output');
+      }
       return output;
     } catch (error: any) {
       console.error('Genkit Refinement Error:', error?.message || error);
       
-      if (error?.message?.includes('429') || error?.message?.includes('RESOURCE_EXHAUSTED')) {
-        console.warn('AI Quota exceeded. Falling back to original description.');
-      }
-
+      // Fallback logic: If it was supposed to be Arabic but failed, 
+      // we return original but log the failure clearly.
       return {
         refinedDescription: input.originalDescription
       };

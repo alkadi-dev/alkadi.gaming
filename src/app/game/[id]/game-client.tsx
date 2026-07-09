@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useState, useEffect, useRef } from 'react';
+import { use, useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
@@ -73,28 +73,33 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity } = useSelection();
   const { t, isRTL, language } = useLanguage();
   const game = MOCK_GAMES.find((g) => g.id === id);
+  
   const [refinedDescription, setRefinedDescription] = useState<string | null>(null);
   const [isRefining, setIsRefining] = useState(false);
 
   const isAdded = game ? isInSelection(game.id) : false;
 
-  const handleRefine = async () => {
+  const handleRefine = useCallback(async () => {
     if (!game) return;
 
-    // Restore original description for English mode as requested
     if (language === 'en') {
       setRefinedDescription(game.description);
       setIsRefining(false);
       return;
     }
 
-    // Translate to Arabic for Arabic mode
+    // For Arabic, we use AI translation
     setIsRefining(true);
+    setRefinedDescription(null); // Clear previous to show skeletons
+    
     try {
       const result = await refineGameDescription({ 
         originalDescription: game.description,
         targetLanguage: 'ar'
       });
+      
+      // If AI fails and returns original text (which is English), we still set it
+      // but the badge will reflect the attempt.
       setRefinedDescription(result.refinedDescription);
     } catch (error) {
       console.error('Failed to translate description:', error);
@@ -102,14 +107,11 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
     } finally {
       setIsRefining(false);
     }
-  };
+  }, [game, language]);
 
   useEffect(() => {
-    if (game) {
-      setRefinedDescription(null); // Show skeleton during transition
-      handleRefine();
-    }
-  }, [game, language]);
+    handleRefine();
+  }, [handleRefine]);
 
   const handleToggleSelection = () => {
     if (!game) return;
@@ -261,7 +263,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                   <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
                     <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.refining')}
                   </div>
-                ) : language === 'ar' ? (
+                ) : language === 'ar' && refinedDescription !== game.description ? (
                   <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
                     <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.aiEnhanced')}
                   </Badge>
