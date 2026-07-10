@@ -74,7 +74,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://wallpapercat.com/w/full/b/0/1/14420-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/XHrskkHr958',
+    videoUrl: 'https://www.youtube.com/embed/1-l29HlKkXU',
     shorts: [
       'https://www.youtube.com/embed/9HxO2Yg2AEQ?si=qKvoPgUhwaSl2_il',
       'https://www.youtube.com/embed/AT5PlpAKo0I?si=DSdU6m9qafDR3_qt',
@@ -97,8 +97,8 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
     shorts: [
       'https://www.youtube.com/embed/zGsXns95g4I?si=L580j9Mw1LFt06O4',
-      'https://www.youtube.com/embed/R5cq8FnyPFI?si=2AVA1TyCbroVAJhD',
-      'https://www.youtube.com/embed/mnIMU7BH57A?si=7_p6ID87TvhjRjHV'
+      'https://www.youtube.com/embed/xMgA-CaBxAs',
+      'https://www.youtube.com/embed/ea376amceaU'
     ],
     isRecommended: true,
   },
@@ -378,7 +378,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VAw',
+    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VSw',
     shorts: [
       'https://www.youtube.com/embed/PfCEqgu6-PE?si=8H6uaNz9JcQjx-ut',
       'https://www.youtube.com/embed/YtBVJKS0tnc?si=wKBTBFTA-OQWPV0i',
@@ -928,8 +928,8 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/WB2BSbaRmgY?si=4ul8utH91Rlj1EQx',
     shorts: [
-      'https://www.youtube.com/embed/AQrn7rMVTLg?si=-P_jfJW4armDDmqx',
-      'https://www.youtube.com/embed/rH5k5UMh2fo?si=V78BvYg-zuGc6ZKm',
+      'https://www.youtube.com/embed/fVcl_ZPF_qc',
+      'https://www.youtube.com/embed/eb6YmU7FwG8',
       'https://www.youtube.com/embed/hq9jAZ4jC64?si=TvlVXRPPdlulEcME'
     ],
   },
@@ -1309,7 +1309,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
     shorts: [
       'https://www.youtube.com/embed/Mxd53_lcrLc',
-      'https://www.youtube.com/embed/-XTdoeSE-rY',
+      'https://www.youtube.com/embed/tJB8-R6LGHI',
       'https://www.youtube.com/embed/E4HGKFOg-ow'
     ]
     ,isRecommended: true,
