@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { HardDrive, Gamepad2, MessageCircle, Truck } from 'lucide-react';
+import { HardDrive, Gamepad2, MessageCircle, Truck, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/components/language-context';
 import { cn } from '@/lib/utils';
 
@@ -115,6 +115,11 @@ export function HowItWorks() {
     {
       title: t('how.step4.title'),
       desc: t('how.step4.desc'),
+      icon: ShieldCheck
+    },
+    {
+      title: t('how.step5.title'),
+      desc: t('how.step5.desc'),
       icon: Truck
     }
   ];
