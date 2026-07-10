@@ -15,6 +15,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useSelection } from '@/components/selection-context';
 import { StatsSection } from '@/components/stats-section';
+import { HowItWorks } from '@/components/how-it-works';
 import { useLanguage } from '@/components/language-context';
 import { cn } from '@/lib/utils';
 
@@ -338,6 +339,14 @@ export default function HomeClient() {
         isVideoReady ? "opacity-100" : "opacity-0"
       )}>
         <StatsSection />
+      </div>
+
+      {/* How It Works Section */}
+      <div className={cn(
+        "transition-opacity duration-1000",
+        isVideoReady ? "opacity-100" : "opacity-0"
+      )}>
+        <HowItWorks />
       </div>
 
       <main className={cn(
