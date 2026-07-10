@@ -19,6 +19,9 @@ import { HowItWorks } from '@/components/how-it-works';
 import { useLanguage } from '@/components/language-context';
 import { cn } from '@/lib/utils';
 
+// Module-level variable to persist across client-side navigation in the same tab session
+let hasSplashBeenShown = false;
+
 // --- Brand Icons ---
 const FacebookIcon = () => (
   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -82,7 +85,9 @@ export default function HomeClient() {
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [isVideoReady, setIsVideoReady] = useState(false);
+  
+  // Set isVideoReady based on whether splash was already shown to prevent re-triggering on navigation
+  const [isVideoReady, setIsVideoReady] = useState(hasSplashBeenShown);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -90,15 +95,21 @@ export default function HomeClient() {
 
   useEffect(() => {
     setMounted(true);
-    const timer = setTimeout(() => {
-      setIsVideoReady(true);
-    }, 4000);
-    return () => clearTimeout(timer);
+    
+    // Only run splash timer if it hasn't been shown in this tab session
+    if (!hasSplashBeenShown) {
+      const timer = setTimeout(() => {
+        setIsVideoReady(true);
+        hasSplashBeenShown = true;
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   useEffect(() => {
     if (videoRef.current && videoRef.current.readyState >= 3) {
       setIsVideoReady(true);
+      hasSplashBeenShown = true;
     }
   }, [mounted]);
 
@@ -233,8 +244,8 @@ export default function HomeClient() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Visual Splash Screen until Video is Ready */}
-      {mounted && !isVideoReady && (
+      {/* Visual Splash Screen until Video is Ready - Only show if not previously shown in session */}
+      {mounted && !isVideoReady && !hasSplashBeenShown && (
         <div className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center transition-opacity duration-700">
           <div className="flex flex-col items-center gap-6 animate-in fade-in zoom-in-95 duration-1000">
              <div className="flex items-center gap-2 mb-4">
@@ -295,7 +306,10 @@ export default function HomeClient() {
           loop
           muted
           playsInline
-          onCanPlayThrough={() => setIsVideoReady(true)}
+          onCanPlayThrough={() => {
+            setIsVideoReady(true);
+            hasSplashBeenShown = true;
+          }}
           className={cn(
             "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
             isVideoReady ? "opacity-80" : "opacity-0"
