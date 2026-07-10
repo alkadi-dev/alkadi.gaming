@@ -92,6 +92,12 @@ export function StatsSection() {
   
   return (
     <section className="container mx-auto px-4 py-12 md:py-20">
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-3xl md:text-5xl font-black font-headline tracking-tighter text-white uppercase mb-4">
+          {t('stats.title')}
+        </h2>
+        <div className="h-1.5 w-24 bg-primary mx-auto rounded-full shadow-lg shadow-primary/20" />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         <StatCounter 
           end={80} 
