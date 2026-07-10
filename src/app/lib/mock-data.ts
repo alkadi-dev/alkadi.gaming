@@ -71,8 +71,8 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2015',
     images: [
       'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
-      'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/12/geralt-standing-front-of-kaer-morhen.jpg?q=50&fit=crop&w=825&dpr=1.5',
-      'https://wallpapercat.com/w/full/b/0/1/14420-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg'
+      'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg',
+      'https://wallpaperaccess.com/full/8799600.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/1-l29HlKkXU',
     shorts: [
@@ -1644,11 +1644,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: '007 First Light',
     description: 'Featuring a completely original Bond story, players will step into the shoes of the world\'s favorite secret agent to earn their 00 status in the very first James Bond origin story.',
     categories: ['Shooter'],
-    thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/05/BlogButton007FirstLight.jpg',
+    thumbnail: 'https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
     size: '36 GB',
     releaseYear: '2026',
     images: [
-      'https://www.greenmangaming.com/blog/wp-content/uploads/2026/05/BlogButton007FirstLight.jpg',
+      'https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
       'https://xboxwire.thesourcemediaassets.com/sites/2/2025/09/007FirstLight_Screenshots_04-e93a25ab1fe51886e9c6-1900x1080.jpg',
       'https://xboxwire.thesourcemediaassets.com/sites/2/2025/09/007FirstLight_Screenshots_02-a8a7c447efbf97ccdb4c-1900x1080.jpg'
     ],
