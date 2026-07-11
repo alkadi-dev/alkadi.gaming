@@ -1646,7 +1646,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Featuring a completely original Bond story, players will step into the shoes of the world\'s favorite secret agent to earn their 00 status in the very first James Bond origin story.',
     categories: ['Shooter'],
     thumbnail: 'https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
-    previewVideo: 'https://6a3b66710a4149112241450e.imgix.net/%5BTubePull%5D%20007_First_Light_Gameplay_Trailer.mp4',
+    previewVideo: 'https://6a3b66710a4149112241450e.imgix.net/firstlight.mp4',
     size: '36 GB',
     releaseYear: '2026',
     images: [
