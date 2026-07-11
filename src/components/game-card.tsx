@@ -25,6 +25,7 @@ export function GameCard({ game }: GameCardProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+  const [isPreparing, setIsPreparing] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -56,8 +57,10 @@ export function GameCard({ game }: GameCardProps) {
 
   const handleInteractionStart = () => {
     if (timerRef.current) return;
+    setIsPreparing(true);
     timerRef.current = setTimeout(() => {
       setShowPreview(true);
+      setIsPreparing(false);
     }, 2000);
   };
 
@@ -66,6 +69,7 @@ export function GameCard({ game }: GameCardProps) {
       clearTimeout(timerRef.current);
       timerRef.current = null;
     }
+    setIsPreparing(false);
     setShowPreview(false);
   };
 
@@ -198,7 +202,23 @@ export function GameCard({ game }: GameCardProps) {
           </Button>
         </div>
         
-        <CardContent className="p-3 flex-1 flex flex-col items-center text-center">
+        <CardContent className="p-3 flex-1 flex flex-col items-center text-center relative">
+          {/* Progress Bar for Preview Loading */}
+          <div className={cn(
+            "w-full h-0.5 bg-white/10 mb-2 overflow-hidden rounded-full transition-all duration-300",
+            isPreparing ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none"
+          )}>
+            <div 
+              className={cn(
+                "h-full bg-primary ease-linear",
+                isPreparing ? "w-full transition-all" : "w-0 transition-none"
+              )}
+              style={{ 
+                transitionDuration: isPreparing ? '2000ms' : '0ms' 
+              }}
+            />
+          </div>
+
           <Link href={`/game/${game.id}`} className="block w-full">
             <h3 className="text-lg font-bold font-headline text-foreground group-hover:text-primary transition-colors line-clamp-1" dir="ltr">
               {game.title}
