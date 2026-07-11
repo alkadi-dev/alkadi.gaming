@@ -61,7 +61,7 @@ export function GameCard({ game }: GameCardProps) {
     timerRef.current = setTimeout(() => {
       setShowPreview(true);
       setIsPreparing(false);
-    }, 2000);
+    }, 2000); // 2 second delay
   };
 
   const handleInteractionEnd = () => {
@@ -106,14 +106,21 @@ export function GameCard({ game }: GameCardProps) {
     <div 
       ref={cardRef}
       className={cn(
-        "transition-all duration-1000 ease-out transform",
+        "transition-all duration-1000 ease-out transform select-none touch-none",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
       onMouseEnter={handleInteractionStart}
       onMouseLeave={handleInteractionEnd}
-      onTouchStart={handleInteractionStart}
+      onTouchStart={(e) => {
+        // Prevent default touch behavior only when starting interaction
+        handleInteractionStart();
+      }}
       onTouchEnd={handleInteractionEnd}
       onTouchCancel={handleInteractionEnd}
+      onContextMenu={(e) => {
+        // Prevent system context menu during active preview loading or playing
+        if (isPreparing || showPreview) e.preventDefault();
+      }}
     >
       <Card className="group overflow-hidden bg-card border-none flex flex-col h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/30 hover:ring-1 hover:ring-white/10">
         <div className="relative aspect-[16/9] overflow-hidden bg-black">
@@ -203,10 +210,10 @@ export function GameCard({ game }: GameCardProps) {
         </div>
         
         <CardContent className="p-3 flex-1 flex flex-col items-center text-center relative">
-          {/* Progress Bar for Preview Loading */}
+          {/* Progress Bar for Preview Loading - Visible only during interaction prep */}
           <div className={cn(
-            "w-full h-0.5 bg-white/10 mb-2 overflow-hidden rounded-full transition-all duration-300",
-            isPreparing ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none"
+            "w-full h-1 bg-white/10 mb-2 overflow-hidden rounded-full transition-all duration-300",
+            isPreparing ? "opacity-100 translate-y-0 scale-y-100" : "opacity-0 translate-y-1 scale-y-0 pointer-events-none"
           )}>
             <div 
               className={cn(
