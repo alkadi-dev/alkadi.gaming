@@ -24,7 +24,9 @@ export function GameCard({ game }: GameCardProps) {
   const isAdded = isInSelection(game.id);
   const [isVisible, setIsVisible] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,8 +50,24 @@ export function GameCard({ game }: GameCardProps) {
       if (cardRef.current) {
         observer.unobserve(cardRef.current);
       }
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, []);
+
+  const handleInteractionStart = () => {
+    if (timerRef.current) return;
+    timerRef.current = setTimeout(() => {
+      setShowPreview(true);
+    }, 2000);
+  };
+
+  const handleInteractionEnd = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setShowPreview(false);
+  };
 
   const handleToggleSelection = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -87,11 +105,25 @@ export function GameCard({ game }: GameCardProps) {
         "transition-all duration-1000 ease-out transform",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
+      onMouseEnter={handleInteractionStart}
+      onMouseLeave={handleInteractionEnd}
+      onTouchStart={handleInteractionStart}
+      onTouchEnd={handleInteractionEnd}
+      onTouchCancel={handleInteractionEnd}
     >
       <Card className="group overflow-hidden bg-card border-none flex flex-col h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/30 hover:ring-1 hover:ring-white/10">
-        <div className="relative aspect-[16/9] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden bg-black">
           <Link href={`/game/${game.id}`} className="block relative w-full h-full">
-            {hasThumbnail ? (
+            {showPreview && game.previewVideo ? (
+              <video
+                src={game.previewVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-500"
+              />
+            ) : hasThumbnail ? (
               <Image
                 src={game.thumbnail}
                 alt={game.title}

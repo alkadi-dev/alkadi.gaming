@@ -8,6 +8,7 @@ export interface GameEntry {
   thumbnail: string;
   images: string[];
   videoUrl: string;
+  previewVideo?: string;
   size: string;
   releaseYear: string;
   shorts?: string[];
@@ -74,7 +75,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg',
       'https://wallpaperaccess.com/full/8799600.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/1-l29HlKkXU',
+    videoUrl: 'https://www.youtube.com/embed/1-l29HlKkXU?si=B-5NzTA8gjPMs-X6',
     shorts: [
       'https://www.youtube.com/embed/9HxO2Yg2AEQ?si=qKvoPgUhwaSl2_il',
       'https://www.youtube.com/embed/AT5PlpAKo0I?si=DSdU6m9qafDR3_qt',
@@ -97,8 +98,8 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
     shorts: [
       'https://www.youtube.com/embed/zGsXns95g4I?si=L580j9Mw1LFt06O4',
-      'https://www.youtube.com/embed/xMgA-CaBxAs',
-      'https://www.youtube.com/embed/ea376amceaU'
+      'https://www.youtube.com/embed/xMgA-CaBxAs?si=U4Tb2-jXhdIjj_dZ',
+      'https://www.youtube.com/embed/ea376amceaU?si=o5Lv896zl1xXeH8V'
     ],
     isRecommended: true,
   },
@@ -378,7 +379,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VSw',
+    videoUrl: 'https://www.youtube.com/embed/xtxJtQa6VSw?si=qWqN8wjFhq8zF3vp',
     shorts: [
       'https://www.youtube.com/embed/PfCEqgu6-PE?si=8H6uaNz9JcQjx-ut',
       'https://www.youtube.com/embed/YtBVJKS0tnc?si=wKBTBFTA-OQWPV0i',
@@ -928,8 +929,8 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/WB2BSbaRmgY?si=4ul8utH91Rlj1EQx',
     shorts: [
-      'https://www.youtube.com/embed/fVcl_ZPF_qc',
-      'https://www.youtube.com/embed/eb6YmU7FwG8',
+      'https://www.youtube.com/embed/fVcl_ZPF_qc?si=e_quNXSvvJaP0ywn',
+      'https://www.youtube.com/embed/eb6YmU7FwG8?si=6eCX-1YAvrkNDk5E',
       'https://www.youtube.com/embed/hq9jAZ4jC64?si=TvlVXRPPdlulEcME'
     ],
   },
@@ -1309,7 +1310,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/qJWI4bkD9ZM',
     shorts: [
       'https://www.youtube.com/embed/Mxd53_lcrLc',
-      'https://www.youtube.com/embed/tJB8-R6LGHI',
+      'https://www.youtube.com/embed/tJB8-R6LGHI?si=RlDavzgn6UN-5oKt',
       'https://www.youtube.com/embed/E4HGKFOg-ow'
     ]
     ,isRecommended: true,
@@ -1645,6 +1646,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Featuring a completely original Bond story, players will step into the shoes of the world\'s favorite secret agent to earn their 00 status in the very first James Bond origin story.',
     categories: ['Shooter'],
     thumbnail: 'https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+    previewVideo: 'https://6a3b66710a4149112241450e.imgix.net/firstlight.mp4',
     size: '36 GB',
     releaseYear: '2026',
     images: [
