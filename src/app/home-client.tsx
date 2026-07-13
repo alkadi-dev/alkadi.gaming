@@ -16,6 +16,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useSelection } from '@/components/selection-context';
 import { StatsSection } from '@/components/stats-section';
 import { HowItWorks } from '@/components/how-it-works';
+import { VideoCarousel } from '@/components/video-carousel';
 import { useLanguage } from '@/components/language-context';
 import { cn } from '@/lib/utils';
 
@@ -353,6 +354,14 @@ export default function HomeClient() {
         isVideoReady ? "opacity-100" : "opacity-0"
       )}>
         <StatsSection />
+      </div>
+
+      {/* Video Carousel Section */}
+      <div className={cn(
+        "transition-opacity duration-1000",
+        isVideoReady ? "opacity-100" : "opacity-0"
+      )}>
+        <VideoCarousel />
       </div>
 
       {/* How It Works Section */}
