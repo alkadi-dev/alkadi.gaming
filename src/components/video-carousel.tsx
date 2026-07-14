@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface CarouselItem {
@@ -65,7 +64,7 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
 
 export function VideoCarousel() {
   const [mounted, setMounted] = useState(false);
-  const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -85,57 +84,43 @@ export function VideoCarousel() {
       <div className="flex overflow-hidden group/carousel">
         <div className="flex animate-scroll-horizontal whitespace-nowrap group-hover/carousel:paused-animation">
           {items.map((item, i) => {
-            const isActive = activeVideoId === `${item.id}-${i}`;
+            const uniqueKey = `${item.id}-${i}`;
+            const isHovered = activeId === uniqueKey;
             
             return (
               <div 
-                key={`${item.id}-${i}`} 
+                key={uniqueKey} 
                 className={cn(
                   "inline-block px-2 md:px-4 w-[280px] md:w-[450px] transition-all duration-500",
-                  "group/item hover:!blur-none",
-                  "group-hover/carousel:blur-sm"
+                  "group/item",
+                  activeId && !isHovered ? "blur-sm opacity-40 scale-95" : "blur-none opacity-100 scale-100"
                 )}
+                onMouseEnter={() => setActiveId(uniqueKey)}
+                onMouseLeave={() => setActiveId(null)}
               >
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black group-hover/item:scale-[1.02] transition-transform duration-500 cursor-pointer">
-                  {isActive ? (
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black group-hover/item:scale-[1.05] transition-all duration-500 cursor-pointer">
+                  {isHovered ? (
                     <video
                       autoPlay
                       loop
+                      muted
                       playsInline
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-500"
                     >
                       <source src={item.videoUrl} type="video/mp4" />
                     </video>
                   ) : (
-                    <>
-                      <Image
-                        src={item.posterUrl}
-                        alt={item.title}
-                        fill
-                        className="object-cover opacity-80 group-hover/item:opacity-100 transition-opacity duration-500"
-                        sizes="(max-width: 768px) 280px, 450px"
-                      />
-                      
-                      {/* Play Button Overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover/item:opacity-100 transition-all duration-300">
-                        <div 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setActiveVideoId(`${item.id}-${i}`);
-                          }}
-                          className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/90 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 transition-transform duration-300"
-                        >
-                          <Play className="w-8 h-8 md:w-10 md:h-10 fill-current ml-1" />
-                        </div>
-                      </div>
-                      
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
-                        <span className="text-white text-xs md:text-sm font-bold tracking-tight uppercase">
-                          {item.title}
-                        </span>
-                      </div>
-                    </>
+                    <Image
+                      src={item.posterUrl}
+                      alt={item.title}
+                      fill
+                      className="object-cover opacity-80 group-hover/item:opacity-100 transition-opacity duration-500"
+                      sizes="(max-width: 768px) 280px, 450px"
+                    />
                   )}
+                  
+                  {/* Subtle Gradient Shadow for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
             );
