@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
@@ -119,7 +118,7 @@ export function VideoCarousel() {
   const dRow2Items = [...desktopRow2, ...desktopRow2, ...desktopRow2];
 
   const handleInteraction = (e: React.MouseEvent | React.TouchEvent, key: string) => {
-    // If tapping the already active item, close it
+    // If clicking/tapping the already active item, close it
     if (activeId === key) {
       setActiveId(null);
       setCenteredOffset({ x: 0, y: 0 });
@@ -152,7 +151,7 @@ export function VideoCarousel() {
   const renderItem = (item: CarouselItem, index: number, rowTag: string) => {
     const uniqueKey = `${item.id}-${index}-${rowTag}`;
     const isActive = activeId === uniqueKey;
-    const showVideo = isMobile ? (isActive && isVideoReady) : isActive;
+    const showVideo = isActive && isVideoReady;
 
     return (
       <div 
@@ -166,17 +165,11 @@ export function VideoCarousel() {
         style={isActive ? {
           transform: `translate(${centeredOffset.x}px, ${centeredOffset.y}px) scale(1.15)`
         } : undefined}
-        onMouseEnter={!isMobile ? () => handleInteraction({ currentTarget: document.getElementById(uniqueKey) } as any, uniqueKey) : undefined}
-        onMouseLeave={!isMobile ? () => {
-          setActiveId(null);
-          setIsVideoReady(false);
-        } : undefined}
         onClick={(e) => handleInteraction(e, uniqueKey)}
         id={uniqueKey}
       >
         <div className={cn(
-          "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer",
-          !isMobile && "group-hover/item:scale-[1.05]"
+          "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer"
         )}>
           {showVideo ? (
             <video
