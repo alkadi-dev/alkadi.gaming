@@ -61,6 +61,30 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
     videoUrl: "https://6a3b66710a4149112241450e.imgix.net/god%20of%20war.mp4",
     posterUrl: "https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg",
     title: "God of War Ragnarok"
+  },
+  {
+    id: 'got',
+    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/ghost%20of%20thusima.mov",
+    posterUrl: "https://images3.alphacoders.com/138/thumbbig-1387219.webp",
+    title: "Ghost of Tsushima"
+  },
+  {
+    id: 'cyberpunk',
+    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/cyper%20punk.mov",
+    posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg",
+    title: "Cyberpunk 2077"
+  },
+  {
+    id: 'u4',
+    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/uncharted%204.mov",
+    posterUrl: "https://wallpapercave.com/wp/wp2272912.jpg",
+    title: "Uncharted 4"
+  },
+  {
+    id: 're',
+    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/resident%20evil.mov",
+    posterUrl: "https://wallpaperaccess.com/full/8929582.jpg",
+    title: "Resident Evil 4"
   }
 ];
 
@@ -78,16 +102,23 @@ export function VideoCarousel() {
 
   if (!mounted) return <div className="h-48 md:h-80 w-full" />;
 
+  // Split logic
   const mobileRow1 = CAROUSEL_ITEMS.slice(0, 4);
   const mobileRow2 = CAROUSEL_ITEMS.slice(4, 8);
+  const mobileRow3 = CAROUSEL_ITEMS.slice(8, 12);
 
-  const desktopItems = [...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS];
+  const desktopRow1 = CAROUSEL_ITEMS.slice(0, 6);
+  const desktopRow2 = CAROUSEL_ITEMS.slice(6, 12);
+
+  // Triple buffers for seamless looping
   const row1Items = [...mobileRow1, ...mobileRow1, ...mobileRow1];
   const row2Items = [...mobileRow2, ...mobileRow2, ...mobileRow2];
+  const row3Items = [...mobileRow3, ...mobileRow3, ...mobileRow3];
+
+  const dRow1Items = [...desktopRow1, ...desktopRow1, ...desktopRow1];
+  const dRow2Items = [...desktopRow2, ...desktopRow2, ...desktopRow2];
 
   const handleInteraction = (e: React.MouseEvent | React.TouchEvent, key: string) => {
-    if (!isMobile) return;
-    
     // If tapping the already active item, close it
     if (activeId === key) {
       setActiveId(null);
@@ -118,8 +149,8 @@ export function VideoCarousel() {
     }, 500);
   };
 
-  const renderItem = (item: CarouselItem, index: number, isRow2: boolean = false) => {
-    const uniqueKey = `${item.id}-${index}-${isRow2 ? 'r2' : 'r1'}`;
+  const renderItem = (item: CarouselItem, index: number, rowTag: string) => {
+    const uniqueKey = `${item.id}-${index}-${rowTag}`;
     const isActive = activeId === uniqueKey;
     const showVideo = isMobile ? (isActive && isVideoReady) : isActive;
 
@@ -130,22 +161,18 @@ export function VideoCarousel() {
           "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu will-change-transform",
           "group/item",
           activeId && !isActive ? "blur-md opacity-30 scale-90 pointer-events-none" : "blur-none opacity-100 scale-100",
-          isMobile && isActive && "z-[100]"
+          isActive && "z-[100]"
         )}
-        style={isMobile && isActive ? {
+        style={isActive ? {
           transform: `translate(${centeredOffset.x}px, ${centeredOffset.y}px) scale(1.15)`
         } : undefined}
-        onMouseEnter={!isMobile ? () => setActiveId(uniqueKey) : undefined}
+        onMouseEnter={!isMobile ? () => handleInteraction({ currentTarget: document.getElementById(uniqueKey) } as any, uniqueKey) : undefined}
         onMouseLeave={!isMobile ? () => {
           setActiveId(null);
           setIsVideoReady(false);
         } : undefined}
         onClick={(e) => handleInteraction(e, uniqueKey)}
-        onTouchStart={!isMobile ? undefined : (e) => {
-          // Prevent scroll animation from fighting with touch on some mobile browsers
-          // if we are already in an active state
-          if (activeId) e.stopPropagation();
-        }}
+        id={uniqueKey}
       >
         <div className={cn(
           "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer",
@@ -186,41 +213,44 @@ export function VideoCarousel() {
         <div className="flex flex-col gap-10 py-10 overflow-visible">
           {/* Mobile Row 1: Right to Left */}
           <div className="flex overflow-visible">
-            <div className={cn(
-              "flex animate-scroll-left whitespace-nowrap",
-              activeId && "paused-animation"
-            )}>
-              {row1Items.map((item, i) => renderItem(item, i))}
+            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
+              {row1Items.map((item, i) => renderItem(item, i, 'm-r1'))}
             </div>
           </div>
           
           {/* Mobile Row 2: Left to Right */}
           <div className="flex overflow-visible">
-            <div className={cn(
-              "flex animate-scroll-right whitespace-nowrap",
-              activeId && "paused-animation"
-            )}>
-              {row2Items.map((item, i) => renderItem(item, i, true))}
+            <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
+              {row2Items.map((item, i) => renderItem(item, i, 'm-r2'))}
+            </div>
+          </div>
+
+          {/* Mobile Row 3: Right to Left */}
+          <div className="flex overflow-visible">
+            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
+              {row3Items.map((item, i) => renderItem(item, i, 'm-r3'))}
             </div>
           </div>
         </div>
       ) : (
-        /* Desktop Version: Single Row */
-        <div className="flex overflow-hidden group/carousel py-4">
-          <div className={cn(
-            "flex animate-scroll-horizontal-desktop whitespace-nowrap",
-            activeId && "paused-animation"
-          )}>
-            {desktopItems.map((item, i) => renderItem(item, i))}
+        <div className="flex flex-col gap-10 py-10 overflow-visible">
+          {/* Desktop Row 1: Right to Left */}
+          <div className="flex overflow-visible">
+            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
+              {dRow1Items.map((item, i) => renderItem(item, i, 'd-r1'))}
+            </div>
+          </div>
+          
+          {/* Desktop Row 2: Left to Right */}
+          <div className="flex overflow-visible">
+            <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
+              {dRow2Items.map((item, i) => renderItem(item, i, 'd-r2'))}
+            </div>
           </div>
         </div>
       )}
 
       <style jsx global>{`
-        @keyframes scroll-horizontal-desktop {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.3333%); }
-        }
         @keyframes scroll-left {
           0% { transform: translateX(0); }
           100% { transform: translateX(-33.3333%); }
@@ -229,14 +259,11 @@ export function VideoCarousel() {
           0% { transform: translateX(-33.3333%); }
           100% { transform: translateX(0); }
         }
-        .animate-scroll-horizontal-desktop {
-          animation: scroll-horizontal-desktop 40s linear infinite;
-        }
         .animate-scroll-left {
-          animation: scroll-left 25s linear infinite;
+          animation: scroll-left 40s linear infinite;
         }
         .animate-scroll-right {
-          animation: scroll-right 25s linear infinite;
+          animation: scroll-right 40s linear infinite;
         }
         .paused-animation {
           animation-play-state: paused !important;
