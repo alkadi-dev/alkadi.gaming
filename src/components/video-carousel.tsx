@@ -141,6 +141,11 @@ export function VideoCarousel() {
           setIsVideoReady(false);
         } : undefined}
         onClick={(e) => handleInteraction(e, uniqueKey)}
+        onTouchStart={!isMobile ? undefined : (e) => {
+          // Prevent scroll animation from fighting with touch on some mobile browsers
+          // if we are already in an active state
+          if (activeId) e.stopPropagation();
+        }}
       >
         <div className={cn(
           "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer",
@@ -172,13 +177,13 @@ export function VideoCarousel() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden py-8 md:py-20">
+    <section className="relative w-full overflow-hidden py-8 md:py-20" dir="ltr">
       {/* Cinematic Overlays */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       
       {isMobile ? (
-        <div className="flex flex-col gap-10 py-6">
+        <div className="flex flex-col gap-10 py-10 overflow-visible">
           {/* Mobile Row 1: Right to Left */}
           <div className="flex overflow-visible">
             <div className={cn(
