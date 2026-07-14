@@ -1,8 +1,10 @@
+
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface CarouselItem {
   id: string;
@@ -65,6 +67,7 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
 export function VideoCarousel() {
   const [mounted, setMounted] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setMounted(true);
@@ -72,84 +75,129 @@ export function VideoCarousel() {
 
   if (!mounted) return <div className="h-48 md:h-80 w-full" />;
 
-  // Doubling the array for seamless infinite scroll
-  const items = [...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS];
+  // Split items for mobile rows
+  const mobileRow1 = CAROUSEL_ITEMS.slice(0, 4);
+  const mobileRow2 = CAROUSEL_ITEMS.slice(4, 8);
 
-  return (
-    <section className="relative w-full overflow-hidden py-12 md:py-20">
-      {/* Cinematic Overlays */}
-      <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
-      
-      <div className="flex overflow-hidden group/carousel">
-        {/* Pause animation when activeId is set (hovered or touched) */}
+  // Triple items for seamless loop
+  const desktopItems = [...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS];
+  const row1Items = [...mobileRow1, ...mobileRow1, ...mobileRow1];
+  const row2Items = [...mobileRow2, ...mobileRow2, ...mobileRow2];
+
+  const renderItem = (item: CarouselItem, index: number, isRow2: boolean = false) => {
+    const uniqueKey = `${item.id}-${index}-${isRow2 ? 'r2' : 'r1'}`;
+    const isHovered = activeId === uniqueKey;
+
+    return (
+      <div 
+        key={uniqueKey} 
+        className={cn(
+          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 transform-gpu",
+          "group/item",
+          activeId && !isHovered ? "blur-sm opacity-40 scale-95" : "blur-none opacity-100 scale-100",
+          isMobile && isHovered && "z-[100] scale-110"
+        )}
+        onMouseEnter={!isMobile ? () => setActiveId(uniqueKey) : undefined}
+        onMouseLeave={!isMobile ? () => setActiveId(null) : undefined}
+        onTouchStart={isMobile ? (e) => {
+          // Prevent scroll while holding
+          setActiveId(uniqueKey);
+        } : undefined}
+        onTouchEnd={isMobile ? () => setActiveId(null) : undefined}
+      >
         <div className={cn(
-          "flex animate-scroll-horizontal whitespace-nowrap",
-          activeId && "paused-animation"
+          "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer",
+          !isMobile && "group-hover/item:scale-[1.05]"
         )}>
-          {items.map((item, i) => {
-            const uniqueKey = `${item.id}-${i}`;
-            const isHovered = activeId === uniqueKey;
-            
-            return (
-              <div 
-                key={uniqueKey} 
-                className={cn(
-                  "inline-block px-2 md:px-4 w-[280px] md:w-[450px] transition-all duration-500",
-                  "group/item",
-                  activeId && !isHovered ? "blur-sm opacity-40 scale-95" : "blur-none opacity-100 scale-100"
-                )}
-                onMouseEnter={() => setActiveId(uniqueKey)}
-                onMouseLeave={() => setActiveId(null)}
-                onTouchStart={() => setActiveId(uniqueKey)}
-                onTouchEnd={() => setActiveId(null)}
-              >
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black group-hover/item:scale-[1.05] transition-all duration-500 cursor-pointer">
-                  {isHovered ? (
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-500"
-                    >
-                      <source src={item.videoUrl} type="video/mp4" />
-                    </video>
-                  ) : (
-                    <Image
-                      src={item.posterUrl}
-                      alt={item.title}
-                      fill
-                      className="object-cover opacity-80 group-hover/item:opacity-100 transition-opacity duration-500"
-                      sizes="(max-width: 768px) 280px, 450px"
-                    />
-                  )}
-                  
-                  {/* Subtle Gradient Shadow for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                </div>
-              </div>
-            );
-          })}
+          {isHovered ? (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-500"
+            >
+              <source src={item.videoUrl} type="video/mp4" />
+            </video>
+          ) : (
+            <Image
+              src={item.posterUrl}
+              alt={item.title}
+              fill
+              className="object-cover opacity-80 transition-opacity duration-500"
+              sizes="(max-width: 768px) 240px, 450px"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
         </div>
       </div>
+    );
+  };
+
+  return (
+    <section className="relative w-full overflow-hidden py-8 md:py-20">
+      {/* Cinematic Overlays */}
+      <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+      
+      {isMobile ? (
+        <div className="flex flex-col gap-4">
+          {/* Mobile Row 1: Right to Left */}
+          <div className="flex overflow-hidden">
+            <div className={cn(
+              "flex animate-scroll-left whitespace-nowrap",
+              activeId && "paused-animation"
+            )}>
+              {row1Items.map((item, i) => renderItem(item, i))}
+            </div>
+          </div>
+          
+          {/* Mobile Row 2: Left to Right */}
+          <div className="flex overflow-hidden">
+            <div className={cn(
+              "flex animate-scroll-right whitespace-nowrap",
+              activeId && "paused-animation"
+            )}>
+              {row2Items.map((item, i) => renderItem(item, i, true))}
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* Desktop Version: Single Row */
+        <div className="flex overflow-hidden group/carousel">
+          <div className={cn(
+            "flex animate-scroll-horizontal-desktop whitespace-nowrap",
+            activeId && "paused-animation"
+          )}>
+            {desktopItems.map((item, i) => renderItem(item, i))}
+          </div>
+        </div>
+      )}
 
       <style jsx global>{`
-        @keyframes scroll-horizontal {
+        @keyframes scroll-horizontal-desktop {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.3333%); }
         }
-        .animate-scroll-horizontal {
-          animation: scroll-horizontal 40s linear infinite;
+        @keyframes scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.3333%); }
+        }
+        @keyframes scroll-right {
+          0% { transform: translateX(-33.3333%); }
+          100% { transform: translateX(0); }
+        }
+        .animate-scroll-horizontal-desktop {
+          animation: scroll-horizontal-desktop 40s linear infinite;
+        }
+        .animate-scroll-left {
+          animation: scroll-left 25s linear infinite;
+        }
+        .animate-scroll-right {
+          animation: scroll-right 25s linear infinite;
         }
         .paused-animation {
           animation-play-state: paused !important;
-        }
-        /* Faster on mobile */
-        @media (max-width: 768px) {
-          .animate-scroll-horizontal {
-            animation-duration: 25s;
-          }
         }
       `}</style>
     </section>
