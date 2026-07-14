@@ -67,7 +67,10 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
 export function VideoCarousel() {
   const [mounted, setMounted] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [centeredOffset, setCenteredOffset] = useState({ x: 0, y: 0 });
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const isMobile = useIsMobile();
+  const centeringTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -75,41 +78,75 @@ export function VideoCarousel() {
 
   if (!mounted) return <div className="h-48 md:h-80 w-full" />;
 
-  // Split items for mobile rows
   const mobileRow1 = CAROUSEL_ITEMS.slice(0, 4);
   const mobileRow2 = CAROUSEL_ITEMS.slice(4, 8);
 
-  // Triple items for seamless loop
   const desktopItems = [...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS];
   const row1Items = [...mobileRow1, ...mobileRow1, ...mobileRow1];
   const row2Items = [...mobileRow2, ...mobileRow2, ...mobileRow2];
 
+  const handleInteraction = (e: React.MouseEvent | React.TouchEvent, key: string) => {
+    if (!isMobile) return;
+    
+    // If tapping the already active item, close it
+    if (activeId === key) {
+      setActiveId(null);
+      setCenteredOffset({ x: 0, y: 0 });
+      setIsVideoReady(false);
+      if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
+      return;
+    }
+
+    // Centering Logic
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const screenCenterX = window.innerWidth / 2;
+    const screenCenterY = window.innerHeight / 2;
+
+    setActiveId(key);
+    setCenteredOffset({
+      x: screenCenterX - centerX,
+      y: screenCenterY - centerY
+    });
+    
+    // Wait for the move animation (500ms) before allowing video
+    setIsVideoReady(false);
+    if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
+    centeringTimeoutRef.current = setTimeout(() => {
+      setIsVideoReady(true);
+    }, 500);
+  };
+
   const renderItem = (item: CarouselItem, index: number, isRow2: boolean = false) => {
     const uniqueKey = `${item.id}-${index}-${isRow2 ? 'r2' : 'r1'}`;
-    const isHovered = activeId === uniqueKey;
+    const isActive = activeId === uniqueKey;
+    const showVideo = isMobile ? (isActive && isVideoReady) : isActive;
 
     return (
       <div 
         key={uniqueKey} 
         className={cn(
-          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 transform-gpu",
+          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu",
           "group/item",
-          activeId && !isHovered ? "blur-sm opacity-40 scale-95" : "blur-none opacity-100 scale-100",
-          isMobile && isHovered && "z-[100] scale-110"
+          activeId && !isActive ? "blur-md opacity-30 scale-90 pointer-events-none" : "blur-none opacity-100 scale-100",
+          isMobile && isActive && "z-[100]"
         )}
-        onMouseEnter={!isMobile ? () => setActiveId(uniqueKey) : undefined}
-        onMouseLeave={!isMobile ? () => setActiveId(null) : undefined}
-        onTouchStart={isMobile ? (e) => {
-          // Prevent scroll while holding
-          setActiveId(uniqueKey);
+        style={isMobile && isActive ? {
+          transform: `translate(${centeredOffset.x}px, ${centeredOffset.y}px) scale(1.15)`
         } : undefined}
-        onTouchEnd={isMobile ? () => setActiveId(null) : undefined}
+        onMouseEnter={!isMobile ? () => setActiveId(uniqueKey) : undefined}
+        onMouseLeave={!isMobile ? () => {
+          setActiveId(null);
+          setIsVideoReady(false);
+        } : undefined}
+        onClick={(e) => handleInteraction(e, uniqueKey)}
       >
         <div className={cn(
           "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer",
           !isMobile && "group-hover/item:scale-[1.05]"
         )}>
-          {isHovered ? (
+          {showVideo ? (
             <video
               autoPlay
               loop
