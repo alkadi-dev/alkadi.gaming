@@ -13,10 +13,10 @@ export function VideoCarousel() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <div className="h-48 md:h-80 w-full bg-black/20" />;
+  if (!mounted) return <div className="h-48 md:h-80 w-full" />;
 
   return (
-    <section className="relative w-full overflow-hidden bg-black/40 py-12 md:py-20 border-y border-white/5">
+    <section className="relative w-full overflow-hidden py-12 md:py-20">
       {/* Cinematic Overlays */}
       <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
@@ -29,7 +29,7 @@ export function VideoCarousel() {
               key={i} 
               className="inline-block px-2 md:px-4 w-[280px] md:w-[450px]"
             >
-              <div className="relative aspect-video rounded-2xl overflow-hidden bg-secondary/20 shadow-2xl ring-1 ring-white/10 group">
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 group">
                 <video
                   autoPlay
                   loop
