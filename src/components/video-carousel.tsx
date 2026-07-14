@@ -51,7 +51,7 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   {
     id: 'ac',
     videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassin%20creed.mp4",
-    posterUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
+    posterUrl: "https://cdn.mos.cms.futurecdn.net/7d0eaf1ba3b5bf9571dd46c203b89d10.jpg",
     title: "Assassin's Creed Shadows"
   },
   {
@@ -82,7 +82,11 @@ export function VideoCarousel() {
       <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       
       <div className="flex overflow-hidden group/carousel">
-        <div className="flex animate-scroll-horizontal whitespace-nowrap group-hover/carousel:paused-animation">
+        {/* Pause animation when activeId is set (hovered or touched) */}
+        <div className={cn(
+          "flex animate-scroll-horizontal whitespace-nowrap",
+          activeId && "paused-animation"
+        )}>
           {items.map((item, i) => {
             const uniqueKey = `${item.id}-${i}`;
             const isHovered = activeId === uniqueKey;
@@ -97,6 +101,8 @@ export function VideoCarousel() {
                 )}
                 onMouseEnter={() => setActiveId(uniqueKey)}
                 onMouseLeave={() => setActiveId(null)}
+                onTouchStart={() => setActiveId(uniqueKey)}
+                onTouchEnd={() => setActiveId(null)}
               >
                 <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black group-hover/item:scale-[1.05] transition-all duration-500 cursor-pointer">
                   {isHovered ? (
