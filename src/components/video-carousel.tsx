@@ -127,7 +127,7 @@ export function VideoCarousel() {
       <div 
         key={uniqueKey} 
         className={cn(
-          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu",
+          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu will-change-transform",
           "group/item",
           activeId && !isActive ? "blur-md opacity-30 scale-90 pointer-events-none" : "blur-none opacity-100 scale-100",
           isMobile && isActive && "z-[100]"
@@ -178,9 +178,9 @@ export function VideoCarousel() {
       <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       
       {isMobile ? (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-10 py-6">
           {/* Mobile Row 1: Right to Left */}
-          <div className="flex overflow-hidden">
+          <div className="flex overflow-visible">
             <div className={cn(
               "flex animate-scroll-left whitespace-nowrap",
               activeId && "paused-animation"
@@ -190,7 +190,7 @@ export function VideoCarousel() {
           </div>
           
           {/* Mobile Row 2: Left to Right */}
-          <div className="flex overflow-hidden">
+          <div className="flex overflow-visible">
             <div className={cn(
               "flex animate-scroll-right whitespace-nowrap",
               activeId && "paused-animation"
@@ -201,7 +201,7 @@ export function VideoCarousel() {
         </div>
       ) : (
         /* Desktop Version: Single Row */
-        <div className="flex overflow-hidden group/carousel">
+        <div className="flex overflow-hidden group/carousel py-4">
           <div className={cn(
             "flex animate-scroll-horizontal-desktop whitespace-nowrap",
             activeId && "paused-animation"
