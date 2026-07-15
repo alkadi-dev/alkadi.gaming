@@ -51,8 +51,8 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   },
   {
     id: 'ac',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassin%20creed.mp4",
-    posterUrl: "https://cdn.mos.cms.futurecdn.net/7d0eaf1ba3b5bf9571dd46c203b89d10.jpg",
+    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassin%20creed%20shadows.mov",
+    posterUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
     title: "Assassin's Creed Shadows"
   },
   {
@@ -82,8 +82,8 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   {
     id: 're',
     videoUrl: "https://6a3b66710a4149112241450e.imgix.net/resident%20evil.mov",
-    posterUrl: "https://wallpaperaccess.com/full/8929582.jpg",
-    title: "Resident Evil 4"
+    posterUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI",
+    title: "Resident Evil Requiem"
   }
 ];
 
@@ -101,7 +101,7 @@ export function VideoCarousel() {
 
   if (!mounted) return <div className="h-48 md:h-80 w-full" />;
 
-  // Split logic
+  // Row Logic
   const mobileRow1 = CAROUSEL_ITEMS.slice(0, 4);
   const mobileRow2 = CAROUSEL_ITEMS.slice(4, 8);
   const mobileRow3 = CAROUSEL_ITEMS.slice(8, 12);
@@ -118,7 +118,6 @@ export function VideoCarousel() {
   const dRow2Items = [...desktopRow2, ...desktopRow2, ...desktopRow2];
 
   const handleInteraction = (e: React.MouseEvent | React.TouchEvent, key: string) => {
-    // If clicking/tapping the already active item, close it
     if (activeId === key) {
       setActiveId(null);
       setCenteredOffset({ x: 0, y: 0 });
@@ -127,7 +126,6 @@ export function VideoCarousel() {
       return;
     }
 
-    // Centering Logic
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -140,7 +138,6 @@ export function VideoCarousel() {
       y: screenCenterY - centerY
     });
     
-    // Wait for the move animation (500ms) before allowing video
     setIsVideoReady(false);
     if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
     centeringTimeoutRef.current = setTimeout(() => {
@@ -198,27 +195,21 @@ export function VideoCarousel() {
 
   return (
     <section className="relative w-full overflow-hidden py-8 md:py-20" dir="ltr">
-      {/* Cinematic Overlays */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       
       {isMobile ? (
         <div className="flex flex-col gap-10 py-10 overflow-visible">
-          {/* Mobile Row 1: Right to Left */}
           <div className="flex overflow-visible">
             <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
               {row1Items.map((item, i) => renderItem(item, i, 'm-r1'))}
             </div>
           </div>
-          
-          {/* Mobile Row 2: Left to Right */}
           <div className="flex overflow-visible">
             <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
               {row2Items.map((item, i) => renderItem(item, i, 'm-r2'))}
             </div>
           </div>
-
-          {/* Mobile Row 3: Right to Left */}
           <div className="flex overflow-visible">
             <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
               {row3Items.map((item, i) => renderItem(item, i, 'm-r3'))}
@@ -227,14 +218,11 @@ export function VideoCarousel() {
         </div>
       ) : (
         <div className="flex flex-col gap-10 py-10 overflow-visible">
-          {/* Desktop Row 1: Right to Left */}
           <div className="flex overflow-visible">
             <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
               {dRow1Items.map((item, i) => renderItem(item, i, 'd-r1'))}
             </div>
           </div>
-          
-          {/* Desktop Row 2: Left to Right */}
           <div className="flex overflow-visible">
             <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
               {dRow2Items.map((item, i) => renderItem(item, i, 'd-r2'))}
