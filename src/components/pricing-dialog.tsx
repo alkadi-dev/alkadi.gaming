@@ -45,7 +45,7 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
         <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-muted-foreground mb-1">
           {name}
         </span>
-        <div className="flex flex-col items-center gap-1 mb-2">
+        <div className="flex flex-col items-center gap-1 mb-4">
           <span className="text-4xl md:text-5xl font-black font-headline tracking-tighter text-white">
             {storage}
           </span>
@@ -53,9 +53,9 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
             {price}
           </span>
         </div>
-        <div className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/5">
-          <Gamepad2 className="h-3 w-3 text-primary" />
-          <span className="text-[11px] font-bold text-white/80">{games} {t('pricing.games')}</span>
+        <div className="flex items-center gap-2.5 px-4 py-2 bg-white/5 rounded-full border border-white/5 shadow-inner">
+          <Gamepad2 className="h-4 w-4 text-primary" />
+          <span className="text-sm font-black text-white tracking-tight">{games} {t('pricing.games')}</span>
         </div>
       </div>
 
