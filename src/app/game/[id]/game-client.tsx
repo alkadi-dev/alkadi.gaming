@@ -50,22 +50,6 @@ function RevealSection({ children, className }: { children: React.ReactNode, cla
   );
 }
 
-function LanguageSwitcher() {
-  const { language, setLanguage } = useLanguage();
-
-  return (
-    <Button
-      variant="ghost"
-      size="sm"
-      className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs flex items-center gap-1.5"
-      onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-    >
-      <Languages className="h-3.5 w-3.5" />
-      <span className="font-bold">{language === 'en' ? 'AR' : 'EN'}</span>
-    </Button>
-  );
-}
-
 export default function GameClient({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const router = useRouter();
@@ -177,7 +161,6 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           </Button>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
-            <LanguageSwitcher />
              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
               <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
               <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
@@ -295,7 +278,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                             src={img}
                             alt={`${game.title} Screenshot ${index + 1}`}
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         </div>

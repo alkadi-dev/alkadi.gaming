@@ -4,8 +4,10 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/components/language-context';
 
 export function BackToTop() {
+  const { language, setLanguage } = useLanguage();
   const [showTop, setShowTop] = useState(false);
   const [showDown, setShowDown] = useState(true);
   const ticking = useRef(false);
@@ -58,6 +60,19 @@ export function BackToTop() {
 
   return (
     <>
+      {/* Floating Language Switcher: Positioned above scroll buttons */}
+      <Button
+        variant="secondary"
+        size="icon"
+        className={cn(
+          "fixed bottom-24 right-8 z-[60] rounded-full w-12 h-12 shadow-2xl transition-all duration-500 transform bg-background/80 backdrop-blur-xl border border-white/10 hover:scale-110 active:scale-90 text-primary flex items-center justify-center font-bold text-xs uppercase"
+        )}
+        onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+        aria-label="Toggle language"
+      >
+        {language === 'en' ? 'AR' : 'EN'}
+      </Button>
+
       {/* Back to Top Button: Appears after 50% scroll */}
       <Button
         variant="default"
