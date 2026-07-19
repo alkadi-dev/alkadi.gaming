@@ -387,7 +387,7 @@ export default function HomeClient() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center justify-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
+              <div className="flex items-center justify-start gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
                 {CATEGORIES.map((cat) => (
                   <Button
                     key={cat}
