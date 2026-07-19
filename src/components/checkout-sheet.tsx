@@ -30,7 +30,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Tag } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Tag, BadgePercent } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -290,7 +290,7 @@ export function CheckoutSheet() {
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
           <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
-                <Tag className="h-8 w-8 text-primary" />
+                <BadgePercent className="h-8 w-8 text-primary" />
              </div>
              <DialogHeader>
                 <DialogTitle className="text-2xl font-black font-headline tracking-tighter uppercase text-white">
@@ -300,13 +300,13 @@ export function CheckoutSheet() {
           </div>
           
           <div className="p-8 space-y-6">
-            <DialogDescription className="text-center text-muted-foreground text-base font-medium leading-relaxed">
+            <div className="text-center text-muted-foreground text-base font-medium leading-relaxed">
               {language === 'en' ? (
                 <>Get <span className="text-primary font-bold">40% OFF</span> by upgrading to the 1TB hard drive instead of choosing the 500GB option.</>
               ) : (
                 <>احصل على <span className="text-primary font-bold">خصم 40%</span> عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.</>
               )}
-            </DialogDescription>
+            </div>
 
             <div className="flex flex-col gap-3">
               <Button 
@@ -333,7 +333,7 @@ export function CheckoutSheet() {
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
           <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
-                <Tag className="h-8 w-8 text-primary" />
+                <BadgePercent className="h-8 w-8 text-primary" />
              </div>
              <DialogHeader>
                 <DialogTitle className="text-2xl font-black font-headline tracking-tighter uppercase text-white">
@@ -343,13 +343,13 @@ export function CheckoutSheet() {
           </div>
           
           <div className="p-8 space-y-6">
-            <DialogDescription className="text-center text-muted-foreground text-base font-medium leading-relaxed">
+            <div className="text-center text-muted-foreground text-base font-medium leading-relaxed">
               {language === 'en' ? (
                 <>Get <span className="text-primary font-bold">40% OFF</span> by upgrading to the 2TB hard drive instead of choosing the 1TB option.</>
               ) : (
                 <>احصل على <span className="text-primary font-bold">خصم 40%</span> عند الترقية إلى قرص صلب سعة 2 تيرابايت بدلاً من اختيار 1 تيرابايت.</>
               )}
-            </DialogDescription>
+            </div>
 
             <div className="flex flex-col gap-3">
               <Button 
