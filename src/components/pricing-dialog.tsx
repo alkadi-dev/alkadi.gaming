@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/components/language-context';
 import { Badge } from '@/components/ui/badge';
-import { Check, HardDrive, Gamepad2, Package, Truck, Tag } from 'lucide-react';
+import { Check, Gamepad2, Tag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -21,11 +21,12 @@ interface PlanProps {
   name: string;
   storage: string;
   games: string;
+  price: string;
   isRecommended?: boolean;
 }
 
-function PricingCard({ name, storage, games, isRecommended }: PlanProps) {
-  const { t, isRTL } = useLanguage();
+function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) {
+  const { t } = useLanguage();
 
   return (
     <div className={cn(
@@ -44,9 +45,12 @@ function PricingCard({ name, storage, games, isRecommended }: PlanProps) {
         <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-muted-foreground mb-1">
           {name}
         </span>
-        <div className="flex items-baseline gap-1 mb-2">
+        <div className="flex flex-col items-center gap-1 mb-2">
           <span className="text-4xl md:text-5xl font-black font-headline tracking-tighter text-white">
             {storage}
+          </span>
+          <span className="text-2xl font-bold text-primary tracking-tight">
+            {price}
           </span>
         </div>
         <div className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/5">
@@ -55,7 +59,7 @@ function PricingCard({ name, storage, games, isRecommended }: PlanProps) {
         </div>
       </div>
 
-      <div className="space-y-4 mb-8 flex-1">
+      <div className="space-y-4 mb-2 flex-1">
         <div className="flex items-center gap-3">
           <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
             <Check className="h-3 w-3 text-primary" />
@@ -69,31 +73,19 @@ function PricingCard({ name, storage, games, isRecommended }: PlanProps) {
           <span className="text-xs font-medium text-white/70">{t('pricing.freeDelivery')}</span>
         </div>
       </div>
-
-      <Button 
-        className={cn(
-          "w-full rounded-xl py-6 font-bold uppercase tracking-tight transition-all duration-300",
-          isRecommended 
-            ? "bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/20" 
-            : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
-        )}
-        onClick={() => document.getElementById('library')?.scrollIntoView({ behavior: 'smooth' })}
-      >
-        {t('hero.browse')}
-      </Button>
     </div>
   );
 }
 
 export function PricingDialog() {
-  const { t, isRTL } = useLanguage();
+  const { t } = useLanguage();
 
   const plans = [
-    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '3–5' },
-    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '5–10' },
-    { id: '1tb', name: t('pricing.elite'), storage: '1TB', games: '10–20', isRecommended: true },
-    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '20–30' },
-    { id: '2tb', name: t('pricing.ultra'), storage: '2TB', games: '30–50' },
+    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '3–5', price: '$39' },
+    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '5–10', price: '$59' },
+    { id: '1tb', name: t('pricing.elite'), storage: '1TB', games: '10–20', price: '$79', isRecommended: true },
+    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '20–30', price: '$99' },
+    { id: '2tb', name: t('pricing.ultra'), storage: '2TB', games: '30–50', price: '$119' },
   ];
 
   return (
