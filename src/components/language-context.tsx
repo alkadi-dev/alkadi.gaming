@@ -95,6 +95,8 @@ const translations: Record<Language, Record<string, string>> = {
     'upgrade.message': 'Get 40% OFF by upgrading to the 1TB hard drive instead of choosing the 500GB option.',
     'upgrade.btnUpgrade': 'Upgrade to 1TB',
     'upgrade.btnContinue': 'Continue with 500GB',
+    'upgrade.btnUpgrade2tb': 'Upgrade to 2TB',
+    'upgrade.btnContinue1tb': 'Continue with 1TB',
     // Categories
     'cat.All': 'All',
     'cat.Recommended': 'Recommended',
@@ -190,6 +192,8 @@ const translations: Record<Language, Record<string, string>> = {
     'upgrade.message': 'احصل على خصم 40% عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.',
     'upgrade.btnUpgrade': 'ترقية إلى 1 تيرابايت',
     'upgrade.btnContinue': 'الاستمرار بـ 500 جيجابايت',
+    'upgrade.btnUpgrade2tb': 'ترقية إلى 2 تيرابايت',
+    'upgrade.btnContinue1tb': 'الاستمرار بـ 1 تيرابايت',
     // Categories
     'cat.All': 'الكل',
     'cat.Recommended': 'موصى به',

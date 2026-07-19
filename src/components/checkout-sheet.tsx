@@ -43,6 +43,7 @@ export function CheckoutSheet() {
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
   const [isUpgradeOfferOpen, setIsUpgradeOfferOpen] = useState(false);
+  const [is2TBUpgradeOfferOpen, setIs2TBUpgradeOfferOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -57,7 +58,10 @@ export function CheckoutSheet() {
     
     // Map internal thresholds to display drive sizes
     let driveInfo = `${currentCapacity === 460 ? "500 GB" : currentCapacity === 960 ? "1 TB" : currentCapacity === 280 ? "320 GB" : currentCapacity + " GB"}`;
-    if (isUpgraded) driveInfo = "1 TB (UPGRADED FROM 500GB OFFER)";
+    if (isUpgraded) {
+        if (currentCapacity === 460) driveInfo = "1 TB (UPGRADED FROM 500GB OFFER)";
+        if (currentCapacity === 960) driveInfo = "2 TB (UPGRADED FROM 1TB OFFER)";
+    }
 
     return `ALKADI GAMING SELECTION\n\n${listText}\n\nSelected Storage: ${driveInfo}\nTotal Data Size: ~${totalSizeNum.toFixed(1)} GB`;
   };
@@ -71,6 +75,12 @@ export function CheckoutSheet() {
       return;
     }
 
+    // Trigger upgrade popup for 1TB -> 2TB
+    if (!is2TBUpgradeOfferOpen && !isUpgraded && currentCapacity === 960) {
+      setIs2TBUpgradeOfferOpen(true);
+      return;
+    }
+
     const finalContent = generateListContent(isUpgraded);
     const encodedText = encodeURIComponent(finalContent);
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
@@ -79,6 +89,7 @@ export function CheckoutSheet() {
     
     if (isUpgraded) {
       setIsUpgradeOfferOpen(false);
+      setIs2TBUpgradeOfferOpen(false);
     }
 
     toast({
@@ -89,6 +100,7 @@ export function CheckoutSheet() {
 
   const handleUpgradeToLibrary = () => {
     setIsUpgradeOfferOpen(false);
+    setIs2TBUpgradeOfferOpen(false);
     setCheckoutOpen(false);
     
     // Find the library section and scroll to it
@@ -105,7 +117,7 @@ export function CheckoutSheet() {
 
     toast({
       title: t('upgrade.title'),
-      description: "Ready for more games! Choose your titles for the 1TB drive.",
+      description: "Ready for more games! Choose your titles for your expanded drive.",
     });
   };
 
@@ -273,7 +285,7 @@ export function CheckoutSheet() {
         </SheetContent>
       </Sheet>
 
-      {/* Special Upgrade Offer Dialog */}
+      {/* Special Upgrade Offer Dialog - 500GB to 1TB */}
       <Dialog open={isUpgradeOfferOpen} onOpenChange={setIsUpgradeOfferOpen}>
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
           <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
@@ -310,6 +322,49 @@ export function CheckoutSheet() {
                 onClick={() => handleWhatsAppRedirect(false)}
               >
                 {t('upgrade.btnContinue')}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Special Upgrade Offer Dialog - 1TB to 2TB */}
+      <Dialog open={is2TBUpgradeOfferOpen} onOpenChange={setIs2TBUpgradeOfferOpen}>
+        <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
+          <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
+             <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
+                <Tag className="h-8 w-8 text-primary" />
+             </div>
+             <DialogHeader>
+                <DialogTitle className="text-2xl font-black font-headline tracking-tighter uppercase text-white">
+                  {t('upgrade.title')}
+                </DialogTitle>
+             </DialogHeader>
+          </div>
+          
+          <div className="p-8 space-y-6">
+            <DialogDescription className="text-center text-muted-foreground text-base font-medium leading-relaxed">
+              {language === 'en' ? (
+                <>Get <span className="text-primary font-bold">40% OFF</span> by upgrading to the 2TB hard drive instead of choosing the 1TB option.</>
+              ) : (
+                <>احصل على <span className="text-primary font-bold">خصم 40%</span> عند الترقية إلى قرص صلب سعة 2 تيرابايت بدلاً من اختيار 1 تيرابايت.</>
+              )}
+            </DialogDescription>
+
+            <div className="flex flex-col gap-3">
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-6 font-bold uppercase tracking-tight shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group transition-all hover:scale-[1.02]"
+                onClick={handleUpgradeToLibrary}
+              >
+                <HardDrive className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                {t('upgrade.btnUpgrade2tb')}
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full text-destructive bg-destructive/5 hover:bg-destructive/5 hover:text-destructive sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
+                onClick={() => handleWhatsAppRedirect(false)}
+              >
+                {t('upgrade.btnContinue1tb')}
               </Button>
             </div>
           </div>
