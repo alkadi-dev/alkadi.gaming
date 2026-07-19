@@ -39,7 +39,7 @@ import { cn } from '@/lib/utils';
 
 export function CheckoutSheet() {
   const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen, currentCapacity } = useSelection();
-  const { t, isRTL } = useLanguage();
+  const { t, isRTL, language } = useLanguage();
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
   const [isUpgradeOfferOpen, setIsUpgradeOfferOpen] = useState(false);
@@ -136,7 +136,7 @@ export function CheckoutSheet() {
     return (
       <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs opacity-50">
         <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />
-        <span className="hidden sm:inline">{t('nav.checkout')}</span>
+        <span className="hidden sm:inline">{t('nav.catalog')}</span>
       </Button>
     );
   }
@@ -289,7 +289,11 @@ export function CheckoutSheet() {
           
           <div className="p-8 space-y-6">
             <DialogDescription className="text-center text-muted-foreground text-base font-medium leading-relaxed">
-              {t('upgrade.message')}
+              {language === 'en' ? (
+                <>Get <span className="text-primary font-bold">40% OFF</span> by upgrading to the 1TB hard drive instead of choosing the 500GB option.</>
+              ) : (
+                <>احصل على <span className="text-primary font-bold">خصم 40%</span> عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.</>
+              )}
             </DialogDescription>
 
             <div className="flex flex-col gap-3">
