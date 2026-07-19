@@ -18,6 +18,7 @@ import { StatsSection } from '@/components/stats-section';
 import { HowItWorks } from '@/components/how-it-works';
 import { VideoCarousel } from '@/components/video-carousel';
 import { useLanguage } from '@/components/language-context';
+import { PricingDialog } from '@/components/pricing-dialog';
 import { cn } from '@/lib/utils';
 
 // Module-level variable to persist across client-side navigation in the same tab session
@@ -284,6 +285,7 @@ export default function HomeClient() {
           
           <div className="flex items-center gap-2 flex-grow justify-end">
             <LanguageSwitcher />
+            {mounted && <PricingDialog />}
             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
               <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
               <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
