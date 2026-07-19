@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/components/language-context';
 import { Badge } from '@/components/ui/badge';
-import { Check, Gamepad2, Tag } from 'lucide-react';
+import { Check, Gamepad2, Tag, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -23,10 +23,11 @@ interface PlanProps {
   games: string;
   price: string;
   isRecommended?: boolean;
+  offerBadge?: string;
 }
 
-function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) {
-  const { t } = useLanguage();
+function PricingCard({ name, storage, games, price, isRecommended, offerBadge }: PlanProps) {
+  const { t, isRTL } = useLanguage();
 
   return (
     <div className={cn(
@@ -39,6 +40,16 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
         <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-primary/20">
           {t('pricing.recommended')}
         </Badge>
+      )}
+
+      {offerBadge && (
+        <div className={cn(
+          "absolute top-4 bg-primary/20 text-primary border border-primary/30 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider animate-pulse flex items-center gap-1",
+          isRTL ? "left-4" : "right-4"
+        )}>
+           <Sparkles className="h-2.5 w-2.5" />
+           {offerBadge}
+        </div>
       )}
 
       <div className="mb-6 flex flex-col items-center text-center">
@@ -79,14 +90,29 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
 }
 
 export function PricingDialog() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const plans = [
     { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '3–5', price: '$39' },
     { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '5–10', price: '$59' },
-    { id: '1tb', name: t('pricing.elite'), storage: '1TB', games: '10–20', price: '$79', isRecommended: true },
+    { 
+      id: '1tb', 
+      name: t('pricing.elite'), 
+      storage: '1TB', 
+      games: '10–20', 
+      price: '$79', 
+      isRecommended: true,
+      offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
+    },
     { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '20–30', price: '$99' },
-    { id: '2tb', name: t('pricing.ultra'), storage: '2TB', games: '30–50', price: '$119' },
+    { 
+      id: '2tb', 
+      name: t('pricing.ultra'), 
+      storage: '2TB', 
+      games: '30–50', 
+      price: '$119',
+      offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
+    },
   ];
 
   return (
