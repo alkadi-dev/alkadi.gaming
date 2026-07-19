@@ -44,7 +44,7 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge }:
 
       {offerBadge && (
         <div className={cn(
-          "absolute -top-2 bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider animate-pulse flex items-center gap-1.5 shadow-2xl shadow-primary/40 z-20",
+          "absolute -top-2 bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-1.5 shadow-2xl shadow-primary/40 z-20",
           isRTL ? "left-4" : "right-4"
         )}>
            <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
