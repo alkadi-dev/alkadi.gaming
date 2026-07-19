@@ -30,7 +30,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, Sparkles, HardDrive as HardDriveIcon } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, Sparkles, Tag } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -281,7 +281,7 @@ export function CheckoutSheet() {
                 <Sparkles className="h-6 w-6 text-primary" />
              </div>
              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
-                <HardDriveIcon className="h-8 w-8 text-primary" />
+                <Tag className="h-8 w-8 text-primary" />
              </div>
              <DialogHeader>
                 <DialogTitle className="text-2xl font-black font-headline tracking-tighter uppercase text-white">
