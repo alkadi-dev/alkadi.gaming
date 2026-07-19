@@ -51,7 +51,7 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   },
   {
     id: 'ac',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassin%20creed%20shadows.mov",
+    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassinn.mov",
     posterUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
     title: "Assassin's Creed Shadows"
   },
