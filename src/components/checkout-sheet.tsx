@@ -277,9 +277,6 @@ export function CheckoutSheet() {
       <Dialog open={isUpgradeOfferOpen} onOpenChange={setIsUpgradeOfferOpen}>
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
           <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
-             <div className="absolute top-4 right-4 animate-pulse">
-                <Sparkles className="h-6 w-6 text-primary" />
-             </div>
              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
                 <Tag className="h-8 w-8 text-primary" />
              </div>
