@@ -53,9 +53,10 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
             {price}
           </span>
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-white/5 rounded-full border border-white/5 shadow-inner">
-          <Gamepad2 className="h-4 w-4 text-primary" />
-          <span className="text-sm font-black text-white tracking-tight">{games} {t('pricing.games')}</span>
+        {/* Game Count Display: Larger on mobile, smaller on desktop */}
+        <div className="flex items-center gap-3 px-6 py-3 md:px-4 md:py-2 bg-white/5 rounded-full border border-white/5 shadow-inner">
+          <Gamepad2 className="h-5 w-5 md:h-4 md:w-4 text-primary" />
+          <span className="text-lg md:text-sm font-black text-white tracking-tight">{games} {t('pricing.games')}</span>
         </div>
       </div>
 
