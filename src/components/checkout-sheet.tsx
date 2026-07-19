@@ -87,6 +87,28 @@ export function CheckoutSheet() {
     });
   };
 
+  const handleUpgradeToLibrary = () => {
+    setIsUpgradeOfferOpen(false);
+    setCheckoutOpen(false);
+    
+    // Find the library section and scroll to it
+    const element = document.getElementById('library');
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+
+    toast({
+      title: t('upgrade.title'),
+      description: "Ready for more games! Choose your titles for the 1TB drive.",
+    });
+  };
+
   const getWarning = () => {
     if (totalSizeNum > 1800) return t('alert.maxStorage');
     if (totalSizeNum > 1400) return t('alert.approaching');
@@ -276,7 +298,7 @@ export function CheckoutSheet() {
             <div className="flex flex-col gap-3">
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-6 font-bold uppercase tracking-tight shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group transition-all hover:scale-[1.02]"
-                onClick={() => handleWhatsAppRedirect(true)}
+                onClick={handleUpgradeToLibrary}
               >
                 <Sparkles className="h-4 w-4 group-hover:rotate-12 transition-transform" />
                 {t('upgrade.btnUpgrade')}
