@@ -30,7 +30,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, Sparkles, Tag } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Tag } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -297,7 +297,7 @@ export function CheckoutSheet() {
                 className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-6 font-bold uppercase tracking-tight shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group transition-all hover:scale-[1.02]"
                 onClick={handleUpgradeToLibrary}
               >
-                <Sparkles className="h-4 w-4 group-hover:rotate-12 transition-transform" />
+                <HardDrive className="h-4 w-4 group-hover:scale-110 transition-transform" />
                 {t('upgrade.btnUpgrade')}
               </Button>
               <Button 
