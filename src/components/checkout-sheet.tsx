@@ -30,7 +30,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Tag, Gift } from 'lucide-react';
+import { ShoppingCart, Trash2, MessageCircle, AlertTriangle, Info, Ban, HardDrive, Tag, BadgePercent } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -290,7 +290,7 @@ export function CheckoutSheet() {
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
           <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
-                <Gift className="h-8 w-8 text-primary" />
+                <BadgePercent className="h-8 w-8 text-primary" />
              </div>
              <DialogHeader>
                 <DialogTitle className="text-2xl font-black font-headline tracking-tighter uppercase text-white">
@@ -333,7 +333,7 @@ export function CheckoutSheet() {
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
           <div className="bg-primary/20 p-6 flex flex-col items-center text-center gap-4 relative">
              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.3)]">
-                <Gift className="h-8 w-8 text-primary" />
+                <BadgePercent className="h-8 w-8 text-primary" />
              </div>
              <DialogHeader>
                 <DialogTitle className="text-2xl font-black font-headline tracking-tighter uppercase text-white">
