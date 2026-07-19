@@ -91,6 +91,10 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReachedDesc': 'You have exceeded the 280 GB threshold and are now using the 500 GB drive (Limit: 460 GB). Keep going?',
     'alert.keepGoing': 'Keep Going',
     'alert.reviewDelete': 'Review & Delete',
+    'upgrade.title': 'Special Upgrade Offer',
+    'upgrade.message': 'Get 40% OFF by upgrading to the 1TB hard drive instead of choosing the 500GB option.',
+    'upgrade.btnUpgrade': 'Upgrade to 1TB',
+    'upgrade.btnContinue': 'Continue with 500GB',
     // Categories
     'cat.All': 'All',
     'cat.Recommended': 'Recommended',
@@ -182,6 +186,10 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReachedDesc': 'لقد تجاوزت عتبة 280 جيجابايت وتستخدم الآن قرص 500 جيجابايت (الحد: 460 جيجابايت). هل تستمر؟',
     'alert.keepGoing': 'استمر',
     'alert.reviewDelete': 'مراجعة وحذف',
+    'upgrade.title': 'عرض ترقية خاص',
+    'upgrade.message': 'احصل على خصم 40% عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.',
+    'upgrade.btnUpgrade': 'ترقية إلى 1 تيرابايت',
+    'upgrade.btnContinue': 'الاستمرار بـ 500 جيجابايت',
     // Categories
     'cat.All': 'الكل',
     'cat.Recommended': 'موصى به',
