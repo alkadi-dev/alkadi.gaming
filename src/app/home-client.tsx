@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages, Tag } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -55,22 +55,6 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
         </span>
         <span className="font-bold text-sm tracking-tight text-white/80 group-hover:text-white">{label}</span>
       </a>
-    </Button>
-  );
-}
-
-function LanguageSwitcher() {
-  const { language, setLanguage } = useLanguage();
-
-  return (
-    <Button
-      variant="ghost"
-      size="sm"
-      className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-3 text-xs flex items-center gap-1.5"
-      onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-    >
-      <Languages className="h-3.5 w-3.5" />
-      <span className="font-bold">{language === 'en' ? 'AR' : 'EN'}</span>
     </Button>
   );
 }
@@ -284,7 +268,6 @@ export default function HomeClient() {
           </div>
           
           <div className="flex items-center gap-2 flex-grow justify-end">
-            <LanguageSwitcher />
             {mounted && <PricingDialog />}
             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
               <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
