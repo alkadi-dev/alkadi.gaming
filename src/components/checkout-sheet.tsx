@@ -302,7 +302,7 @@ export function CheckoutSheet() {
               </Button>
               <Button 
                 variant="ghost" 
-                className="w-full text-destructive bg-destructive/5 sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
+                className="w-full text-destructive bg-destructive/5 hover:bg-destructive/5 sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
                 onClick={() => handleWhatsAppRedirect(false)}
               >
                 {t('upgrade.btnContinue')}
