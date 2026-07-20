@@ -24,9 +24,10 @@ interface PlanProps {
   price: string;
   isRecommended?: boolean;
   offerBadge?: string;
+  topLabel?: string;
 }
 
-function PricingCard({ name, storage, games, price, isRecommended, offerBadge }: PlanProps) {
+function PricingCard({ name, storage, games, price, isRecommended, offerBadge, topLabel }: PlanProps) {
   const { t } = useLanguage();
 
   return (
@@ -39,6 +40,12 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge }:
       {isRecommended && (
         <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-primary/20">
           {t('pricing.recommended')}
+        </Badge>
+      )}
+
+      {topLabel && (
+        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-accent/20">
+          {topLabel}
         </Badge>
       )}
 
@@ -108,6 +115,7 @@ export function PricingDialog() {
       storage: '2TB', 
       games: '30–50', 
       price: '$119',
+      topLabel: t('pricing.bigValue'),
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
     },
   ];
