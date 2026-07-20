@@ -161,9 +161,9 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           </Button>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
-             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 transition-all hover:bg-white/10">
-              <HardDrive className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-primary" />
-              <div className="text-[9px] sm:text-[10px] font-bold tracking-tight whitespace-nowrap">
+             <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 sm:px-3 rounded-full border border-white/10 transition-all hover:bg-white/10 h-8">
+              <HardDrive className="h-3.5 w-3.5 text-primary" />
+              <div className="text-[10px] sm:text-xs font-bold tracking-tight whitespace-nowrap">
                 <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
                   {totalSizeNum.toFixed(0)}
                 </span>
