@@ -27,11 +27,11 @@ interface PlanProps {
 }
 
 function PricingCard({ name, storage, games, price, isRecommended, offerBadge }: PlanProps) {
-  const { t, isRTL } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <div className={cn(
-      "relative flex flex-col p-6 rounded-[2rem] border transition-all duration-500 group",
+      "relative flex flex-col p-6 rounded-[2rem] border transition-all duration-500 group mb-4",
       isRecommended 
         ? "bg-primary/10 border-primary/40 shadow-[0_0_40px_rgba(var(--primary),0.15)] scale-105 z-10" 
         : "bg-secondary/20 border-white/5 hover:border-white/20 shadow-xl"
@@ -40,16 +40,6 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge }:
         <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-primary/20">
           {t('pricing.recommended')}
         </Badge>
-      )}
-
-      {offerBadge && (
-        <div className={cn(
-          "absolute -top-2 bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-1.5 shadow-2xl shadow-primary/40 z-20",
-          isRTL ? "left-4" : "right-4"
-        )}>
-           <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-           {offerBadge}
-        </div>
       )}
 
       <div className="mb-6 flex flex-col items-center text-center">
@@ -71,7 +61,7 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge }:
         </div>
       </div>
 
-      <div className="space-y-4 mb-2 flex-1">
+      <div className="space-y-4 mb-8 flex-1">
         <div className="flex items-center gap-3">
           <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
             <Check className="h-3 w-3 text-primary" />
@@ -85,6 +75,13 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge }:
           <span className="text-xs font-medium text-white/70">{t('pricing.freeDelivery')}</span>
         </div>
       </div>
+
+      {offerBadge && (
+        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-white px-5 py-2 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-wider flex items-center gap-1.5 shadow-2xl shadow-primary/40 z-20 whitespace-nowrap">
+           <Sparkles className="h-3.5 w-3.5" />
+           {offerBadge}
+        </div>
+      )}
     </div>
   );
 }
@@ -144,7 +141,7 @@ export function PricingDialog() {
               </DialogDescription>
             </DialogHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 py-4 px-2">
               {plans.map((plan) => (
                 <PricingCard key={plan.id} {...plan} />
               ))}
