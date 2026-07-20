@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -37,17 +38,15 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge, t
         ? "bg-primary/10 border-primary/40 shadow-[0_0_40px_rgba(var(--primary),0.15)] scale-105 z-10" 
         : "bg-secondary/20 border-white/5 hover:border-white/20 shadow-xl"
     )}>
-      {isRecommended && (
-        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-primary/20">
-          {t('pricing.recommended')}
-        </Badge>
-      )}
-
-      {topLabel && (
+      {topLabel ? (
         <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-accent/20">
           {topLabel}
         </Badge>
-      )}
+      ) : isRecommended ? (
+        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-primary/20">
+          {t('pricing.recommended')}
+        </Badge>
+      ) : null}
 
       <div className="mb-6 flex flex-col items-center text-center">
         <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-muted-foreground mb-1">
@@ -115,6 +114,7 @@ export function PricingDialog() {
       storage: '2TB', 
       games: '30–50', 
       price: '$119',
+      isRecommended: true,
       topLabel: t('pricing.bigValue'),
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
     },
