@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -12,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/components/language-context';
 import { Badge } from '@/components/ui/badge';
-import { Check, Gamepad2, Tag } from 'lucide-react';
+import { Check, Gamepad2, Tag, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -23,23 +24,29 @@ interface PlanProps {
   games: string;
   price: string;
   isRecommended?: boolean;
+  offerBadge?: string;
+  topLabel?: string;
 }
 
-function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) {
+function PricingCard({ name, storage, games, price, isRecommended, offerBadge, topLabel }: PlanProps) {
   const { t } = useLanguage();
 
   return (
     <div className={cn(
-      "relative flex flex-col p-6 rounded-[2rem] border transition-all duration-500 group",
+      "relative flex flex-col p-6 rounded-[2rem] border transition-all duration-500 group mb-4",
       isRecommended 
         ? "bg-primary/10 border-primary/40 shadow-[0_0_40px_rgba(var(--primary),0.15)] scale-105 z-10" 
         : "bg-secondary/20 border-white/5 hover:border-white/20 shadow-xl"
     )}>
-      {isRecommended && (
+      {topLabel ? (
+        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-accent/20">
+          {topLabel}
+        </Badge>
+      ) : isRecommended ? (
         <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 font-black uppercase tracking-tighter shadow-lg shadow-primary/20">
           {t('pricing.recommended')}
         </Badge>
-      )}
+      ) : null}
 
       <div className="mb-6 flex flex-col items-center text-center">
         <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-muted-foreground mb-1">
@@ -60,7 +67,7 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
         </div>
       </div>
 
-      <div className="space-y-4 mb-2 flex-1">
+      <div className="space-y-4 mb-8 flex-1">
         <div className="flex items-center gap-3">
           <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
             <Check className="h-3 w-3 text-primary" />
@@ -74,19 +81,43 @@ function PricingCard({ name, storage, games, price, isRecommended }: PlanProps) 
           <span className="text-xs font-medium text-white/70">{t('pricing.freeDelivery')}</span>
         </div>
       </div>
+
+      {offerBadge && (
+        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-white px-5 py-2 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-wider flex items-center gap-1.5 shadow-2xl shadow-primary/40 z-20 whitespace-nowrap">
+           <Sparkles className="h-3.5 w-3.5" />
+           {offerBadge}
+        </div>
+      )}
     </div>
   );
 }
 
 export function PricingDialog() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const plans = [
     { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '3–5', price: '$39' },
     { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '5–10', price: '$59' },
-    { id: '1tb', name: t('pricing.elite'), storage: '1TB', games: '10–20', price: '$79', isRecommended: true },
+    { 
+      id: '1tb', 
+      name: t('pricing.elite'), 
+      storage: '1TB', 
+      games: '10–20', 
+      price: '$79', 
+      isRecommended: true,
+      offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
+    },
     { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '20–30', price: '$99' },
-    { id: '2tb', name: t('pricing.ultra'), storage: '2TB', games: '30–50', price: '$119' },
+    { 
+      id: '2tb', 
+      name: t('pricing.ultra'), 
+      storage: '2TB', 
+      games: '30–50', 
+      price: '$119',
+      isRecommended: true,
+      topLabel: t('pricing.bigValue'),
+      offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
+    },
   ];
 
   return (
@@ -118,7 +149,7 @@ export function PricingDialog() {
               </DialogDescription>
             </DialogHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 py-4 px-2">
               {plans.map((plan) => (
                 <PricingCard key={plan.id} {...plan} />
               ))}
