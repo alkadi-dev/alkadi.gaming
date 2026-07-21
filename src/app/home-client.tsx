@@ -21,12 +21,12 @@ import { useLanguage } from '@/components/language-context';
 import { PricingDialog } from '@/components/pricing-dialog';
 import { cn } from '@/lib/utils';
 
-// Module-level variable to persist across client-side navigation in the same tab session
-let hasSplashBeenShown = false;
+// Used to track splash state within the client session without causing hydration mismatch
+let hasSplashBeenShownInModule = false;
 
 // --- Brand Icons ---
 const FacebookIcon = () => (
-  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 );
 
 const InstagramIcon = () => (
@@ -71,9 +71,7 @@ export default function HomeClient() {
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [mounted, setMounted] = useState(false);
-  
-  // Set isVideoReady based on whether splash was already shown to prevent re-triggering on navigation
-  const [isVideoReady, setIsVideoReady] = useState(hasSplashBeenShown);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -82,11 +80,13 @@ export default function HomeClient() {
   useEffect(() => {
     setMounted(true);
     
-    // Only run splash timer if it hasn't been shown in this tab session
-    if (!hasSplashBeenShown) {
+    // Check if splash was already shown in this module instance to prevent repeating on soft navigation
+    if (hasSplashBeenShownInModule) {
+      setIsVideoReady(true);
+    } else {
       const timer = setTimeout(() => {
         setIsVideoReady(true);
-        hasSplashBeenShown = true;
+        hasSplashBeenShownInModule = true;
       }, 4000);
       return () => clearTimeout(timer);
     }
@@ -95,7 +95,7 @@ export default function HomeClient() {
   useEffect(() => {
     if (videoRef.current && videoRef.current.readyState >= 3) {
       setIsVideoReady(true);
-      hasSplashBeenShown = true;
+      hasSplashBeenShownInModule = true;
     }
   }, [mounted]);
 
@@ -230,8 +230,8 @@ export default function HomeClient() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Visual Splash Screen until Video is Ready - Only show if not previously shown in session */}
-      {mounted && !isVideoReady && !hasSplashBeenShown && (
+      {/* Visual Splash Screen until Video is Ready */}
+      {mounted && !isVideoReady && (
         <div className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center transition-opacity duration-700">
           <div className="flex flex-col items-center gap-6 animate-in fade-in zoom-in-95 duration-1000">
              <div className="flex items-center gap-2 mb-4">
@@ -271,20 +271,20 @@ export default function HomeClient() {
             {mounted && <PricingDialog />}
             <div className={cn(
               "relative flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 sm:px-3 rounded-full border transition-all h-8 overflow-hidden",
-              usageColorClass
+              mounted ? usageColorClass : "border-white/10"
             )}>
               <div 
-                className={cn("absolute left-0 top-0 bottom-0 transition-all duration-500 ease-out z-0", fillColorClass)}
-                style={{ width: `${usagePercentage}%` }}
+                className={cn("absolute left-0 top-0 bottom-0 transition-all duration-500 ease-out z-0", mounted ? fillColorClass : "bg-primary/20")}
+                style={{ width: `${mounted ? usagePercentage : 0}%` }}
               />
               <div className="relative z-10 flex items-center gap-1.5 sm:gap-2">
                 <HardDrive className="h-3.5 w-3.5 text-primary" />
                 <div className="text-[10px] sm:text-xs font-bold tracking-tight whitespace-nowrap">
                   <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
-                    {totalSizeNum.toFixed(0)}
+                    {mounted ? totalSizeNum.toFixed(0) : "0"}
                   </span>
                   <span className="text-muted-foreground mx-0.5">/</span>
-                  <span className="text-muted-foreground">{currentCapacity} GB</span>
+                  <span className="text-muted-foreground">{mounted ? currentCapacity : "280"} GB</span>
                 </div>
               </div>
             </div>
@@ -303,7 +303,7 @@ export default function HomeClient() {
           playsInline
           onCanPlayThrough={() => {
             setIsVideoReady(true);
-            hasSplashBeenShown = true;
+            hasSplashBeenShownInModule = true;
           }}
           className={cn(
             "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
@@ -430,7 +430,7 @@ export default function HomeClient() {
                       <div className="space-y-6">
                         <div className="space-y-3">
                           <Label className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground flex items-center gap-2">
-                            <ArrowUpDown className="h-3 w-3 text-primary" /> {t('filters.sortBy')}
+                            <ArrowUpDown className="h-3 v-3 text-primary" /> {t('filters.sortBy')}
                           </Label>
                           <Select 
                             value={sortOrder} 
