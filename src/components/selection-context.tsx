@@ -14,6 +14,8 @@ interface SelectionContextType {
   currentCapacity: number;
   isCheckoutOpen: boolean;
   setCheckoutOpen: (open: boolean) => void;
+  usageColorClass: string;
+  usagePercentage: number;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
@@ -72,6 +74,37 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
 
   const isOverLimit = totalSizeNum > 1800;
 
+  const usagePercentage = useMemo(() => {
+    if (currentCapacity === 0) return 0;
+    return Math.min((totalSizeNum / currentCapacity) * 100, 100);
+  }, [totalSizeNum, currentCapacity]);
+
+  const usageColorClass = useMemo(() => {
+    // Thresholds based on drive type
+    if (currentCapacity === 280) {
+      if (totalSizeNum >= 270) return "border-red-600 shadow-[0_0_10px_rgba(220,38,38,0.2)]";
+      if (totalSizeNum >= 230) return "border-red-500";
+      if (totalSizeNum >= 200) return "border-orange-500";
+    } else if (currentCapacity === 460) {
+      if (totalSizeNum >= 450) return "border-red-600 shadow-[0_0_10px_rgba(220,38,38,0.2)]";
+      if (totalSizeNum >= 430) return "border-red-500";
+      if (totalSizeNum >= 400) return "border-orange-500";
+    } else if (currentCapacity === 960) {
+      if (totalSizeNum >= 950) return "border-red-600 shadow-[0_0_10px_rgba(220,38,38,0.2)]";
+      if (totalSizeNum >= 930) return "border-red-500";
+      if (totalSizeNum >= 900) return "border-orange-500";
+    } else if (currentCapacity === 1400) {
+      if (totalSizeNum >= 1380) return "border-red-600 shadow-[0_0_10px_rgba(220,38,38,0.2)]";
+      if (totalSizeNum >= 1350) return "border-red-500";
+      if (totalSizeNum >= 1300) return "border-orange-500";
+    } else if (currentCapacity === 1800) {
+      if (totalSizeNum >= 1790) return "border-red-600 shadow-[0_0_10px_rgba(220,38,38,0.2)]";
+      if (totalSizeNum >= 1750) return "border-red-500";
+      if (totalSizeNum >= 1700) return "border-orange-500";
+    }
+    return "border-white/10";
+  }, [totalSizeNum, currentCapacity]);
+
   const addToSelection = (id: string) => {
     if (isOverLimit) return;
     setSelectedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
@@ -97,7 +130,9 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         isOverLimit,
         currentCapacity,
         isCheckoutOpen,
-        setCheckoutOpen
+        setCheckoutOpen,
+        usageColorClass,
+        usagePercentage
       }}
     >
       {children}
