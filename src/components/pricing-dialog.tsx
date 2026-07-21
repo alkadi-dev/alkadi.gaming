@@ -128,7 +128,7 @@ export function PricingDialog() {
           size="sm" 
           className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-4 text-xs flex items-center gap-1.5 transition-all"
         >
-          <Tag className="h-3.5 w-3.5" />
+          <Tag className="h-3.5 w-3.5 text-primary" />
           <span className="font-bold">{t('nav.pricing')}</span>
         </Button>
       </DialogTrigger>
