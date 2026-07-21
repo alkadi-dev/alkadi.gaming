@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { StorageLimitAlert } from '@/components/storage-limit-alert';
 import { BackToTop } from '@/components/back-to-top';
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const viewport: Viewport = {
   themeColor: '#0a0c10',
