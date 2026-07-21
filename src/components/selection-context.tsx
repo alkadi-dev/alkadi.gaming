@@ -14,6 +14,9 @@ interface SelectionContextType {
   currentCapacity: number;
   isCheckoutOpen: boolean;
   setCheckoutOpen: (open: boolean) => void;
+  usageColorClass: string;
+  fillColorClass: string;
+  usagePercentage: number;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
@@ -72,6 +75,57 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
 
   const isOverLimit = totalSizeNum > 1800;
 
+  const usagePercentage = useMemo(() => {
+    if (currentCapacity === 0) return 0;
+    return Math.min((totalSizeNum / currentCapacity) * 100, 100);
+  }, [totalSizeNum, currentCapacity]);
+
+  const status = useMemo(() => {
+    // Thresholds based on drive type for the border color
+    if (currentCapacity === 280) {
+      if (totalSizeNum >= 270) return 'critical';
+      if (totalSizeNum >= 230) return 'medium';
+      if (totalSizeNum >= 200) return 'low';
+    } else if (currentCapacity === 460) {
+      if (totalSizeNum >= 450) return 'critical';
+      if (totalSizeNum >= 430) return 'medium';
+      if (totalSizeNum >= 400) return 'low';
+    } else if (currentCapacity === 960) {
+      if (totalSizeNum >= 950) return 'critical';
+      if (totalSizeNum >= 930) return 'medium';
+      if (totalSizeNum >= 900) return 'low';
+    } else if (currentCapacity === 1400) {
+      if (totalSizeNum >= 1380) return 'critical';
+      if (totalSizeNum >= 1350) return 'medium';
+      if (totalSizeNum >= 1300) return 'low';
+    } else if (currentCapacity === 1800) {
+      if (totalSizeNum >= 1790) return 'critical';
+      if (totalSizeNum >= 1750) return 'medium';
+      if (totalSizeNum >= 1700) return 'low';
+    }
+    return 'normal';
+  }, [totalSizeNum, currentCapacity]);
+
+  const usageColorClass = useMemo(() => {
+    switch (status) {
+      case 'critical': return "border-red-600 shadow-[0_0_10px_rgba(220,38,38,0.2)]";
+      case 'medium': return "border-red-500";
+      case 'low': return "border-orange-500";
+      default: return "border-white/10";
+    }
+  }, [status]);
+
+  const fillColorClass = useMemo(() => {
+    // Progressive fill color every 15% of usage
+    if (usagePercentage <= 15) return "bg-red-500/10"; // Very light red
+    if (usagePercentage <= 30) return "bg-red-500/25"; // Light red
+    if (usagePercentage <= 45) return "bg-red-500/45"; // Soft red
+    if (usagePercentage <= 60) return "bg-red-500/65"; // Medium red
+    if (usagePercentage <= 75) return "bg-red-600/85"; // Dark red
+    if (usagePercentage <= 90) return "bg-red-800";    // Deep red
+    return "bg-red-600"; // Bright, intense red (90-100%)
+  }, [usagePercentage]);
+
   const addToSelection = (id: string) => {
     if (isOverLimit) return;
     setSelectedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
@@ -97,7 +151,10 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         isOverLimit,
         currentCapacity,
         isCheckoutOpen,
-        setCheckoutOpen
+        setCheckoutOpen,
+        usageColorClass,
+        fillColorClass,
+        usagePercentage
       }}
     >
       {children}

@@ -96,23 +96,23 @@ export function PricingDialog() {
   const { t, language } = useLanguage();
 
   const plans = [
-    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '3–5', price: '$39' },
-    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '5–10', price: '$59' },
+    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '4–7', price: '$39' },
+    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '7–15', price: '$59' },
     { 
       id: '1tb', 
       name: t('pricing.elite'), 
       storage: '1TB', 
-      games: '10–20', 
+      games: '15–25', 
       price: '$79', 
       isRecommended: true,
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
     },
-    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '20–30', price: '$99' },
+    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '25–35', price: '$99' },
     { 
       id: '2tb', 
       name: t('pricing.ultra'), 
       storage: '2TB', 
-      games: '30–50', 
+      games: '35–60', 
       price: '$119',
       isRecommended: true,
       topLabel: t('pricing.bigValue'),
@@ -128,7 +128,7 @@ export function PricingDialog() {
           size="sm" 
           className="bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full h-8 px-2 sm:px-4 text-xs flex items-center gap-1.5 transition-all"
         >
-          <Tag className="h-3.5 w-3.5" />
+          <Tag className="h-3.5 w-3.5 text-primary" />
           <span className="font-bold">{t('nav.pricing')}</span>
         </Button>
       </DialogTrigger>

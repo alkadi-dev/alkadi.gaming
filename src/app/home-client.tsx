@@ -61,7 +61,7 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
 
 export default function HomeClient() {
   const router = useRouter();
-  const { totalSizeNum, currentCapacity } = useSelection();
+  const { totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage } = useSelection();
   const { t, isRTL } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -269,14 +269,23 @@ export default function HomeClient() {
           
           <div className="flex items-center gap-2 flex-grow justify-end">
             {mounted && <PricingDialog />}
-            <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 sm:px-3 rounded-full border border-white/10 transition-all hover:bg-white/10 h-8">
-              <HardDrive className="h-3.5 w-3.5 text-primary" />
-              <div className="text-[10px] sm:text-xs font-bold tracking-tight whitespace-nowrap">
-                <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
-                  {totalSizeNum.toFixed(0)}
-                </span>
-                <span className="text-muted-foreground mx-0.5">/</span>
-                <span className="text-muted-foreground">{currentCapacity} GB</span>
+            <div className={cn(
+              "relative flex items-center gap-1.5 sm:gap-2 bg-white/5 px-2.5 sm:px-3 rounded-full border transition-all h-8 overflow-hidden",
+              usageColorClass
+            )}>
+              <div 
+                className={cn("absolute left-0 top-0 bottom-0 transition-all duration-500 ease-out z-0", fillColorClass)}
+                style={{ width: `${usagePercentage}%` }}
+              />
+              <div className="relative z-10 flex items-center gap-1.5 sm:gap-2">
+                <HardDrive className="h-3.5 w-3.5 text-primary" />
+                <div className="text-[10px] sm:text-xs font-bold tracking-tight whitespace-nowrap">
+                  <span className={cn(totalSizeNum > currentCapacity ? "text-destructive" : "text-white")}>
+                    {totalSizeNum.toFixed(0)}
+                  </span>
+                  <span className="text-muted-foreground mx-0.5">/</span>
+                  <span className="text-muted-foreground">{currentCapacity} GB</span>
+                </div>
               </div>
             </div>
             {mounted && <CheckoutSheet />}

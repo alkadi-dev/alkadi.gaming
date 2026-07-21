@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -147,7 +148,7 @@ export function CheckoutSheet() {
   if (!mounted) {
     return (
       <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs opacity-50">
-        <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5" />
+        <ShoppingCart className="h-3.5 w-3.5 sm:mr-1.5 text-white sm:text-primary" />
         <span className="hidden sm:inline">{t('nav.catalog')}</span>
       </Button>
     );
@@ -158,7 +159,7 @@ export function CheckoutSheet() {
       <Sheet open={isCheckoutOpen} onOpenChange={handleOnOpenChange}>
         <SheetTrigger asChild>
           <Button variant="outline" size="sm" className="relative bg-white/5 border-white/10 hover:bg-white/10 rounded-full h-8 px-2 sm:px-3 text-xs">
-            <ShoppingCart className={cn("h-3.5 w-3.5", isRTL ? "sm:ml-1.5" : "sm:mr-1.5")} />
+            <ShoppingCart className={cn("h-3.5 w-3.5 text-white sm:text-primary", isRTL ? "sm:ml-1.5" : "sm:mr-1.5")} />
             <span className="hidden sm:inline">{t('nav.checkout')}</span>
             {selectedIds.length > 0 && (
               <span className={cn("absolute -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-white shadow-lg border-2 border-background", isRTL ? "-left-1" : "-right-1")}>
