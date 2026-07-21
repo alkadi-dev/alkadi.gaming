@@ -1419,11 +1419,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ferocious',
     description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
     categories: ['Shooter'],
-    thumbnail: 'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
+    thumbnail: 'https://6a3b66710a4149112241450e.imgix.net/fers.jpg',
     size: '16 GB',
     releaseYear: '2025',
     images: [
-      'https://9588947a.delivery.rocketcdn.me/wp-content/uploads/2025/12/FEROCIOUS-01-920x520.jpg',
+      'https://6a3b66710a4149112241450e.imgix.net/fers.jpg',
       'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
       'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
