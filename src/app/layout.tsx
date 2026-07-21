@@ -6,7 +6,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { StorageLimitAlert } from '@/components/storage-limit-alert';
 import { BackToTop } from '@/components/back-to-top';
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const viewport: Viewport = {
   themeColor: '#0a0c10',
@@ -95,6 +96,7 @@ export default function RootLayout({
               <BackToTop />
               <Toaster />
               <Analytics />
+              <SpeedInsights />
             </TooltipProvider>
           </SelectionProvider>
         </LanguageProvider>

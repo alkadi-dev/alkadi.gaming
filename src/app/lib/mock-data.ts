@@ -1068,7 +1068,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/uL6OeuicjyU?si=T5kkmfI9ahcM4-EU',
     shorts: [
-      'https://www.youtube.com/embed/17ZQjpMxmV0?si=B5-rRqx3Xi1QxbD5',
+      'https://www.youtube.com/embed/17ZQjpMxMOV0?si=B5-rRqx3Xi1QxbD5',
       'https://www.youtube.com/embed/3HHfcja4mXU?si=9WE3NXCx5w9CAitD',
       'https://www.youtube.com/embed/4YjZZl0SKMo?si=ibo7ggptsS15I6wt'
     ]
@@ -1172,6 +1172,26 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/Lr25tudS-ec'
     ],
     isRecommended: true,
+  },
+  {
+    id: 'ferocious',
+    title: 'Ferocious',
+    description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
+    categories: ['Shooter'],
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1645630/f3d600c47b912e4856c5a72cf94923361e96bf30/header.jpg?t=1781529362',
+    size: '16 GB',
+    releaseYear: '2025',
+    images: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1645630/f3d600c47b912e4856c5a72cf94923361e96bf30/header.jpg?t=1781529362',
+      'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
+      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
+    shorts: [
+      'https://www.youtube.com/embed/vp9KNgG0e14?si=K1GYqDf2e4PDMdzE',
+      'https://www.youtube.com/embed/UPMOdKvqH3o?si=0BHbotN_vnYtPe34',
+      'https://www.youtube.com/embed/1go8AUUYTq0?si=rYD_kCR00YEh-MMC'
+    ]
   },
   {
     id: 'elden-shadow',
@@ -1412,26 +1432,6 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/orY5gdLaSAQ?si=LNjnWBhLXs4xOucc',
       'https://www.youtube.com/embed/3NMyUTWR3oo?si=u5-s2h38omYwwdBx',
       'https://www.youtube.com/embed/XH8DK43TR0w?si=IK130r3VrsOlroXp'
-    ]
-  },
-  {
-    id: 'ferocious',
-    title: 'Ferocious',
-    description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
-    categories: ['Shooter'],
-    thumbnail: 'https://6a3b66710a4149112241450e.imgix.net/fers.jpg',
-    size: '16 GB',
-    releaseYear: '2025',
-    images: [
-      'https://6a3b66710a4149112241450e.imgix.net/fers.jpg',
-      'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
-      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
-    shorts: [
-      'https://www.youtube.com/embed/vp9KNgG0e14?si=K1GYqDf2e4PDMdzE',
-      'https://www.youtube.com/embed/UPMOdKvqH3o?si=0BHbotN_vnYtPe34',
-      'https://www.youtube.com/embed/1go8AUUYTq0?si=rYD_kCR00YEh-MMC'
     ]
   },
   {
