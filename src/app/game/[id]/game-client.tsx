@@ -54,7 +54,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   const { id } = use(params);
   const router = useRouter();
   const { toast } = useToast();
-  const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity, usageColorClass, usagePercentage } = useSelection();
+  const { addToSelection, removeFromSelection, isInSelection, isOverLimit, totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage } = useSelection();
   const { t, isRTL, language } = useLanguage();
   const game = MOCK_GAMES.find((g) => g.id === id);
   
@@ -166,7 +166,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                usageColorClass
              )}>
               <div 
-                className="absolute left-0 top-0 bottom-0 bg-red-600/40 transition-all duration-500 ease-out z-0" 
+                className={cn("absolute left-0 top-0 bottom-0 transition-all duration-500 ease-out z-0", fillColorClass)} 
                 style={{ width: `${usagePercentage}%` }}
               />
               <div className="relative z-10 flex items-center gap-1.5 sm:gap-2">

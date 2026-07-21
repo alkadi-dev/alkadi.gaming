@@ -61,7 +61,7 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
 
 export default function HomeClient() {
   const router = useRouter();
-  const { totalSizeNum, currentCapacity, usageColorClass, usagePercentage } = useSelection();
+  const { totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage } = useSelection();
   const { t, isRTL } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -274,7 +274,7 @@ export default function HomeClient() {
               usageColorClass
             )}>
               <div 
-                className="absolute left-0 top-0 bottom-0 bg-red-600/40 transition-all duration-500 ease-out z-0" 
+                className={cn("absolute left-0 top-0 bottom-0 transition-all duration-500 ease-out z-0", fillColorClass)}
                 style={{ width: `${usagePercentage}%` }}
               />
               <div className="relative z-10 flex items-center gap-1.5 sm:gap-2">
