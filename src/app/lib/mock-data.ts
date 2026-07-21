@@ -1435,26 +1435,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ]
   },
   {
-    id: 'ferocious',
-    title: 'Ferocious',
-    description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
-    categories: ['Shooter'],
-    thumbnail: 'https://6a3b66710a4149112241450e.imgix.net/fers.jpg',
-    size: '16 GB',
-    releaseYear: '2025',
-    images: [
-      'https://6a3b66710a4149112241450e.imgix.net/fers.jpg',
-      'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
-      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
-    shorts: [
-      'https://www.youtube.com/embed/vp9KNgG0e14?si=K1GYqDf2e4PDMdzE',
-      'https://www.youtube.com/embed/UPMOdKvqH3o?si=0BHbotN_vnYtPe34',
-      'https://www.youtube.com/embed/1go8AUUYTq0?si=rYD_kCR00YEh-MMC'
-    ]
-  },
-  {
     id: 'nfs-unbound',
     title: 'Need for Speed Unbound',
     description: 'The world is your canvas in Need for Speed Unbound. Prove you have what it takes to win The Grand, Lakeshore’s ultimate street racing challenge.',
