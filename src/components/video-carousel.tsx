@@ -125,7 +125,7 @@ export function VideoCarousel() {
         )}
         onClick={() => setSelectedItem(item)}
       >
-        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-300 hover:ring-primary/40">
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-300">
           <Image
             src={item.posterUrl}
             alt={item.title}
@@ -134,11 +134,6 @@ export function VideoCarousel() {
             sizes="(max-width: 768px) 240px, 450px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
-             <div className="w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/40 flex items-center justify-center">
-                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
-             </div>
-          </div>
         </div>
       </div>
     );
@@ -201,9 +196,6 @@ export function VideoCarousel() {
               <source src={selectedItem.videoUrl} type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 text-[10px] uppercase font-bold tracking-[0.3em] pointer-events-none whitespace-nowrap">
-              Click anywhere to close
-            </div>
           </div>
         </div>
       )}
