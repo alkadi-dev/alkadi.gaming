@@ -89,11 +89,8 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
 
 export function VideoCarousel() {
   const [mounted, setMounted] = useState(false);
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const [centeredOffset, setCenteredOffset] = useState({ x: 0, y: 0 });
-  const [isVideoReady, setIsVideoReady] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<CarouselItem | null>(null);
   const isMobile = useIsMobile();
-  const centeringTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -117,77 +114,31 @@ export function VideoCarousel() {
   const dRow1Items = [...desktopRow1, ...desktopRow1, ...desktopRow1];
   const dRow2Items = [...desktopRow2, ...desktopRow2, ...desktopRow2];
 
-  const handleInteraction = (e: React.MouseEvent | React.TouchEvent, key: string) => {
-    if (activeId === key) {
-      setActiveId(null);
-      setCenteredOffset({ x: 0, y: 0 });
-      setIsVideoReady(false);
-      if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
-      return;
-    }
-
-    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const screenCenterX = window.innerWidth / 2;
-    const screenCenterY = window.innerHeight / 2;
-
-    setActiveId(key);
-    setCenteredOffset({
-      x: screenCenterX - centerX,
-      y: screenCenterY - centerY
-    });
-    
-    setIsVideoReady(false);
-    if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
-    centeringTimeoutRef.current = setTimeout(() => {
-      setIsVideoReady(true);
-    }, 500);
-  };
-
   const renderItem = (item: CarouselItem, index: number, rowTag: string) => {
-    const uniqueKey = `${item.id}-${index}-${rowTag}`;
-    const isActive = activeId === uniqueKey;
-    const showVideo = isActive && isVideoReady;
-
     return (
       <div 
-        key={uniqueKey} 
+        key={`${item.id}-${index}-${rowTag}`} 
         className={cn(
-          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu will-change-transform",
+          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu cursor-pointer",
           "group/item",
-          activeId && !isActive ? "blur-md opacity-30 scale-90 pointer-events-none" : "blur-none opacity-100 scale-100",
-          isActive && "z-[100]"
+          selectedItem && "blur-md opacity-30 scale-95"
         )}
-        style={isActive ? {
-          transform: `translate(${centeredOffset.x}px, ${centeredOffset.y}px) scale(1.15)`
-        } : undefined}
-        onClick={(e) => handleInteraction(e, uniqueKey)}
-        id={uniqueKey}
+        onClick={() => setSelectedItem(item)}
       >
-        <div className={cn(
-          "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer"
-        )}>
-          {showVideo ? (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-500"
-            >
-              <source src={item.videoUrl} type="video/mp4" />
-            </video>
-          ) : (
-            <Image
-              src={item.posterUrl}
-              alt={item.title}
-              fill
-              className="object-cover opacity-80 transition-opacity duration-500"
-              sizes="(max-width: 768px) 240px, 450px"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-300 hover:ring-primary/40">
+          <Image
+            src={item.posterUrl}
+            alt={item.title}
+            fill
+            className="object-cover opacity-80 group-hover/item:scale-105 transition-transform duration-700"
+            sizes="(max-width: 768px) 240px, 450px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
+             <div className="w-12 h-12 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/40 flex items-center justify-center">
+                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
+             </div>
+          </div>
         </div>
       </div>
     );
@@ -198,34 +149,60 @@ export function VideoCarousel() {
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       
-      {isMobile ? (
-        <div className="flex flex-col gap-10 py-10 overflow-visible">
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
-              {row1Items.map((item, i) => renderItem(item, i, 'm-r1'))}
+      <div className="flex flex-col gap-10 py-10 overflow-visible">
+        {isMobile ? (
+          <>
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-left whitespace-nowrap", selectedItem && "paused-animation")}>
+                {row1Items.map((item, i) => renderItem(item, i, 'm-r1'))}
+              </div>
             </div>
-          </div>
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
-              {row2Items.map((item, i) => renderItem(item, i, 'm-r2'))}
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-right whitespace-nowrap", selectedItem && "paused-animation")}>
+                {row2Items.map((item, i) => renderItem(item, i, 'm-r2'))}
+              </div>
             </div>
-          </div>
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
-              {row3Items.map((item, i) => renderItem(item, i, 'm-r3'))}
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-left whitespace-nowrap", selectedItem && "paused-animation")}>
+                {row3Items.map((item, i) => renderItem(item, i, 'm-r3'))}
+              </div>
             </div>
-          </div>
-        </div>
-      ) : (
-        <div className="flex flex-col gap-10 py-10 overflow-visible">
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
-              {dRow1Items.map((item, i) => renderItem(item, i, 'd-r1'))}
+          </>
+        ) : (
+          <>
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-left whitespace-nowrap", selectedItem && "paused-animation")}>
+                {dRow1Items.map((item, i) => renderItem(item, i, 'd-r1'))}
+              </div>
             </div>
-          </div>
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
-              {dRow2Items.map((item, i) => renderItem(item, i, 'd-r2'))}
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-right whitespace-nowrap", selectedItem && "paused-animation")}>
+                {dRow2Items.map((item, i) => renderItem(item, i, 'd-r2'))}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Full Screen Active Video Overlay */}
+      {selectedItem && (
+        <div 
+          className="fixed inset-0 z-[150] flex items-center justify-center bg-background/90 backdrop-blur-xl p-4 sm:p-10 cursor-pointer animate-in fade-in duration-300"
+          onClick={() => setSelectedItem(null)}
+        >
+          <div className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(var(--primary),0.2)] border border-white/10 animate-in zoom-in-95 duration-500">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src={selectedItem.videoUrl} type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 text-[10px] uppercase font-bold tracking-[0.3em] pointer-events-none whitespace-nowrap">
+              Click anywhere to close
             </div>
           </div>
         </div>
