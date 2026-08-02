@@ -15,67 +15,67 @@ interface CarouselItem {
 const CAROUSEL_ITEMS: CarouselItem[] = [
   {
     id: 'firstlight',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/firstlight.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/firstlight%20(4).mov",
     posterUrl: "https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false",
     title: "007 First Light"
   },
   {
     id: 'horizon',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/horizon.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/horizon.mp4",
     posterUrl: "https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg",
     title: "Horizon Forbidden West"
   },
   {
     id: 'cod',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/call%20of%20duty.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/call%20of%20duty.mp4",
     posterUrl: "https://wallpapercave.com/wp/wp11704100.jpg",
     title: "Call of Duty"
   },
   {
     id: 'rdr2',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/red%20dead%20redemption%202.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/red%20dead%20redemption%202.mp4",
     posterUrl: "https://wallpapercave.com/wp/wp3770429.png",
     title: "Red Dead Redemption 2"
   },
   {
     id: 'spiderman2',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/spider%20man%202.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/spider%20man%202.mp4",
     posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg",
     title: "Spider-Man 2"
   },
   {
     id: 'tlou2',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/the%20last%20of%20us%20part%202.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/the%20last%20of%20us%20part%202.mp4",
     posterUrl: "https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg",
     title: "The Last of Us Part II"
   },
   {
     id: 'ac',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassinn.mov",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/assassinn.mov",
     posterUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
     title: "Assassin's Creed Shadows"
   },
   {
     id: 'gow',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/god%20of%20war.mp4",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/god%20of%20war.mp4",
     posterUrl: "https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg",
     title: "God of War Ragnarok"
   },
   {
     id: 'got',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/ghost%20of%20thusima.mov",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/ghost%20of%20thusima.mov",
     posterUrl: "https://images3.alphacoders.com/138/thumbbig-1387219.webp",
     title: "Ghost of Tsushima"
   },
   {
     id: 'cyberpunk',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/cyper%20punk.mov",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/cyper%20punk.mov",
     posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg",
     title: "Cyberpunk 2077"
   },
   {
     id: 'u4',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/uncharted%204.mov",
+    videoUrl: "https://ik.imagekit.io/alkadi/highlights/uncharted%204.mov",
     posterUrl: "https://wallpapercave.com/wp/wp2272912.jpg",
     title: "Uncharted 4"
   },
@@ -192,9 +192,8 @@ export function VideoCarousel() {
               muted
               playsInline
               className="w-full h-full object-cover"
-            >
-              <source src={selectedItem.videoUrl} type="video/mp4" />
-            </video>
+              src={selectedItem.videoUrl}
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
