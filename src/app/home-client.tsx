@@ -27,7 +27,7 @@ let hasSplashBeenShownInModule = false;
 // --- Brand Icons ---
 const FacebookIcon = () => (
   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-    <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.03 1.738-5.925 5.881-5.925 1.27 0 2.503.069 2.503.069v3.636h-1.858c-1.812 0-2.155 1.125-2.155 2.263v1.537h4.037l-.644 3.667h-3.393v7.98H9.101z" />
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 3.865 10.99 9.225 12.663v-8.96h-3.254v-3.703h3.254v-2.822c0-3.21 1.912-4.985 4.833-4.985 1.398 0 2.86.25 2.86.25v3.14h-1.61c-1.59 0-2.086.988-2.086 2.003v2.414h3.54l-.566 3.703h-2.974v8.96c5.36-1.673 9.225-6.673 9.225-12.663z" />
   </svg>
 );
 
@@ -77,7 +77,7 @@ export default function HomeClient() {
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const heroVideoUrl = "https://ik.imagekit.io/alkadi/controller.mov";
+  const heroVideoUrl = "https://ik.imagekit.io/alkadi/controllerr.mov";
 
   useEffect(() => {
     setMounted(true);
