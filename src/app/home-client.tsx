@@ -77,7 +77,7 @@ export default function HomeClient() {
   
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const heroVideoUrl = "https://ik.imagekit.io/alkadi/controllerr.mov";
+  const heroVideoUrl = "/controller.mov";
 
   useEffect(() => {
     setMounted(true);
