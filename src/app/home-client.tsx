@@ -317,26 +317,26 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
         <div className={cn(
-          "w-full max-w-5xl relative z-10 mx-auto text-center px-6 sm:px-16 py-12 transition-all duration-1000 transform",
+          "w-full max-w-7xl relative z-10 mx-auto text-center px-6 sm:px-12 md:px-16 py-8 md:py-12 transition-all duration-1000 transform",
           isVideoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
-          <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold font-headline mb-8 leading-tight" dir="ltr">
-            <span className="text-white uppercase block mb-4 md:mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
-            <span className="text-primary text-2xl md:text-5xl lg:text-7xl block font-normal drop-shadow-lg">{t('hero.subtitle')}</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-bold font-headline mb-6 md:mb-8 leading-[0.95] md:leading-tight" dir="ltr">
+            <span className="text-white uppercase block mb-3 md:mb-6 tracking-tighter drop-shadow-2xl">ALKADI GAMING</span>
+            <span className="text-primary text-2xl md:text-4xl lg:text-5xl xl:text-7xl block font-normal drop-shadow-lg">{t('hero.subtitle')}</span>
           </h1>
           <h2 className="sr-only">Alkadi Gaming Catalog</h2>
-          <p className="text-white/90 text-base md:text-2xl lg:text-4xl max-w-4xl mx-auto mb-10 md:mb-14 leading-relaxed font-medium drop-shadow-md">
+          <p className="text-white/90 text-base md:text-xl lg:text-2xl xl:text-4xl max-w-5xl mx-auto mb-8 md:mb-14 leading-relaxed font-medium drop-shadow-md">
             {t('hero.description')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <button 
-              className="bg-primary text-white text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-8 h-14 rounded-md"
+              className="bg-primary text-white text-base md:text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 px-6 md:px-8 h-12 md:h-14 rounded-md"
               onClick={scrollToLibrary}
             >
               {t('hero.browse')}
             </button>
             <button 
-              className="text-white text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border border-white/20 shadow-2xl px-8 h-14 rounded-md"
+              className="text-white text-base md:text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md hover:bg-primary hover:text-white border border-white/20 shadow-2xl px-6 md:px-8 h-12 md:h-14 rounded-md"
               onClick={scrollToContact}
             >
               {t('hero.contact')}
