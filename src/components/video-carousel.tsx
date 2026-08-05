@@ -27,9 +27,9 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   },
   {
     id: 'cod',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/call%20of%20duty.mp4",
+    videoUrl: "https://streamable.com/43lu40",
     posterUrl: "https://wallpapercave.com/wp/wp11704100.jpg",
-    title: "Call of Duty"
+    title: "Call of Duty Modern Warfare 2"
   },
   {
     id: 'rdr2',
@@ -139,6 +139,12 @@ export function VideoCarousel() {
     );
   };
 
+  const isStreamable = (url: string) => url.includes('streamable.com');
+  const getStreamableEmbedUrl = (url: string) => {
+    // Convert https://streamable.com/43lu40 to https://streamable.com/e/43lu40
+    return url.replace('streamable.com/', 'streamable.com/e/');
+  };
+
   return (
     <section className="relative w-full overflow-hidden py-8 md:py-20" dir="ltr">
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
@@ -186,14 +192,23 @@ export function VideoCarousel() {
           onClick={() => setSelectedItem(null)}
         >
           <div className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(var(--primary),0.2)] border border-white/10 animate-in zoom-in-95 duration-500">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              src={selectedItem.videoUrl}
-            />
+            {isStreamable(selectedItem.videoUrl) ? (
+              <iframe
+                src={getStreamableEmbedUrl(selectedItem.videoUrl)}
+                className="w-full h-full border-none"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            ) : (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                src={selectedItem.videoUrl}
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
