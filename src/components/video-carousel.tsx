@@ -141,8 +141,8 @@ export function VideoCarousel() {
 
   const isStreamable = (url: string) => url.includes('streamable.com');
   const getStreamableEmbedUrl = (url: string) => {
-    // Convert https://streamable.com/43lu40 to https://streamable.com/e/43lu40
-    return url.replace('streamable.com/', 'streamable.com/e/');
+    // Convert https://streamable.com/43lu40 to https://streamable.com/e/43lu40?autoplay=1&muted=1
+    return url.replace('streamable.com/', 'streamable.com/e/') + '?autoplay=1&muted=1';
   };
 
   return (
@@ -195,7 +195,7 @@ export function VideoCarousel() {
             {isStreamable(selectedItem.videoUrl) ? (
               <iframe
                 src={getStreamableEmbedUrl(selectedItem.videoUrl)}
-                className="w-full h-full border-none"
+                className="w-full h-full border-none pointer-events-none"
                 allow="autoplay; fullscreen"
                 allowFullScreen
               />
@@ -205,7 +205,8 @@ export function VideoCarousel() {
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover"
+                controls={false}
+                className="w-full h-full object-cover pointer-events-none"
                 src={selectedItem.videoUrl}
               />
             )}
