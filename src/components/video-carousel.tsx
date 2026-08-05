@@ -15,13 +15,13 @@ interface CarouselItem {
 const CAROUSEL_ITEMS: CarouselItem[] = [
   {
     id: 'firstlight',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/firstlight%20(4).mov",
+    videoUrl: "https://streamable.com/rhy4xm",
     posterUrl: "https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false",
     title: "007 First Light"
   },
   {
     id: 'horizon',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/horizon.mp4",
+    videoUrl: "https://streamable.com/jkn5pc",
     posterUrl: "https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg",
     title: "Horizon Forbidden West"
   },
@@ -33,49 +33,49 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   },
   {
     id: 'rdr2',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/red%20dead%20redemption%202.mp4",
+    videoUrl: "https://streamable.com/mw7sa5",
     posterUrl: "https://wallpapercave.com/wp/wp3770429.png",
     title: "Red Dead Redemption 2"
   },
   {
     id: 'spiderman2',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/spider%20man%202.mp4",
+    videoUrl: "https://streamable.com/bf97w8",
     posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg",
     title: "Spider-Man 2"
   },
   {
     id: 'tlou2',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/the%20last%20of%20us%20part%202.mp4",
+    videoUrl: "https://streamable.com/vyc9xi",
     posterUrl: "https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg",
     title: "The Last of Us Part II"
   },
   {
     id: 'ac',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/assassinn.mov",
+    videoUrl: "https://streamable.com/xgfa05",
     posterUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
     title: "Assassin's Creed Shadows"
   },
   {
     id: 'gow',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/god%20of%20war.mp4",
+    videoUrl: "https://streamable.com/4y7p0g",
     posterUrl: "https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg",
     title: "God of War Ragnarok"
   },
   {
     id: 'got',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/ghost%20of%20thusima.mov",
+    videoUrl: "https://streamable.com/1yusy4",
     posterUrl: "https://images3.alphacoders.com/138/thumbbig-1387219.webp",
     title: "Ghost of Tsushima"
   },
   {
     id: 'cyberpunk',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/cyper%20punk.mov",
+    videoUrl: "https://streamable.com/qr5uyd",
     posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg",
     title: "Cyberpunk 2077"
   },
   {
     id: 'u4',
-    videoUrl: "https://ik.imagekit.io/alkadi/highlights/uncharted%204.mov",
+    videoUrl: "https://streamable.com/d11jh9",
     posterUrl: "https://wallpapercave.com/wp/wp2272912.jpg",
     title: "Uncharted 4"
   },
@@ -141,8 +141,8 @@ export function VideoCarousel() {
 
   const isStreamable = (url: string) => url.includes('streamable.com');
   const getStreamableEmbedUrl = (url: string) => {
-    // Convert https://streamable.com/43lu40 to https://streamable.com/e/43lu40?autoplay=1&muted=1
-    return url.replace('streamable.com/', 'streamable.com/e/') + '?autoplay=1&muted=1';
+    // Convert to embed format and add autoplay/muted for instant playback without UI interaction
+    return url.replace('streamable.com/', 'streamable.com/e/') + '?autoplay=1&muted=1&controls=0';
   };
 
   return (
@@ -193,12 +193,16 @@ export function VideoCarousel() {
         >
           <div className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(var(--primary),0.2)] border border-white/10 animate-in zoom-in-95 duration-500">
             {isStreamable(selectedItem.videoUrl) ? (
-              <iframe
-                src={getStreamableEmbedUrl(selectedItem.videoUrl)}
-                className="w-full h-full border-none pointer-events-none"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-              />
+              <div className="w-full h-full relative">
+                <iframe
+                  src={getStreamableEmbedUrl(selectedItem.videoUrl)}
+                  className="w-full h-full border-none"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                />
+                {/* Transparent overlay to catch clicks for closing and hide player UI interaction */}
+                <div className="absolute inset-0 z-10" />
+              </div>
             ) : (
               <video
                 autoPlay
