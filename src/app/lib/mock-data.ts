@@ -1719,5 +1719,25 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/DGe3LrFH4G4'
     ],
     isRecommended: false
+  },
+  {
+    id: 'ghost-recon-wildlands',
+    title: 'Tom Clancy’s Ghost Recon: Wildlands',
+    description: 'Create a team with up to 3 friends in Tom Clancy’s Ghost Recon® Wildlands and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.',
+    categories: ['Shooter', 'Open World'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/header.jpg',
+    size: '50 GB',
+    releaseYear: '2017',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/header.jpg',
+      'https://wallpapercave.com/wp/wp1810574.jpg',
+      'https://images.alphacoders.com/805/805364.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WdJub3K0uGE',
+    shorts: [
+      'https://www.youtube.com/embed/W9uH0_1pWEY',
+      'https://www.youtube.com/embed/7V8e3Q7Nq3k'
+    ],
+    isRecommended: false,
   }
 ];
