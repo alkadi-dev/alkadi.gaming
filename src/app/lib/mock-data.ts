@@ -1724,19 +1724,20 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ghost-recon-wildlands',
     title: 'Tom Clancy’s Ghost Recon: Wildlands',
     description: 'Create a team with up to 3 friends in Tom Clancy’s Ghost Recon® Wildlands and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.',
-    categories: ['Shooter', 'Open World'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/header.jpg',
+    categories: ['Shooter'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
     size: '50 GB',
     releaseYear: '2017',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/header.jpg',
-      'https://wallpapercave.com/wp/wp1810574.jpg',
-      'https://images.alphacoders.com/805/805364.jpg'
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
+      'https://wallpaperaccess.com/full/1925560.jpg',
+      'https://wallpapers.com/images/hd/best-ghost-recon-wildlands-background-1920-x-1080-0h9fv60dbxctq8oz.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/WdJub3K0uGE',
+    videoUrl: 'https://www.youtube.com/embed/WdJub3Kz2wI',
     shorts: [
-      'https://www.youtube.com/embed/W9uH0_1pWEY',
-      'https://www.youtube.com/embed/7V8e3Q7Nq3k'
+      'https://www.youtube.com/embed/wOSnXi8OLEs',
+      'https://www.youtube.com/embed/ybXKZqWwjDg',
+      'https://www.youtube.com/embed/Sykx_cmTYXQ'
     ],
     isRecommended: false,
   }
