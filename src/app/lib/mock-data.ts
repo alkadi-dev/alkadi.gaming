@@ -1740,5 +1740,35 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/Sykx_cmTYXQ'
     ],
     isRecommended: false,
+  },
+  {
+    id: 'screamer',
+    title: 'Screamer',
+    description: 'A high-octane racing experience where speed is everything. Master the curves and dominate the track in this intense racing title.',
+    categories: ['2 players'],
+    thumbnail: 'https://picsum.photos/seed/screamer-thumb/600/400',
+    size: '5 GB',
+    releaseYear: '1995',
+    images: [
+      'https://picsum.photos/seed/screamer-img1/1200/800',
+      'https://picsum.photos/seed/screamer-img2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/placeholder',
+    isRecommended: false,
+  },
+  {
+    id: 'wwe-2018',
+    title: 'WWE 2018',
+    description: 'The biggest video game franchise in WWE history is back with WWE 2K18! Promises to bring you closer to the ring than ever before with hard-hitting action and stunning graphics.',
+    categories: ['2 players'],
+    thumbnail: 'https://picsum.photos/seed/wwe2018-thumb/600/400',
+    size: '40 GB',
+    releaseYear: '2017',
+    images: [
+      'https://picsum.photos/seed/wwe2018-img1/1200/800',
+      'https://picsum.photos/seed/wwe2018-img2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/placeholder',
+    isRecommended: false,
   }
 ];
