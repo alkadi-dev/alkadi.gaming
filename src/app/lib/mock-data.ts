@@ -1788,17 +1788,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The House of the Dead 2: Remake',
     description: 'The arcade classic returns with a complete graphical overhaul and improved gameplay. Experience Venice like never before as you blast through legions of undead in this intense 2-player rail shooter.',
     categories: ['2 players'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1693980/header.jpg',
+    thumbnail: 'https://klovimg.com/images/2023/01/28/before.jpg',
     size: '8 GB',
     releaseYear: '2025',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1693980/header.jpg',
-      'https://picsum.photos/seed/hotd2-1/1200/800',
-      'https://picsum.photos/seed/hotd2-2/1200/800'
+      'https://klovimg.com/images/2023/01/28/before.jpg',
+      'https://images.gog-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
+      'https://www.relyonhorror.com/wp-content/uploads/2025/08/20250815153722_1.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/P_P_P_P_P_P',
+    videoUrl: 'https://www.youtube.com/embed/BCuE-VCrdWs',
     shorts: [
-      'https://www.youtube.com/embed/Q_Q_Q_Q_Q_Q'
+      'https://www.youtube.com/embed/6pdtwFKTzSU'
     ],
   },
   {
