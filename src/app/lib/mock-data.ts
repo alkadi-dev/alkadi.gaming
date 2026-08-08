@@ -1806,15 +1806,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Spirit of the Samurai',
     description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
     categories: ['Action'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1507120/header.jpg',
+    thumbnail: 'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
     size: '12 GB',
     releaseYear: '2024',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1507120/header.jpg',
-      'https://picsum.photos/seed/spirit-1/1200/800',
-      'https://picsum.photos/seed/spirit-2/1200/800'
+      'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
+      'https://i0.wp.com/intoindiegames.com/wp-content/uploads/IIG-TK-00007-40.jpg?resize=800,450&ssl=1',
+      'https://cdn.mos.cms.futurecdn.net/3L5CCe7hJUrkotiJws26L7.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/R_R_R_R_R_R',
-    shorts: [],
+    videoUrl: 'https://www.youtube.com/embed/eVWvlQRoBq0',
+    shorts: [
+      'https://www.youtube.com/embed/TWV_2TUoeoA',
+      'https://www.youtube.com/embed/OLoD5gj0Z6k'
+    ],
   }
 ];
