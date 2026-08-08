@@ -1248,7 +1248,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/2VaLOc1FpSo',
     shorts: [
-      'https://www.youtube.com/embed/9g6wftT6Igk',
+      'https://www.youtube.com/embed/9g6wftT6Ikk',
       'https://www.youtube.com/embed/-jdI5ZVdB_w',
       'https://www.youtube.com/embed/BTGV8SEbKDs'
     ]
@@ -1767,14 +1767,20 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'WWE 2018',
     description: 'The biggest video game franchise in WWE history is back with WWE 2K18! Promises to bring you closer to the ring than ever before with hard-hitting action and stunning graphics.',
     categories: ['2 players'],
-    thumbnail: 'https://picsum.photos/seed/wwe2018-thumb/600/400',
+    thumbnail: 'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
     size: '40 GB',
     releaseYear: '2017',
     images: [
-      'https://picsum.photos/seed/wwe2018-img1/1200/800',
-      'https://picsum.photos/seed/wwe2018-img2/1200/800'
+      'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
+      'https://getwallpapers.com/wallpaper/full/e/8/b/910464-wwe-2018-wallpaper-1920x1080-for-mobile-hd.jpg',
+      'https://getwallpapers.com/wallpaper/full/c/a/7/910530-wwe-2018-wallpaper-1920x1200-full-hd.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/placeholder',
+    videoUrl: 'https://www.youtube.com/embed/7ZbZfsuLXtg',
+    shorts: [
+      'https://www.youtube.com/embed/b9Bm-nEKUn8',
+      'https://www.youtube.com/embed/FVAvWwxj7QY',
+      'https://www.youtube.com/embed/pGvlJeYcwoI'
+    ],
     isRecommended: false,
   }
 ];
