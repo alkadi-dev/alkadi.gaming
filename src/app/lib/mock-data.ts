@@ -1875,16 +1875,18 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'black-day',
     title: 'The Black Day',
     description: 'In the aftermath of total societal collapse, every bullet counts. Fight for resources and survival in this gritty, tactical first-person shooter.',
-    categories: ['Shooter', 'Action'],
-    thumbnail: 'https://picsum.photos/seed/blackday-thumb/600/400',
+    categories: ['Shooter'],
+    thumbnail: 'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
     size: '40 GB',
     releaseYear: '2024',
     images: [
-      'https://picsum.photos/seed/blackday-1/1200/800',
-      'https://picsum.photos/seed/blackday-2/1200/800',
-      'https://picsum.photos/seed/blackday-3/1200/800'
+      'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
+      'https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/entity-the-black-day-screenshot-file-74ef13b0.jpg.webp',
+      'https://kotaku.com/igdb/image/upload/t_720p/sc113ci.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: [],
+    videoUrl: 'https://www.youtube.com/embed/p3GK6pP75QA',
+    shorts: [
+      'https://www.youtube.com/embed/lnyDaXN9PqM'
+    ],
   }
 ];
