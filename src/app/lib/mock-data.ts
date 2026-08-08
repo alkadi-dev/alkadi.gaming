@@ -157,7 +157,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA',
     shorts: [
-      'https://www.youtube.com/embed/ikDXF2ngf9I?si=fxNsLXuv7MMmH1Fp',
+      'https://www.youtube.com/embed/ikDXF26ngf9I?si=fxNsLXuv7MMmH1Fp',
       'https://www.youtube.com/embed/AqJbLJs5dW4?si=HvgdZYmYmJVmVFFa',
       'https://www.youtube.com/embed/QtT_F0TRaj8?si=w164WS64IBBuLki4'
     ],
@@ -1746,14 +1746,20 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Screamer',
     description: 'A high-octane racing experience where speed is everything. Master the curves and dominate the track in this intense racing title.',
     categories: ['2 players'],
-    thumbnail: 'https://picsum.photos/seed/screamer-thumb/600/400',
+    thumbnail: 'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
     size: '5 GB',
     releaseYear: '1995',
     images: [
-      'https://picsum.photos/seed/screamer-img1/1200/800',
-      'https://picsum.photos/seed/screamer-img2/1200/800'
+      'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
+      'https://comicbook.com/wp-content/uploads/sites/4/2026/02/Screamer-2026-3.jpg?w=1024',
+      'https://cdn.mos.cms.futurecdn.net/mhacnC6pNpoaBLjrtXydZ4.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/placeholder',
+    videoUrl: 'https://www.youtube.com/embed/HIZRiFlWhhE',
+    shorts: [
+      'https://www.youtube.com/embed/aB8IJrP5Mtk',
+      'https://www.youtube.com/embed/dYZb6qJy2Vc',
+      'https://www.youtube.com/embed/thJPXP5zS_c'
+    ],
     isRecommended: false,
   },
   {
