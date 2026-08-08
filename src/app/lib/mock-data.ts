@@ -1824,17 +1824,20 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'beast-reincarnation',
     title: 'Beast of Reincarnation',
     description: 'A dark, visceral action experience where the cycle of life and death is your greatest weapon. Unleash your inner beast to survive a world of ancient curses.',
-    categories: ['Action', 'Horror'],
-    thumbnail: 'https://picsum.photos/seed/beast-re/600/400',
+    categories: ['RPG'],
+    thumbnail: 'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
     size: '45 GB',
     releaseYear: '2026',
     images: [
-      'https://picsum.photos/seed/beast-re-1/1200/800',
-      'https://picsum.photos/seed/beast-re-2/1200/800',
-      'https://picsum.photos/seed/beast-re-3/1200/800'
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
+      'https://kotaku.com/app/uploads/2026/08/kooandemma.jpg',
+      'https://www.vice.com/wp-content/uploads/sites/2/2026/08/beast-of-reincarnation-early-access.jpg?w=1024'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: [],
+    videoUrl: 'https://www.youtube.com/embed/H0r-Kap8kWI',
+    shorts: [
+      'https://www.youtube.com/embed/H0r-Kap8kWI',
+      'https://www.youtube.com/embed/zSmqjNjTsu8'
+    ],
   },
   {
     id: 'sudden-strike-5',
