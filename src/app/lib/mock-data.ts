@@ -1782,5 +1782,39 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/pGvlJeYcwoI'
     ],
     isRecommended: false,
+  },
+  {
+    id: 'hotd2-remake',
+    title: 'The House of the Dead 2: Remake',
+    description: 'The arcade classic returns with a complete graphical overhaul and improved gameplay. Experience Venice like never before as you blast through legions of undead in this intense 2-player rail shooter.',
+    categories: ['2 players'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1693980/header.jpg',
+    size: '8 GB',
+    releaseYear: '2025',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1693980/header.jpg',
+      'https://picsum.photos/seed/hotd2-1/1200/800',
+      'https://picsum.photos/seed/hotd2-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/P_P_P_P_P_P',
+    shorts: [
+      'https://www.youtube.com/embed/Q_Q_Q_Q_Q_Q'
+    ],
+  },
+  {
+    id: 'spirit-samurai',
+    title: 'The Spirit of the Samurai',
+    description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
+    categories: ['Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1507120/header.jpg',
+    size: '12 GB',
+    releaseYear: '2024',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1507120/header.jpg',
+      'https://picsum.photos/seed/spirit-1/1200/800',
+      'https://picsum.photos/seed/spirit-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/R_R_R_R_R_R',
+    shorts: [],
   }
 ];
