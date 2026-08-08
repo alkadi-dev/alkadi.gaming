@@ -1726,7 +1726,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Create a team with up to 3 friends in Tom Clancy’s Ghost Recon® Wildlands and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.',
     categories: ['Shooter'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
-    size: '50 GB',
+    size: '32 GB',
     releaseYear: '2017',
     images: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
@@ -1747,7 +1747,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A high-octane racing experience where speed is everything. Master the curves and dominate the track in this intense racing title.',
     categories: ['2 players'],
     thumbnail: 'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
-    size: '5 GB',
+    size: '21 GB',
     releaseYear: '1995',
     images: [
       'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
@@ -1768,7 +1768,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The biggest video game franchise in WWE history is back with WWE 2K18! Promises to bring you closer to the ring than ever before with hard-hitting action and stunning graphics.',
     categories: ['2 players'],
     thumbnail: 'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
-    size: '40 GB',
+    size: '29 GB',
     releaseYear: '2017',
     images: [
       'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
@@ -1789,11 +1789,11 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The arcade classic returns with a complete graphical overhaul and improved gameplay. Experience Venice like never before as you blast through legions of undead in this intense 2-player rail shooter.',
     categories: ['2 players'],
     thumbnail: 'https://klovimg.com/images/2023/01/28/before.jpg',
-    size: '8 GB',
+    size: '5 GB',
     releaseYear: '2025',
     images: [
       'https://klovimg.com/images/2023/01/28/before.jpg',
-      'https://images.gog-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
+      'https://images.go-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
       'https://www.relyonhorror.com/wp-content/uploads/2025/08/20250815153722_1.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/BCuE-VCrdWs',
@@ -1807,7 +1807,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
     categories: ['Action'],
     thumbnail: 'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
-    size: '12 GB',
+    size: '6 GB',
     releaseYear: '2024',
     images: [
       'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
@@ -1819,5 +1819,69 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/TWV_2TUoeoA',
       'https://www.youtube.com/embed/OLoD5gj0Z6k'
     ],
+  },
+  {
+    id: 'beast-reincarnation',
+    title: 'Beast of Reincarnation',
+    description: 'A dark, visceral action experience where the cycle of life and death is your greatest weapon. Unleash your inner beast to survive a world of ancient curses.',
+    categories: ['Action', 'Horror'],
+    thumbnail: 'https://picsum.photos/seed/beast-re/600/400',
+    size: '45 GB',
+    releaseYear: '2026',
+    images: [
+      'https://picsum.photos/seed/beast-re-1/1200/800',
+      'https://picsum.photos/seed/beast-re-2/1200/800',
+      'https://picsum.photos/seed/beast-re-3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: [],
+  },
+  {
+    id: 'sudden-strike-5',
+    title: 'Sudden Strike 5',
+    description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
+    categories: ['Action'],
+    thumbnail: 'https://picsum.photos/seed/ss5-thumb/600/400',
+    size: '35 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/ss5-1/1200/800',
+      'https://picsum.photos/seed/ss5-2/1200/800',
+      'https://picsum.photos/seed/ss5-3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: [],
+  },
+  {
+    id: 'entity',
+    title: 'Entity',
+    description: 'Something is stalking you in the silence. A high-tension psychological horror experience where your survival depends on what you cannot see.',
+    categories: ['Horror', 'Action'],
+    thumbnail: 'https://picsum.photos/seed/entity-thumb/600/400',
+    size: '25 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/entity-1/1200/800',
+      'https://picsum.photos/seed/entity-2/1200/800',
+      'https://picsum.photos/seed/entity-3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: [],
+  },
+  {
+    id: 'black-day',
+    title: 'The Black Day',
+    description: 'In the aftermath of total societal collapse, every bullet counts. Fight for resources and survival in this gritty, tactical first-person shooter.',
+    categories: ['Shooter', 'Action'],
+    thumbnail: 'https://picsum.photos/seed/blackday-thumb/600/400',
+    size: '40 GB',
+    releaseYear: '2024',
+    images: [
+      'https://picsum.photos/seed/blackday-1/1200/800',
+      'https://picsum.photos/seed/blackday-2/1200/800',
+      'https://picsum.photos/seed/blackday-3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: [],
   }
 ];
