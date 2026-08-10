@@ -42,7 +42,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: '5',
-    title: 'Red Dead Redemption 22',
+    title: 'Red Dead Redemption 2',
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     categories: ['Open World'],
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
@@ -681,7 +681,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
-      'https://picsum.photos/seed/sniper4-gallery/1200/800'
+      'https://picsum.photos/seed/sniper4-gallery/120/800'
     ],
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
     shorts: [
@@ -1277,7 +1277,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'reanimal',
     title: 'REANIMAL',
     description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
-    categories: ['2 players', '2D game'],
+    categories: ['2D game'],
     thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '9 GB',
     releaseYear: '2026',
@@ -1805,7 +1805,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'spirit-samurai',
     title: 'The Spirit of the Samurai',
     description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
-    categories: ['2D game', 'Action'],
+    categories: ['2D game'],
     thumbnail: 'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
     size: '6 GB',
     releaseYear: '2024',
@@ -1879,7 +1879,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ac-black-flag-resynced',
     title: 'Assassin’s Creed: Black Flag Resynced',
     description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
-    categories: ['Action', 'Open World'],
+    categories: ['Open World'],
     thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
     size: '36 GB',
     releaseYear: '2025',
@@ -1900,7 +1900,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'hollow-knight',
     title: 'Hollow Knight',
     description: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs.',
-    categories: ['2D game', 'Adventure'],
+    categories: ['2D game'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
     size: '2 GB',
     releaseYear: '2017',
@@ -1918,7 +1918,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'hollow-knight-silksong',
     title: 'Hollow Knight: Silksong',
     description: 'Discover a whole new kingdom! Explore, fight and survive as Hornet, princess-protector of Hallownest, on a journey to a strange new land of silk and song.',
-    categories: ['2D game', 'Adventure'],
+    categories: ['2D game'],
     thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
     size: '3 GB',
     releaseYear: '2025',
@@ -1937,7 +1937,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'replaced',
     title: 'Replaced',
     description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
-    categories: ['2D game', 'Action'],
+    categories: ['2D game'],
     thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
     size: '12 GB',
     releaseYear: '2025',
@@ -1955,7 +1955,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'akatori',
     title: 'Akatori',
     description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
-    categories: ['2D game', 'Action'],
+    categories: ['2D game'],
     thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
     size: '8 GB',
     releaseYear: '2024',
@@ -1988,6 +1988,6 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/7hZSWtkYN_c',
       'https://www.youtube.com/embed/kp8bLtQfkus'
     ],
-    isRecommended: true,
+
   }
 ];
