@@ -1793,7 +1793,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2025',
     images: [
       'https://klovimg.com/images/2023/01/28/before.jpg',
-      'https://images.go-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
+      'https://images.gog-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
       'https://www.relyonhorror.com/wp-content/uploads/2025/08/20250815153722_1.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/BCuE-VCrdWs',
@@ -1880,17 +1880,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Assassin’s Creed: Black Flag Resynced',
     description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
     categories: ['Action', 'Open World'],
-    thumbnail: 'https://picsum.photos/seed/blackflag/600/400',
+    thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
     size: '42 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/blackflag1/1200/800',
-      'https://picsum.photos/seed/blackflag2/1200/800',
-      'https://picsum.photos/seed/blackflag3/1200/800'
+      'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
+      'https://assetsio.gnwcdn.com/Bartholomew-Roberts.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
+      'https://wallpapercave.com/wp/wp16325456.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/pSrr037R228',
+    videoUrl: 'https://www.youtube.com/embed/WjsTLe7bBUA',
     shorts: [
-      'https://www.youtube.com/embed/pSrr037R228'
+      'https://www.youtube.com/embed/LiN5RfFzaI0',
+      'https://www.youtube.com/embed/CrrtY5O3fB4',
+      'https://www.youtube.com/embed/2LY9zJTXGbU'
     ],
     isRecommended: true,
   },
@@ -1925,7 +1927,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://picsum.photos/seed/silk2/1200/800',
       'https://picsum.photos/seed/silk3/1200/800'
     ],
-    videoUrl: 'https://www.youtube.com/embed/JSfSnoMVp-abe',
+    videoUrl: 'https://www.youtube.com/embed/JSfSnoMVp-a',
     shorts: [
       'https://www.youtube.com/embed/JSfSnoMVp-a'
     ],
