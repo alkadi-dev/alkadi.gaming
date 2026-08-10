@@ -1184,7 +1184,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1645630/f3d600c47b912e4856c5a72cf94923361e96bf30/header.jpg?t=1781529362',
       'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
-      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
+      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
     videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
     shorts: [
@@ -1956,17 +1956,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Akatori',
     description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
     categories: ['2D game', 'Action'],
-    thumbnail: 'https://picsum.photos/seed/akatori/600/400',
+    thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
     size: '8 GB',
     releaseYear: '2024',
     images: [
-      'https://picsum.photos/seed/akatori1/1200/800',
-      'https://picsum.photos/seed/akatori2/1200/800',
-      'https://picsum.photos/seed/akatori3/1200/800'
+      'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
+      'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_5-1024x576.jpg',
+      'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_8-1024x576.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/N6B-FvYIe_8',
+    videoUrl: 'https://www.youtube.com/embed/gBWAa-KBA0A',
     shorts: [
-      'https://www.youtube.com/embed/N6B-FvYIe_8'
+      'https://www.youtube.com/embed/MCrUlQe-JlU'
     ],
   }
 ];
