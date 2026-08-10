@@ -869,7 +869,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/914vI_3FON4?si=UhEkGF06ya9kC92M',
       'https://www.youtube.com/embed/Vb6oDZ6uGg8?si=zSAkYHUcAV65GMku',
-      'https://www.youtube.com/embed/j-mCAqn0Rl0?si=OQ7JrtCOHcmpp8dO'
+      'https://www.youtube.com/embed/j-mCAqn0Rl0?si=OQ7JrtCOHcpp8dO'
     ],
     isRecommended: true,
   },
@@ -1844,16 +1844,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sudden Strike 5',
     description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
     categories: ['Action'],
-    thumbnail: 'https://picsum.photos/seed/ss5-thumb/600/400',
+    thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
     size: '35 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/ss5-1/1200/800',
-      'https://picsum.photos/seed/ss5-2/1200/800',
-      'https://picsum.photos/seed/ss5-3/1200/800'
+      'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+      'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
+      'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: [],
+    videoUrl: 'https://www.youtube.com/embed/lbi2hOAE-9I',
+    shorts: [
+      'https://www.youtube.com/embed/FHrriux_xKA'
+    ],
   },
   {
     id: 'entity',
