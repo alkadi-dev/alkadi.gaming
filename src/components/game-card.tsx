@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { GameEntry } from '@/app/lib/mock-data';
-import { HardDrive, ImageOff, Calendar, Plus, Check } from 'lucide-react';
+import { HardDrive, ImageOff, Calendar, Plus, Check, Users2 } from 'lucide-react';
 import { useSelection } from '@/components/selection-context';
 import { useLanguage } from '@/components/language-context';
 import { useToast } from '@/hooks/use-toast';
@@ -79,6 +79,7 @@ export function GameCard({ game }: GameCardProps) {
   };
 
   const hasThumbnail = game.thumbnail && game.thumbnail.trim() !== '' && !imageError;
+  const isMandatoryCoop = game.id === 'ittakestwo' || game.id === 'splitfiction' || game.id === 'awayout';
 
   return (
     <div 
@@ -116,13 +117,18 @@ export function GameCard({ game }: GameCardProps) {
               )}
             </div>
 
-            {!isAdded && game.isRecommended && (
-              <div className={cn("absolute top-3 pointer-events-none", isRTL ? "left-3" : "right-3")}>
+            <div className={cn("absolute top-3 pointer-events-none", isRTL ? "left-3" : "right-3")}>
+              {isMandatoryCoop ? (
+                <div className="text-white text-[8px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center gap-1.5 bg-destructive/80 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
+                  <Users2 className="h-3 w-3" />
+                  {isRTL ? "لاعبان فقط" : "2 Players Required"}
+                </div>
+              ) : !isAdded && game.isRecommended ? (
                 <div className="text-white text-[9px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
                   {t('cat.Recommended')}
                 </div>
-              </div>
-            )}
+              ) : null}
+            </div>
 
             <div className={cn("absolute bottom-2 flex items-center gap-1.5 text-white text-[9px] font-bold bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10 shadow-lg", isRTL ? "right-2" : "left-2")} dir="ltr">
               <div className="flex items-center gap-1">

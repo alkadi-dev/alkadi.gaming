@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, ArrowRight, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar, Languages } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar, Users2, AlertCircle } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -62,6 +62,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   const [isRefining, setIsRefining] = useState(false);
 
   const isAdded = game ? isInSelection(game.id) : false;
+  const isMandatoryCoop = game?.id === 'ittakestwo' || game?.id === 'splitfiction' || game?.id === 'awayout';
 
   const handleRefine = useCallback(async () => {
     if (!game) return;
@@ -72,9 +73,8 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
       return;
     }
 
-    // For Arabic, we use AI translation
     setIsRefining(true);
-    setRefinedDescription(null); // Show skeletons while loading
+    setRefinedDescription(null); 
     
     try {
       const result = await refineGameDescription({ 
@@ -205,7 +205,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
         </div>
       </div>
 
-      <div className="relative h-[60vh] w-full mt-0 pt-16 sm:pt-0">
+      <div className="relative h-[60vh] md:h-[70vh] w-full mt-0 pt-16 sm:pt-0 overflow-hidden">
         {heroImage ? (
           <Image
             src={heroImage}
@@ -223,8 +223,8 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         
-        <div className="absolute bottom-0 left-0 right-0 p-6 container mx-auto">
-          <div className="flex flex-wrap gap-2 mb-3">
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 container mx-auto">
+          <div className="flex flex-wrap gap-2 mb-3 md:mb-6">
             <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
               <Calendar className="h-3.5 w-3.5" /> {game.releaseYear}
             </Badge>
@@ -236,38 +236,56 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
             <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
               <HardDrive className="h-3.5 w-3.5" /> {game.size}
             </Badge>
+            {isMandatoryCoop && (
+              <Badge variant="destructive" className="bg-destructive text-white px-4 py-1.5 text-sm uppercase tracking-wider font-black shadow-2xl flex items-center gap-2">
+                <Users2 className="h-4 w-4" /> {isRTL ? "لاعبان فقط" : "2 Players Required"}
+              </Badge>
+            )}
           </div>
-          <h1 className="text-3xl md:text-7xl font-bold font-headline tracking-tighter leading-none" dir="ltr">
+          <h1 className="text-3xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none" dir="ltr">
             {game.title}
           </h1>
         </div>
       </div>
 
-      <main className="container mx-auto px-4 mt-8 max-w-5xl">
-        <div className="space-y-10">
+      <main className="container mx-auto px-4 mt-8 max-w-7xl">
+        <div className="space-y-10 md:space-y-16">
           <RevealSection>
-            <section className="bg-secondary/20 rounded-3xl p-6 md:p-10 border border-white/5 shadow-2xl">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold font-headline uppercase tracking-tight">{t('game.story')}</h2>
+            {isMandatoryCoop && (
+              <div className="mb-8 p-4 rounded-2xl bg-destructive/10 border border-destructive/20 flex items-start gap-4">
+                <AlertCircle className="h-6 w-6 text-destructive flex-shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-lg font-bold text-destructive uppercase tracking-tight mb-1">
+                    {isRTL ? "تنبيه: تتطلب لاعبين" : "Warning: 2 Players Required"}
+                  </h4>
+                  <p className="text-muted-foreground text-sm font-medium">
+                    {t('game.requiresTwoPlayers')}
+                  </p>
+                </div>
+              </div>
+            )}
+            <section className="bg-secondary/20 rounded-3xl p-6 md:p-12 border border-white/5 shadow-2xl">
+              <div className="flex items-center justify-between mb-6 md:mb-8">
+                <h2 className="text-xl md:text-2xl font-bold font-headline uppercase tracking-tight">{t('game.story')}</h2>
                 {isRefining ? (
-                  <div className="flex items-center text-[10px] text-primary animate-pulse font-semibold">
-                    <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.refining')}
+                  <div className="flex items-center text-[10px] md:text-xs text-primary animate-pulse font-semibold">
+                    <Sparkles className={cn("h-3 w-3 md:h-4 md:w-4", isRTL ? "ml-1" : "mr-1")} /> {t('game.refining')}
                   </div>
                 ) : language === 'ar' && refinedDescription !== game.description ? (
-                  <Badge variant="outline" className="text-[9px] border-primary/30 text-primary px-2 py-0 uppercase font-bold">
-                    <Sparkles className={cn("h-3 w-3", isRTL ? "ml-1" : "mr-1")} /> {t('game.aiEnhanced')}
+                  <Badge variant="outline" className="text-[9px] md:text-xs border-primary/30 text-primary px-3 py-0.5 uppercase font-bold">
+                    <Sparkles className={cn("h-3 w-3 md:h-3.5 md:w-3.5", isRTL ? "ml-1" : "mr-1")} /> {t('game.aiEnhanced')}
                   </Badge>
                 ) : null}
               </div>
 
               {isRefining || !refinedDescription ? (
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <Skeleton className="h-4 w-full" />
                   <Skeleton className="h-4 w-[90%]" />
                   <Skeleton className="h-4 w-[95%]" />
                 </div>
               ) : (
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
+                <p className="text-base md:text-xl text-muted-foreground leading-relaxed font-light max-w-4xl">
                   {refinedDescription}
                 </p>
               )}
@@ -277,11 +295,11 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           {game.images && game.images.filter(img => img && img.trim() !== '').length > 0 && (
             <RevealSection>
               <section>
-                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">{t('game.gallery')}</h2>
+                <h2 className="text-xl md:text-2xl font-bold font-headline mb-6 md:mb-8 uppercase tracking-tight">{t('game.gallery')}</h2>
                 <Carousel className="w-full">
                   <CarouselContent>
                     {game.images.filter(img => img && img.trim() !== '').map((img, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2">
+                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                         <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
                           <Image
                             src={img}
@@ -294,9 +312,9 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <div className={cn("flex gap-2 mt-4", isRTL ? "justify-start" : "justify-end")}>
-                    <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
-                    <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-9 w-9" />
+                  <div className={cn("flex gap-2 mt-4 md:mt-6", isRTL ? "justify-start" : "justify-end")}>
+                    <CarouselPrevious className="relative translate-y-0 left-0 bg-white/5 border-white/10 hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
+                    <CarouselNext className="relative translate-y-0 right-0 bg-white/5 border-white/10 hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
                   </div>
                 </Carousel>
               </section>
@@ -305,7 +323,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
 
           <RevealSection>
             <section>
-              <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">{t('game.trailer')}</h2>
+              <h2 className="text-xl md:text-2xl font-bold font-headline mb-6 md:mb-8 uppercase tracking-tight">{t('game.trailer')}</h2>
               <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/5 ring-1 ring-white/10">
                 <iframe
                   src={game.videoUrl}
@@ -321,13 +339,24 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
           {game.shorts && game.shorts.length > 0 && (
             <RevealSection>
               <section>
-                <h2 className="text-xl font-bold font-headline mb-6 uppercase tracking-tight">{t('game.moments')}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <h2 className="text-xl md:text-2xl font-bold font-headline mb-6 md:mb-8 uppercase tracking-tight">{t('game.moments')}</h2>
+                <div className={cn(
+                  "grid gap-6 md:gap-8",
+                  game.shorts.length === 1 ? "grid-cols-1" : 
+                  game.shorts.length === 2 ? "grid-cols-1 md:grid-cols-2" : 
+                  "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                )}>
                   {game.shorts.map((url, index) => (
-                    <div key={index} className="relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] ring-1 ring-white/10">
+                    <div 
+                      key={index} 
+                      className={cn(
+                        "relative rounded-3xl overflow-hidden bg-black border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.02] ring-1 ring-white/10",
+                        game.shorts.length <= 2 ? "aspect-video" : "aspect-[9/16]"
+                      )}
+                    >
                       <iframe
                         src={url}
-                        title={`${game.title} Short ${index + 1}`}
+                        title={`${game.title} Moment ${index + 1}`}
                         className="absolute inset-0 w-full h-full"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen

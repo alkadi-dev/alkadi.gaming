@@ -74,6 +74,7 @@ const translations: Record<Language, Record<string, string>> = {
     'game.return': 'Return to Catalog',
     'game.aiEnhanced': 'AI Enhanced',
     'game.refining': 'Refining...',
+    'game.requiresTwoPlayers': 'Requires 2 Players (Cannot play alone)',
     'toast.removed': 'Removed from Selection',
     'toast.added': 'Game Added!',
     'toast.storageLimit': 'Storage Limit Exceeded',
@@ -120,7 +121,8 @@ const translations: Record<Language, Record<string, string>> = {
     'cat.Open World': 'Open World',
     'cat.Action': 'Action',
     'cat.Shooter': 'Shooter',
-    'cat.Horror': 'Horror'
+    'cat.Horror': 'Horror',
+    'cat.2D game': '2D Game'
   },
   ar: {
     'nav.catalog': 'الكتالوج',
@@ -184,6 +186,7 @@ const translations: Record<Language, Record<string, string>> = {
     'game.return': 'العودة إلى الكتالوج',
     'game.aiEnhanced': 'محسن بالذكاء الاصطناعي',
     'game.refining': 'جاري التحسين...',
+    'game.requiresTwoPlayers': 'تتطلب لاعبين (لا يمكن اللعب بمفردك)',
     'toast.removed': 'تمت الإزالة من القائمة',
     'toast.added': 'تمت إضافة اللعبة!',
     'toast.storageLimit': 'تم تجاوز حد التخزين',
@@ -230,7 +233,8 @@ const translations: Record<Language, Record<string, string>> = {
     'cat.Open World': 'عالم مفتوح',
     'cat.Action': 'أكشن',
     'cat.Shooter': 'إطلاق نار',
-    'cat.Horror': 'رعب'
+    'cat.Horror': 'رعب',
+    'cat.2D game': 'ألعاب 2D'
   }
 };
 

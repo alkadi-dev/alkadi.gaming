@@ -15,73 +15,73 @@ interface CarouselItem {
 const CAROUSEL_ITEMS: CarouselItem[] = [
   {
     id: 'firstlight',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/firstlight.mp4",
+    videoUrl: "https://streamable.com/rhy4xm",
     posterUrl: "https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false",
     title: "007 First Light"
   },
   {
     id: 'horizon',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/horizon.mp4",
+    videoUrl: "https://streamable.com/jkn5pc",
     posterUrl: "https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg",
     title: "Horizon Forbidden West"
   },
   {
     id: 'cod',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/call%20of%20duty.mp4",
+    videoUrl: "https://streamable.com/43lu40",
     posterUrl: "https://wallpapercave.com/wp/wp11704100.jpg",
-    title: "Call of Duty"
+    title: "Call of Duty Modern Warfare 2"
   },
   {
     id: 'rdr2',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/red%20dead%20redemption%202.mp4",
+    videoUrl: "https://streamable.com/mw7sa5",
     posterUrl: "https://wallpapercave.com/wp/wp3770429.png",
     title: "Red Dead Redemption 2"
   },
   {
     id: 'spiderman2',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/spider%20man%202.mp4",
+    videoUrl: "https://streamable.com/bf97w8",
     posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg",
     title: "Spider-Man 2"
   },
   {
     id: 'tlou2',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/the%20last%20of%20us%20part%202.mp4",
+    videoUrl: "https://streamable.com/vyc9xi",
     posterUrl: "https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg",
     title: "The Last of Us Part II"
   },
   {
     id: 'ac',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/assassinn.mov",
+    videoUrl: "https://streamable.com/xgfa05",
     posterUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
     title: "Assassin's Creed Shadows"
   },
   {
     id: 'gow',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/god%20of%20war.mp4",
+    videoUrl: "https://streamable.com/4y7p0g",
     posterUrl: "https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg",
     title: "God of War Ragnarok"
   },
   {
     id: 'got',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/ghost%20of%20thusima.mov",
+    videoUrl: "https://streamable.com/1yusy4",
     posterUrl: "https://images3.alphacoders.com/138/thumbbig-1387219.webp",
     title: "Ghost of Tsushima"
   },
   {
     id: 'cyberpunk',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/cyper%20punk.mov",
+    videoUrl: "https://streamable.com/qr5uyd",
     posterUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg",
     title: "Cyberpunk 2077"
   },
   {
     id: 'u4',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/uncharted%204.mov",
+    videoUrl: "https://streamable.com/d11jh9",
     posterUrl: "https://wallpapercave.com/wp/wp2272912.jpg",
     title: "Uncharted 4"
   },
   {
     id: 're',
-    videoUrl: "https://6a3b66710a4149112241450e.imgix.net/resident%20evil.mov",
+    videoUrl: "https://streamable.com/yloxlp",
     posterUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI",
     title: "Resident Evil Requiem"
   }
@@ -89,11 +89,8 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
 
 export function VideoCarousel() {
   const [mounted, setMounted] = useState(false);
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const [centeredOffset, setCenteredOffset] = useState({ x: 0, y: 0 });
-  const [isVideoReady, setIsVideoReady] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<CarouselItem | null>(null);
   const isMobile = useIsMobile();
-  const centeringTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -117,80 +114,35 @@ export function VideoCarousel() {
   const dRow1Items = [...desktopRow1, ...desktopRow1, ...desktopRow1];
   const dRow2Items = [...desktopRow2, ...desktopRow2, ...desktopRow2];
 
-  const handleInteraction = (e: React.MouseEvent | React.TouchEvent, key: string) => {
-    if (activeId === key) {
-      setActiveId(null);
-      setCenteredOffset({ x: 0, y: 0 });
-      setIsVideoReady(false);
-      if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
-      return;
-    }
-
-    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const screenCenterX = window.innerWidth / 2;
-    const screenCenterY = window.innerHeight / 2;
-
-    setActiveId(key);
-    setCenteredOffset({
-      x: screenCenterX - centerX,
-      y: screenCenterY - centerY
-    });
-    
-    setIsVideoReady(false);
-    if (centeringTimeoutRef.current) clearTimeout(centeringTimeoutRef.current);
-    centeringTimeoutRef.current = setTimeout(() => {
-      setIsVideoReady(true);
-    }, 500);
-  };
-
   const renderItem = (item: CarouselItem, index: number, rowTag: string) => {
-    const uniqueKey = `${item.id}-${index}-${rowTag}`;
-    const isActive = activeId === uniqueKey;
-    const showVideo = isActive && isVideoReady;
-
     return (
       <div 
-        key={uniqueKey} 
+        key={`${item.id}-${index}-${rowTag}`} 
         className={cn(
-          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu will-change-transform",
+          "inline-block px-2 md:px-4 w-[240px] md:w-[450px] transition-all duration-500 ease-out transform-gpu cursor-pointer",
           "group/item",
-          activeId && !isActive ? "blur-md opacity-30 scale-90 pointer-events-none" : "blur-none opacity-100 scale-100",
-          isActive && "z-[100]"
+          selectedItem && "blur-md opacity-30 scale-95"
         )}
-        style={isActive ? {
-          transform: `translate(${centeredOffset.x}px, ${centeredOffset.y}px) scale(1.15)`
-        } : undefined}
-        onClick={(e) => handleInteraction(e, uniqueKey)}
-        id={uniqueKey}
+        onClick={() => setSelectedItem(item)}
       >
-        <div className={cn(
-          "relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-500 cursor-pointer"
-        )}>
-          {showVideo ? (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-500"
-            >
-              <source src={item.videoUrl} type="video/mp4" />
-            </video>
-          ) : (
-            <Image
-              src={item.posterUrl}
-              alt={item.title}
-              fill
-              className="object-cover opacity-80 transition-opacity duration-500"
-              sizes="(max-width: 768px) 240px, 450px"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black transition-all duration-300">
+          <Image
+            src={item.posterUrl}
+            alt={item.title}
+            fill
+            className="object-cover opacity-80 group-hover/item:scale-105 transition-transform duration-700"
+            sizes="(max-width: 768px) 240px, 450px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
         </div>
       </div>
     );
+  };
+
+  const isStreamable = (url: string) => url.includes('streamable.com');
+  const getStreamableEmbedUrl = (url: string) => {
+    // Convert to embed format and add autoplay/muted for instant playback without UI interaction
+    return url.replace('streamable.com/', 'streamable.com/e/') + '?autoplay=1&muted=1&controls=0';
   };
 
   return (
@@ -198,35 +150,71 @@ export function VideoCarousel() {
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
       
-      {isMobile ? (
-        <div className="flex flex-col gap-10 py-10 overflow-visible">
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
-              {row1Items.map((item, i) => renderItem(item, i, 'm-r1'))}
+      <div className="flex flex-col gap-10 py-10 overflow-visible">
+        {isMobile ? (
+          <>
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-left whitespace-nowrap", selectedItem && "paused-animation")}>
+                {row1Items.map((item, i) => renderItem(item, i, 'm-r1'))}
+              </div>
             </div>
-          </div>
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
-              {row2Items.map((item, i) => renderItem(item, i, 'm-r2'))}
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-right whitespace-nowrap", selectedItem && "paused-animation")}>
+                {row2Items.map((item, i) => renderItem(item, i, 'm-r2'))}
+              </div>
             </div>
-          </div>
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
-              {row3Items.map((item, i) => renderItem(item, i, 'm-r3'))}
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-left whitespace-nowrap", selectedItem && "paused-animation")}>
+                {row3Items.map((item, i) => renderItem(item, i, 'm-r3'))}
+              </div>
             </div>
-          </div>
-        </div>
-      ) : (
-        <div className="flex flex-col gap-10 py-10 overflow-visible">
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-left whitespace-nowrap", activeId && "paused-animation")}>
-              {dRow1Items.map((item, i) => renderItem(item, i, 'd-r1'))}
+          </>
+        ) : (
+          <>
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-left whitespace-nowrap", selectedItem && "paused-animation")}>
+                {dRow1Items.map((item, i) => renderItem(item, i, 'd-r1'))}
+              </div>
             </div>
-          </div>
-          <div className="flex overflow-visible">
-            <div className={cn("flex animate-scroll-right whitespace-nowrap", activeId && "paused-animation")}>
-              {dRow2Items.map((item, i) => renderItem(item, i, 'd-r2'))}
+            <div className="flex overflow-visible">
+              <div className={cn("flex animate-scroll-right whitespace-nowrap", selectedItem && "paused-animation")}>
+                {dRow2Items.map((item, i) => renderItem(item, i, 'd-r2'))}
+              </div>
             </div>
+          </>
+        )}
+      </div>
+
+      {/* Full Screen Active Video Overlay */}
+      {selectedItem && (
+        <div 
+          className="fixed inset-0 z-[150] flex items-center justify-center bg-background/90 backdrop-blur-xl p-4 sm:p-10 cursor-pointer animate-in fade-in duration-300"
+          onClick={() => setSelectedItem(null)}
+        >
+          <div className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(var(--primary),0.2)] border border-white/10 animate-in zoom-in-95 duration-500">
+            {isStreamable(selectedItem.videoUrl) ? (
+              <div className="w-full h-full relative">
+                <iframe
+                  src={getStreamableEmbedUrl(selectedItem.videoUrl)}
+                  className="w-full h-full border-none"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                />
+                {/* Transparent overlay to catch clicks for closing and hide player UI interaction */}
+                <div className="absolute inset-0 z-10" />
+              </div>
+            ) : (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+                className="w-full h-full object-cover pointer-events-none"
+                src={selectedItem.videoUrl}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
       )}

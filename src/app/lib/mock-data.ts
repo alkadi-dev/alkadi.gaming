@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -42,7 +42,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: '5',
-    title: 'Red Dead Redemption 22',
+    title: 'Red Dead Redemption 2',
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     categories: ['Open World'],
     thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
@@ -157,7 +157,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/s_SJZSAtLBA',
     shorts: [
-      'https://www.youtube.com/embed/ikDXF2ngf9I?si=fxNsLXuv7MMmH1Fp',
+      'https://www.youtube.com/embed/ikDXF26ngf9I?si=fxNsLXuv7MMmH1Fp',
       'https://www.youtube.com/embed/AqJbLJs5dW4?si=HvgdZYmYmJVmVFFa',
       'https://www.youtube.com/embed/QtT_F0TRaj8?si=w164WS64IBBuLki4'
     ],
@@ -418,7 +418,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp5995960.jpg',
       'https://cdn.wallpapersafari.com/81/40/uenEqr.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/BBky2uCGqtM',
+    videoUrl: 'https://www.youtube.com/embed/BBky2uCNqtM',
     shorts: [
       'https://www.youtube.com/embed/n7JPFgNqHdo',
       'https://www.youtube.com/embed/mNd9HPf1x5o?si=SXMU-QVzWGaVrC1J',
@@ -666,7 +666,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/TSi0iJYSQ24',
     shorts: [
       'https://www.youtube.com/embed/0DhlHlUX3eA',
-      'https://www.youtube.com/embed/CFwV3YNSxV8',
+      'https://www.youtube.com/embed/CFwV3YNSV8',
       'https://www.youtube.com/embed/3kJu2q4nmCM'
     ],
   },
@@ -681,7 +681,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
-      'https://picsum.photos/seed/sniper4-gallery/1200/800'
+      'https://picsum.photos/seed/sniper4-gallery/120/800'
     ],
     videoUrl: 'https://www.youtube.com/embed/lGBRAEvXZ94?si=4_-Ahqq0QN30Nz1s',
     shorts: [
@@ -869,7 +869,7 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/914vI_3FON4?si=UhEkGF06ya9kC92M',
       'https://www.youtube.com/embed/Vb6oDZ6uGg8?si=zSAkYHUcAV65GMku',
-      'https://www.youtube.com/embed/j-mCAqn0Rl0?si=OQ7JrtCOHcmpp8dO'
+      'https://www.youtube.com/embed/j-mCAqn0Rl0?si=OQ7JrtCOHcpp8dO'
     ],
     isRecommended: true,
   },
@@ -1184,7 +1184,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1645630/f3d600c47b912e4856c5a72cf94923361e96bf30/header.jpg?t=1781529362',
       'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
-      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&impolicy=Letterbox&imcolor=#000000&letterbox=false'
+      'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
     videoUrl: 'https://www.youtube.com/embed/Wie5dg74coI?si=ojHdgKKzP4_zlMS6',
     shorts: [
@@ -1248,7 +1248,7 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/2VaLOc1FpSo',
     shorts: [
-      'https://www.youtube.com/embed/9g6wftT6Igk',
+      'https://www.youtube.com/embed/9g6wftT6Ikk',
       'https://www.youtube.com/embed/-jdI5ZVdB_w',
       'https://www.youtube.com/embed/BTGV8SEbKDs'
     ]
@@ -1277,7 +1277,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'reanimal',
     title: 'REANIMAL',
     description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
-    categories: ['2 players'],
+    categories: ['Horror'],
     thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '9 GB',
     releaseYear: '2026',
@@ -1600,7 +1600,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'splitfiction',
     title: 'Split Fiction',
-    description: 'A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
+    description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
     categories: ['2 players'],
     thumbnail: 'https://www.cnet.com/a/img/resize/cb70d224dabc89921354474adff3df19c569560f/hub/2025/02/14/50a4dfee-ece0-485a-8e15-873c5cdce776/splitfiction-keyart-rgb-1920x1080.jpg?auto=webp&fit=crop&height=675&width=1200',
     size: '54 GB',
@@ -1621,7 +1621,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'ittakestwo',
     title: 'It Takes Two',
-    description: 'Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
+    description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
     categories: ['2 players'],
     thumbnail: 'https://images4.alphacoders.com/114/thumbbig-1148443.webp',
     size: '28 GB',
@@ -1719,5 +1719,314 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/DGe3LrFH4G4'
     ],
     isRecommended: false
+  },
+  {
+    id: 'ghost-recon-wildlands',
+    title: 'Tom Clancy’s Ghost Recon: Wildlands',
+    description: 'Create a team with up to 3 friends in Tom Clancy’s Ghost Recon® Wildlands and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.',
+    categories: ['Shooter'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
+    size: '32 GB',
+    releaseYear: '2017',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
+      'https://wallpaperaccess.com/full/1925560.jpg',
+      'https://wallpapers.com/images/hd/best-ghost-recon-wildlands-background-1920-x-1080-0h9fv60dbxctq8oz.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WdJub3Kz2wI',
+    shorts: [
+      'https://www.youtube.com/embed/wOSnXi8OLEs',
+      'https://www.youtube.com/embed/ybXKZqWwjDg',
+      'https://www.youtube.com/embed/Sykx_cmTYXQ'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'screamer',
+    title: 'Screamer',
+    description: 'A high-octane racing experience where speed is everything. Master the curves and dominate the track in this intense racing title.',
+    categories: ['2 players'],
+    thumbnail: 'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
+    size: '21 GB',
+    releaseYear: '2026',
+    images: [
+      'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
+      'https://comicbook.com/wp-content/uploads/sites/4/2026/02/Screamer-2026-3.jpg?w=1024',
+      'https://cdn.mos.cms.futurecdn.net/mhacnC6pNpoaBLjrtXydZ4.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/HIZRiFlWhhE',
+    shorts: [
+      'https://www.youtube.com/embed/aB8IJrP5Mtk',
+      'https://www.youtube.com/embed/dYZb6qJy2Vc',
+      'https://www.youtube.com/embed/thJPXP5zS_c'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'wwe-2018',
+    title: 'WWE 2018',
+    description: 'The biggest video game franchise in WWE history is back with WWE 2K18! Promises to bring you closer to the ring than ever before with hard-hitting action and stunning graphics.',
+    categories: ['2 players'],
+    thumbnail: 'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
+    size: '29 GB',
+    releaseYear: '2017',
+    images: [
+      'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
+      'https://getwallpapers.com/wallpaper/full/e/8/b/910464-wwe-2018-wallpaper-1920x1080-for-mobile-hd.jpg',
+      'https://getwallpapers.com/wallpaper/full/c/a/7/910530-wwe-2018-wallpaper-1920x1200-full-hd.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/7ZbZfsuLXtg',
+    shorts: [
+      'https://www.youtube.com/embed/b9Bm-nEKUn8',
+      'https://www.youtube.com/embed/FVAvWwxj7QY',
+      'https://www.youtube.com/embed/pGvlJeYcwoI'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'hotd2-remake',
+    title: 'The House of the Dead 2: Remake',
+    description: 'The arcade classic returns with a complete graphical overhaul and improved gameplay. Experience Venice like never before as you blast through legions of undead in this intense 2-player rail shooter.',
+    categories: ['2 players'],
+    thumbnail: 'https://klovimg.com/images/2023/01/28/before.jpg',
+    size: '5 GB',
+    releaseYear: '2025',
+    images: [
+      'https://klovimg.com/images/2023/01/28/before.jpg',
+      'https://images.gog-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
+      'https://www.relyonhorror.com/wp-content/uploads/2025/08/20250815153722_1.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/BCuE-VCrdWs',
+    shorts: [
+      'https://www.youtube.com/embed/6pdtwFKTzSU'
+    ],
+  },
+  {
+    id: 'spirit-samurai',
+    title: 'The Spirit of the Samurai',
+    description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
+    categories: ['2D game'],
+    thumbnail: 'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
+    size: '6 GB',
+    releaseYear: '2024',
+    images: [
+      'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
+      'https://i0.wp.com/intoindiegames.com/wp-content/uploads/IIG-TK-00007-40.jpg?resize=800,450&ssl=1',
+      'https://cdn.mos.cms.futurecdn.net/3L5CCe7hJUrkotiJws26L7.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/eVWvlQRoBq0',
+    shorts: [
+      'https://www.youtube.com/embed/TWV_2TUoeoA',
+      'https://www.youtube.com/embed/OLoD5gj0Z6k'
+    ],
+  },
+  {
+    id: 'beast-reincarnation',
+    title: 'Beast of Reincarnation',
+    description: 'A dark, visceral action experience where the cycle of life and death is your greatest weapon. Unleash your inner beast to survive a world of ancient curses.',
+    categories: ['RPG'],
+    thumbnail: 'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
+    size: '23 GB',
+    releaseYear: '2026',
+    images: [
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
+      'https://kotaku.com/app/uploads/2026/08/kooandemma.jpg',
+      'https://www.vice.com/wp-content/uploads/sites/2/2026/08/beast-of-reincarnation-early-access.jpg?w=1024'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/H0r-Kap8kWI?si=NNfafIDo2Hcil98b',
+    shorts: [
+      'https://www.youtube.com/embed/H0r-Kap8kWI?si=NNfafIDo2Hcil98b',
+      'https://www.youtube.com/embed/zSmqjNjTsu8?si=GM8xBxxEuOA4EmGn'
+    ],
+  },
+  {
+    id: 'sudden-strike-5',
+    title: 'Sudden Strike 5',
+    description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
+    categories: ['Action'],
+    thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+    size: '13 GB',
+    releaseYear: '2026',
+    images: [
+      'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+      'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
+      'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/lbi2hOAE-9I',
+    shorts: [
+      'https://www.youtube.com/embed/FHrriux_xKA'
+    ],
+  },
+  {
+    id: 'ac-black-flag-resynced',
+    title: 'Assassin’s Creed: Black Flag Resynced',
+    description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
+    categories: ['Open World'],
+    thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
+    size: '36 GB',
+    releaseYear: '2026',
+    images: [
+      'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
+      'https://assetsio.gnwcdn.com/Bartholomew-Roberts.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
+      'https://wallpapercave.com/wp/wp16325456.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WjsTLe7bBUA',
+    shorts: [
+      'https://www.youtube.com/embed/LiN5RfFzaI0',
+      'https://www.youtube.com/embed/CrrtY5O3fB4',
+      'https://www.youtube.com/embed/2LY9zJTXGbU'
+    ],
+  
+  },
+  {
+    id: 'hollow-knight',
+    title: 'Hollow Knight',
+    description: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs.',
+    categories: ['2D game'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
+    size: '2 GB',
+    releaseYear: '2017',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
+      'https://external-preview.redd.it/totally-normal-hollowknight-gameplay-v0-NnUzNmEzMGwxc2FjMaZ0odn_47P7nPBmn8KHJQ4uPC_KkuJ9hEr7g7mpdHpH.png?width=640&crop=smart&format=pjpg&auto=webp&s=ffcdd549d780dd4c299b71e83cd7ba3b310c9bc6',
+      'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/aae3d1c6-1590-4b86-a56b-e8efcc543b6b/Paintmaster.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/UAO2urG23S4',
+    shorts: [
+      'https://www.youtube.com/embed/5c_U_o5zG8M'
+    ],
+  },
+  {
+    id: 'hollow-knight-silksong',
+    title: 'Hollow Knight: Silksong',
+    description: 'Discover a whole new kingdom! Explore, fight and survive as Hornet, princess-protector of Hallownest, on a journey to a strange new land of silk and song.',
+    categories: ['2D game'],
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
+    size: '3 GB',
+    releaseYear: '2025',
+    images: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
+      'https://images.steamusercontent.com/ugc/10195868611166946737/DD11E42ED084440F45B8CBE73738995A1E13A0DB/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+      'https://images.steamusercontent.com/ugc/17131043628587106452/C94C98E142285E7D390DBC7BABB9A6D6EF2F5F6A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/6XGeJwsUP9c',
+    shorts: [
+      'https://www.youtube.com/embed/BFBOi-rpcFE'
+    ],
+    
+  },
+  {
+    id: 'replaced',
+    title: 'Replaced',
+    description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
+    categories: ['2D game'],
+    thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
+    size: '12 GB',
+    releaseYear: '2026',
+    images: [
+      'https://wallpapercave.com/wp/wp13317782.png',
+      'https://cdn.mos.cms.futurecdn.net/V8TgW26zyQg6aNbPQw55mW.jpg',
+      'https://kotaku.com/igdb/image/upload/t_720p/scahje.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE',
+    shorts: [
+      'https://www.youtube.com/embed/rSWmFitKqAk'
+    ],
+  },
+  {
+    id: 'akatori',
+    title: 'Akatori',
+    description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
+    categories: ['2D game'],
+    thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
+    size: '8 GB',
+    releaseYear: '2026',
+    images: [
+      'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
+      'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_5-1024x576.jpg',
+      'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_8-1024x576.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/gBWAa-KBA0A',
+    shorts: [
+      'https://www.youtube.com/embed/MCrUlQe-JlU'
+    ],
+  },
+  {
+    id: 'sifu',
+    title: 'Sifu',
+    description: 'Sifu is a realistic third-person brawler with tight Kung Fu combat mechanics and cinematic martial arts action. Embark on a path of revenge, hunting down the assassins of your family.',
+    categories: ['Action'],
+    thumbnail: 'https://wallpaperaccess.com/full/8064663.jpg',
+    size: '10 GB',
+    releaseYear: '2022',
+    images: [
+      'https://wallpaperaccess.com/full/8064663.jpg',
+      'https://i0.wp.com/waytoomany.games/wp-content/uploads/2022/02/Sifu_20220126190021.jpg?resize=860,484&ssl=1',
+      'https://kotaku.com/igdb/image/upload/t_720p/sc9370.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/1FQ1YO3Ks2U',
+    shorts: [
+      'https://www.youtube.com/embed/GbEcXsj_cME',
+      'https://www.youtube.com/embed/7hZSWtkYN_c',
+      'https://www.youtube.com/embed/kp8bLtQfkus'
+    ],
+  },
+  {
+    id: 'invincible-vs',
+    title: 'Invincible VS',
+    description: 'Experience the brutal, high-stakes world of Invincible in this intense competitive fighting game. Master legendary characters and engage in visceral 2-player battles that push the limits of superhero combat.',
+    categories: ['2 players'],
+    thumbnail: 'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
+    size: '9 GB',
+    releaseYear: '2025',
+    images: [
+      'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
+      'https://butwhytho.net/wp-content/uploads/2026/04/Invincible-VS-But-Why-Tho-4.jpg',
+      'https://i0.wp.com/finalweapon.net/wp-content/uploads/2026/04/Invincible-VS-Gameplay.webp?resize=696,392&ssl=1'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/bHjFuV9mytE',
+    shorts: [
+      'https://www.youtube.com/embed/FjgrerZIzDc'
+    ],
+  
+  },
+  {
+    id: 'awayout',
+    title: 'A Way Out',
+    description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). From the creators of Brothers – A Tale of Two Sons comes A Way Out, an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
+    categories: ['2 players'],
+    thumbnail: 'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
+    size: '22 GB',
+    releaseYear: '2018',
+    images: [
+      'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_1080p/e3uewyuh6wbgj52z6h5r.jpg?width=1200&quality=50&format=auto',
+      'https://cdn.mobygames.com/675f47e2-c249-11ed-ab6b-02420a000194.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/yGZGSdgJVPM',
+    shorts: [
+      'https://www.youtube.com/embed/SGk1ojwYjIQ',
+      'https://www.youtube.com/embed/tGS08hexMxY'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'crash4',
+    title: 'Crash Bandicoot 4: It\'s About Time',
+    description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
+    categories: ['Adventure'],
+    thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
+    size: '24 GB',
+    releaseYear: '2021',
+    images: [
+      'https://wallpapercave.com/wp/wp7593275.jpg',
+      'https://www.crashbandicoot.com/content/dam/atvi/Crash/gallery/crash6.jpg',
+      'https://wallpapers.com/images/hd/crash-bandicoot-sunset-1izya2ao3sy9yo37.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/U1qGQqOkZI8',
+    shorts: [
+      'https://www.youtube.com/embed/kX9RFvcm6oY'
+    ],
+    isRecommended: false,
   }
 ];
