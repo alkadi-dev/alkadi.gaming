@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -666,7 +666,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/TSi0iJYSQ24',
     shorts: [
       'https://www.youtube.com/embed/0DhlHlUX3eA',
-      'https://www.youtube.com/embed/CFwV3YNSxV8',
+      'https://www.youtube.com/embed/CFwV3YNSV8',
       'https://www.youtube.com/embed/3kJu2q4nmCM'
     ],
   },
@@ -1805,7 +1805,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'spirit-samurai',
     title: 'The Spirit of the Samurai',
     description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
-    categories: ['Action'],
+    categories: ['2D game', 'Action'],
     thumbnail: 'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
     size: '6 GB',
     releaseYear: '2024',
@@ -1873,6 +1873,98 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/p3GK6pP75QA',
     shorts: [
       'https://www.youtube.com/embed/lnyDaXN9PqM'
+    ],
+  },
+  {
+    id: 'ac-black-flag-resynced',
+    title: 'Assassin’s Creed: Black Flag Resynced',
+    description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
+    categories: ['Action', 'Open World'],
+    thumbnail: 'https://picsum.photos/seed/blackflag/600/400',
+    size: '42 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/blackflag1/1200/800',
+      'https://picsum.photos/seed/blackflag2/1200/800',
+      'https://picsum.photos/seed/blackflag3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/pSrr037R228',
+    shorts: [
+      'https://www.youtube.com/embed/pSrr037R228'
+    ],
+    isRecommended: true,
+  },
+  {
+    id: 'hollow-knight',
+    title: 'Hollow Knight',
+    description: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs.',
+    categories: ['2D game', 'Adventure'],
+    thumbnail: 'https://picsum.photos/seed/hollowknight/600/400',
+    size: '9 GB',
+    releaseYear: '2017',
+    images: [
+      'https://picsum.photos/seed/hollow1/1200/800',
+      'https://picsum.photos/seed/hollow2/1200/800',
+      'https://picsum.photos/seed/hollow3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/UAO2urG23S4',
+    shorts: [
+      'https://www.youtube.com/embed/UAO2urG23S4'
+    ],
+  },
+  {
+    id: 'hollow-knight-silksong',
+    title: 'Hollow Knight: Silksong',
+    description: 'Discover a whole new kingdom! Explore, fight and survive as Hornet, princess-protector of Hallownest, on a journey to a strange new land of silk and song.',
+    categories: ['2D game', 'Adventure'],
+    thumbnail: 'https://picsum.photos/seed/silksong/600/400',
+    size: '10 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/silk1/1200/800',
+      'https://picsum.photos/seed/silk2/1200/800',
+      'https://picsum.photos/seed/silk3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/JSfSnoMVp-abe',
+    shorts: [
+      'https://www.youtube.com/embed/JSfSnoMVp-a'
+    ],
+    isRecommended: true,
+  },
+  {
+    id: 'replaced',
+    title: 'Replaced',
+    description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
+    categories: ['2D game', 'Action'],
+    thumbnail: 'https://picsum.photos/seed/replaced/600/400',
+    size: '12 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/replaced1/1200/800',
+      'https://picsum.photos/seed/replaced2/1200/800',
+      'https://picsum.photos/seed/replaced3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/v9S5XpE3rM4',
+    shorts: [
+      'https://www.youtube.com/embed/v9S5XpE3rM4'
+    ],
+  },
+  {
+    id: 'akatori',
+    title: 'Akatori',
+    description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
+    categories: ['2D game', 'Action'],
+    thumbnail: 'https://picsum.photos/seed/akatori/600/400',
+    size: '8 GB',
+    releaseYear: '2024',
+    images: [
+      'https://picsum.photos/seed/akatori1/1200/800',
+      'https://picsum.photos/seed/akatori2/1200/800',
+      'https://picsum.photos/seed/akatori3/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/N6B-FvYIe_8',
+    shorts: [
+      'https://www.youtube.com/embed/N6B-FvYIe_8'
     ],
   }
 ];
