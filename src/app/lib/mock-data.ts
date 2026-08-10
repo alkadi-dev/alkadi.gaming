@@ -1919,17 +1919,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hollow Knight: Silksong',
     description: 'Discover a whole new kingdom! Explore, fight and survive as Hornet, princess-protector of Hallownest, on a journey to a strange new land of silk and song.',
     categories: ['2D game', 'Adventure'],
-    thumbnail: 'https://picsum.photos/seed/silksong/600/400',
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
     size: '10 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/silk1/1200/800',
-      'https://picsum.photos/seed/silk2/1200/800',
-      'https://picsum.photos/seed/silk3/1200/800'
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
+      'https://images.steamusercontent.com/ugc/10195868611166946737/DD11E42ED084440F45B8CBE73738995A1E13A0DB/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+      'https://images.steamusercontent.com/ugc/17131043628587106452/C94C98E142285E7D390DBC7BABB9A6D6EF2F5F6A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
-    videoUrl: 'https://www.youtube.com/embed/JSfSnoMVp-a',
+    videoUrl: 'https://www.youtube.com/embed/6XGeJwsUP9c',
     shorts: [
-      'https://www.youtube.com/embed/JSfSnoMVp-a'
+      'https://www.youtube.com/embed/BFBOi-rpcFE'
     ],
     isRecommended: true,
   },
