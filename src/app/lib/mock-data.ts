@@ -1858,22 +1858,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 'entity',
-    title: 'Entity',
-    description: 'Something is stalking you in the silence. A high-tension psychological horror experience where your survival depends on what you cannot see.',
-    categories: ['Horror', 'Action'],
-    thumbnail: 'https://picsum.photos/seed/entity-thumb/600/400',
-    size: '25 GB',
-    releaseYear: '2025',
-    images: [
-      'https://picsum.photos/seed/entity-1/1200/800',
-      'https://picsum.photos/seed/entity-2/1200/800',
-      'https://picsum.photos/seed/entity-3/1200/800'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: [],
-  },
-  {
     id: 'black-day',
     title: 'The Black Day',
     description: 'In the aftermath of total societal collapse, every bullet counts. Fight for resources and survival in this gritty, tactical first-person shooter.',
