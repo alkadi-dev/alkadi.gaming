@@ -1868,7 +1868,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
       'https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/entity-the-black-day-screenshot-file-74ef13b0.jpg.webp',
-      'https://kotaku.com/igdb/image/upload/t_720p/sc113ci.jpg'
+      'https://kotaku.com/igdb/image/upload/t_720p/scahje.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/p3GK6pP75QA',
     shorts: [
@@ -1974,17 +1974,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sifu',
     description: 'Sifu is a realistic third-person brawler with tight Kung Fu combat mechanics and cinematic martial arts action. Embark on a path of revenge, hunting down the assassins of your family.',
     categories: ['Action'],
-    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/header.jpg?t=1778931553',
+    thumbnail: 'https://wallpaperaccess.com/full/8064663.jpg',
     size: '10 GB',
     releaseYear: '2022',
     images: [
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/ss_495c64c70014e7f80f12c85e269e987b28bca8.1920x1080.jpg?t=1778931553',
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/ss_8406387.1920x1080.jpg',
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/ss_22537363.1920x1080.jpg'
+      'https://wallpaperaccess.com/full/8064663.jpg',
+      'https://i0.wp.com/waytoomany.games/wp-content/uploads/2022/02/Sifu_20220126190021.jpg?resize=860,484&ssl=1',
+      'https://kotaku.com/igdb/image/upload/t_720p/sc9370.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/6Y6U_fPskS0',
+    videoUrl: 'https://www.youtube.com/embed/1FQ1YO3Ks2U',
     shorts: [
-      'https://www.youtube.com/embed/W9O_hX_Wv9Y'
+      'https://www.youtube.com/embed/GbEcXsj_cME',
+      'https://www.youtube.com/embed/7hZSWtkYN_c',
+      'https://www.youtube.com/embed/kp8bLtQfkus'
     ],
     isRecommended: true,
   }
