@@ -1,4 +1,3 @@
-
 'use client';
 
 import { use, useState, useEffect, useRef, useCallback } from 'react';
@@ -7,7 +6,7 @@ import Image from 'next/image';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, ArrowRight, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Sparkles, PlusCircle, CheckCircle2, HardDrive, ImageOff, Calendar, Users2, AlertCircle } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { refineGameDescription } from '@/ai/flows/refine-game-description';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -63,6 +62,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   const [isRefining, setIsRefining] = useState(false);
 
   const isAdded = game ? isInSelection(game.id) : false;
+  const isMandatoryCoop = game?.id === 'ittakestwo' || game?.id === 'splitfiction';
 
   const handleRefine = useCallback(async () => {
     if (!game) return;
@@ -73,9 +73,8 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
       return;
     }
 
-    // For Arabic, we use AI translation
     setIsRefining(true);
-    setRefinedDescription(null); // Show skeletons while loading
+    setRefinedDescription(null); 
     
     try {
       const result = await refineGameDescription({ 
@@ -237,6 +236,11 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
             <Badge variant="secondary" className="bg-white/10 backdrop-blur-md text-white border-white/20 px-4 py-1.5 text-sm flex items-center gap-1 font-bold">
               <HardDrive className="h-3.5 w-3.5" /> {game.size}
             </Badge>
+            {isMandatoryCoop && (
+              <Badge variant="destructive" className="bg-destructive text-white px-4 py-1.5 text-sm uppercase tracking-wider font-black shadow-2xl flex items-center gap-2 animate-pulse">
+                <Users2 className="h-4 w-4" /> {isRTL ? "لاعبان فقط" : "2 Players Required"}
+              </Badge>
+            )}
           </div>
           <h1 className="text-3xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none" dir="ltr">
             {game.title}
@@ -247,6 +251,19 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
       <main className="container mx-auto px-4 mt-8 max-w-7xl">
         <div className="space-y-10 md:space-y-16">
           <RevealSection>
+            {isMandatoryCoop && (
+              <div className="mb-8 p-4 rounded-2xl bg-destructive/10 border border-destructive/20 flex items-start gap-4">
+                <AlertCircle className="h-6 w-6 text-destructive flex-shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-lg font-bold text-destructive uppercase tracking-tight mb-1">
+                    {isRTL ? "تنبيه: تتطلب لاعبين" : "Warning: 2 Players Required"}
+                  </h4>
+                  <p className="text-muted-foreground text-sm font-medium">
+                    {t('game.requiresTwoPlayers')}
+                  </p>
+                </div>
+              </div>
+            )}
             <section className="bg-secondary/20 rounded-3xl p-6 md:p-12 border border-white/5 shadow-2xl">
               <div className="flex items-center justify-between mb-6 md:mb-8">
                 <h2 className="text-xl md:text-2xl font-bold font-headline uppercase tracking-tight">{t('game.story')}</h2>
@@ -355,4 +372,3 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
     </div>
   );
 }
-

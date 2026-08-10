@@ -1600,7 +1600,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'splitfiction',
     title: 'Split Fiction',
-    description: 'A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
+    description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
     categories: ['2 players'],
     thumbnail: 'https://www.cnet.com/a/img/resize/cb70d224dabc89921354474adff3df19c569560f/hub/2025/02/14/50a4dfee-ece0-485a-8e15-873c5cdce776/splitfiction-keyart-rgb-1920x1080.jpg?auto=webp&fit=crop&height=675&width=1200',
     size: '54 GB',
@@ -1621,7 +1621,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'ittakestwo',
     title: 'It Takes Two',
-    description: 'Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
+    description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
     categories: ['2 players'],
     thumbnail: 'https://images4.alphacoders.com/114/thumbbig-1148443.webp',
     size: '28 GB',
@@ -1748,7 +1748,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['2 players'],
     thumbnail: 'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
     size: '21 GB',
-    releaseYear: '1995',
+    releaseYear: '2026',
     images: [
       'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
       'https://comicbook.com/wp-content/uploads/sites/4/2026/02/Screamer-2026-3.jpg?w=1024',
@@ -1846,7 +1846,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Action'],
     thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
     size: '13 GB',
-    releaseYear: '2025',
+    releaseYear: '2026',
     images: [
       'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
@@ -1858,31 +1858,13 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 'black-day',
-    title: 'Entity The Black Day',
-    description: 'In the aftermath of total societal collapse, every bullet counts. Fight for resources and survival in this gritty, tactical first-person shooter.',
-    categories: ['Shooter'],
-    thumbnail: 'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
-    size: '17 GB',
-    releaseYear: '2024',
-    images: [
-      'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
-      'https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/entity-the-black-day-screenshot-file-74ef13b0.jpg.webp',
-      'https://kotaku.com/igdb/image/upload/t_720p/sc113ci.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/p3GK6pP75QA',
-    shorts: [
-      'https://www.youtube.com/embed/lnyDaXN9PqM'
-    ],
-  },
-  {
     id: 'ac-black-flag-resynced',
     title: 'Assassin’s Creed: Black Flag Resynced',
     description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
     categories: ['Open World'],
     thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
     size: '36 GB',
-    releaseYear: '2025',
+    releaseYear: '2026',
     images: [
       'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
       'https://assetsio.gnwcdn.com/Bartholomew-Roberts.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
@@ -1940,7 +1922,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['2D game'],
     thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
     size: '12 GB',
-    releaseYear: '2025',
+    releaseYear: '2026',
     images: [
       'https://wallpapercave.com/wp/wp13317782.png',
       'https://cdn.mos.cms.futurecdn.net/V8TgW26zyQg6aNbPQw55mW.jpg',
@@ -1958,7 +1940,7 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['2D game'],
     thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
     size: '8 GB',
-    releaseYear: '2024',
+    releaseYear: '2026',
     images: [
       'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
       'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_5-1024x576.jpg',
@@ -1995,7 +1977,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Experience the brutal, high-stakes world of Invincible in this intense competitive fighting game. Master legendary characters and engage in visceral 2-player battles that push the limits of superhero combat.',
     categories: ['2 players'],
     thumbnail: 'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
-    size: '22 GB',
+    size: '9 GB',
     releaseYear: '2025',
     images: [
       'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
@@ -2006,6 +1988,6 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/FjgrerZIzDc'
     ],
-    isRecommended: false,
+  
   }
 ];
