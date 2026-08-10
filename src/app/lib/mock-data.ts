@@ -1995,18 +1995,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'A Way Out',
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). From the creators of Brothers – A Tale of Two Sons comes A Way Out, an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
     categories: ['2 players'],
-    thumbnail: 'https://images.alphacoders.com/909/thumb-1920-909346.jpg',
+    thumbnail: 'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
     size: '22 GB',
     releaseYear: '2018',
     images: [
-      'https://images.alphacoders.com/909/thumb-1920-909346.jpg',
-      'https://wallpaperaccess.com/full/2260655.jpg',
-      'https://wallpapers.com/images/hd/a-way-out-leo-and-vincent-fighting-p8m1n0x9y4y0p0z1.jpg'
+      'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_1080p/e3uewyuh6wbgj52z6h5r.jpg?width=1200&quality=50&format=auto',
+      'https://cdn.mobygames.com/675f47e2-c249-11ed-ab6b-02420a000194.webp'
     ],
     videoUrl: 'https://www.youtube.com/embed/yGZGSdgJVPM',
     shorts: [
-      'https://www.youtube.com/embed/m0V6t1p_K48',
-      'https://www.youtube.com/embed/Z0pA6Z0lY2U'
+      'https://www.youtube.com/embed/SGk1ojwYjIQ',
+      'https://www.youtube.com/embed/tGS08hexMxY'
     ],
     isRecommended: false,
   },
