@@ -1938,17 +1938,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Replaced',
     description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
     categories: ['2D game', 'Action'],
-    thumbnail: 'https://picsum.photos/seed/replaced/600/400',
+    thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
     size: '12 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/replaced1/1200/800',
-      'https://picsum.photos/seed/replaced2/1200/800',
-      'https://picsum.photos/seed/replaced3/1200/800'
+      'https://wallpapercave.com/wp/wp13317782.png',
+      'https://cdn.mos.cms.futurecdn.net/V8TgW26zyQg6aNbPQw55mW.jpg',
+      'https://kotaku.com/igdb/image/upload/t_720p/scahje.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/v9S5XpE3rM4',
+    videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE',
     shorts: [
-      'https://www.youtube.com/embed/v9S5XpE3rM4'
+      'https://www.youtube.com/embed/rSWmFitKqAk'
     ],
   },
   {
