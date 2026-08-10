@@ -418,7 +418,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://wallpapercave.com/wp/wp5995960.jpg',
       'https://cdn.wallpapersafari.com/81/40/uenEqr.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/BBky2uCGqtM',
+    videoUrl: 'https://www.youtube.com/embed/BBky2uCNqtM',
     shorts: [
       'https://www.youtube.com/embed/n7JPFgNqHdo',
       'https://www.youtube.com/embed/mNd9HPf1x5o?si=SXMU-QVzWGaVrC1J',
@@ -2015,18 +2015,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Crash Bandicoot 4: It\'s About Time',
     description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
     categories: ['Adventure'],
-    thumbnail: 'https://images3.alphacoders.com/108/thumb-1920-1081512.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
     size: '24 GB',
     releaseYear: '2021',
     images: [
-      'https://images3.alphacoders.com/108/thumb-1920-1081512.jpg',
-      'https://wallpaperaccess.com/full/4195150.jpg',
-      'https://images6.alphacoders.com/108/1084869.jpg'
+      'https://wallpapercave.com/wp/wp7593275.jpg',
+      'https://www.crashbandicoot.com/content/dam/atvi/Crash/gallery/crash6.jpg',
+      'https://wallpapers.com/images/hd/crash-bandicoot-sunset-1izya2ao3sy9yo37.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/5qF57re-R9I',
+    videoUrl: 'https://www.youtube.com/embed/U1qGQqOkZI8',
     shorts: [
-      'https://www.youtube.com/embed/P-oY0kO9pZc',
-      'https://www.youtube.com/embed/U3l0rI7f6X4'
+      'https://www.youtube.com/embed/kX9RFvcm6oY'
     ],
     isRecommended: false,
   }
