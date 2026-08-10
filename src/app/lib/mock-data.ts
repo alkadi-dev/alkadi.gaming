@@ -1277,7 +1277,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'reanimal',
     title: 'REANIMAL',
     description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
-    categories: ['2 players'],
+    categories: ['2 players', '2D game'],
     thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '9 GB',
     releaseYear: '2026',
@@ -1826,7 +1826,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A dark, visceral action experience where the cycle of life and death is your greatest weapon. Unleash your inner beast to survive a world of ancient curses.',
     categories: ['RPG'],
     thumbnail: 'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
-    size: '45 GB',
+    size: '23 GB',
     releaseYear: '2026',
     images: [
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
@@ -1845,7 +1845,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
     categories: ['Action'],
     thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
-    size: '35 GB',
+    size: '13 GB',
     releaseYear: '2025',
     images: [
       'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
@@ -1859,11 +1859,11 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'black-day',
-    title: 'The Black Day',
+    title: 'Entity The Black Day',
     description: 'In the aftermath of total societal collapse, every bullet counts. Fight for resources and survival in this gritty, tactical first-person shooter.',
     categories: ['Shooter'],
     thumbnail: 'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
-    size: '40 GB',
+    size: '17 GB',
     releaseYear: '2024',
     images: [
       'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
@@ -1881,7 +1881,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
     categories: ['Action', 'Open World'],
     thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
-    size: '42 GB',
+    size: '36 GB',
     releaseYear: '2025',
     images: [
       'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
@@ -1894,7 +1894,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/CrrtY5O3fB4',
       'https://www.youtube.com/embed/2LY9zJTXGbU'
     ],
-    isRecommended: true,
+  
   },
   {
     id: 'hollow-knight',
@@ -1902,7 +1902,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs.',
     categories: ['2D game', 'Adventure'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
-    size: '9 GB',
+    size: '2 GB',
     releaseYear: '2017',
     images: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
@@ -1920,7 +1920,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Discover a whole new kingdom! Explore, fight and survive as Hornet, princess-protector of Hallownest, on a journey to a strange new land of silk and song.',
     categories: ['2D game', 'Adventure'],
     thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
-    size: '10 GB',
+    size: '3 GB',
     releaseYear: '2025',
     images: [
       'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
@@ -1968,5 +1968,24 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/MCrUlQe-JlU'
     ],
+  },
+  {
+    id: 'sifu',
+    title: 'Sifu',
+    description: 'Sifu is a realistic third-person brawler with tight Kung Fu combat mechanics and cinematic martial arts action. Embark on a path of revenge, hunting down the assassins of your family.',
+    categories: ['Action'],
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/header.jpg?t=1778931553',
+    size: '10 GB',
+    releaseYear: '2022',
+    images: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/ss_495c64c70014e7f80f12c85e269e987b28bca8.1920x1080.jpg?t=1778931553',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/ss_8406387.1920x1080.jpg',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1818720/ss_22537363.1920x1080.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/6Y6U_fPskS0',
+    shorts: [
+      'https://www.youtube.com/embed/W9O_hX_Wv9Y'
+    ],
+    isRecommended: true,
   }
 ];
