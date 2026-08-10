@@ -1901,17 +1901,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hollow Knight',
     description: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs.',
     categories: ['2D game', 'Adventure'],
-    thumbnail: 'https://picsum.photos/seed/hollowknight/600/400',
+    thumbnail: 'https://cdn.mobygames.com/covers/19162851-hollow-knight-nintendo-switch-front-cover.jpg',
     size: '9 GB',
     releaseYear: '2017',
     images: [
-      'https://picsum.photos/seed/hollow1/1200/800',
-      'https://picsum.photos/seed/hollow2/1200/800',
-      'https://picsum.photos/seed/hollow3/1200/800'
+      'https://cdn.mobygames.com/covers/19162851-hollow-knight-nintendo-switch-front-cover.jpg',
+      'https://external-preview.redd.it/totally-normal-hollowknight-gameplay-v0-NnUzNmEzMGwxc2FjMaZ0odn_47P7nPBmn8KHJQ4uPC_KkuJ9hEr7g7mpdHpH.png?width=640&crop=smart&format=pjpg&auto=webp&s=ffcdd549d780dd4c299b71e83cd7ba3b310c9bc6',
+      'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/aae3d1c6-1590-4b86-a56b-e8efcc543b6b/Paintmaster.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/UAO2urG23S4',
     shorts: [
-      'https://www.youtube.com/embed/UAO2urG23S4'
+      'https://www.youtube.com/embed/5c_U_o5zG8M'
     ],
   },
   {
