@@ -1852,9 +1852,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
       'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/lbi2hOAE-9I?si=lPdAEijt-SStbbYi',
+    videoUrl: 'https://www.youtube.com/embed/lbi2hOAE-9I',
     shorts: [
-      'https://www.youtube.com/embed/FHrriux_xKA?si=Ehi6Cj13hGy3Lz9x'
+      'https://www.youtube.com/embed/FHrriux_xKA'
     ],
   },
   {
@@ -1868,11 +1868,11 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://gaming-cdn.com/images/products/21559/616x353/entity-the-black-day-pc-steam-cover.jpg?v=1768476108',
       'https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/entity-the-black-day-screenshot-file-74ef13b0.jpg.webp',
-      'https://kotaku.com/igdb/image/upload/t_720p/scahje.jpg'
+      'https://kotaku.com/igdb/image/upload/t_720p/sc113ci.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/p3GK6pP75QA?si=2U19MZCXo9C2J8Bk',
+    videoUrl: 'https://www.youtube.com/embed/p3GK6pP75QA',
     shorts: [
-      'https://www.youtube.com/embed/lnyDaXN9PqM?si=4MaHYHOL4-y2kpUD'
+      'https://www.youtube.com/embed/lnyDaXN9PqM'
     ],
   },
   {
@@ -1888,11 +1888,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://assetsio.gnwcdn.com/Bartholomew-Roberts.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
       'https://wallpapercave.com/wp/wp16325456.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/WjsTLe7bBUA?si=1Fwf2t_95Upgtp_5',
+    videoUrl: 'https://www.youtube.com/embed/WjsTLe7bBUA',
     shorts: [
-      'https://www.youtube.com/embed/LiN5RfFzaI0?si=gu-wnWgXeN_DPKKl',
-      'https://www.youtube.com/embed/CrrtY5O3fB4?si=6-RdC_oubMD5c_Dr',
-      'https://www.youtube.com/embed/2LY9zJTXGbU?si=wfvt064SSo_xiiSl'
+      'https://www.youtube.com/embed/LiN5RfFzaI0',
+      'https://www.youtube.com/embed/CrrtY5O3fB4',
+      'https://www.youtube.com/embed/2LY9zJTXGbU'
     ],
   
   },
@@ -1909,9 +1909,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://external-preview.redd.it/totally-normal-hollowknight-gameplay-v0-NnUzNmEzMGwxc2FjMaZ0odn_47P7nPBmn8KHJQ4uPC_KkuJ9hEr7g7mpdHpH.png?width=640&crop=smart&format=pjpg&auto=webp&s=ffcdd549d780dd4c299b71e83cd7ba3b310c9bc6',
       'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/aae3d1c6-1590-4b86-a56b-e8efcc543b6b/Paintmaster.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/UAO2urG23S4?si=KH2BG1rEts7YLnfh',
+    videoUrl: 'https://www.youtube.com/embed/UAO2urG23S4',
     shorts: [
-      'https://www.youtube.com/embed/5c_U_o5zG8M?si=r-VBDSZEsM6YXHHJ'
+      'https://www.youtube.com/embed/5c_U_o5zG8M'
     ],
   },
   {
@@ -1927,9 +1927,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://images.steamusercontent.com/ugc/10195868611166946737/DD11E42ED084440F45B8CBE73738995A1E13A0DB/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
       'https://images.steamusercontent.com/ugc/17131043628587106452/C94C98E142285E7D390DBC7BABB9A6D6EF2F5F6A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
-    videoUrl: 'https://www.youtube.com/embed/6XGeJwsUP9c?si=rvyEBeDD1t5XXEJ7',
+    videoUrl: 'https://www.youtube.com/embed/6XGeJwsUP9c',
     shorts: [
-      'https://www.youtube.com/embed/BFBOi-rpcFE?si=CPvXF4W7P4obD1Fk'
+      'https://www.youtube.com/embed/BFBOi-rpcFE'
     ],
     
   },
@@ -1946,9 +1946,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.mos.cms.futurecdn.net/V8TgW26zyQg6aNbPQw55mW.jpg',
       'https://kotaku.com/igdb/image/upload/t_720p/scahje.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE?si=rW5yQjov938t3wrt',
+    videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE',
     shorts: [
-      'https://www.youtube.com/embed/rSWmFitKqAk?si=GuqqmXhdJhC7LG0x'
+      'https://www.youtube.com/embed/rSWmFitKqAk'
     ],
   },
   {
@@ -1964,9 +1964,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_5-1024x576.jpg',
       'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_8-1024x576.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/gBWAa-KBA0A?si=MfPECakd8TbLozlI',
+    videoUrl: 'https://www.youtube.com/embed/gBWAa-KBA0A',
     shorts: [
-      'https://www.youtube.com/embed/MCrUlQe-JlU?si=fg0PUU--VSXcqsc5'
+      'https://www.youtube.com/embed/MCrUlQe-JlU'
     ],
   },
   {
@@ -1982,11 +1982,11 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://i0.wp.com/waytoomany.games/wp-content/uploads/2022/02/Sifu_20220126190021.jpg?resize=860,484&ssl=1',
       'https://kotaku.com/igdb/image/upload/t_720p/sc9370.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/1FQ1YO3Ks2U?si=JC9hIzwr2PmgINAO',
+    videoUrl: 'https://www.youtube.com/embed/1FQ1YO3Ks2U',
     shorts: [
-      'https://www.youtube.com/embed/GbEcXsj_cME?si=9QbMi0GjV5mMksiT',
-      'https://www.youtube.com/embed/7hZSWtkYN_c?si=gQOcDz_aOkuSDBhD',
-      'https://www.youtube.com/embed/kp8bLtQfkus?si=vTlKzzQBBAo0lepD'
+      'https://www.youtube.com/embed/GbEcXsj_cME',
+      'https://www.youtube.com/embed/7hZSWtkYN_c',
+      'https://www.youtube.com/embed/kp8bLtQfkus'
     ],
   },
   {
@@ -1994,17 +1994,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Invincible VS',
     description: 'Experience the brutal, high-stakes world of Invincible in this intense competitive fighting game. Master legendary characters and engage in visceral 2-player battles that push the limits of superhero combat.',
     categories: ['2 players'],
-    thumbnail: 'https://picsum.photos/seed/invincible-vs/600/400',
+    thumbnail: 'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
     size: '22 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/invincible-vs/1200/800',
-      'https://picsum.photos/seed/invincible-vs-2/1200/800',
-      'https://picsum.photos/seed/invincible-vs-3/1200/800'
+      'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
+      'https://butwhytho.net/wp-content/uploads/2026/04/Invincible-VS-But-Why-Tho-4.jpg',
+      'https://i0.wp.com/finalweapon.net/wp-content/uploads/2026/04/Invincible-VS-Gameplay.webp?resize=696,392&ssl=1'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/bHjFuV9mytE',
     shorts: [
-      'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      'https://www.youtube.com/embed/FjgrerZIzDc'
     ],
     isRecommended: false,
   }
