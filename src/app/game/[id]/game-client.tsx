@@ -237,7 +237,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
               <HardDrive className="h-3.5 w-3.5" /> {game.size}
             </Badge>
             {isMandatoryCoop && (
-              <Badge variant="destructive" className="bg-destructive text-white px-4 py-1.5 text-sm uppercase tracking-wider font-black shadow-2xl flex items-center gap-2 animate-pulse">
+              <Badge variant="destructive" className="bg-destructive text-white px-4 py-1.5 text-sm uppercase tracking-wider font-black shadow-2xl flex items-center gap-2">
                 <Users2 className="h-4 w-4" /> {isRTL ? "لاعبان فقط" : "2 Players Required"}
               </Badge>
             )}

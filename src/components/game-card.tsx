@@ -119,7 +119,7 @@ export function GameCard({ game }: GameCardProps) {
 
             <div className={cn("absolute top-3 pointer-events-none", isRTL ? "left-3" : "right-3")}>
               {isMandatoryCoop ? (
-                <div className="text-white text-[8px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center gap-1.5 bg-destructive/80 backdrop-blur-md rounded-full border border-white/10 shadow-lg animate-pulse">
+                <div className="text-white text-[8px] px-3 py-1 w-fit uppercase font-black tracking-widest flex items-center gap-1.5 bg-destructive/80 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
                   <Users2 className="h-3 w-3" />
                   {isRTL ? "لاعبان فقط" : "2 Players Required"}
                 </div>
