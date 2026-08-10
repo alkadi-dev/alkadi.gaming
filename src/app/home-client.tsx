@@ -67,7 +67,7 @@ export default function HomeClient() {
   const { t, isRTL } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(150);
+  const [maxSize, setMaxSize] = useState(200); // Increased default to show all games
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
@@ -109,7 +109,7 @@ export default function HomeClient() {
     if (restoredCategory) setSelectedCategory(restoredCategory);
     if (restoredMaxSize) {
       const parsed = parseInt(restoredMaxSize, 10);
-      setMaxSize(parsed > 150 ? 150 : parsed);
+      setMaxSize(parsed > 200 ? 200 : parsed);
     }
     if (restoredSort) setSortOrder(restoredSort);
 
@@ -223,7 +223,7 @@ export default function HomeClient() {
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const activeFiltersCount = (maxSize < 150 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
+  const activeFiltersCount = (maxSize < 200 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
   const handleSuggestionClick = (gameId: string) => {
     router.push(`/game/${gameId}`);
@@ -464,7 +464,7 @@ export default function HomeClient() {
                           <Slider
                             value={[maxSize]}
                             min={1}
-                            max={150}
+                            max={200}
                             step={1}
                             onValueChange={(val) => setMaxSize(val[0])}
                             className="py-1"
@@ -478,13 +478,13 @@ export default function HomeClient() {
                           >
                             <Check className={cn("w-3.5 h-3.5", isRTL ? "ml-2" : "mr-2")} /> {t('filters.viewResults')}
                           </Button>
-                          {(maxSize < 150 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
+                          {(maxSize < 200 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
                             <Button 
                               variant="ghost" 
                               size="sm"
                               className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
                               onClick={() => {
-                                setMaxSize(150);
+                                setMaxSize(200);
                                 setSortOrder('title-asc');
                                 setSelectedCategory('All');
                                 setIsFilterOpen(false);
@@ -572,7 +572,7 @@ export default function HomeClient() {
               onClick={() => {
                 setSelectedCategory('All');
                 setSearchQuery('');
-                setMaxSize(150);
+                setMaxSize(200);
                 setSortOrder('title-asc');
               }}
               className="text-primary mt-4 font-bold"

@@ -1277,7 +1277,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'reanimal',
     title: 'REANIMAL',
     description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
-    categories: ['2D game'],
+    categories: ['Horror'],
     thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
     size: '9 GB',
     releaseYear: '2026',
