@@ -1989,5 +1989,45 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/FjgrerZIzDc'
     ],
   
+  },
+  {
+    id: 'awayout',
+    title: 'A Way Out',
+    description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). From the creators of Brothers – A Tale of Two Sons comes A Way Out, an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
+    categories: ['2 players'],
+    thumbnail: 'https://images.alphacoders.com/909/thumb-1920-909346.jpg',
+    size: '22 GB',
+    releaseYear: '2018',
+    images: [
+      'https://images.alphacoders.com/909/thumb-1920-909346.jpg',
+      'https://wallpaperaccess.com/full/2260655.jpg',
+      'https://wallpapers.com/images/hd/a-way-out-leo-and-vincent-fighting-p8m1n0x9y4y0p0z1.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/yGZGSdgJVPM',
+    shorts: [
+      'https://www.youtube.com/embed/m0V6t1p_K48',
+      'https://www.youtube.com/embed/Z0pA6Z0lY2U'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'crash4',
+    title: 'Crash Bandicoot 4: It\'s About Time',
+    description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
+    categories: ['Adventure'],
+    thumbnail: 'https://images3.alphacoders.com/108/thumb-1920-1081512.jpg',
+    size: '24 GB',
+    releaseYear: '2021',
+    images: [
+      'https://images3.alphacoders.com/108/thumb-1920-1081512.jpg',
+      'https://wallpaperaccess.com/full/4195150.jpg',
+      'https://images6.alphacoders.com/108/1084869.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/5qF57re-R9I',
+    shorts: [
+      'https://www.youtube.com/embed/P-oY0kO9pZc',
+      'https://www.youtube.com/embed/U3l0rI7f6X4'
+    ],
+    isRecommended: false,
   }
 ];

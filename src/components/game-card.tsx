@@ -79,7 +79,7 @@ export function GameCard({ game }: GameCardProps) {
   };
 
   const hasThumbnail = game.thumbnail && game.thumbnail.trim() !== '' && !imageError;
-  const isMandatoryCoop = game.id === 'ittakestwo' || game.id === 'splitfiction';
+  const isMandatoryCoop = game.id === 'ittakestwo' || game.id === 'splitfiction' || game.id === 'awayout';
 
   return (
     <div 

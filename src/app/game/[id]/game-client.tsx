@@ -62,7 +62,7 @@ export default function GameClient({ params }: { params: Promise<{ id: string }>
   const [isRefining, setIsRefining] = useState(false);
 
   const isAdded = game ? isInSelection(game.id) : false;
-  const isMandatoryCoop = game?.id === 'ittakestwo' || game?.id === 'splitfiction';
+  const isMandatoryCoop = game?.id === 'ittakestwo' || game?.id === 'splitfiction' || game?.id === 'awayout';
 
   const handleRefine = useCallback(async () => {
     if (!game) return;
