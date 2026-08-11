@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { X } from 'lucide-react';
 
 interface CarouselItem {
   id: string;
@@ -221,14 +220,6 @@ export function VideoCarousel() {
                 src={selectedItem.videoUrl}
               />
             )}
-            
-            {/* Native-style Close Button for clarity on mobile */}
-            <button 
-              className="absolute top-4 right-4 z-[160] bg-black/50 backdrop-blur-md rounded-full p-2 text-white/70 hover:text-white transition-colors border border-white/10"
-              onClick={() => setSelectedItem(null)}
-            >
-              <X className="h-6 w-6" />
-            </button>
             
             {!isMobile && (
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
