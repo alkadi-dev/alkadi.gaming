@@ -140,8 +140,13 @@ export function VideoCarousel() {
   };
 
   const isStreamable = (url: string) => url.includes('streamable.com');
+  
   const getStreamableEmbedUrl = (url: string) => {
-    // Convert to embed format and add autoplay/muted for instant playback without UI interaction
+    // For Mobile: Autoplay, Muted by default to bypass blocks, but ENABLE controls
+    if (isMobile) {
+      return url.replace('streamable.com/', 'streamable.com/e/') + '?autoplay=1&muted=1&controls=1&playsinline=1';
+    }
+    // For Desktop: Clean cinematic loop (original behavior)
     return url.replace('streamable.com/', 'streamable.com/e/') + '?autoplay=1&muted=1&controls=0';
   };
 
@@ -191,7 +196,10 @@ export function VideoCarousel() {
           className="fixed inset-0 z-[150] flex items-center justify-center bg-background/90 backdrop-blur-xl p-4 sm:p-10 cursor-pointer animate-in fade-in duration-300"
           onClick={() => setSelectedItem(null)}
         >
-          <div className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(var(--primary),0.2)] border border-white/10 animate-in zoom-in-95 duration-500">
+          <div 
+            className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(var(--primary),0.2)] border border-white/10 animate-in zoom-in-95 duration-500"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when interacting with the video/controls
+          >
             {isStreamable(selectedItem.videoUrl) ? (
               <div className="w-full h-full relative">
                 <iframe
@@ -200,8 +208,6 @@ export function VideoCarousel() {
                   allow="autoplay; fullscreen"
                   allowFullScreen
                 />
-                {/* Transparent overlay to catch clicks for closing and hide player UI interaction */}
-                <div className="absolute inset-0 z-10" />
               </div>
             ) : (
               <video
@@ -209,35 +215,18 @@ export function VideoCarousel() {
                 loop
                 muted
                 playsInline
-                controls={false}
-                className="w-full h-full object-cover pointer-events-none"
+                controls={isMobile}
+                className={cn("w-full h-full object-cover", !isMobile && "no-controls")}
                 src={selectedItem.videoUrl}
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            
+            {!isMobile && (
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            )}
           </div>
         </div>
       )}
-
-      <style jsx global>{`
-        @keyframes scroll-left {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.3333%); }
-        }
-        @keyframes scroll-right {
-          0% { transform: translateX(-33.3333%); }
-          100% { transform: translateX(0); }
-        }
-        .animate-scroll-left {
-          animation: scroll-left 40s linear infinite;
-        }
-        .animate-scroll-right {
-          animation: scroll-right 40s linear infinite;
-        }
-        .paused-animation {
-          animation-play-state: paused !important;
-        }
-      `}</style>
     </section>
   );
 }

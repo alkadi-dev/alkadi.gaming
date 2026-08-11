@@ -69,3 +69,31 @@
 [dir="rtl"] .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Video Carousel Animations */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+@keyframes scroll-right {
+  0% { transform: translateX(-33.3333%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 40s linear infinite;
+}
+.animate-scroll-right {
+  animation: scroll-right 40s linear infinite;
+}
+.paused-animation {
+  animation-play-state: paused !important;
+}
+
+/* Enhanced Video Control Suppression (Browser Enclosure) */
+.no-controls::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+.no-controls::-webkit-media-controls {
+  display: none !important;
+}
