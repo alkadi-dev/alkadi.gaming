@@ -100,11 +100,13 @@ export default function HomeClient() {
     }
   }, [mounted]);
 
-  // Sync maxSize to remainingSpace when in "Remaining Space Mode"
+  // Sync maxSize and sortOrder to remainingSpace when in "Remaining Space Mode"
   useEffect(() => {
     if (isRemainingSpaceMode) {
       // Round to nearest integer to avoid slider artifacts
       setMaxSize(Math.floor(remainingSpace));
+      // Automatically sort by size (Largest to Smallest) to help customer fill space efficiently
+      setSortOrder('size-desc');
     }
   }, [isRemainingSpaceMode, remainingSpace]);
 
