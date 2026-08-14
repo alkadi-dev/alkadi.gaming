@@ -12,6 +12,7 @@ interface SelectionContextType {
   totalSizeNum: number;
   isOverLimit: boolean;
   currentCapacity: number;
+  remainingSpace: number;
   isCheckoutOpen: boolean;
   setCheckoutOpen: (open: boolean) => void;
   usageColorClass: string;
@@ -72,6 +73,10 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     if (totalSizeNum > 280) return 460;
     return 280;
   }, [totalSizeNum]);
+
+  const remainingSpace = useMemo(() => {
+    return Math.max(currentCapacity - totalSizeNum, 0);
+  }, [currentCapacity, totalSizeNum]);
 
   const isOverLimit = totalSizeNum > 1800;
 
@@ -150,6 +155,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         totalSizeNum,
         isOverLimit,
         currentCapacity,
+        remainingSpace,
         isCheckoutOpen,
         setCheckoutOpen,
         usageColorClass,

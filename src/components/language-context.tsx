@@ -7,7 +7,7 @@ type Language = 'en' | 'ar';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
   isRTL: boolean;
 }
 
@@ -111,6 +111,12 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.elite': 'Elite',
     'pricing.pro': 'Pro',
     'pricing.ultra': 'Ultra',
+    'remaining.title': 'Use Your Remaining Space',
+    'remaining.message': 'You still have {space} GB of free space on your drive. Would you like to use it?',
+    'remaining.yes': 'Yes, Show Me Games',
+    'remaining.no': 'No, Continue to WhatsApp',
+    'remaining.none': 'No more games fit in your remaining space.',
+    'remaining.add': 'Add Game',
     // Categories
     'cat.All': 'All',
     'cat.Recommended': 'Recommended',
@@ -223,6 +229,12 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.elite': 'نخبة',
     'pricing.pro': 'محترف',
     'pricing.ultra': 'فائق',
+    'remaining.title': 'استخدم المساحة المتبقية',
+    'remaining.message': 'لا يزال لديك {space} جيجابايت من المساحة المتوفرة. هل تود استخدامها؟',
+    'remaining.yes': 'نعم، أرني الألعاب',
+    'remaining.no': 'لا، تابع إلى واتساب',
+    'remaining.none': 'لا توجد ألعاب أخرى تناسب المساحة المتبقية.',
+    'remaining.add': 'أضف اللعبة',
     // Categories
     'cat.All': 'الكل',
     'cat.Recommended': 'موصى به',
@@ -256,8 +268,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   }, [language]);
 
-  const t = (key: string) => {
-    return translations[language][key] || key;
+  const t = (key: string, params?: Record<string, string | number>) => {
+    let translation = translations[language][key] || key;
+    if (params) {
+      Object.entries(params).forEach(([k, v]) => {
+        translation = translation.replace(`{${k}}`, String(v));
+      });
+    }
+    return translation;
   };
 
   const isRTL = language === 'ar';

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -36,15 +35,17 @@ import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { RemainingSpaceDialog } from '@/components/remaining-space-dialog';
 import { cn } from '@/lib/utils';
 
 export function CheckoutSheet() {
-  const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen, currentCapacity } = useSelection();
+  const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen, currentCapacity, remainingSpace } = useSelection();
   const { t, isRTL, language } = useLanguage();
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
   const [isUpgradeOfferOpen, setIsUpgradeOfferOpen] = useState(false);
   const [is2TBUpgradeOfferOpen, setIs2TBUpgradeOfferOpen] = useState(false);
+  const [isRemainingSpaceOpen, setIsRemainingSpaceOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -57,7 +58,6 @@ export function CheckoutSheet() {
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    // Map internal thresholds to display drive sizes
     let driveInfo = `${currentCapacity === 460 ? "500 GB" : currentCapacity === 960 ? "1 TB" : currentCapacity === 280 ? "320 GB" : currentCapacity + " GB"}`;
     if (isUpgraded) {
         if (currentCapacity === 460) driveInfo = "1 TB (UPGRADED FROM 500GB OFFER)";
@@ -65,6 +65,23 @@ export function CheckoutSheet() {
     }
 
     return `ALKADI GAMING SELECTION\n\n${listText}\n\nSelected Storage: ${driveInfo}\nTotal Data Size: ~${totalSizeNum.toFixed(1)} GB`;
+  };
+
+  const executeWhatsAppRedirect = (isUpgraded = false) => {
+    const finalContent = generateListContent(isUpgraded);
+    const encodedText = encodeURIComponent(finalContent);
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    setIsUpgradeOfferOpen(false);
+    setIs2TBUpgradeOfferOpen(false);
+    setIsRemainingSpaceOpen(false);
+
+    toast({
+      title: "WhatsApp Ready!",
+      description: "Your selection has been prepared for WhatsApp.",
+    });
   };
 
   const handleWhatsAppRedirect = (isUpgraded = false) => {
@@ -82,21 +99,13 @@ export function CheckoutSheet() {
       return;
     }
 
-    const finalContent = generateListContent(isUpgraded);
-    const encodedText = encodeURIComponent(finalContent);
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
-    
-    window.open(whatsappUrl, '_blank');
-    
-    if (isUpgraded) {
-      setIsUpgradeOfferOpen(false);
-      setIs2TBUpgradeOfferOpen(false);
+    // Trigger "Use Remaining Space" if remaining space >= 10 GB
+    if (!isRemainingSpaceOpen && !isUpgraded && remainingSpace >= 10) {
+      setIsRemainingSpaceOpen(true);
+      return;
     }
 
-    toast({
-      title: "WhatsApp Ready!",
-      description: "Your selection has been prepared for WhatsApp.",
-    });
+    executeWhatsAppRedirect(isUpgraded);
   };
 
   const handleUpgradeToLibrary = () => {
@@ -104,7 +113,6 @@ export function CheckoutSheet() {
     setIs2TBUpgradeOfferOpen(false);
     setCheckoutOpen(false);
     
-    // Find the library section and scroll to it
     const element = document.getElementById('library');
     if (element) {
       const headerOffset = 80;
@@ -285,6 +293,12 @@ export function CheckoutSheet() {
           )}
         </SheetContent>
       </Sheet>
+
+      <RemainingSpaceDialog 
+        open={isRemainingSpaceOpen} 
+        onOpenChange={setIsRemainingSpaceOpen}
+        onContinueToWhatsApp={() => executeWhatsAppRedirect(false)}
+      />
 
       {/* Special Upgrade Offer Dialog - 500GB to 1TB */}
       <Dialog open={isUpgradeOfferOpen} onOpenChange={setIsUpgradeOfferOpen}>
