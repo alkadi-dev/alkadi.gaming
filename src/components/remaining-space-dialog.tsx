@@ -12,7 +12,6 @@ import { Button } from '@/components/ui/button';
 import { useSelection } from '@/components/selection-context';
 import { useLanguage } from '@/components/language-context';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
-import { HardDrive, XCircle } from 'lucide-react';
 import Image from 'next/image';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -57,16 +56,13 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
       <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-[2.5rem] max-w-lg p-0 overflow-hidden shadow-2xl transition-all duration-500">
         {!showGames ? (
           <div className="p-8 flex flex-col items-center text-center space-y-6">
-            <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_40px_rgba(var(--primary),0.2)] animate-pulse">
-              <HardDrive className="h-10 w-10 text-primary" />
-            </div>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <DialogHeader className="items-center text-center">
-                <DialogTitle className="text-3xl font-black font-headline tracking-tighter uppercase text-white leading-none">
+                <DialogTitle className="text-3xl font-black font-headline tracking-tighter uppercase text-white leading-none text-center w-full">
                   {t('remaining.title')}
                 </DialogTitle>
               </DialogHeader>
-              <DialogDescription className="text-muted-foreground text-lg font-medium">
+              <DialogDescription className="text-muted-foreground text-lg font-medium text-center w-full">
                 {t('remaining.message', { space: remainingSpace.toFixed(0) })}
               </DialogDescription>
             </div>
@@ -81,7 +77,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
               <Button 
                 variant="ghost"
                 onClick={handleContinue}
-                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/5 rounded-2xl py-5 font-bold uppercase tracking-widest text-xs transition-colors"
+                className="w-full text-white hover:bg-destructive/10 hover:text-destructive rounded-2xl py-5 font-bold uppercase tracking-widest text-xs transition-colors"
               >
                 {t('remaining.no')}
               </Button>
@@ -90,11 +86,11 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
         ) : (
           <div className="flex flex-col h-[80vh] sm:h-[70vh]">
             <div className="p-6 border-b border-white/5 bg-secondary/10 flex flex-col items-center text-center gap-4">
-              <div className="flex flex-col items-center gap-1">
-                <h3 className="text-xl font-black font-headline uppercase tracking-tighter text-white">
+              <div className="flex flex-col items-center gap-1 w-full text-center">
+                <h3 className="text-xl font-black font-headline uppercase tracking-tighter text-white text-center">
                   {remainingSpace.toFixed(0)} GB {isRTL ? "متبقي" : "REMAINING"}
                 </h3>
-                <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">
+                <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest text-center">
                   {recommendedGames.length} {isRTL ? "ألعاب متاحة" : "GAMES AVAILABLE"}
                 </p>
               </div>
@@ -118,7 +114,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
                       <div className="relative h-28 w-44 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg">
                         <Image src={game.thumbnail} alt={game.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 text-center">
                         <h4 className="font-bold text-base text-white line-clamp-1" dir="ltr">{game.title}</h4>
                         <p className="text-sm text-primary font-black uppercase tracking-tight mt-1">{game.size}</p>
                       </div>
@@ -133,16 +129,13 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
                 </div>
               ) : (
                 <div className="flex flex-col items-center justify-center h-full p-8 text-center space-y-6">
-                  <div className="w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center">
-                    <XCircle className="h-8 w-8 text-destructive opacity-40" />
-                  </div>
-                  <p className="text-muted-foreground font-medium max-w-[200px]">
+                  <p className="text-muted-foreground font-medium max-w-[200px] text-center">
                     {t('remaining.none')}
                   </p>
                   <Button 
-                    variant="ghost" 
+                    variant="default" 
                     onClick={handleContinue} 
-                    className="rounded-full font-bold text-primary hover:text-primary/80 hover:bg-primary/5 px-8"
+                    className="rounded-full font-bold bg-primary text-white hover:bg-primary/90 px-10 h-12 shadow-xl shadow-primary/20 uppercase text-xs tracking-widest"
                   >
                     {t('remaining.continue')}
                   </Button>
@@ -154,7 +147,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
               <Button 
                 variant="ghost" 
                 onClick={() => setShowGames(false)}
-                className="w-full text-muted-foreground hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors h-12"
+                className="w-full text-white hover:bg-primary/20 text-xs font-bold uppercase tracking-widest transition-colors h-12 rounded-xl text-center"
               >
                 {isRTL ? "العودة للخلف" : "GO BACK"}
               </Button>
