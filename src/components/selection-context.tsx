@@ -18,6 +18,8 @@ interface SelectionContextType {
   usageColorClass: string;
   fillColorClass: string;
   usagePercentage: number;
+  isRemainingSpaceMode: boolean;
+  toggleRemainingSpaceMode: (active: boolean) => void;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
@@ -25,6 +27,7 @@ const SelectionContext = createContext<SelectionContextType | undefined>(undefin
 export function SelectionProvider({ children }: { children: React.ReactNode }) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isCheckoutOpen, setCheckoutOpen] = useState(false);
+  const [isRemainingSpaceMode, setIsRemainingSpaceMode] = useState(false);
 
   // Load selection from localStorage on mount
   useEffect(() => {
@@ -47,7 +50,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!isCheckoutOpen) {
       const timer = setTimeout(() => {
-        if (document.body.style.pointerEvents === 'none') {
+        if (typeof document !== 'undefined' && document.body.style.pointerEvents === 'none') {
           document.body.style.pointerEvents = 'auto';
           document.body.style.overflow = 'auto';
         }
@@ -86,7 +89,6 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   }, [totalSizeNum, currentCapacity]);
 
   const status = useMemo(() => {
-    // Thresholds based on drive type for the border color
     if (currentCapacity === 280) {
       if (totalSizeNum >= 270) return 'critical';
       if (totalSizeNum >= 230) return 'medium';
@@ -121,14 +123,13 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   }, [status]);
 
   const fillColorClass = useMemo(() => {
-    // Progressive fill color every 15% of usage
-    if (usagePercentage <= 15) return "bg-red-500/10"; // Very light red
-    if (usagePercentage <= 30) return "bg-red-500/25"; // Light red
-    if (usagePercentage <= 45) return "bg-red-500/45"; // Soft red
-    if (usagePercentage <= 60) return "bg-red-500/65"; // Medium red
-    if (usagePercentage <= 75) return "bg-red-600/85"; // Dark red
-    if (usagePercentage <= 90) return "bg-red-800";    // Deep red
-    return "bg-red-600"; // Bright, intense red (90-100%)
+    if (usagePercentage <= 15) return "bg-red-500/10";
+    if (usagePercentage <= 30) return "bg-red-500/25";
+    if (usagePercentage <= 45) return "bg-red-500/45";
+    if (usagePercentage <= 60) return "bg-red-500/65";
+    if (usagePercentage <= 75) return "bg-red-600/85";
+    if (usagePercentage <= 90) return "bg-red-800";
+    return "bg-red-600";
   }, [usagePercentage]);
 
   const addToSelection = (id: string) => {
@@ -143,6 +144,10 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   const isInSelection = (id: string) => selectedIds.includes(id);
 
   const clearSelection = () => setSelectedIds([]);
+
+  const toggleRemainingSpaceMode = (active: boolean) => {
+    setIsRemainingSpaceMode(active);
+  };
 
   return (
     <SelectionContext.Provider
@@ -160,7 +165,9 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         setCheckoutOpen,
         usageColorClass,
         fillColorClass,
-        usagePercentage
+        usagePercentage,
+        isRemainingSpaceMode,
+        toggleRemainingSpaceMode
       }}
     >
       {children}

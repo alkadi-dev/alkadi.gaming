@@ -38,6 +38,7 @@ const translations: Record<Language, Record<string, string>> = {
     'how.step6.title': 'After-Sales Support',
     'how.step6.desc': 'Our support team is always available to help you resolve any technical issues or questions quickly after you receive your games.',
     'library.title': 'Library',
+    'library.fitting': 'Games that fit your remaining {space} GB',
     'filters.label': 'Filters',
     'filters.sortBy': 'Sort By',
     'filters.maxStorage': 'Max Storage',
@@ -62,6 +63,7 @@ const translations: Record<Language, Record<string, string>> = {
     'checkout.clearConfirm': 'Clear entire list?',
     'checkout.clearDesc': 'This action will remove all games from your selection. Are you sure you want to proceed?',
     'checkout.whatsapp': 'WhatsApp',
+    'checkout.continue': 'Continue to WhatsApp',
     'checkout.no': 'No, Continue to WhatsApp',
     'checkout.yes': 'Yes',
     'game.story': 'The Story',
@@ -115,7 +117,6 @@ const translations: Record<Language, Record<string, string>> = {
     'remaining.message': 'You still have {space} GB of free space on your drive. Would you like to use it?',
     'remaining.yes': 'Yes, Show Me Games',
     'remaining.no': 'No, Continue to WhatsApp',
-    'remaining.continue': 'Continue to WhatsApp',
     'remaining.none': 'No more games fit in your remaining space.',
     'remaining.add': 'Add Game',
     // Categories
@@ -157,6 +158,7 @@ const translations: Record<Language, Record<string, string>> = {
     'how.step6.title': 'دعم ما بعد البيع',
     'how.step6.desc': 'فريق الدعم لدينا متاح دائماً لمساعدتك في حل أي مشكلات تقنية أو استفسارات بسرعة بعد استلام ألعابك.',
     'library.title': 'المكتبة',
+    'library.fitting': 'الألعاب التي تناسب سعة {space} جيجابايت المتبقية لديك',
     'filters.label': 'الفلاتر',
     'filters.sortBy': 'ترتيب حسب',
     'filters.maxStorage': 'أقصى مساحة تخزين',
@@ -181,9 +183,9 @@ const translations: Record<Language, Record<string, string>> = {
     'checkout.clearConfirm': 'مسح القائمة بالكامل؟',
     'checkout.clearDesc': 'سيؤدي هذا الإجراء إلى إزالة جميع الألعاب من اختياراتك. هل أنت متأكد أنك تريد الاستمرار؟',
     'checkout.whatsapp': 'واتساب',
+    'checkout.continue': 'تابع إلى واتساب',
     'checkout.no': 'لا، تابع إلى واتساب',
     'checkout.yes': 'نعم',
-    'remaining.continue': 'تابع إلى واتساب',
     'game.story': 'القصة',
     'game.gallery': 'المعرض',
     'game.trailer': 'المقطع الدعائي',
@@ -265,7 +267,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('alkadi_language', language);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('alkadi_language', language);
+    }
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   }, [language]);
