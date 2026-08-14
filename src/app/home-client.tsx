@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useRef, useMemo } from 'react';
@@ -375,29 +376,6 @@ export default function HomeClient() {
                 {t('library.title')}
               </h2>
               <div className="h-1.5 w-24 bg-primary mx-auto rounded-full shadow-lg shadow-primary/20" />
-              
-              {/* Remaining Space Mode Banner */}
-              {isRemainingSpaceMode && (
-                <div className="pt-6 animate-in fade-in slide-in-from-top-4 duration-700">
-                  <div className="inline-flex flex-col items-center gap-2 bg-primary/10 border border-primary/30 px-6 py-3 rounded-2xl shadow-xl backdrop-blur-md">
-                    <div className="flex items-center gap-2 text-primary font-black uppercase tracking-tighter text-sm md:text-xl">
-                      <Sparkles className="h-4 w-4 md:h-5 md:w-5" />
-                      {t('library.fitting', { space: remainingSpace.toFixed(0) })}
-                    </div>
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
-                      onClick={() => {
-                        toggleRemainingSpaceMode(false);
-                        setMaxSize(200);
-                      }}
-                      className="text-[10px] text-muted-foreground hover:text-primary transition-colors h-6 font-bold uppercase tracking-widest"
-                    >
-                      {t('filters.reset')}
-                    </Button>
-                  </div>
-                </div>
-              )}
             </div>
 
             <div className="space-y-6">
