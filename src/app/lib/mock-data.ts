@@ -187,11 +187,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     categories: ['Race'],
-    thumbnail: 'https://6a3b66710a4149112241450e.imgix.net/Forza-Horizon-5-game-cover.jpg',
+    thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover.jpg',
     size: '83 GB',
     releaseYear: '2021',
     images: [
-      'https://6a3b66710a4149112241450e.imgix.net/Forza-Horizon-5-game-cover.jpg',
+      'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover.jpg',
       'https://wallpapercave.com/wp/wp12405375.jpg',
       'https://wallpapers.com/images/hd/forza-horizon-5-4k-dac6pfcwb8wy8spw.jpg'
     ],
@@ -1602,11 +1602,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Split Fiction',
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
     categories: ['2 players'],
-    thumbnail: 'https://www.cnet.com/a/img/resize/cb70d224dabc89921354474adff3df19c569560f/hub/2025/02/14/50a4dfee-ece0-485a-8e15-873c5cdce776/splitfiction-keyart-rgb-1920x1080.jpg?auto=webp&fit=crop&height=675&width=1200',
+    thumbnail: 'https://aiptcomics.com/wp-content/uploads/2025/03/SplitFiction_KeyArt_RGB_1920x1080.jpg',
     size: '54 GB',
     releaseYear: '2025',
     images: [
-      'https://www.cnet.com/a/img/resize/cb70d224dabc89921354474adff3df19c569560f/hub/2025/02/14/50a4dfee-ece0-485a-8e15-873c5cdce776/splitfiction-keyart-rgb-1920x1080.jpg?auto=webp&fit=crop&height=675&width=1200',
+      'https://aiptcomics.com/wp-content/uploads/2025/03/SplitFiction_KeyArt_RGB_1920x1080.jpg',
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/03/split-fiction-how-long-to-beat-sandfish-side-story-desert.jpg?q=49&fit=crop&w=825&dpr=2',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/03/ss_15a4fc0f9c14f8a0389a35e15a358617fcfcc32d.jpg?q=49&fit=crop&w=825&dpr=2'
     ],
