@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { useSelection } from '@/components/selection-context';
 import { useLanguage } from '@/components/language-context';
 import { MOCK_GAMES } from '@/app/lib/mock-data';
-import { HardDrive, MessageCircle, Sparkles, PlusCircle, CheckCircle2, ChevronRight, XCircle } from 'lucide-react';
+import { HardDrive, PlusCircle, XCircle } from 'lucide-react';
 import Image from 'next/image';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -40,7 +40,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
         const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
         return sizeB - sizeA; // Largest to smallest
       });
-  }, [remainingSpace, selectedIds]);
+  }, [remainingSpace, selectedIds, isInSelection]);
 
   const handleReset = () => {
     setShowGames(false);
@@ -61,7 +61,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
               <HardDrive className="h-10 w-10 text-primary" />
             </div>
             <div className="space-y-2">
-              <DialogHeader>
+              <DialogHeader className="items-center text-center">
                 <DialogTitle className="text-3xl font-black font-headline tracking-tighter uppercase text-white leading-none">
                   {t('remaining.title')}
                 </DialogTitle>
@@ -74,24 +74,22 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
             <div className="w-full flex flex-col gap-3 pt-4">
               <Button 
                 onClick={() => setShowGames(true)}
-                className="w-full bg-primary hover:bg-primary/90 text-white rounded-2xl py-7 font-black uppercase tracking-tight shadow-xl shadow-primary/20 text-lg group"
+                className="w-full bg-primary hover:bg-primary/90 text-white rounded-2xl py-7 font-black uppercase tracking-tight shadow-xl shadow-primary/20 text-lg transition-all hover:scale-[1.02]"
               >
                 {t('remaining.yes')}
-                <Sparkles className={cn("h-5 w-5 transition-transform group-hover:rotate-12", isRTL ? "mr-2" : "ml-2")} />
               </Button>
               <Button 
                 variant="ghost"
                 onClick={handleContinue}
-                className="w-full text-muted-foreground hover:text-white hover:bg-white/5 rounded-2xl py-5 font-bold uppercase tracking-widest text-xs"
+                className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-2xl py-5 font-bold uppercase tracking-widest text-xs transition-colors"
               >
                 {t('remaining.no')}
-                <MessageCircle className={cn("h-4 w-4 opacity-50", isRTL ? "mr-2" : "ml-2")} />
               </Button>
             </div>
           </div>
         ) : (
           <div className="flex flex-col h-[80vh] sm:h-[70vh]">
-            <div className="p-6 border-b border-white/5 bg-secondary/10 flex justify-between items-center">
+            <div className="p-6 border-b border-white/5 bg-secondary/10 flex flex-col items-center text-center gap-4">
               <div>
                 <h3 className="text-xl font-black font-headline uppercase tracking-tighter text-white">
                   {remainingSpace.toFixed(0)} GB {isRTL ? "متبقي" : "REMAINING"}
@@ -104,7 +102,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
                 variant="default"
                 size="sm"
                 onClick={handleContinue}
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-bold px-4 h-9 shadow-lg"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-bold px-8 h-9 shadow-lg w-full sm:w-auto"
               >
                 {t('checkout.whatsapp')}
               </Button>
@@ -125,7 +123,7 @@ export function RemainingSpaceDialog({ open, onOpenChange, onContinueToWhatsApp 
                       <Button
                         size="icon"
                         onClick={() => addToSelection(game.id)}
-                        className="rounded-full h-10 w-10 bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-md group-active:scale-95"
+                        className="rounded-full h-10 w-10 bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-md active:scale-95"
                       >
                         <PlusCircle className="h-5 w-5" />
                       </Button>
