@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useRef, useMemo } from 'react';
@@ -6,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages, Tag } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages, Tag, Sparkles } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -63,11 +64,11 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
 
 export default function HomeClient() {
   const router = useRouter();
-  const { totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage } = useSelection();
+  const { totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage, remainingSpace, isRemainingSpaceMode, toggleRemainingSpaceMode } = useSelection();
   const { t, isRTL } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(200); // Increased default to show all games
+  const [maxSize, setMaxSize] = useState(200);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
@@ -81,8 +82,6 @@ export default function HomeClient() {
 
   useEffect(() => {
     setMounted(true);
-    
-    // Check if splash was already shown in this module instance to prevent repeating on soft navigation
     if (hasSplashBeenShownInModule) {
       setIsVideoReady(true);
     } else {
@@ -101,7 +100,18 @@ export default function HomeClient() {
     }
   }, [mounted]);
 
+  // Sync maxSize and sortOrder to remainingSpace when in "Remaining Space Mode"
   useEffect(() => {
+    if (isRemainingSpaceMode) {
+      // Round to nearest integer to avoid slider artifacts
+      setMaxSize(Math.floor(remainingSpace));
+      // Automatically sort by size (Largest to Smallest) to help customer fill space efficiently
+      setSortOrder('size-desc');
+    }
+  }, [isRemainingSpaceMode, remainingSpace]);
+
+  useEffect(() => {
+    if (typeof sessionStorage === 'undefined') return;
     const restoredCategory = sessionStorage.getItem('home-category');
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
     const restoredSort = sessionStorage.getItem('home-sort');
@@ -117,7 +127,7 @@ export default function HomeClient() {
   }, []);
 
   useEffect(() => {
-    if (!isRestored) return;
+    if (!isRestored || typeof window === 'undefined') return;
 
     const restoredScroll = sessionStorage.getItem('home-scroll-position');
     if (restoredScroll) {
@@ -132,7 +142,7 @@ export default function HomeClient() {
   }, [isRestored]);
 
   useEffect(() => {
-    if (!isRestored) return;
+    if (!isRestored || typeof sessionStorage === 'undefined') return;
     sessionStorage.setItem('home-category', selectedCategory);
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
@@ -140,7 +150,7 @@ export default function HomeClient() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isRestored) {
+      if (isRestored && typeof sessionStorage !== 'undefined') {
         sessionStorage.setItem('home-scroll-position', window.scrollY.toString());
       }
     };
@@ -295,7 +305,7 @@ export default function HomeClient() {
         </div>
       </header>
 
-      {/* Hero Section - Edge to Edge Video */}
+      {/* Hero Section */}
       <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
         <video
           ref={videoRef}
@@ -345,27 +355,15 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <div className={cn(
-        "transition-opacity duration-1000",
-        isVideoReady ? "opacity-100" : "opacity-0"
-      )}>
+      <div className={cn("transition-opacity duration-1000", isVideoReady ? "opacity-100" : "opacity-0")}>
         <StatsSection />
       </div>
 
-      {/* Video Carousel Section */}
-      <div className={cn(
-        "transition-opacity duration-1000",
-        isVideoReady ? "opacity-100" : "opacity-0"
-      )}>
+      <div className={cn("transition-opacity duration-1000", isVideoReady ? "opacity-100" : "opacity-0")}>
         <VideoCarousel />
       </div>
 
-      {/* How It Works Section */}
-      <div className={cn(
-        "transition-opacity duration-1000",
-        isVideoReady ? "opacity-100" : "opacity-0"
-      )}>
+      <div className={cn("transition-opacity duration-1000", isVideoReady ? "opacity-100" : "opacity-0")}>
         <HowItWorks />
       </div>
 
@@ -466,7 +464,10 @@ export default function HomeClient() {
                             min={1}
                             max={200}
                             step={1}
-                            onValueChange={(val) => setMaxSize(val[0])}
+                            onValueChange={(val) => {
+                              setMaxSize(val[0]);
+                              if (isRemainingSpaceMode) toggleRemainingSpaceMode(false);
+                            }}
                             className="py-1"
                           />
                         </div>
@@ -487,6 +488,7 @@ export default function HomeClient() {
                                 setMaxSize(200);
                                 setSortOrder('title-asc');
                                 setSelectedCategory('All');
+                                if (isRemainingSpaceMode) toggleRemainingSpaceMode(false);
                                 setIsFilterOpen(false);
                               }}
                             >
@@ -574,6 +576,7 @@ export default function HomeClient() {
                 setSearchQuery('');
                 setMaxSize(200);
                 setSortOrder('title-asc');
+                if (isRemainingSpaceMode) toggleRemainingSpaceMode(false);
               }}
               className="text-primary mt-4 font-bold"
             >
@@ -597,30 +600,10 @@ export default function HomeClient() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 w-full max-w-2xl mx-auto" dir="ltr">
-              <SocialLink 
-                href="https://www.facebook.com/share/1MBEKXoXME/?mibextid=wwXIfr" 
-                label="Facebook" 
-                icon={<FacebookIcon />} 
-                color="#1877F2" 
-              />
-              <SocialLink 
-                href="https://www.instagram.com/alkadi.leb?igsh=NGdtOTZuM2ZtbmVn&utm_source=qr" 
-                label="Instagram" 
-                icon={<InstagramIcon />} 
-                color="#E4405F" 
-              />
-              <SocialLink 
-                href="https://www.tiktok.com/@alkadi.leb" 
-                label="TikTok" 
-                icon={<TikTokIcon />} 
-                color="#FFFFFF" 
-              />
-              <SocialLink 
-                href="https://wa.link/udsgnn" 
-                label="WhatsApp" 
-                icon={<WhatsAppIcon />} 
-                color="#25D366" 
-              />
+              <SocialLink href="https://www.facebook.com/share/1MBEKXoXME/?mibextid=wwXIfr" label="Facebook" icon={<FacebookIcon />} color="#1877F2" />
+              <SocialLink href="https://www.instagram.com/alkadi.leb?igsh=NGdtOTZuM2ZtbmVn&utm_source=qr" label="Instagram" icon={<InstagramIcon />} color="#E4405F" />
+              <SocialLink href="https://www.tiktok.com/@alkadi.leb" label="TikTok" icon={<TikTokIcon />} color="#FFFFFF" />
+              <SocialLink href="https://wa.link/udsgnn" label="WhatsApp" icon={<WhatsAppIcon />} color="#25D366" />
             </div>
           </div>
         </div>
