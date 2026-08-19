@@ -20,6 +20,18 @@ interface SelectionContextType {
   usagePercentage: number;
   isRemainingSpaceMode: boolean;
   toggleRemainingSpaceMode: (active: boolean) => void;
+  // Filter States
+  selectedCategory: string;
+  setSelectedCategory: (val: string) => void;
+  searchQuery: string;
+  setSearchQuery: (val: string) => void;
+  maxSize: number;
+  setMaxSize: (val: number) => void;
+  sortOrder: string;
+  setSortOrder: (val: string) => void;
+  hasNoResults: boolean;
+  setHasNoResults: (val: boolean) => void;
+  resetFilters: () => void;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
@@ -28,6 +40,13 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isCheckoutOpen, setCheckoutOpen] = useState(false);
   const [isRemainingSpaceMode, setIsRemainingSpaceMode] = useState(false);
+
+  // Filter States
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [maxSize, setMaxSize] = useState(200);
+  const [sortOrder, setSortOrder] = useState('title-asc');
+  const [hasNoResults, setHasNoResults] = useState(false);
 
   // Load selection from localStorage on mount
   useEffect(() => {
@@ -149,6 +168,14 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
     setIsRemainingSpaceMode(active);
   };
 
+  const resetFilters = () => {
+    setSelectedCategory('All');
+    setSearchQuery('');
+    setMaxSize(200);
+    setSortOrder('title-asc');
+    setIsRemainingSpaceMode(false);
+  };
+
   return (
     <SelectionContext.Provider
       value={{ 
@@ -167,7 +194,18 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         fillColorClass,
         usagePercentage,
         isRemainingSpaceMode,
-        toggleRemainingSpaceMode
+        toggleRemainingSpaceMode,
+        selectedCategory,
+        setSelectedCategory,
+        searchQuery,
+        setSearchQuery,
+        maxSize,
+        setMaxSize,
+        sortOrder,
+        setSortOrder,
+        hasNoResults,
+        setHasNoResults,
+        resetFilters
       }}
     >
       {children}

@@ -39,7 +39,20 @@ import { RemainingSpaceDialog } from '@/components/remaining-space-dialog';
 import { cn } from '@/lib/utils';
 
 export function CheckoutSheet() {
-  const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen, currentCapacity, remainingSpace } = useSelection();
+  const { 
+    selectedIds, 
+    removeFromSelection, 
+    clearSelection, 
+    totalSizeNum, 
+    isCheckoutOpen, 
+    setCheckoutOpen, 
+    currentCapacity, 
+    remainingSpace,
+    hasNoResults,
+    resetFilters,
+    toggleRemainingSpaceMode
+  } = useSelection();
+  
   const { t, isRTL, language } = useLanguage();
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
@@ -84,34 +97,49 @@ export function CheckoutSheet() {
     });
   };
 
-  const handleWhatsAppRedirect = (isUpgraded = false) => {
+  const handleWhatsAppRedirect = (step: 'remaining' | 'upgrade' | 'final' = 'remaining') => {
     if (selectedGames.length === 0) return;
 
-    // Trigger upgrade popup only if user is in 500GB tier and hasn't already accepted/declined upgrade
-    if (!isUpgradeOfferOpen && !isUpgraded && currentCapacity === 460) {
-      setIsUpgradeOfferOpen(true);
-      return;
+    // 1. First, show the remaining available space message
+    if (step === 'remaining') {
+      if (remainingSpace >= 10) {
+        setIsRemainingSpaceOpen(true);
+        return;
+      }
+      step = 'upgrade';
     }
 
-    // Trigger upgrade popup for 1TB -> 2TB
-    if (!is2TBUpgradeOfferOpen && !isUpgraded && currentCapacity === 960) {
-      setIs2TBUpgradeOfferOpen(true);
-      return;
+    // 2. Then, immediately after it, show the “Upgrade Now” message
+    if (step === 'upgrade') {
+      // 500GB -> 1TB Upgrade Offer
+      if (currentCapacity === 460) {
+        setIsUpgradeOfferOpen(true);
+        return;
+      }
+      // 1TB -> 2TB Upgrade Offer
+      if (currentCapacity === 960) {
+        setIs2TBUpgradeOfferOpen(true);
+        return;
+      }
+      step = 'final';
     }
 
-    // Trigger "Use Remaining Space" if remaining space >= 10 GB
-    if (!isRemainingSpaceOpen && !isUpgraded && remainingSpace >= 10) {
-      setIsRemainingSpaceOpen(true);
-      return;
+    // 3. Final Step: Redirect to WhatsApp
+    if (step === 'final') {
+      executeWhatsAppRedirect(false);
     }
-
-    executeWhatsAppRedirect(isUpgraded);
   };
 
   const handleUpgradeToLibrary = () => {
     setIsUpgradeOfferOpen(false);
     setIs2TBUpgradeOfferOpen(false);
     setCheckoutOpen(false);
+    toggleRemainingSpaceMode(false);
+    
+    // Automatically reset filters if the current view is empty
+    if (hasNoResults) {
+      resetFilters();
+    }
     
     const element = document.getElementById('library');
     if (element) {
@@ -252,7 +280,7 @@ export function CheckoutSheet() {
                 
                 <div className="flex flex-col gap-2">
                   <Button 
-                    onClick={() => handleWhatsAppRedirect(false)} 
+                    onClick={() => handleWhatsAppRedirect('remaining')} 
                     disabled={totalSizeNum > 1800}
                     className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-sm disabled:opacity-50"
                   >
@@ -297,7 +325,7 @@ export function CheckoutSheet() {
       <RemainingSpaceDialog 
         open={isRemainingSpaceOpen} 
         onOpenChange={setIsRemainingSpaceOpen}
-        onContinueToWhatsApp={() => executeWhatsAppRedirect(false)}
+        onContinueToWhatsApp={() => handleWhatsAppRedirect('upgrade')}
       />
 
       {/* Special Upgrade Offer Dialog - 500GB to 1TB */}
@@ -334,7 +362,7 @@ export function CheckoutSheet() {
               <Button 
                 variant="ghost" 
                 className="w-full text-destructive bg-destructive/5 hover:bg-destructive/5 hover:text-destructive sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
-                onClick={() => handleWhatsAppRedirect(false)}
+                onClick={() => handleWhatsAppRedirect('final')}
               >
                 {t('upgrade.btnContinue')}
               </Button>
@@ -377,7 +405,7 @@ export function CheckoutSheet() {
               <Button 
                 variant="ghost" 
                 className="w-full text-destructive bg-destructive/5 hover:bg-destructive/5 hover:text-destructive sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
-                onClick={() => handleWhatsAppRedirect(false)}
+                onClick={() => handleWhatsAppRedirect('final')}
               >
                 {t('upgrade.btnContinue1tb')}
               </Button>

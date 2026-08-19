@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect, useRef, useMemo } from 'react';
@@ -64,12 +63,28 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
 
 export default function HomeClient() {
   const router = useRouter();
-  const { totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage, remainingSpace, isRemainingSpaceMode, toggleRemainingSpaceMode } = useSelection();
+  const { 
+    totalSizeNum, 
+    currentCapacity, 
+    usageColorClass, 
+    fillColorClass, 
+    usagePercentage, 
+    remainingSpace, 
+    isRemainingSpaceMode, 
+    toggleRemainingSpaceMode,
+    selectedCategory,
+    setSelectedCategory,
+    searchQuery,
+    setSearchQuery,
+    maxSize,
+    setMaxSize,
+    sortOrder,
+    setSortOrder,
+    setHasNoResults,
+    resetFilters
+  } = useSelection();
+  
   const { t, isRTL } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(200);
-  const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -108,7 +123,7 @@ export default function HomeClient() {
       // Automatically sort by size (Largest to Smallest) to help customer fill space efficiently
       setSortOrder('size-desc');
     }
-  }, [isRemainingSpaceMode, remainingSpace]);
+  }, [isRemainingSpaceMode, remainingSpace, setMaxSize, setSortOrder]);
 
   useEffect(() => {
     if (typeof sessionStorage === 'undefined') return;
@@ -124,7 +139,7 @@ export default function HomeClient() {
     if (restoredSort) setSortOrder(restoredSort);
 
     setIsRestored(true);
-  }, []);
+  }, [setSelectedCategory, setMaxSize, setSortOrder]);
 
   useEffect(() => {
     if (!isRestored || typeof window === 'undefined') return;
@@ -186,37 +201,46 @@ export default function HomeClient() {
     ? MOCK_GAMES.filter(game => game.title.toLowerCase().includes(searchQuery.toLowerCase())).slice(0, 5)
     : [];
 
-  const filteredGames = MOCK_GAMES.filter((game) => {
-    const matchesCategory = 
-      selectedCategory === 'All' ? true :
-      selectedCategory === 'Recommended' ? game.isRecommended :
-      game.categories.includes(selectedCategory);
+  const filteredGames = useMemo(() => {
+    const games = MOCK_GAMES.filter((game) => {
+      const matchesCategory = 
+        selectedCategory === 'All' ? true :
+        selectedCategory === 'Recommended' ? game.isRecommended :
+        game.categories.includes(selectedCategory);
+        
+      const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
       
-    const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
+      const gameSize = parseFloat(game.size.replace(/[^\d.]/g, '')) || 0;
+      const matchesSize = gameSize <= maxSize;
+      
+      return matchesCategory && matchesSearch && matchesSize;
+    }).sort((a, b) => {
+      if (sortOrder === 'year-desc') {
+        return parseInt(b.releaseYear) - parseInt(a.releaseYear);
+      }
+      if (sortOrder === 'year-asc') {
+        return parseInt(a.releaseYear) - parseInt(b.releaseYear);
+      }
+      if (sortOrder === 'size-asc') {
+        const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
+        const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
+        return sizeA - sizeB;
+      }
+      if (sortOrder === 'size-desc') {
+        const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
+        const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
+        return sizeB - sizeA;
+      }
+      return a.title.localeCompare(b.title);
+    });
     
-    const gameSize = parseFloat(game.size.replace(/[^\d.]/g, '')) || 0;
-    const matchesSize = gameSize <= maxSize;
-    
-    return matchesCategory && matchesSearch && matchesSize;
-  }).sort((a, b) => {
-    if (sortOrder === 'year-desc') {
-      return parseInt(b.releaseYear) - parseInt(a.releaseYear);
-    }
-    if (sortOrder === 'year-asc') {
-      return parseInt(a.releaseYear) - parseInt(b.releaseYear);
-    }
-    if (sortOrder === 'size-asc') {
-      const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
-      const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
-      return sizeA - sizeB;
-    }
-    if (sortOrder === 'size-desc') {
-      const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
-      const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
-      return sizeB - sizeA;
-    }
-    return a.title.localeCompare(b.title);
-  });
+    return games;
+  }, [selectedCategory, searchQuery, maxSize, sortOrder]);
+
+  // Update hasNoResults in context
+  useEffect(() => {
+    setHasNoResults(filteredGames.length === 0);
+  }, [filteredGames, setHasNoResults]);
 
   const scrollToLibrary = () => {
     const element = document.getElementById('library');
@@ -306,7 +330,7 @@ export default function HomeClient() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
+      <section className="relative h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
         <video
           ref={videoRef}
           autoPlay
@@ -479,16 +503,13 @@ export default function HomeClient() {
                           >
                             <Check className={cn("w-3.5 h-3.5", isRTL ? "ml-2" : "mr-2")} /> {t('filters.viewResults')}
                           </Button>
-                          {(maxSize < 200 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
+                          {(activeFiltersCount > 0) && (
                             <Button 
                               variant="ghost" 
                               size="sm"
                               className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
                               onClick={() => {
-                                setMaxSize(200);
-                                setSortOrder('title-asc');
-                                setSelectedCategory('All');
-                                if (isRemainingSpaceMode) toggleRemainingSpaceMode(false);
+                                resetFilters();
                                 setIsFilterOpen(false);
                               }}
                             >
@@ -572,11 +593,7 @@ export default function HomeClient() {
             <Button
               variant="link"
               onClick={() => {
-                setSelectedCategory('All');
-                setSearchQuery('');
-                setMaxSize(200);
-                setSortOrder('title-asc');
-                if (isRemainingSpaceMode) toggleRemainingSpaceMode(false);
+                resetFilters();
               }}
               className="text-primary mt-4 font-bold"
             >
