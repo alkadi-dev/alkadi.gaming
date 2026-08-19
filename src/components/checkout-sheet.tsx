@@ -39,7 +39,20 @@ import { RemainingSpaceDialog } from '@/components/remaining-space-dialog';
 import { cn } from '@/lib/utils';
 
 export function CheckoutSheet() {
-  const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen, currentCapacity, remainingSpace } = useSelection();
+  const { 
+    selectedIds, 
+    removeFromSelection, 
+    clearSelection, 
+    totalSizeNum, 
+    isCheckoutOpen, 
+    setCheckoutOpen, 
+    currentCapacity, 
+    remainingSpace,
+    hasNoResults,
+    resetFilters,
+    toggleRemainingSpaceMode
+  } = useSelection();
+  
   const { t, isRTL, language } = useLanguage();
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
@@ -121,6 +134,12 @@ export function CheckoutSheet() {
     setIsUpgradeOfferOpen(false);
     setIs2TBUpgradeOfferOpen(false);
     setCheckoutOpen(false);
+    toggleRemainingSpaceMode(false);
+    
+    // Automatically reset filters if the current view is empty
+    if (hasNoResults) {
+      resetFilters();
+    }
     
     const element = document.getElementById('library');
     if (element) {
