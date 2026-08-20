@@ -130,7 +130,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cat.Action': 'Action',
     'cat.Shooter': 'Shooter',
     'cat.Horror': 'Horror',
-    'cat.2D game': '2D Game'
+    'cat.2D game': '2D Game',
+    'cat.Sci-Fi': 'Sci-Fi',
+    'cat.Sports': 'Sports'
   },
   ar: {
     'nav.catalog': 'الكتالوج',
@@ -250,7 +252,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cat.Action': 'أكشن',
     'cat.Shooter': 'إطلاق نار',
     'cat.Horror': 'رعب',
-    'cat.2D game': 'ألعاب 2D'
+    'cat.2D game': 'ألعاب 2D',
+    'cat.Sci-Fi': 'خيال علمي',
+    'cat.Sports': 'رياضة'
   }
 };
 

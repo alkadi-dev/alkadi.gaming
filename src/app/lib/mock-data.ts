@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game', 'Sci-Fi', 'Sports'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -1016,7 +1016,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'echoes',
     title: 'Echoes of the End',
-    description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
+    description: 'Echoes of the End is a third-person action-adventure game that combines intense melee combat with the thrill of exploration in a semi-open world ravaged by a mysterious civil war.',
     categories: ['Adventure'],
     thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
     size: '33 GB',
@@ -1389,7 +1389,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7BHz',
       'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
       'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
     ]
@@ -2027,6 +2026,86 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/kX9RFvcm6oY'
     ],
+    isRecommended: false,
+  },
+  {
+    id: 'ets2',
+    title: 'Euro Truck Simulator 2',
+    description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
+    categories: ['Open World', 'Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
+    size: '12 GB',
+    releaseYear: '2012',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
+      'https://wallpaperaccess.com/full/1560953.jpg',
+      'https://images.alphacoders.com/694/694854.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/xlTuC18x_FE',
+    isRecommended: false,
+  },
+  {
+    id: 'sinking-city-2',
+    title: 'The Sinking City 2',
+    description: 'A terrifying survival horror journey set in the lovecraftian city of Arkham. Navigate the flooded streets and face unspeakable cosmic horrors in this stunning sequel built in Unreal Engine 5.',
+    categories: ['Horror', 'Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2871570/header.jpg',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2871570/header.jpg',
+      'https://gamingbolt.com/wp-content/uploads/2024/03/the-sinking-city-2.jpg',
+      'https://images.darkhorse.com/darkhorse/index_images/blog/TSC2Reveal.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/O-L2K3E0i0E',
+    isRecommended: true,
+  },
+  {
+    id: 'sinking-city-remastered',
+    title: 'The Sinking City Remastered',
+    description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
+    categories: ['Horror', 'Adventure'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750130/header.jpg',
+    size: '30 GB',
+    releaseYear: '2021',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750130/header.jpg',
+      'https://wallpaperaccess.com/full/1183359.jpg',
+      'https://images8.alphacoders.com/101/thumb-1920-1011855.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/A8p0H98KqG8',
+    isRecommended: false,
+  },
+  {
+    id: 'directive-8020',
+    title: 'Directive 8020',
+    description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
+    categories: ['Horror', 'Sci-Fi', 'Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
+    size: '35 GB',
+    releaseYear: '2025',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
+      'https://gamingbolt.com/wp-content/uploads/2024/08/directive-8020.jpg',
+      'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/YI9U8nKjA7M',
+    isRecommended: true,
+  },
+  {
+    id: 'popucom',
+    title: 'Popucom',
+    description: 'A colorful multiplayer cooperative adventure! Use color-based mechanics to solve puzzles and defeat enemies in this vibrant world designed for playing with friends.',
+    categories: ['Action', 'Adventure', '2 players'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2522300/header.jpg',
+    size: '15 GB',
+    releaseYear: '2024',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2522300/header.jpg',
+      'https://gamingbolt.com/wp-content/uploads/2023/09/popucom.jpg',
+      'https://i.ytimg.com/vi/C-L-h_Y0x5s/maxresdefault.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/C-L-h_Y0x5s',
     isRecommended: false,
   }
 ];
