@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game', 'Sci-Fi', 'Sports'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -2080,7 +2080,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'directive-8020',
     title: 'Directive 8020',
     description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
-    categories: ['Horror', 'Sci-Fi', 'Action'],
+    categories: ['Horror', 'Action'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
     size: '35 GB',
     releaseYear: '2025',
