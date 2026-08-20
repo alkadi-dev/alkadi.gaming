@@ -2037,11 +2037,16 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '12 GB',
     releaseYear: '2012',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
-      'https://wallpaperaccess.com/full/1560953.jpg',
-      'https://images.alphacoders.com/694/694854.jpg'
+      'https://wallpapercave.com/wp/wp2578403.jpg',
+      'https://www.gtplanet.net/forum/attachments/ets2_00010-png.643071/',
+      'https://i.pinimg.com/originals/cc/35/24/cc35248b6a7e8a138dbbcb7e210db262.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/xlTuC18x_FE',
+    videoUrl: 'https://www.youtube.com/embed/5uvwfskYwl0',
+    shorts: [
+      'https://www.youtube.com/embed/y287trA3Eio',
+      'https://www.youtube.com/embed/wJEZ0YDI-hc',
+      'https://www.youtube.com/embed/pdV0w2bQgxc'
+    ],
     isRecommended: false,
   },
   {
