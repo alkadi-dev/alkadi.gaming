@@ -2032,7 +2032,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'ets2',
     title: 'Euro Truck Simulator 2',
     description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
-    categories: ['Open World', 'Action'],
+    categories: ['Open World'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
     size: '12 GB',
     releaseYear: '2012',
@@ -2053,16 +2053,20 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'sinking-city-2',
     title: 'The Sinking City 2',
     description: 'A terrifying survival horror journey set in the lovecraftian city of Arkham. Navigate the flooded streets and face unspeakable cosmic horrors in this stunning sequel built in Unreal Engine 5.',
-    categories: ['Horror', 'Action'],
+    categories: ['Horror'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2871570/header.jpg',
     size: '40 GB',
     releaseYear: '2025',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2871570/header.jpg',
-      'https://gamingbolt.com/wp-content/uploads/2024/03/the-sinking-city-2.jpg',
-      'https://images.darkhorse.com/darkhorse/index_images/blog/TSC2Reveal.jpg'
+      'https://theeliteinstitute.net/wp-content/uploads/2026/06/image_2026-06-06_222458125-1280x640.png',
+      'https://images.squarespace-cdn.com/content/v1/59a2574903596e3462d0bd19/d18421b8-8569-4b68-8319-da7f917b915e/TSC2_AFD_Fight.jpg',
+      'https://cdn.mos.cms.futurecdn.net/dvMEnvMJwCv8b7cyF6kYRg.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/O-L2K3E0i0E',
+    videoUrl: 'https://www.youtube.com/embed/8Hi78PvY2M8',
+    shorts: [
+      'https://www.youtube.com/embed/Y6HUJ22LjxY',
+      'https://www.youtube.com/embed/OXrTcUeK1oM'
+    ],
     isRecommended: true,
   },
   {
@@ -2085,7 +2089,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'directive-8020',
     title: 'Directive 8020',
     description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
-    categories: ['Horror', 'Action'],
+    categories: ['Horror'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
     size: '35 GB',
     releaseYear: '2025',
@@ -2101,7 +2105,7 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'popucom',
     title: 'Popucom',
     description: 'A colorful multiplayer cooperative adventure! Use color-based mechanics to solve puzzles and defeat enemies in this vibrant world designed for playing with friends.',
-    categories: ['Action', 'Adventure', '2 players'],
+    categories: ['Adventure', '2 players'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2522300/header.jpg',
     size: '15 GB',
     releaseYear: '2024',
