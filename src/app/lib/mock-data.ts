@@ -2097,11 +2097,15 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '23 GB',
     releaseYear: '2025',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
-      'https://gamingbolt.com/wp-content/uploads/2024/08/directive-8020.jpg',
-      'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
+      'https://wallpapercave.com/wp/wp16380849.webp',
+      'https://www.thedarkpictures.com/media/1ysbbpaz/directive-8020_screenshot_danger-awaits.jpg?width=2560&v=1dc99add4d58ff0',
+      'https://cdn.mos.cms.futurecdn.net/Xpb2MrcvwaZPAimSAjb5dZ.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/YI9U8nKjA7M',
+    videoUrl: 'https://www.youtube.com/embed/4a_VXgNSfME',
+    shorts: [
+      'https://www.youtube.com/embed/EV-tLj0N6E0',
+      'https://www.youtube.com/embed/ZzIdh16FBdU'
+    ],
     isRecommended: false,
   },
   {
