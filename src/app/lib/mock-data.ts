@@ -2022,7 +2022,7 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.crashbandicoot.com/content/dam/atvi/Crash/gallery/crash6.jpg',
       'https://wallpapers.com/images/hd/crash-bandicoot-sunset-1izya2ao3sy9yo37.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/U1qGQqOkZI8',
+    videoUrl: 'https://www.youtube.com/embed/U1qGQqOldZI8',
     shorts: [
       'https://www.youtube.com/embed/kX9RFvcm6oY'
     ],
@@ -2034,7 +2034,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
     categories: ['Open World'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
-    size: '12 GB',
+    size: '17 GB',
     releaseYear: '2012',
     images: [
       'https://wallpapercave.com/wp/wp2578403.jpg',
@@ -2054,7 +2054,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Sinking City 2',
     description: 'A terrifying survival horror journey set in the lovecraftian city of Arkham. Navigate the flooded streets and face unspeakable cosmic horrors in this stunning sequel built in Unreal Engine 5.',
     categories: ['Horror'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2871570/header.jpg',
+    thumbnail: 'https://theeliteinstitute.net/wp-content/uploads/2026/06/image_2026-06-06_222458125-1280x640.png',
     size: '40 GB',
     releaseYear: '2025',
     images: [
@@ -2067,15 +2067,15 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/Y6HUJ22LjxY',
       'https://www.youtube.com/embed/OXrTcUeK1oM'
     ],
-    isRecommended: true,
+    
   },
   {
     id: 'sinking-city-remastered',
     title: 'The Sinking City Remastered',
     description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
     categories: ['Horror'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750130/header.jpg',
-    size: '30 GB',
+    thumbnail: 'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
+    size: '24 GB',
     releaseYear: '2021',
     images: [
       'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
@@ -2094,7 +2094,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
     categories: ['Horror'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
-    size: '35 GB',
+    size: '23 GB',
     releaseYear: '2025',
     images: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
@@ -2102,22 +2102,25 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/YI9U8nKjA7M',
-    isRecommended: true,
+    isRecommended: false,
   },
   {
     id: 'popucom',
     title: 'Popucom',
     description: 'A colorful multiplayer cooperative adventure! Use color-based mechanics to solve puzzles and defeat enemies in this vibrant world designed for playing with friends.',
-    categories: ['Adventure', '2 players'],
+    categories: ['2 players'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2522300/header.jpg',
-    size: '15 GB',
+    size: '7 GB',
     releaseYear: '2024',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2522300/header.jpg',
-      'https://gamingbolt.com/wp-content/uploads/2023/09/popucom.jpg',
-      'https://i.ytimg.com/vi/C-L-h_Y0x5s/maxresdefault.jpg'
+      'https://gaming-cdn.com/images/products/19223/616x353/popucom-pc-game-steam-cover.jpg?v=1748955664',
+      'https://64.media.tumblr.com/07e20c48c8dfa7e05b5811e94e5dff59/95df6224d767b37e-56/s1280x1920/b57cc4e02a2e5d55f9dac81e0418f97b47c96387.jpg',
+      'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/store/software/switch/70010000083225/f0aa4beaa4d2ef582e97267022a0d293f6acc27f61a08e6e737e66faa1b1b34d'
     ],
-    videoUrl: 'https://www.youtube.com/embed/C-L-h_Y0x5s',
+    videoUrl: 'https://www.youtube.com/embed/ZCjHfPxZHYE',
+    shorts: [
+      'https://www.youtube.com/embed/3aB001eh0fI'
+    ],
     isRecommended: false,
   }
 ];
