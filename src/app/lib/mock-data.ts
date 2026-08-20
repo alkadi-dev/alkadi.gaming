@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -2073,16 +2073,19 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'sinking-city-remastered',
     title: 'The Sinking City Remastered',
     description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
-    categories: ['Horror', 'Adventure'],
+    categories: ['Horror'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750130/header.jpg',
     size: '30 GB',
     releaseYear: '2021',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750130/header.jpg',
-      'https://wallpaperaccess.com/full/1183359.jpg',
-      'https://images8.alphacoders.com/101/thumb-1920-1011855.jpg'
+      'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
+      'https://i.postimg.cc/L5Px3ttT/The-Sinking-City-Remastered-Win64-Shipping-2025-05-14-02-02-25-874.png',
+      'https://images.squarespace-cdn.com/content/v1/55ef0e29e4b099e22cdc9eea/1562376985150-DM7DMQLL0EODIMUR2F2Q/sinking-welcome.jpeg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/A8p0H98KqG8',
+    videoUrl: 'https://www.youtube.com/embed/gAG1tzdwCFg',
+    shorts: [
+      'https://www.youtube.com/embed/Y6P6uoPb7Tk'
+    ],
     isRecommended: false,
   },
   {
