@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -1016,7 +1016,7 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'echoes',
     title: 'Echoes of the End',
-    description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
+    description: 'Echoes of the End is a third-person action-adventure game that combines intense melee combat with the thrill of exploration in a semi-open world ravaged by a mysterious civil war.',
     categories: ['Adventure'],
     thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
     size: '33 GB',
@@ -1389,7 +1389,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7BHz',
       'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
       'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
     ]
@@ -2023,9 +2022,108 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.crashbandicoot.com/content/dam/atvi/Crash/gallery/crash6.jpg',
       'https://wallpapers.com/images/hd/crash-bandicoot-sunset-1izya2ao3sy9yo37.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/U1qGQqOkZI8',
+    videoUrl: 'https://www.youtube.com/embed/U1qGQqOldZI8',
     shorts: [
       'https://www.youtube.com/embed/kX9RFvcm6oY'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'ets2',
+    title: 'Euro Truck Simulator 2',
+    description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
+    categories: ['Open World'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
+    size: '17 GB',
+    releaseYear: '2012',
+    images: [
+      'https://wallpapercave.com/wp/wp2578403.jpg',
+      'https://www.gtplanet.net/forum/attachments/ets2_00010-png.643071/',
+      'https://i.pinimg.com/originals/cc/35/24/cc35248b6a7e8a138dbbcb7e210db262.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/5uvwfskYwl0',
+    shorts: [
+      'https://www.youtube.com/embed/y287trA3Eio',
+      'https://www.youtube.com/embed/wJEZ0YDI-hc',
+      'https://www.youtube.com/embed/pdV0w2bQgxc'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'sinking-city-2',
+    title: 'The Sinking City 2',
+    description: 'A terrifying survival horror journey set in the lovecraftian city of Arkham. Navigate the flooded streets and face unspeakable cosmic horrors in this stunning sequel built in Unreal Engine 5.',
+    categories: ['Horror'],
+    thumbnail: 'https://theeliteinstitute.net/wp-content/uploads/2026/06/image_2026-06-06_222458125-1280x640.png',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      'https://theeliteinstitute.net/wp-content/uploads/2026/06/image_2026-06-06_222458125-1280x640.png',
+      'https://images.squarespace-cdn.com/content/v1/59a2574903596e3462d0bd19/d18421b8-8569-4b68-8319-da7f917b915e/TSC2_AFD_Fight.jpg',
+      'https://cdn.mos.cms.futurecdn.net/dvMEnvMJwCv8b7cyF6kYRg.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/8Hi78PvY2M8',
+    shorts: [
+      'https://www.youtube.com/embed/Y6HUJ22LjxY',
+      'https://www.youtube.com/embed/OXrTcUeK1oM'
+    ],
+    
+  },
+  {
+    id: 'sinking-city-remastered',
+    title: 'The Sinking City Remastered',
+    description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
+    categories: ['Horror'],
+    thumbnail: 'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
+    size: '24 GB',
+    releaseYear: '2021',
+    images: [
+      'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
+      'https://i.postimg.cc/L5Px3ttT/The-Sinking-City-Remastered-Win64-Shipping-2025-05-14-02-02-25-874.png',
+      'https://images.squarespace-cdn.com/content/v1/55ef0e29e4b099e22cdc9eea/1562376985150-DM7DMQLL0EODIMUR2F2Q/sinking-welcome.jpeg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/gAG1tzdwCFg',
+    shorts: [
+      'https://www.youtube.com/embed/Y6P6uoPb7Tk'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'directive-8020',
+    title: 'Directive 8020',
+    description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
+    categories: ['Horror'],
+    thumbnail: 'https://wallpapercave.com/wp/wp16380849.webp',
+    size: '23 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp16380849.webp',
+      'https://www.thedarkpictures.com/media/1ysbbpaz/directive-8020_screenshot_danger-awaits.jpg?width=2560&v=1dc99add4d58ff0',
+      'https://cdn.mos.cms.futurecdn.net/Xpb2MrcvwaZPAimSAjb5dZ.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/4a_VXgNSfME',
+    shorts: [
+      'https://www.youtube.com/embed/EV-tLj0N6E0',
+      'https://www.youtube.com/embed/ZzIdh16FBdU'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'popucom',
+    title: 'Popucom',
+    description: 'A colorful multiplayer cooperative adventure! Use color-based mechanics to solve puzzles and defeat enemies in this vibrant world designed for playing with friends.',
+    categories: ['2 players'],
+    thumbnail: 'https://gaming-cdn.com/images/products/19223/616x353/popucom-pc-game-steam-cover.jpg?v=1748955664',
+    size: '7 GB',
+    releaseYear: '2024',
+    images: [
+      'https://gaming-cdn.com/images/products/19223/616x353/popucom-pc-game-steam-cover.jpg?v=1748955664',
+      'https://64.media.tumblr.com/07e20c48c8dfa7e05b5811e94e5dff59/95df6224d767b37e-56/s1280x1920/b57cc4e02a2e5d55f9dac81e0418f97b47c96387.jpg',
+      'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/store/software/switch/70010000083225/f0aa4beaa4d2ef582e97267022a0d293f6acc27f61a08e6e737e66faa1b1b34d'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ZCjHfPxZHYE',
+    shorts: [
+      'https://www.youtube.com/embed/3aB001eh0fI'
     ],
     isRecommended: false,
   }
