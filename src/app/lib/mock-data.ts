@@ -2093,7 +2093,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Directive 8020',
     description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
     categories: ['Horror'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2324340/header.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp16380849.webp',
     size: '23 GB',
     releaseYear: '2025',
     images: [
@@ -2113,7 +2113,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Popucom',
     description: 'A colorful multiplayer cooperative adventure! Use color-based mechanics to solve puzzles and defeat enemies in this vibrant world designed for playing with friends.',
     categories: ['2 players'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2522300/header.jpg',
+    thumbnail: 'https://gaming-cdn.com/images/products/19223/616x353/popucom-pc-game-steam-cover.jpg?v=1748955664',
     size: '7 GB',
     releaseYear: '2024',
     images: [

@@ -34,7 +34,7 @@ interface Answers {
 const BUDGETS = [
   { label: '$39', value: 39, capacity: 280 },
   { label: '$59', value: 59, capacity: 460 },
-  { label: '$79', value: 79, capacity: 960 },
+  { label: '$79', value: 79, capacity: 930 },
   { label: '$99', value: 99, capacity: 1400 },
   { label: '$119', value: 119, capacity: 1800 },
 ];

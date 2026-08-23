@@ -33,7 +33,7 @@ export function StorageLimitAlert() {
     const currentThreshold = 
       totalSizeNum > 1800 ? 1800 : 
       totalSizeNum > 1400 ? 1400 :
-      totalSizeNum > 960 ? 960 : 
+      totalSizeNum > 930 ? 930 : 
       totalSizeNum > 460 ? 460 : 
       totalSizeNum > 280 ? 280 : 0;
 
@@ -59,11 +59,11 @@ export function StorageLimitAlert() {
           message: t('alert.approachingDesc'),
           icon: <AlertTriangle className="h-6 w-6 text-primary" />
         });
-      } else if (currentThreshold === 960) {
+      } else if (currentThreshold === 930) {
         setActiveLimit({
-          threshold: 960,
-          title: t('alert.surpassed960'),
-          message: t('alert.surpassed960Desc'),
+          threshold: 930,
+          title: t('alert.surpassed930'),
+          message: t('alert.surpassed930Desc'),
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 460) {

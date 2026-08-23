@@ -71,10 +71,10 @@ export function CheckoutSheet() {
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    let driveInfo = `${currentCapacity === 460 ? "500 GB" : currentCapacity === 960 ? "1 TB" : currentCapacity === 280 ? "320 GB" : currentCapacity + " GB"}`;
+    let driveInfo = `${currentCapacity === 460 ? "500 GB" : currentCapacity === 930 ? "1 TB" : currentCapacity === 280 ? "320 GB" : currentCapacity + " GB"}`;
     if (isUpgraded) {
         if (currentCapacity === 460) driveInfo = "1 TB (UPGRADED FROM 500GB OFFER)";
-        if (currentCapacity === 960) driveInfo = "2 TB (UPGRADED FROM 1TB OFFER)";
+        if (currentCapacity === 930) driveInfo = "2 TB (UPGRADED FROM 1TB OFFER)";
     }
 
     return `ALKADI GAMING SELECTION\n\n${listText}\n\nSelected Storage: ${driveInfo}\nTotal Data Size: ~${totalSizeNum.toFixed(1)} GB`;
@@ -117,7 +117,7 @@ export function CheckoutSheet() {
         return;
       }
       // 1TB -> 2TB Upgrade Offer
-      if (currentCapacity === 960) {
+      if (currentCapacity === 930) {
         setIs2TBUpgradeOfferOpen(true);
         return;
       }
@@ -161,7 +161,7 @@ export function CheckoutSheet() {
   const getWarning = () => {
     if (totalSizeNum > 1800) return t('alert.maxStorage');
     if (totalSizeNum > 1400) return t('alert.approaching');
-    if (totalSizeNum > 960) return t('alert.surpassed960');
+    if (totalSizeNum > 930) return t('alert.surpassed930');
     if (totalSizeNum > 460) return t('alert.1tbRequired');
     if (totalSizeNum > 280) return t('alert.500gbReached');
     return null;

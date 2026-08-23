@@ -32,6 +32,7 @@ interface SelectionContextType {
   hasNoResults: boolean;
   setHasNoResults: (val: boolean) => void;
   resetFilters: () => void;
+  setSelectedIds: (ids: string[]) => void;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
@@ -90,8 +91,8 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   // Calculate current capacity milestone
   const currentCapacity = useMemo(() => {
     if (totalSizeNum > 1400) return 1800;
-    if (totalSizeNum > 960) return 1400;
-    if (totalSizeNum > 460) return 960;
+    if (totalSizeNum > 930) return 1400;
+    if (totalSizeNum > 460) return 930;
     if (totalSizeNum > 280) return 460;
     return 280;
   }, [totalSizeNum]);
@@ -116,10 +117,10 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
       if (totalSizeNum >= 450) return 'critical';
       if (totalSizeNum >= 430) return 'medium';
       if (totalSizeNum >= 400) return 'low';
-    } else if (currentCapacity === 960) {
-      if (totalSizeNum >= 950) return 'critical';
-      if (totalSizeNum >= 930) return 'medium';
-      if (totalSizeNum >= 900) return 'low';
+    } else if (currentCapacity === 930) {
+      if (totalSizeNum >= 920) return 'critical';
+      if (totalSizeNum >= 900) return 'medium';
+      if (totalSizeNum >= 870) return 'low';
     } else if (currentCapacity === 1400) {
       if (totalSizeNum >= 1380) return 'critical';
       if (totalSizeNum >= 1350) return 'medium';
@@ -205,7 +206,8 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         setSortOrder,
         hasNoResults,
         setHasNoResults,
-        resetFilters
+        resetFilters,
+        setSelectedIds
       }}
     >
       {children}
