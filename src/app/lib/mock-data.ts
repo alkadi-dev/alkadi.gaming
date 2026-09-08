@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -2126,5 +2126,125 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/3aB001eh0fI'
     ],
     isRecommended: false,
+  },
+  {
+    id: 'blood-dawnwalker',
+    title: 'The Blood of Dawnwalker',
+    description: 'Uncover the dark secrets of a gothic world in this atmospheric horror experience. Battle nightmarish creatures as you seek to break an ancient curse that has plagued the land for centuries.',
+    categories: ['Horror'],
+    thumbnail: 'https://wallpapercave.com/wp/wp1405859.jpg',
+    size: '45 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp1405859.jpg',
+      'https://images5.alphacoders.com/140/thumb-1920-1405859.jpg',
+      'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/mUymvhAXOnM',
+  },
+  {
+    id: 'hogwarts-legacy',
+    title: 'Hogwarts Legacy',
+    description: 'Experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Take control of the action and be at the center of your own adventure.',
+    categories: ['Open World'],
+    thumbnail: 'https://wallpaperaccess.com/full/8022791.jpg',
+    size: '73 GB',
+    releaseYear: '2023',
+    images: [
+      'https://wallpaperaccess.com/full/8022791.jpg',
+      'https://wallpapercave.com/wp/wp11854490.jpg',
+      'https://wallpapers.com/images/hd/hogwarts-legacy-flying-on-hippogriff-20mzv26kznjghf98.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/1O6Q7DjbXK8',
+  },
+  {
+    id: 'dragons-dogma-2',
+    title: "Dragon's Dogma 2",
+    description: "Dragon’s Dogma 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen to their vocation and party.",
+    categories: ['RPG'],
+    thumbnail: 'https://wallpaperaccess.com/full/10410427.jpg',
+    size: '65 GB',
+    releaseYear: '2024',
+    images: [
+      'https://wallpaperaccess.com/full/10410427.jpg',
+      'https://wallpapercave.com/wp/wp12519965.jpg',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/dragon-s-dogma-2-key-art.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/7S8f4A_NfSg',
+  },
+  {
+    id: 'mortal-shell-2',
+    title: 'Mortal Shell II',
+    description: 'The sequel to the acclaimed soulslike. Possess new warriors, master lethal combat, and face even greater horrors in a decaying world that tests your sanity and skill.',
+    categories: ['Action'],
+    thumbnail: 'https://wallpapercave.com/wp/wp7164943.jpg',
+    size: '35 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp7164943.jpg',
+      'https://wallpaperaccess.com/full/4166347.jpg',
+      'https://images.squarespace-cdn.com/content/v1/593256088419c23179269455/1597843810237-7D3XQ1W9M6H8OQZ2L6S9/MortalShell_Screen_01.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/H7M6978KzG0',
+  },
+  {
+    id: 'romeo-dead-man',
+    title: 'ROMEO IS A DEAD MAN',
+    description: 'A stylish noir action-adventure. Navigate a city of shadows, uncover a deep conspiracy, and survive the consequences of your past in this cinematic journey of revenge.',
+    categories: ['Adventure'],
+    thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
+    size: '25 GB',
+    releaseYear: '2026',
+    images: [
+      'https://wallpapercave.com/wp/wp11468139.jpg',
+      'https://picsum.photos/seed/romeo1/1200/800',
+      'https://picsum.photos/seed/romeo2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
+  },
+  {
+    id: 'arma-reforger',
+    title: 'Arma Reforger',
+    description: "Experience authentic Cold War combat and join the fight for the island of Everon. Return to the series' roots in this massive, versatile military sandbox.",
+    categories: ['Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg',
+    size: '40 GB',
+    releaseYear: '2024',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg',
+      'https://wallpapercave.com/wp/wp11030043.jpg',
+      'https://arma-reforger.com/img/screenshots/arma-reforger-01.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/AAnv3iWwP9M',
+  },
+  {
+    id: 'relic-first-guardian',
+    title: 'The Relic - First Guardian',
+    description: 'A grand action RPG where you set out on an adventure to find the pieces of a broken relic and restore the world to its former glory. Master diverse combat styles.',
+    categories: ['RPG'],
+    thumbnail: 'https://gamingbolt.com/wp-content/uploads/2024/01/The-Relic-First-Guardian.jpg',
+    size: '30 GB',
+    releaseYear: '2025',
+    images: [
+      'https://gamingbolt.com/wp-content/uploads/2024/01/The-Relic-First-Guardian.jpg',
+      'https://i.ytimg.com/vi/v5u7vA9h8yY/maxresdefault.jpg',
+      'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/v5u7vA9h8yY',
+  },
+  {
+    id: 'sw-outlaws',
+    title: 'Star Wars Outlaws',
+    description: 'Experience the first-ever open world Star Wars™ game. Explore distinct planets across the galaxy, both iconic and new, as you seek freedom and a new life.',
+    categories: ['Open World'],
+    thumbnail: 'https://wallpapercave.com/wp/wp12507850.jpg',
+    size: '65 GB',
+    releaseYear: '2024',
+    images: [
+      'https://wallpapercave.com/wp/wp12507850.jpg',
+      'https://wallpaperaccess.com/full/10410427.jpg',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/star-wars-outlaws-kay-vess.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ymcpwq1pghY',
   }
 ];
