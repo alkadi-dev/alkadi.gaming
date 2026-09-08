@@ -2151,11 +2151,16 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '73 GB',
     releaseYear: '2023',
     images: [
-      'https://wallpaperaccess.com/full/8022791.jpg',
-      'https://wallpapercave.com/wp/wp11854490.jpg',
-      'https://wallpapers.com/images/hd/hogwarts-legacy-flying-on-hippogriff-20mzv26kznjghf98.jpg'
+      'https://wallpapercave.com/wp/wp12278034.jpg',
+      'https://preview.redd.it/beautiful-landscape-of-hogwarts-and-arround-v0-4teird06jwvc1.png?width=640&crop=smart&auto=webp&s=d0a98bab9ddd8249740d761ecc1cf9fa2ce75d02',
+      'https://i.pinimg.com/originals/cb/16/5c/cb165c8603ff240b26ca92fd8f5e9cab.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/1O6Q7DjbXK8',
+    videoUrl: 'https://www.youtube.com/embed/1O6Qstncpnc',
+    shorts: [
+      'https://www.youtube.com/embed/QrlLnlpUhhg',
+      'https://www.youtube.com/embed/8PAFBXdV3oE',
+      'https://www.youtube.com/embed/Gw1fXsy9AIE'
+    ]
   },
   {
     id: 'dragons-dogma-2',
@@ -2181,11 +2186,16 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '35 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp7164943.jpg',
-      'https://wallpaperaccess.com/full/4166347.jpg',
-      'https://images.squarespace-cdn.com/content/v1/593256088419c23179269455/1597843810237-7D3XQ1W9M6H8OQZ2L6S9/MortalShell_Screen_01.jpg'
+      'https://image.api.playstation.com/vulcan/ap/rnd/202607/0618/218e06402e3bb0b92b96399a827a9033a18335c239789bbb.jpg',
+      'https://assetsio.gnwcdn.com/mortal-shell-2-standing-in-desolate-keep.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
+      'https://images5.alphacoders.com/116/thumbbig-1161741.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/H7M6978KzG0',
+    videoUrl: 'https://www.youtube.com/embed/KJWAUJhInH0',
+    shorts: [
+      'https://www.youtube.com/embed/M6kBsFobHFk',
+      'https://www.youtube.com/embed/LPUD61qBntM',
+      'https://www.youtube.com/embed/mHcC7Feypdc'
+    ]
   },
   {
     id: 'romeo-dead-man',
