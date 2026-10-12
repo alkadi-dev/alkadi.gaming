@@ -2300,15 +2300,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Witcher 3 Remastered',
     description: 'The definitive edition of the legendary RPG, now with stunning 4K visuals, enhanced textures, and ray-tracing. Embark once more on Geralt\'s epic quest with all expansions included.',
     categories: ['RPG'],
-    thumbnail: 'https://wallpaperaccess.com/full/8510096.jpg',
+    thumbnail: 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp',
     size: '55 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpaperaccess.com/full/8510096.jpg',
-      'https://picsum.photos/seed/witcherr1/1200/800',
-      'https://picsum.photos/seed/witcherr2/1200/800'
+      'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp',
+      'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd0b9acc1eeffb85e/6a8c8a9cf8f1248709bcb767/feature_3_shop_product_feature_card_geralt.webp',
+      'https://cdn.mos.cms.futurecdn.net/scKtip2PExfiPFZsd8Q74F.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+    videoUrl: 'https://www.youtube.com/embed/IGk17XQ7IrQ',
+    shorts: [
+      'https://www.youtube.com/embed/7Br0Yerr0mE',
+      'https://www.youtube.com/embed/oIFo_fKSTiE'
+    ],
   },
   {
     id: 'control-resonant',
@@ -2353,15 +2357,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Silent Hill Townfall',
     description: 'A new entry in the iconic survival horror series. Navigate a town shrouded in fog and face the manifestations of your deepest fears in this atmospheric and narrative-driven journey.',
     categories: ['Horror'],
-    thumbnail: 'https://picsum.photos/seed/shtownfall/600/400',
+    thumbnail: 'https://i0.wp.com/waytoomany.games/wp-content/uploads/2026/06/SILENT-HILL-Townfall_Key-Art-3840-%C3%97-2160.jpg?fit=3840,2160&ssl=1',
     size: '30 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/shtownfall/600/400',
-      'https://picsum.photos/seed/sh-townfall-hero/1200/800',
-      'https://picsum.photos/seed/sh-townfall-gallery/1200/800'
+      'https://i0.wp.com/waytoomany.games/wp-content/uploads/2026/06/SILENT-HILL-Townfall_Key-Art-3840-%C3%97-2160.jpg?fit=3840,2160&ssl=1',
+      'https://blog.playstation.com/tachyon/2028/09/7f627316d4086f9bbe20da9bad09a36ee29677ff-scaled.jpg?resize=1088,612&crop_strategy=smart',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/02/silent-hill-townfall-press-image-6.jpg?q=49&fit=crop&w=480&h=270&dpr=2'
     ],
-    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+    videoUrl: 'https://www.youtube.com/embed/9VjP6RyfGrQ',
+    shorts: [
+      'https://www.youtube.com/embed/5dXZ6_lLB0I',
+      'https://www.youtube.com/embed/Ehcs7hNhY7g'
+    ],
   },
   {
     id: 'dw3-remake',
