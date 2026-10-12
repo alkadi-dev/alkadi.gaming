@@ -2296,30 +2296,38 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Control Resonant',
     description: 'Explore the mysterious Oldest House once again in this standalone action-adventure. Master new supernatural abilities and uncover deep-rooted secrets within the Federal Bureau of Control.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp4506263.jpg',
+    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202605/2811/e104ddf9aea2f76d5c198e5b0861eb086bbef105d6d47bee.jpg',
     size: '42 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp4506263.jpg',
-      'https://picsum.photos/seed/controlr1/1200/800',
-      'https://picsum.photos/seed/controlr2/1200/800'
+      'https://image.api.playstation.com/vulcan/ap/rnd/202605/2811/e104ddf9aea2f76d5c198e5b0861eb086bbef105d6d47bee.jpg',
+      'https://blog.playstation.com/tachyon/2026/03/ff3c2638907202384dcc4fc15c5a378f251fe638.jpg?resize=1088,612&crop_strategy=smart',
+      'https://blog.playstation.com/tachyon/2028/09/805dc24cfeb0a3136d766b4e28d4d1a269bfde1b.jpg?resize=1088,612&crop_strategy=smart'
     ],
-    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+    videoUrl: 'https://www.youtube.com/embed/WhQm-ExRz60',
+    shorts: [
+      'https://www.youtube.com/embed/cn4PamZ167U',
+      'https://www.youtube.com/embed/ngwUfhLQ07o',
+      'https://www.youtube.com/embed/JfuY-NhK_tQ'
+    ],
   },
   {
     id: 'blackwood',
     title: 'Blackwood',
     description: 'Survive the night in the cursed woods of Blackwood. A first-person psychological horror experience that tests your courage against ancient terrors lurking in the shadows.',
-    categories: ['Horror'],
-    thumbnail: 'https://picsum.photos/seed/blackwood/600/400',
+    categories: ['Action'],
+    thumbnail: 'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
     size: '28 GB',
     releaseYear: '2024',
     images: [
-      'https://picsum.photos/seed/blackwood/600/400',
-      'https://picsum.photos/seed/blackwood-hero/1200/800',
-      'https://picsum.photos/seed/blackwood-gallery/1200/800'
+      'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
+      'https://assets.games.gg/blackwood_banner_a4a7396941.webp',
+      'https://external-preview.redd.it/photo-mode-is-coming-to-blackwood-capture-cinematic-shots-v0-Z2Rhd2QwdmthbzloMQVKDdR6hAICtjImUTAQwrKRHe_R1IDsHKQVcG6YXP44.png?width=640&crop=smart&format=pjpg&auto=webp&s=3214465eff53bccd58f0280b83ac28b05a04aa07'
     ],
-    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+    videoUrl: 'https://www.youtube.com/embed/xVyIEh5DTU0',
+    shorts: [
+      'https://www.youtube.com/embed/xVyIEh5DTU0'
+    ],
   },
   {
     id: 'sh-townfall',
@@ -2340,15 +2348,19 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'dw3-remake',
     title: 'DYNASTY WARRIORS 3',
     description: 'Relive the legendary battles of the Three Kingdoms in this stunning remake. Experience visceral 1-vs-1000 action with modernized combat mechanics and breathtaking visuals.',
-    categories: ['Action'],
-    thumbnail: 'https://picsum.photos/seed/dw3/600/400',
+    categories: ['2 players'],
+    thumbnail: 'https://www.tech-gaming.com/wp-content/uploads/2026/10/DYNASTY-WARRIORS-3-Complete-Edition-Remastered-1.jpg',
     size: '20 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/dw3/600/400',
-      'https://picsum.photos/seed/dw3-hero/1200/800',
-      'https://picsum.photos/seed/dw3-gallery/1200/800'
+      'https://www.tech-gaming.com/wp-content/uploads/2026/10/DYNASTY-WARRIORS-3-Complete-Edition-Remastered-1.jpg',
+      'https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https://shacknews-www.s3.amazonaws.com/assets/articles/2026/dynasty-warriors-3-complete-edition-remastered-impressions-zhuge-20260930022420-551af081.jpg&width=986&sign=2T-Xy4D8aqlEHhBxuVMpaUD1pMX5l8VWiQdi-PVHIDc',
+      'https://www.koeitecmoeurope.com/dw3-re/assets/img/gameplay_2p-modal.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+    videoUrl: 'https://www.youtube.com/embed/3ybsp-GdDSg',
+    shorts: [
+      'https://www.youtube.com/embed/p79rj0EL480',
+      'https://www.youtube.com/embed/sa49zJgBXbU'
+    ],
   }
 ];
