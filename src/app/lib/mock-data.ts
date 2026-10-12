@@ -2033,7 +2033,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Euro Truck Simulator 2',
     description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
     categories: ['Open World'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp2578403.jpg',
     size: '17 GB',
     releaseYear: '2012',
     images: [
@@ -2147,7 +2147,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hogwarts Legacy',
     description: 'Experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Take control of the action and be at the center of your own adventure.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpaperaccess.com/full/8022791.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp12278034.jpg',
     size: '73 GB',
     releaseYear: '2023',
     images: [
@@ -2167,7 +2167,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Dragon's Dogma 2",
     description: "Dragon’s Dogma 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen to their vocation and party.",
     categories: ['RPG'],
-    thumbnail: 'https://wallpaperaccess.com/full/10410427.jpg',
+    thumbnail: 'https://www.rpgfan.com/wp-content/uploads/2023/05/Dragons-Dogma-2-Artwork-001-1280x720.jpg',
     size: '65 GB',
     releaseYear: '2024',
     images: [
@@ -2186,7 +2186,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Mortal Shell II',
     description: 'The sequel to the acclaimed soulslike. Possess new warriors, master lethal combat, and face even greater horrors in a decaying world that tests your sanity and skill.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp7164943.jpg',
+    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202607/0618/218e06402e3bb0b92b96399a827a9033a18335c239789bbb.jpg',
     size: '35 GB',
     releaseYear: '2025',
     images: [
@@ -2251,30 +2251,39 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Star Wars Outlaws',
     description: 'Experience the first-ever open world Star Wars™ game. Explore distinct planets across the galaxy, both iconic and new, as you seek freedom and a new life.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp12507850.jpg',
+    thumbnail: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/ddfa6481-b52a-4fff-9cfd-0bb06f184505.__CR0,0,970,600_PT0_SX970_V1___.jpg',
     size: '65 GB',
     releaseYear: '2024',
     images: [
-      'https://wallpapercave.com/wp/wp12507850.jpg',
-      'https://wallpaperaccess.com/full/10410427.jpg',
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/star-wars-outlaws-kay-vess.jpg'
+      'https://m.media-amazon.com/images/S/aplus-media-library-service-media/ddfa6481-b52a-4fff-9cfd-0bb06f184505.__CR0,0,970,600_PT0_SX970_V1___.jpg',
+      'https://gameinformer.com/sites/default/files/styles/body_default/public/2024/05/01/779564b7/swo_07.jpg.webp',
+      'https://gameinformer.com/sites/default/files/styles/body_default/public/2024/05/01/fe2ab122/swo_03.jpg.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/ymcpwq1pghY',
+    videoUrl: 'https://www.youtube.com/embed/ymcpwq1ltQc',
+    shorts: [
+      'https://www.youtube.com/embed/JF93jvZt69s',
+      'https://www.youtube.com/embed/QP_wXv2ErgI',
+      'https://www.youtube.com/embed/bgd2OJGOQn4'
+    ]
   },
   {
     id: 'gears-of-war',
     title: 'Gears of War',
     description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
     categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp1906232.jpg',
+    thumbnail: 'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/00_GoW_EDAY_CoverArt-6a15d9095e1c1-scaled.jpg',
     size: '45 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp1906232.jpg',
-      'https://picsum.photos/seed/gears1/1200/800',
-      'https://picsum.photos/seed/gears2/1200/800'
+      'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/00_GoW_EDAY_CoverArt-6a15d9095e1c1-scaled.jpg',
+      'https://wallpapers.com/images/hd/gears-of-war-4-fighting-a-grenadier-swarm-05kcandau3pgdcdm.jpg',
+      'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/03_GoW_EDAY_Boomer_Final-6a17663e3da94-scaled.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+    videoUrl: 'https://www.youtube.com/embed/EC20gLfUHeA',
+    shorts: [
+      'https://www.youtube.com/embed/K_Z0fd1zjYo',
+      'https://www.youtube.com/embed/XawcPlhwN40'
+    ]
   },
   {
     id: 'witcher3-remastered',
