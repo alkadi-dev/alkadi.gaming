@@ -2171,11 +2171,15 @@ export const MOCK_GAMES: GameEntry[] = [
     size: '65 GB',
     releaseYear: '2024',
     images: [
-      'https://wallpaperaccess.com/full/10410427.jpg',
-      'https://wallpapercave.com/wp/wp12519965.jpg',
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/dragon-s-dogma-2-key-art.jpg'
+      'https://www.rpgfan.com/wp-content/uploads/2023/05/Dragons-Dogma-2-Artwork-001-1280x720.jpg',
+      'https://www.dragonsdogma.com/2/assets/images/topics/240719/thumb.jpg',
+      'https://preview.redd.it/finally-got-that-cover-art-armour-set-v0-3y69hmfu1upd1.png?width=1920&format=png&auto=webp&s=78d744382e33ee5df48f4cb09ca32d5993cf1896'
     ],
-    videoUrl: 'https://www.youtube.com/embed/7S8f4A_NfSg',
+    videoUrl: 'https://www.youtube.com/embed/cT0rIgaiPWA',
+    shorts: [
+      'https://www.youtube.com/embed/X83BHJdy3A0',
+      'https://www.youtube.com/embed/9RX9C-7RLpI'
+    ]
   },
   {
     id: 'mortal-shell-2',
