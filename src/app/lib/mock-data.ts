@@ -2131,16 +2131,21 @@ export const MOCK_GAMES: GameEntry[] = [
     id: 'blood-dawnwalker',
     title: 'The Blood of Dawnwalker',
     description: 'Uncover the dark secrets of a gothic world in this atmospheric horror experience. Battle nightmarish creatures as you seek to break an ancient curse that has plagued the land for centuries.',
-    categories: ['Horror'],
-    thumbnail: 'https://wallpapercave.com/wp/wp1405859.jpg',
+    categories: ['RPG'],
+    thumbnail: 'https://preview.redd.it/the-blood-of-dawnwalker-cover-art-v0-q7zi8ed6r6bg1.jpeg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
     size: '45 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp1405859.jpg',
-      'https://images5.alphacoders.com/140/thumb-1920-1405859.jpg',
-      'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg'
+      'https://preview.redd.it/the-blood-of-dawnwalker-cover-art-v0-q7zi8ed6r6bg1.jpeg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/05/11/5127adb7/the-blood-of-dawnwalker-screenshot-06.jpg.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2025/01/The-Blood-of-Dawnwalker-Artwork-011.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/mUymvhAXOnM',
+    videoUrl: 'https://www.youtube.com/embed/te73UInH8H8',
+    shorts: [
+      'https://www.youtube.com/embed/UaERmm1DQpM',
+      'https://www.youtube.com/embed/s7fZJScvOgk',
+      'https://www.youtube.com/embed/H7Kz7aODYEQ'
+    ],
   },
   {
     id: 'hogwarts-legacy',
@@ -2236,15 +2241,20 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Relic - First Guardian',
     description: 'A grand action RPG where you set out on an adventure to find the pieces of a broken relic and restore the world to its former glory. Master diverse combat styles.',
     categories: ['RPG'],
-    thumbnail: 'https://gamingbolt.com/wp-content/uploads/2024/01/The-Relic-First-Guardian.jpg',
+    thumbnail: 'https://assets.games.gg/the_relic_first_guardian_gallery_1_30934ab116.webp',
     size: '30 GB',
     releaseYear: '2025',
     images: [
-      'https://gamingbolt.com/wp-content/uploads/2024/01/The-Relic-First-Guardian.jpg',
-      'https://i.ytimg.com/vi/v5u7vA9h8yY/maxresdefault.jpg',
-      'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
+      'https://assets.games.gg/the_relic_first_guardian_gallery_1_30934ab116.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2024/06/The-Relic-First-Guardian-Screenshot-002-1280x720.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2024/06/The-Relic-First-Guardian-Screenshot-005-1280x720.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/v5u7vA9h8yY',
+    videoUrl: 'https://www.youtube.com/embed/YpzAUSNRF9E',
+    shorts: [
+      'https://www.youtube.com/embed/_teu3SPkgJE',
+      'https://www.youtube.com/embed/_PqPcTC56-Q',
+      'https://www.youtube.com/embed/1tbM67pMAuk'
+    ]
   },
   {
     id: 'sw-outlaws',
