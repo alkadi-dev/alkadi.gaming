@@ -2260,5 +2260,95 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/star-wars-outlaws-kay-vess.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/ymcpwq1pghY',
+  },
+  {
+    id: 'gears-of-war',
+    title: 'Gears of War',
+    description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp1906232.jpg',
+    size: '45 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp1906232.jpg',
+      'https://picsum.photos/seed/gears1/1200/800',
+      'https://picsum.photos/seed/gears2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+  },
+  {
+    id: 'witcher3-remastered',
+    title: 'The Witcher 3 Remastered',
+    description: 'The definitive edition of the legendary RPG, now with stunning 4K visuals, enhanced textures, and ray-tracing. Embark once more on Geralt\'s epic quest with all expansions included.',
+    categories: ['RPG'],
+    thumbnail: 'https://wallpaperaccess.com/full/8510096.jpg',
+    size: '55 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpaperaccess.com/full/8510096.jpg',
+      'https://picsum.photos/seed/witcherr1/1200/800',
+      'https://picsum.photos/seed/witcherr2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+  },
+  {
+    id: 'control-resonant',
+    title: 'Control Resonant',
+    description: 'Explore the mysterious Oldest House once again in this standalone action-adventure. Master new supernatural abilities and uncover deep-rooted secrets within the Federal Bureau of Control.',
+    categories: ['Action'],
+    thumbnail: 'https://wallpapercave.com/wp/wp4506263.jpg',
+    size: '42 GB',
+    releaseYear: '2025',
+    images: [
+      'https://wallpapercave.com/wp/wp4506263.jpg',
+      'https://picsum.photos/seed/controlr1/1200/800',
+      'https://picsum.photos/seed/controlr2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+  },
+  {
+    id: 'blackwood',
+    title: 'Blackwood',
+    description: 'Survive the night in the cursed woods of Blackwood. A first-person psychological horror experience that tests your courage against ancient terrors lurking in the shadows.',
+    categories: ['Horror'],
+    thumbnail: 'https://picsum.photos/seed/blackwood/600/400',
+    size: '28 GB',
+    releaseYear: '2024',
+    images: [
+      'https://picsum.photos/seed/blackwood/600/400',
+      'https://picsum.photos/seed/blackwood-hero/1200/800',
+      'https://picsum.photos/seed/blackwood-gallery/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+  },
+  {
+    id: 'sh-townfall',
+    title: 'Silent Hill Townfall',
+    description: 'A new entry in the iconic survival horror series. Navigate a town shrouded in fog and face the manifestations of your deepest fears in this atmospheric and narrative-driven journey.',
+    categories: ['Horror'],
+    thumbnail: 'https://picsum.photos/seed/shtownfall/600/400',
+    size: '30 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/shtownfall/600/400',
+      'https://picsum.photos/seed/sh-townfall-hero/1200/800',
+      'https://picsum.photos/seed/sh-townfall-gallery/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
+  },
+  {
+    id: 'dw3-remake',
+    title: 'DYNASTY WARRIORS 3',
+    description: 'Relive the legendary battles of the Three Kingdoms in this stunning remake. Experience visceral 1-vs-1000 action with modernized combat mechanics and breathtaking visuals.',
+    categories: ['Action'],
+    thumbnail: 'https://picsum.photos/seed/dw3/600/400',
+    size: '20 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/dw3/600/400',
+      'https://picsum.photos/seed/dw3-hero/1200/800',
+      'https://picsum.photos/seed/dw3-gallery/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/SSTT-q9uVfE',
   }
 ];
