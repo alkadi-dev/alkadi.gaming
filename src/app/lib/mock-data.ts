@@ -2389,5 +2389,42 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/p79rj0EL480',
       'https://www.youtube.com/embed/sa49zJgBXbU'
     ],
+  },
+  {
+    id: 'cities-skylines-2',
+    title: 'Cities: Skylines II',
+    description: 'Build a metropolis from the ground up with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you\'ve never experienced.',
+    categories: ['Open World'],
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/949230/header.jpg?t=1729087541',
+    size: '50 GB',
+    releaseYear: '2023',
+    images: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/949230/header.jpg?t=1729087541',
+      'https://images.alphacoders.com/132/1325143.png',
+      'https://wallpapercave.com/wp/wp12503254.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Wd_BlnsfXis',
+    shorts: [
+      'https://www.youtube.com/embed/p1o1lGzS3Gk',
+      'https://www.youtube.com/embed/n3o_p3e4m_I'
+    ]
+  },
+  {
+    id: 'darwins-paradox',
+    title: 'Darwin\'s Paradox',
+    description: 'A high-octane 2.5D action-adventure platformer set in a vibrant world. Uncover the secrets of a futuristic ecosystem where evolution has taken a strange and dangerous turn.',
+    categories: ['2D game'],
+    thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/DAR-Feb1826-FEATIMG.png',
+    size: '18 GB',
+    releaseYear: '2024',
+    images: [
+      'https://rokthereaper.com/wp-content/uploads/2026/02/DAR-Feb1826-FEATIMG.png',
+      'https://picsum.photos/seed/darwin1/1200/800',
+      'https://picsum.photos/seed/darwin2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE',
+    shorts: [
+      'https://www.youtube.com/embed/rSWmFitKqAk'
+    ]
   }
 ];
