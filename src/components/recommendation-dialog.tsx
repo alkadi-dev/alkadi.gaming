@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -32,11 +33,11 @@ interface Answers {
 }
 
 const BUDGETS = [
-  { label: '$39', value: 39, capacity: 280 },
-  { label: '$59', value: 59, capacity: 460 },
-  { label: '$79', value: 79, capacity: 930 },
-  { label: '$99', value: 99, capacity: 1400 },
-  { label: '$119', value: 119, capacity: 1800 },
+  { label: '$49', value: 49, capacity: 280 },
+  { label: '$69', value: 69, capacity: 460 },
+  { label: '$89', value: 89, capacity: 930 },
+  { label: '$109', value: 109, capacity: 1400 },
+  { label: '$129', value: 129, capacity: 1800 },
 ];
 
 const GENRES = ['RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
@@ -49,7 +50,7 @@ export function RecommendationDialog() {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState<Step>(1);
   const [answers, setAnswers] = useState<Answers>({
-    budget: 39,
+    budget: 49,
     genres: [],
     style: 'Both',
     players: 'Both',
@@ -62,7 +63,7 @@ export function RecommendationDialog() {
   const reset = () => {
     setStep(1);
     setAnswers({
-      budget: 39,
+      budget: 49,
       genres: [],
       style: 'Both',
       players: 'Both',
@@ -151,7 +152,7 @@ export function RecommendationDialog() {
       games: selected,
       totalSize: currentSize,
       targetCapacity,
-      budget: BUDGETS.find(b => b.value === answers.budget)?.label || '$39'
+      budget: BUDGETS.find(b => b.value === answers.budget)?.label || '$49'
     };
   }, [step, answers]);
 
@@ -403,7 +404,6 @@ export function RecommendationDialog() {
               </div>
             )}
 
-            {/* Navigation Controls */}
             {step !== 'results' && (
               <div className="mt-auto pt-8 flex items-center justify-between border-t border-white/5">
                 <Button

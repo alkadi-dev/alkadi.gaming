@@ -60,7 +60,6 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge, t
             {price}
           </span>
         </div>
-        {/* Game Count Display: Larger on mobile, smaller on desktop */}
         <div className="flex items-center gap-3 px-6 py-3 md:px-4 md:py-2 bg-white/5 rounded-full border border-white/5 shadow-inner">
           <Gamepad2 className="h-5 w-5 md:h-4 md:w-4 text-primary" />
           <span className="text-lg md:text-sm font-black text-white tracking-tight">{games} {t('pricing.games')}</span>
@@ -96,24 +95,24 @@ export function PricingDialog() {
   const { t, language } = useLanguage();
 
   const plans = [
-    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '4–7', price: '$39' },
-    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '7–15', price: '$59' },
+    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '4–7', price: '$49' },
+    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '7–15', price: '$69' },
     { 
       id: '1tb', 
       name: t('pricing.elite'), 
       storage: '1TB', 
       games: '15–25', 
-      price: '$79', 
+      price: '$89', 
       isRecommended: true,
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
     },
-    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '25–35', price: '$99' },
+    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '25–35', price: '$109' },
     { 
       id: '2tb', 
       name: t('pricing.ultra'), 
       storage: '2TB', 
       games: '35–60', 
-      price: '$119',
+      price: '$129',
       isRecommended: true,
       topLabel: t('pricing.bigValue'),
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
