@@ -1843,11 +1843,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sudden Strike 5',
     description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
     categories: ['Action'],
-    thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+    thumbnail: 'https://littlebitofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
     size: '13 GB',
     releaseYear: '2026',
     images: [
-      'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+      'https://littlebitofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
       'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
@@ -2425,6 +2425,25 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE',
     shorts: [
       'https://www.youtube.com/embed/rSWmFitKqAk'
+    ]
+  },
+  {
+    id: 'gow3-remastered',
+    title: 'God of War III Remastered',
+    description: 'In the end, there will be only chaos. One of the most critically acclaimed games of its generation, God of War III has been remastered for the PlayStation 4 system, bringing Kratos’ epic journey of vengeance to life with stunning 1080p visuals and 60fps gameplay.',
+    categories: ['Action'],
+    thumbnail: 'https://image.api.playstation.com/vulcan/img/rnd/202010/2217/63fV3R3Ld48lEis6vW9m4v1p.png',
+    size: '40 GB',
+    releaseYear: '2015',
+    images: [
+      'https://image.api.playstation.com/vulcan/img/rnd/202010/2217/63fV3R3Ld48lEis6vW9m4v1p.png',
+      'https://wallpapercave.com/wp/wp1835706.jpg',
+      'https://wallpapers.com/images/hd/god-of-war-3-remastered-4k-720p-1080p-background-photo-7x8w9x8p5l4v4z2q.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/Qu6fT8vIosU',
+    shorts: [
+      'https://www.youtube.com/embed/jZfIqL_8r9M',
+      'https://www.youtube.com/embed/2X7w7a7N1bU'
     ]
   }
 ];
