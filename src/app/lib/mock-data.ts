@@ -2414,17 +2414,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Darwin\'s Paradox',
     description: 'A high-octane 2.5D action-adventure platformer set in a vibrant world. Uncover the secrets of a futuristic ecosystem where evolution has taken a strange and dangerous turn.',
     categories: ['2D game'],
-    thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/DAR-Feb1826-FEATIMG.png',
+    thumbnail: 'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/darwins_paradox_ps5_games_playstation_ps5_games_playstation_us_3563ef8066.webp',
     size: '18 GB',
     releaseYear: '2024',
     images: [
-      'https://rokthereaper.com/wp-content/uploads/2026/02/DAR-Feb1826-FEATIMG.png',
-      'https://picsum.photos/seed/darwin1/1200/800',
-      'https://picsum.photos/seed/darwin2/1200/800'
+      'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/darwins_paradox_ps5_games_playstation_ps5_games_playstation_us_3563ef8066.webp',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoLsHMCuY-G1Bicb8B5OSlnYpO_yisaA4C58bozKjSJEsOWlN8TUpgdGal_-LwtEw2t4Y96htpki_dlj6VC6YaL7BLFb2r97QkpI_eaajbgzj8_k7pF5Z7b739Mykv5Ed-Y4ESTcgK5BnmFm9TmiFno0l8m35yhw3YVRnkelM8NPbfj9h_L98DQS4IU_U5/s2000/Darwin_s%20Paradox_Screenshot_November_03.png',
+      'https://covergeek.com/wp-content/uploads/2026/03/Darwins-Paradox-Review-Suit-1024x576.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/fuUo7_VaboE',
+    videoUrl: 'https://www.youtube.com/embed/TbgsjUFIBOw',
     shorts: [
-      'https://www.youtube.com/embed/rSWmFitKqAk'
+      'https://www.youtube.com/embed/No5OxzSed4c'
     ]
   },
   {
@@ -2437,7 +2437,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2015',
     images: [
       'https://wallpaperaccess.com/full/788572.png',
-      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8cc25c3c467cb5c8900203c197574c8fc8b26ef5',
+      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
       'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/qKogMfIAAkY',
