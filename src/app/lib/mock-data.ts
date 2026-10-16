@@ -2432,18 +2432,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'God of War III Remastered',
     description: 'In the end, there will be only chaos. One of the most critically acclaimed games of its generation, God of War III has been remastered for the PlayStation 4 system, bringing Kratos’ epic journey of vengeance to life with stunning 1080p visuals and 60fps gameplay.',
     categories: ['Action'],
-    thumbnail: 'https://image.api.playstation.com/vulcan/img/rnd/202010/2217/63fV3R3Ld48lEis6vW9m4v1p.png',
+    thumbnail: 'https://wallpaperaccess.com/full/788572.png',
     size: '40 GB',
     releaseYear: '2015',
     images: [
-      'https://image.api.playstation.com/vulcan/img/rnd/202010/2217/63fV3R3Ld48lEis6vW9m4v1p.png',
-      'https://wallpapercave.com/wp/wp1835706.jpg',
-      'https://wallpapers.com/images/hd/god-of-war-3-remastered-4k-720p-1080p-background-photo-7x8w9x8p5l4v4z2q.jpg'
+      'https://wallpaperaccess.com/full/788572.png',
+      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8cc25c3c467cb5c8900203c197574c8fc8b26ef5',
+      'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Qu6fT8vIosU',
+    videoUrl: 'https://www.youtube.com/embed/qKogMfIAAkY',
     shorts: [
-      'https://www.youtube.com/embed/jZfIqL_8r9M',
-      'https://www.youtube.com/embed/2X7w7a7N1bU'
+      'https://www.youtube.com/embed/J77_sLPnFDs',
+      'https://www.youtube.com/embed/eYvvWMKxgLc',
+      'https://www.youtube.com/embed/Ve-sXqiG3Q8'
     ]
   }
 ];
