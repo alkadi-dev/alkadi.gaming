@@ -45,7 +45,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   // Filter States
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(200);
+  const [maxSize, setMaxSize] = useState(130);
   const [sortOrder, setSortOrder] = useState('title-asc');
   const [hasNoResults, setHasNoResults] = useState(false);
 
@@ -172,7 +172,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   const resetFilters = () => {
     setSelectedCategory('All');
     setSearchQuery('');
-    setMaxSize(200);
+    setMaxSize(130);
     setSortOrder('title-asc');
     setIsRemainingSpaceMode(false);
   };
