@@ -2446,5 +2446,60 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/eYvvWMKxgLc',
       'https://www.youtube.com/embed/Ve-sXqiG3Q8'
     ]
+  },
+  {
+    id: 'cod-mw4',
+    title: 'Call of Duty: Modern Warfare 4',
+    description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
+    size: '48 GB',
+    releaseYear: '2026',
+    images: [
+      'https://wallpapercave.com/wp/wp13127005.jpg',
+      'https://images8.alphacoders.com/131/1314981.png',
+      'https://wallpaperaccess.com/full/11743749.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8',
+    shorts: [
+      'https://www.youtube.com/embed/u-O4uRNBBuc',
+      'https://www.youtube.com/embed/GD4DphX5Sbo'
+    ]
+  },
+  {
+    id: 'aoe3',
+    title: 'Age of Empires III: Definitive Edition',
+    description: 'Command civilizations from across Europe, the Americas, and Asia. Features remastered 4K graphics, new civilizations, and a fully remastered soundtrack.',
+    categories: ['Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/933110/header.jpg',
+    size: '42 GB',
+    releaseYear: '2020',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/933110/header.jpg',
+      'https://images.alphacoders.com/109/1098616.jpg',
+      'https://wallpapercave.com/wp/wp7164998.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/S_T0zR161-4',
+    shorts: [
+      'https://www.youtube.com/embed/S_T0zR161-4'
+    ]
+  },
+  {
+    id: 'gta-trilogy',
+    title: 'GTA: The Trilogy – The Definitive Edition',
+    description: 'Three iconic cities, three epic stories. Play the genre-defining classics of the original Grand Theft Auto Trilogy: GTA III, Vice City, and San Andreas.',
+    categories: ['Open World'],
+    thumbnail: 'https://wallpapercave.com/wp/wp10214819.jpg',
+    size: '35 GB',
+    releaseYear: '2021',
+    images: [
+      'https://wallpapercave.com/wp/wp10214819.jpg',
+      'https://images.alphacoders.com/118/1188360.jpg',
+      'https://wallpapers.com/images/hd/gta-the-trilogy-definitive-edition-wallpaper-2000-x-1000-q0p0u5j5u5u5u5u5.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/D71cBUeAL58',
+    shorts: [
+      'https://www.youtube.com/embed/6_9M3OqO090'
+    ]
   }
 ];
