@@ -813,7 +813,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'cod-mw2',
-    title: 'Call of Duty: Modern Warfare II',
+    title: 'Call of Duty: Modern Warfare 2',
     description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
     categories: ['Shooter'],
     thumbnail: 'https://wallpapercave.com/wp/wp11704100.jpg',
@@ -834,7 +834,7 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'cod-mw3',
-    title: 'Call of Duty: Modern Warfare III',
+    title: 'Call of Duty: Modern Warfare 3',
     description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
     categories: ['Shooter'],
     thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
@@ -851,6 +851,26 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/GD4DphX5Sbo?si=dnf_pnh6B0mn9IOh',
       'https://www.youtube.com/embed/brbTGmcdWTk?si=n-YDcFY-FmwbkzUJ'
     ],
+  },
+  {
+    id: 'cod-mw4',
+    title: 'Call of Duty: Modern Warfare 4',
+    description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp16401874.webp',
+    size: '48 GB',
+    releaseYear: '2026',
+    images: [
+      'https://wallpapercave.com/wp/wp16401874.webp',
+      'https://resizer.ladbiblegroup.com/unsafe/rs:fit:3840:0:0:0/g:sm/q:70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHRkNTE0MWMxNjgyM2YzYzc4LzZhY2NiMTM3N2MzNTBkNDc2YTgxMWZlZS9jYWxsLW9mLWR1dHktbW9kZXJuLXdhcmZhcmUtNC1ndWlkZS1zY3JlZW5zaG90LTEuanBn.webp',
+      'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/rfl-maps-modes/MW4-RFLMAPSMODES-023.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/yLFRQaQT0qM',
+    shorts: [
+      'https://www.youtube.com/embed/MPYzWqsp7eA',
+      'https://www.youtube.com/embed/4ZcVNaz4Pw8',
+      'https://www.youtube.com/embed/lgma1jLucGM'
+    ]
   },
   {
     id: 'crimson',
@@ -2345,7 +2365,7 @@ export const MOCK_GAMES: GameEntry[] = [
     images: [
       'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
       'https://assets.games.gg/blackwood_banner_a4a7396941.webp',
-      'https://external-preview.redd.it/photo-mode-is-coming-to-blackwood-capture-cinematic-shots-v0-Z2Rhd2QwdmthbzloMQVKDdR6hAICtjImUTAQwrKRHe_R1IDsHKQVcG6YXP44.png?width=640&crop=smart&format=pjpg&auto=webp&s=3214465eff53bccd58f0280b83ac28b05a04aa07'
+      'https://external-preview.redd.it/photo-mode-is-coming-to-blackwood-capture-cinematic-shots-v0-Z2Rhd2QwdmthbzloMQVKDdR6hAICtjImUTAQwrKRHe_R1IDsHKQVcG6YXP44.png?width=640&crop=smart&auto=webp&s=3214465eff53bccd58f0280b83ac28b05a04aa07'
     ],
     videoUrl: 'https://www.youtube.com/embed/xVyIEh5DTU0',
     shorts: [
@@ -2445,26 +2465,6 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/J77_sLPnFDs',
       'https://www.youtube.com/embed/eYvvWMKxgLc',
       'https://www.youtube.com/embed/Ve-sXqiG3Q8'
-    ]
-  },
-  {
-    id: 'cod-mw4',
-    title: 'Call of Duty: Modern Warfare 4',
-    description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp16401874.webp',
-    size: '48 GB',
-    releaseYear: '2026',
-    images: [
-      'https://wallpapercave.com/wp/wp16401874.webp',
-      'https://resizer.ladbiblegroup.com/unsafe/rs:fit:3840:0:0:0/g:sm/q:70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHRkNTE0MWMxNjgyM2YzYzc4LzZhY2NiMTM3N2MzNTBkNDc2YTgxMWZlZS9jYWxsLW9mLWR1dHktbW9kZXJuLXdhcmZhcmUtNC1ndWlkZS1zY3JlZW5zaG90LTEuanBn.webp',
-      'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/rfl-maps-modes/MW4-RFLMAPSMODES-023.webp'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/yLFRQaQT0qM',
-    shorts: [
-      'https://www.youtube.com/embed/MPYzWqsp7eA',
-      'https://www.youtube.com/embed/4ZcVNaz4Pw8',
-      'https://www.youtube.com/embed/lgma1jLucGM'
     ]
   },
   {
