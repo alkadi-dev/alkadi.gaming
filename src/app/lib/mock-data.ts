@@ -2452,18 +2452,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare 4',
     description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
     categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp16401874.webp',
     size: '48 GB',
     releaseYear: '2026',
     images: [
-      'https://wallpapercave.com/wp/wp13127005.jpg',
-      'https://images8.alphacoders.com/131/1314981.png',
-      'https://wallpaperaccess.com/full/11743749.jpg'
+      'https://wallpapercave.com/wp/wp16401874.webp',
+      'https://resizer.ladbiblegroup.com/unsafe/rs:fit:3840:0:0:0/g:sm/q:70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHRkNTE0MWMxNjgyM2YzYzc4LzZhY2NiMTM3N2MzNTBkNDc2YTgxMWZlZS9jYWxsLW9mLWR1dHktbW9kZXJuLXdhcmZhcmUtNC1ndWlkZS1zY3JlZW5zaG90LTEuanBn.webp',
+      'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/rfl-maps-modes/MW4-RFLMAPSMODES-023.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8',
+    videoUrl: 'https://www.youtube.com/embed/yLFRQaQT0qM',
     shorts: [
-      'https://www.youtube.com/embed/u-O4uRNBBuc',
-      'https://www.youtube.com/embed/GD4DphX5Sbo'
+      'https://www.youtube.com/embed/MPYzWqsp7eA',
+      'https://www.youtube.com/embed/4ZcVNaz4Pw8',
+      'https://www.youtube.com/embed/lgma1jLucGM'
     ]
   },
   {
