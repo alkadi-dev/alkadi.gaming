@@ -2415,18 +2415,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cities: Skylines II',
     description: 'Build a metropolis from the ground up with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you\'ve never experienced.',
     categories: ['Open World'],
-    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/949230/header.jpg?t=1729087541',
+    thumbnail: 'https://images5.alphacoders.com/133/thumbbig-1337153.webp',
     size: '50 GB',
     releaseYear: '2023',
     images: [
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/949230/header.jpg?t=1729087541',
-      'https://images.alphacoders.com/132/1325143.png',
-      'https://wallpapercave.com/wp/wp12503254.jpg'
+      'https://images5.alphacoders.com/133/thumbbig-1337153.webp',
+      'https://images.ctfassets.net/u73tyf0fa8v1/6jMpAWfQVHDU9AAPomTceI/a67a974530a7d753d61fac3204b80a3d/cities-skylines-ii-city-services-26_District.jpg?w=1920&q=75&fm=webp',
+      'https://cdn.mos.cms.futurecdn.net/pa7rzBpStmWTaXxqDaSJnR.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/Wd_BlnsfXis',
+    videoUrl: 'https://www.youtube.com/embed/7vlKoMi4Qr0',
     shorts: [
-      'https://www.youtube.com/embed/p1o1lGzS3Gk',
-      'https://www.youtube.com/embed/n3o_p3e4m_I'
+      'https://www.youtube.com/embed/2AGuw56uKgA'
     ]
   },
   {
@@ -2472,17 +2471,19 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Age of Empires III: Definitive Edition',
     description: 'Command civilizations from across Europe, the Americas, and Asia. Features remastered 4K graphics, new civilizations, and a fully remastered soundtrack.',
     categories: ['Action'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/933110/header.jpg',
+    thumbnail: 'https://steamah.com/wp-content/uploads/2020/10/1603009052-850x478.jpg',
     size: '42 GB',
     releaseYear: '2020',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/933110/header.jpg',
-      'https://images.alphacoders.com/109/1098616.jpg',
-      'https://wallpapercave.com/wp/wp7164998.jpg'
+      'https://steamah.com/wp-content/uploads/2020/10/1603009052-850x478.jpg',
+      'https://images7.alphacoders.com/398/thumbbig-398405.webp',
+      'https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_age_of_empires_3_04_1680x1050.jpg&height=450&width=800&fill-to-fit&sharpen'
     ],
-    videoUrl: 'https://www.youtube.com/embed/S_T0zR161-4',
+    videoUrl: 'https://www.youtube.com/embed/fCcRNUlE7ek',
     shorts: [
-      'https://www.youtube.com/embed/S_T0zR161-4'
+      'https://www.youtube.com/embed/YJaLPbF5PdY',
+      'https://www.youtube.com/embed/e3Ki6rs7JCk',
+      'https://www.youtube.com/embed/ddLOzQpuI2o'
     ]
   },
   {
