@@ -751,46 +751,6 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 'cod-v',
-    title: 'Call of Duty: Vanguard',
-    description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper’s precision and blast through enemies in North Africa.',
-    categories: ['Shooter'],
-    thumbnail: 'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
-    size: '43 GB',
-    releaseYear: '2021',
-    images: [
-      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
-      'https://wallpapercave.com/wp/wp9729352.jpg',
-      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/legacy/vanguard/vanguard-campaign-3.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/OQ1CwPhE8KQ',
-    shorts: [
-      'https://www.youtube.com/embed/OgNLHBqcm_Q?si=vUR_RZwN0FKYPhiM',
-      'https://www.youtube.com/embed/cC3yw3h3ErY?si=q18Hc1jn2SbRvZPW',
-      'https://www.youtube.com/embed/erQun_LaSC4?si=UslKf-WRk6wmxrWD'
-    ],
-  },
-  {
-    id: 'cod-ww2',
-    title: 'Call of Duty: WWII',
-    description: 'Call of Duty: WWII creates the definitive World War II next-generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp2259852.png',
-    size: '69 GB',
-    releaseYear: '2017',
-    images: [
-      'https://wallpapercave.com/wp/wp2259852.png',
-      'https://wallpapercave.com/wp/wp2203840.png',
-      'https://wallpapercave.com/wp/wp2259859.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/D4Q_XYVescc?si=fu2UAMAHfVTECBcY',
-    shorts: [
-      'https://www.youtube.com/embed/PXeUiqhQtY8?si=vo1_HsltbNZUu1mg',
-      'https://www.youtube.com/embed/57Hs_eUDt8g?si=PwyDdoaUhK8eJmN-',
-      'https://www.youtube.com/embed/LtIw3GlH-xk?si=WCs_MQDEHSoKHkzK'
-    ],
-  },
-  {
     id: 'cod-mw',
     title: 'Call of Duty: Modern Warfare',
     description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
@@ -871,6 +831,46 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/4ZcVNaz4Pw8',
       'https://www.youtube.com/embed/lgma1jLucGM'
     ]
+  },
+  {
+    id: 'cod-v',
+    title: 'Call of Duty: Vanguard',
+    description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper’s precision and blast through enemies in North Africa.',
+    categories: ['Shooter'],
+    thumbnail: 'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
+    size: '43 GB',
+    releaseYear: '2021',
+    images: [
+      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
+      'https://wallpapercave.com/wp/wp9729352.jpg',
+      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/legacy/vanguard/vanguard-campaign-3.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/OQ1CwPhE8KQ',
+    shorts: [
+      'https://www.youtube.com/embed/OgNLHBqcm_Q?si=vUR_RZwN0FKYPhiM',
+      'https://www.youtube.com/embed/cC3yw3h3ErY?si=q18Hc1jn2SbRvZPW',
+      'https://www.youtube.com/embed/erQun_LaSC4?si=UslKf-WRk6wmxrWD'
+    ],
+  },
+  {
+    id: 'cod-ww2',
+    title: 'Call of Duty: WWII',
+    description: 'Call of Duty: WWII creates the definitive World War II next-generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp2259852.png',
+    size: '69 GB',
+    releaseYear: '2017',
+    images: [
+      'https://wallpapercave.com/wp/wp2259852.png',
+      'https://wallpapercave.com/wp/wp2203840.png',
+      'https://wallpapercave.com/wp/wp2259859.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/D4Q_XYVescc?si=fu2UAMAHfVTECBcY',
+    shorts: [
+      'https://www.youtube.com/embed/PXeUiqhQtY8?si=vo1_HsltbNZUu1mg',
+      'https://www.youtube.com/embed/57Hs_eUDt8g?si=PwyDdoaUhK8eJmN-',
+      'https://www.youtube.com/embed/LtIw3GlH-xk?si=WCs_MQDEHSoKHkzK'
+    ],
   },
   {
     id: 'crimson',
@@ -1188,7 +1188,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/POz1-EmLsTY',
     shorts: [
       'https://www.youtube.com/embed/k8aXqeQs9bE',
-      'https://www.youtube.com/embed/JsAW9PqQje4',
+      'https://www.youtube.com/embed/status/JsAW9PqQje4',
       'https://www.youtube.com/embed/Lr25tudS-ec'
     ],
     isRecommended: true,
@@ -2231,15 +2231,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'ROMEO IS A DEAD MAN',
     description: 'A stylish noir action-adventure. Navigate a city of shadows, uncover a deep conspiracy, and survive the consequences of your past in this cinematic journey of revenge.',
     categories: ['Adventure'],
-    thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
+    thumbnail: 'https://i0.wp.com/www.consolecreatures.com/wp-content/uploads/2025/12/Romeo-Is-A-Deadman-Feb-2026.webp?fit=1280,720&ssl=1',
     size: '25 GB',
     releaseYear: '2026',
     images: [
-      'https://wallpapercave.com/wp/wp11468139.jpg',
-      'https://picsum.photos/seed/romeo1/1200/800',
-      'https://picsum.photos/seed/romeo2/1200/800'
+      'https://i0.wp.com/www.consolecreatures.com/wp-content/uploads/2025/12/Romeo-Is-A-Deadman-Feb-2026.webp?fit=1280,720&ssl=1',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/romeo-is-a-deadman-trailer-zombies.jpg?q=49&fit=crop&w=480&h=270&dpr=2',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/romeo-is-a-deadman-trailer-romeo.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
     ],
-    videoUrl: 'https://www.youtube.com/embed/vovkzbtYBC8',
+    videoUrl: 'https://www.youtube.com/embed/nW1cE6sj6h8',
+    shorts: [
+      'https://www.youtube.com/embed/IROL9HaRWvg'
+    ]
   },
   {
     id: 'arma-reforger',
@@ -2456,7 +2459,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2015',
     images: [
       'https://wallpaperaccess.com/full/788572.png',
-      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
+      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8cc25c3c467cb5c8900203c197574c8fc8b26ef5',
       'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/qKogMfIAAkY',
@@ -2491,17 +2494,17 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'GTA: The Trilogy – The Definitive Edition',
     description: 'Three iconic cities, three epic stories. Play the genre-defining classics of the original Grand Theft Auto Trilogy: GTA III, Vice City, and San Andreas.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp10214819.jpg',
+    thumbnail: 'https://wallpaperaccess.com/full/7841395.jpg',
     size: '35 GB',
     releaseYear: '2021',
     images: [
-      'https://wallpapercave.com/wp/wp10214819.jpg',
-      'https://images.alphacoders.com/118/1188360.jpg',
-      'https://wallpapers.com/images/hd/gta-the-trilogy-definitive-edition-wallpaper-2000-x-1000-q0p0u5j5u5u5u5u5.jpg'
+      'https://wallpaperaccess.com/full/7841395.jpg',
+      'https://media-rockstargames-com.akamaized.net/mfe-r19/prod/__common/img/c37f2dbd02b15d29abfce91294f29403.jpg',
+      'https://wallpaperaccess.com/full/7841403.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/D71cBUeAL58',
+    videoUrl: 'https://www.youtube.com/embed/2BFhjfqCcis',
     shorts: [
-      'https://www.youtube.com/embed/6_9M3OqO090'
+      'https://www.youtube.com/embed/U1s6sgfTRM4'
     ]
   }
 ];
