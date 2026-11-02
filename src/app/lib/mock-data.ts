@@ -751,8 +751,8 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 'cod-mw',
-    title: 'Call of Duty: Modern Warfare',
+    id: 'cod-mw-1',
+    title: 'Call of Duty: Modern Warfare 1',
     description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
     categories: ['Shooter'],
     thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
@@ -1863,11 +1863,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sudden Strike 5',
     description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
     categories: ['Action'],
-    thumbnail: 'https://littlebitofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2808550/b605fb58a451cd8ff5928e5576c216e201106211/header.jpg?t=1790060517',
     size: '13 GB',
     releaseYear: '2026',
     images: [
-      'https://littlebitofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2808550/b605fb58a451cd8ff5928e5576c216e201106211/header.jpg?t=1790060517',
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
       'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
@@ -2459,7 +2459,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2015',
     images: [
       'https://wallpaperaccess.com/full/788572.png',
-      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8cc25c3c467cb5c8900203c197574c8fc8b26ef5',
+      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
       'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/qKogMfIAAkY',
@@ -2506,5 +2506,65 @@ export const MOCK_GAMES: GameEntry[] = [
     shorts: [
       'https://www.youtube.com/embed/U1s6sgfTRM4'
     ]
+  },
+  {
+    id: 'castlevania-belmonts-curse',
+    title: "Castlevania: Belmont's Curse",
+    description: "An epic return to the legendary vampire-hunting saga. Master the Whip and explore a cursed castle filled with gothic horrors and ancient secrets.",
+    categories: ['Action'],
+    thumbnail: 'https://picsum.photos/seed/castlevania/800/450',
+    size: '12 GB',
+    releaseYear: '2025',
+    images: [
+      'https://picsum.photos/seed/castlevania-1/1200/800',
+      'https://picsum.photos/seed/castlevania-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: []
+  },
+  {
+    id: 'toy-story-adventure',
+    title: "Toy Story: The Video Game",
+    description: "Join Woody, Buzz, and the rest of the gang in a magical adventure that brings the beloved Pixar world to life. Explore Andy's room and beyond!",
+    categories: ['Adventure'],
+    thumbnail: 'https://picsum.photos/seed/toystory/800/450',
+    size: '15 GB',
+    releaseYear: '2024',
+    images: [
+      'https://picsum.photos/seed/toystory-1/1200/800',
+      'https://picsum.photos/seed/toystory-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: []
+  },
+  {
+    id: 'bloodborne',
+    title: "Bloodborne",
+    description: "A terrifying action RPG from the creators of Dark Souls. Navigate the plague-ridden city of Yharnam and face nightmarish creatures in fast-paced combat.",
+    categories: ['RPG'],
+    thumbnail: 'https://picsum.photos/seed/bloodborne/800/450',
+    size: '41 GB',
+    releaseYear: '2015',
+    images: [
+      'https://picsum.photos/seed/bloodborne-1/1200/800',
+      'https://picsum.photos/seed/bloodborne-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: []
+  },
+  {
+    id: 'driveclub',
+    title: "Driveclub",
+    description: "Experience the heart-pounding thrill of high-speed racing. Connect with friends and race in a variety of stunning locations around the world.",
+    categories: ['Race'],
+    thumbnail: 'https://picsum.photos/seed/driveclub/800/450',
+    size: '30 GB',
+    releaseYear: '2014',
+    images: [
+      'https://picsum.photos/seed/driveclub-1/1200/800',
+      'https://picsum.photos/seed/driveclub-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: []
   }
 ];
