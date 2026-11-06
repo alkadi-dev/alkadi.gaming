@@ -2512,15 +2512,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Castlevania: Belmont's Curse",
     description: "An epic return to the legendary vampire-hunting saga. Master the Whip and explore a cursed castle filled with gothic horrors and ancient secrets.",
     categories: ['Action'],
-    thumbnail: 'https://picsum.photos/seed/castlevania/800/450',
+    thumbnail: 'https://www.metacritic.com/a/img/resize/1a73e028f22e5e8815c44f7bdb03bb57886d0740/catalog/provider/7/2/7-1791873931.jpg?auto=webp&fit=contain&height=480&quality=70',
     size: '12 GB',
     releaseYear: '2025',
     images: [
-      'https://picsum.photos/seed/castlevania-1/1200/800',
-      'https://picsum.photos/seed/castlevania-2/1200/800'
+      'https://www.metacritic.com/a/img/resize/1a73e028f22e5e8815c44f7bdb03bb57886d0740/catalog/provider/7/2/7-1791873931.jpg?auto=webp&fit=contain&height=480&quality=70',
+      'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_2.0/store/software/switch/70010000116851/7a387161a475070cd7a109f32420f223ba6a9eb2296568c5bba28ca9254f6d79',
+      'https://media.gamestop.com/i/gamestop/20033149_SCR02?w=1256&h=664&fmt=auto'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: []
+    videoUrl: 'https://www.youtube.com/embed/zdqKYXa2pUI',
+    shorts: [
+      'https://www.youtube.com/embed/sNrvFqPYmac'
+    ]
   },
   {
     id: 'toy-story-adventure',
@@ -2542,15 +2545,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Bloodborne",
     description: "A terrifying action RPG from the creators of Dark Souls. Navigate the plague-ridden city of Yharnam and face nightmarish creatures in fast-paced combat.",
     categories: ['RPG'],
-    thumbnail: 'https://picsum.photos/seed/bloodborne/800/450',
+    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d84f1809-9054-430c-95fa-27b17818bcea/dfli5qm-4b933a5d-1526-4d7e-85a9-4b4984e62bcb.png/v1/fill/w_1280,h_720,q_80,strp/ps4_bloodborne_cover_by_indra135_dfli5qm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2Q4NGYxODA5LTkwNTQtNDMwYy05NWZhLTI3YjE3ODE4YmNlYS9kZmxpNXFtLTRiOTMzYTVkLTE1MjYtNGQ3ZS04NWE5LTRiNDk4NGU2MmJjYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFoZXz5RkH9hFqmMhLgLGd3WDe-wMg4lPKaXG0EEJms',
     size: '41 GB',
     releaseYear: '2015',
     images: [
-      'https://picsum.photos/seed/bloodborne-1/1200/800',
-      'https://picsum.photos/seed/bloodborne-2/1200/800'
+      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d84f1809-9054-430c-95fa-27b17818bcea/dfli5qm-4b933a5d-1526-4d7e-85a9-4b4984e62bcb.png/v1/fill/w_1280,h_720,q_80,strp/ps4_bloodborne_cover_by_indra135_dfli5qm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2Q4NGYxODA5LTkwNTQtNDMwYy05NWZhLTI3YjE3ODE4YmNlYS9kZmxpNXFtLTRiOTMzYTVkLTE1MjYtNGQ3ZS04NWE5LTRiNDk4NGU2MmJjYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFoZXz5RkH9hFqmMhLgLGd3WDe-wMg4lPKaXG0EEJms',
+      'https://cdn.mos.cms.futurecdn.net/HYgVWfc7Vi2zK2m4QHVb6C.jpg',
+      'https://wallpaperaccess.com/full/1111499.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: []
+    videoUrl: 'https://www.youtube.com/embed/2Crk_GpxGQE',
+    shorts: [
+      'https://www.youtube.com/embed/aGECZFPjIW0'
+    ]
   },
   {
     id: 'driveclub',
