@@ -2566,5 +2566,20 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     shorts: []
+  },
+  {
+    id: 'onimusha-sword',
+    title: 'Onimusha: Way of the Sword',
+    description: 'Master the art of the blade and unleash powerful oni magic in this epic return to the Onimusha series. Set in feudal Japan, battle through legions of demons to restore peace to the land.',
+    categories: ['Action'],
+    thumbnail: 'https://picsum.photos/seed/onimusha/800/450',
+    size: '35 GB',
+    releaseYear: '2026',
+    images: [
+      'https://picsum.photos/seed/onimusha-1/1200/800',
+      'https://picsum.photos/seed/onimusha-2/1200/800'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shorts: []
   }
 ];
