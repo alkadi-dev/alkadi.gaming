@@ -82,7 +82,7 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge, t
               <X className="h-3 w-3 text-destructive" />
             )}
           </div>
-          <span className={cn("text-xs font-medium", hasFreeDelivery ? "text-white/70" : "text-muted-foreground line-through")}>
+          <span className={cn("text-xs font-medium", hasFreeDelivery ? "text-white/70" : "text-muted-foreground")}>
             {t('pricing.freeDelivery')}
           </span>
         </div>
