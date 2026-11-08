@@ -94,6 +94,8 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReachedDesc': 'You have exceeded the 280 GB threshold and are now using the 500 GB drive (Limit: 460 GB). Keep going?',
     'alert.keepGoing': 'Keep Going',
     'alert.reviewDelete': 'Review & Delete',
+    'alert.actionRequired': 'Storage Limit Reached',
+    'alert.removeGames': 'You reached more the storage, please remove some game.',
     'upgrade.title': 'Special Upgrade Offer',
     'upgrade.message': 'Get 40% OFF by upgrading to the 1TB hard drive instead of choosing the 500GB option.',
     'upgrade.btnUpgrade': 'Upgrade to 1TB',
@@ -148,7 +150,6 @@ const translations: Record<Language, Record<string, string>> = {
     'recommend.results.total': 'Total: {size} GB',
     'recommend.results.games': '{count} Games',
     'recommend.results.apply': 'Apply Selection to Checkout',
-    // Categories
     'cat.All': 'All',
     'cat.Recommended': 'Recommended',
     'cat.2 players': '2 Players',
@@ -243,6 +244,8 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReachedDesc': 'لقد تجاوزت عتبة 280 جيجابايت وتستخدم الآن قرص 500 جيجابايت (الحد: 460 جيجابايت). هل تستمر؟',
     'alert.keepGoing': 'استمر',
     'alert.reviewDelete': 'مراجعة وحذف',
+    'alert.actionRequired': 'وصلت للحد الأقصى',
+    'alert.removeGames': 'لقد وصلت لمساحة تخزين زائدة، يرجى حذف بعض الألعاب.',
     'upgrade.title': 'عرض ترقية خاص',
     'upgrade.message': 'احصل على خصم 40% عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.',
     'upgrade.btnUpgrade': 'ترقية إلى 1 تيرابايت',
@@ -297,7 +300,6 @@ const translations: Record<Language, Record<string, string>> = {
     'recommend.results.total': 'الإجمالي: {size} جيجابايت',
     'recommend.results.games': '{count} ألعاب',
     'recommend.results.apply': 'تطبيق الاختيار على السلة',
-    // Categories
     'cat.All': 'الكل',
     'cat.Recommended': 'موصى به',
     'cat.2 players': 'لاعبان',
