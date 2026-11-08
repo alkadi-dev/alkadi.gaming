@@ -33,11 +33,10 @@ interface Answers {
 }
 
 const BUDGETS = [
-  { label: '$49', value: 49, capacity: 280 },
+  { label: '$39', value: 39, capacity: 280 },
   { label: '$69', value: 69, capacity: 460 },
   { label: '$89', value: 89, capacity: 930 },
-  { label: '$109', value: 109, capacity: 1400 },
-  { label: '$129', value: 129, capacity: 1800 },
+  { label: '$139', value: 139, capacity: 1800 },
 ];
 
 const GENRES = ['RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
@@ -50,7 +49,7 @@ export function RecommendationDialog() {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState<Step>(1);
   const [answers, setAnswers] = useState<Answers>({
-    budget: 49,
+    budget: 39,
     genres: [],
     style: 'Both',
     players: 'Both',
@@ -63,7 +62,7 @@ export function RecommendationDialog() {
   const reset = () => {
     setStep(1);
     setAnswers({
-      budget: 49,
+      budget: 39,
       genres: [],
       style: 'Both',
       players: 'Both',
@@ -152,7 +151,7 @@ export function RecommendationDialog() {
       games: selected,
       totalSize: currentSize,
       targetCapacity,
-      budget: BUDGETS.find(b => b.value === answers.budget)?.label || '$49'
+      budget: BUDGETS.find(b => b.value === answers.budget)?.label || '$39'
     };
   }, [step, answers]);
 
@@ -198,7 +197,7 @@ export function RecommendationDialog() {
 
           <div className="min-h-[350px] flex flex-col">
             {step === 1 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="col-span-full mb-4 text-center">
                   <h3 className="text-lg font-bold text-white/90">{t('recommend.q1')}</h3>
                 </div>

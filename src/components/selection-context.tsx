@@ -90,8 +90,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
 
   // Calculate current capacity milestone
   const currentCapacity = useMemo(() => {
-    if (totalSizeNum > 1400) return 1800;
-    if (totalSizeNum > 930) return 1400;
+    if (totalSizeNum > 930) return 1800; // Jump straight to 2TB
     if (totalSizeNum > 460) return 930;
     if (totalSizeNum > 280) return 460;
     return 280;
@@ -121,10 +120,6 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
       if (totalSizeNum >= 920) return 'critical';
       if (totalSizeNum >= 900) return 'medium';
       if (totalSizeNum >= 870) return 'low';
-    } else if (currentCapacity === 1400) {
-      if (totalSizeNum >= 1380) return 'critical';
-      if (totalSizeNum >= 1350) return 'medium';
-      if (totalSizeNum >= 1300) return 'low';
     } else if (currentCapacity === 1800) {
       if (totalSizeNum >= 1790) return 'critical';
       if (totalSizeNum >= 1750) return 'medium';

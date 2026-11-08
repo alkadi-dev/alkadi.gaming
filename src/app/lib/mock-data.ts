@@ -818,7 +818,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
     categories: ['Shooter'],
     thumbnail: 'https://wallpapercave.com/wp/wp16401874.webp',
-    size: '48 GB',
+    size: '58 GB',
     releaseYear: '2026',
     images: [
       'https://wallpapercave.com/wp/wp16401874.webp',
@@ -830,7 +830,8 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/MPYzWqsp7eA',
       'https://www.youtube.com/embed/4ZcVNaz4Pw8',
       'https://www.youtube.com/embed/lgma1jLucGM'
-    ]
+    ],
+    isRecommended: true,
   },
   {
     id: 'cod-v',
@@ -972,7 +973,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/YPWqU9Pmte8?si=R2sRn-2l42gMvW5z',
       'https://www.youtube.com/embed/jOSGQVJ0iFw?si=IQQe3pgan8AGaeqP'
     ]
+    ,isRecommended: true,
   },
+  
   {
     id: 'fc4',
     title: 'Far Cry 4',
@@ -1177,7 +1180,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Requiem',
     description: 'Embark on a heartrending journey into a brutal, breathtaking world, and discover the cost of saving those you love in a desperate struggle for survival.',
     categories: ['Horror'],
-    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmfff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.pngIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
+    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
     size: '56 GB',
     releaseYear: '2026',
     images: [
@@ -1940,7 +1943,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
     categories: ['2D game'],
     thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
-    size: '12 GB',
+    size: '3 GB',
     releaseYear: '2026',
     images: [
       'https://wallpapercave.com/wp/wp13317782.png',
@@ -1958,7 +1961,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
     categories: ['2D game'],
     thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
-    size: '8 GB',
+    size: '4 GB',
     releaseYear: '2026',
     images: [
       'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
@@ -2015,7 +2018,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). From the creators of Brothers – A Tale of Two Sons comes A Way Out, an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
     categories: ['2 players'],
     thumbnail: 'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
-    size: '22 GB',
+    size: '15 GB',
     releaseYear: '2018',
     images: [
       'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
@@ -2035,7 +2038,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
     categories: ['Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
-    size: '24 GB',
+    size: '15 GB',
     releaseYear: '2021',
     images: [
       'https://wallpapercave.com/wp/wp7593275.jpg',
@@ -2095,7 +2098,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
     categories: ['Horror'],
     thumbnail: 'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
-    size: '24 GB',
+    size: '22 GB',
     releaseYear: '2021',
     images: [
       'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
@@ -2153,7 +2156,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Uncover the dark secrets of a gothic world in this atmospheric horror experience. Battle nightmarish creatures as you seek to break an ancient curse that has plagued the land for centuries.',
     categories: ['RPG'],
     thumbnail: 'https://preview.redd.it/the-blood-of-dawnwalker-cover-art-v0-q7zi8ed6r6bg1.jpeg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
-    size: '45 GB',
+    size: '40 GB',
     releaseYear: '2025',
     images: [
       'https://preview.redd.it/the-blood-of-dawnwalker-cover-art-v0-q7zi8ed6r6bg1.jpeg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
@@ -2173,7 +2176,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Take control of the action and be at the center of your own adventure.',
     categories: ['Open World'],
     thumbnail: 'https://wallpapercave.com/wp/wp12278034.jpg',
-    size: '73 GB',
+    size: '42 GB',
     releaseYear: '2023',
     images: [
       'https://wallpapercave.com/wp/wp12278034.jpg',
@@ -2193,7 +2196,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "Dragon’s Dogma 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen to their vocation and party.",
     categories: ['RPG'],
     thumbnail: 'https://www.rpgfan.com/wp-content/uploads/2023/05/Dragons-Dogma-2-Artwork-001-1280x720.jpg',
-    size: '65 GB',
+    size: '42 GB',
     releaseYear: '2024',
     images: [
       'https://www.rpgfan.com/wp-content/uploads/2023/05/Dragons-Dogma-2-Artwork-001-1280x720.jpg',
@@ -2212,7 +2215,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The sequel to the acclaimed soulslike. Possess new warriors, master lethal combat, and face even greater horrors in a decaying world that tests your sanity and skill.',
     categories: ['Action'],
     thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202607/0618/218e06402e3bb0b92b96399a827a9033a18335c239789bbb.jpg',
-    size: '35 GB',
+    size: '52 GB',
     releaseYear: '2025',
     images: [
       'https://image.api.playstation.com/vulcan/ap/rnd/202607/0618/218e06402e3bb0b92b96399a827a9033a18335c239789bbb.jpg',
@@ -2232,7 +2235,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A stylish noir action-adventure. Navigate a city of shadows, uncover a deep conspiracy, and survive the consequences of your past in this cinematic journey of revenge.',
     categories: ['Adventure'],
     thumbnail: 'https://i0.wp.com/www.consolecreatures.com/wp-content/uploads/2025/12/Romeo-Is-A-Deadman-Feb-2026.webp?fit=1280,720&ssl=1',
-    size: '25 GB',
+    size: '24 GB',
     releaseYear: '2026',
     images: [
       'https://i0.wp.com/www.consolecreatures.com/wp-content/uploads/2025/12/Romeo-Is-A-Deadman-Feb-2026.webp?fit=1280,720&ssl=1',
@@ -2250,7 +2253,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "Experience authentic Cold War combat and join the fight for the island of Everon. Return to the series' roots in this massive, versatile military sandbox.",
     categories: ['Action'],
     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg',
-    size: '40 GB',
+    size: '19 GB',
     releaseYear: '2024',
     images: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg',
@@ -2265,7 +2268,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A grand action RPG where you set out on an adventure to find the pieces of a broken relic and restore the world to its former glory. Master diverse combat styles.',
     categories: ['RPG'],
     thumbnail: 'https://assets.games.gg/the_relic_first_guardian_gallery_1_30934ab116.webp',
-    size: '30 GB',
+    size: '20 GB',
     releaseYear: '2025',
     images: [
       'https://assets.games.gg/the_relic_first_guardian_gallery_1_30934ab116.webp',
@@ -2285,7 +2288,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Experience the first-ever open world Star Wars™ game. Explore distinct planets across the galaxy, both iconic and new, as you seek freedom and a new life.',
     categories: ['Open World'],
     thumbnail: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/ddfa6481-b52a-4fff-9cfd-0bb06f184505.__CR0,0,970,600_PT0_SX970_V1___.jpg',
-    size: '65 GB',
+    size: '41 GB',
     releaseYear: '2024',
     images: [
       'https://m.media-amazon.com/images/S/aplus-media-library-service-media/ddfa6481-b52a-4fff-9cfd-0bb06f184505.__CR0,0,970,600_PT0_SX970_V1___.jpg',
@@ -2305,7 +2308,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
     categories: ['Shooter'],
     thumbnail: 'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/00_GoW_EDAY_CoverArt-6a15d9095e1c1-scaled.jpg',
-    size: '45 GB',
+    size: '79 GB',
     releaseYear: '2025',
     images: [
       'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/00_GoW_EDAY_CoverArt-6a15d9095e1c1-scaled.jpg',
@@ -2324,7 +2327,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The definitive edition of the legendary RPG, now with stunning 4K visuals, enhanced textures, and ray-tracing. Embark once more on Geralt\'s epic quest with all expansions included.',
     categories: ['RPG'],
     thumbnail: 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp',
-    size: '55 GB',
+    size: '40 GB',
     releaseYear: '2025',
     images: [
       'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp',
@@ -2343,7 +2346,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Explore the mysterious Oldest House once again in this standalone action-adventure. Master new supernatural abilities and uncover deep-rooted secrets within the Federal Bureau of Control.',
     categories: ['Action'],
     thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202605/2811/e104ddf9aea2f76d5c198e5b0861eb086bbef105d6d47bee.jpg',
-    size: '42 GB',
+    size: '61 GB',
     releaseYear: '2025',
     images: [
       'https://image.api.playstation.com/vulcan/ap/rnd/202605/2811/e104ddf9aea2f76d5c198e5b0861eb086bbef105d6d47bee.jpg',
@@ -2363,7 +2366,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Survive the night in the cursed woods of Blackwood. A first-person psychological horror experience that tests your courage against ancient terrors lurking in the shadows.',
     categories: ['Action'],
     thumbnail: 'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
-    size: '28 GB',
+    size: '7 GB',
     releaseYear: '2024',
     images: [
       'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
@@ -2381,7 +2384,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A new entry in the iconic survival horror series. Navigate a town shrouded in fog and face the manifestations of your deepest fears in this atmospheric and narrative-driven journey.',
     categories: ['Horror'],
     thumbnail: 'https://i0.wp.com/waytoomany.games/wp-content/uploads/2026/06/SILENT-HILL-Townfall_Key-Art-3840-%C3%97-2160.jpg?fit=3840,2160&ssl=1',
-    size: '30 GB',
+    size: '41 GB',
     releaseYear: '2025',
     images: [
       'https://i0.wp.com/waytoomany.games/wp-content/uploads/2026/06/SILENT-HILL-Townfall_Key-Art-3840-%C3%97-2160.jpg?fit=3840,2160&ssl=1',
@@ -2400,7 +2403,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Relive the legendary battles of the Three Kingdoms in this stunning remake. Experience visceral 1-vs-1000 action with modernized combat mechanics and breathtaking visuals.',
     categories: ['2 players'],
     thumbnail: 'https://www.tech-gaming.com/wp-content/uploads/2026/10/DYNASTY-WARRIORS-3-Complete-Edition-Remastered-1.jpg',
-    size: '20 GB',
+    size: '23 GB',
     releaseYear: '2025',
     images: [
       'https://www.tech-gaming.com/wp-content/uploads/2026/10/DYNASTY-WARRIORS-3-Complete-Edition-Remastered-1.jpg',
@@ -2419,7 +2422,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Build a metropolis from the ground up with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you\'ve never experienced.',
     categories: ['Open World'],
     thumbnail: 'https://images5.alphacoders.com/133/thumbbig-1337153.webp',
-    size: '50 GB',
+    size: '43 GB',
     releaseYear: '2023',
     images: [
       'https://images5.alphacoders.com/133/thumbbig-1337153.webp',
@@ -2437,7 +2440,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A high-octane 2.5D action-adventure platformer set in a vibrant world. Uncover the secrets of a futuristic ecosystem where evolution has taken a strange and dangerous turn.',
     categories: ['2D game'],
     thumbnail: 'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/darwins_paradox_ps5_games_playstation_ps5_games_playstation_us_3563ef8066.webp',
-    size: '18 GB',
+    size: '5 GB',
     releaseYear: '2024',
     images: [
       'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/darwins_paradox_ps5_games_playstation_ps5_games_playstation_us_3563ef8066.webp',
@@ -2455,7 +2458,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'In the end, there will be only chaos. One of the most critically acclaimed games of its generation, God of War III has been remastered for the PlayStation 4 system, bringing Kratos’ epic journey of vengeance to life with stunning 1080p visuals and 60fps gameplay.',
     categories: ['Action'],
     thumbnail: 'https://wallpaperaccess.com/full/788572.png',
-    size: '40 GB',
+    size: '23 GB',
     releaseYear: '2015',
     images: [
       'https://wallpaperaccess.com/full/788572.png',
@@ -2475,7 +2478,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Command civilizations from across Europe, the Americas, and Asia. Features remastered 4K graphics, new civilizations, and a fully remastered soundtrack.',
     categories: ['Action'],
     thumbnail: 'https://steamah.com/wp-content/uploads/2020/10/1603009052-850x478.jpg',
-    size: '42 GB',
+    size: '21 GB',
     releaseYear: '2020',
     images: [
       'https://steamah.com/wp-content/uploads/2020/10/1603009052-850x478.jpg',
@@ -2495,7 +2498,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Three iconic cities, three epic stories. Play the genre-defining classics of the original Grand Theft Auto Trilogy: GTA III, Vice City, and San Andreas.',
     categories: ['Open World'],
     thumbnail: 'https://wallpaperaccess.com/full/7841395.jpg',
-    size: '35 GB',
+    size: '24 GB',
     releaseYear: '2021',
     images: [
       'https://wallpaperaccess.com/full/7841395.jpg',
@@ -2513,7 +2516,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "An epic return to the legendary vampire-hunting saga. Master the Whip and explore a cursed castle filled with gothic horrors and ancient secrets.",
     categories: ['Action'],
     thumbnail: 'https://www.metacritic.com/a/img/resize/1a73e028f22e5e8815c44f7bdb03bb57886d0740/catalog/provider/7/2/7-1791873931.jpg?auto=webp&fit=contain&height=480&quality=70',
-    size: '12 GB',
+    size: '5 GB',
     releaseYear: '2025',
     images: [
       'https://www.metacritic.com/a/img/resize/1a73e028f22e5e8815c44f7bdb03bb57886d0740/catalog/provider/7/2/7-1791873931.jpg?auto=webp&fit=contain&height=480&quality=70',
@@ -2527,11 +2530,11 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'toy-story-adventure',
-    title: "Toy Story: The Video Game",
+    title: "Toy Story",
     description: "Join Woody, Buzz, and the rest of the gang in a magical adventure that brings the beloved Pixar world to life. Explore Andy's room and beyond!",
     categories: ['Adventure'],
     thumbnail: 'https://i.pinimg.com/originals/1b/d3/a2/1bd3a2d351e0a1fb8c30887e92bb477f.jpg',
-    size: '15 GB',
+    size: '4 GB',
     releaseYear: '2024',
     images: [
       'https://i.pinimg.com/originals/1b/d3/a2/1bd3a2d351e0a1fb8c30887e92bb477f.jpg',
@@ -2549,7 +2552,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "A terrifying action RPG from the creators of Dark Souls. Navigate the plague-ridden city of Yharnam and face nightmarish creatures in fast-paced combat.",
     categories: ['RPG'],
     thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d84f1809-9054-430c-95fa-27b17818bcea/dfli5qm-4b933a5d-1526-4d7e-85a9-4b4984e62bcb.png/v1/fill/w_1280,h_720,q_80,strp/ps4_bloodborne_cover_by_indra135_dfli5qm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2Q4NGYxODA5LTkwNTQtNDMwYy05NWZhLTI3YjE3ODE4YmNlYS9kZmxpNXFtLTRiOTMzYTVkLTE1MjYtNGQ3ZS04NWE5LTRiNDk4NGU2MmJjYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFoZXz5RkH9hFqmMhLgLGd3WDe-wMg4lPKaXG0EEJms',
-    size: '41 GB',
+    size: '15 GB',
     releaseYear: '2015',
     images: [
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d84f1809-9054-430c-95fa-27b17818bcea/dfli5qm-4b933a5d-1526-4d7e-85a9-4b4984e62bcb.png/v1/fill/w_1280,h_720,q_80,strp/ps4_bloodborne_cover_by_indra135_dfli5qm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2Q4NGYxODA5LTkwNTQtNDMwYy05NWZhLTI3YjE3ODE4YmNlYS9kZmxpNXFtLTRiOTMzYTVkLTE1MjYtNGQ3ZS04NWE5LTRiNDk4NGU2MmJjYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFoZXz5RkH9hFqmMhLgLGd3WDe-wMg4lPKaXG0EEJms',
@@ -2567,7 +2570,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: "Experience the heart-pounding thrill of high-speed racing. Connect with friends and race in a variety of stunning locations around the world.",
     categories: ['Race'],
     thumbnail: 'https://wallpaperaccess.com/full/4391122.jpg',
-    size: '30 GB',
+    size: '10 GB',
     releaseYear: '2014',
     images: [
       'https://wallpaperaccess.com/full/4391122.jpg',
@@ -2587,7 +2590,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Master the art of the blade and unleash powerful oni magic in this epic return to the Onimusha series. Set in feudal Japan, battle through legions of demons to restore peace to the land.',
     categories: ['Action'],
     thumbnail: 'https://eu-central-1-gamescom.graphassets.com/AMwDHZTUSMaIlRlMFLL7Qz/resize=w:1120,h:524,fit:crop/sharpen=amount:1/output=format:webp,quality:95/cms6312fs5ao507urglj3e8rp',
-    size: '35 GB',
+    size: '40 GB',
     releaseYear: '2026',
     images: [
       'https://eu-central-1-gamescom.graphassets.com/AMwDHZTUSMaIlRlMFLL7Qz/resize=w:1120,h:524,fit:crop/sharpen=amount:1/output=format:webp,quality:95/cms6312fs5ao507urglj3e8rp',

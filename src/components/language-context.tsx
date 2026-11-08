@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
@@ -84,9 +85,9 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.maxStorage': 'Maximum Storage Reached!',
     'alert.maxStorageDesc': 'You have reached the absolute maximum storage limit of 1800 GB. You must remove some games to continue.',
     'alert.approaching': 'Approaching Final Limit',
-    'alert.approachingDesc': 'You have exceeded 1400 GB. Would you like to stop and remove some games, or confirm that you wish to continue towards the 1800 GB limit?',
+    'alert.approachingDesc': 'You have exceeded your current capacity. Would you like to stop and remove some games, or confirm that you wish to continue towards the 1800 GB limit?',
     'alert.surpassed930': 'Surpassed 930 GB!',
-    'alert.surpassed930Desc': 'You have surpassed 930 GB. Your capacity is now transitioning to the 1.5 TB drive (Limit: 1400 GB). Keep going?',
+    'alert.surpassed930Desc': 'You have surpassed 930 GB. Your capacity is now transitioning to the 2 TB drive (Limit: 1800 GB). Keep going?',
     'alert.1tbRequired': '1 TB Drive Required',
     'alert.1tbRequiredDesc': 'You have exceeded 460 GB. You are now using the 1 TB drive capacity (Limit: 930 GB). Continue adding?',
     'alert.500gbReached': '500 GB Drive Reached',
@@ -185,6 +186,7 @@ const translations: Record<Language, Record<string, string>> = {
     'how.step5.desc': 'احصل على ألعابك واصلة مباشرة إلى منزلك وجاهزة للعب في وقت قياسي.',
     'how.step6.title': 'دعم ما بعد البيع',
     'how.step6.desc': 'فريق الدعم لدينا متاح دائماً لمساعدتك في حل أي مشكلات تقنية أو استفسارات بسرعة بعد استلام ألعابك.',
+    'how.title': 'كيف يعمل',
     'library.title': 'المكتبة',
     'library.fitting': 'الألعاب التي تناسب سعة {space} جيجابايت المتبقية لديك',
     'filters.label': 'الفلاتر',
@@ -232,9 +234,9 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.maxStorage': 'تم الوصول إلى الحد الأقصى للتخزين!',
     'alert.maxStorageDesc': 'لقد وصلت إلى الحد الأقصى المطلق لمساحة التخزين البالغ 1800 جيجابايت. يجب عليك إزالة بعض الألعاب للمتابعة.',
     'alert.approaching': 'الاقتراب من الحد النهائي',
-    'alert.approachingDesc': 'لقد تجاوزت 1400 جيجابايت. هل ترغب في التوقف وإزالة بعض الألعاب، أم تؤكد رغبتك في الاستمرار نحو حد 1800 جيجابايت؟',
+    'alert.approachingDesc': 'لقد تجاوزت سعتك الحالية. هل ترغب في التوقف وإزالة بعض الألعاب، أم تؤكد رغبتك في الاستمرار نحو حد 1800 جيجابايت؟',
     'alert.surpassed930': 'تجاوزت 930 جيجابايت!',
-    'alert.surpassed930Desc': 'لقد تجاوزت 930 جيجابايت. تنتقل سعتك الآن إلى قرص 1.5 تيرابايت (الحد: 1400 جيجابايت). هل تستمر؟',
+    'alert.surpassed930Desc': 'لقد تجاوزت 930 جيجابايت. تنتقل سعتك الآن إلى قرص 2 تيرابايت (الحد: 1800 جيجابايت). هل تستمر؟',
     'alert.1tbRequired': 'مطلوب قرص 1 تيرابايت',
     'alert.1tbRequiredDesc': 'لقد تجاوزت 460 جيجابايت. أنت تستخدم الآن سعة قرص 1 تيرابايت (الحد: 930 جيجابايت). هل تستمر في الإضافة؟',
     'alert.500gbReached': 'تم الوصول إلى قرص 500 جيجابايت',
