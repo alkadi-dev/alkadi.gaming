@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
@@ -94,8 +93,8 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReachedDesc': 'You have exceeded the 280 GB threshold and are now using the 500 GB drive (Limit: 460 GB). Keep going?',
     'alert.keepGoing': 'Keep Going',
     'alert.reviewDelete': 'Review & Delete',
-    'alert.actionRequired': 'Storage Limit Reached',
-    'alert.removeGames': 'You reached more the storage, please remove some game.',
+    'alert.actionRequired': 'Storage Capacity Exceeded',
+    'alert.removeGames': 'Your selection is larger than the available drive space. Please remove some games to finalize your list.',
     'upgrade.title': 'Special Upgrade Offer',
     'upgrade.message': 'Get 40% OFF by upgrading to the 1TB hard drive instead of choosing the 500GB option.',
     'upgrade.btnUpgrade': 'Upgrade to 1TB',
@@ -244,8 +243,8 @@ const translations: Record<Language, Record<string, string>> = {
     'alert.500gbReachedDesc': 'لقد تجاوزت عتبة 280 جيجابايت وتستخدم الآن قرص 500 جيجابايت (الحد: 460 جيجابايت). هل تستمر؟',
     'alert.keepGoing': 'استمر',
     'alert.reviewDelete': 'مراجعة وحذف',
-    'alert.actionRequired': 'وصلت للحد الأقصى',
-    'alert.removeGames': 'لقد وصلت لمساحة تخزين زائدة، يرجى حذف بعض الألعاب.',
+    'alert.actionRequired': 'تم تجاوز سعة التخزين',
+    'alert.removeGames': 'حجم الألعاب المختارة أكبر من مساحة القرص المتوفرة. يرجى حذف بعض الألعاب لتتمكن من إتمام طلبك.',
     'upgrade.title': 'عرض ترقية خاص',
     'upgrade.message': 'احصل على خصم 40% عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.',
     'upgrade.btnUpgrade': 'ترقية إلى 1 تيرابايت',
