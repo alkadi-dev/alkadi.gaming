@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -33,10 +34,9 @@ interface Answers {
 
 const BUDGETS = [
   { label: '$39', value: 39, capacity: 280 },
-  { label: '$59', value: 59, capacity: 460 },
-  { label: '$79', value: 79, capacity: 960 },
-  { label: '$99', value: 99, capacity: 1400 },
-  { label: '$119', value: 119, capacity: 1800 },
+  { label: '$69', value: 69, capacity: 460 },
+  { label: '$89', value: 89, capacity: 930 },
+  { label: '$139', value: 139, capacity: 1800 },
 ];
 
 const GENRES = ['RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
@@ -197,7 +197,7 @@ export function RecommendationDialog() {
 
           <div className="min-h-[350px] flex flex-col">
             {step === 1 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="col-span-full mb-4 text-center">
                   <h3 className="text-lg font-bold text-white/90">{t('recommend.q1')}</h3>
                 </div>
@@ -403,7 +403,6 @@ export function RecommendationDialog() {
               </div>
             )}
 
-            {/* Navigation Controls */}
             {step !== 'results' && (
               <div className="mt-auto pt-8 flex items-center justify-between border-t border-white/5">
                 <Button

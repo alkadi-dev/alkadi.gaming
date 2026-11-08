@@ -134,7 +134,7 @@ export default function HomeClient() {
     if (restoredCategory) setSelectedCategory(restoredCategory);
     if (restoredMaxSize) {
       const parsed = parseInt(restoredMaxSize, 10);
-      setMaxSize(parsed > 200 ? 200 : parsed);
+      setMaxSize(parsed > 130 ? 130 : parsed);
     }
     if (restoredSort) setSortOrder(restoredSort);
 
@@ -257,7 +257,7 @@ export default function HomeClient() {
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const activeFiltersCount = (maxSize < 200 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
+  const activeFiltersCount = (maxSize < 130 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
   const handleSuggestionClick = (gameId: string) => {
     router.push(`/game/${gameId}`);
@@ -486,7 +486,7 @@ export default function HomeClient() {
                           <Slider
                             value={[maxSize]}
                             min={1}
-                            max={200}
+                            max={130}
                             step={1}
                             onValueChange={(val) => {
                               setMaxSize(val[0]);

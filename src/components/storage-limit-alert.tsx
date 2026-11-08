@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
@@ -29,11 +30,10 @@ export function StorageLimitAlert() {
   const lastThresholdRef = useRef<number>(-1);
 
   useEffect(() => {
-    // Determine the current threshold category
+    // Determine the current threshold category (removed 1400/Pro milestone)
     const currentThreshold = 
       totalSizeNum > 1800 ? 1800 : 
-      totalSizeNum > 1400 ? 1400 :
-      totalSizeNum > 960 ? 960 : 
+      totalSizeNum > 930 ? 930 : 
       totalSizeNum > 460 ? 460 : 
       totalSizeNum > 280 ? 280 : 0;
 
@@ -52,18 +52,11 @@ export function StorageLimitAlert() {
           message: t('alert.maxStorageDesc'),
           icon: <Ban className="h-6 w-6 text-destructive" />
         });
-      } else if (currentThreshold === 1400) {
+      } else if (currentThreshold === 930) {
         setActiveLimit({
-          threshold: 1400,
-          title: t('alert.approaching'),
-          message: t('alert.approachingDesc'),
-          icon: <AlertTriangle className="h-6 w-6 text-primary" />
-        });
-      } else if (currentThreshold === 960) {
-        setActiveLimit({
-          threshold: 960,
-          title: t('alert.surpassed960'),
-          message: t('alert.surpassed960Desc'),
+          threshold: 930,
+          title: t('alert.surpassed930'),
+          message: t('alert.surpassed930Desc'),
           icon: <HardDrive className="h-6 w-6 text-primary" />
         });
       } else if (currentThreshold === 460) {
@@ -128,7 +121,7 @@ export function StorageLimitAlert() {
           <AlertDialogAction 
             onClick={handleReview}
             className={`w-full sm:w-auto rounded-xl text-xs font-bold uppercase tracking-wider text-white h-11 ${
-              activeLimit?.threshold >= 1400 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
+              activeLimit?.threshold === 1800 ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
             }`}
           >
             {t('alert.reviewDelete')}

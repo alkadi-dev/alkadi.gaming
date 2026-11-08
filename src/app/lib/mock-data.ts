@@ -14,7 +14,7 @@ export interface GameEntry {
   isRecommended?: boolean;
 }
 
-export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Horror', '2D game'];
+export const CATEGORIES = ['All', 'Recommended', '2 players', 'RPG', 'Race', 'Adventure', 'Open World', 'Action', 'Shooter', 'Horror', '2D game'];
 
 const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
@@ -751,6 +751,89 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
+    id: 'cod-mw-1',
+    title: 'Call of Duty: Modern Warfare 1',
+    description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
+    size: '72 GB',
+    releaseYear: '2019',
+    images: [
+      'https://wallpapercave.com/wp/wp4517150.jpg',
+      'https://wallpapers.com/images/hd/4k-call-of-duty-modern-warfare-background-3840-x-2160-zdjbr6dl7k5czeot.jpg',
+      'https://images4.alphacoders.com/101/thumbbig-1018646.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI',
+    shorts: [
+      'https://www.youtube.com/embed/KurHR-5VmIw?si=bB3SJvHpnO1vgE7a',
+      'https://www.youtube.com/embed/cUCbtpMkZQM?si=b4E38CeFQzjvlqQL',
+      'https://www.youtube.com/embed/WzlKc5HmXbU?si=KxJ3XeffOL0EMr9I'
+    ],
+    isRecommended: true,
+  },
+  {
+    id: 'cod-mw2',
+    title: 'Call of Duty: Modern Warfare 2',
+    description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp11704100.jpg',
+    size: '24 GB',
+    releaseYear: '2022',
+    images: [
+      'https://wallpapercave.com/wp/wp11704100.jpg',
+      'https://wallpapercave.com/wp/wp11743749.jpg',
+      'https://wallpapercave.com/wp/wp11704136.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E?si=OYPDMavvE_Lz-Ttw',
+    shorts: [
+      'https://www.youtube.com/embed/ILUywkhzNg0?si=5XJWGly6XMRjZBtF',
+      'https://www.youtube.com/embed/vSyvcfxgNC0?si=B4L2VLUMk95oiZDo',
+      'https://www.youtube.com/embed/FJHC5NttChE?si=y0jr1Kkky_3KKlcu'
+    ],
+    isRecommended: true,
+  },
+  {
+    id: 'cod-mw3',
+    title: 'Call of Duty: Modern Warfare 3',
+    description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
+    size: '40 GB',
+    releaseYear: '2023',
+    images: [
+      'https://wallpapercave.com/wp/wp13127005.jpg',
+      'https://wallpapercave.com/wp/wp3993550.jpg',
+      'https://wallpapercave.com/wp/wp13132336.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8?si=HMyCHgQmznLQvxcR',
+    shorts: [
+      'https://www.youtube.com/embed/u-O4uRNBBuc?si=k9A8HZoHbVbUNuTr',
+      'https://www.youtube.com/embed/GD4DphX5Sbo?si=dnf_pnh6B0mn9IOh',
+      'https://www.youtube.com/embed/brbTGmcdWTk?si=n-YDcFY-FmwbkzUJ'
+    ],
+  },
+  {
+    id: 'cod-mw4',
+    title: 'Call of Duty: Modern Warfare 4',
+    description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
+    categories: ['Shooter'],
+    thumbnail: 'https://wallpapercave.com/wp/wp16401874.webp',
+    size: '58 GB',
+    releaseYear: '2026',
+    images: [
+      'https://wallpapercave.com/wp/wp16401874.webp',
+      'https://resizer.ladbiblegroup.com/unsafe/rs:fit:3840:0:0:0/g:sm/q:70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHRkNTE0MWMxNjgyM2YzYzc4LzZhY2NiMTM3N2MzNTBkNDc2YTgxMWZlZS9jYWxsLW9mLWR1dHktbW9kZXJuLXdhcmZhcmUtNC1ndWlkZS1zY3JlZW5zaG90LTEuanBn.webp',
+      'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/rfl-maps-modes/MW4-RFLMAPSMODES-023.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/yLFRQaQT0qM',
+    shorts: [
+      'https://www.youtube.com/embed/MPYzWqsp7eA',
+      'https://www.youtube.com/embed/4ZcVNaz4Pw8',
+      'https://www.youtube.com/embed/lgma1jLucGM'
+    ],
+    isRecommended: true,
+  },
+  {
     id: 'cod-v',
     title: 'Call of Duty: Vanguard',
     description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper’s precision and blast through enemies in North Africa.',
@@ -788,68 +871,6 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/PXeUiqhQtY8?si=vo1_HsltbNZUu1mg',
       'https://www.youtube.com/embed/57Hs_eUDt8g?si=PwyDdoaUhK8eJmN-',
       'https://www.youtube.com/embed/LtIw3GlH-xk?si=WCs_MQDEHSoKHkzK'
-    ],
-  },
-  {
-    id: 'cod-mw',
-    title: 'Call of Duty: Modern Warfare',
-    description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
-    size: '72 GB',
-    releaseYear: '2019',
-    images: [
-      'https://wallpapercave.com/wp/wp4517150.jpg',
-      'https://wallpapers.com/images/hd/4k-call-of-duty-modern-warfare-background-3840-x-2160-zdjbr6dl7k5czeot.jpg',
-      'https://images4.alphacoders.com/101/thumbbig-1018646.webp'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI',
-    shorts: [
-      'https://www.youtube.com/embed/KurHR-5VmIw?si=bB3SJvHpnO1vgE7a',
-      'https://www.youtube.com/embed/cUCbtpMkZQM?si=b4E38CeFQzjvlqQL',
-      'https://www.youtube.com/embed/WzlKc5HmXbU?si=KxJ3XeffOL0EMr9I'
-    ],
-    isRecommended: true,
-  },
-  {
-    id: 'cod-mw2',
-    title: 'Call of Duty: Modern Warfare II',
-    description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp11704100.jpg',
-    size: '24 GB',
-    releaseYear: '2022',
-    images: [
-      'https://wallpapercave.com/wp/wp11704100.jpg',
-      'https://wallpapercave.com/wp/wp11743749.jpg',
-      'https://wallpapercave.com/wp/wp11704136.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E?si=OYPDMavvE_Lz-Ttw',
-    shorts: [
-      'https://www.youtube.com/embed/ILUywkhzNg0?si=5XJWGly6XMRjZBtF',
-      'https://www.youtube.com/embed/vSyvcfxgNC0?si=B4L2VLUMk95oiZDo',
-      'https://www.youtube.com/embed/FJHC5NttChE?si=y0jr1Kkky_3KKlcu'
-    ],
-    isRecommended: true,
-  },
-  {
-    id: 'cod-mw3',
-    title: 'Call of Duty: Modern Warfare III',
-    description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
-    size: '40 GB',
-    releaseYear: '2023',
-    images: [
-      'https://wallpapercave.com/wp/wp13127005.jpg',
-      'https://wallpapercave.com/wp/wp3993550.jpg',
-      'https://wallpapercave.com/wp/wp13132336.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8?si=HMyCHgQmznLQvxcR',
-    shorts: [
-      'https://www.youtube.com/embed/u-O4uRNBBuc?si=k9A8HZoHbVbUNuTr',
-      'https://www.youtube.com/embed/GD4DphX5Sbo?si=dnf_pnh6B0mn9IOh',
-      'https://www.youtube.com/embed/brbTGmcdWTk?si=n-YDcFY-FmwbkzUJ'
     ],
   },
   {
@@ -952,7 +973,9 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/YPWqU9Pmte8?si=R2sRn-2l42gMvW5z',
       'https://www.youtube.com/embed/jOSGQVJ0iFw?si=IQQe3pgan8AGaeqP'
     ]
+    ,isRecommended: true,
   },
+  
   {
     id: 'fc4',
     title: 'Far Cry 4',
@@ -1168,7 +1191,7 @@ export const MOCK_GAMES: GameEntry[] = [
     videoUrl: 'https://www.youtube.com/embed/POz1-EmLsTY',
     shorts: [
       'https://www.youtube.com/embed/k8aXqeQs9bE',
-      'https://www.youtube.com/embed/JsAW9PqQje4',
+      'https://www.youtube.com/embed/status/JsAW9PqQje4',
       'https://www.youtube.com/embed/Lr25tudS-ec'
     ],
     isRecommended: true,
@@ -1843,11 +1866,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sudden Strike 5',
     description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
     categories: ['Action'],
-    thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2808550/b605fb58a451cd8ff5928e5576c216e201106211/header.jpg?t=1790060517',
     size: '13 GB',
     releaseYear: '2026',
     images: [
-      'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2808550/b605fb58a451cd8ff5928e5576c216e201106211/header.jpg?t=1790060517',
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
       'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
@@ -1920,7 +1943,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
     categories: ['2D game'],
     thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
-    size: '12 GB',
+    size: '3 GB',
     releaseYear: '2026',
     images: [
       'https://wallpapercave.com/wp/wp13317782.png',
@@ -1938,7 +1961,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
     categories: ['2D game'],
     thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
-    size: '8 GB',
+    size: '4 GB',
     releaseYear: '2026',
     images: [
       'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
@@ -1995,7 +2018,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). From the creators of Brothers – A Tale of Two Sons comes A Way Out, an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
     categories: ['2 players'],
     thumbnail: 'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
-    size: '22 GB',
+    size: '15 GB',
     releaseYear: '2018',
     images: [
       'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
@@ -2015,7 +2038,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
     categories: ['Adventure'],
     thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
-    size: '24 GB',
+    size: '15 GB',
     releaseYear: '2021',
     images: [
       'https://wallpapercave.com/wp/wp7593275.jpg',
@@ -2033,7 +2056,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Euro Truck Simulator 2',
     description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
     categories: ['Open World'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
+    thumbnail: 'https://wallpapercave.com/wp/wp2578403.jpg',
     size: '17 GB',
     releaseYear: '2012',
     images: [
@@ -2075,7 +2098,7 @@ export const MOCK_GAMES: GameEntry[] = [
     description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
     categories: ['Horror'],
     thumbnail: 'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
-    size: '24 GB',
+    size: '22 GB',
     releaseYear: '2021',
     images: [
       'https://gaming-cdn.com/images/news/articles/11597/cover/1000x563/the-sinking-city-remastered-has-been-announced-cover67eaa5f9e75e6.jpg',
@@ -2126,5 +2149,458 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/3aB001eh0fI'
     ],
     isRecommended: false,
+  },
+  {
+    id: 'blood-dawnwalker',
+    title: 'The Blood of Dawnwalker',
+    description: 'Uncover the dark secrets of a gothic world in this atmospheric horror experience. Battle nightmarish creatures as you seek to break an ancient curse that has plagued the land for centuries.',
+    categories: ['RPG'],
+    thumbnail: 'https://preview.redd.it/the-blood-of-dawnwalker-cover-art-v0-q7zi8ed6r6bg1.jpeg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      'https://preview.redd.it/the-blood-of-dawnwalker-cover-art-v0-q7zi8ed6r6bg1.jpeg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/05/11/5127adb7/the-blood-of-dawnwalker-screenshot-06.jpg.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2025/01/The-Blood-of-Dawnwalker-Artwork-011.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/te73UInH8H8',
+    shorts: [
+      'https://www.youtube.com/embed/UaERmm1DQpM',
+      'https://www.youtube.com/embed/s7fZJScvOgk',
+      'https://www.youtube.com/embed/H7Kz7aODYEQ'
+    ],
+  },
+  {
+    id: 'hogwarts-legacy',
+    title: 'Hogwarts Legacy',
+    description: 'Experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Take control of the action and be at the center of your own adventure.',
+    categories: ['Open World'],
+    thumbnail: 'https://wallpapercave.com/wp/wp12278034.jpg',
+    size: '42 GB',
+    releaseYear: '2023',
+    images: [
+      'https://wallpapercave.com/wp/wp12278034.jpg',
+      'https://preview.redd.it/beautiful-landscape-of-hogwarts-and-arround-v0-4teird06jwvc1.png?width=640&crop=smart&auto=webp&s=d0a98bab9ddd8249740d761ecc1cf9fa2ce75d02',
+      'https://i.pinimg.com/originals/cb/16/5c/cb165c8603ff240b26ca92fd8f5e9cab.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/1O6Qstncpnc',
+    shorts: [
+      'https://www.youtube.com/embed/QrlLnlpUhhg',
+      'https://www.youtube.com/embed/8PAFBXdV3oE',
+      'https://www.youtube.com/embed/Gw1fXsy9AIE'
+    ]
+  },
+  {
+    id: 'dragons-dogma-2',
+    title: "Dragon's Dogma 2",
+    description: "Dragon’s Dogma 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen to their vocation and party.",
+    categories: ['RPG'],
+    thumbnail: 'https://www.rpgfan.com/wp-content/uploads/2023/05/Dragons-Dogma-2-Artwork-001-1280x720.jpg',
+    size: '42 GB',
+    releaseYear: '2024',
+    images: [
+      'https://www.rpgfan.com/wp-content/uploads/2023/05/Dragons-Dogma-2-Artwork-001-1280x720.jpg',
+      'https://www.dragonsdogma.com/2/assets/images/topics/240719/thumb.jpg',
+      'https://preview.redd.it/finally-got-that-cover-art-armour-set-v0-3y69hmfu1upd1.png?width=1920&format=png&auto=webp&s=78d744382e33ee5df48f4cb09ca32d5993cf1896'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/cT0rIgaiPWA',
+    shorts: [
+      'https://www.youtube.com/embed/X83BHJdy3A0',
+      'https://www.youtube.com/embed/9RX9C-7RLpI'
+    ]
+  },
+  {
+    id: 'mortal-shell-2',
+    title: 'Mortal Shell II',
+    description: 'The sequel to the acclaimed soulslike. Possess new warriors, master lethal combat, and face even greater horrors in a decaying world that tests your sanity and skill.',
+    categories: ['Action'],
+    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202607/0618/218e06402e3bb0b92b96399a827a9033a18335c239789bbb.jpg',
+    size: '52 GB',
+    releaseYear: '2025',
+    images: [
+      'https://image.api.playstation.com/vulcan/ap/rnd/202607/0618/218e06402e3bb0b92b96399a827a9033a18335c239789bbb.jpg',
+      'https://assetsio.gnwcdn.com/mortal-shell-2-standing-in-desolate-keep.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
+      'https://images5.alphacoders.com/116/thumbbig-1161741.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/KJWAUJhInH0',
+    shorts: [
+      'https://www.youtube.com/embed/M6kBsFobHFk',
+      'https://www.youtube.com/embed/LPUD61qBntM',
+      'https://www.youtube.com/embed/mHcC7Feypdc'
+    ]
+  },
+  {
+    id: 'romeo-dead-man',
+    title: 'ROMEO IS A DEAD MAN',
+    description: 'A stylish noir action-adventure. Navigate a city of shadows, uncover a deep conspiracy, and survive the consequences of your past in this cinematic journey of revenge.',
+    categories: ['Adventure'],
+    thumbnail: 'https://i0.wp.com/www.consolecreatures.com/wp-content/uploads/2025/12/Romeo-Is-A-Deadman-Feb-2026.webp?fit=1280,720&ssl=1',
+    size: '24 GB',
+    releaseYear: '2026',
+    images: [
+      'https://i0.wp.com/www.consolecreatures.com/wp-content/uploads/2025/12/Romeo-Is-A-Deadman-Feb-2026.webp?fit=1280,720&ssl=1',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/romeo-is-a-deadman-trailer-zombies.jpg?q=49&fit=crop&w=480&h=270&dpr=2',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/romeo-is-a-deadman-trailer-romeo.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/nW1cE6sj6h8',
+    shorts: [
+      'https://www.youtube.com/embed/IROL9HaRWvg'
+    ]
+  },
+  {
+    id: 'arma-reforger',
+    title: 'Arma Reforger',
+    description: "Experience authentic Cold War combat and join the fight for the island of Everon. Return to the series' roots in this massive, versatile military sandbox.",
+    categories: ['Action'],
+    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg',
+    size: '19 GB',
+    releaseYear: '2024',
+    images: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg',
+      'https://wallpapercave.com/wp/wp11030043.jpg',
+      'https://arma-reforger.com/img/screenshots/arma-reforger-01.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/AAnv3iWwP9M',
+  },
+  {
+    id: 'relic-first-guardian',
+    title: 'The Relic - First Guardian',
+    description: 'A grand action RPG where you set out on an adventure to find the pieces of a broken relic and restore the world to its former glory. Master diverse combat styles.',
+    categories: ['RPG'],
+    thumbnail: 'https://assets.games.gg/the_relic_first_guardian_gallery_1_30934ab116.webp',
+    size: '20 GB',
+    releaseYear: '2025',
+    images: [
+      'https://assets.games.gg/the_relic_first_guardian_gallery_1_30934ab116.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2024/06/The-Relic-First-Guardian-Screenshot-002-1280x720.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2024/06/The-Relic-First-Guardian-Screenshot-005-1280x720.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/YpzAUSNRF9E',
+    shorts: [
+      'https://www.youtube.com/embed/_teu3SPkgJE',
+      'https://www.youtube.com/embed/_PqPcTC56-Q',
+      'https://www.youtube.com/embed/1tbM67pMAuk'
+    ]
+  },
+  {
+    id: 'sw-outlaws',
+    title: 'Star Wars Outlaws',
+    description: 'Experience the first-ever open world Star Wars™ game. Explore distinct planets across the galaxy, both iconic and new, as you seek freedom and a new life.',
+    categories: ['Open World'],
+    thumbnail: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/ddfa6481-b52a-4fff-9cfd-0bb06f184505.__CR0,0,970,600_PT0_SX970_V1___.jpg',
+    size: '41 GB',
+    releaseYear: '2024',
+    images: [
+      'https://m.media-amazon.com/images/S/aplus-media-library-service-media/ddfa6481-b52a-4fff-9cfd-0bb06f184505.__CR0,0,970,600_PT0_SX970_V1___.jpg',
+      'https://gameinformer.com/sites/default/files/styles/body_default/public/2024/05/01/779564b7/swo_07.jpg.webp',
+      'https://gameinformer.com/sites/default/files/styles/body_default/public/2024/05/01/fe2ab122/swo_03.jpg.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ymcpwq1ltQc',
+    shorts: [
+      'https://www.youtube.com/embed/JF93jvZt69s',
+      'https://www.youtube.com/embed/QP_wXv2ErgI',
+      'https://www.youtube.com/embed/bgd2OJGOQn4'
+    ]
+  },
+  {
+    id: 'gears-of-war',
+    title: 'Gears of War',
+    description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
+    categories: ['Shooter'],
+    thumbnail: 'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/00_GoW_EDAY_CoverArt-6a15d9095e1c1-scaled.jpg',
+    size: '79 GB',
+    releaseYear: '2025',
+    images: [
+      'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/00_GoW_EDAY_CoverArt-6a15d9095e1c1-scaled.jpg',
+      'https://wallpapers.com/images/hd/gears-of-war-4-fighting-a-grenadier-swarm-05kcandau3pgdcdm.jpg',
+      'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/03_GoW_EDAY_Boomer_Final-6a17663e3da94-scaled.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/EC20gLfUHeA',
+    shorts: [
+      'https://www.youtube.com/embed/K_Z0fd1zjYo',
+      'https://www.youtube.com/embed/XawcPlhwN40'
+    ]
+  },
+  {
+    id: 'witcher3-remastered',
+    title: 'The Witcher 3 Remastered',
+    description: 'The definitive edition of the legendary RPG, now with stunning 4K visuals, enhanced textures, and ray-tracing. Embark once more on Geralt\'s epic quest with all expansions included.',
+    categories: ['RPG'],
+    thumbnail: 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp',
+      'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd0b9acc1eeffb85e/6a8c8a9cf8f1248709bcb767/feature_3_shop_product_feature_card_geralt.webp',
+      'https://cdn.mos.cms.futurecdn.net/scKtip2PExfiPFZsd8Q74F.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/IGk17XQ7IrQ',
+    shorts: [
+      'https://www.youtube.com/embed/7Br0Yerr0mE',
+      'https://www.youtube.com/embed/oIFo_fKSTiE'
+    ],
+  },
+  {
+    id: 'control-resonant',
+    title: 'Control Resonant',
+    description: 'Explore the mysterious Oldest House once again in this standalone action-adventure. Master new supernatural abilities and uncover deep-rooted secrets within the Federal Bureau of Control.',
+    categories: ['Action'],
+    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202605/2811/e104ddf9aea2f76d5c198e5b0861eb086bbef105d6d47bee.jpg',
+    size: '61 GB',
+    releaseYear: '2025',
+    images: [
+      'https://image.api.playstation.com/vulcan/ap/rnd/202605/2811/e104ddf9aea2f76d5c198e5b0861eb086bbef105d6d47bee.jpg',
+      'https://blog.playstation.com/tachyon/2026/03/ff3c2638907202384dcc4fc15c5a378f251fe638.jpg?resize=1088,612&crop_strategy=smart',
+      'https://blog.playstation.com/tachyon/2028/09/805dc24cfeb0a3136d766b4e28d4d1a269bfde1b.jpg?resize=1088,612&crop_strategy=smart'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WhQm-ExRz60',
+    shorts: [
+      'https://www.youtube.com/embed/cn4PamZ167U',
+      'https://www.youtube.com/embed/ngwUfhLQ07o',
+      'https://www.youtube.com/embed/JfuY-NhK_tQ'
+    ],
+  },
+  {
+    id: 'blackwood',
+    title: 'Blackwood',
+    description: 'Survive the night in the cursed woods of Blackwood. A first-person psychological horror experience that tests your courage against ancient terrors lurking in the shadows.',
+    categories: ['Action'],
+    thumbnail: 'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
+    size: '7 GB',
+    releaseYear: '2024',
+    images: [
+      'https://imgeucdn.gamespress.com/cdn/files/Games%20Press/2025/10/061722-247b4212/Blackwood_Wallpaper_2.png?w=533&mode=max&otf=y&quality=90&format=png&bgcolor=transparent&sky=a4cf2eac0e403a521952a6a123f95dcd1e026384bb0c6f9c5f3be3273566c62a',
+      'https://assets.games.gg/blackwood_banner_a4a7396941.webp',
+      'https://external-preview.redd.it/photo-mode-is-coming-to-blackwood-capture-cinematic-shots-v0-Z2Rhd2QwdmthbzloMQVKDdR6hAICtjImUTAQwrKRHe_R1IDsHKQVcG6YXP44.png?width=640&crop=smart&auto=webp&s=3214465eff53bccd58f0280b83ac28b05a04aa07'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/xVyIEh5DTU0',
+    shorts: [
+      'https://www.youtube.com/embed/xVyIEh5DTU0'
+    ],
+  },
+  {
+    id: 'sh-townfall',
+    title: 'Silent Hill Townfall',
+    description: 'A new entry in the iconic survival horror series. Navigate a town shrouded in fog and face the manifestations of your deepest fears in this atmospheric and narrative-driven journey.',
+    categories: ['Horror'],
+    thumbnail: 'https://i0.wp.com/waytoomany.games/wp-content/uploads/2026/06/SILENT-HILL-Townfall_Key-Art-3840-%C3%97-2160.jpg?fit=3840,2160&ssl=1',
+    size: '41 GB',
+    releaseYear: '2025',
+    images: [
+      'https://i0.wp.com/waytoomany.games/wp-content/uploads/2026/06/SILENT-HILL-Townfall_Key-Art-3840-%C3%97-2160.jpg?fit=3840,2160&ssl=1',
+      'https://blog.playstation.com/tachyon/2028/09/7f627316d4086f9bbe20da9bad09a36ee29677ff-scaled.jpg?resize=1088,612&crop_strategy=smart',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/02/silent-hill-townfall-press-image-6.jpg?q=49&fit=crop&w=480&h=270&dpr=2'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/9VjP6RyfGrQ',
+    shorts: [
+      'https://www.youtube.com/embed/5dXZ6_lLB0I',
+      'https://www.youtube.com/embed/Ehcs7hNhY7g'
+    ],
+  },
+  {
+    id: 'dw3-remake',
+    title: 'DYNASTY WARRIORS 3',
+    description: 'Relive the legendary battles of the Three Kingdoms in this stunning remake. Experience visceral 1-vs-1000 action with modernized combat mechanics and breathtaking visuals.',
+    categories: ['2 players'],
+    thumbnail: 'https://www.tech-gaming.com/wp-content/uploads/2026/10/DYNASTY-WARRIORS-3-Complete-Edition-Remastered-1.jpg',
+    size: '23 GB',
+    releaseYear: '2025',
+    images: [
+      'https://www.tech-gaming.com/wp-content/uploads/2026/10/DYNASTY-WARRIORS-3-Complete-Edition-Remastered-1.jpg',
+      'https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https://shacknews-www.s3.amazonaws.com/assets/articles/2026/dynasty-warriors-3-complete-edition-remastered-impressions-zhuge-20260930022420-551af081.jpg&width=986&sign=2T-Xy4D8aqlEHhBxuVMpaUD1pMX5l8VWiQdi-PVHIDc',
+      'https://www.koeitecmoeurope.com/dw3-re/assets/img/gameplay_2p-modal.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/3ybsp-GdDSg',
+    shorts: [
+      'https://www.youtube.com/embed/p79rj0EL480',
+      'https://www.youtube.com/embed/sa49zJgBXbU'
+    ],
+  },
+  {
+    id: 'cities-skylines-2',
+    title: 'Cities: Skylines II',
+    description: 'Build a metropolis from the ground up with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you\'ve never experienced.',
+    categories: ['Open World'],
+    thumbnail: 'https://images5.alphacoders.com/133/thumbbig-1337153.webp',
+    size: '43 GB',
+    releaseYear: '2023',
+    images: [
+      'https://images5.alphacoders.com/133/thumbbig-1337153.webp',
+      'https://images.ctfassets.net/u73tyf0fa8v1/6jMpAWfQVHDU9AAPomTceI/a67a974530a7d753d61fac3204b80a3d/cities-skylines-ii-city-services-26_District.jpg?w=1920&q=75&fm=webp',
+      'https://cdn.mos.cms.futurecdn.net/pa7rzBpStmWTaXxqDaSJnR.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/7vlKoMi4Qr0',
+    shorts: [
+      'https://www.youtube.com/embed/2AGuw56uKgA'
+    ]
+  },
+  {
+    id: 'darwins-paradox',
+    title: 'Darwin\'s Paradox',
+    description: 'A high-octane 2.5D action-adventure platformer set in a vibrant world. Uncover the secrets of a futuristic ecosystem where evolution has taken a strange and dangerous turn.',
+    categories: ['2D game'],
+    thumbnail: 'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/darwins_paradox_ps5_games_playstation_ps5_games_playstation_us_3563ef8066.webp',
+    size: '5 GB',
+    releaseYear: '2024',
+    images: [
+      'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/darwins_paradox_ps5_games_playstation_ps5_games_playstation_us_3563ef8066.webp',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoLsHMCuY-G1Bicb8B5OSlnYpO_yisaA4C58bozKjSJEsOWlN8TUpgdGal_-LwtEw2t4Y96htpki_dlj6VC6YaL7BLFb2r97QkpI_eaajbgzj8_k7pF5Z7b739Mykv5Ed-Y4ESTcgK5BnmFm9TmiFno0l8m35yhw3YVRnkelM8NPbfj9h_L98DQS4IU_U5/s2000/Darwin_s%20Paradox_Screenshot_November_03.png',
+      'https://covergeek.com/wp-content/uploads/2026/03/Darwins-Paradox-Review-Suit-1024x576.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/TbgsjUFIBOw',
+    shorts: [
+      'https://www.youtube.com/embed/No5OxzSed4c'
+    ]
+  },
+  {
+    id: 'gow3-remastered',
+    title: 'God of War III Remastered',
+    description: 'In the end, there will be only chaos. One of the most critically acclaimed games of its generation, God of War III has been remastered for the PlayStation 4 system, bringing Kratos’ epic journey of vengeance to life with stunning 1080p visuals and 60fps gameplay.',
+    categories: ['Action'],
+    thumbnail: 'https://wallpaperaccess.com/full/788572.png',
+    size: '23 GB',
+    releaseYear: '2015',
+    images: [
+      'https://wallpaperaccess.com/full/788572.png',
+      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
+      'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/qKogMfIAAkY',
+    shorts: [
+      'https://www.youtube.com/embed/J77_sLPnFDs',
+      'https://www.youtube.com/embed/eYvvWMKxgLc',
+      'https://www.youtube.com/embed/Ve-sXqiG3Q8'
+    ]
+  },
+  {
+    id: 'aoe3',
+    title: 'Age of Empires III: Definitive Edition',
+    description: 'Command civilizations from across Europe, the Americas, and Asia. Features remastered 4K graphics, new civilizations, and a fully remastered soundtrack.',
+    categories: ['Action'],
+    thumbnail: 'https://steamah.com/wp-content/uploads/2020/10/1603009052-850x478.jpg',
+    size: '21 GB',
+    releaseYear: '2020',
+    images: [
+      'https://steamah.com/wp-content/uploads/2020/10/1603009052-850x478.jpg',
+      'https://images7.alphacoders.com/398/thumbbig-398405.webp',
+      'https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_age_of_empires_3_04_1680x1050.jpg&height=450&width=800&fill-to-fit&sharpen'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/fCcRNUlE7ek',
+    shorts: [
+      'https://www.youtube.com/embed/YJaLPbF5PdY',
+      'https://www.youtube.com/embed/e3Ki6rs7JCk',
+      'https://www.youtube.com/embed/ddLOzQpuI2o'
+    ]
+  },
+  {
+    id: 'gta-trilogy',
+    title: 'GTA: The Trilogy – The Definitive Edition',
+    description: 'Three iconic cities, three epic stories. Play the genre-defining classics of the original Grand Theft Auto Trilogy: GTA III, Vice City, and San Andreas.',
+    categories: ['Open World'],
+    thumbnail: 'https://wallpaperaccess.com/full/7841395.jpg',
+    size: '24 GB',
+    releaseYear: '2021',
+    images: [
+      'https://wallpaperaccess.com/full/7841395.jpg',
+      'https://media-rockstargames-com.akamaized.net/mfe-r19/prod/__common/img/c37f2dbd02b15d29abfce91294f29403.jpg',
+      'https://wallpaperaccess.com/full/7841403.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/2BFhjfqCcis',
+    shorts: [
+      'https://www.youtube.com/embed/U1s6sgfTRM4'
+    ]
+  },
+  {
+    id: 'castlevania-belmonts-curse',
+    title: "Castlevania: Belmont's Curse",
+    description: "An epic return to the legendary vampire-hunting saga. Master the Whip and explore a cursed castle filled with gothic horrors and ancient secrets.",
+    categories: ['Action'],
+    thumbnail: 'https://www.metacritic.com/a/img/resize/1a73e028f22e5e8815c44f7bdb03bb57886d0740/catalog/provider/7/2/7-1791873931.jpg?auto=webp&fit=contain&height=480&quality=70',
+    size: '5 GB',
+    releaseYear: '2025',
+    images: [
+      'https://www.metacritic.com/a/img/resize/1a73e028f22e5e8815c44f7bdb03bb57886d0740/catalog/provider/7/2/7-1791873931.jpg?auto=webp&fit=contain&height=480&quality=70',
+      'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_2.0/store/software/switch/70010000116851/7a387161a475070cd7a109f32420f223ba6a9eb2296568c5bba28ca9254f6d79',
+      'https://media.gamestop.com/i/gamestop/20033149_SCR02?w=1256&h=664&fmt=auto'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/zdqKYXa2pUI',
+    shorts: [
+      'https://www.youtube.com/embed/sNrvFqPYmac'
+    ]
+  },
+  {
+    id: 'toy-story-adventure',
+    title: "Toy Story",
+    description: "Join Woody, Buzz, and the rest of the gang in a magical adventure that brings the beloved Pixar world to life. Explore Andy's room and beyond!",
+    categories: ['Adventure'],
+    thumbnail: 'https://i.pinimg.com/originals/1b/d3/a2/1bd3a2d351e0a1fb8c30887e92bb477f.jpg',
+    size: '4 GB',
+    releaseYear: '2024',
+    images: [
+      'https://i.pinimg.com/originals/1b/d3/a2/1bd3a2d351e0a1fb8c30887e92bb477f.jpg',
+      'https://m.media-amazon.com/images/M/MV5BZTVkNmZkMzAtYmI0Mi00MDY4LWE4NTctNjI3MzY5MmMxZDU3XkEyXkFqcGc@.jpg',
+      'https://i.ebayimg.com/images/g/quoAAeSwL2Bqz~Dp/s-l1200.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/97Ai2QQ3kIE',
+    shorts: [
+      'https://www.youtube.com/embed/_8fa81Spo3s'
+    ]
+  },
+  {
+    id: 'bloodborne',
+    title: "Bloodborne",
+    description: "A terrifying action RPG from the creators of Dark Souls. Navigate the plague-ridden city of Yharnam and face nightmarish creatures in fast-paced combat.",
+    categories: ['RPG'],
+    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d84f1809-9054-430c-95fa-27b17818bcea/dfli5qm-4b933a5d-1526-4d7e-85a9-4b4984e62bcb.png/v1/fill/w_1280,h_720,q_80,strp/ps4_bloodborne_cover_by_indra135_dfli5qm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2Q4NGYxODA5LTkwNTQtNDMwYy05NWZhLTI3YjE3ODE4YmNlYS9kZmxpNXFtLTRiOTMzYTVkLTE1MjYtNGQ3ZS04NWE5LTRiNDk4NGU2MmJjYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFoZXz5RkH9hFqmMhLgLGd3WDe-wMg4lPKaXG0EEJms',
+    size: '15 GB',
+    releaseYear: '2015',
+    images: [
+      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d84f1809-9054-430c-95fa-27b17818bcea/dfli5qm-4b933a5d-1526-4d7e-85a9-4b4984e62bcb.png/v1/fill/w_1280,h_720,q_80,strp/ps4_bloodborne_cover_by_indra135_dfli5qm-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2Q4NGYxODA5LTkwNTQtNDMwYy05NWZhLTI3YjE3ODE4YmNlYS9kZmxpNXFtLTRiOTMzYTVkLTE1MjYtNGQ3ZS04NWE5LTRiNDk4NGU2MmJjYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFoZXz5RkH9hFqmMhLgLGd3WDe-wMg4lPKaXG0EEJms',
+      'https://cdn.mos.cms.futurecdn.net/HYgVWfc7Vi2zK2m4QHVb6C.jpg',
+      'https://wallpaperaccess.com/full/1111499.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/2Crk_GpxGQE',
+    shorts: [
+      'https://www.youtube.com/embed/aGECZFPjIW0'
+    ]
+  },
+  {
+    id: 'driveclub',
+    title: "Driveclub",
+    description: "Experience the heart-pounding thrill of high-speed racing. Connect with friends and race in a variety of stunning locations around the world.",
+    categories: ['Race'],
+    thumbnail: 'https://wallpaperaccess.com/full/4391122.jpg',
+    size: '10 GB',
+    releaseYear: '2014',
+    images: [
+      'https://wallpaperaccess.com/full/4391122.jpg',
+      'https://i.redd.it/4a3hp4r1phyh1.png',
+      'https://i.redd.it/iktxq7xdcdwh1.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/zsJ2BUliEtk',
+    shorts: [
+      'https://www.youtube.com/embed/WvbDZWROJgI',
+      'https://www.youtube.com/embed/wdHfMkKbF3k',
+      'https://www.youtube.com/embed/ilkRTK3DYas'
+    ]
+  },
+  {
+    id: 'onimusha-sword',
+    title: 'Onimusha: Way of the Sword',
+    description: 'Master the art of the blade and unleash powerful oni magic in this epic return to the Onimusha series. Set in feudal Japan, battle through legions of demons to restore peace to the land.',
+    categories: ['Action'],
+    thumbnail: 'https://eu-central-1-gamescom.graphassets.com/AMwDHZTUSMaIlRlMFLL7Qz/resize=w:1120,h:524,fit:crop/sharpen=amount:1/output=format:webp,quality:95/cms6312fs5ao507urglj3e8rp',
+    size: '40 GB',
+    releaseYear: '2026',
+    images: [
+      'https://eu-central-1-gamescom.graphassets.com/AMwDHZTUSMaIlRlMFLL7Qz/resize=w:1120,h:524,fit:crop/sharpen=amount:1/output=format:webp,quality:95/cms6312fs5ao507urglj3e8rp',
+      'https://wallpaperaccess.com/full/53251689.png',
+      'https://images.igdb.com/igdb/image/upload/t_720p/scus46.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/W9Ct29FeMak',
+    shorts: [
+      'https://www.youtube.com/embed/g31vqrkiqAQ',
+      'https://www.youtube.com/embed/s2uTCOXkAlI'
+    ]
   }
 ];
