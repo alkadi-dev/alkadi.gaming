@@ -1177,7 +1177,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Requiem',
     description: 'Embark on a heartrending journey into a brutal, breathtaking world, and discover the cost of saving those you love in a desperate struggle for survival.',
     categories: ['Horror'],
-    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
+    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmfff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.pngIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
     size: '56 GB',
     releaseYear: '2026',
     images: [
@@ -2530,15 +2530,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Toy Story: The Video Game",
     description: "Join Woody, Buzz, and the rest of the gang in a magical adventure that brings the beloved Pixar world to life. Explore Andy's room and beyond!",
     categories: ['Adventure'],
-    thumbnail: 'https://picsum.photos/seed/toystory/800/450',
+    thumbnail: 'https://i.pinimg.com/originals/1b/d3/a2/1bd3a2d351e0a1fb8c30887e92bb477f.jpg',
     size: '15 GB',
     releaseYear: '2024',
     images: [
-      'https://picsum.photos/seed/toystory-1/1200/800',
-      'https://picsum.photos/seed/toystory-2/1200/800'
+      'https://i.pinimg.com/originals/1b/d3/a2/1bd3a2d351e0a1fb8c30887e92bb477f.jpg',
+      'https://m.media-amazon.com/images/M/MV5BZTVkNmZkMzAtYmI0Mi00MDY4LWE4NTctNjI3MzY5MmMxZDU3XkEyXkFqcGc@.jpg',
+      'https://i.ebayimg.com/images/g/quoAAeSwL2Bqz~Dp/s-l1200.webp'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: []
+    videoUrl: 'https://www.youtube.com/embed/97Ai2QQ3kIE',
+    shorts: [
+      'https://www.youtube.com/embed/_8fa81Spo3s'
+    ]
   },
   {
     id: 'bloodborne',
@@ -2563,29 +2566,38 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Driveclub",
     description: "Experience the heart-pounding thrill of high-speed racing. Connect with friends and race in a variety of stunning locations around the world.",
     categories: ['Race'],
-    thumbnail: 'https://picsum.photos/seed/driveclub/800/450',
+    thumbnail: 'https://wallpaperaccess.com/full/4391122.jpg',
     size: '30 GB',
     releaseYear: '2014',
     images: [
-      'https://picsum.photos/seed/driveclub-1/1200/800',
-      'https://picsum.photos/seed/driveclub-2/1200/800'
+      'https://wallpaperaccess.com/full/4391122.jpg',
+      'https://i.redd.it/4a3hp4r1phyh1.png',
+      'https://i.redd.it/iktxq7xdcdwh1.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: []
+    videoUrl: 'https://www.youtube.com/embed/zsJ2BUliEtk',
+    shorts: [
+      'https://www.youtube.com/embed/WvbDZWROJgI',
+      'https://www.youtube.com/embed/wdHfMkKbF3k',
+      'https://www.youtube.com/embed/ilkRTK3DYas'
+    ]
   },
   {
     id: 'onimusha-sword',
     title: 'Onimusha: Way of the Sword',
     description: 'Master the art of the blade and unleash powerful oni magic in this epic return to the Onimusha series. Set in feudal Japan, battle through legions of demons to restore peace to the land.',
     categories: ['Action'],
-    thumbnail: 'https://picsum.photos/seed/onimusha/800/450',
+    thumbnail: 'https://eu-central-1-gamescom.graphassets.com/AMwDHZTUSMaIlRlMFLL7Qz/resize=w:1120,h:524,fit:crop/sharpen=amount:1/output=format:webp,quality:95/cms6312fs5ao507urglj3e8rp',
     size: '35 GB',
     releaseYear: '2026',
     images: [
-      'https://picsum.photos/seed/onimusha-1/1200/800',
-      'https://picsum.photos/seed/onimusha-2/1200/800'
+      'https://eu-central-1-gamescom.graphassets.com/AMwDHZTUSMaIlRlMFLL7Qz/resize=w:1120,h:524,fit:crop/sharpen=amount:1/output=format:webp,quality:95/cms6312fs5ao507urglj3e8rp',
+      'https://wallpaperaccess.com/full/53251689.png',
+      'https://images.igdb.com/igdb/image/upload/t_720p/scus46.png'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    shorts: []
+    videoUrl: 'https://www.youtube.com/embed/W9Ct29FeMak',
+    shorts: [
+      'https://www.youtube.com/embed/g31vqrkiqAQ',
+      'https://www.youtube.com/embed/s2uTCOXkAlI'
+    ]
   }
 ];
