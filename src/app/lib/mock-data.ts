@@ -781,6 +781,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2022',
     images: [
       '/thumbnail/cod-mw2.jpg',
+
       'https://wallpapercave.com/wp/wp11743749.jpg',
       'https://wallpapercave.com/wp/wp11704136.jpg'
     ],
@@ -802,6 +803,8 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2023',
     images: [
       '/thumbnail/cod-mw3.jpg',
+
+
       'https://wallpapercave.com/wp/wp3993550.jpg',
       'https://wallpapercave.com/wp/wp13132336.jpg'
     ],
@@ -817,6 +820,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare 4',
     description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
     categories: ['Shooter'],
+<<<<<<< HEAD
     thumbnail: '/thumbnail/cod-mw4.jpg',
     size: '58 GB',
     releaseYear: '2026',
@@ -1872,6 +1876,8 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2026',
     images: [
       '/thumbnail/sudden-strike-5.jpg',
+
+    
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
       'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
@@ -2038,7 +2044,10 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Crash Bandicoot 4: It\'s About Time',
     description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
     categories: ['Adventure'],
+
     thumbnail: '/thumbnail/crash4.jpg',
+
+    thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
     size: '15 GB',
     releaseYear: '2021',
     images: [
@@ -2288,6 +2297,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Star Wars Outlaws',
     description: 'Experience the first-ever open world Star Wars™ game. Explore distinct planets across the galaxy, both iconic and new, as you seek freedom and a new life.',
     categories: ['Open World'],
+
     thumbnail: '/thumbnail/sw-outlaws.jpg',
     size: '41 GB',
     releaseYear: '2024',
@@ -2308,6 +2318,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Gears of War',
     description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
     categories: ['Shooter'],
+<<<<<<< HEAD
     thumbnail: '/thumbnail/gears-of-war.jpg',
     size: '79 GB',
     releaseYear: '2025',
@@ -2351,6 +2362,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2025',
     images: [
       '/thumbnail/control-resonant.jpg',
+
       'https://blog.playstation.com/tachyon/2026/03/ff3c2638907202384dcc4fc15c5a378f251fe638.jpg?resize=1088,612&crop_strategy=smart',
       'https://blog.playstation.com/tachyon/2028/09/805dc24cfeb0a3136d766b4e28d4d1a269bfde1b.jpg?resize=1088,612&crop_strategy=smart'
     ],
@@ -2384,6 +2396,7 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Silent Hill Townfall',
     description: 'A new entry in the iconic survival horror series. Navigate a town shrouded in fog and face the manifestations of your deepest fears in this atmospheric and narrative-driven journey.',
     categories: ['Horror'],
+
     thumbnail: '/thumbnail/sh-townfall.jpg',
     size: '41 GB',
     releaseYear: '2025',
@@ -2539,6 +2552,7 @@ export const MOCK_GAMES: GameEntry[] = [
     releaseYear: '2024',
     images: [
       '/thumbnail/toy-story-adventure.jpg',
+
       'https://m.media-amazon.com/images/M/MV5BZTVkNmZkMzAtYmI0Mi00MDY4LWE4NTctNjI3MzY5MmMxZDU3XkEyXkFqcGc@.jpg',
       'https://i.ebayimg.com/images/g/quoAAeSwL2Bqz~Dp/s-l1200.webp'
     ],

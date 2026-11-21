@@ -110,8 +110,7 @@ const CAROUSEL_ITEMS: CarouselItem[] = [
   },
   {
     id: '55',
-    imageUrl: "/thumbnail/55.jpg",
-    title: "Elden Ring"
+    imageUrl: "/thumbnail/55.jpg"
   }
 ];
 
@@ -133,7 +132,7 @@ export function VideoCarousel() {
 
   const desktopRow1 = CAROUSEL_ITEMS.slice(0, 6);
   const desktopRow2 = CAROUSEL_ITEMS.slice(6, 12);
-  const desktopRow3 = CAROUSEL_ITEMS.slice(12, 18);
+  const desktopRow3 = CAROUSEL_ITEMS.slice(12, 18); // Show the specific 6 for desktop line 3
 
   const row1Items = isMobile ? [...mobileRow1, ...mobileRow1, ...mobileRow1] : [...desktopRow1, ...desktopRow1, ...desktopRow1];
   const row2Items = isMobile ? [...mobileRow2, ...mobileRow2, ...mobileRow2] : [...desktopRow2, ...desktopRow2, ...desktopRow2];
