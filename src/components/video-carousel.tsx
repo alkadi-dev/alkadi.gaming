@@ -13,104 +13,104 @@ interface CarouselItem {
 
 const CAROUSEL_ITEMS: CarouselItem[] = [
   {
-    id: 'firstlight',
-    imageUrl: "https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false",
+    id: '007firstlight',
+    imageUrl: "/thumbnail/007firstlight.jpg",
     title: "007 First Light"
   },
   {
-    id: 'horizon',
-    imageUrl: "https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg",
+    id: 'hfw',
+    imageUrl: "/thumbnail/hfw.jpg",
     title: "Horizon Forbidden West"
   },
   {
-    id: 'cod',
-    imageUrl: "https://wallpapercave.com/wp/wp11704100.jpg",
+    id: 'cod-mw2',
+    imageUrl: "/thumbnail/cod-mw2.jpg",
     title: "Call of Duty Modern Warfare 2"
   },
   {
-    id: 'rdr2',
-    imageUrl: "https://wallpapercave.com/wp/wp3770429.png",
+    id: '5',
+    imageUrl: "/thumbnail/5.jpg",
     title: "Red Dead Redemption 2"
   },
   {
-    id: 'spiderman2',
-    imageUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg",
+    id: '6',
+    imageUrl: "/thumbnail/6.jpg",
     title: "Spider-Man 2"
   },
   {
     id: 'tlou2',
-    imageUrl: "https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg",
+    imageUrl: "/thumbnail/tlou2.jpg",
     title: "The Last of Us Part II"
   },
   {
-    id: 'ac',
-    imageUrl: "https://wallpapercave.com/wp/wp13980393.jpg",
+    id: 'ac-shadows',
+    imageUrl: "/thumbnail/ac-shadows.jpg",
     title: "Assassin's Creed Shadows"
   },
   {
-    id: 'gow',
-    imageUrl: "https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg",
+    id: '10',
+    imageUrl: "/thumbnail/10.jpg",
     title: "God of War Ragnarok"
   },
   {
     id: 'got',
-    imageUrl: "https://images3.alphacoders.com/138/thumbbig-1387219.webp",
+    imageUrl: "/thumbnail/got.jpg",
     title: "Ghost of Tsushima"
   },
   {
-    id: 'cyberpunk',
-    imageUrl: "https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg",
+    id: '12',
+    imageUrl: "/thumbnail/12.jpg",
     title: "Cyberpunk 2077"
   },
   {
     id: 'u4',
-    imageUrl: "https://wallpapercave.com/wp/wp2272912.jpg",
+    imageUrl: "/thumbnail/u4.jpg",
     title: "Uncharted 4"
   },
   {
-    id: 're',
-    imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI",
+    id: 'plague',
+    imageUrl: "/thumbnail/plague.jpg",
     title: "Resident Evil Requiem"
   },
   // New Games
   {
     id: 'wukong',
-    imageUrl: "https://4kwallpapers.com/images/walls/thumbs/17948.jpeg",
+    imageUrl: "/thumbnail/wukong.jpg",
     title: "Black Myth: Wukong"
   },
   {
     id: 'crimson',
-    imageUrl: "https://wallpaperaccess.com/full/26027678.jpg",
+    imageUrl: "/thumbnail/crimson.jpg",
     title: "Crimson Desert"
   },
   {
     id: 'forza6',
-    imageUrl: "https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024",
+    imageUrl: "/thumbnail/forza6.jpg",
     title: "Forza Horizon 6"
   },
   {
     id: 'pragmata',
-    imageUrl: "https://wallpaperaccess.com/full/26417427.jpg",
+    imageUrl: "/thumbnail/pragmata.jpg",
     title: "Pragmata"
   },
   {
-    id: 'witcher3re',
-    imageUrl: "https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6d161a29da0dd367/6a7f92fd3ad392027f6f8c41/shop_product_feature_card_w3re_logo.webp",
+    id: 'witcher3-remastered',
+    imageUrl: "/thumbnail/witcher3-remastered.jpg",
     title: "The Witcher 3 Remastered"
   },
   {
     id: 'tlou1',
-    imageUrl: "https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa",
+    imageUrl: "/thumbnail/tlou1.jpg",
     title: "The Last of Us Part I"
   },
   {
     id: 'fc5',
-    imageUrl: "https://wallpapers.com/images/featured/far-cry-5-background-b36npu7jc7uygn0x.jpg",
+    imageUrl: "/thumbnail/fc5.jpg",
     title: "Far Cry 5"
   },
   {
-    id: 'eldenring',
-    imageUrl: "https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg",
+    id: '55',
+    imageUrl: "/thumbnail/55.jpg",
     title: "Elden Ring"
   }
 ];
@@ -133,7 +133,7 @@ export function VideoCarousel() {
 
   const desktopRow1 = CAROUSEL_ITEMS.slice(0, 6);
   const desktopRow2 = CAROUSEL_ITEMS.slice(6, 12);
-  const desktopRow3 = CAROUSEL_ITEMS.slice(12, 18); // Show the specific 6 for desktop line 3
+  const desktopRow3 = CAROUSEL_ITEMS.slice(12, 18);
 
   const row1Items = isMobile ? [...mobileRow1, ...mobileRow1, ...mobileRow1] : [...desktopRow1, ...desktopRow1, ...desktopRow1];
   const row2Items = isMobile ? [...mobileRow2, ...mobileRow2, ...mobileRow2] : [...desktopRow2, ...desktopRow2, ...desktopRow2];

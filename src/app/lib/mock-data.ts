@@ -2458,11 +2458,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'God of War III Remastered',
     description: 'In the end, there will be only chaos. One of the most critically acclaimed games of its generation, God of War III has been remastered for the PlayStation 4 system, bringing Kratos’ epic journey of vengeance to life with stunning 1080p visuals and 60fps gameplay.',
     categories: ['Action'],
-    thumbnail: '/thumbnail/gow3-remastered.jpg',
+    thumbnail: '/thumbnail/gow3.jpg',
     size: '23 GB',
     releaseYear: '2015',
     images: [
-      '/thumbnail/gow3-remastered.jpg',
+      '/thumbnail/gow3.jpg',
       'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
       'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
     ],
@@ -2516,11 +2516,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Castlevania: Belmont's Curse",
     description: "An epic return to the legendary vampire-hunting saga. Master the Whip and explore a cursed castle filled with gothic horrors and ancient secrets.",
     categories: ['Action'],
-    thumbnail: '/thumbnail/castlevania-belmonts-curse.jpg',
+    thumbnail: '/thumbnail/castlevania.jpg',
     size: '5 GB',
     releaseYear: '2025',
     images: [
-      '/thumbnail/castlevania-belmonts-curse.jpg',
+     '/thumbnail/castlevania.jpg',
       'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_2.0/store/software/switch/70010000116851/7a387161a475070cd7a109f32420f223ba6a9eb2296568c5bba28ca9254f6d79',
       'https://media.gamestop.com/i/gamestop/20033149_SCR02?w=1256&h=664&fmt=auto'
     ],
