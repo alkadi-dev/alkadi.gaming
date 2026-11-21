@@ -2317,7 +2317,6 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Gears of War',
     description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
     categories: ['Shooter'],
-<<<<<<< HEAD
     thumbnail: '/thumbnail/gears-of-war.jpg',
     size: '79 GB',
     releaseYear: '2025',
