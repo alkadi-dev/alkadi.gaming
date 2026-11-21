@@ -2045,8 +2045,6 @@ export const MOCK_GAMES: GameEntry[] = [
     categories: ['Adventure'],
 
     thumbnail: '/thumbnail/crash4.jpg',
-
-    thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
     size: '15 GB',
     releaseYear: '2021',
     images: [
