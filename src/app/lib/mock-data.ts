@@ -820,7 +820,6 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: Modern Warfare 4',
     description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
     categories: ['Shooter'],
-<<<<<<< HEAD
     thumbnail: '/thumbnail/cod-mw4.jpg',
     size: '58 GB',
     releaseYear: '2026',
