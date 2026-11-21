@@ -21,7 +21,7 @@ const getImg = (id: string) => PlaceHolderImages.find(img => img.id === id)?.ima
 export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'lego-batman-legacy',
-    title: 'LEGO Batman: Legacy of the Dark Knight',
+    title: 'LEGO Batman: Legacy of the Dark Knights',
     description: 'The Caped Crusader returns in a massive new LEGO adventure. Explore Gotham City like never before, building and battling through iconic locations. Play as a huge cast of heroes and villains in this definitive LEGO Batman experience.',
     categories: ['Adventure'],
     thumbnail: '/thumbnail/lego-batman-legacy.jpg',
