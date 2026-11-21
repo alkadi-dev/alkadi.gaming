@@ -12,11 +12,27 @@ interface SelectionContextType {
   totalSizeNum: number;
   isOverLimit: boolean;
   currentCapacity: number;
+  remainingSpace: number;
   isCheckoutOpen: boolean;
   setCheckoutOpen: (open: boolean) => void;
   usageColorClass: string;
   fillColorClass: string;
   usagePercentage: number;
+  isRemainingSpaceMode: boolean;
+  toggleRemainingSpaceMode: (active: boolean) => void;
+  // Filter States
+  selectedCategory: string;
+  setSelectedCategory: (val: string) => void;
+  searchQuery: string;
+  setSearchQuery: (val: string) => void;
+  maxSize: number;
+  setMaxSize: (val: number) => void;
+  sortOrder: string;
+  setSortOrder: (val: string) => void;
+  hasNoResults: boolean;
+  setHasNoResults: (val: boolean) => void;
+  resetFilters: () => void;
+  setSelectedIds: (ids: string[]) => void;
 }
 
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined);
@@ -24,6 +40,14 @@ const SelectionContext = createContext<SelectionContextType | undefined>(undefin
 export function SelectionProvider({ children }: { children: React.ReactNode }) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isCheckoutOpen, setCheckoutOpen] = useState(false);
+  const [isRemainingSpaceMode, setIsRemainingSpaceMode] = useState(false);
+
+  // Filter States
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [maxSize, setMaxSize] = useState(130);
+  const [sortOrder, setSortOrder] = useState('title-asc');
+  const [hasNoResults, setHasNoResults] = useState(false);
 
   // Load selection from localStorage on mount
   useEffect(() => {
@@ -46,7 +70,7 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!isCheckoutOpen) {
       const timer = setTimeout(() => {
-        if (document.body.style.pointerEvents === 'none') {
+        if (typeof document !== 'undefined' && document.body.style.pointerEvents === 'none') {
           document.body.style.pointerEvents = 'auto';
           document.body.style.overflow = 'auto';
         }
@@ -66,12 +90,15 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
 
   // Calculate current capacity milestone
   const currentCapacity = useMemo(() => {
-    if (totalSizeNum > 1400) return 1800;
-    if (totalSizeNum > 960) return 1400;
-    if (totalSizeNum > 460) return 960;
+    if (totalSizeNum > 930) return 1800; // Jump straight to 2TB
+    if (totalSizeNum > 460) return 930;
     if (totalSizeNum > 280) return 460;
     return 280;
   }, [totalSizeNum]);
+
+  const remainingSpace = useMemo(() => {
+    return Math.max(currentCapacity - totalSizeNum, 0);
+  }, [currentCapacity, totalSizeNum]);
 
   const isOverLimit = totalSizeNum > 1800;
 
@@ -81,7 +108,6 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   }, [totalSizeNum, currentCapacity]);
 
   const status = useMemo(() => {
-    // Thresholds based on drive type for the border color
     if (currentCapacity === 280) {
       if (totalSizeNum >= 270) return 'critical';
       if (totalSizeNum >= 230) return 'medium';
@@ -90,14 +116,10 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
       if (totalSizeNum >= 450) return 'critical';
       if (totalSizeNum >= 430) return 'medium';
       if (totalSizeNum >= 400) return 'low';
-    } else if (currentCapacity === 960) {
-      if (totalSizeNum >= 950) return 'critical';
-      if (totalSizeNum >= 930) return 'medium';
-      if (totalSizeNum >= 900) return 'low';
-    } else if (currentCapacity === 1400) {
-      if (totalSizeNum >= 1380) return 'critical';
-      if (totalSizeNum >= 1350) return 'medium';
-      if (totalSizeNum >= 1300) return 'low';
+    } else if (currentCapacity === 930) {
+      if (totalSizeNum >= 920) return 'critical';
+      if (totalSizeNum >= 900) return 'medium';
+      if (totalSizeNum >= 870) return 'low';
     } else if (currentCapacity === 1800) {
       if (totalSizeNum >= 1790) return 'critical';
       if (totalSizeNum >= 1750) return 'medium';
@@ -116,14 +138,13 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
   }, [status]);
 
   const fillColorClass = useMemo(() => {
-    // Progressive fill color every 15% of usage
-    if (usagePercentage <= 15) return "bg-red-500/10"; // Very light red
-    if (usagePercentage <= 30) return "bg-red-500/25"; // Light red
-    if (usagePercentage <= 45) return "bg-red-500/45"; // Soft red
-    if (usagePercentage <= 60) return "bg-red-500/65"; // Medium red
-    if (usagePercentage <= 75) return "bg-red-600/85"; // Dark red
-    if (usagePercentage <= 90) return "bg-red-800";    // Deep red
-    return "bg-red-600"; // Bright, intense red (90-100%)
+    if (usagePercentage <= 15) return "bg-red-500/10";
+    if (usagePercentage <= 30) return "bg-red-500/25";
+    if (usagePercentage <= 45) return "bg-red-500/45";
+    if (usagePercentage <= 60) return "bg-red-500/65";
+    if (usagePercentage <= 75) return "bg-red-600/85";
+    if (usagePercentage <= 90) return "bg-red-800";
+    return "bg-red-600";
   }, [usagePercentage]);
 
   const addToSelection = (id: string) => {
@@ -139,6 +160,18 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
 
   const clearSelection = () => setSelectedIds([]);
 
+  const toggleRemainingSpaceMode = (active: boolean) => {
+    setIsRemainingSpaceMode(active);
+  };
+
+  const resetFilters = () => {
+    setSelectedCategory('All');
+    setSearchQuery('');
+    setMaxSize(130);
+    setSortOrder('title-asc');
+    setIsRemainingSpaceMode(false);
+  };
+
   return (
     <SelectionContext.Provider
       value={{ 
@@ -150,11 +183,26 @@ export function SelectionProvider({ children }: { children: React.ReactNode }) {
         totalSizeNum,
         isOverLimit,
         currentCapacity,
+        remainingSpace,
         isCheckoutOpen,
         setCheckoutOpen,
         usageColorClass,
         fillColorClass,
-        usagePercentage
+        usagePercentage,
+        isRemainingSpaceMode,
+        toggleRemainingSpaceMode,
+        selectedCategory,
+        setSelectedCategory,
+        searchQuery,
+        setSearchQuery,
+        maxSize,
+        setMaxSize,
+        sortOrder,
+        setSortOrder,
+        hasNoResults,
+        setHasNoResults,
+        resetFilters,
+        setSelectedIds
       }}
     >
       {children}

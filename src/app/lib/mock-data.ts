@@ -24,11 +24,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'LEGO Batman: Legacy of the Dark Knight',
     description: 'The Caped Crusader returns in a massive new LEGO adventure. Explore Gotham City like never before, building and battling through iconic locations. Play as a huge cast of heroes and villains in this definitive LEGO Batman experience.',
     categories: ['Adventure'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
+    thumbnail: '/thumbnail/lego-batman-legacy.jpg',
     size: '30 GB',
     releaseYear: '2026',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1780591479',
+      '/thumbnail/lego-batman-legacy.jpg',
       'https://images.alphacoders.com/140/thumb-1920-1400002.png',
       'https://wallpapercave.com/wp/wp16013669.jpg'
     ],
@@ -45,11 +45,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Red Dead Redemption 2',
     description: 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp3770429.png',
+    thumbnail: '/thumbnail/5.jpg',
     size: '70 GB',
     releaseYear: '2018',
     images: [
-      'https://wallpapercave.com/wp/wp3770429.png',
+      '/thumbnail/5.jpg',
       'https://images6.alphacoders.com/952/thumbbig-952687.webp',
       'https://wallpapers.com/images/hd/red-dead-redemption-2-desktop-dd0fimlsbzh0zihw.jpg'
     ],
@@ -66,11 +66,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Witcher 3',
     description: 'The Witcher 3: Wild Hunt is an open-world action RPG where you play as Geralt of Rivia, a monster hunter. The game is set in a rich, vast fantasy world, full of deep storytelling, complex characters, and massive choices that impact the world around you.',
     categories: ['RPG'],
-    thumbnail: 'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
+    thumbnail: '/thumbnail/1.jpg',
     size: '33 GB',
     releaseYear: '2015',
     images: [
-      'https://wallpapercat.com/w/full/f/3/f/5549-3840x2160-desktop-4k-the-witcher-game-wallpaper-photo.jpg',
+      '/thumbnail/1.jpg',
       'https://getwallpapers.com/wallpaper/full/a/7/8/23018.jpg',
       'https://wallpaperaccess.com/full/8799600.jpg'
     ],
@@ -86,11 +86,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Shadows",
     description: 'Experience an epic historical action-adventure story set in feudal Japan. Become a lethal shinobi assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp13980393.jpg',
+    thumbnail: '/thumbnail/ac-shadows.jpg',
     size: '76 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp13980393.jpg',
+      '/thumbnail/ac-shadows.jpg',
       'https://preview.redd.it/two-new-screenshots-of-ac-shadows-world-v0-whm6mgnqhsee1.png?width=640&crop=smart&auto=webp&s=f0d47b92ba36516422cfee81603b63221662a440',
       'https://wallpapercave.com/wp/wp13980388.jpg'
     ],
@@ -107,11 +107,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Unity",
     description: "Assassin's Creed Unity is an action-adventure game set in the city of Paris during one of its darkest hours, the French Revolution. Take ownership of the story by customizing your equipment to make the experience unique to you.",
     categories: ['Open World'],
-    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    thumbnail: '/thumbnail/ac-unity.jpg',
     size: '33 GB',
     releaseYear: '2014',
     images: [
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Assassins-Creed-Unity.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      '/thumbnail/ac-unity.jpg',
       'https://wallpapercave.com/wp/wp1869825.jpg',
       'https://wallpapers.com/images/hd/assassin-s-creed-unity-1920-x-1080-wallpaper-nmwpxl1khg7mzdzg.jpg'
     ],
@@ -127,11 +127,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Mirage",
     description: 'In Assassin’s Creed Mirage, you are Basim, a cunning street thief with nightmarish visions, seeking answers and justice. Join an ancient organization and come to understand a new creed – one that will change Basim’s fate in ways he never could have imagined.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp11468139.jpg',
+    thumbnail: '/thumbnail/ac-mirage.jpg',
     size: '20 GB',
     releaseYear: '2023',
     images: [
-      'https://wallpapercave.com/wp/wp11468139.jpg',
+      '/thumbnail/ac-mirage.jpg',
       "https://www.wallpapergap.com/cdn/24/343/assassin's-creed-mirage-full-hd-wallpaper-2000x1000.jpg",
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2023/08/28/144dbd58/359_reveal_webhero.jpg.webp'
     ],
@@ -147,11 +147,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Odyssey",
     description: 'Write your own epic odyssey and become a legendary Spartan hero. Forge your destiny in a world on the brink of tearing itself apart. Influence how history unfolds in an ever-changing world shaped by your choices.',
     categories: ['RPG'],
-    thumbnail: 'https://wallpaperaccess.com/full/1110212.jpg',
+    thumbnail: '/thumbnail/ac-odyssey.jpg',
     size: '36 GB',
     releaseYear: '2018',
     images: [
-      'https://wallpaperaccess.com/full/1110212.jpg',
+      '/thumbnail/ac-odyssey.jpg',
       'https://wallpapers.com/images/hd/4k-assassin-s-creed-odyssey-background-3840-x-2160-vzqb12fb66jcw0tw.jpg',
       'https://wallpapercave.com/wp/wp4452951.jpg'
     ],
@@ -167,11 +167,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Assassin's Creed Syndicate",
     description: 'London, 1868. In the heart of the Industrial Revolution, lead your underworld organization and grow your influence to fight those who exploit the less privileged in the name of progress.',
     categories: ['Open World'],
-    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    thumbnail: '/thumbnail/ac-syndicate.jpg',
     size: '21 GB',
     releaseYear: '2015',
     images: [
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/05/Diesel_productv2_assassins-creed-syndicate_home_ACS-STD-2560x1440-635b7b6c86f18730071426375e7c4fe0bd831ddd.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      '/thumbnail/ac-syndicate.jpg',
       'https://wallpaperaccess.com/full/1994779.jpg',
       'https://wallpaperaccess.com/full/2377333.jpg'
     ],
@@ -187,11 +187,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 5',
     description: 'Experience the ultimate driving festival. Explore a vibrant and ever-evolving open world with hundreds of the world\'s greatest cars in stunning 4K. Your ultimate Horizon adventure awaits.',
     categories: ['Race'],
-    thumbnail: 'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover.jpg',
+    thumbnail: '/thumbnail/2.jpg',
     size: '83 GB',
     releaseYear: '2021',
     images: [
-      'https://traxion.gg/wp-content/uploads/2021/08/Forza-Horizon-5-game-cover.jpg',
+      '/thumbnail/2.jpg',
       'https://wallpapercave.com/wp/wp12405375.jpg',
       'https://wallpapers.com/images/hd/forza-horizon-5-4k-dac6pfcwb8wy8spw.jpg'
     ],
@@ -207,11 +207,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Spider-Man 2',
     description: 'Spider-Men, Peter Parker and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel\'s Spider-Man franchise. Swing, jump, and utilize the new Web Wings to travel across Marvel\'s New York.',
     categories: ['Open World'],
-    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
+    thumbnail: '/thumbnail/6.jpg',
     size: '68 GB',
     releaseYear: '2023',
     images: [
-      'https://4kwallpapers.com/images/walls/thumbs_2t/11609.jpeg',
+      '/thumbnail/6.jpg',
       'https://i.pinimg.com/originals/05/6d/d3/056dd39fccee614d4e46d77ef8814bf8.jpg',
       'https://wallpapers.com/images/hd/spider-man-2-miles-morales-and-peter-parker-v4198305c754v2b7.jpg'
     ],
@@ -228,11 +228,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'God of War Ragnarök',
     description: 'Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
+    thumbnail: '/thumbnail/10.jpg',
     size: '68 GB',
     releaseYear: '2022',
     images: [
-      'https://wallpapers.com/images/hd/godof-war-ragnarok-kratos-atreus-winter-landscape-p0z1cxhlrscxekzw.jpg',
+      '/thumbnail/10.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/11/God-Of-War-Ragnarok-Jotenheim.jpg?q=50&fit=crop&w=825&dpr=1.5',
       'https://i0.wp.com/waytoomany.games/wp-content/uploads/2022/11/God-of-War-Ragnarok_20221111004210.jpg?resize=860,484&ssl=1'
     ],
@@ -249,11 +249,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cyberpunk 2077',
     description: 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary.',
     categories: ['Open World'],
-    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg',
+    thumbnail: '/thumbnail/12.jpg',
     size: '56 GB',
     releaseYear: '2020',
     images: [
-      'https://4kwallpapers.com/images/walls/thumbs_2t/20154.jpg',
+      '/thumbnail/12.jpg',
       'https://t3.ftcdn.net/jpg/09/73/58/72/360_F_973587215_lhxTUODZnPlbm3MkZG4kPKN0vOrfFQh.jpg',
       'https://cdn.displate.com/artwork/2024-01-22/6c79a40a4801073d14023f605f2d9b0b_3227d717a9dec1fe67135c66a145fa46.jpg?speedsize=w_681'
     ],
@@ -269,11 +269,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 4',
     description: 'Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S. Kennedy has been dispatched to rescue the president\'s kidnapped daughter.',
     categories: ['Horror'],
-    thumbnail: 'https://wallpaperaccess.com/full/8929582.jpg',
+    thumbnail: '/thumbnail/50.jpg',
     size: '50 GB',
     releaseYear: '2023',
     images: [
-      'https://wallpaperaccess.com/full/8929582.jpg',
+      '/thumbnail/50.jpg',
       'https://wallpapercave.com/wp/wp11812031.jpg',
       'https://wallpaperaccess.com/full/9423775.jpg'
     ],
@@ -289,11 +289,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Elden Ring',
     description: 'Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
     categories: ['RPG'],
-    thumbnail: 'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
+    thumbnail: '/thumbnail/55.jpg',
     size: '50 GB',
     releaseYear: '2022',
     images: [
-      'https://wallpapers.com/images/featured/elden-ring-pictures-6r85th0gnhifsqd0.jpg',
+      '/thumbnail/55.jpg',
       'https://wallpapers.com/images/hd/elden-ring-game-scenery-u6f65ngdqukwsshd.jpg',
       'https://wallpapers.com/images/hd/elden-ring-background-c7pyny29pa8k3ptb.jpg'
     ],
@@ -309,11 +309,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Detroit: Become Human',
     description: 'Detroit, 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings.',
     categories: ['Adventure'],
-    thumbnail: 'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
+    thumbnail: '/thumbnail/36.jpg',
     size: '33 GB',
     releaseYear: '2018',
     images: [
-      'https://mygamingtutorials.com/wp-content/uploads/2025/05/capsule_616x353-4-1.jpg?w=616',
+      '/thumbnail/36.jpg',
       'https://i.pinimg.com/originals/c7/12/ab/c712ab2487a5b047b568afe3bdbe1874.jpg',
       'https://i.pinimg.com/originals/95/67/48/95674854a4a3dfe6a8c205aa4c6ef764.jpg'
     ],
@@ -329,11 +329,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Batman: Arkham Knight',
     description: 'Batman: Arkham Knight brings the award-winning Arkham trilogy from Rocksteady Studios to its epic conclusion.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp1835411.jpg',
+    thumbnail: '/thumbnail/40.jpg',
     size: '27 GB',
     releaseYear: '2015',
     images: [
-      'https://wallpapercave.com/wp/wp1835411.jpg',
+      '/thumbnail/40.jpg',
       'https://i.pinimg.com/originals/86/e6/9a/86e69a057b732ddd9c21ce76959a0beb.jpg',
       'https://wallpapercave.com/wp/wp1835407.jpg'
     ],
@@ -350,11 +350,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Far Cry 5',
     description: 'Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden\'s Gate. Stand up to cult leader Joseph Seed and his siblings, the Heralels, to spark the fires of resistance and liberate the besieged community.',
     categories: ['Adventure'],
-    thumbnail: 'https://wallpapers.com/images/featured/far-cry-5-background-b36npu7jc7uygn0x.jpg',
+    thumbnail: '/thumbnail/fc5.jpg',
     size: '37 GB',
     releaseYear: '2018',
     images: [
-      'https://wallpapers.com/images/featured/far-cry-5-background-b36npu7jc7uygn0x.jpg',
+      '/thumbnail/fc5.jpg',
       'https://i.pinimg.com/originals/e2/f3/be/e2f3beba5b3848e2f831840c2e9a5db1.jpg',
       'https://wallpapercave.com/wp/wp3279291.jpg'
     ],
@@ -370,11 +370,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 2',
     description: 'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh-eating zombies roam the streets for survivors.',
     categories: ['Horror'],
-    thumbnail: 'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
+    thumbnail: '/thumbnail/re2.jpg',
     size: '17 GB',
     releaseYear: '2019',
     images: [
-      'https://www.thumbculture.co.uk/wp-content/uploads/2021/01/residentevil2-featured-1024x597.png',
+      '/thumbnail/re2.jpg',
       'https://wallpapercave.com/wp/wp3815695.jpg',
       'https://wallpapercave.com/wp/wp3815709.png'
     ],
@@ -390,11 +390,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'STALKER 2',
     description: 'Heart of Chornobyl. Chornobyl Exclusion Zone has changed dramatically after the second second explosion in 2006. Dangerous mutants, deadly anomalies, and warring factions have made the Zone a very tough place to survive.',
     categories: ['Shooter'],
-    thumbnail: 'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
+    thumbnail: '/thumbnail/stalker2.jpg',
     size: '130 GB',
     releaseYear: '2024',
     images: [
-      'https://external-preview.redd.it/BacipTv5BtO8PH9bcn9iiAdyf8jxR1jRBTKE5bsDFGo.jpg?width=640&crop=smart&auto=webp&s=0fef5ec4e85ad25c7745cf0bdf227e87b56883f2',
+      '/thumbnail/stalker2.jpg',
       'https://wallpapercave.com/wp/wp8285372.jpg',
       'https://preview.redd.it/duabwooed0d51.jpg?width=640&crop=smart&auto=webp&s=13cb3ece5f7a2aa5d75c6258c5d7a056c1f9d7d4'
     ],
@@ -410,11 +410,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil 3',
     description: 'Jill Valentine is one of the last remaining people in Raccoon City to witness the atrocities Umbrella performed. To stop her, Umbrella unleashes their ultimate secret weapon: Nemesis!',
     categories: ['Horror'],
-    thumbnail: 'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
+    thumbnail: '/thumbnail/re3.jpg',
     size: '15 GB',
     releaseYear: '2020',
     images: [
-      'https://cdn.wallpapersafari.com/0/83/VhnwM9.jpg',
+      '/thumbnail/re3.jpg',
       'https://wallpapercave.com/wp/wp5995960.jpg',
       'https://cdn.wallpapersafari.com/81/40/uenEqr.jpg'
     ],
@@ -430,11 +430,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Star Wars Jedi: Survivor',
     description: 'The story of Cal Kestis continues in Star Wars Jedi: Survivor, a third-person galaxy-spanning action-adventure game from Respawn Entertainment.',
     categories: ['Adventure'],
-    thumbnail: 'https://wallpapercave.com/wp/wp12005399.jpg',
+    thumbnail: '/thumbnail/jedi-survivor.jpg',
     size: '117 GB',
     releaseYear: '2023',
     images: [
-      'https://wallpapercave.com/wp/wp12005399.jpg',
+      '/thumbnail/jedi-survivor.jpg',
       'https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1b9287112543738d/650ec7b5a86f96062da23371/STAR_WARS_Jedi_Survivor%E2%84%A2_20230419143317.jpg/?width=1280&auto=webp&quality=80&disable=upscale',
       'https://wallpapercave.com/wp/wp12245898.jpg'
     ],
@@ -450,11 +450,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Little Nightmares 3',
     description: 'Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere.',
     categories: ['Horror'],
-    thumbnail: 'https://i.redd.it/8wnn4vuu4rjb1.jpg',
+    thumbnail: '/thumbnail/nightmares3.jpg',
     size: '10 GB',
     releaseYear: '2024',
     images: [
-      'https://i.redd.it/8wnn4vuu4rjb1.jpg',
+      '/thumbnail/nightmares3.jpg',
       'https://wallpapercave.com/wp/wp15851273.jpg',
       'https://wallpapercave.com/wp/wp15851314.jpg'
     ],
@@ -470,11 +470,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Alan Wake 2',
     description: 'A string of ritualistic murders threatens Bright Falls, an idyllic small-town community in the Pacific Northwest. Saga Anderson, an accomplished FBI agent, arrives to investigate.',
     categories: ['Horror'],
-    thumbnail: 'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
+    thumbnail: '/thumbnail/alanwake2.jpg',
     size: '76 GB',
     releaseYear: '2023',
     images: [
-      'https://img.uhdpaper.com/wallpaper/alan-wake-2-267@1@m',
+      '/thumbnail/alanwake2.jpg',
       'https://wallpaperaccess.com/full/10969140.jpg',
       'https://images8.alphacoders.com/137/thumb-1920-1376384.png'
     ],
@@ -490,11 +490,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Silent Hill 2',
     description: 'Having received a letter from his deceased wife, James proceeds to where they shared so many memories, in the hope of seeing her one more time: Silent Hill.',
     categories: ['Horror'],
-    thumbnail: 'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
+    thumbnail: '/thumbnail/silenthill2.jpg',
     size: '26 GB',
     releaseYear: '2024',
     images: [
-      'https://www.grimdarkmagazine.com/wp-content/uploads/2024/11/Silent-Hill-2-Cover.jpg',
+      '/thumbnail/silenthill2.jpg',
       'https://wallpapercave.com/wp/wp13015730.jpg',
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/silent-hill-2-remake-screenshots-3.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
     ],
@@ -510,11 +510,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ghost of Tsushima',
     description: 'In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet.',
     categories: ['Open World'],
-    thumbnail: 'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
+    thumbnail: '/thumbnail/got.jpg',
     size: '34 GB',
     releaseYear: '2020',
     images: [
-      'https://images3.alphacoders.com/138/thumbbig-1387219.webp',
+      '/thumbnail/got.jpg',
       'https://i.pinimg.com/originals/d5/29/a4/d529a491cb3269b8e100314a0af2d6a6.jpg',
       'https://wallpapercave.com/wp/wp11003113.jpg'
     ],
@@ -531,11 +531,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Uncharted 4: A Thief\'s End',
     description: 'Several years after his last adventure, retired fortune hunter Nathan Drake is forced back into the world of thieves.',
     categories: ['Adventure'],
-    thumbnail: 'https://wallpapercave.com/wp/wp2272912.jpg',
+    thumbnail: '/thumbnail/u4.jpg',
     size: '50 GB',
     releaseYear: '2016',
     images: [
-      'https://wallpapercave.com/wp/wp2272912.jpg',
+      '/thumbnail/u4.jpg',
       'https://i.pinimg.com/originals/18/60/d1/1860d17c779f1d922d57d96be15246a6.jpg',
       'https://wallpapercat.com/w/full/a/d/1/119162-3840x2160-desktop-4k-uncharted-background-photo.jpg'
     ],
@@ -552,11 +552,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Last of Us Part I',
     description: 'In a ravaged civilization, where infected and hardened survivors run wild, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone.',
     categories: ['Action'],
-    thumbnail: 'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
+    thumbnail: '/thumbnail/tlou1.jpg',
     size: '43 GB',
     releaseYear: '2022',
     images: [
-      'https://preview.redd.it/4k-the-last-of-us-part-1-cover-art-wallpaper-v0-3z733s5snn491.png?width=640&crop=smart&auto=webp&s=fcf82bdc024dbd42597db28d31f496ae0aded7fa',
+      '/thumbnail/tlou1.jpg',
       'https://wallpapercave.com/wp/wp15026001.webp',
       'https://wallpapercave.com/wp/wp14445566.jpg'
     ],
@@ -573,11 +573,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Last of Us Part II',
     description: 'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming.',
     categories: ['Action'],
-    thumbnail: 'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
+    thumbnail: '/thumbnail/tlou2.jpg',
     size: '54 GB',
     releaseYear: '2024',
     images: [
-      'https://i.pinimg.com/originals/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg',
+      '/thumbnail/tlou2.jpg',
       'https://images.squarespace-cdn.com/content/v1/5f0f94f64a47900bb21e117e/1620696600821-SWBP5IZ915Z4FD9BU3Q6/Picture1.jpg',
       'https://preview.redd.it/ebmyt82afuc51.png?width=640&crop=smart&auto=webp&s=f8f2b3c2e1f2b3c2e1f2b3c2'
     ],
@@ -594,11 +594,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Grand Theft Auto V',
     description: 'When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld.',
     categories: ['Open World'],
-    thumbnail: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
+    thumbnail: '/thumbnail/gtav.jpg',
     size: '62 GB',
     releaseYear: '2013',
     images: [
-      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/04/grand-theft-auto-5-biggest-changes-in-update-156.jpg?q=50&fit=crop&w=825&dpr=1.5',
+      '/thumbnail/gtav.jpg',
       'https://wallpapercat.com/w/full/1/7/e/130549-1920x1080-desktop-1080p-grand-theft-auto-5-background-photo.jpg',
       'https://wallpaperaccess.com/full/11181407.jpg'    ],
     videoUrl: 'https://www.youtube.com/embed/QkkoHAzjnUs',
@@ -614,11 +614,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Horizon Zero Dawn',
     description: 'In an era where Machines roam the land and mankind is no longer the dominant species, a young hunter named Aloy embarks on a journey to discover her destiny.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
+    thumbnail: '/thumbnail/hzd.jpg',
     size: '63 GB',
     releaseYear: '2017',
     images: [
-      'https://wallpapers.com/images/hd/horizon-zero-dawn-fanart-cover-sugmfb0fbmof1vns.jpg',
+      '/thumbnail/hzd.jpg',
       'https://i.pinimg.com/originals/2c/b9/97/2cb997a4e03c53f49fa6472ceadbbd51.jpg',
       'https://wallpapers.com/images/hd/papel-de-parede-horizon-zero-dawn-kxu12nitxfat9f9j.jpg'
     ],
@@ -635,11 +635,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'FIFA 23',
     description: 'Experience the pinnacle of international football with the FIFA World Cup Qatar 2022 and FIFA Women’s World Cup Australia and New Zealand 2023.',
     categories: ['2 players'],
-    thumbnail: 'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
+    thumbnail: '/thumbnail/fifa23.jpg',
     size: '43 GB',
     releaseYear: '2022',
     images: [
-      'https://prod.assets.earlygamecdn.com/images/FIFA-23-Cover-2.jpeg?transform=Gallery+Webp',
+      '/thumbnail/fifa23.jpg',
       'https://wallpaperaccess.com/full/8406398.jpg',
       'https://wallpaperaccess.com/full/8406387.jpg'
     ],
@@ -655,11 +655,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'FIFA 26',
     description: 'The future of football simulation. Advanced HyperMotion technology and deep career mode improvements bring the beautiful game to life like never before.',
     categories: ['2 players'],
-    thumbnail: 'https://wallpapercave.com/wp/wp15596323.jpg',
+    thumbnail: '/thumbnail/fifa26.jpg',
     size: '52 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp15596323.jpg',
+      '/thumbnail/fifa26.jpg',
       'https://wallpaperaccess.com/full/22537363.jpg',
       'https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https://shacknews-www.s3.amazonaws.com/assets/article/2025/10/04/ea-sports-fc_feature.jpg&width=1032&sign=wEovsnYqz4UhLyPzNR94TNIe9giQ3uVrIvUAMW2poww'
     ],
@@ -675,11 +675,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sniper Elite 4',
     description: 'Discover unrivalled sniping freedom in the largest and most advanced World War 2 shooter ever built. Experience tactical third-person combat and epic longshots.',
     categories: ['Shooter'],
-    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+    thumbnail: '/thumbnail/se4.jpg',
     size: '25 GB',
     releaseYear: '2017',
     images: [
-      'https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo-740x382.jpg',
+      '/thumbnail/se4.jpg',
       'https://wallpaperaccess.com/full/2434001.jpg',
       'https://picsum.photos/seed/sniper4-gallery/120/800'
     ],
@@ -695,11 +695,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Watch Dogs 2',
     description: 'Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpaperset.com/w/full/b/b/e/457681.jpg',
+    thumbnail: '/thumbnail/wd2.jpg',
     size: '22 GB',
     releaseYear: '2016',
     images: [
-      'https://wallpaperset.com/w/full/b/b/e/457681.jpg',
+      '/thumbnail/wd2.jpg',
       'https://wallpapercave.com/wp/wp1841052.jpg',
       'https://wallpapercave.com/wp/wp1841031.jpg'
     ],
@@ -715,11 +715,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Battlefield V',
     description: 'Enter mankind’s greatest conflict with Battlefield V as the series goes back to its roots in a never-before-seen portrayal of World War 2.',
     categories: ['Shooter'],
-    thumbnail: 'https://wallpaperaccess.com/full/3495792.jpg',
+    thumbnail: '/thumbnail/bf5.jpg',
     size: '33 GB',
     releaseYear: '2018',
     images: [
-      'https://wallpaperaccess.com/full/3495792.jpg',
+      '/thumbnail/bf5.jpg',
       'https://preview.redd.it/modern-battlefields-should-not-shy-away-on-having-scenes-v0-ihzrwn5l1zde1.jpg?width=640&crop=smart&auto=webp&s=880fa16a80ae03451cf875fb06172f142533c549',
       'https://wallpaperaccess.com/full/898836.png'
     ],
@@ -735,11 +735,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Battlefield 6',
     description: 'Battlefield 6 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise.',
     categories: ['Shooter'],
-    thumbnail: 'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
+    thumbnail: '/thumbnail/bf6.jpg',
     size: '37 GB',
     releaseYear: '2025',
     images: [
-      'https://preview.redd.it/unofficial-battlefield-6-cover-art-wallpapers-3840x2160-v0-prnnp2onvgef1.png?width=640&crop=smart&auto=webp&s=eb731ab55f56ea3e8f52781113863fca066a4ab4',
+      '/thumbnail/bf6.jpg',
       'https://static0.polygonimages.com/wordpress/wp-content/uploads/2025/10/bf6.jpg?q=49&fit=crop&w=360&h=240&dpr=2',
       'https://images.hdqwalls.com/wallpapers/bthumb/the-battlefield-6-sr.jpg'
     ],
@@ -751,15 +751,98 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
+    id: 'cod-mw-1',
+    title: 'Call of Duty: Modern Warfare 1',
+    description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
+    categories: ['Shooter'],
+    thumbnail: '/thumbnail/cod-mw-1.jpg',
+    size: '72 GB',
+    releaseYear: '2019',
+    images: [
+      '/thumbnail/cod-mw-1.jpg',
+      'https://wallpapers.com/images/hd/4k-call-of-duty-modern-warfare-background-3840-x-2160-zdjbr6dl7k5czeot.jpg',
+      'https://images4.alphacoders.com/101/thumbbig-1018646.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI',
+    shorts: [
+      'https://www.youtube.com/embed/KurHR-5VmIw?si=bB3SJvHpnO1vgE7a',
+      'https://www.youtube.com/embed/cUCbtpMkZQM?si=b4E38CeFQzjvlqQL',
+      'https://www.youtube.com/embed/WzlKc5HmXbU?si=KxJ3XeffOL0EMr9I'
+    ],
+    isRecommended: true,
+  },
+  {
+    id: 'cod-mw2',
+    title: 'Call of Duty: Modern Warfare 2',
+    description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
+    categories: ['Shooter'],
+    thumbnail: '/thumbnail/cod-mw2.jpg',
+    size: '24 GB',
+    releaseYear: '2022',
+    images: [
+      '/thumbnail/cod-mw2.jpg',
+      'https://wallpapercave.com/wp/wp11743749.jpg',
+      'https://wallpapercave.com/wp/wp11704136.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E?si=OYPDMavvE_Lz-Ttw',
+    shorts: [
+      'https://www.youtube.com/embed/ILUywkhzNg0?si=5XJWGly6XMRjZBtF',
+      'https://www.youtube.com/embed/vSyvcfxgNC0?si=B4L2VLUMk95oiZDo',
+      'https://www.youtube.com/embed/FJHC5NttChE?si=y0jr1Kkky_3KKlcu'
+    ],
+    isRecommended: true,
+  },
+  {
+    id: 'cod-mw3',
+    title: 'Call of Duty: Modern Warfare 3',
+    description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
+    categories: ['Shooter'],
+    thumbnail: '/thumbnail/cod-mw3.jpg',
+    size: '40 GB',
+    releaseYear: '2023',
+    images: [
+      '/thumbnail/cod-mw3.jpg',
+      'https://wallpapercave.com/wp/wp3993550.jpg',
+      'https://wallpapercave.com/wp/wp13132336.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8?si=HMyCHgQmznLQvxcR',
+    shorts: [
+      'https://www.youtube.com/embed/u-O4uRNBBuc?si=k9A8HZoHbVbUNuTr',
+      'https://www.youtube.com/embed/GD4DphX5Sbo?si=dnf_pnh6B0mn9IOh',
+      'https://www.youtube.com/embed/brbTGmcdWTk?si=n-YDcFY-FmwbkzUJ'
+    ],
+  },
+  {
+    id: 'cod-mw4',
+    title: 'Call of Duty: Modern Warfare 4',
+    description: 'The mission continues. Experience the next generation of modern combat with Captain Price and Task Force 141. Pushing the boundaries of realistic shooter gameplay.',
+    categories: ['Shooter'],
+    thumbnail: '/thumbnail/cod-mw4.jpg',
+    size: '58 GB',
+    releaseYear: '2026',
+    images: [
+      '/thumbnail/cod-mw4.jpg',
+      'https://resizer.ladbiblegroup.com/unsafe/rs:fit:3840:0:0:0/g:sm/q:70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHRkNTE0MWMxNjgyM2YzYzc4LzZhY2NiMTM3N2MzNTBkNDc2YTgxMWZlZS9jYWxsLW9mLWR1dHktbW9kZXJuLXdhcmZhcmUtNC1ndWlkZS1zY3JlZW5zaG90LTEuanBn.webp',
+      'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/rfl-maps-modes/MW4-RFLMAPSMODES-023.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/yLFRQaQT0qM',
+    shorts: [
+      'https://www.youtube.com/embed/MPYzWqsp7eA',
+      'https://www.youtube.com/embed/4ZcVNaz4Pw8',
+      'https://www.youtube.com/embed/lgma1jLucGM'
+    ],
+    isRecommended: true,
+  },
+  {
     id: 'cod-v',
     title: 'Call of Duty: Vanguard',
     description: 'Rise on every front: Dogfight over the Pacific, airdrop over France, defend Stalingrad with a sniper’s precision and blast through enemies in North Africa.',
     categories: ['Shooter'],
-    thumbnail: 'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
+    thumbnail: '/thumbnail/cod-v.jpg',
     size: '43 GB',
     releaseYear: '2021',
     images: [
-      'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/store/games/vanguard/overview/VanguardPDP_Hero.png?imwidth=1920',
+      '/thumbnail/cod-v.jpg',
       'https://wallpapercave.com/wp/wp9729352.jpg',
       'https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/legacy/vanguard/vanguard-campaign-3.jpg'
     ],
@@ -775,11 +858,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Call of Duty: WWII',
     description: 'Call of Duty: WWII creates the definitive World War II next-generation experience across three different game modes: Campaign, Multiplayer, and Co-Operative.',
     categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp2259852.png',
+    thumbnail: '/thumbnail/cod-ww2.jpg',
     size: '69 GB',
     releaseYear: '2017',
     images: [
-      'https://wallpapercave.com/wp/wp2259852.png',
+      '/thumbnail/cod-ww2.jpg',
       'https://wallpapercave.com/wp/wp2203840.png',
       'https://wallpapercave.com/wp/wp2259859.jpg'
     ],
@@ -791,77 +874,15 @@ export const MOCK_GAMES: GameEntry[] = [
     ],
   },
   {
-    id: 'cod-mw',
-    title: 'Call of Duty: Modern Warfare',
-    description: 'The stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp4517150.jpg',
-    size: '72 GB',
-    releaseYear: '2019',
-    images: [
-      'https://wallpapercave.com/wp/wp4517150.jpg',
-      'https://wallpapers.com/images/hd/4k-call-of-duty-modern-warfare-background-3840-x-2160-zdjbr6dl7k5czeot.jpg',
-      'https://images4.alphacoders.com/101/thumbbig-1018646.webp'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/bH1lHCirCGI',
-    shorts: [
-      'https://www.youtube.com/embed/KurHR-5VmIw?si=bB3SJvHpnO1vgE7a',
-      'https://www.youtube.com/embed/cUCbtpMkZQM?si=b4E38CeFQzjvlqQL',
-      'https://www.youtube.com/embed/WzlKc5HmXbU?si=KxJ3XeffOL0EMr9I'
-    ],
-    isRecommended: true,
-  },
-  {
-    id: 'cod-mw2',
-    title: 'Call of Duty: Modern Warfare II',
-    description: 'Call of Duty: Modern Warfare II drops players into an unprecedented global conflict that features the return of the iconic operators of Task Force 141.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp11704100.jpg',
-    size: '24 GB',
-    releaseYear: '2022',
-    images: [
-      'https://wallpapercave.com/wp/wp11704100.jpg',
-      'https://wallpapercave.com/wp/wp11743749.jpg',
-      'https://wallpapercave.com/wp/wp11704136.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/ztjfwecrY8E?si=OYPDMavvE_Lz-Ttw',
-    shorts: [
-      'https://www.youtube.com/embed/ILUywkhzNg0?si=5XJWGly6XMRjZBtF',
-      'https://www.youtube.com/embed/vSyvcfxgNC0?si=B4L2VLUMk95oiZDo',
-      'https://www.youtube.com/embed/FJHC5NttChE?si=y0jr1Kkky_3KKlcu'
-    ],
-    isRecommended: true,
-  },
-  {
-    id: 'cod-mw3',
-    title: 'Call of Duty: Modern Warfare III',
-    description: 'In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.',
-    categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp13127005.jpg',
-    size: '40 GB',
-    releaseYear: '2023',
-    images: [
-      'https://wallpapercave.com/wp/wp13127005.jpg',
-      'https://wallpapercave.com/wp/wp3993550.jpg',
-      'https://wallpapercave.com/wp/wp13132336.jpg'
-    ],
-    videoUrl: 'https://www.youtube.com/embed/i3IsLrPeZG8?si=HMyCHgQmznLQvxcR',
-    shorts: [
-      'https://www.youtube.com/embed/u-O4uRNBBuc?si=k9A8HZoHbVbUNuTr',
-      'https://www.youtube.com/embed/GD4DphX5Sbo?si=dnf_pnh6B0mn9IOh',
-      'https://www.youtube.com/embed/brbTGmcdWTk?si=n-YDcFY-FmwbkzUJ'
-    ],
-  },
-  {
     id: 'crimson',
     title: 'Crimson Desert',
     description: 'An open-world action-adventure game depicting a realistic world of mercenaries on the continent of Pywel.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpaperaccess.com/full/26027678.jpg',
+    thumbnail: '/thumbnail/crimson.jpg',
     size: '67 GB',
     releaseYear: '2026',
     images: [
-      'https://wallpaperaccess.com/full/26027678.jpg',
+      '/thumbnail/crimson.jpg',
       'https://wallpaperaccess.com/full/26027727.jpg',
       'https://wallpaperaccess.com/full/26027691.jpg'
     ],
@@ -878,11 +899,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Marvel's Spider-Man",
     description: "Starring one of the world's most iconic super heroes, Marvel's Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for.",
     categories: ['Open World'],
-    thumbnail: 'https://i.pinimg.com/originals/db/76/43/db7643fd1a4174f7c64d19f6f7e0cec5.jpg',
+    thumbnail: '/thumbnail/spiderman-1.jpg',
     size: '39 GB',
     releaseYear: '2018',
     images: [
-      'https://i.pinimg.com/originals/db/76/43/db7643fd1a4174f7c64d19f6f7e0cec5.jpg',
+      '/thumbnail/spiderman-1.jpg',
       'https://wallpapercave.com/wp/wp11084730.jpg',
       'https://wallpapercave.com/wp/wp4585692.jpg'
     ],
@@ -898,11 +919,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: "Spider-Man: Miles Morales",
     description: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     categories: ['Open World'],
-    thumbnail: 'https://i.pinimg.com/originals/fd/44/27/fd44275f93f7fad47b801f77cb315901.jpg',
+    thumbnail: '/thumbnail/miles-morales.jpg',
     size: '29 GB',
     releaseYear: '2020',
     images: [
-      'https://i.pinimg.com/originals/fd/44/27/fd44275f93f7fad47b801f77cb315901.jpg',
+      '/thumbnail/miles-morales.jpg',
       'https://nerdybirdgames.com/wp-content/uploads/2020/11/miles_morales_spider_man_hero_3840.0.jpg?w=1024',
       'https://m.media-amazon.com/images/M/MV5BMTU4NjYwNzAxN15BMl5BanBnXkFtZTgwMDkyODI4NjM@.jpg'
     ],
@@ -918,11 +939,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hitman World of Assassination',
     description: 'Enter the world of the ultimate assassin. HITMAN World of Assassination brings together the best of HITMAN, HITMAN 2 and HITMAN 3.',
     categories: ['Action'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
+    thumbnail: '/thumbnail/hitman-woa.jpg',
     size: '60 GB',
     releaseYear: '2023',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1779710870',
+      '/thumbnail/hitman-woa.jpg',
       'https://wallpapercat.com/w/full/c/0/5/1658-1920x1080-desktop-1080p-hitman-game-wallpaper-photo.jpg',
       'https://wallpapers.com/images/hd/agent-47-atop-a-skyscraper-hitman-3-ivgh5xgmdm2xrv8f.jpg'
     ],
@@ -938,11 +959,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'God of War',
     description: 'His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
+    thumbnail: '/thumbnail/gow-2018.jpg',
     size: '24 GB',
     releaseYear: '2018',
     images: [
-      'https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.jpg',
+      '/thumbnail/gow-2018.jpg',
       'https://images.alphacoders.com/129/thumbbig-1295494.webp',
       'https://wallpapercave.com/wp/wp3282821.jpg'
     ],
@@ -952,17 +973,19 @@ export const MOCK_GAMES: GameEntry[] = [
       'https://www.youtube.com/embed/YPWqU9Pmte8?si=R2sRn-2l42gMvW5z',
       'https://www.youtube.com/embed/jOSGQVJ0iFw?si=IQQe3pgan8AGaeqP'
     ]
+    ,isRecommended: true,
   },
+  
   {
     id: 'fc4',
     title: 'Far Cry 4',
     description: 'Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are Ajay Ghale. Traveling to Kyrat to fulfill your mother’s dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.',
     categories: ['Adventure'],
-    thumbnail: 'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
+    thumbnail: '/thumbnail/fc4.jpg',
     size: '12 GB',
     releaseYear: '2014',
     images: [
-      'https://i.pinimg.com/originals/d9/e0/58/d9e0588b98766b0289061221b6550552.jpg',
+      '/thumbnail/fc4.jpg',
       'https://wallpapercave.com/wp/wp1837519.jpg',
       'https://wallpapers.com/images/featured/far-cry-4-background-u5ljpycnwwbjv4yn.jpg'
     ],
@@ -978,11 +1001,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Gotham Knights',
     description: 'Batman is dead. A new expansive, criminal underworld has swept the streets of Gotham City. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect Gotham, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
     categories: ['Action'],
-    thumbnail: 'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
+    thumbnail: '/thumbnail/gotham-k.jpg',
     size: '31 GB',
     releaseYear: '2022',
     images: [
-      'https://images8.alphacoders.com/139/thumbbig-1395453.webp',
+      '/thumbnail/gotham-k.jpg',
       'https://assetsio.gnwcdn.com/Gotham_Knights_Street_Art_7.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
       'https://wallpapercat.com/w/full/f/6/0/1273477-1920x1080-desktop-full-hd-gotham-knights-game-wallpaper-image.jpg'
     ],
@@ -998,11 +1021,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ready or Not',
     description: 'Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations.',
     categories: ['Shooter'],
-    thumbnail: 'https://wallpapercave.com/wp/wp4571906.png',
+    thumbnail: '/thumbnail/ready-not.jpg',
     size: '20 GB',
     releaseYear: '2023',
     images: [
-      'https://wallpapercave.com/wp/wp4571906.png',
+      '/thumbnail/ready-not.jpg',
       'https://wallpapercave.com/wp/wp4571903.jpg',
       'https://m.media-amazon.com/images/M/MV5BNjI0YmQ4YTEtZjc5Yy00ODRlLWE4MDQtZWNmZmIzM2U3YmI3XkEyXkFqcGc@.jpg'
     ],
@@ -1016,13 +1039,13 @@ export const MOCK_GAMES: GameEntry[] = [
   {
     id: 'echoes',
     title: 'Echoes of the End',
-    description: 'Echoes of the End is a third-person action-adventure game set in a unique fantasy world. Players take on the role of Ryn, a seasoned fighter with the ability to manipulate matter.',
+    description: 'Echoes of the End is a third-person action-adventure game that combines intense melee combat with the thrill of exploration in a semi-open world ravaged by a mysterious civil war.',
     categories: ['Adventure'],
-    thumbnail: 'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
+    thumbnail: '/thumbnail/echoes.jpg',
     size: '33 GB',
     releaseYear: '2025',
     images: [
-      'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-1-min-1920x1081.jpg',
+      '/thumbnail/echoes.jpg',
       'https://cdn.wccftech.com/wp-content/uploads/2025/08/Echoes-of-the-End-Review-5.png',
       'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
     ],
@@ -1038,11 +1061,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Cronos: The New Dawn',
     description: 'A third-person survival horror game from Bloober Team. Explore a world where time travel and twisted creatures await in a story of survival and uncovering the secrets of a dying civilization.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp15668537.jpg',
+    thumbnail: '/thumbnail/cronos.jpg',
     size: '18 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp15668537.jpg',
+      '/thumbnail/cronos.jpg',
       'https://i0.wp.com/twistedvoxel.com/wp-content/uploads/2025/09/cronos-the-new-dawn-4-scaled.jpg?resize=1170,658&ssl=1',
       'https://images.bauerhosting.com/empire/2025/09/cronosthenewdawn.jpg?auto=format&w=1440&q=80'
     ],
@@ -1058,11 +1081,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Dying Light 2',
     description: 'The virus won and civilization has fallen back into the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive and reshape the world.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapers.com/images/hd/dying-light-2-cover-jkekl8ltwon8uhq9.jpg',
+    thumbnail: '/thumbnail/dl2.jpg',
     size: '33 GB',
     releaseYear: '2022',
     images: [
-      'https://wallpapers.com/images/hd/dying-light-2-cover-jkekl8ltwon8uhq9.jpg',
+      '/thumbnail/dl2.jpg',
       'https://wallpapers.com/images/hd/dying-light-2-hanging-aiden-sxo2g6at09s4qr2m.jpg',
       'https://wallpaperaccess.com/full/2759141.jpg'
     ],
@@ -1078,11 +1101,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Dead Island 2',
     description: 'A deadly virus is spreading across Los Angeles, turning its inhabitants into ravenous zombies. The city is in quarantine and the military has retreated. Bitten, infected, but more than just immune, you learn to harness the zombie within.',
     categories: ['Action'],
-    thumbnail: 'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
+    thumbnail: '/thumbnail/di2.jpg',
     size: '50 GB',
     releaseYear: '2023',
     images: [
-      'https://cdn.wallpapersafari.com/99/84/OCQJol.jpg',
+      '/thumbnail/di2.jpg',
       'https://wallpapers.com/images/hd/dead-island2-first-person-combat-rv2aer2l260gmwc5.jpg',
       'https://wallpapers.com/images/hd/dead-island2-zombie-horde-beside-school-bus-8twgvbuv4p05m9bo.jpg'
     ],
@@ -1098,11 +1121,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Days Gone',
     description: 'Ride and fight into a deadly, post-pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
+    thumbnail: '/thumbnail/daysgone.jpg',
     size: '23 GB',
     releaseYear: '2019',
     images: [
-      'https://wallpapers.com/images/hd/days-gone-zombie-strike-poster-808vz2axmhw4zege.jpg',
+      '/thumbnail/daysgone.jpg',
       'https://kotaku.com/igdb/image/upload/t_720p/r5mn9rt7aqvf5nrn8dqq.jpg',
       'https://wallpapercave.com/wp/wp2392978.jpg'
     ],
@@ -1118,11 +1141,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Village',
     description: 'Experience survival horror like never before in the eighth major installment in the storied Resident Evil franchise - Resident Evil Village.',
     categories: ['Horror'],
-    thumbnail: 'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/04/13/cd58b898/rev.jpg.webp',
+    thumbnail: '/thumbnail/revillage.jpg',
     size: '22 GB',
     releaseYear: '2021',
     images: [
-      'https://gameinformer.com/sites/default/files/styles/thumbnail/public/2021/04/13/cd58b898/rev.jpg.webp',
+      '/thumbnail/revillage.jpg',
       'https://wallpapercat.com/w/full/4/b/2/2941-1920x1080-desktop-1080p-resident-evil-village-wallpaper.jpg',
       'https://wallpapers.com/images/hd/resident-evil-village-3840-x-2160-wallpaper-zn0xrqmkj1la6h54.jpg'
     ],
@@ -1138,10 +1161,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Biohazard',
     description: 'Set in modern day rural America and taking place after the dramatic events of Resident Evil 6, players experience the terror directly from the first person perspective.',
     categories: ['Horror'],
-    thumbnail: 'https://wallpapercave.com/wp/wp2073985.jpg',
+    thumbnail: '/thumbnail/rebio.jpg',
     size: '24 GB',
     releaseYear: '2017',
     images: [
+      '/thumbnail/rebio.jpg',
       'https://wallpapercave.com/wp/wp2074012.jpg',
       'https://wallpapercave.com/wp/wp2074034.jpg'
     ],
@@ -1157,18 +1181,18 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Resident Evil Requiem',
     description: 'Embark on a heartrending journey into a brutal, breathtaking world, and discover the cost of saving those you love in a desperate struggle for survival.',
     categories: ['Horror'],
-    thumbnail: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
+    thumbnail: '/thumbnail/plague.jpg',
     size: '56 GB',
     releaseYear: '2026',
     images: [
-      'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f05a9b5b-ead5-460e-8573-73ba2fff9cde/djxpgft-a53b41e0-9850-484d-9b01-1f19e4621bc6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMDVhOWI1Yi1lYWQ1LTQ2MGUtODU3My03M2JhMmZmZjljZGUvZGp4cGdmdC1hNTNiNDFlMC05ODUwLTQ4NGQtOWIwMS0xZjE5ZTQ2MjFiYzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VMBTlqB1IKBkCo8rL1VBzc-d83VgjfRTf5Q3UVM6-OI',
+      '/thumbnail/plague.jpg',
       'https://cdn.mos.cms.futurecdn.net/7Zb4CNrHJcf3P6PcovYDy8.jpg',
       'https://cdn.mos.cms.futurecdn.net/N9ci7TJ3rSu3sJxiz9tf2D.jpg'
     ],
     videoUrl: 'https://www.youtube.com/embed/POz1-EmLsTY',
     shorts: [
       'https://www.youtube.com/embed/k8aXqeQs9bE',
-      'https://www.youtube.com/embed/JsAW9PqQje4',
+      'https://www.youtube.com/embed/status/JsAW9PqQje4',
       'https://www.youtube.com/embed/Lr25tudS-ec'
     ],
     isRecommended: true,
@@ -1178,11 +1202,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ferocious',
     description: 'A first-person shooter that combines tactical combat with the primal fear of prehistoric predators.',
     categories: ['Shooter'],
-    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1645630/f3d600c47b912e4856c5a72cf94923361e96bf30/header.jpg?t=1781529362',
+    thumbnail: '/thumbnail/ferocious.jpg',
     size: '16 GB',
     releaseYear: '2025',
     images: [
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1645630/f3d600c47b912e4856c5a72cf94923361e96bf30/header.jpg?t=1781529362',
+      '/thumbnail/ferocious.jpg',
       'https://gamingbolt.com/wp-content/uploads/2025/11/ferocious-02-1024x576.jpg',
       'https://images.steamusercontent.com/ugc/9304301476222437091/DD1EB59BD93FCFB0CCBC028619021FA987A08C8A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
@@ -1195,14 +1219,14 @@ export const MOCK_GAMES: GameEntry[] = [
   },
   {
     id: 'elden-shadow',
-    title: 'Elden Ring: Shadow of the Erdtree',
+    title: 'Elden Ring: Nighreign',
     description: 'The Shadow of the Erdtree expansion features an all-new story set in the Land of Shadow, imbued with mystery, perilous dungeons, and new enemies, weapons and equipment.',
     categories: ['RPG'],
-    thumbnail: 'https://wallpapercave.com/wp/wp15107995.webp',
+    thumbnail: '/thumbnail/elden-shadow.jpg',
     size: '21 GB',
     releaseYear: '2024',
     images: [
-      'https://wallpapercave.com/wp/wp15107995.webp',
+      '/thumbnail/elden-shadow.jpg',
       'https://wallpapercave.com/wp/wp15108020.webp',
       'https://static0.srcdn.com/wordpress/wp-content/uploads/sharedimages/2024/12/elden-ring-nightreign-press-image-1.jpg?q=49&fit=crop&w=480&h=270&dpr=2'
     ],
@@ -1218,11 +1242,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Ninja Gaiden 4',
     description: 'The legendary ninja returns in a high-octane action experience. Master the art of the blade in this long-awaited sequel.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapercave.com/wp/wp15032759.webp',
+    thumbnail: '/thumbnail/ninja-gaiden-4.jpg',
     size: '43 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp15032759.webp',
+      '/thumbnail/ninja-gaiden-4.jpg',
       'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2025/08/25/d2f361cd/371-reveal-hero.jpg.webp',
       'https://cdn.mos.cms.futurecdn.net/fRgMvd54EpECnMQwbanzqh.jpg'
     ],
@@ -1238,11 +1262,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Clair Obscur: Expedition 33',
     description: 'In this reactive turn-based RPG, take part in a desperate quest to destroy the Paintress so she can never paint death again.',
     categories: ['RPG'],
-    thumbnail: 'https://wallpapercave.com/wp/wp15037173.webp',
+    thumbnail: '/thumbnail/exp33.jpg',
     size: '32 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp15037173.webp',
+      '/thumbnail/exp33.jpg',
       'https://www.cnet.com/a/img/resize/8211721e6d525ddab1e8fe795f3979a6bcb2df2d/hub/2025/04/23/8db58633-12fa-4609-a2d5-02e05d462fc7/clair-obscur-expedition-33-20250412073013.jpg?auto=webp&width=1200',
       'https://wallpapercave.com/wp/wp15335917.jpg'
     ],
@@ -1258,11 +1282,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Avatar: Frontiers of Pandora',
     description: 'Avatar: Frontiers of Pandora is a first-person action-adventure game set in the open world of the Western Frontier of Pandora.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp9594441.png',
+    thumbnail: '/thumbnail/avatar-pandora.jpg',
     size: '77 GB',
     releaseYear: '2023',
     images: [
-      'https://wallpapercave.com/wp/wp9594441.png',
+      '/thumbnail/avatar-pandora.jpg',
       'https://wallpapercave.com/wp/wp9594463.jpg',
       'https://preview.redd.it/photo-mode-thread-for-frontiers-of-pandora-v0-r1dnz6yrlb5c1.jpg?width=640&crop=smart&auto=webp&s=f637b3ecc55655499d9dd1cd0379d3b2d268ae93'
     ],
@@ -1278,11 +1302,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'REANIMAL',
     description: 'The creators of Little Nightmares and IT TAKES TWO return with a new, dark adventure about a group of children trying to escape a twisted world.',
     categories: ['Horror'],
-    thumbnail: 'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
+    thumbnail: '/thumbnail/reanimal.jpg',
     size: '9 GB',
     releaseYear: '2026',
     images: [
-      'https://reanimal.thqnordic.com/_next/image?url=/game-sites/reanimal/editions/standard-edition.png&w=3840&q=75',
+      '/thumbnail/reanimal.jpg',
       'https://cdn.mos.cms.futurecdn.net/yadref6MVJrFQC5p4zYNFC.jpg',
       'https://images5.alphacoders.com/140/thumb-1920-1405859.jpg'
     ],
@@ -1298,11 +1322,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Metal Gear Solid 5',
     description: 'The Phantom Pain. A new era for the Metal Gear franchise with cutting-edge technology and a massive open world.',
     categories: ['Action'],
-    thumbnail: 'https://wallpapers.com/images/hd/metal-gear-solid-5-t9wtrqr1jz4tv5gw.jpg',
+    thumbnail: '/thumbnail/mgs5.jpg',
     size: '54 GB',
     releaseYear: '2015',
     images: [
-      'https://wallpapers.com/images/hd/metal-gear-solid-5-t9wtrqr1jz4tv5gw.jpg',
+      '/thumbnail/mgs5.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/07/Beyond-Ultra-MGS-V-e1618172330544.jpeg?q=50&fit=crop&w=825&dpr=1.5',
       'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/287700/ss_fbfa8f676661d34b1da0495e15df5a08c7e1f04a.1920x1080.jpg?t=1727849445'
     ],
@@ -1318,11 +1342,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Senua\'s Saga: Hellblade 2',
     description: 'The sequel to the award-winning Hellblade: Senua\'s Sacrifice. Senua returns in a brutal journey of survival through the myth and tyranny of Viking Iceland.',
     categories: ['Horror'],
-    thumbnail: 'https://wallpapercave.com/wp/wp13923945.jpg',
+    thumbnail: '/thumbnail/hellblade2.jpg',
     size: '29 GB',
     releaseYear: '2024',
     images: [
-      'https://wallpapercave.com/wp/wp13923945.jpg',
+      '/thumbnail/hellblade2.jpg',
       'https://cdn.mos.cms.futurecdn.net/VmnpgP94cg/originals/qJWI4bkD9ZM.jpg',
       'https://m.media-amazon.com/images/M/MV5BZWYwNjVlOGEtZmI4Mi00ZGI5LWFlZjAtYzkyOGRlMzQyODMzXkEyXkFqcGc@.jpg'
     ],
@@ -1339,11 +1363,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Death Stranding 2',
     description: 'Hideo Kojima returns with the sequel to Death Stranding. Embark on a new mission to connect the world beyond the UCA.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpaperaccess.com/full/26350707.jpg',
+    thumbnail: '/thumbnail/ds2.jpg',
     size: '70 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpaperaccess.com/full/26350707.jpg',
+      '/thumbnail/ds2.jpg',
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots004.jpg',
       'https://www.kojimaproductions.jp/sites/default/files/2025-03/ds2_sxsw2025_screenshots009.jpg'
     ],
@@ -1359,11 +1383,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Just Cause 4',
     description: 'Rogue agent Rico Rodriguez journeys to Solis, a huge South American world home of conflict, tyranny and extreme weather conditions.',
     categories: ['Adventure'],
-    thumbnail: 'https://i.pinimg.com/originals/01/29/db/0129db8b6597b7b2f4a12cc4808b0e45.jpg',
+    thumbnail: '/thumbnail/jc4.jpg',
     size: '22 GB',
     releaseYear: '2018',
     images: [
-      'https://i.pinimg.com/originals/01/29/db/0129db8b6597b7b2f4a12cc4808b0e45.jpg',
+      '/thumbnail/jc4.jpg',
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-175qarmqymgwwv87.jpg',
       'https://wallpapers.com/images/hd/3440x1440p-just-cause-4-background-3440-x-1440-gtcblqohn6cuf53o.jpg'
     ],
@@ -1379,17 +1403,16 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Mafia: The Old Country',
     description: 'Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp15335747.webp',
+    thumbnail: '/thumbnail/mafia-old.jpg',
     size: '33 GB',
     releaseYear: '2025',
     images: [
-      'https://wallpapercave.com/wp/wp15335747.webp',
+      '/thumbnail/mafia-old.jpg',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/05/ss_44047e62744c4a7201a0238994d23f3ca72649cb.jpg?q=49&fit=crop&w=825&dpr=2',
       'https://i0.wp.com/selphie1999gaming.com/wp-content/uploads/2025/08/Mafia-The-Old-Country-Photographs-Cover.png?fit=1105,560&ssl=1'
     ],
     videoUrl: 'https://www.youtube.com/embed/AMtLTi0koGE?si=xAFs78l31DO5ckZd',
     shorts: [
-      'https://www.youtube.com/embed/P0qHvKYHSAI?si=wUeXzGKziuO7BHz',
       'https://www.youtube.com/embed/j1s43xL1yZE?si=c5SQyxkRy0OW4G99',
       'https://www.youtube.com/embed/yagGfBmDEFM?si=sw8IHrNlaiijpw5a'
     ]
@@ -1399,11 +1422,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Mafia 3: Definitive Edition',
     description: 'Part three of the Mafia crime saga – 1968, New Bordeaux, LA. Lincoln Clay knows this: family isn’t who you’re born with, it’s who you die for.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercave.com/wp/wp2867624.jpg',
+    thumbnail: '/thumbnail/mafia3.jpg',
     size: '20 GB',
     releaseYear: '2016',
     images: [
-      'https://wallpapercave.com/wp/wp2867624.jpg',
+      '/thumbnail/mafia3.jpg',
       'https://wallpaperaccess.com/full/4137127.jpg',
       'https://wallpaperaccess.com/full/4137122.jpg'
     ],
@@ -1419,11 +1442,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Max Payne 3',
     description: 'Max Payne 3 is a seamless, highly detailed, cinematic experience from Rockstar Games.',
     categories: ['Action'],
-    thumbnail: 'https://wallpaperaccess.com/full/2615697.jpg',
+    thumbnail: '/thumbnail/maxpayne3.jpg',
     size: '15 GB',
     releaseYear: '2012',
     images: [
-      'https://wallpaperaccess.com/full/2615697.jpg',
+      '/thumbnail/maxpayne3.jpg',
       'https://www.gamemaps.com/img/game_images/max_payne_3__524_2.jpg?1706667633',
       'https://wallpapercave.com/wp/wp2127256.jpg'
     ],
@@ -1439,11 +1462,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Need for Speed Unbound',
     description: 'The world is your canvas in Need for Speed Unbound. Prove you have what it takes to win The Grand, Lakeshore’s ultimate street racing challenge.',
     categories: ['Race'],
-    thumbnail: 'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2023/01/need-for-speed-unbound.jpg?resize=1170,720&ssl=1',
+    thumbnail: '/thumbnail/nfs-unbound.jpg',
     size: '21 GB',
     releaseYear: '2022',
     images: [
-      'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2023/01/need-for-speed-unbound.jpg?resize=1170,720&ssl=1',
+      '/thumbnail/nfs-unbound.jpg',
       'https://gameinformer.com/sites/default/files/styles/no_compression/public/2022/12/12/50550f56/nfs2.jpg.webp',
       'https://images8.alphacoders.com/130/thumbbig-1307240.webp'
     ],
@@ -1459,11 +1482,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Need for Speed Heat',
     description: 'Hustle by day and risk it all by night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.',
     categories: ['Race'],
-    thumbnail: 'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
+    thumbnail: '/thumbnail/nfs-heat.jpg',
     size: '20 GB',
     releaseYear: '2019',
     images: [
-      'https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/XemhVDBuAEVrQXUkJF57ZsdX.jpg',
+      '/thumbnail/nfs-heat.jpg',
       'https://images.steamusercontent.com/ugc/1829046027407668981/B2D706B7B10677C29DD57F3ACB36AA7AAE8521BC/',
       'https://images.steamusercontent.com/ugc/1829046027407669366/32E5B7945183BCDE51815B643D211072E6203527/'
     ],
@@ -1479,11 +1502,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Crew 2',
     description: 'Take on the American motorsports scene as you explore and dominate the land, air, and sea of the USA in one of the most exhilarating open worlds ever created.',
     categories: ['Race'],
-    thumbnail: 'https://wallpaperaccess.com/full/2286453.jpg',
+    thumbnail: '/thumbnail/thecrew2.jpg',
     size: '21 GB',
     releaseYear: '2018',
     images: [
-      'https://wallpaperaccess.com/full/2286453.jpg',
+      '/thumbnail/thecrew2.jpg',
       'https://wallpaperaccess.com/full/2286467.jpg',
       'https://wallpaperaccess.com/full/2286468.jpg'
     ],
@@ -1499,11 +1522,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Forza Horizon 6',
     description: 'The next evolution of the ultimate open-world driving festival. Speed across breathtaking landscapes in hundreds of the world\'s greatest cars.',
     categories: ['Race'],
-    thumbnail: 'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
+    thumbnail: '/thumbnail/forza6.jpg',
     size: '94 GB',
     releaseYear: '2026',
     images: [
-      'https://wolfsgamingblog.com/wp-content/uploads/2026/05/forza-horizon-6-key-art.jpg?w=1024',
+      '/thumbnail/forza6.jpg',
       'https://images.purexbox.com/e311b45450f8a/xbox-showcases-five-unique-biomes-with-breathtaking-landscapes-in-forza-horizon-6.900x.jpg',
       'https://cdn.mos.cms.futurecdn.net/5D5DKFRi3iqCDQnmR6ExiT.jpg'
     ],
@@ -1520,11 +1543,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Black Myth: Wukong',
     description: 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. The story is based on Journey to the West, one of the Four Great Classical Novels of Chinese literature.',
     categories: ['RPG'],
-    thumbnail: 'https://4kwallpapers.com/images/walls/thumbs/17948.jpeg',
+    thumbnail: '/thumbnail/wukong.jpg',
     size: '96 GB',
     releaseYear: '2024',
     images: [
-      'https://4kwallpapers.com/images/walls/thumbs/17948.jpeg',
+      '/thumbnail/wukong.jpg',
       'https://preview.redd.it/photos-from-a-landscape-photographer-v0-u38zg9b5ajkd1.jpg?width=640&crop=smart&auto=webp&s=5d2f1726b0296910cdac360f70866c1d38750490',
       'https://static0.srcdn.com/wordpress/wp-content/uploads/2024/08/scene-black-wind-mountain-black-wind-cave-bodhi-peak-black-myth-wukong.jpg?q=70&fit=crop&w=825&dpr=1'
     ],
@@ -1540,11 +1563,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Stray',
     description: 'Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
     categories: ['Adventure'],
-    thumbnail: 'https://wallpapers.com/images/featured/stray-taob394fcubgvuwk.jpg',
+    thumbnail: '/thumbnail/stray.jpg',
     size: '5 GB',
     releaseYear: '2022',
     images: [
-      'https://wallpapers.com/images/featured/stray-taob394fcubgvuwk.jpg',
+      '/thumbnail/stray.jpg',
       'https://wallpaperaccess.com/full/8407617.jpg',
       'https://i.pinimg.com/originals/34/80/14/34801477320c4283e5723969a10f346b.jpg'
     ],
@@ -1560,11 +1583,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Horizon Forbidden West',
     description: 'Join Aloy as she braves the Forbidden West – a majestic but dangerous frontier that conceals mysterious new threats.',
     categories: ['Open World'],
-    thumbnail: 'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
+    thumbnail: '/thumbnail/hfw.jpg',
     size: '81 GB',
     releaseYear: '2022',
     images: [
-      'https://wallpapercat.com/w/full/f/4/5/12034-1920x1080-desktop-full-hd-horizon-forbidden-west-background-image.jpg',
+      '/thumbnail/hfw.jpg',
       'https://www.gameinformer.com/sites/default/files/2021/12/22/381f64d4/hfw_daunt_vista.jpg',
       'https://wallpapercat.com/w/full/b/1/6/100982-2000x1500-desktop-hd-horizon-forbidden-west-wallpaper-photo.jpg'
     ],      
@@ -1581,11 +1604,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Pragmata',
     description: 'Set in a dystopian near-future on Earth’s Moon, Pragmata will take you on an unforgettable adventure, powered by the next generation of gaming hardware.',
     categories: ['Action'],
-    thumbnail: 'https://wallpaperaccess.com/full/26417427.jpg',
+    thumbnail: '/thumbnail/pragmata.jpg',
     size: '22 GB',
     releaseYear: '2026',
     images: [
-      'https://wallpaperaccess.com/full/26417427.jpg',
+      '/thumbnail/pragmata.jpg',
       'https://static0.polygonimages.com/wordpress/wp-content/uploads/2025/06/PRAGMATA_SS_11.jpeg?q=49&fit=crop&w=480&h=270&dpr=2',
       'https://cdn.mos.cms.futurecdn.net/7WUhFQLYGEaWmZb6MHY3pR.jpg'
     ],
@@ -1602,11 +1625,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Split Fiction',
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). A mind-bending action-adventure where reality splits and stories collide. Master the art of navigating fragmented worlds.',
     categories: ['2 players'],
-    thumbnail: 'https://aiptcomics.com/wp-content/uploads/2025/03/SplitFiction_KeyArt_RGB_1920x1080.jpg',
+    thumbnail: '/thumbnail/splitfiction.jpg',
     size: '54 GB',
     releaseYear: '2025',
     images: [
-      'https://aiptcomics.com/wp-content/uploads/2025/03/SplitFiction_KeyArt_RGB_1920x1080.jpg',
+      '/thumbnail/splitfiction.jpg',
       'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/03/split-fiction-how-long-to-beat-sandfish-side-story-desert.jpg?q=49&fit=crop&w=825&dpr=2',
       'https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/03/ss_15a4fc0f9c14f8a0389a35e15a358617fcfcc32d.jpg?q=49&fit=crop&w=825&dpr=2'
     ],
@@ -1623,11 +1646,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'It Takes Two',
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.',
     categories: ['2 players'],
-    thumbnail: 'https://images4.alphacoders.com/114/thumbbig-1148443.webp',
+    thumbnail: '/thumbnail/ittakestwo.jpg',
     size: '28 GB',
     releaseYear: '2021',
     images: [
-      'https://images4.alphacoders.com/114/thumbbig-1148443.webp',
+      '/thumbnail/ittakestwo.jpg',
       'https://wallpapercat.com/w/full/6/b/0/83914-1920x1080-desktop-1080p-it-takes-two-background-image.jpg',
       'https://wallpapercave.com/wp/wp14614921.jpg'
     ],
@@ -1644,11 +1667,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: '007 First Light',
     description: 'Featuring a completely original Bond story, players will step into the shoes of the world\'s favorite secret agent to earn their 00 status in the very first James Bond origin story.',
     categories: ['Shooter'],
-    thumbnail: 'https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+    thumbnail: '/thumbnail/007firstlight.jpg',
     size: '36 GB',
     releaseYear: '2026',
     images: [
-      'https://images.steamusercontent.com/ugc/18436219776708369386/A5EF63D963D549429C3156545E269E987B28BCA8/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
+      '/thumbnail/007firstlight.jpg',
       'https://xboxwire.thesourcemediaassets.com/sites/2/2025/09/007FirstLight_Screenshots_04-e93a25ab1fe51886e9c6-1900x1080.jpg',
       'https://xboxwire.thesourcemediaassets.com/sites/2/2025/09/007FirstLight_Screenshots_02-a8a7c447efbf97ccdb4c-1900x1080.jpg'
     ],
@@ -1665,11 +1688,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hell is Us',
     description: 'A third-person action-adventure game that combines intense melee combat with the thrill of exploration in a semi-open world ravaged by a mysterious civil war.',
     categories: ['Action'],
-    thumbnail: 'https://media.nacongaming.com/media/catalog/product/h/e/hellisus_image_landscape.webp?width=1000&store=nacon_us&image-type=landscape_image',
+    thumbnail: '/thumbnail/hellisus.jpg',
     size: '18 GB',
     releaseYear: '2025',
     images: [
-      'https://media.nacongaming.com/media/catalog/product/h/e/hellisus_image_landscape.webp?width=1000&store=nacon_us&image-type=landscape_image',
+      '/thumbnail/hellisus.jpg',
       'https://wallpapercave.com/wp/wp13290378.jpg',
       'https://gamingbolt.com/wp-content/uploads/2024/09/hell-is-us-1024x576.jpg'
     ],
@@ -1685,11 +1708,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Tomb Raider',
     description: 'Explore the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance, Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold.',
     categories: [ 'Adventure'],
-    thumbnail:   'https://wallpapercave.com/wp/wp4078513.jpg',
+    thumbnail:   '/thumbnail/tomb-raider-2013.jpg',
     size: '11 GB',
     releaseYear: '2013',
     images: [
-      'https://wallpapercave.com/wp/wp4078513.jpg',
+      '/thumbnail/tomb-raider-2013.jpg',
       'https://wallpapers.com/images/hd/2560-x-1440-tomb-raider-dark-forest-gfljtsx5xucmiiyf.jpg',
       'https://wallpapers.com/images/hd/lara-croft-arrow-shot-tomb-raider-a85ffx20r7o0k547.jpg'
     ],
@@ -1704,11 +1727,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Rise of the Tomb Raider',
     description: 'Lara Croft becomes more than a survivor as she embarks on her first Tomb Raiding expedition to the most treacherous and remote regions of Siberia. In this high-octane action-adventure, Lara must use her wits and survival skills, form new alliances, and ultimately embrace her destiny as the Tomb Raider.',
     categories: [ 'Adventure'],
-    thumbnail: 'https://wallpapers.com/images/hd/1080p-rise-of-the-tomb-raider-background-kmbjzwv5xqzx6pus.jpg',
+    thumbnail: '/thumbnail/rise-tomb-raider.jpg',
     size: '14 GB',
     releaseYear: '2015',
     images: [
-      'https://wallpapers.com/images/hd/1080p-rise-of-the-tomb-raider-background-kmbjzwv5xqzx6pus.jpg',
+      '/thumbnail/rise-tomb-raider.jpg',
       'https://wallpapers.com/images/hd/rise-of-the-tomb-raider-arctic-landscape-j0mpal8hrt7ah59i.jpg',
       'https://preview.redd.it/some-rise-of-the-tomb-raider-screenshots-that-i-took-v0-4zyhtc4l527b1.png?width=640&crop=smart&auto=webp&s=2e6709605aabef5c2e48625ff129392718762565'
     ],
@@ -1725,11 +1748,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Tom Clancy’s Ghost Recon: Wildlands',
     description: 'Create a team with up to 3 friends in Tom Clancy’s Ghost Recon® Wildlands and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.',
     categories: ['Shooter'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
+    thumbnail: '/thumbnail/ghost-recon-wildlands.jpg',
     size: '32 GB',
     releaseYear: '2017',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1784154331',
+      '/thumbnail/ghost-recon-wildlands.jpg',
       'https://wallpaperaccess.com/full/1925560.jpg',
       'https://wallpapers.com/images/hd/best-ghost-recon-wildlands-background-1920-x-1080-0h9fv60dbxctq8oz.jpg'
     ],
@@ -1746,11 +1769,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Screamer',
     description: 'A high-octane racing experience where speed is everything. Master the curves and dominate the track in this intense racing title.',
     categories: ['2 players'],
-    thumbnail: 'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
+    thumbnail: '/thumbnail/screamer.jpg',
     size: '21 GB',
     releaseYear: '2026',
     images: [
-      'https://traxion.gg/wp-content/uploads/2025/07/Screamer-key-art-1024x576.jpg',
+      '/thumbnail/screamer.jpg',
       'https://comicbook.com/wp-content/uploads/sites/4/2026/02/Screamer-2026-3.jpg?w=1024',
       'https://cdn.mos.cms.futurecdn.net/mhacnC6pNpoaBLjrtXydZ4.png'
     ],
@@ -1767,11 +1790,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'WWE 2018',
     description: 'The biggest video game franchise in WWE history is back with WWE 2K18! Promises to bring you closer to the ring than ever before with hard-hitting action and stunning graphics.',
     categories: ['2 players'],
-    thumbnail: 'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
+    thumbnail: '/thumbnail/wwe-2018.jpg',
     size: '29 GB',
     releaseYear: '2017',
     images: [
-      'https://getwallpapers.com/wallpaper/full/5/b/d/910543-wwe-2018-wallpaper-1920x1080-photos.jpg',
+      '/thumbnail/wwe-2018.jpg',
       'https://getwallpapers.com/wallpaper/full/e/8/b/910464-wwe-2018-wallpaper-1920x1080-for-mobile-hd.jpg',
       'https://getwallpapers.com/wallpaper/full/c/a/7/910530-wwe-2018-wallpaper-1920x1200-full-hd.jpg'
     ],
@@ -1788,11 +1811,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The House of the Dead 2: Remake',
     description: 'The arcade classic returns with a complete graphical overhaul and improved gameplay. Experience Venice like never before as you blast through legions of undead in this intense 2-player rail shooter.',
     categories: ['2 players'],
-    thumbnail: 'https://klovimg.com/images/2023/01/28/before.jpg',
+    thumbnail: '/thumbnail/hotd2-remake.jpg',
     size: '5 GB',
     releaseYear: '2025',
     images: [
-      'https://klovimg.com/images/2023/01/28/before.jpg',
+      '/thumbnail/hotd2-remake.jpg',
       'https://images.gog-statics.com/000fbb964ccaee8d6b8ae1b87e06cd28000f5c3df70e4736dbd9bbf5c9aca471_product_card_v2_mobile_slider_639.jpg',
       'https://www.relyonhorror.com/wp-content/uploads/2025/08/20250815153722_1.jpg'
     ],
@@ -1806,11 +1829,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'The Spirit of the Samurai',
     description: 'A visually stunning stop-motion action-adventure. Play as a samurai, a spirit, and a cat to protect your village from an army of darkness in this unique Metroidvania.',
     categories: ['2D game'],
-    thumbnail: 'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
+    thumbnail: '/thumbnail/spirit-samurai.jpg',
     size: '6 GB',
     releaseYear: '2024',
     images: [
-      'https://cdn1.epicgames.com/spt-assets/979767c41e6946e2a483d6e1e0f40f83/the-spirit-of-the-samurai-15kyx.png',
+      '/thumbnail/spirit-samurai.jpg',
       'https://i0.wp.com/intoindiegames.com/wp-content/uploads/IIG-TK-00007-40.jpg?resize=800,450&ssl=1',
       'https://cdn.mos.cms.futurecdn.net/3L5CCe7hJUrkotiJws26L7.png'
     ],
@@ -1825,11 +1848,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Beast of Reincarnation',
     description: 'A dark, visceral action experience where the cycle of life and death is your greatest weapon. Unleash your inner beast to survive a world of ancient curses.',
     categories: ['RPG'],
-    thumbnail: 'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
+    thumbnail: '/thumbnail/beast-reincarnation.jpg',
     size: '23 GB',
     releaseYear: '2026',
     images: [
-      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/07/31/1cdb0ec4/bor_keyart_4k.jpg.webp',
+      '/thumbnail/beast-reincarnation.jpg',
       'https://kotaku.com/app/uploads/2026/08/kooandemma.jpg',
       'https://www.vice.com/wp-content/uploads/sites/2/2026/08/beast-of-reincarnation-early-access.jpg?w=1024'
     ],
@@ -1844,11 +1867,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sudden Strike 5',
     description: 'The definitive World War II strategy series returns. Command massive armies across iconic battlefields with unprecedented tactical depth and realism.',
     categories: ['Action'],
-    thumbnail: 'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+    thumbnail: '/thumbnail/sudden-strike-5.jpg',
     size: '13 GB',
     releaseYear: '2026',
     images: [
-      'https://littlebitsofgaming.com/wp-content/uploads/2026/04/sudden-strike-5.jpg?w=1024',
+      '/thumbnail/sudden-strike-5.jpg',
       'https://www.indiegalacdn.com/store-img_game/games/screenshots/screen_2808550_1.jpg',
       'https://i.ebayimg.com/images/g/UhkAAOSwfPtmXNSR/s-l500.jpg'
     ],
@@ -1862,11 +1885,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Assassin’s Creed: Black Flag Resynced',
     description: 'The golden age of piracy returns in this stunning remaster. Embark on an epic naval journey as Edward Kenway, a pirate trained by Assassins, and command the Jackdaw in a massive open world.',
     categories: ['Open World'],
-    thumbnail: 'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
+    thumbnail: '/thumbnail/ac-black-flag-resynced.jpg',
     size: '36 GB',
     releaseYear: '2026',
     images: [
-      'https://www.greenmangaming.com/blog/wp-content/uploads/2026/07/BlogButtonACBlackFlag.jpg',
+      '/thumbnail/ac-black-flag-resynced.jpg',
       'https://assetsio.gnwcdn.com/Bartholomew-Roberts.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
       'https://wallpapercave.com/wp/wp16325456.webp'
     ],
@@ -1883,11 +1906,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hollow Knight',
     description: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs.',
     categories: ['2D game'],
-    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
+    thumbnail: '/thumbnail/hollow-knight.jpg',
     size: '2 GB',
     releaseYear: '2017',
     images: [
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg',
+      '/thumbnail/hollow-knight.jpg',
       'https://external-preview.redd.it/totally-normal-hollowknight-gameplay-v0-NnUzNmEzMGwxc2FjMaZ0odn_47P7nPBmn8KHJQ4uPC_KkuJ9hEr7g7mpdHpH.png?width=640&crop=smart&format=pjpg&auto=webp&s=ffcdd549d780dd4c299b71e83cd7ba3b310c9bc6',
       'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/aae3d1c6-1590-4b86-a56b-e8efcc543b6b/Paintmaster.jpg'
     ],
@@ -1901,11 +1924,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Hollow Knight: Silksong',
     description: 'Discover a whole new kingdom! Explore, fight and survive as Hornet, princess-protector of Hallownest, on a journey to a strange new land of silk and song.',
     categories: ['2D game'],
-    thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
+    thumbnail: '/thumbnail/hollow-knight-silksong.jpg',
     size: '3 GB',
     releaseYear: '2025',
     images: [
-      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736',
+      '/thumbnail/hollow-knight-silksong.jpg',
       'https://images.steamusercontent.com/ugc/10195868611166946737/DD11E42ED084440F45B8CBE73738995A1E13A0DB/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false',
       'https://images.steamusercontent.com/ugc/17131043628587106452/C94C98E142285E7D390DBC7BABB9A6D6EF2F5F6A/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=#000000&letterbox=false'
     ],
@@ -1920,11 +1943,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Replaced',
     description: 'A 2.5D sci-fi retro-futuristic action platformer where you play as R.E.A.C.H. - an artificial intelligence trapped in a human body against its own will.',
     categories: ['2D game'],
-    thumbnail: 'https://wallpapercave.com/wp/wp13317782.png',
-    size: '12 GB',
+    thumbnail: '/thumbnail/replaced.jpg',
+    size: '3 GB',
     releaseYear: '2026',
     images: [
-      'https://wallpapercave.com/wp/wp13317782.png',
+      '/thumbnail/replaced.jpg',
       'https://cdn.mos.cms.futurecdn.net/V8TgW26zyQg6aNbPQw55mW.jpg',
       'https://kotaku.com/igdb/image/upload/t_720p/scahje.jpg'
     ],
@@ -1938,11 +1961,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Akatori',
     description: 'An epic metroidvania that seamlessly blends high-octane 2D action and platforming across multiple unique dimensions.',
     categories: ['2D game'],
-    thumbnail: 'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
-    size: '8 GB',
+    thumbnail: '/thumbnail/akatori.jpg',
+    size: '4 GB',
     releaseYear: '2026',
     images: [
-      'https://rokthereaper.com/wp-content/uploads/2026/02/AKA-Feb1826-FEATIMG.png',
+      '/thumbnail/akatori.jpg',
       'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_5-1024x576.jpg',
       'https://rokthereaper.com/wp-content/uploads/2026/02/Akatori_Screenshot_8-1024x576.jpg'
     ],
@@ -1956,11 +1979,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Sifu',
     description: 'Sifu is a realistic third-person brawler with tight Kung Fu combat mechanics and cinematic martial arts action. Embark on a path of revenge, hunting down the assassins of your family.',
     categories: ['Action'],
-    thumbnail: 'https://wallpaperaccess.com/full/8064663.jpg',
+    thumbnail: '/thumbnail/sifu.jpg',
     size: '10 GB',
     releaseYear: '2022',
     images: [
-      'https://wallpaperaccess.com/full/8064663.jpg',
+      '/thumbnail/sifu.jpg',
       'https://i0.wp.com/waytoomany.games/wp-content/uploads/2022/02/Sifu_20220126190021.jpg?resize=860,484&ssl=1',
       'https://kotaku.com/igdb/image/upload/t_720p/sc9370.jpg'
     ],
@@ -1976,11 +1999,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Invincible VS',
     description: 'Experience the brutal, high-stakes world of Invincible in this intense competitive fighting game. Master legendary characters and engage in visceral 2-player battles that push the limits of superhero combat.',
     categories: ['2 players'],
-    thumbnail: 'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
+    thumbnail: '/thumbnail/invincible-vs.jpg',
     size: '9 GB',
     releaseYear: '2025',
     images: [
-      'https://invinciblevs.com/wp-content/uploads/2025/06/invincinble_cover-article.jpeg',
+      '/thumbnail/invincible-vs.jpg',
       'https://butwhytho.net/wp-content/uploads/2026/04/Invincible-VS-But-Why-Tho-4.jpg',
       'https://i0.wp.com/finalweapon.net/wp-content/uploads/2026/04/Invincible-VS-Gameplay.webp?resize=696,392&ssl=1'
     ],
@@ -1995,11 +2018,11 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'A Way Out',
     description: 'THIS GAME REQUIRES 2 PLAYERS (CANNOT BE PLAYED ALONE). From the creators of Brothers – A Tale of Two Sons comes A Way Out, an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
     categories: ['2 players'],
-    thumbnail: 'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
-    size: '22 GB',
+    thumbnail: '/thumbnail/awayout.jpg',
+    size: '15 GB',
     releaseYear: '2018',
     images: [
-      'https://cdn1.epicgames.com/spt-assets/a037fc78ee9d47b98466f17b44c46288/a-way-out-y92bk.jpg',
+      '/thumbnail/awayout.jpg',
       'https://images.igdb.com/igdb/image/upload/t_1080p/e3uewyuh6wbgj52z6h5r.jpg?width=1200&quality=50&format=auto',
       'https://cdn.mobygames.com/675f47e2-c249-11ed-ab6b-02420a000194.webp'
     ],
@@ -2015,18 +2038,570 @@ export const MOCK_GAMES: GameEntry[] = [
     title: 'Crash Bandicoot 4: It\'s About Time',
     description: 'Crash is back and it’s about time! It’s About Time – Crash-landing into a time-shattered adventure with your favorite marsupials. Neo Cortex and N. Tropy are back at it again and launching an all-out assault on not just this universe, but the entire multiverse!',
     categories: ['Adventure'],
-    thumbnail: 'https://wallpapercave.com/wp/wp7593275.jpg',
-    size: '24 GB',
+    thumbnail: '/thumbnail/crash4.jpg',
+    size: '15 GB',
     releaseYear: '2021',
     images: [
-      'https://wallpapercave.com/wp/wp7593275.jpg',
+      '/thumbnail/crash4.jpg',
       'https://www.crashbandicoot.com/content/dam/atvi/Crash/gallery/crash6.jpg',
       'https://wallpapers.com/images/hd/crash-bandicoot-sunset-1izya2ao3sy9yo37.jpg'
     ],
-    videoUrl: 'https://www.youtube.com/embed/U1qGQqOkZI8',
+    videoUrl: 'https://www.youtube.com/embed/U1qGQqOldZI8',
     shorts: [
       'https://www.youtube.com/embed/kX9RFvcm6oY'
     ],
     isRecommended: false,
+  },
+  {
+    id: 'ets2',
+    title: 'Euro Truck Simulator 2',
+    description: 'Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explore from the UK, Belgium, Germany, Italy, the Netherlands, Poland, and many more, your endurance, skill and speed will all be pushed to their limits.',
+    categories: ['Open World'],
+    thumbnail: '/thumbnail/ets2.jpg',
+    size: '17 GB',
+    releaseYear: '2012',
+    images: [
+      '/thumbnail/ets2.jpg',
+      'https://www.gtplanet.net/forum/attachments/ets2_00010-png.643071/',
+      'https://i.pinimg.com/originals/cc/35/24/cc35248b6a7e8a138dbbcb7e210db262.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/5uvwfskYwl0',
+    shorts: [
+      'https://www.youtube.com/embed/y287trA3Eio',
+      'https://www.youtube.com/embed/wJEZ0YDI-hc',
+      'https://www.youtube.com/embed/pdV0w2bQgxc'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'sinking-city-2',
+    title: 'The Sinking City 2',
+    description: 'A terrifying survival horror journey set in the lovecraftian city of Arkham. Navigate the flooded streets and face unspeakable cosmic horrors in this stunning sequel built in Unreal Engine 5.',
+    categories: ['Horror'],
+    thumbnail: '/thumbnail/sinking-city-2.jpg',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/sinking-city-2.jpg',
+      'https://images.squarespace-cdn.com/content/v1/59a2574903596e3462d0bd19/d18421b8-8569-4b68-8319-da7f917b915e/TSC2_AFD_Fight.jpg',
+      'https://cdn.mos.cms.futurecdn.net/dvMEnvMJwCv8b7cyF6kYRg.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/8Hi78PvY2M8',
+    shorts: [
+      'https://www.youtube.com/embed/Y6HUJ22LjxY',
+      'https://www.youtube.com/embed/OXrTcUeK1oM'
+    ],
+    
+  },
+  {
+    id: 'sinking-city-remastered',
+    title: 'The Sinking City Remastered',
+    description: 'The definitive version of the lovecraftian investigation game. Featuring 4K resolution, 60 FPS, and significantly improved graphical fidelity and loading times.',
+    categories: ['Horror'],
+    thumbnail: '/thumbnail/sinking-city-remastered.jpg',
+    size: '22 GB',
+    releaseYear: '2021',
+    images: [
+      '/thumbnail/sinking-city-remastered.jpg',
+      'https://i.postimg.cc/L5Px3ttT/The-Sinking-City-Remastered-Win64-Shipping-2025-05-14-02-02-25-874.png',
+      'https://images.squarespace-cdn.com/content/v1/55ef0e29e4b099e22cdc9eea/1562376985150-DM7DMQLL0EODIMUR2F2Q/sinking-welcome.jpeg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/gAG1tzdwCFg',
+    shorts: [
+      'https://www.youtube.com/embed/Y6P6uoPb7Tk'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'directive-8020',
+    title: 'Directive 8020',
+    description: 'A cinematic survival horror experience set in the depths of space. As part of The Dark Pictures Anthology, you must survive a crew turned against you by an alien presence that can mimic its prey.',
+    categories: ['Horror'],
+    thumbnail: '/thumbnail/directive-8020.jpg',
+    size: '23 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/directive-8020.jpg',
+      'https://www.thedarkpictures.com/media/1ysbbpaz/directive-8020_screenshot_danger-awaits.jpg?width=2560&v=1dc99add4d58ff0',
+      'https://cdn.mos.cms.futurecdn.net/Xpb2MrcvwaZPAimSAjb5dZ.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/4a_VXgNSfME',
+    shorts: [
+      'https://www.youtube.com/embed/EV-tLj0N6E0',
+      'https://www.youtube.com/embed/ZzIdh16FBdU'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'popucom',
+    title: 'Popucom',
+    description: 'A colorful multiplayer cooperative adventure! Use color-based mechanics to solve puzzles and defeat enemies in this vibrant world designed for playing with friends.',
+    categories: ['2 players'],
+    thumbnail: '/thumbnail/popucom.jpg',
+    size: '7 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/popucom.jpg',
+      'https://64.media.tumblr.com/07e20c48c8dfa7e05b5811e94e5dff59/95df6224d767b37e-56/s1280x1920/b57cc4e02a2e5d55f9dac81e0418f97b47c96387.jpg',
+      'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/store/software/switch/70010000083225/f0aa4beaa4d2ef582e97267022a0d293f6acc27f61a08e6e737e66faa1b1b34d'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ZCjHfPxZHYE',
+    shorts: [
+      'https://www.youtube.com/embed/3aB001eh0fI'
+    ],
+    isRecommended: false,
+  },
+  {
+    id: 'blood-dawnwalker',
+    title: 'The Blood of Dawnwalker',
+    description: 'Uncover the dark secrets of a gothic world in this atmospheric horror experience. Battle nightmarish creatures as you seek to break an ancient curse that has plagued the land for centuries.',
+    categories: ['RPG'],
+    thumbnail: '/thumbnail/blood-dawnwalker.jpg',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/blood-dawnwalker.jpg',
+      'https://gameinformer.com/sites/default/files/styles/content_header_l/public/2026/05/11/5127adb7/the-blood-of-dawnwalker-screenshot-06.jpg.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2025/01/The-Blood-of-Dawnwalker-Artwork-011.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/te73UInH8H8',
+    shorts: [
+      'https://www.youtube.com/embed/UaERmm1DQpM',
+      'https://www.youtube.com/embed/s7fZJScvOgk',
+      'https://www.youtube.com/embed/H7Kz7aODYEQ'
+    ],
+  },
+  {
+    id: 'hogwarts-legacy',
+    title: 'Hogwarts Legacy',
+    description: 'Experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Take control of the action and be at the center of your own adventure.',
+    categories: ['Open World'],
+    thumbnail: '/thumbnail/hogwarts-legacy.jpg',
+    size: '42 GB',
+    releaseYear: '2023',
+    images: [
+      '/thumbnail/hogwarts-legacy.jpg',
+      'https://preview.redd.it/beautiful-landscape-of-hogwarts-and-arround-v0-4teird06jwvc1.png?width=640&crop=smart&auto=webp&s=d0a98bab9ddd8249740d761ecc1cf9fa2ce75d02',
+      'https://i.pinimg.com/originals/cb/16/5c/cb165c8603ff240b26ca92fd8f5e9cab.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/1O6Qstncpnc',
+    shorts: [
+      'https://www.youtube.com/embed/QrlLnlpUhhg',
+      'https://www.youtube.com/embed/8PAFBXdV3oE',
+      'https://www.youtube.com/embed/Gw1fXsy9AIE'
+    ]
+  },
+  {
+    id: 'dragons-dogma-2',
+    title: "Dragon's Dogma 2",
+    description: "Dragon’s Dogma 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen to their vocation and party.",
+    categories: ['RPG'],
+    thumbnail: '/thumbnail/dragons-dogma-2.jpg',
+    size: '42 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/dragons-dogma-2.jpg',
+      'https://www.dragonsdogma.com/2/assets/images/topics/240719/thumb.jpg',
+      'https://preview.redd.it/finally-got-that-cover-art-armour-set-v0-3y69hmfu1upd1.png?width=1920&format=png&auto=webp&s=78d744382e33ee5df48f4cb09ca32d5993cf1896'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/cT0rIgaiPWA',
+    shorts: [
+      'https://www.youtube.com/embed/X83BHJdy3A0',
+      'https://www.youtube.com/embed/9RX9C-7RLpI'
+    ]
+  },
+  {
+    id: 'mortal-shell-2',
+    title: 'Mortal Shell II',
+    description: 'The sequel to the acclaimed soulslike. Possess new warriors, master lethal combat, and face even greater horrors in a decaying world that tests your sanity and skill.',
+    categories: ['Action'],
+    thumbnail: '/thumbnail/mortal-shell-2.jpg',
+    size: '52 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/mortal-shell-2.jpg',
+      'https://assetsio.gnwcdn.com/mortal-shell-2-standing-in-desolate-keep.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp',
+      'https://images5.alphacoders.com/116/thumbbig-1161741.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/KJWAUJhInH0',
+    shorts: [
+      'https://www.youtube.com/embed/M6kBsFobHFk',
+      'https://www.youtube.com/embed/LPUD61qBntM',
+      'https://www.youtube.com/embed/mHcC7Feypdc'
+    ]
+  },
+  {
+    id: 'romeo-dead-man',
+    title: 'ROMEO IS A DEAD MAN',
+    description: 'A stylish noir action-adventure. Navigate a city of shadows, uncover a deep conspiracy, and survive the consequences of your past in this cinematic journey of revenge.',
+    categories: ['Adventure'],
+    thumbnail: '/thumbnail/romeo-dead-man.jpg',
+    size: '24 GB',
+    releaseYear: '2026',
+    images: [
+      '/thumbnail/romeo-dead-man.jpg',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/romeo-is-a-deadman-trailer-zombies.jpg?q=49&fit=crop&w=480&h=270&dpr=2',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/romeo-is-a-deadman-trailer-romeo.jpg?q=49&fit=crop&w=450&h=225&dpr=2'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/nW1cE6sj6h8',
+    shorts: [
+      'https://www.youtube.com/embed/IROL9HaRWvg'
+    ]
+  },
+  {
+    id: 'arma-reforger',
+    title: 'Arma Reforger',
+    description: "Experience authentic Cold War combat and join the fight for the island of Everon. Return to the series' roots in this massive, versatile military sandbox.",
+    categories: ['Action'],
+    thumbnail: '/thumbnail/arma-reforger.jpg',
+    size: '19 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/arma-reforger.jpg',
+      'https://wallpapercave.com/wp/wp11030043.jpg',
+      'https://arma-reforger.com/img/screenshots/arma-reforger-01.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/AAnv3iWwP9M',
+  },
+  {
+    id: 'relic-first-guardian',
+    title: 'The Relic - First Guardian',
+    description: 'A grand action RPG where you set out on an adventure to find the pieces of a broken relic and restore the world to its former glory. Master diverse combat styles.',
+    categories: ['RPG'],
+    thumbnail: '/thumbnail/relic-first-guardian.jpg',
+    size: '20 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/relic-first-guardian.jpg',
+      'https://www.rpgfan.com/wp-content/uploads/2024/06/The-Relic-First-Guardian-Screenshot-002-1280x720.webp',
+      'https://www.rpgfan.com/wp-content/uploads/2024/06/The-Relic-First-Guardian-Screenshot-005-1280x720.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/YpzAUSNRF9E',
+    shorts: [
+      'https://www.youtube.com/embed/_teu3SPkgJE',
+      'https://www.youtube.com/embed/_PqPcTC56-Q',
+      'https://www.youtube.com/embed/1tbM67pMAuk'
+    ]
+  },
+  {
+    id: 'sw-outlaws',
+    title: 'Star Wars Outlaws',
+    description: 'Experience the first-ever open world Star Wars™ game. Explore distinct planets across the galaxy, both iconic and new, as you seek freedom and a new life.',
+    categories: ['Open World'],
+    thumbnail: '/thumbnail/sw-outlaws.jpg',
+    size: '41 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/sw-outlaws.jpg',
+      'https://gameinformer.com/sites/default/files/styles/body_default/public/2024/05/01/779564b7/swo_07.jpg.webp',
+      'https://gameinformer.com/sites/default/files/styles/body_default/public/2024/05/01/fe2ab122/swo_03.jpg.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/ymcpwq1ltQc',
+    shorts: [
+      'https://www.youtube.com/embed/JF93jvZt69s',
+      'https://www.youtube.com/embed/QP_wXv2ErgI',
+      'https://www.youtube.com/embed/bgd2OJGOQn4'
+    ]
+  },
+  {
+    id: 'gears-of-war',
+    title: 'Gears of War',
+    description: 'Experience the high-octane cover-based shooter that redefined action games. Follow Marcus Fenix and Delta Squad as they fight for the survival of humanity against the Locust Horde.',
+    categories: ['Shooter'],
+    thumbnail: '/thumbnail/gears-of-war.jpg',
+    size: '79 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/gears-of-war.jpg',
+      'https://wallpapers.com/images/hd/gears-of-war-4-fighting-a-grenadier-swarm-05kcandau3pgdcdm.jpg',
+      'https://live.cdn.gearsofwar.com/gearsofwar/sites/3/2026/05/03_GoW_EDAY_Boomer_Final-6a17663e3da94-scaled.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/EC20gLfUHeA',
+    shorts: [
+      'https://www.youtube.com/embed/K_Z0fd1zjYo',
+      'https://www.youtube.com/embed/XawcPlhwN40'
+    ]
+  },
+  {
+    id: 'witcher3-remastered',
+    title: 'The Witcher 3 Remastered',
+    description: 'The definitive edition of the legendary RPG, now with stunning 4K visuals, enhanced textures, and ray-tracing. Embark once more on Geralt\'s epic quest with all expansions included.',
+    categories: ['RPG'],
+    thumbnail: '/thumbnail/witcher3-remastered.jpg',
+    size: '40 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/witcher3-remastered.jpg',
+      'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd0b9acc1eeffb85e/6a8c8a9cf8f1248709bcb767/feature_3_shop_product_feature_card_geralt.webp',
+      'https://cdn.mos.cms.futurecdn.net/scKtip2PExfiPFZsd8Q74F.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/IGk17XQ7IrQ',
+    shorts: [
+      'https://www.youtube.com/embed/7Br0Yerr0mE',
+      'https://www.youtube.com/embed/oIFo_fKSTiE'
+    ],
+  },
+  {
+    id: 'control-resonant',
+    title: 'Control Resonant',
+    description: 'Explore the mysterious Oldest House once again in this standalone action-adventure. Master new supernatural abilities and uncover deep-rooted secrets within the Federal Bureau of Control.',
+    categories: ['Action'],
+    thumbnail: '/thumbnail/control-resonant.jpg',
+    size: '61 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/control-resonant.jpg',
+      'https://blog.playstation.com/tachyon/2026/03/ff3c2638907202384dcc4fc15c5a378f251fe638.jpg?resize=1088,612&crop_strategy=smart',
+      'https://blog.playstation.com/tachyon/2028/09/805dc24cfeb0a3136d766b4e28d4d1a269bfde1b.jpg?resize=1088,612&crop_strategy=smart'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/WhQm-ExRz60',
+    shorts: [
+      'https://www.youtube.com/embed/cn4PamZ167U',
+      'https://www.youtube.com/embed/ngwUfhLQ07o',
+      'https://www.youtube.com/embed/JfuY-NhK_tQ'
+    ],
+  },
+  {
+    id: 'blackwood',
+    title: 'Blackwood',
+    description: 'Survive the night in the cursed woods of Blackwood. A first-person psychological horror experience that tests your courage against ancient terrors lurking in the shadows.',
+    categories: ['Action'],
+    thumbnail: '/thumbnail/blackwood.jpg',
+    size: '7 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/blackwood.jpg',
+      'https://assets.games.gg/blackwood_banner_a4a7396941.webp',
+      'https://external-preview.redd.it/photo-mode-is-coming-to-blackwood-capture-cinematic-shots-v0-Z2Rhd2QwdmthbzloMQVKDdR6hAICtjImUTAQwrKRHe_R1IDsHKQVcG6YXP44.png?width=640&crop=smart&auto=webp&s=3214465eff53bccd58f0280b83ac28b05a04aa07'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/xVyIEh5DTU0',
+    shorts: [
+      'https://www.youtube.com/embed/xVyIEh5DTU0'
+    ],
+  },
+  {
+    id: 'sh-townfall',
+    title: 'Silent Hill Townfall',
+    description: 'A new entry in the iconic survival horror series. Navigate a town shrouded in fog and face the manifestations of your deepest fears in this atmospheric and narrative-driven journey.',
+    categories: ['Horror'],
+    thumbnail: '/thumbnail/sh-townfall.jpg',
+    size: '41 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/sh-townfall.jpg',
+      'https://blog.playstation.com/tachyon/2028/09/7f627316d4086f9bbe20da9bad09a36ee29677ff-scaled.jpg?resize=1088,612&crop_strategy=smart',
+      'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/02/silent-hill-townfall-press-image-6.jpg?q=49&fit=crop&w=480&h=270&dpr=2'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/9VjP6RyfGrQ',
+    shorts: [
+      'https://www.youtube.com/embed/5dXZ6_lLB0I',
+      'https://www.youtube.com/embed/Ehcs7hNhY7g'
+    ],
+  },
+  {
+    id: 'dw3-remake',
+    title: 'DYNASTY WARRIORS 3',
+    description: 'Relive the legendary battles of the Three Kingdoms in this stunning remake. Experience visceral 1-vs-1000 action with modernized combat mechanics and breathtaking visuals.',
+    categories: ['2 players'],
+    thumbnail: '/thumbnail/dw3-remake.jpg',
+    size: '23 GB',
+    releaseYear: '2025',
+    images: [
+      '/thumbnail/dw3-remake.jpg',
+      'https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https://shacknews-www.s3.amazonaws.com/assets/articles/2026/dynasty-warriors-3-complete-edition-remastered-impressions-zhuge-20260930022420-551af081.jpg&width=986&sign=2T-Xy4D8aqlEHhBxuVMpaUD1pMX5l8VWiQdi-PVHIDc',
+      'https://www.koeitecmoeurope.com/dw3-re/assets/img/gameplay_2p-modal.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/3ybsp-GdDSg',
+    shorts: [
+      'https://www.youtube.com/embed/p79rj0EL480',
+      'https://www.youtube.com/embed/sa49zJgBXbU'
+    ],
+  },
+  {
+    id: 'cities-skylines-2',
+    title: 'Cities: Skylines II',
+    description: 'Build a metropolis from the ground up with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you\'ve never experienced.',
+    categories: ['Open World'],
+    thumbnail: '/thumbnail/cities-skylines-2.jpg',
+    size: '43 GB',
+    releaseYear: '2023',
+    images: [
+      '/thumbnail/cities-skylines-2.jpg',
+      'https://images.ctfassets.net/u73tyf0fa8v1/6jMpAWfQVHDU9AAPomTceI/a67a974530a7d753d61fac3204b80a3d/cities-skylines-ii-city-services-26_District.jpg?w=1920&q=75&fm=webp',
+      'https://cdn.mos.cms.futurecdn.net/pa7rzBpStmWTaXxqDaSJnR.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/7vlKoMi4Qr0',
+    shorts: [
+      'https://www.youtube.com/embed/2AGuw56uKgA'
+    ]
+  },
+  {
+    id: 'darwins-paradox',
+    title: 'Darwin\'s Paradox',
+    description: 'A high-octane 2.5D action-adventure platformer set in a vibrant world. Uncover the secrets of a futuristic ecosystem where evolution has taken a strange and dangerous turn.',
+    categories: ['2D game'],
+    thumbnail: '/thumbnail/darwins-paradox.jpg',
+    size: '5 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/darwins-paradox.jpg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoLsHMCuY-G1Bicb8B5OSlnYpO_yisaA4C58bozKjSJEsOWlN8TUpgdGal_-LwtEw2t4Y96htpki_dlj6VC6YaL7BLFb2r97QkpI_eaajbgzj8_k7pF5Z7b739Mykv5Ed-Y4ESTcgK5BnmFm9TmiFno0l8m35yhw3YVRnkelM8NPbfj9h_L98DQS4IU_U5/s2000/Darwin_s%20Paradox_Screenshot_November_03.png',
+      'https://covergeek.com/wp-content/uploads/2026/03/Darwins-Paradox-Review-Suit-1024x576.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/TbgsjUFIBOw',
+    shorts: [
+      'https://www.youtube.com/embed/No5OxzSed4c'
+    ]
+  },
+  {
+    id: 'gow3-remastered',
+    title: 'God of War III Remastered',
+    description: 'In the end, there will be only chaos. One of the most critically acclaimed games of its generation, God of War III has been remastered for the PlayStation 4 system, bringing Kratos’ epic journey of vengeance to life with stunning 1080p visuals and 60fps gameplay.',
+    categories: ['Action'],
+    thumbnail: '/thumbnail/gow3.jpg',
+    size: '23 GB',
+    releaseYear: '2015',
+    images: [
+      '/thumbnail/gow3.jpg',
+      'https://preview.redd.it/god-of-war-2005-cover-art-recreation-in-gow-r-valhalla-v0-t855bc6xtb7c1.jpg?width=640&crop=smart&auto=webp&s=8816487981ea332eb56f20399493e523db6c24c4',
+      'https://tech4gamers.com/wp-content/uploads/2023/12/God-of-War-Trilogy-2.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/qKogMfIAAkY',
+    shorts: [
+      'https://www.youtube.com/embed/J77_sLPnFDs',
+      'https://www.youtube.com/embed/eYvvWMKxgLc',
+      'https://www.youtube.com/embed/Ve-sXqiG3Q8'
+    ]
+  },
+  {
+    id: 'aoe3',
+    title: 'Age of Empires III: Definitive Edition',
+    description: 'Command civilizations from across Europe, the Americas, and Asia. Features remastered 4K graphics, new civilizations, and a fully remastered soundtrack.',
+    categories: ['Action'],
+    thumbnail: '/thumbnail/aoe3.jpg',
+    size: '21 GB',
+    releaseYear: '2020',
+    images: [
+      '/thumbnail/aoe3.jpg',
+      'https://images7.alphacoders.com/398/thumbbig-398405.webp',
+      'https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_age_of_empires_3_04_1680x1050.jpg&height=450&width=800&fill-to-fit&sharpen'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/fCcRNUlE7ek',
+    shorts: [
+      'https://www.youtube.com/embed/YJaLPbF5PdY',
+      'https://www.youtube.com/embed/e3Ki6rs7JCk',
+      'https://www.youtube.com/embed/ddLOzQpuI2o'
+    ]
+  },
+  {
+    id: 'gta-trilogy',
+    title: 'GTA: The Trilogy – The Definitive Edition',
+    description: 'Three iconic cities, three epic stories. Play the genre-defining classics of the original Grand Theft Auto Trilogy: GTA III, Vice City, and San Andreas.',
+    categories: ['Open World'],
+    thumbnail: '/thumbnail/gta-trilogy.jpg',
+    size: '24 GB',
+    releaseYear: '2021',
+    images: [
+      '/thumbnail/gta-trilogy.jpg',
+      'https://media-rockstargames-com.akamaized.net/mfe-r19/prod/__common/img/c37f2dbd02b15d29abfce91294f29403.jpg',
+      'https://wallpaperaccess.com/full/7841403.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/2BFhjfqCcis',
+    shorts: [
+      'https://www.youtube.com/embed/U1s6sgfTRM4'
+    ]
+  },
+  {
+    id: 'castlevania-belmonts-curse',
+    title: "Castlevania: Belmont's Curse",
+    description: "An epic return to the legendary vampire-hunting saga. Master the Whip and explore a cursed castle filled with gothic horrors and ancient secrets.",
+    categories: ['Action'],
+    thumbnail: '/thumbnail/castlevania.jpg',
+    size: '5 GB',
+    releaseYear: '2025',
+    images: [
+     '/thumbnail/castlevania.jpg',
+      'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_2.0/store/software/switch/70010000116851/7a387161a475070cd7a109f32420f223ba6a9eb2296568c5bba28ca9254f6d79',
+      'https://media.gamestop.com/i/gamestop/20033149_SCR02?w=1256&h=664&fmt=auto'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/zdqKYXa2pUI',
+    shorts: [
+      'https://www.youtube.com/embed/sNrvFqPYmac'
+    ]
+  },
+  {
+    id: 'toy-story-adventure',
+    title: "Toy Story",
+    description: "Join Woody, Buzz, and the rest of the gang in a magical adventure that brings the beloved Pixar world to life. Explore Andy's room and beyond!",
+    categories: ['Adventure'],
+    thumbnail: '/thumbnail/toy-story-adventure.jpg',
+    size: '4 GB',
+    releaseYear: '2024',
+    images: [
+      '/thumbnail/toy-story-adventure.jpg',
+      'https://m.media-amazon.com/images/M/MV5BZTVkNmZkMzAtYmI0Mi00MDY4LWE4NTctNjI3MzY5MmMxZDU3XkEyXkFqcGc@.jpg',
+      'https://i.ebayimg.com/images/g/quoAAeSwL2Bqz~Dp/s-l1200.webp'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/97Ai2QQ3kIE',
+    shorts: [
+      'https://www.youtube.com/embed/_8fa81Spo3s'
+    ]
+  },
+  {
+    id: 'bloodborne',
+    title: "Bloodborne",
+    description: "A terrifying action RPG from the creators of Dark Souls. Navigate the plague-ridden city of Yharnam and face nightmarish creatures in fast-paced combat.",
+    categories: ['RPG'],
+    thumbnail: '/thumbnail/bloodborne.jpg',
+    size: '15 GB',
+    releaseYear: '2015',
+    images: [
+      '/thumbnail/bloodborne.jpg',
+      'https://cdn.mos.cms.futurecdn.net/HYgVWfc7Vi2zK2m4QHVb6C.jpg',
+      'https://wallpaperaccess.com/full/1111499.jpg'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/2Crk_GpxGQE',
+    shorts: [
+      'https://www.youtube.com/embed/aGECZFPjIW0'
+    ]
+  },
+  {
+    id: 'driveclub',
+    title: "Driveclub",
+    description: "Experience the heart-pounding thrill of high-speed racing. Connect with friends and race in a variety of stunning locations around the world.",
+    categories: ['Race'],
+    thumbnail: '/thumbnail/driveclub.jpg',
+    size: '10 GB',
+    releaseYear: '2014',
+    images: [
+      '/thumbnail/driveclub.jpg',
+      'https://i.redd.it/4a3hp4r1phyh1.png',
+      'https://i.redd.it/iktxq7xdcdwh1.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/zsJ2BUliEtk',
+    shorts: [
+      'https://www.youtube.com/embed/WvbDZWROJgI',
+      'https://www.youtube.com/embed/wdHfMkKbF3k',
+      'https://www.youtube.com/embed/ilkRTK3DYas'
+    ]
+  },
+  {
+    id: 'onimusha-sword',
+    title: 'Onimusha: Way of the Sword',
+    description: 'Master the art of the blade and unleash powerful oni magic in this epic return to the Onimusha series. Set in feudal Japan, battle through legions of demons to restore peace to the land.',
+    categories: ['Action'],
+    thumbnail: '/thumbnail/onimusha-sword.jpg',
+    size: '40 GB',
+    releaseYear: '2026',
+    images: [
+      '/thumbnail/onimusha-sword.jpg',
+      'https://wallpaperaccess.com/full/53251689.png',
+      'https://images.igdb.com/igdb/image/upload/t_720p/scus46.png'
+    ],
+    videoUrl: 'https://www.youtube.com/embed/W9Ct29FeMak',
+    shorts: [
+      'https://www.youtube.com/embed/g31vqrkiqAQ',
+      'https://www.youtube.com/embed/s2uTCOXkAlI'
+    ]
   }
 ];

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -36,15 +35,30 @@ import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { RemainingSpaceDialog } from '@/components/remaining-space-dialog';
 import { cn } from '@/lib/utils';
 
 export function CheckoutSheet() {
-  const { selectedIds, removeFromSelection, clearSelection, totalSizeNum, isCheckoutOpen, setCheckoutOpen, currentCapacity } = useSelection();
+  const { 
+    selectedIds, 
+    removeFromSelection, 
+    clearSelection, 
+    totalSizeNum, 
+    isCheckoutOpen, 
+    setCheckoutOpen, 
+    currentCapacity, 
+    remainingSpace,
+    hasNoResults,
+    resetFilters,
+    toggleRemainingSpaceMode
+  } = useSelection();
+  
   const { t, isRTL, language } = useLanguage();
   const { toast } = useToast();
   const [mounted, setMounted] = useState(false);
   const [isUpgradeOfferOpen, setIsUpgradeOfferOpen] = useState(false);
   const [is2TBUpgradeOfferOpen, setIs2TBUpgradeOfferOpen] = useState(false);
+  const [isRemainingSpaceOpen, setIsRemainingSpaceOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -57,41 +71,25 @@ export function CheckoutSheet() {
       .map((game, index) => `${index + 1}. ${game.title} (${game.size})`)
       .join('\n');
     
-    // Map internal thresholds to display drive sizes
-    let driveInfo = `${currentCapacity === 460 ? "500 GB" : currentCapacity === 960 ? "1 TB" : currentCapacity === 280 ? "320 GB" : currentCapacity + " GB"}`;
+    let driveInfo = `${currentCapacity === 460 ? "500 GB" : currentCapacity === 930 ? "1 TB" : currentCapacity === 280 ? "320 GB" : currentCapacity + " GB"}`;
     if (isUpgraded) {
         if (currentCapacity === 460) driveInfo = "1 TB (UPGRADED FROM 500GB OFFER)";
-        if (currentCapacity === 960) driveInfo = "2 TB (UPGRADED FROM 1TB OFFER)";
+        if (currentCapacity === 930) driveInfo = "2 TB (UPGRADED FROM 1TB OFFER)";
     }
 
     return `ALKADI GAMING SELECTION\n\n${listText}\n\nSelected Storage: ${driveInfo}\nTotal Data Size: ~${totalSizeNum.toFixed(1)} GB`;
   };
 
-  const handleWhatsAppRedirect = (isUpgraded = false) => {
-    if (selectedGames.length === 0) return;
-
-    // Trigger upgrade popup only if user is in 500GB tier and hasn't already accepted/declined upgrade
-    if (!isUpgradeOfferOpen && !isUpgraded && currentCapacity === 460) {
-      setIsUpgradeOfferOpen(true);
-      return;
-    }
-
-    // Trigger upgrade popup for 1TB -> 2TB
-    if (!is2TBUpgradeOfferOpen && !isUpgraded && currentCapacity === 960) {
-      setIs2TBUpgradeOfferOpen(true);
-      return;
-    }
-
+  const executeWhatsAppRedirect = (isUpgraded = false) => {
     const finalContent = generateListContent(isUpgraded);
     const encodedText = encodeURIComponent(finalContent);
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
     
     window.open(whatsappUrl, '_blank');
     
-    if (isUpgraded) {
-      setIsUpgradeOfferOpen(false);
-      setIs2TBUpgradeOfferOpen(false);
-    }
+    setIsUpgradeOfferOpen(false);
+    setIs2TBUpgradeOfferOpen(false);
+    setIsRemainingSpaceOpen(false);
 
     toast({
       title: "WhatsApp Ready!",
@@ -99,12 +97,50 @@ export function CheckoutSheet() {
     });
   };
 
+  const handleWhatsAppRedirect = (step: 'remaining' | 'upgrade' | 'final' = 'remaining') => {
+    if (selectedGames.length === 0) return;
+
+    // 1. First, show the remaining available space message
+    if (step === 'remaining') {
+      if (remainingSpace >= 10) {
+        setIsRemainingSpaceOpen(true);
+        return;
+      }
+      step = 'upgrade';
+    }
+
+    // 2. Then, immediately after it, show the “Upgrade Now” message
+    if (step === 'upgrade') {
+      // 500GB -> 1TB Upgrade Offer
+      if (currentCapacity === 460) {
+        setIsUpgradeOfferOpen(true);
+        return;
+      }
+      // 1TB -> 2TB Upgrade Offer
+      if (currentCapacity === 930) {
+        setIs2TBUpgradeOfferOpen(true);
+        return;
+      }
+      step = 'final';
+    }
+
+    // 3. Final Step: Redirect to WhatsApp
+    if (step === 'final') {
+      executeWhatsAppRedirect(false);
+    }
+  };
+
   const handleUpgradeToLibrary = () => {
     setIsUpgradeOfferOpen(false);
     setIs2TBUpgradeOfferOpen(false);
     setCheckoutOpen(false);
+    toggleRemainingSpaceMode(false);
     
-    // Find the library section and scroll to it
+    // Automatically reset filters if the current view is empty
+    if (hasNoResults) {
+      resetFilters();
+    }
+    
     const element = document.getElementById('library');
     if (element) {
       const headerOffset = 80;
@@ -125,7 +161,7 @@ export function CheckoutSheet() {
   const getWarning = () => {
     if (totalSizeNum > 1800) return t('alert.maxStorage');
     if (totalSizeNum > 1400) return t('alert.approaching');
-    if (totalSizeNum > 960) return t('alert.surpassed960');
+    if (totalSizeNum > 930) return t('alert.surpassed930');
     if (totalSizeNum > 460) return t('alert.1tbRequired');
     if (totalSizeNum > 280) return t('alert.500gbReached');
     return null;
@@ -244,7 +280,7 @@ export function CheckoutSheet() {
                 
                 <div className="flex flex-col gap-2">
                   <Button 
-                    onClick={() => handleWhatsAppRedirect(false)} 
+                    onClick={() => handleWhatsAppRedirect('remaining')} 
                     disabled={totalSizeNum > 1800}
                     className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-[1.01] transition-all rounded-xl py-6 font-bold text-sm disabled:opacity-50"
                   >
@@ -286,6 +322,12 @@ export function CheckoutSheet() {
         </SheetContent>
       </Sheet>
 
+      <RemainingSpaceDialog 
+        open={isRemainingSpaceOpen} 
+        onOpenChange={setIsRemainingSpaceOpen}
+        onContinueToWhatsApp={() => handleWhatsAppRedirect('upgrade')}
+      />
+
       {/* Special Upgrade Offer Dialog - 500GB to 1TB */}
       <Dialog open={isUpgradeOfferOpen} onOpenChange={setIsUpgradeOfferOpen}>
         <DialogContent className="bg-background/95 backdrop-blur-2xl border-white/10 rounded-3xl max-w-sm sm:max-w-md p-0 overflow-hidden shadow-2xl">
@@ -320,7 +362,7 @@ export function CheckoutSheet() {
               <Button 
                 variant="ghost" 
                 className="w-full text-destructive bg-destructive/5 hover:bg-destructive/5 hover:text-destructive sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
-                onClick={() => handleWhatsAppRedirect(false)}
+                onClick={() => handleWhatsAppRedirect('final')}
               >
                 {t('upgrade.btnContinue')}
               </Button>
@@ -363,7 +405,7 @@ export function CheckoutSheet() {
               <Button 
                 variant="ghost" 
                 className="w-full text-destructive bg-destructive/5 hover:bg-destructive/5 hover:text-destructive sm:text-muted-foreground sm:bg-transparent sm:hover:text-destructive sm:hover:bg-destructive/5 rounded-xl py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300"
-                onClick={() => handleWhatsAppRedirect(false)}
+                onClick={() => handleWhatsAppRedirect('final')}
               >
                 {t('upgrade.btnContinue1tb')}
               </Button>

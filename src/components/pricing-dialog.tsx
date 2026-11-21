@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/components/language-context';
 import { Badge } from '@/components/ui/badge';
-import { Check, Gamepad2, Tag, Sparkles } from 'lucide-react';
+import { Check, Gamepad2, Tag, Sparkles, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -26,9 +26,10 @@ interface PlanProps {
   isRecommended?: boolean;
   offerBadge?: string;
   topLabel?: string;
+  hasFreeDelivery?: boolean;
 }
 
-function PricingCard({ name, storage, games, price, isRecommended, offerBadge, topLabel }: PlanProps) {
+function PricingCard({ name, storage, games, price, isRecommended, offerBadge, topLabel, hasFreeDelivery = true }: PlanProps) {
   const { t } = useLanguage();
 
   return (
@@ -60,7 +61,6 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge, t
             {price}
           </span>
         </div>
-        {/* Game Count Display: Larger on mobile, smaller on desktop */}
         <div className="flex items-center gap-3 px-6 py-3 md:px-4 md:py-2 bg-white/5 rounded-full border border-white/5 shadow-inner">
           <Gamepad2 className="h-5 w-5 md:h-4 md:w-4 text-primary" />
           <span className="text-lg md:text-sm font-black text-white tracking-tight">{games} {t('pricing.games')}</span>
@@ -75,10 +75,16 @@ function PricingCard({ name, storage, games, price, isRecommended, offerBadge, t
           <span className="text-xs font-medium text-white/70">{t('pricing.withEnclosure')}</span>
         </div>
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-            <Check className="h-3 w-3 text-primary" />
+          <div className={cn("w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0", hasFreeDelivery ? "bg-primary/20" : "bg-destructive/20")}>
+            {hasFreeDelivery ? (
+              <Check className="h-3 w-3 text-primary" />
+            ) : (
+              <X className="h-3 w-3 text-destructive" />
+            )}
           </div>
-          <span className="text-xs font-medium text-white/70">{t('pricing.freeDelivery')}</span>
+          <span className={cn("text-xs font-medium", hasFreeDelivery ? "text-white/70" : "text-muted-foreground")}>
+            {t('pricing.freeDelivery')}
+          </span>
         </div>
       </div>
 
@@ -96,24 +102,23 @@ export function PricingDialog() {
   const { t, language } = useLanguage();
 
   const plans = [
-    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '4–7', price: '$39' },
-    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '7–15', price: '$59' },
+    { id: '280gb', name: t('pricing.basic'), storage: '280GB', games: '4–7', price: '$39', hasFreeDelivery: false },
+    { id: '500gb', name: t('pricing.standard'), storage: '500GB', games: '7–15', price: '$69' },
     { 
       id: '1tb', 
       name: t('pricing.elite'), 
       storage: '1TB', 
       games: '15–25', 
-      price: '$79', 
+      price: '$89', 
       isRecommended: true,
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
     },
-    { id: '1.5tb', name: t('pricing.pro'), storage: '1.5TB', games: '25–35', price: '$99' },
     { 
       id: '2tb', 
       name: t('pricing.ultra'), 
       storage: '2TB', 
       games: '35–60', 
-      price: '$119',
+      price: '$139',
       isRecommended: true,
       topLabel: t('pricing.bigValue'),
       offerBadge: language === 'ar' ? 'خصم 40%' : '40% OFF'
@@ -149,7 +154,7 @@ export function PricingDialog() {
               </DialogDescription>
             </DialogHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 py-4 px-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 py-4 px-2">
               {plans.map((plan) => (
                 <PricingCard key={plan.id} {...plan} />
               ))}

@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { MOCK_GAMES, CATEGORIES } from '@/app/lib/mock-data';
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages, Tag } from 'lucide-react';
+import { Search, HardDrive, Filter, ArrowUpDown, Check, X, Languages, Tag, Sparkles } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { CheckoutSheet } from '@/components/checkout-sheet';
 import { Slider } from '@/components/ui/slider';
@@ -63,12 +63,28 @@ function SocialLink({ href, label, icon, color }: { href: string, label: string,
 
 export default function HomeClient() {
   const router = useRouter();
-  const { totalSizeNum, currentCapacity, usageColorClass, fillColorClass, usagePercentage } = useSelection();
+  const { 
+    totalSizeNum, 
+    currentCapacity, 
+    usageColorClass, 
+    fillColorClass, 
+    usagePercentage, 
+    remainingSpace, 
+    isRemainingSpaceMode, 
+    toggleRemainingSpaceMode,
+    selectedCategory,
+    setSelectedCategory,
+    searchQuery,
+    setSearchQuery,
+    maxSize,
+    setMaxSize,
+    sortOrder,
+    setSortOrder,
+    setHasNoResults,
+    resetFilters
+  } = useSelection();
+  
   const { t, isRTL } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [maxSize, setMaxSize] = useState(200); // Increased default to show all games
-  const [sortOrder, setSortOrder] = useState('title-asc');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isRestored, setIsRestored] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -81,8 +97,6 @@ export default function HomeClient() {
 
   useEffect(() => {
     setMounted(true);
-    
-    // Check if splash was already shown in this module instance to prevent repeating on soft navigation
     if (hasSplashBeenShownInModule) {
       setIsVideoReady(true);
     } else {
@@ -101,7 +115,18 @@ export default function HomeClient() {
     }
   }, [mounted]);
 
+  // Sync maxSize and sortOrder to remainingSpace when in "Remaining Space Mode"
   useEffect(() => {
+    if (isRemainingSpaceMode) {
+      // Round to nearest integer to avoid slider artifacts
+      setMaxSize(Math.floor(remainingSpace));
+      // Automatically sort by size (Largest to Smallest) to help customer fill space efficiently
+      setSortOrder('size-desc');
+    }
+  }, [isRemainingSpaceMode, remainingSpace, setMaxSize, setSortOrder]);
+
+  useEffect(() => {
+    if (typeof sessionStorage === 'undefined') return;
     const restoredCategory = sessionStorage.getItem('home-category');
     const restoredMaxSize = sessionStorage.getItem('home-max-size');
     const restoredSort = sessionStorage.getItem('home-sort');
@@ -109,15 +134,15 @@ export default function HomeClient() {
     if (restoredCategory) setSelectedCategory(restoredCategory);
     if (restoredMaxSize) {
       const parsed = parseInt(restoredMaxSize, 10);
-      setMaxSize(parsed > 200 ? 200 : parsed);
+      setMaxSize(parsed > 130 ? 130 : parsed);
     }
     if (restoredSort) setSortOrder(restoredSort);
 
     setIsRestored(true);
-  }, []);
+  }, [setSelectedCategory, setMaxSize, setSortOrder]);
 
   useEffect(() => {
-    if (!isRestored) return;
+    if (!isRestored || typeof window === 'undefined') return;
 
     const restoredScroll = sessionStorage.getItem('home-scroll-position');
     if (restoredScroll) {
@@ -132,7 +157,7 @@ export default function HomeClient() {
   }, [isRestored]);
 
   useEffect(() => {
-    if (!isRestored) return;
+    if (!isRestored || typeof sessionStorage === 'undefined') return;
     sessionStorage.setItem('home-category', selectedCategory);
     sessionStorage.setItem('home-max-size', maxSize.toString());
     sessionStorage.setItem('home-sort', sortOrder);
@@ -140,7 +165,7 @@ export default function HomeClient() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isRestored) {
+      if (isRestored && typeof sessionStorage !== 'undefined') {
         sessionStorage.setItem('home-scroll-position', window.scrollY.toString());
       }
     };
@@ -176,37 +201,46 @@ export default function HomeClient() {
     ? MOCK_GAMES.filter(game => game.title.toLowerCase().includes(searchQuery.toLowerCase())).slice(0, 5)
     : [];
 
-  const filteredGames = MOCK_GAMES.filter((game) => {
-    const matchesCategory = 
-      selectedCategory === 'All' ? true :
-      selectedCategory === 'Recommended' ? game.isRecommended :
-      game.categories.includes(selectedCategory);
+  const filteredGames = useMemo(() => {
+    const games = MOCK_GAMES.filter((game) => {
+      const matchesCategory = 
+        selectedCategory === 'All' ? true :
+        selectedCategory === 'Recommended' ? game.isRecommended :
+        game.categories.includes(selectedCategory);
+        
+      const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
       
-    const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase());
+      const gameSize = parseFloat(game.size.replace(/[^\d.]/g, '')) || 0;
+      const matchesSize = gameSize <= maxSize;
+      
+      return matchesCategory && matchesSearch && matchesSize;
+    }).sort((a, b) => {
+      if (sortOrder === 'year-desc') {
+        return parseInt(b.releaseYear) - parseInt(a.releaseYear);
+      }
+      if (sortOrder === 'year-asc') {
+        return parseInt(a.releaseYear) - parseInt(b.releaseYear);
+      }
+      if (sortOrder === 'size-asc') {
+        const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
+        const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
+        return sizeA - sizeB;
+      }
+      if (sortOrder === 'size-desc') {
+        const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
+        const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
+        return sizeB - sizeA;
+      }
+      return a.title.localeCompare(b.title);
+    });
     
-    const gameSize = parseFloat(game.size.replace(/[^\d.]/g, '')) || 0;
-    const matchesSize = gameSize <= maxSize;
-    
-    return matchesCategory && matchesSearch && matchesSize;
-  }).sort((a, b) => {
-    if (sortOrder === 'year-desc') {
-      return parseInt(b.releaseYear) - parseInt(a.releaseYear);
-    }
-    if (sortOrder === 'year-asc') {
-      return parseInt(a.releaseYear) - parseInt(b.releaseYear);
-    }
-    if (sortOrder === 'size-asc') {
-      const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
-      const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
-      return sizeA - sizeB;
-    }
-    if (sortOrder === 'size-desc') {
-      const sizeA = parseFloat(a.size.replace(/[^\d.]/g, '')) || 0;
-      const sizeB = parseFloat(b.size.replace(/[^\d.]/g, '')) || 0;
-      return sizeB - sizeA;
-    }
-    return a.title.localeCompare(b.title);
-  });
+    return games;
+  }, [selectedCategory, searchQuery, maxSize, sortOrder]);
+
+  // Update hasNoResults in context
+  useEffect(() => {
+    setHasNoResults(filteredGames.length === 0);
+  }, [filteredGames, setHasNoResults]);
 
   const scrollToLibrary = () => {
     const element = document.getElementById('library');
@@ -223,7 +257,7 @@ export default function HomeClient() {
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const activeFiltersCount = (maxSize < 200 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
+  const activeFiltersCount = (maxSize < 130 ? 1 : 0) + (sortOrder !== 'title-asc' ? 1 : 0) + (selectedCategory !== 'All' ? 1 : 0);
 
   const handleSuggestionClick = (gameId: string) => {
     router.push(`/game/${gameId}`);
@@ -295,8 +329,8 @@ export default function HomeClient() {
         </div>
       </header>
 
-      {/* Hero Section - Edge to Edge Video */}
-      <section className="relative w-full overflow-hidden h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
+      {/* Hero Section */}
+      <section className="relative h-[600px] lg:h-[calc(100vh-56px)] flex items-center justify-center mb-12 bg-black">
         <video
           ref={videoRef}
           autoPlay
@@ -345,27 +379,15 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <div className={cn(
-        "transition-opacity duration-1000",
-        isVideoReady ? "opacity-100" : "opacity-0"
-      )}>
+      <div className={cn("transition-opacity duration-1000", isVideoReady ? "opacity-100" : "opacity-0")}>
         <StatsSection />
       </div>
 
-      {/* Video Carousel Section */}
-      <div className={cn(
-        "transition-opacity duration-1000",
-        isVideoReady ? "opacity-100" : "opacity-0"
-      )}>
+      <div className={cn("transition-opacity duration-1000", isVideoReady ? "opacity-100" : "opacity-0")}>
         <VideoCarousel />
       </div>
 
-      {/* How It Works Section */}
-      <div className={cn(
-        "transition-opacity duration-1000",
-        isVideoReady ? "opacity-100" : "opacity-0"
-      )}>
+      <div className={cn("transition-opacity duration-1000", isVideoReady ? "opacity-100" : "opacity-0")}>
         <HowItWorks />
       </div>
 
@@ -464,9 +486,12 @@ export default function HomeClient() {
                           <Slider
                             value={[maxSize]}
                             min={1}
-                            max={200}
+                            max={130}
                             step={1}
-                            onValueChange={(val) => setMaxSize(val[0])}
+                            onValueChange={(val) => {
+                              setMaxSize(val[0]);
+                              if (isRemainingSpaceMode) toggleRemainingSpaceMode(false);
+                            }}
                             className="py-1"
                           />
                         </div>
@@ -478,15 +503,13 @@ export default function HomeClient() {
                           >
                             <Check className={cn("w-3.5 h-3.5", isRTL ? "ml-2" : "mr-2")} /> {t('filters.viewResults')}
                           </Button>
-                          {(maxSize < 200 || sortOrder !== 'title-asc' || selectedCategory !== 'All') && (
+                          {(activeFiltersCount > 0) && (
                             <Button 
                               variant="ghost" 
                               size="sm"
                               className="w-full text-[10px] h-8 text-primary hover:text-primary hover:bg-primary/5 rounded-lg font-bold uppercase tracking-tight"
                               onClick={() => {
-                                setMaxSize(200);
-                                setSortOrder('title-asc');
-                                setSelectedCategory('All');
+                                resetFilters();
                                 setIsFilterOpen(false);
                               }}
                             >
@@ -570,10 +593,7 @@ export default function HomeClient() {
             <Button
               variant="link"
               onClick={() => {
-                setSelectedCategory('All');
-                setSearchQuery('');
-                setMaxSize(200);
-                setSortOrder('title-asc');
+                resetFilters();
               }}
               className="text-primary mt-4 font-bold"
             >
@@ -597,30 +617,10 @@ export default function HomeClient() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 w-full max-w-2xl mx-auto" dir="ltr">
-              <SocialLink 
-                href="https://www.facebook.com/share/1MBEKXoXME/?mibextid=wwXIfr" 
-                label="Facebook" 
-                icon={<FacebookIcon />} 
-                color="#1877F2" 
-              />
-              <SocialLink 
-                href="https://www.instagram.com/alkadi.leb?igsh=NGdtOTZuM2ZtbmVn&utm_source=qr" 
-                label="Instagram" 
-                icon={<InstagramIcon />} 
-                color="#E4405F" 
-              />
-              <SocialLink 
-                href="https://www.tiktok.com/@alkadi.leb" 
-                label="TikTok" 
-                icon={<TikTokIcon />} 
-                color="#FFFFFF" 
-              />
-              <SocialLink 
-                href="https://wa.link/udsgnn" 
-                label="WhatsApp" 
-                icon={<WhatsAppIcon />} 
-                color="#25D366" 
-              />
+              <SocialLink href="https://www.facebook.com/share/1MBEKXoXME/?mibextid=wwXIfr" label="Facebook" icon={<FacebookIcon />} color="#1877F2" />
+              <SocialLink href="https://www.instagram.com/alkadi.leb?igsh=NGdtOTZuM2ZtbmVn&utm_source=qr" label="Instagram" icon={<InstagramIcon />} color="#E4405F" />
+              <SocialLink href="https://www.tiktok.com/@alkadi.leb" label="TikTok" icon={<TikTokIcon />} color="#FFFFFF" />
+              <SocialLink href="https://wa.link/udsgnn" label="WhatsApp" icon={<WhatsAppIcon />} color="#25D366" />
             </div>
           </div>
         </div>

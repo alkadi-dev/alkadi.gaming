@@ -7,7 +7,7 @@ type Language = 'en' | 'ar';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
   isRTL: boolean;
 }
 
@@ -38,6 +38,7 @@ const translations: Record<Language, Record<string, string>> = {
     'how.step6.title': 'After-Sales Support',
     'how.step6.desc': 'Our support team is always available to help you resolve any technical issues or questions quickly after you receive your games.',
     'library.title': 'Library',
+    'library.fitting': 'Games that fit your remaining {space} GB',
     'filters.label': 'Filters',
     'filters.sortBy': 'Sort By',
     'filters.maxStorage': 'Max Storage',
@@ -62,7 +63,8 @@ const translations: Record<Language, Record<string, string>> = {
     'checkout.clearConfirm': 'Clear entire list?',
     'checkout.clearDesc': 'This action will remove all games from your selection. Are you sure you want to proceed?',
     'checkout.whatsapp': 'WhatsApp',
-    'checkout.no': 'No',
+    'checkout.continue': 'Continue to WhatsApp',
+    'checkout.no': 'No, Continue to WhatsApp',
     'checkout.yes': 'Yes',
     'game.story': 'The Story',
     'game.gallery': 'Gallery',
@@ -79,20 +81,20 @@ const translations: Record<Language, Record<string, string>> = {
     'toast.added': 'Game Added!',
     'toast.storageLimit': 'Storage Limit Exceeded',
     'toast.storageLimitDesc': 'You have reached the maximum storage limit.',
-    'alert.actionRequired': 'Action Required',
-    'alert.removeGames': 'Please remove some games to stay below the 1800 GB limit before closing.',
     'alert.maxStorage': 'Maximum Storage Reached!',
     'alert.maxStorageDesc': 'You have reached the absolute maximum storage limit of 1800 GB. You must remove some games to continue.',
     'alert.approaching': 'Approaching Final Limit',
-    'alert.approachingDesc': 'You have exceeded 1400 GB. Would you like to stop and remove some games, or confirm that you wish to continue towards the 1800 GB limit?',
-    'alert.surpassed960': 'Surpassed 960 GB!',
-    'alert.surpassed960Desc': 'You have surpassed 960 GB. Your capacity is now transitioning to the 1.5 TB drive (Limit: 1400 GB). Keep going?',
+    'alert.approachingDesc': 'You have exceeded your current capacity. Would you like to stop and remove some games, or confirm that you wish to continue towards the 1800 GB limit?',
+    'alert.surpassed930': 'Surpassed 930 GB!',
+    'alert.surpassed930Desc': 'You have surpassed 930 GB. Your capacity is now transitioning to the 2 TB drive (Limit: 1800 GB). Keep going?',
     'alert.1tbRequired': '1 TB Drive Required',
-    'alert.1tbRequiredDesc': 'You have exceeded 460 GB. You are now using the 1 TB drive capacity (Limit: 960 GB). Continue adding?',
+    'alert.1tbRequiredDesc': 'You have exceeded 460 GB. You are now using the 1 TB drive capacity (Limit: 930 GB). Continue adding?',
     'alert.500gbReached': '500 GB Drive Reached',
     'alert.500gbReachedDesc': 'You have exceeded the 280 GB threshold and are now using the 500 GB drive (Limit: 460 GB). Keep going?',
     'alert.keepGoing': 'Keep Going',
     'alert.reviewDelete': 'Review & Delete',
+    'alert.actionRequired': 'Storage Capacity Exceeded',
+    'alert.removeGames': 'Your selection is larger than the available drive space. Please remove some games to finalize your list.',
     'upgrade.title': 'Special Upgrade Offer',
     'upgrade.message': 'Get 40% OFF by upgrading to the 1TB hard drive instead of choosing the 500GB option.',
     'upgrade.btnUpgrade': 'Upgrade to 1TB',
@@ -111,7 +113,42 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.elite': 'Elite',
     'pricing.pro': 'Pro',
     'pricing.ultra': 'Ultra',
-    // Categories
+    'remaining.title': 'Use Your Remaining Space',
+    'remaining.message': 'You still have {space} GB of free space on your drive. Would you like to use it?',
+    'remaining.yes': 'Yes, Show Me Games',
+    'remaining.no': 'No, Continue to WhatsApp',
+    'remaining.none': 'No more games fit in your remaining space.',
+    'remaining.add': 'Add Game',
+    'recommend.title': 'Let Us Know How We Can Help You',
+    'recommend.q1': 'What is your budget?',
+    'recommend.q2': 'What type of games do you enjoy the most?',
+    'recommend.q3': 'Do you prefer Open World or focused story games?',
+    'recommend.q3.open': 'Open World',
+    'recommend.q3.story': 'Story-driven',
+    'recommend.q3.both': 'Both',
+    'recommend.q4': 'Do you prefer playing alone or with others?',
+    'recommend.q4.single': 'Single-player',
+    'recommend.q4.multi': 'Multiplayer',
+    'recommend.q4.both': 'Both',
+    'recommend.q5': 'What kind of experience are you looking for?',
+    'recommend.q5.story': 'Story & Adventure',
+    'recommend.q5.comp': 'Competitive',
+    'recommend.q5.relax': 'Relaxing',
+    'recommend.q5.action': 'Action-packed',
+    'recommend.q5.explore': 'Exploration',
+    'recommend.q6': 'Do you prefer newer or older games?',
+    'recommend.q6.new': 'Mostly New',
+    'recommend.q6.old': 'Mostly Older',
+    'recommend.q6.both': 'Both',
+    'recommend.btn.next': 'Continue',
+    'recommend.btn.back': 'Back',
+    'recommend.btn.finish': 'Get My Game Bundle',
+    'recommend.results.title': 'Your Personalized Game Bundle',
+    'recommend.results.pkg': '{pkg} Package',
+    'recommend.results.storage': 'Recommended Storage: ~{size} GB',
+    'recommend.results.total': 'Total: {size} GB',
+    'recommend.results.games': '{count} Games',
+    'recommend.results.apply': 'Apply Selection to Checkout',
     'cat.All': 'All',
     'cat.Recommended': 'Recommended',
     'cat.2 players': '2 Players',
@@ -149,7 +186,9 @@ const translations: Record<Language, Record<string, string>> = {
     'how.step5.desc': 'احصل على ألعابك واصلة مباشرة إلى منزلك وجاهزة للعب في وقت قياسي.',
     'how.step6.title': 'دعم ما بعد البيع',
     'how.step6.desc': 'فريق الدعم لدينا متاح دائماً لمساعدتك في حل أي مشكلات تقنية أو استفسارات بسرعة بعد استلام ألعابك.',
+    'how.title': 'كيف يعمل',
     'library.title': 'المكتبة',
+    'library.fitting': 'الألعاب التي تناسب سعة {space} جيجابايت المتبقية لديك',
     'filters.label': 'الفلاتر',
     'filters.sortBy': 'ترتيب حسب',
     'filters.maxStorage': 'أقصى مساحة تخزين',
@@ -174,7 +213,8 @@ const translations: Record<Language, Record<string, string>> = {
     'checkout.clearConfirm': 'مسح القائمة بالكامل؟',
     'checkout.clearDesc': 'سيؤدي هذا الإجراء إلى إزالة جميع الألعاب من اختياراتك. هل أنت متأكد أنك تريد الاستمرار؟',
     'checkout.whatsapp': 'واتساب',
-    'checkout.no': 'لا',
+    'checkout.continue': 'تابع إلى واتساب',
+    'checkout.no': 'لا، تابع إلى واتساب',
     'checkout.yes': 'نعم',
     'game.story': 'القصة',
     'game.gallery': 'المعرض',
@@ -191,20 +231,20 @@ const translations: Record<Language, Record<string, string>> = {
     'toast.added': 'تمت إضافة اللعبة!',
     'toast.storageLimit': 'تم تجاوز حد التخزين',
     'toast.storageLimitDesc': 'لقد وصلت إلى الحد الأقصى لمساحة التخزين.',
-    'alert.actionRequired': 'إجراء مطلوب',
-    'alert.removeGames': 'يرجى إزالة بعض الألعاب للبقاء تحت حد 1800 جيجابايت قبل الإغلاق.',
     'alert.maxStorage': 'تم الوصول إلى الحد الأقصى للتخزين!',
     'alert.maxStorageDesc': 'لقد وصلت إلى الحد الأقصى المطلق لمساحة التخزين البالغ 1800 جيجابايت. يجب عليك إزالة بعض الألعاب للمتابعة.',
     'alert.approaching': 'الاقتراب من الحد النهائي',
-    'alert.approachingDesc': 'لقد تجاوزت 1400 جيجابايت. هل ترغب في التوقف وإزالة بعض الألعاب، أم تؤكد رغبتك في الاستمرار نحو حد 1800 جيجابايت؟',
-    'alert.surpassed960': 'تجاوزت 960 جيجابايت!',
-    'alert.surpassed960Desc': 'لقد تجاوزت 960 جيجابايت. تنتقل سعتك الآن إلى قرص 1.5 تيرابايت (الحد: 1400 جيجابايت). هل تستمر؟',
+    'alert.approachingDesc': 'لقد تجاوزت سعتك الحالية. هل ترغب في التوقف وإزالة بعض الألعاب، أم تؤكد رغبتك في الاستمرار نحو حد 1800 جيجابايت؟',
+    'alert.surpassed930': 'تجاوزت 930 جيجابايت!',
+    'alert.surpassed930Desc': 'لقد تجاوزت 930 جيجابايت. تنتقل سعتك الآن إلى قرص 2 تيرابايت (الحد: 1800 جيجابايت). هل تستمر؟',
     'alert.1tbRequired': 'مطلوب قرص 1 تيرابايت',
-    'alert.1tbRequiredDesc': 'لقد تجاوزت 460 جيجابايت. أنت تستخدم الآن سعة قرص 1 تيرابايت (الحد: 960 جيجابايت). هل تستمر في الإضافة؟',
+    'alert.1tbRequiredDesc': 'لقد تجاوزت 460 جيجابايت. أنت تستخدم الآن سعة قرص 1 تيرابايت (الحد: 930 جيجابايت). هل تستمر في الإضافة؟',
     'alert.500gbReached': 'تم الوصول إلى قرص 500 جيجابايت',
     'alert.500gbReachedDesc': 'لقد تجاوزت عتبة 280 جيجابايت وتستخدم الآن قرص 500 جيجابايت (الحد: 460 جيجابايت). هل تستمر؟',
     'alert.keepGoing': 'استمر',
     'alert.reviewDelete': 'مراجعة وحذف',
+    'alert.actionRequired': 'تم تجاوز سعة التخزين',
+    'alert.removeGames': 'حجم الألعاب المختارة أكبر من مساحة القرص المتوفرة. يرجى حذف بعض الألعاب لتتمكن من إتمام طلبك.',
     'upgrade.title': 'عرض ترقية خاص',
     'upgrade.message': 'احصل على خصم 40% عند الترقية إلى قرص صلب سعة 1 تيرابايت بدلاً من اختيار 500 جيجابايت.',
     'upgrade.btnUpgrade': 'ترقية إلى 1 تيرابايت',
@@ -223,7 +263,42 @@ const translations: Record<Language, Record<string, string>> = {
     'pricing.elite': 'نخبة',
     'pricing.pro': 'محترف',
     'pricing.ultra': 'فائق',
-    // Categories
+    'remaining.title': 'استخدم المساحة المتبقية',
+    'remaining.message': 'لا يزال لديك {space} جيجابايت من المساحة المتوفرة. هل تود استخدامها؟',
+    'remaining.yes': 'نعم، أرني الألعاب',
+    'remaining.no': 'لا، تابع إلى واتساب',
+    'remaining.none': 'لا توجد ألعاب أخرى تناسب المساحة المتبقية.',
+    'remaining.add': 'أضف اللعبة',
+    'recommend.title': 'دعنا نساعدك في الاختيار',
+    'recommend.q1': 'ما هي ميزانيتك؟',
+    'recommend.q2': 'ما هي أنواع الألعاب التي تستمتع بها أكثر؟',
+    'recommend.q3': 'هل تفضل الألعاب ذات العالم المفتوح أم الألعاب المركزة على القصة؟',
+    'recommend.q3.open': 'عالم مفتوح',
+    'recommend.q3.story': 'مركزة على القصة',
+    'recommend.q3.both': 'كلاهما',
+    'recommend.q4': 'هل تفضل اللعب بمفردك أم مع الآخرين؟',
+    'recommend.q4.single': 'لاعب واحد',
+    'recommend.q4.multi': 'متعدد اللاعبين',
+    'recommend.q4.both': 'كلاهما',
+    'recommend.q5': 'ما نوع التجربة التي تبحث عنها؟',
+    'recommend.q5.story': 'قصة ومغامرة',
+    'recommend.q5.comp': 'تنافسية',
+    'recommend.q5.relax': 'مريحة للأعصاب',
+    'recommend.q5.action': 'مليئة بالأكشن',
+    'recommend.q5.explore': 'استكشاف',
+    'recommend.q6': 'هل تفضل الألعاب الجديدة أم القديمة الشهيرة؟',
+    'recommend.q6.new': 'الجديدة غالباً',
+    'recommend.q6.old': 'القديمة غالباً',
+    'recommend.q6.both': 'كلاهما',
+    'recommend.btn.next': 'متابعة',
+    'recommend.btn.back': 'رجوع',
+    'recommend.btn.finish': 'احصل على باقتي المخصصة',
+    'recommend.results.title': 'باقة ألعابك المخصصة',
+    'recommend.results.pkg': 'باقة {pkg}',
+    'recommend.results.storage': 'المساحة الموصى بها: ~{size} جيجابايت',
+    'recommend.results.total': 'الإجمالي: {size} جيجابايت',
+    'recommend.results.games': '{count} ألعاب',
+    'recommend.results.apply': 'تطبيق الاختيار على السلة',
     'cat.All': 'الكل',
     'cat.Recommended': 'موصى به',
     'cat.2 players': 'لاعبان',
@@ -251,13 +326,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('alkadi_language', language);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('alkadi_language', language);
+    }
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   }, [language]);
 
-  const t = (key: string) => {
-    return translations[language][key] || key;
+  const t = (key: string, params?: Record<string, string | number>) => {
+    let translation = translations[language][key] || key;
+    if (params) {
+      Object.entries(params).forEach(([k, v]) => {
+        translation = translation.replace(`{${k}}`, String(v));
+      });
+    }
+    return translation;
   };
 
   const isRTL = language === 'ar';
